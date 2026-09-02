@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools</title>
+<meta name="description" content="Small, single-purpose web tools. Everything runs in your browser.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%B0%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f7f8fa; --panel:#fff; --edge:#dfe3ea; --fg:#141821; --fg-2:#4a5361; --fg-3:#7b8697; --accent:#4f46e5;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0c0e13; --panel:#14171f; --edge:#272c38; --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394; --accent:#818cf8;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:72px 20px 80px}
+h1{font-size:30px;letter-spacing:-.025em;margin:0 0 8px}
+.sub{color:var(--fg-3);margin:0 0 36px;font-size:15px}
+ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+a.card{display:block;padding:18px 20px;background:var(--panel);border:1px solid var(--edge);
+  border-radius:14px;text-decoration:none;color:inherit;transition:border-color .12s,transform .12s}
+a.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+a.card b{display:block;font-size:16.5px;font-weight:620;letter-spacing:-.01em;margin-bottom:3px}
+a.card span{color:var(--fg-2);font-size:14px}
+footer{margin-top:44px;font-size:13px;color:var(--fg-3)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tools</h1>
+  <p class="sub">Small, single-purpose web tools. Everything runs in your browser — no accounts, no uploads, no tracking.</p>
+  <ul>
+    <li>
+      <a class="card" href="script-timer/">
+        <b>Short-Form Script Pacing &amp; Hook Timer</b>
+        <span>Time a script by retention zone, test your 3-second hook, and hit exact runtimes for TikTok, Reels, and Shorts.</span>
+      </a>
+    </li>
+  </ul>
+  <footer>Static pages. No dependencies.</footer>
+</div>
+</body>
+</html>

@@ -59,12 +59,12 @@
     {
       "@type": "Question",
       "name": "How many words should a 3-second hook be?",
-      "acceptedAnswer": { "@type": "Answer", "text": "7 to 10 words, depending on your pace — 8 at a standard 155 WPM. That is one clause. This timer treats your first sentence as the hook and warns you when it runs past 3.5 seconds." }
+      "acceptedAnswer": { "@type": "Answer", "text": "7 to 10 words, depending on your pace — 8 at a standard 155 WPM. That is one clause. Measured across 132 top-performing Shorts, a median of 9 words land before the 3-second mark, so the rule holds; their first sentence runs a median of 11 words and about 3 seconds, with half taking longer. This timer treats your first sentence as the hook and warns you when it runs past 3.5 seconds." }
     },
     {
       "@type": "Question",
       "name": "What speaking rate should I use for TikTok, Reels, and Shorts?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Most scripted short-form voiceover lands between 140 and 185 WPM, faster than everyday conversation because the pauses get edited out. Start with the 155 WPM preset; if your recorded videos consistently run longer than the estimate, drop to 135." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Measured across 132 top-performing Shorts, the median is 193 WPM and the middle half runs 156 to 221 — faster than everyday conversation because the pauses get edited out. Start with the 155 WPM preset if you read deliberately, or the 195 WPM Top Shorts preset to match what tends to perform; if your recorded videos consistently run longer than the estimate, drop the WPM until it matches your real reads." }
     },
     {
       "@type": "Question",
@@ -141,7 +141,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit
 .brand b{font-size:15px;font-weight:650;letter-spacing:-.01em;white-space:nowrap}
 .brand span{font-size:12px;color:var(--fg-3);white-space:nowrap}
 
-.seg{display:flex;background:var(--panel-2);border:1px solid var(--edge);border-radius:10px;padding:3px;gap:2px}
+.seg{display:flex;flex-wrap:wrap;background:var(--panel-2);border:1px solid var(--edge);border-radius:10px;padding:3px;gap:2px}
 .seg button{border:0;background:transparent;color:var(--fg-2);padding:6px 10px;border-radius:7px;
   font-size:13px;font-weight:550;cursor:pointer;white-space:nowrap;line-height:1.2}
 .seg button:hover{color:var(--fg)}
@@ -296,7 +296,7 @@ footer p{margin:0 0 4px;max-width:72ch}
       <button type="button" data-wpm="135" aria-pressed="false">Explanatory<small>135 WPM</small></button>
       <button type="button" data-wpm="155" aria-pressed="true">Story<small>155 WPM</small></button>
       <button type="button" data-wpm="175" aria-pressed="false">Punchy<small>175 WPM</small></button>
-      <button type="button" data-wpm="195" aria-pressed="false">Fast<small>195 WPM</small></button>
+      <button type="button" data-wpm="195" aria-pressed="false">Top Shorts<small>195 WPM</small></button>
       <button type="button" data-wpm="custom" aria-pressed="false">Custom<small>set WPM</small></button>
     </div>
 
@@ -383,7 +383,7 @@ footer p{margin:0 0 4px;max-width:72ch}
           <tr><td>135 WPM · Explanatory</td><td>7</td><td>34</td><td>68</td><td>135</td></tr>
           <tr><td>155 WPM · Standard storytime</td><td>8</td><td>39</td><td>78</td><td>155</td></tr>
           <tr><td>175 WPM · High-energy hook</td><td>9</td><td>44</td><td>88</td><td>175</td></tr>
-          <tr><td>195 WPM · Fast-paced / rap</td><td>10</td><td>49</td><td>98</td><td>195</td></tr>
+          <tr><td>195 WPM · Top Shorts pace</td><td>10</td><td>49</td><td>98</td><td>195</td></tr>
         </tbody>
       </table>
     </div>
@@ -441,9 +441,14 @@ footer p{margin:0 0 4px;max-width:72ch}
           <tr><td>Conversational narration</td><td>140–165</td><td>Standard storytime voiceover</td></tr>
           <tr><td>High-energy creator</td><td>165–185</td><td>Punchy edits, hard cuts, listicles</td></tr>
           <tr><td>Very fast / rap cadence</td><td>185–220</td><td>Dense information, heavy captions</td></tr>
+          <tr><td><b>Measured: top Shorts</b></td><td><b>156–221</b></td><td>Median <b>193 WPM</b> — what actually performs</td></tr>
         </tbody>
       </table>
     </div>
+    <p>The first four bands are conventional; the last is measured. We timed the first 30 seconds of
+      <a href="study/">132 YouTube Shorts with at least a million views each</a> and found a median of
+      193 WPM — so what this table calls a very fast cadence is the ordinary pace of a top-performing
+      Short, not an outlier.</p>
     <p>Everyday conversation sits somewhere in the 120–150 range for most English speakers; scripted
       short-form voiceover usually runs faster than that because the pauses get edited out. If your
       recorded runtime consistently comes in longer than this timer predicts, lower the WPM until the
@@ -464,13 +469,10 @@ footer p{margin:0 0 4px;max-width:72ch}
       At that length there is room for a hook, one point, and a close — nothing else.</p>
 
     <h3>How many words should a 3-second hook be?</h3>
-    <p><b>7 to 10 words</b>, depending on your pace — 8 at a standard 155 WPM. That is one clause.
-      This timer treats your first sentence as the hook and warns you when it runs past 3.5 seconds.</p>
+    <p><b>7 to 10 words</b>, depending on your pace — 8 at a standard 155 WPM. That is one clause. Measured across 132 top-performing Shorts, a median of <b>9 words</b> land before the 3-second mark, so the rule holds; their first sentence runs a median of 11 words and about 3 seconds, with half taking longer. This timer treats your first sentence as the hook and warns you when it runs past 3.5 seconds.</p>
 
     <h3>What speaking rate should I use for TikTok, Reels, and Shorts?</h3>
-    <p>Most scripted short-form voiceover lands between <b>140 and 185 WPM</b>, faster than everyday
-      conversation because the pauses get edited out. Start with the 155 WPM preset; if your recorded
-      videos consistently run longer than the estimate, drop to 135.</p>
+    <p>Measured across 132 top-performing Shorts, the median is <b>193 WPM</b> and the middle half runs <b>156 to 221</b> — faster than everyday conversation because the pauses get edited out. Start with the 155 WPM preset if you read deliberately, or the 195 WPM Top Shorts preset to match what tends to perform; if your recorded videos consistently run longer than the estimate, drop the WPM until it matches your real reads.</p>
 
     <h3>How does the script timer calculate duration?</h3>
     <p>It counts words, divides by your words-per-minute rate, and multiplies by 60. With Smart pauses

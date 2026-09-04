@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Fast Do Top YouTube Shorts Actually Talk? 132 Clips Measured</title>
+<meta name="description" content="We measured speaking rate and hook length in 132 YouTube Shorts with over a million views each. Median pace is 193 WPM and the median first sentence lands at 3.1 seconds — well past the usual advice.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Fast Do Top YouTube Shorts Actually Talk?">
+<meta property="og:description" content="Measured speaking rates and hook lengths across 132 YouTube Shorts with 1M+ views each.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%8F%B1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Fast Do Top YouTube Shorts Actually Talk? 132 Clips Measured",
+  "description": "Measured speaking rate and hook length across 132 YouTube Shorts with at least one million views each.",
+  "datePublished": "2026-09-04",
+  "author": { "@type": "Person", "name": "Jesse Bastide" },
+  "about": {
+    "@type": "Dataset",
+    "name": "Speaking rate and hook length in top-performing YouTube Shorts",
+    "description": "Aggregate speaking-rate and first-sentence statistics derived from the first 30 seconds of 132 English-language YouTube Shorts, each with at least 1,000,000 views, transcribed with word-level timestamps. Aggregates only; no per-video data is published.",
+    "measurementTechnique": "Whisper medium word-level timestamps",
+    "variableMeasured": ["words per minute while speaking", "first sentence duration in seconds", "first sentence length in words"]
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --panel-2:#f1f3f7; --edge:#dfe3ea;
+  --fg:#141821; --fg-2:#4a5361; --fg-3:#7b8697;
+  --accent:#4f46e5; --focus:#4f46e5;
+  --c1:#4f46e5; --c2:#64748b;
+  --shadow:0 1px 2px rgba(16,20,30,.06), 0 8px 24px rgba(16,20,30,.06);
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0e13; --panel:#14171f; --panel-2:#1b1f29; --edge:#272c38;
+    --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
+    --accent:#6366f1; --focus:#818cf8;
+    --c1:#6366f1; --c2:#7b8697;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0e13; --panel:#14171f; --panel-2:#1b1f29; --edge:#272c38;
+  --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
+  --accent:#6366f1; --focus:#818cf8;
+  --c1:#6366f1; --c2:#7b8697;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{line-height:1.25;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.topbar{border-bottom:1px solid var(--edge);background:var(--panel)}
+.topbar .wrap{display:flex;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
+.topbar a{text-decoration:none;font-weight:600;color:var(--fg)}
+.topbar span{color:var(--fg-3);font-size:14px}
+main{padding:8px 0 48px}
+h1{font-size:clamp(27px,5.2vw,40px);letter-spacing:-.02em;margin:26px 0 14px}
+h2{font-size:clamp(20px,3.4vw,25px);letter-spacing:-.01em;margin:40px 0 12px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px;max-width:68ch}
+ul{margin:0 0 14px;padding-left:22px;max-width:68ch}
+li{margin:0 0 7px}
+.lede{font-size:19px;color:var(--fg-2)}
+.key{font-family:var(--mono);font-weight:650;color:var(--fg);font-variant-numeric:tabular-nums;
+  background:var(--panel-2);border:1px solid var(--edge);border-radius:5px;padding:1px 6px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 8px}
+.tile{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.tile b{display:block;font-family:var(--mono);font-size:29px;font-weight:650;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;line-height:1.15}
+.tile span{display:block;font-size:13px;color:var(--fg-3);margin-top:3px}
+figure{margin:26px 0;background:var(--panel);border:1px solid var(--edge);
+  border-radius:12px;padding:16px 14px 10px;box-shadow:var(--shadow)}
+figcaption{font-size:14px;color:var(--fg-2);margin-top:10px;padding:0 2px}
+figure svg{display:block;width:100%;height:auto;overflow:visible}
+.grid{stroke:var(--edge);stroke-width:1}
+.ref{stroke:var(--fg-2);stroke-width:2;stroke-dasharray:5 4}
+.refl{fill:var(--fg-2);font-size:12px;text-anchor:middle;font-family:var(--sans)}
+.ax{fill:var(--fg-3);font-size:12px;text-anchor:middle;font-family:var(--sans)}
+.yax{text-anchor:end}
+.v{fill:var(--fg-2);font-size:11px;text-anchor:middle;font-family:var(--mono);font-weight:600}
+.nl{fill:var(--fg);font-size:14px;text-anchor:end;font-family:var(--sans)}
+.nv{text-anchor:start;font-size:15px;fill:var(--fg)}
+.nn{text-anchor:start;font-size:11px}
+.iqr{stroke:var(--c2);stroke-width:5;stroke-linecap:round;opacity:.55}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:0 0 14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--edge)}
+th{color:var(--fg-2);font-weight:600}
+td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+details{margin:6px 0 16px}
+summary{cursor:pointer;color:var(--fg-2);font-size:14px}
+.callout{background:var(--panel-2);border:1px solid var(--edge);border-left:3px solid var(--accent);
+  border-radius:8px;padding:13px 15px;margin:20px 0}
+.callout p:last-child{margin-bottom:0}
+.cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;
+  border-radius:9px;padding:11px 17px;margin:6px 0 4px}
+footer{border-top:1px solid var(--edge);padding:22px 0 40px;color:var(--fg-3);font-size:14px}
+footer p{max-width:68ch;margin:0 0 6px}
+@media (max-width:480px){
+  .v{font-size:10px} .ax{font-size:11px} .refl{font-size:11px}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a href="../">⏱️ Script Pacing &amp; Hook Timer</a><span>&middot; study</span>
+</div></header>
+
+<main class="wrap">
+<h1>How fast do top YouTube Shorts actually talk?</h1>
+
+<p class="lede">Across <strong>132 YouTube Shorts with at least a million views each</strong>, the
+median speaking rate is <strong>193 words per minute</strong> and the median first
+sentence ends at <strong>3.1 seconds</strong>. Both numbers are well past the advice
+that circulates in short-form guides — including the defaults this tool shipped with.</p>
+
+<div class="tiles">
+  <div class="tile"><b>193</b><span>median WPM while speaking</span></div>
+  <div class="tile"><b>3.1s</b><span>median first sentence</span></div>
+  <div class="tile"><b>11</b><span>median words in it</span></div>
+  <div class="tile"><b>48%</b><span>hooks done by 3.0s</span></div>
+</div>
+
+<p>Every number here is measured from the audio, not estimated. Method and limitations are at the
+bottom, and they matter — one metric had to be thrown out entirely.</p>
+
+<h2>Speaking rate</h2>
+
+<p>The middle half of these clips runs
+<span class="key">156–221 WPM</span>. The 10th percentile is
+<span class="key">118</span> and the 90th is <span class="key">246</span>.
+This is pace <em>while actually speaking</em> — words divided by the span from first word to last,
+so silence at the start or end does not deflate it.</p>
+
+<figure>
+<svg viewBox="0 0 720 300" role="img" aria-label="Distribution of speaking rate across 132 clips, peaking between 180 and 220 words per minute."><g><title>40–59 WPM: 2 clips</title><rect x="44.0" y="235.0" width="48.3" height="19.0" rx="4" fill="var(--c1)"/><text class="v" x="68.2" y="230.0">2</text></g><text class="ax" x="68.2" y="270">40</text><g><title>60–79 WPM: 3 clips</title><rect x="95.3" y="225.4" width="48.3" height="28.6" rx="4" fill="var(--c1)"/><text class="v" x="119.5" y="220.4">3</text></g><g><title>80–99 WPM: 7 clips</title><rect x="146.6" y="187.4" width="48.3" height="66.6" rx="4" fill="var(--c1)"/><text class="v" x="170.8" y="182.4">7</text></g><text class="ax" x="170.8" y="270">80</text><g><title>100–119 WPM: 2 clips</title><rect x="197.9" y="235.0" width="48.3" height="19.0" rx="4" fill="var(--c1)"/><text class="v" x="222.1" y="230.0">2</text></g><g><title>120–139 WPM: 10 clips</title><rect x="249.2" y="158.8" width="48.3" height="95.2" rx="4" fill="var(--c1)"/><text class="v" x="273.4" y="153.8">10</text></g><text class="ax" x="273.4" y="270">120</text><g><title>140–159 WPM: 13 clips</title><rect x="300.5" y="130.2" width="48.3" height="123.8" rx="4" fill="var(--c1)"/><text class="v" x="324.7" y="125.2">13</text></g><g><title>160–179 WPM: 15 clips</title><rect x="351.8" y="111.2" width="48.3" height="142.8" rx="4" fill="var(--c1)"/><text class="v" x="376.0" y="106.2">15</text></g><text class="ax" x="376.0" y="270">160</text><g><title>180–199 WPM: 21 clips</title><rect x="403.2" y="54.1" width="48.3" height="199.9" rx="4" fill="var(--c1)"/><text class="v" x="427.3" y="49.1">21</text></g><g><title>200–219 WPM: 25 clips</title><rect x="454.5" y="16.0" width="48.3" height="238.0" rx="4" fill="var(--c1)"/><text class="v" x="478.6" y="11.0">25</text></g><text class="ax" x="478.6" y="270">200</text><g><title>220–239 WPM: 14 clips</title><rect x="505.8" y="120.7" width="48.3" height="133.3" rx="4" fill="var(--c1)"/><text class="v" x="529.9" y="115.7">14</text></g><g><title>240–259 WPM: 12 clips</title><rect x="557.1" y="139.8" width="48.3" height="114.2" rx="4" fill="var(--c1)"/><text class="v" x="581.2" y="134.8">12</text></g><text class="ax" x="581.2" y="270">240</text><g><title>260–279 WPM: 6 clips</title><rect x="608.4" y="196.9" width="48.3" height="57.1" rx="4" fill="var(--c1)"/><text class="v" x="632.5" y="191.9">6</text></g><g><title>280–299 WPM: 2 clips</title><rect x="659.7" y="235.0" width="48.3" height="19.0" rx="4" fill="var(--c1)"/><text class="v" x="683.8" y="230.0">2</text></g><text class="ax" x="683.8" y="270">280</text><line class="ref" x1="435.5" y1="12" x2="435.5" y2="254"/><text class="refl" x="435.5" y="288">median 193</text><line class="grid" x1="44" y1="254.0" x2="708" y2="254.0"/><text class="ax yax" x="36" y="258.0">0</text><line class="grid" x1="44" y1="206.4" x2="708" y2="206.4"/><text class="ax yax" x="36" y="210.4">5</text><line class="grid" x1="44" y1="158.8" x2="708" y2="158.8"/><text class="ax yax" x="36" y="162.8">10</text><line class="grid" x1="44" y1="111.2" x2="708" y2="111.2"/><text class="ax yax" x="36" y="115.2">15</text><line class="grid" x1="44" y1="63.6" x2="708" y2="63.6"/><text class="ax yax" x="36" y="67.6">20</text><line class="grid" x1="44" y1="16.0" x2="708" y2="16.0"/><text class="ax yax" x="36" y="20.0">25</text></svg>
+<figcaption>Speaking rate across 132 clips, in 20-WPM bins. Median 193 WPM.
+Conversational English sits near 150; almost nothing here is conversational.</figcaption>
+</figure>
+
+<p>For comparison, the rates usually quoted for narration are 140–160 WPM. The measured median is
+193. A script written to a 155 WPM estimate and then delivered at
+193 finishes roughly <strong>20% early</strong> — which,
+on a 60-second slot, is about 12 seconds of unplanned airtime.</p>
+
+<h2>The hook</h2>
+
+<p>The common rule is a hook of seven to ten words landing inside three seconds. Measured, the
+median first sentence is <span class="key">11 words</span> over
+<span class="key">3.1 seconds</span>, and the middle half runs
+<span class="key">1.9–4.8s</span>.</p>
+
+<figure>
+<svg viewBox="0 0 720 300" role="img" aria-label="Distribution of first-sentence length in seconds; 48 percent finish within three seconds."><g><title>0–1s: 8 clips</title><rect x="44.0" y="180.8" width="62.8" height="73.2" rx="4" fill="var(--c1)"/><text class="v" x="75.4" y="175.8">8</text></g><text class="ax" x="75.4" y="270">0–1</text><g><title>1–2s: 26 clips</title><rect x="110.8" y="16.0" width="62.8" height="238.0" rx="4" fill="var(--c1)"/><text class="v" x="142.2" y="11.0">26</text></g><text class="ax" x="142.2" y="270">1–2</text><g><title>2–3s: 24 clips</title><rect x="177.6" y="34.3" width="62.8" height="219.7" rx="4" fill="var(--c1)"/><text class="v" x="209.0" y="29.3">24</text></g><text class="ax" x="209.0" y="270">2–3</text><g><title>3–4s: 20 clips</title><rect x="244.4" y="70.9" width="62.8" height="183.1" rx="4" fill="var(--c2)"/><text class="v" x="275.8" y="65.9">20</text></g><text class="ax" x="275.8" y="270">3–4</text><g><title>4–5s: 18 clips</title><rect x="311.2" y="89.2" width="62.8" height="164.8" rx="4" fill="var(--c2)"/><text class="v" x="342.6" y="84.2">18</text></g><text class="ax" x="342.6" y="270">4–5</text><g><title>5–6s: 10 clips</title><rect x="378.0" y="162.5" width="62.8" height="91.5" rx="4" fill="var(--c2)"/><text class="v" x="409.4" y="157.5">10</text></g><text class="ax" x="409.4" y="270">5–6</text><g><title>6–7s: 4 clips</title><rect x="444.8" y="217.4" width="62.8" height="36.6" rx="4" fill="var(--c2)"/><text class="v" x="476.2" y="212.4">4</text></g><text class="ax" x="476.2" y="270">6–7</text><g><title>7–8s: 3 clips</title><rect x="511.6" y="226.5" width="62.8" height="27.5" rx="4" fill="var(--c2)"/><text class="v" x="543.0" y="221.5">3</text></g><text class="ax" x="543.0" y="270">7–8</text><g><title>8–9s: 1 clips</title><rect x="578.4" y="244.8" width="62.8" height="9.2" rx="4" fill="var(--c2)"/><text class="v" x="609.8" y="239.8">1</text></g><text class="ax" x="609.8" y="270">8–9</text><g><title>9s and over: 11 clips</title><rect x="645.2" y="153.3" width="62.8" height="100.7" rx="4" fill="var(--c2)"/><text class="v" x="676.6" y="148.3">11</text></g><text class="ax" x="676.6" y="270">9s+</text><line class="ref" x1="242.4" y1="12" x2="242.4" y2="254"/><text class="refl" x="242.4" y="288">3.0s — 48% land left of this line</text><line class="grid" x1="44" y1="254.0" x2="708" y2="254.0"/><text class="ax yax" x="36" y="258.0">0</text><line class="grid" x1="44" y1="208.2" x2="708" y2="208.2"/><text class="ax yax" x="36" y="212.2">5</text><line class="grid" x1="44" y1="162.5" x2="708" y2="162.5"/><text class="ax yax" x="36" y="166.5">10</text><line class="grid" x1="44" y1="116.7" x2="708" y2="116.7"/><text class="ax yax" x="36" y="120.7">15</text><line class="grid" x1="44" y1="70.9" x2="708" y2="70.9"/><text class="ax yax" x="36" y="74.9">20</text><line class="grid" x1="44" y1="25.2" x2="708" y2="25.2"/><text class="ax yax" x="36" y="29.2">25</text></svg>
+<figcaption>First-sentence duration, 1-second bins, n=125 clips where a sentence
+boundary was detected. Bars left of the dashed line finish inside 3.0 seconds.
+The last bar is 9 seconds and over.</figcaption>
+</figure>
+
+<div class="callout">
+<p><strong>Fewer than half of these clips obey the three-second rule.</strong>
+48% of first sentences end by 3.0s (60 of 125),
+56% by 3.5s (70), and 77% by 5.0s (96). The rule describes roughly half of
+what works, not all of it.</p>
+</div>
+
+<p>Two related numbers. By the 3-second mark a median of
+<span class="key">9 words</span> have been spoken — more than the
+7–10 the rule implies, because the pace is faster than the rule assumes. And
+<span class="key">20%</span> of clips
+(27 of 132) contain a pause longer than
+0.4 seconds inside the first three seconds, so a beat early on is not disqualifying.</p>
+
+<h2>By niche</h2>
+
+<figure>
+<svg viewBox="0 0 720 286" role="img" aria-label="Median speaking rate by niche, from Education at 180 to Fitness at 219 words per minute."><line class="grid" x1="96.0" y1="16" x2="96.0" y2="252"/><text class="ax" x="96.0" y="270">100</text><line class="grid" x1="236.0" y1="16" x2="236.0" y2="252"/><text class="ax" x="236.0" y="270">140</text><line class="grid" x1="376.0" y1="16" x2="376.0" y2="252"/><text class="ax" x="376.0" y="270">180</text><line class="grid" x1="516.0" y1="16" x2="516.0" y2="252"/><text class="ax" x="516.0" y="270">220</text><line class="grid" x1="656.0" y1="16" x2="656.0" y2="252"/><text class="ax" x="656.0" y="270">260</text><text class="nl" x="84" y="49.0">Fitness</text><g><title>Fitness: median 219 WPM, middle half 200–238, n=18</title><line class="iqr" x1="446.7" y1="45.0" x2="577.6" y2="45.0"/><circle cx="512.9" cy="45.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="49.0">219</text><text class="ax nn" x="666" y="62.0">n=18</text><text class="nl" x="84" y="95.0">Storytime</text><g><title>Storytime: median 202 WPM, middle half 191–240, n=15</title><line class="iqr" x1="415.2" y1="91.0" x2="586.3" y2="91.0"/><circle cx="454.4" cy="91.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="95.0">202</text><text class="ax nn" x="666" y="108.0">n=15</text><text class="nl" x="84" y="141.0">Cooking</text><g><title>Cooking: median 192 WPM, middle half 129–216, n=23</title><line class="iqr" x1="197.8" y1="137.0" x2="502.0" y2="137.0"/><circle cx="418.3" cy="137.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="141.0">192</text><text class="ax nn" x="666" y="154.0">n=23</text><text class="nl" x="84" y="187.0">Tech</text><g><title>Tech: median 187 WPM, middle half 169–200, n=17</title><line class="iqr" x1="338.2" y1="183.0" x2="446.3" y2="183.0"/><circle cx="400.2" cy="183.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="187.0">187</text><text class="ax nn" x="666" y="200.0">n=17</text><text class="nl" x="84" y="233.0">Education</text><g><title>Education: median 180 WPM, middle half 159–204, n=18</title><line class="iqr" x1="301.8" y1="229.0" x2="458.2" y2="229.0"/><circle cx="376.3" cy="229.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="233.0">180</text><text class="ax nn" x="666" y="246.0">n=18</text><text class="ax" x="376" y="280">words per minute (dot = median, bar = middle half)</text></svg>
+<figcaption>Median speaking rate for the five niches with at least 15 clips after filtering.
+Dot is the median, bar spans the 25th to 75th percentile.</figcaption>
+</figure>
+
+<p>The spread between the fastest and slowest niche median is about
+39 WPM — real, but smaller than the spread <em>within</em> any single
+niche. Pace is more a property of the individual creator than of the subject.</p>
+
+<details><summary>Table: all niches, including those too small to chart</summary>
+<div class="scroll"><table>
+<thead><tr><th>Niche</th><th class="n">n</th><th class="n">Median WPM</th><th class="n">Median hook (s)</th></tr></thead>
+<tbody>
+<tr><td>business (thin)</td><td class="n">5</td><td class="n">234</td><td class="n">1.64</td></tr>
+<tr><td>cooking</td><td class="n">23</td><td class="n">192</td><td class="n">2.56</td></tr>
+<tr><td>education</td><td class="n">18</td><td class="n">180</td><td class="n">4.8</td></tr>
+<tr><td>fitness</td><td class="n">18</td><td class="n">219</td><td class="n">3.24</td></tr>
+<tr><td>health (thin)</td><td class="n">12</td><td class="n">187</td><td class="n">4.1</td></tr>
+<tr><td>home-diy (thin)</td><td class="n">7</td><td class="n">162</td><td class="n">3.88</td></tr>
+<tr><td>parenting (thin)</td><td class="n">11</td><td class="n">138</td><td class="n">1.89</td></tr>
+<tr><td>personal-finance (thin)</td><td class="n">6</td><td class="n">193</td><td class="n">2.75</td></tr>
+<tr><td>storytime</td><td class="n">15</td><td class="n">202</td><td class="n">2.86</td></tr>
+<tr><td>tech</td><td class="n">17</td><td class="n">187</td><td class="n">3.68</td></tr>
+</tbody></table></div>
+<p style="font-size:13.5px;color:var(--fg-3)">Niches marked "thin" have fewer than 15 clips and are
+not charted; they remain in the overall figures.</p>
+</details>
+
+<h2>Does pace predict views? No.</h2>
+
+<p>Within this sample there is <strong>no usable relationship between how fast someone talks and how
+many views the clip has</strong>. Spearman rank correlations against view count:</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Measure</th><th class="n">rho</th><th class="n">p</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>First sentence length (s)</td><td class="n">-0.162</td>
+<td class="n">0.0716</td><td>No effect</td></tr>
+<tr><td>Speaking rate (WPM)</td><td class="n">-0.249</td>
+<td class="n">0.004</td><td>Weak, and confounded — see below</td></tr>
+<tr><td>Words spoken by 3s</td><td class="n">-0.124</td>
+<td class="n">0.1571</td><td>No effect</td></tr>
+</tbody></table></div>
+
+<p>The speaking-rate correlation is statistically significant and we are still not going to claim it.
+The reason is composition: the 10M+ group holds 74 of the 132 clips and is dominated
+by cooking, education, fitness and tech creators, while the 1–3M group has a different mix
+entirely. The correlation tracks <em>which creators landed in which bucket</em>, not a relationship
+between pace and reach. A sample built to answer that question would need to hold the creator
+constant; this one was not.</p>
+
+<p>The honest summary: <strong>pace and hook length do not separate a 1-million-view Short from a
+10-million-view one.</strong> Both are table stakes, not levers.</p>
+
+<h2>What this means if you are writing one</h2>
+
+<ul>
+<li><strong>Write to roughly 193 WPM, not 155.</strong> If you time a script at 155 and
+deliver it at your natural short-form pace, you will come in early and have to pad.</li>
+<li><strong>Don't panic at three seconds.</strong> Half of these clips take longer than that
+to finish their first sentence, and anything up to about five seconds is inside normal
+practice. Write the sentence the hook needs, then cut words &mdash; not tenths.</li>
+<li><strong>The 7&ndash;10 word hook rule holds up.</strong> A median of 9 words land before the
+3-second mark, right inside it. What is wrong is the pace assumed underneath it: those 9
+words arrive at roughly 193 WPM, not 155, so the sentence you fit in three seconds is
+longer than the old arithmetic suggests.</li>
+<li><strong>A pause in the opening is fine.</strong> One clip in five has one.</li>
+<li><strong>Do not tune pace hoping for reach.</strong> Nothing here supports that.</li>
+</ul>
+
+<p><a class="cta" href="../">Time your script against these numbers →</a></p>
+
+<h2>Methodology</h2>
+
+<p>Ten niches. Channels were reached three ways: YouTube search; a hand-picked list of
+talking-head and voiceover creators; and a speech-oriented search top-up for three thin niches.
+Within each channel, candidates are <strong>the highest-viewed among that channel's 80 most recent
+Shorts</strong>, capped at five per channel, every one with at least 1,000,000 views as displayed on
+the channel page at discovery time (2026-09-03).</p>
+
+<p>Discovery surfaced <span class="key">312</span> candidates. Of those,
+<span class="key">104</span> were removed editorially before any download,
+covering 32 channels: kids' entertainment, ASMR and silent clips, music and fancam
+channels, product advertisements, television news and newspaper channels, conference keynotes,
+podcast interview excerpts, non-English channels, and creators filed under the wrong niche. The
+reasons are recorded per channel. That left
+<span class="key">208</span> to attempt.</p>
+
+<p>The first 30 seconds of each was downloaded as 16&nbsp;kHz mono audio and transcribed with
+<strong>Whisper <code>medium</code></strong> using word-level timestamps. Download outcomes: 152
+fetched, 51 rejected for running longer than 60 seconds, 5 no longer available.</p>
+
+<p>Filters applied to the 152 transcribed clips, each with its count:</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Filter</th><th class="n">Removed</th></tr></thead>
+<tbody>
+<tr><td>No speech detected at all</td><td class="n">2</td></tr>
+<tr><td>Not English</td><td class="n">5</td></tr>
+<tr><td>Language confidence below 0.8</td><td class="n">11</td></tr>
+<tr><td>Fewer than 10 words</td><td class="n">2</td></tr>
+<tr><td>Longer than 60s</td><td class="n">0</td></tr>
+<tr><td><strong>Analysed</strong></td><td class="n"><strong>132</strong></td></tr>
+</tbody></table></div>
+
+<p>Hook figures use the 125 clips where Whisper found a sentence boundary in the first
+30 seconds; in 7 clips it found none, and those are excluded from hook
+statistics rather than counted as one long sentence. Clips span uploads from
+2022-07-28 to 2026-08-28, drawn from 42 channels, no more than five from any one.</p>
+
+<h3>Limitations, including one that cost us a metric</h3>
+<ul>
+<li><strong>Lead-in time is not reported, because it could not be measured.</strong> Whisper placed
+the first word at exactly 0.00 seconds in 128 of 132 clips. That is the transcriber snapping to the
+segment start, not 132 creators beginning to speak on the exact frame. Any "median silence before
+the first word" we could print would be an artefact, so there isn't one.</li>
+<li><strong>Newest-first sampling.</strong> A channel's Shorts tab is ordered by recency, not views.
+Reading 80 entries therefore covers a few weeks for a daily poster and several years for an
+occasional one, which biases the sample toward low-frequency creators and, for prolific channels,
+toward recent rather than best work.</li>
+<li><strong>Sentence boundaries are Whisper's.</strong> Punctuation defines where the first sentence
+ends. In about one hook measurement in eight the model punctuated sparsely, producing first
+"sentences" longer than 10 seconds. The median absorbs this; the upper quartile is softer than it
+looks.</li>
+<li><strong>The 60-second cut discards a quarter of the pool.</strong> Shorts now run to three
+minutes, and 51 qualifying clips were dropped for length. These findings describe Shorts of a
+minute or less.</li>
+<li><strong>Two niches are too thin to stand alone</strong> — business (n=5) and personal finance
+(n=6). Clips over a million views are genuinely scarce there: one creator had a single such Short
+in his 400 most recent, another's 80 most recent topped out near 51,000 views, and nine more
+returned none. What does clear a million in those niches is mostly podcast clips, advertisements and
+news, all of which were excluded. They stay in the overall figures and are not charted.</li>
+<li><strong>YouTube only, English only</strong>, first 30 seconds only, and view counts as displayed
+at discovery time.</li>
+</ul>
+
+<h3>What is not published</h3>
+<p>Aggregates only. No transcripts, no word timings, no per-video rows, and no list of the videos or
+creators measured. The audio was fetched to a local machine, analysed, and deleted. Publishing a
+ranked list of other people's videos was never the point — the numbers are, and the numbers are
+all here.</p>
+
+</main>
+
+<footer class="wrap">
+  <p>Measured 2026-09-03 on 132 clips. Figures will drift as
+  short-form conventions change; this page states its n and its date so you can judge how stale it is.</p>
+  <p>No tracking, no cookies, no analytics, no network requests after load.</p>
+  <p><a href="../">← Back to the Script Pacing &amp; Hook Timer</a></p>
+</footer>
+</body>
+</html>

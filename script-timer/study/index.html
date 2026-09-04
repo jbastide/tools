@@ -30,29 +30,34 @@
 </script>
 <style>
 :root{
-  --bg:#f7f8fa; --panel:#ffffff; --panel-2:#f1f3f7; --edge:#dfe3ea;
-  --fg:#141821; --fg-2:#4a5361; --fg-3:#7b8697;
-  --accent:#4f46e5; --focus:#4f46e5;
-  --c1:#4f46e5; --c2:#64748b;
-  --shadow:0 1px 2px rgba(16,20,30,.06), 0 8px 24px rgba(16,20,30,.06);
+  /* light: white surfaces, YouTube's near-black text, red reserved for emphasis */
+  --bg:#fafafa; --panel:#ffffff; --panel-2:#f2f2f2; --edge:#e3e3e3;
+  --fg:#0f0f0f; --fg-2:#3d3d3d; --fg-3:#606060;
+  --accent:#cc0000; --focus:#cc0000;
+  --red:#ff0033; --red-soft:rgba(255,0,51,.09);
+  --c1:#e50914; --c2:#7a7a7a;
+  --shadow:0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.05);
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
   --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0c0e13; --panel:#14171f; --panel-2:#1b1f29; --edge:#272c38;
-    --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
-    --accent:#6366f1; --focus:#818cf8;
-    --c1:#6366f1; --c2:#7b8697;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    /* dark: YouTube's #0f0f0f / #212121 surfaces */
+    --bg:#0f0f0f; --panel:#181818; --panel-2:#212121; --edge:#303030;
+    --fg:#f1f1f1; --fg-2:#b8b8b8; --fg-3:#8c8c8c;
+    --accent:#ff4e45; --focus:#ff4e45;
+    --red:#ff0033; --red-soft:rgba(255,0,51,.14);
+    --c1:#ff1a3c; --c2:#6f6f6f;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.45);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0c0e13; --panel:#14171f; --panel-2:#1b1f29; --edge:#272c38;
-  --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
-  --accent:#6366f1; --focus:#818cf8;
-  --c1:#6366f1; --c2:#7b8697;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  --bg:#0f0f0f; --panel:#181818; --panel-2:#212121; --edge:#303030;
+  --fg:#f1f1f1; --fg-2:#b8b8b8; --fg-3:#8c8c8c;
+  --accent:#ff4e45; --focus:#ff4e45;
+  --red:#ff0033; --red-soft:rgba(255,0,51,.14);
+  --c1:#ff1a3c; --c2:#6f6f6f;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.45);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -62,23 +67,24 @@ h1,h2,h3{line-height:1.25;margin:0}
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
-.topbar{border-bottom:1px solid var(--edge);background:var(--panel)}
+.topbar{border-top:3px solid var(--red);border-bottom:1px solid var(--edge);background:var(--panel)}
 .topbar .wrap{display:flex;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
 .topbar a{text-decoration:none;font-weight:600;color:var(--fg)}
 .topbar span{color:var(--fg-3);font-size:14px}
 main{padding:8px 0 48px}
 h1{font-size:clamp(27px,5.2vw,40px);letter-spacing:-.02em;margin:26px 0 14px}
+h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--red);margin-top:14px}
 h2{font-size:clamp(20px,3.4vw,25px);letter-spacing:-.01em;margin:40px 0 12px}
 h3{font-size:17px;margin:26px 0 8px}
 p{margin:0 0 14px;max-width:68ch}
 ul{margin:0 0 14px;padding-left:22px;max-width:68ch}
 li{margin:0 0 7px}
 .lede{font-size:19px;color:var(--fg-2)}
-.key{font-family:var(--mono);font-weight:650;color:var(--fg);font-variant-numeric:tabular-nums;
-  background:var(--panel-2);border:1px solid var(--edge);border-radius:5px;padding:1px 6px}
+.key{font-family:var(--mono);font-weight:650;color:var(--accent);font-variant-numeric:tabular-nums;
+  background:var(--red-soft);border:1px solid transparent;border-radius:5px;padding:1px 6px}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 8px}
 .tile{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
-.tile b{display:block;font-family:var(--mono);font-size:29px;font-weight:650;letter-spacing:-.02em;
+.tile b{display:block;font-family:var(--mono);font-size:29px;font-weight:650;letter-spacing:-.02em;color:var(--accent);
   font-variant-numeric:tabular-nums;line-height:1.15}
 .tile span{display:block;font-size:13px;color:var(--fg-3);margin-top:3px}
 figure{margin:26px 0;background:var(--panel);border:1px solid var(--edge);
@@ -86,8 +92,8 @@ figure{margin:26px 0;background:var(--panel);border:1px solid var(--edge);
 figcaption{font-size:14px;color:var(--fg-2);margin-top:10px;padding:0 2px}
 figure svg{display:block;width:100%;height:auto;overflow:visible}
 .grid{stroke:var(--edge);stroke-width:1}
-.ref{stroke:var(--fg-2);stroke-width:2;stroke-dasharray:5 4}
-.refl{fill:var(--fg-2);font-size:12px;text-anchor:middle;font-family:var(--sans)}
+.ref{stroke:var(--fg);stroke-width:2;stroke-dasharray:5 4}
+.refl{fill:var(--fg);font-weight:600;font-size:12px;text-anchor:middle;font-family:var(--sans)}
 .ax{fill:var(--fg-3);font-size:12px;text-anchor:middle;font-family:var(--sans)}
 .yax{text-anchor:end}
 .v{fill:var(--fg-2);font-size:11px;text-anchor:middle;font-family:var(--mono);font-weight:600}
@@ -105,7 +111,7 @@ summary{cursor:pointer;color:var(--fg-2);font-size:14px}
 .callout{background:var(--panel-2);border:1px solid var(--edge);border-left:3px solid var(--accent);
   border-radius:8px;padding:13px 15px;margin:20px 0}
 .callout p:last-child{margin-bottom:0}
-.cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;
+.cta{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:600;
   border-radius:9px;padding:11px 17px;margin:6px 0 4px}
 footer{border-top:1px solid var(--edge);padding:22px 0 40px;color:var(--fg-3);font-size:14px}
 footer p{max-width:68ch;margin:0 0 6px}
@@ -116,7 +122,7 @@ footer p{max-width:68ch;margin:0 0 6px}
 </head>
 <body>
 <header class="topbar"><div class="wrap">
-  <a href="../">⏱️ Script Pacing &amp; Hook Timer</a><span>&middot; study</span>
+  <a href="../">⏱️ Script Pacing &amp; Hook Timer</a><span>&middot; <b style="color:var(--accent);font-weight:600">study</b></span>
 </div></header>
 
 <main class="wrap">

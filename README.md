@@ -7,7 +7,7 @@ inline CSS and vanilla JS, no build step, no dependencies, no network requests a
 
 | Tool | Path | What it does |
 | --- | --- | --- |
-| Short-Form Script Pacing & Hook Timer | [`script-timer/`](script-timer/) | Times a short-form video script in real time, splits it into retention zones (3s / 15s / 30s / 60s), and warns when the hook runs past three seconds. |
+| Short-Form Script Pacing & Hook Timer | [`script-timer/`](script-timer/) | Times a short-form video script in real time, splits it into retention zones (3s / 15s / 30s / 60s), and grades the hook against first-sentence lengths measured in 132 top YouTube Shorts (green inside 3s, note to 5s, warning past 5s). Default pace is the measured 193 WPM median. |
 
 ## Deploying
 

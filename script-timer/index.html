@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Short-Form Script Timer &amp; Hook Pacing Tool (TikTok, Reels, Shorts)</title>
-<meta name="description" content="Free real-time script timer built for short-form video. Calculate exact pacing, test your 3-second hook length, and optimize retention for TikTok, Reels, and YouTube Shorts.">
+<meta name="description" content="Free real-time script timer built for short-form video. Calculate exact pacing, test your 3-second hook against 132 measured top Shorts, and optimize retention for TikTok, Reels, and YouTube Shorts.">
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -16,7 +16,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Short-Form Script Pacing & Hook Timer",
-  "description": "Real-time script timer for short-form video. Calculates spoken duration from word count and WPM, breaks the script into retention zones, and flags hooks that run past three seconds.",
+  "description": "Real-time script timer for short-form video. Calculates spoken duration from word count and WPM, breaks the script into retention zones, and grades the hook against speaking rates and first-sentence lengths measured in 132 YouTube Shorts with over a million views each.",
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "All",
   "browserRequirements": "Requires JavaScript. Runs fully client-side.",
@@ -28,10 +28,12 @@
   },
   "featureList": [
     "Real-time script duration in MM:SS.s",
-    "Four cadence presets plus custom WPM from 100 to 220",
+    "Four cadence presets plus custom WPM from 100 to 250",
+    "Default pace of 193 WPM, the measured median of 132 top YouTube Shorts",
     "Smart punctuation pause weighting",
     "Colour-coded retention zones (3s / 15s / 30s / 60s)",
-    "3-second hook length warning",
+    "Hook feedback benchmarked against measured first-sentence lengths (green inside 3s, note to 5s, warning past 5s)",
+    "Runtime shown at the measured 193 WPM median alongside your chosen pace",
     "Automatic local draft saving"
   ]
 }
@@ -44,27 +46,27 @@
     {
       "@type": "Question",
       "name": "How many words is a 30-second video script?",
-      "acceptedAnswer": { "@type": "Answer", "text": "About 78 words at a standard 155 WPM storytime pace. A deliberate 135 WPM read fits 68 words; a fast 195 WPM read fits 98. Budget 10–15% fewer if you pause for emphasis or cut to B-roll." }
+      "acceptedAnswer": { "@type": "Answer", "text": "About 97 words at 193 WPM, the median pace measured across 132 top-performing YouTube Shorts. A conversational 155 WPM read fits 78 words; a deliberate 135 WPM read fits 68. Budget 10–15% fewer if you pause for emphasis or cut to B-roll." }
     },
     {
       "@type": "Question",
       "name": "How many words is a 60-second video script?",
-      "acceptedAnswer": { "@type": "Answer", "text": "155 words at 155 WPM — the number of words and the words-per-minute rate are the same at exactly one minute. The full range across normal speaking rates is 135 to 195 words." }
+      "acceptedAnswer": { "@type": "Answer", "text": "About 193 words at the measured top-Shorts pace of 193 WPM — at exactly one minute the word count and the words-per-minute rate are the same number. A conversational 155 WPM read fits 155 words and a deliberate 135 WPM read fits 135, so the range across the presets is 135 to 193." }
     },
     {
       "@type": "Question",
       "name": "How many words is a 15-second video script?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 39 words at 155 WPM, or 34 to 49 across the full range of speaking rates. At that length there is room for a hook, one point, and a close — nothing else." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 48 words at the measured 193 WPM top-Shorts pace, or 34 to 48 across the presets. At that length there is room for a hook, one point, and a close — nothing else." }
     },
     {
       "@type": "Question",
       "name": "How many words should a 3-second hook be?",
-      "acceptedAnswer": { "@type": "Answer", "text": "7 to 10 words, depending on your pace — 8 at a standard 155 WPM. That is one clause. Measured across 132 top-performing Shorts, a median of 9 words land before the 3-second mark, so the rule holds; their first sentence runs a median of 11 words and about 3 seconds, with half taking longer. This timer treats your first sentence as the hook and warns you when it runs past 3.5 seconds." }
+      "acceptedAnswer": { "@type": "Answer", "text": "7 to 10 words, depending on your pace — 10 at the measured 193 WPM top-Shorts pace, 8 at 155. That is one clause. Measured across 132 top-performing Shorts, a median of 9 words land before the 3-second mark, so the rule holds; their first sentence runs a median of 11 words and 3.1 seconds, and only 48% finish inside 3.0s while 77% finish inside 5.0s. This timer treats your first sentence as the hook: inside three seconds is a green light, three to five seconds gets a note rather than a warning because that range is normal practice, and past five seconds you get a warning." }
     },
     {
       "@type": "Question",
       "name": "What speaking rate should I use for TikTok, Reels, and Shorts?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Measured across 132 top-performing Shorts, the median is 193 WPM and the middle half runs 156 to 221 — faster than everyday conversation because the pauses get edited out. Start with the 155 WPM preset if you read deliberately, or the 195 WPM Top Shorts preset to match what tends to perform; if your recorded videos consistently run longer than the estimate, drop the WPM until it matches your real reads." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Measured across 132 top-performing Shorts, the median is 193 WPM and the middle half runs 156 to 221 — faster than everyday conversation because the pauses get edited out. The Top Shorts preset is set to that 193 WPM median and is the default. A script timed at 155 and delivered at 193 finishes about 20% early, so only drop to the 155 or 135 presets if your recorded videos consistently run longer than the estimate; the WPM that matches your real reads is your personal cadence. Pace did not predict view counts in the sample, so choose the rate you can actually deliver rather than one you hope will travel." }
     },
     {
       "@type": "Question",
@@ -294,16 +296,16 @@ footer p{margin:0 0 4px;max-width:72ch}
 
     <div class="seg" role="group" aria-label="Cadence preset" id="presets">
       <button type="button" data-wpm="135" aria-pressed="false">Explanatory<small>135 WPM</small></button>
-      <button type="button" data-wpm="155" aria-pressed="true">Story<small>155 WPM</small></button>
+      <button type="button" data-wpm="155" aria-pressed="false">Story<small>155 WPM</small></button>
       <button type="button" data-wpm="175" aria-pressed="false">Punchy<small>175 WPM</small></button>
-      <button type="button" data-wpm="195" aria-pressed="false">Top Shorts<small>195 WPM</small></button>
+      <button type="button" data-wpm="193" aria-pressed="true" title="Median speaking rate measured across 132 YouTube Shorts with over a million views">Top Shorts<small>193 WPM · measured</small></button>
       <button type="button" data-wpm="custom" aria-pressed="false">Custom<small>set WPM</small></button>
     </div>
 
     <div class="customwrap" id="customwrap">
       <label for="wpmRange" class="sr">Custom words per minute</label>
-      <input type="range" id="wpmRange" min="100" max="220" step="1" value="155">
-      <output for="wpmRange" id="wpmOut">155 WPM</output>
+      <input type="range" id="wpmRange" min="100" max="250" step="1" value="193">
+      <output for="wpmRange" id="wpmOut">193 WPM</output>
     </div>
 
     <div class="toggles">
@@ -340,7 +342,7 @@ footer p{margin:0 0 4px;max-width:72ch}
       <div class="layer" id="mirror" aria-hidden="true"></div>
       <textarea class="layer" id="script" spellcheck="true" autocapitalize="sentences"
         aria-label="Script text"
-        placeholder="Type or paste your script…&#10;&#10;Your first line is the hook — keep it under three seconds. Everything after that is context, payoff, and the reason someone stays."></textarea>
+        placeholder="Type or paste your script…&#10;&#10;Your first line is the hook — top Shorts finish it in about three seconds. Everything after that is context, payoff, and the reason someone stays."></textarea>
     </div>
   </div>
 
@@ -350,7 +352,7 @@ footer p{margin:0 0 4px;max-width:72ch}
       <div class="counts">
         <span>Total words <b id="cWords">0</b></span>
         <span>Characters <b id="cChars">0</b></span>
-        <span>Pace <b id="cWpm">155</b> WPM</span>
+        <span>Pace <b id="cWpm">193</b> WPM</span>
         <span>Hook <b id="cHook">0.0s</b></span>
       </div>
     </div>
@@ -383,21 +385,31 @@ footer p{margin:0 0 4px;max-width:72ch}
           <tr><td>135 WPM · Explanatory</td><td>7</td><td>34</td><td>68</td><td>135</td></tr>
           <tr><td>155 WPM · Standard storytime</td><td>8</td><td>39</td><td>78</td><td>155</td></tr>
           <tr><td>175 WPM · High-energy hook</td><td>9</td><td>44</td><td>88</td><td>175</td></tr>
-          <tr><td>195 WPM · Top Shorts pace</td><td>10</td><td>49</td><td>98</td><td>195</td></tr>
+          <tr><td>193 WPM · Top Shorts (measured median)</td><td>10</td><td>48</td><td>97</td><td>193</td></tr>
         </tbody>
       </table>
     </div>
     <p>These are clean-read numbers. They assume no breathing room, no B-roll beat, and no dead air at the
       top of the clip. In practice, budget roughly 10–15% fewer words than the table shows, or turn on
       <b>Smart pauses</b> to have the timer add that overhead for you.</p>
+    <p>The bottom row is the one to write to. Across <a href="study/">132 YouTube Shorts with at least a
+      million views each</a>, the median speaking rate was 193 WPM, so that row is the default here. A
+      script timed at 155 WPM and then delivered at a natural short-form pace comes in roughly 20% early —
+      about 12 seconds of unplanned airtime on a 60-second slot.</p>
 
     <h2>The mechanics of the 3-second hook</h2>
     <p>Short-form feeds are built around an immediate swipe decision. The viewer has already committed to
       scrolling before your video loads, so the opening line is not an introduction — it is an interruption.
       Whatever makes the video worth watching has to be legible inside the first breath.</p>
     <p>Three seconds is a working budget, not a law of physics, but it is a useful constraint because it is
-      brutally short: at a normal storytime cadence it buys you about <b>eight words</b>. That is one clause.
-      If your opening line needs a subordinate clause to land, it is too long.</p>
+      brutally short: at the measured 193 WPM it buys you about <b>ten words</b>, at a storytime cadence
+      about eight. That is one clause. If your opening line needs a subordinate clause to land, it is too long.</p>
+    <p>Measured against what actually performs, the rule is half right. In the
+      <a href="study/">132 top Shorts we timed</a>, a median of <b>9 words</b> are spoken by the three-second
+      mark, so the 7–10 word budget holds. But the first <em>sentence</em> runs a median of 11 words and
+      <b>3.1 seconds</b>: only 48% of those clips finish it inside 3.0s, 56% inside 3.5s, and 77% inside
+      5.0s. Fewer than half obey the three-second rule, and anything up to about five seconds is inside
+      normal practice.</p>
     <h3>What tends to burn hook time</h3>
     <ul>
       <li><b>Throat-clearing.</b> "Hey guys, so today I wanted to talk about…" is three seconds of nothing.</li>
@@ -405,9 +417,13 @@ footer p{margin:0 0 4px;max-width:72ch}
       <li><b>Long proper nouns and numbers.</b> They read fast on the page and speak slowly out loud.</li>
       <li><b>Qualifiers.</b> "kind of", "basically", "I think" — each one costs you a fifth of a second.</li>
     </ul>
-    <p>The rule this tool enforces: if your first sentence runs past <b>3.5 seconds</b>, you get a warning.
-      That half-second of slack exists because a hook that lands at 3.2s and cuts hard is usually fine;
-      one that rambles to 5s is not.</p>
+    <p>A short pause in the opening is not on that list. One clip in five in the measured sample has a
+      pause longer than 0.4 seconds inside the first three seconds, so a beat early on is not disqualifying.</p>
+    <p>How this tool grades the hook, using those measured cut-offs: a first sentence that ends inside
+      <b>3.0 seconds</b> gets a green light. Between <b>3 and 5 seconds</b> you get a note, not a warning —
+      half of top Shorts take longer than three seconds to finish their opening, so that range is ordinary.
+      Past <b>5 seconds</b>, where fewer than a quarter of top Shorts are still on their first sentence,
+      you get a warning. Write the sentence the hook needs, then cut words, not tenths.</p>
 
     <h2>Retention zones explained</h2>
     <div class="tablewrap">
@@ -454,25 +470,60 @@ footer p{margin:0 0 4px;max-width:72ch}
       recorded runtime consistently comes in longer than this timer predicts, lower the WPM until the
       estimate matches your real reads — that number is your personal cadence, and it is worth knowing.</p>
 
+    <h3>Measured pace by niche</h3>
+    <div class="tablewrap">
+      <table>
+        <caption>Median speaking rate for the five niches with at least 15 clips in the measured sample.</caption>
+        <thead>
+          <tr><th scope="col">Niche</th><th scope="col">Median WPM</th><th scope="col">Middle half</th><th scope="col">Clips</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Fitness</td><td>219</td><td>200–238</td><td>18</td></tr>
+          <tr><td>Storytime</td><td>202</td><td>191–240</td><td>15</td></tr>
+          <tr><td>Cooking</td><td>192</td><td>129–216</td><td>23</td></tr>
+          <tr><td>Tech</td><td>187</td><td>169–200</td><td>17</td></tr>
+          <tr><td>Education</td><td>180</td><td>159–204</td><td>18</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The gap between the fastest and slowest niche is about 39 WPM, which is smaller than the spread
+      inside any one of them. Pace is a property of the creator more than the subject, so use the niche
+      row as a starting point and the Custom slider to dial in your own. One more thing the data settled:
+      within the sample, speaking rate and hook length did not predict view counts. Pick the pace you can
+      deliver cleanly; do not tune it hoping for reach.</p>
+
     <h2 id="faq">Frequently asked questions</h2>
 
     <h3>How many words is a 30-second video script?</h3>
-    <p>About <b>78 words</b> at a standard 155 WPM storytime pace. A deliberate 135 WPM read fits
-      68 words; a fast 195 WPM read fits 98. Budget 10–15% fewer if you pause for emphasis or cut to B-roll.</p>
+    <p>About <b>97 words</b> at 193 WPM, the median pace measured across 132 top-performing YouTube Shorts.
+      A conversational 155 WPM read fits 78 words; a deliberate 135 WPM read fits 68. Budget 10–15% fewer
+      if you pause for emphasis or cut to B-roll.</p>
 
     <h3>How many words is a 60-second video script?</h3>
-    <p><b>155 words</b> at 155 WPM — the number of words and the words-per-minute rate are the same
-      at exactly one minute. The full range across normal speaking rates is 135 to 195 words.</p>
+    <p>About <b>193 words</b> at the measured top-Shorts pace of 193 WPM — at exactly one minute the word
+      count and the words-per-minute rate are the same number. A conversational 155 WPM read fits 155 words
+      and a deliberate 135 WPM read fits 135, so the range across the presets is 135 to 193.</p>
 
     <h3>How many words is a 15-second video script?</h3>
-    <p>Roughly <b>39 words</b> at 155 WPM, or 34 to 49 across the full range of speaking rates.
+    <p>Roughly <b>48 words</b> at the measured 193 WPM top-Shorts pace, or 34 to 48 across the presets.
       At that length there is room for a hook, one point, and a close — nothing else.</p>
 
     <h3>How many words should a 3-second hook be?</h3>
-    <p><b>7 to 10 words</b>, depending on your pace — 8 at a standard 155 WPM. That is one clause. Measured across 132 top-performing Shorts, a median of <b>9 words</b> land before the 3-second mark, so the rule holds; their first sentence runs a median of 11 words and about 3 seconds, with half taking longer. This timer treats your first sentence as the hook and warns you when it runs past 3.5 seconds.</p>
+    <p><b>7 to 10 words</b>, depending on your pace — 10 at the measured 193 WPM top-Shorts pace, 8 at 155.
+      That is one clause. Measured across 132 top-performing Shorts, a median of <b>9 words</b> land before
+      the 3-second mark, so the rule holds; their first sentence runs a median of 11 words and 3.1 seconds,
+      and only 48% finish inside 3.0s while 77% finish inside 5.0s. This timer treats your first sentence as
+      the hook: inside three seconds is a green light, three to five seconds gets a note rather than a
+      warning because that range is normal practice, and past five seconds you get a warning.</p>
 
     <h3>What speaking rate should I use for TikTok, Reels, and Shorts?</h3>
-    <p>Measured across 132 top-performing Shorts, the median is <b>193 WPM</b> and the middle half runs <b>156 to 221</b> — faster than everyday conversation because the pauses get edited out. Start with the 155 WPM preset if you read deliberately, or the 195 WPM Top Shorts preset to match what tends to perform; if your recorded videos consistently run longer than the estimate, drop the WPM until it matches your real reads.</p>
+    <p>Measured across 132 top-performing Shorts, the median is <b>193 WPM</b> and the middle half runs
+      <b>156 to 221</b> — faster than everyday conversation because the pauses get edited out. The Top Shorts
+      preset is set to that 193 WPM median and is the default. A script timed at 155 and delivered at 193
+      finishes about 20% early, so only drop to the 155 or 135 presets if your recorded videos consistently
+      run longer than the estimate; the WPM that matches your real reads is your personal cadence. Pace did
+      not predict view counts in the sample, so choose the rate you can actually deliver rather than one
+      you hope will travel.</p>
 
     <h3>How does the script timer calculate duration?</h3>
     <p>It counts words, divides by your words-per-minute rate, and multiplies by 60. With Smart pauses
@@ -515,7 +566,12 @@ footer p{margin:0 0 4px;max-width:72ch}
   var PARA_RE  = /\n[ \t]*\n/g;             // paragraph break -> +0.50s
   var P_SENT = 0.35, P_CLAUSE = 0.15, P_PARA = 0.50;
   var ZONES  = [3, 15, 30, 60];             // upper bounds of zones 1-4
-  var HOOK_LIMIT = 3.5;
+  // Hook thresholds from the study (study/): 48% of top Shorts finish their first sentence
+  // inside 3.0s, 77% inside 5.0s. Under 3s is green, 3-5s is a note, past 5s is a warning.
+  var HOOK_OK = 3.0, HOOK_LONG = 5.0;
+  // Measured speaking rate across 132 top Shorts: median and interquartile range.
+  var M_WPM = 193, M_Q1 = 156, M_Q3 = 221;
+  var WPM_MIN = 100, WPM_MAX = 250;
   var EPS = 1e-9;
   var LS = 'sfst.v1';
 
@@ -532,7 +588,7 @@ footer p{margin:0 0 4px;max-width:72ch}
   var barParts = bar.children;
 
   /* ---------- state ---------- */
-  var state = { preset: '155', wpm: 155, pauses: true, zones: true, theme: 'auto', text: '' };
+  var state = { preset: '193', wpm: 193, pauses: true, zones: true, theme: 'auto', text: '' };
   var marks = [];          // [{top, label}] measured timestamp anchors
   var lastSbw = -1;        // cached textarea scrollbar width
 
@@ -592,7 +648,9 @@ footer p{margin:0 0 4px;max-width:72ch}
       if (s && typeof s === 'object') {
         if (typeof s.text === 'string') state.text = s.text;
         if (typeof s.preset === 'string') state.preset = s.preset;
-        if (typeof s.wpm === 'number' && s.wpm >= 100 && s.wpm <= 220) state.wpm = s.wpm;
+        if (typeof s.wpm === 'number' && s.wpm >= WPM_MIN && s.wpm <= WPM_MAX) state.wpm = s.wpm;
+        // The Top Shorts preset moved from 195 to the measured 193 median.
+        if (state.preset === '195') { state.preset = '193'; state.wpm = 193; }
         if (typeof s.pauses === 'boolean') state.pauses = s.pauses;
         if (typeof s.zones === 'boolean') state.zones = s.zones;
         if (typeof s.theme === 'string') state.theme = s.theme;
@@ -737,21 +795,26 @@ footer p{margin:0 0 4px;max-width:72ch}
 
   function buildAdvice(r) {
     if (r.empty) {
-      return note('', '✏️', 'Start typing. Your first sentence is timed as the hook — aim for under three seconds, roughly ' +
+      return note('', '✏️', 'Start typing. Your first sentence is timed as the hook. Top Shorts finish theirs at a median of 3.1 seconds — roughly ' +
         Math.round(state.wpm / 20) + ' words at ' + state.wpm + ' WPM.');
     }
 
     var out = [];
 
-    // hook
+    // hook, graded against measured first-sentence lengths (see study/)
     var hookWordTarget = Math.round(state.wpm / 20);
-    if (r.hookTime > HOOK_LIMIT) {
-      out.push(note('warn', '⚠️', '<b>Hook warning: too wordy to beat the scroll.</b> Your opening line runs ' +
-        r.hookTime.toFixed(1) + 's across ' + r.hookWords + ' words. Cut to about ' + hookWordTarget +
-        ' words to land inside three seconds.'));
+    var hookLabel = '<b>Hook is ' + r.hookTime.toFixed(1) + 's</b> (' + r.hookWords +
+        ' word' + (r.hookWords === 1 ? '' : 's') + ')';
+    if (r.hookTime > HOOK_LONG) {
+      out.push(note('warn', '⚠️', '<b>Hook warning: ' + r.hookTime.toFixed(1) + 's across ' + r.hookWords +
+        ' words.</b> Fewer than a quarter of top Shorts are still on their first sentence at five seconds. ' +
+        'Cut to about ' + hookWordTarget + ' words to land near three.'));
+    } else if (r.hookTime > HOOK_OK) {
+      out.push(note('', '💬', hookLabel + ' — past the three-second rule but inside normal practice. ' +
+        'Half of top Shorts take longer than 3s to finish their first sentence, and 77% are done by 5s. ' +
+        'Cut words if the line has slack, not to hit a stopwatch.'));
     } else if (r.hookTime > 0) {
-      out.push(note('good', '✅', '<b>Hook is ' + r.hookTime.toFixed(1) + 's</b> (' + r.hookWords +
-        ' word' + (r.hookWords === 1 ? '' : 's') + ') — inside the three-second scroll window.'));
+      out.push(note('good', '✅', hookLabel + ' — inside three seconds, where 48% of top Shorts land their first sentence.'));
     }
 
     // Runtime framing. Branch on the displayed (tenth-rounded) value so that a script
@@ -778,15 +841,32 @@ footer p{margin:0 0 4px;max-width:72ch}
         'consider splitting this into a two-part script.'));
     }
 
-    // pacing note
+    // pacing note, placed against the measured distribution of top Shorts
     var paceName = state.wpm < 145 ? 'a deliberate, explanatory read' :
                    state.wpm < 165 ? 'a standard storytime narrative rhythm' :
                    state.wpm < 185 ? 'a punchy, high-energy delivery' :
-                                     'a fast, densely-packed cadence';
+                   state.wpm <= 205 ? 'the measured median pace of top Shorts' :
+                                      'a fast, densely-packed cadence';
     var zoneShare = r.total > 0 ? Math.round(((r.zoneSecs[0] + r.zoneSecs[1] + r.zoneSecs[2]) / r.total) * 100) : 0;
     out.push(note('', '🎙', 'Timed at <b>' + state.wpm + ' WPM</b> — ' + paceName +
       (state.pauses ? ', with punctuation pauses included' : ', clean read with no pause weighting') +
       '. <b>' + zoneShare + '%</b> of the runtime lands in the first 30 seconds.'));
+
+    // Where this pace sits against the 132 measured clips, and what the script runs at the median.
+    if (Math.abs(state.wpm - M_WPM) >= 5) {
+      var wordSecs = r.words * 60 / state.wpm;
+      var atMedian = r.words * 60 / M_WPM + (r.total - wordSecs);
+      var where = state.wpm < M_Q1 ? 'slower than three-quarters of top Shorts' :
+                  state.wpm > M_Q3 ? 'faster than three-quarters of top Shorts' :
+                  state.wpm < M_WPM ? 'inside the middle half of top Shorts, below the median' :
+                                      'inside the middle half of top Shorts, above the median';
+      var drift = state.wpm < M_WPM ?
+        'If you deliver at your natural short-form pace, expect to finish early.' :
+        'If you deliver slower than that, expect to run long.';
+      out.push(note('', '📏', state.wpm + ' WPM is ' + where + ' (measured median ' + M_WPM +
+        ', middle half ' + M_Q1 + '–' + M_Q3 + '). At the median this script runs <b>' + fmt(atMedian) +
+        '</b>. ' + drift));
+    }
 
     return out.join('');
   }

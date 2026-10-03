@@ -8,6 +8,7 @@ inline CSS and vanilla JS, no build step, no dependencies, no network requests a
 | Tool | Path | What it does |
 | --- | --- | --- |
 | Short-Form Script Pacing & Hook Timer | [`script-timer/`](script-timer/) | Times a short-form video script in real time, splits it into retention zones (3s / 15s / 30s / 60s), and grades the hook against first-sentence lengths measured in 132 top YouTube Shorts (green inside 3s, note to 5s, warning past 5s). Default pace is the measured 193 WPM median. |
+| Keyword Triage | [`keyword-triage/`](keyword-triage/) | Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV or Excel) and sorts each keyword into Cut, Trim bids, Keep, Scale or Needs data against a target CPA or ROAS. A Content-Security-Policy blocks every network request, so the report can't leave the browser. |
 
 ## Deploying
 
@@ -20,6 +21,7 @@ Pages then serves:
 
 - `https://jbastide.github.io/tools/` — the index
 - `https://jbastide.github.io/tools/script-timer/` — the script timer
+- `https://jbastide.github.io/tools/keyword-triage/` — the keyword triage tool
 
 `.nojekyll` is present so files are served verbatim rather than passed through Jekyll.
 

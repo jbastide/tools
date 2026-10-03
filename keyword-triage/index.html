@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy guarantee: this policy forbids the page from contacting ANY server.
+     No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Keyword Triage: Find Unprofitable PPC Keywords (Private, In-Browser)</title>
+<meta name="description" content="Free PPC keyword analyzer. Upload a Google Ads or Microsoft Ads keyword report and see which keywords to cut, trim, keep, or scale. Runs entirely in your browser, so your data is never uploaded.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keyword Triage: Find Unprofitable PPC Keywords">
+<meta property="og:description" content="Upload a keyword report and see which keywords lose money and which are worth scaling. Runs entirely in your browser. Nothing is uploaded.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8E%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Keyword Triage",
+  "description": "Private PPC keyword analyzer. Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV, or Excel) and sorts every keyword into Cut, Trim bids, Keep, Scale, or Needs data against your target CPA or ROAS. Runs fully client-side; the report never leaves the browser.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Runs fully client-side.",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Reads Google Ads and Microsoft Ads keyword exports in CSV, TSV, UTF-16, or Excel (.xlsx)",
+    "Automatic column detection with manual override",
+    "CPA or ROAS goal, defaulting to the account average",
+    "Flags zero-conversion keywords past a spend threshold",
+    "Uses Search lost IS (budget / rank) to say how to scale winners",
+    "Estimates spend above target",
+    "Exports results to CSV and copies the cut list as exact-match negatives",
+    "Content-Security-Policy blocks all network requests, so data cannot leave the page"
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --ink:#141821; --muted:#4a5361; --line:#dfe3ea; --soft:#f1f3f7;
+  --accent:#4f46e5; --accent-ink:#ffffff;
+  --scale:#12805c; --scale-bg:#e3f4ec;
+  --keep:#2563a8; --keep-bg:#e4eef9;
+  --trim:#a35c00; --trim-bg:#fbefdc;
+  --cut:#c2283a; --cut-bg:#fbe5e7;
+  --low:#6b7280; --low-bg:#eeeff1;
+  --radius:12px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0e13; --panel:#14171f; --ink:#e9edf5; --muted:#a9b4c4; --line:#272c38; --soft:#1b1f29;
+    --accent:#6366f1; --accent-ink:#ffffff;
+    --scale:#34d399; --scale-bg:rgba(52,211,153,.14);
+    --keep:#7aa7f5; --keep-bg:rgba(122,167,245,.14);
+    --trim:#fbbf24; --trim-bg:rgba(251,191,36,.13);
+    --cut:#f87171; --cut-bg:rgba(248,113,113,.14);
+    --low:#a3a9b3; --low-bg:rgba(163,169,179,.14);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#0c0e13; --panel:#14171f; --ink:#e9edf5; --muted:#a9b4c4; --line:#272c38; --soft:#1b1f29;
+    --accent:#6366f1; --accent-ink:#ffffff;
+    --scale:#34d399; --scale-bg:rgba(52,211,153,.14);
+    --keep:#7aa7f5; --keep-bg:rgba(122,167,245,.14);
+    --trim:#fbbf24; --trim-bg:rgba(251,191,36,.13);
+    --cut:#f87171; --cut-bg:rgba(248,113,113,.14);
+    --low:#a3a9b3; --low-bg:rgba(163,169,179,.14);
+    color-scheme:dark;
+}
+:root[data-theme="light"]{color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+h2{font-size:18px;margin:0 0 12px}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;font-size:14px}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--accent)}
+.btn.icon{padding:7px 9px;line-height:0}
+button,select,input{font:inherit;color:inherit}
+.btn{border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:8px;cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.btn.link{border:0;background:none;padding:0;color:var(--accent);text-decoration:underline;cursor:pointer}
+
+header.top{display:flex;gap:24px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:24px}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.shield{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;max-width:360px;font-size:13px}
+.shield svg{flex:none;margin-top:2px;color:var(--scale)}
+.shield b{display:block;font-size:14px}
+
+.drop{border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:44px 20px;text-align:center;transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--accent);background:var(--soft)}
+.drop h2{font-size:20px;margin-bottom:6px}
+.drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+.howto div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;font-size:13px;color:var(--muted)}
+.howto b{color:var(--ink);display:block;margin-bottom:4px;font-size:14px}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-top:18px}
+.filebar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.filebar .name{font-weight:600;word-break:break-all}
+details summary{cursor:pointer;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+label.f select,label.f input{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 9px;color:var(--ink);width:100%}
+.req{color:var(--cut)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--bg);padding:7px 14px;cursor:pointer}
+.seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:600}
+.seg button:disabled{opacity:.45;cursor:not-allowed}
+.settings-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.settings-row label.f{min-width:150px;flex:1}
+.hint{font-size:12px;color:var(--muted);margin-top:8px}
+.err{background:var(--cut-bg);color:var(--cut);border-radius:8px;padding:10px 12px;margin-top:12px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:18px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:24px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:12px;color:var(--muted)}
+.kpi.bad .v{color:var(--cut)} .kpi.good .v{color:var(--scale)}
+
+.buckets{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:12px}
+.bucket{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:var(--panel);cursor:pointer;text-align:left;border-left-width:5px}
+.bucket:hover{border-color:var(--muted)}
+.bucket.on{outline:2px solid var(--accent);outline-offset:1px}
+.bucket .t{font-weight:700}
+.bucket .n{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bucket .d{font-size:12px;color:var(--muted)}
+.b-scale{border-left-color:var(--scale)} .b-keep{border-left-color:var(--keep)} .b-trim{border-left-color:var(--trim)} .b-cut{border-left-color:var(--cut)} .b-low{border-left-color:var(--low)}
+
+.share{display:flex;height:14px;border-radius:7px;overflow:hidden;margin-top:14px;background:var(--soft)}
+.share span{display:block;height:100%}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:12px}
+.toolbar input[type=search]{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:220px;flex:1;max-width:360px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{position:sticky;top:0;background:var(--soft);font-weight:600;cursor:pointer;user-select:none}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
+th .arr{opacity:.5;font-size:10px;margin-left:3px}
+td.kw{white-space:normal;min-width:180px;font-weight:600}
+td.kw .sub{display:block;font-weight:400;color:var(--muted);font-size:12px}
+td.why{white-space:normal;min-width:240px;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.p-scale{background:var(--scale-bg);color:var(--scale)} .p-keep{background:var(--keep-bg);color:var(--keep)} .p-trim{background:var(--trim-bg);color:var(--trim)} .p-cut{background:var(--cut-bg);color:var(--cut)} .p-low{background:var(--low-bg);color:var(--low)}
+.more{text-align:center;margin-top:12px}
+
+.method{margin-top:28px}
+.method ul{padding-left:20px;margin:6px 0 0}
+.method li{margin-bottom:6px}
+footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="crumbs">
+  <a href="../">&larr; All tools</a>
+  <button type="button" class="btn icon" id="btnTheme" title="Toggle light / dark" aria-label="Toggle light or dark theme">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+  </button>
+</nav>
+
+<header class="top">
+  <div>
+    <h1>Keyword Triage</h1>
+    <p class="lede">Upload a keyword report and see which keywords are losing money, which to keep, and which are worth more budget.</p>
+  </div>
+  <div class="shield">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><b>Your data never leaves this page</b>Everything runs in your browser. Nothing is uploaded or stored, and this page is technically blocked from contacting any server. It even works offline.</div>
+  </div>
+</header>
+
+<section id="start">
+  <div class="drop" id="drop">
+    <h2>Drop your keyword report here</h2>
+    <p class="muted">CSV or TSV export from Google Ads or Microsoft Ads, or any spreadsheet saved as CSV.</p>
+    <div class="actions">
+      <button class="btn primary" id="pick">Choose file</button>
+      <button class="btn" id="sample">Try with sample data</button>
+    </div>
+    <input type="file" id="file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values" hidden>
+  </div>
+  <div class="howto">
+    <div><b>Google Ads</b>Campaigns › Keywords › Search keywords. Pick a date range (60–90 days is ideal), then Download › .csv.</div>
+    <div><b>Microsoft Ads</b>Campaigns › Keywords. Set the date range, then Download › CSV.</div>
+    <div><b>Columns needed</b>Keyword, Cost and Conversions. Conversion value, Clicks, Match type, Campaign, Ad group and Search lost IS make the advice better.</div>
+  </div>
+</section>
+
+<section id="work" hidden>
+  <div class="panel">
+    <div class="filebar">
+      <div><span class="name" id="fname"></span> <span class="muted small" id="fmeta"></span></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="reset">Start over</button>
+      </div>
+    </div>
+    <details id="mapbox" style="margin-top:12px">
+      <summary>Column mapping <span class="muted small" id="mapsum"></span></summary>
+      <div class="grid" id="mapgrid"></div>
+    </details>
+    <div id="maperr" class="err" hidden></div>
+  </div>
+
+  <div class="panel" id="settings">
+    <h2>Your goal</h2>
+    <div class="settings-row">
+      <div>
+        <div class="small muted" style="margin-bottom:4px">Optimize for</div>
+        <div class="seg" id="mode">
+          <button data-m="cpa">Cost per conversion (CPA)</button>
+          <button data-m="roas">Return on ad spend (ROAS)</button>
+        </div>
+      </div>
+      <label class="f"><span id="tlabel">Target CPA</span><input type="number" id="target" min="0" step="any"></label>
+      <label class="f">Cut zero-conversion keywords after spending<input type="number" id="zerocut" min="0" step="any"></label>
+      <label class="f">Min. clicks before judging<input type="number" id="minclicks" min="0" step="1"></label>
+      <label class="f">Min. conversions to scale<input type="number" id="minconv" min="0" step="any"></label>
+    </div>
+    <p class="hint" id="acctline"></p>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel">
+    <h2>Verdicts</h2>
+    <div class="buckets" id="buckets"></div>
+    <div class="share" id="share" title="Share of spend by verdict"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="panel">
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Filter keywords, campaigns, ad groups…">
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="exportView">Export this view (CSV)</button>
+        <button class="btn" id="exportNeg">Copy cut list as negatives</button>
+      </div>
+    </div>
+    <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+    <div class="more" id="more" hidden><button class="btn">Show more</button></div>
+    <p class="hint" id="copied" hidden></p>
+  </div>
+</section>
+
+<section class="method panel">
+  <h2>How verdicts are decided</h2>
+  <ul class="small">
+    <li><b style="color:var(--cut)">Cut</b>: spent past your threshold with zero conversions, or CPA is over 2× target (ROAS under half of target). These lose money.</li>
+    <li><b style="color:var(--trim)">Trim bids</b>: converting, but 20–100% over target CPA (or ROAS 50–83% of target). Lower bids or tighten the match type before cutting.</li>
+    <li><b style="color:var(--keep)">Keep</b>: on target, give or take 20%. Also good performers that don't have enough conversions yet to be sure.</li>
+    <li><b style="color:var(--scale)">Scale</b>: at least 20% better than target with enough conversions to trust. If the report includes <i>Search lost IS</i>, it says whether budget or bids are holding the keyword back.</li>
+    <li><b style="color:var(--low)">Needs data</b>: not enough clicks or spend to call yet. Leave these running.</li>
+  </ul>
+  <p class="small muted" style="margin-top:10px">These are starting points, not autopilot. Check the conversion lag, seasonality and assisted conversions before pausing anything big.</p>
+</section>
+
+<footer>
+  <span>Runs fully client-side. No uploads, no tracking, no dependencies, no network requests.</span>
+  <span>Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a></span>
+</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Column definitions ---------- */
+const FIELDS = [
+  {k:'keyword',  label:'Keyword', req:true,  rx:[/^keyword$/,/^search keyword$/,/^keyword text$/,/^keyword\/target$/,/^search term$/,/^query$/,/keyword/]},
+  {k:'cost',     label:'Cost / Spend', req:true, rx:[/^cost$/,/^spend$/,/^cost \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/]},
+  {k:'conv',     label:'Conversions', req:true, rx:[/^conversions$/,/^conv\.?$/,/^purchases$/,/^results$/,/^all conv\.?$/,/^conversions/]},
+  {k:'value',    label:'Conversion value / Revenue', rx:[/^conv\. value$/,/^conversion value$/,/^total conv\. value$/,/^revenue$/,/^conv\. value \(.*\)/,/^all conv\. value$/,/^purchase.*value/,/conv.*value/,/revenue/]},
+  {k:'clicks',   label:'Clicks', rx:[/^clicks$/,/^link clicks$/,/clicks/]},
+  {k:'impr',     label:'Impressions', rx:[/^impr\.?$/,/^impressions$/,/impr/]},
+  {k:'match',    label:'Match type', rx:[/^match type$/,/^keyword match type$/,/match/]},
+  {k:'campaign', label:'Campaign', rx:[/^campaign$/,/^campaign name$/]},
+  {k:'adgroup',  label:'Ad group', rx:[/^ad group$/,/^ad group name$/,/^ad set name$/]},
+  {k:'lisBudget',label:'Search lost IS (budget)', rx:[/lost is \(budget\)/,/lost.*budget/]},
+  {k:'lisRank',  label:'Search lost IS (rank)', rx:[/lost is \(rank\)/,/lost.*rank/]},
+];
+const BUCKETS = [
+  {k:'cut',   t:'Cut',        d:'Losing money'},
+  {k:'trim',  t:'Trim bids',  d:'Converting, over target'},
+  {k:'keep',  t:'Keep',       d:'On target'},
+  {k:'scale', t:'Scale',      d:'Beating target'},
+  {k:'low',   t:'Needs data', d:'Too early to call'},
+];
+
+const $ = id => document.getElementById(id);
+const S = {
+  fileName:'', rows:[], headerIdx:0, headers:[], map:{}, items:[],
+  mode:'cpa', target:null, zerocut:null, minclicks:20, minconv:2,
+  acct:null, filter:'all', q:'', sort:{key:'cost',dir:-1}, limit:200, cur:'$'
+};
+
+/* ---------- File reading ---------- */
+function decode(buf){
+  const b = new Uint8Array(buf);
+  if (b[0]===0xFF && b[1]===0xFE) return new TextDecoder('utf-16le').decode(buf);
+  if (b[0]===0xFE && b[1]===0xFF) return new TextDecoder('utf-16be').decode(buf);
+  // UTF-16 without BOM: lots of zero bytes in the first chunk
+  let zeros=0; const n=Math.min(b.length,400);
+  for(let i=1;i<n;i+=2) if(b[i]===0) zeros++;
+  if (n>20 && zeros > n/4) return new TextDecoder('utf-16le').decode(buf);
+  return new TextDecoder('utf-8').decode(buf).replace(/^﻿/,'');
+}
+
+function detectDelimiter(text){
+  const sample = text.split(/\r?\n/).slice(0,15).join('\n');
+  const c = d => (sample.match(new RegExp(d==='\t'?'\\t':'\\'+d,'g'))||[]).length;
+  const counts = [[',',c(',')],['\t',c('\t')],[';',c(';')]];
+  counts.sort((a,b)=>b[1]-a[1]);
+  return counts[0][1] ? counts[0][0] : ',';
+}
+
+function parseDelimited(text, d){
+  const rows=[]; let row=[], f='', q=false;
+  for (let i=0;i<text.length;i++){
+    const ch=text[i];
+    if (q){
+      if (ch==='"'){ if (text[i+1]==='"'){ f+='"'; i++; } else q=false; }
+      else f+=ch;
+    } else if (ch==='"' && f==='') q=true;
+    else if (ch===d){ row.push(f); f=''; }
+    else if (ch==='\n' || ch==='\r'){
+      if (ch==='\r' && text[i+1]==='\n') i++;
+      row.push(f); rows.push(row); row=[]; f='';
+    } else f+=ch;
+  }
+  if (f!=='' || row.length){ row.push(f); rows.push(row); }
+  return rows.filter(r => r.some(c => c.trim()!==''));
+}
+
+const norm = s => String(s||'').trim().toLowerCase().replace(/\s+/g,' ');
+
+function detectHeader(rows){
+  let best=0, bestScore=-1;
+  for (let i=0;i<Math.min(rows.length,20);i++){
+    const cells = rows[i].map(norm);
+    let score=0;
+    FIELDS.forEach(f => { if (cells.some(c => f.rx.slice(0,3).some(r=>r.test(c)))) score += f.req?3:1; });
+    if (score>bestScore){ bestScore=score; best=i; }
+  }
+  return best;
+}
+
+function guessMap(headers){
+  const h = headers.map(norm), used=new Set(), map={};
+  FIELDS.forEach(f => {
+    for (const r of f.rx){
+      const i = h.findIndex((c,ix)=>!used.has(ix) && r.test(c));
+      if (i>-1){ map[f.k]=i; used.add(i); return; }
+    }
+    map[f.k] = -1;
+  });
+  return map;
+}
+
+/* ---------- Numbers ---------- */
+function num(v){
+  let s = String(v==null?'':v).trim();
+  if (!s || s==='--' || s==='-' || /^n\/?a$/i.test(s)) return 0;
+  if (/^<\s*10\s*%$/.test(s)) return 5;      // Google's "< 10%" for impression share
+  if (/^>\s*90\s*%$/.test(s)) return 95;
+  const neg = /^\(.*\)$/.test(s) || /^-/.test(s);
+  s = s.replace(/[^\d.,]/g,'');
+  if (!s) return 0;
+  const lc=s.lastIndexOf(','), ld=s.lastIndexOf('.');
+  if (lc>-1 && ld>-1){ s = lc>ld ? s.replace(/\./g,'').replace(',', '.') : s.replace(/,/g,''); }
+  else if (lc>-1){ s = /^\d{1,3}(,\d{3})+$/.test(s) ? s.replace(/,/g,'') : s.replace(',', '.'); }
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : (neg ? -n : n);
+}
+function detectCurrency(rows, col){
+  if (col<0) return '$';
+  for (let i=S.headerIdx+1;i<Math.min(rows.length,S.headerIdx+40);i++){
+    const m = String(rows[i][col]||'').match(/[$€£¥₹]|R\$|A\$|C\$/);
+    if (m) return m[0];
+  }
+  const h = String(S.headers[col]||'').match(/\((\w{3})\)/);
+  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$'};
+  return h && codes[h[1].toUpperCase()] || '$';
+}
+const fmtMoney = (n, dp) => {
+  if (!isFinite(n)) return '—';
+  const d = dp!=null ? dp : (Math.abs(n)<100 ? 2 : 0);
+  return S.cur + n.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});
+};
+const fmtNum = (n,dp=0) => isFinite(n) ? n.toLocaleString(undefined,{maximumFractionDigits:dp}) : '—';
+const fmtRoas = n => isFinite(n) ? n.toFixed(2)+'×' : '—';
+const pct = n => Math.round(n*100)+'%';
+
+/* ---------- Build items from rows ---------- */
+function buildItems(){
+  const m=S.map, out=[];
+  const get = (r,k) => m[k]>-1 ? r[m[k]] : '';
+  for (let i=S.headerIdx+1;i<S.rows.length;i++){
+    const r=S.rows[i];
+    const kw = String(get(r,'keyword')||'').trim();
+    const first = String(r[0]||'').trim();
+    if (!kw || /^total/i.test(kw) || /^total/i.test(first) || kw==='--') continue;
+    out.push({
+      keyword: kw,
+      match: String(get(r,'match')||'').trim(),
+      campaign: String(get(r,'campaign')||'').trim(),
+      adgroup: String(get(r,'adgroup')||'').trim(),
+      cost: num(get(r,'cost')),
+      conv: num(get(r,'conv')),
+      value: num(get(r,'value')),
+      clicks: num(get(r,'clicks')),
+      impr: num(get(r,'impr')),
+      lisB: m.lisBudget>-1 ? num(get(r,'lisBudget'))/100 : null,
+      lisR: m.lisRank>-1 ? num(get(r,'lisRank'))/100 : null,
+    });
+  }
+  return out;
+}
+
+function accountStats(items){
+  const t = items.reduce((a,x)=>{a.cost+=x.cost;a.conv+=x.conv;a.value+=x.value;a.clicks+=x.clicks;return a;},{cost:0,conv:0,value:0,clicks:0});
+  t.cpa = t.conv ? t.cost/t.conv : NaN;
+  t.roas = t.cost ? t.value/t.cost : NaN;
+  t.cr = t.clicks ? t.conv/t.clicks : NaN;
+  t.aov = t.conv ? t.value/t.conv : NaN;
+  return t;
+}
+
+/* ---------- Classification ---------- */
+function classify(x){
+  const T=S.target, roas = S.mode==='roas';
+  x.cpa = x.conv ? x.cost/x.conv : NaN;
+  x.roas = x.cost ? x.value/x.cost : NaN;
+  x.save = 0;
+  const enoughClicks = !S.map || S.map.clicks<0 || x.clicks >= S.minclicks;
+  const got = roas ? x.value : x.conv;
+
+  if (x.cost<=0){ x.v='low'; x.why='No spend in this period.'; return; }
+
+  if (got<=0){
+    if (x.cost >= S.zerocut){
+      x.v='cut'; x.save=x.cost;
+      x.why = `Spent ${fmtMoney(x.cost)} with no ${roas?'revenue':'conversions'}${x.clicks?` across ${fmtNum(x.clicks)} clicks`:''}.`;
+    } else {
+      x.v='low';
+      const p = x.cost / S.zerocut;
+      x.why = p>=.5 ? `No ${roas?'revenue':'conversions'} yet. ${pct(p)} of the way to your cut threshold, so watch it.`
+                    : `No ${roas?'revenue':'conversions'} yet, but only ${fmtMoney(x.cost)} spent.`;
+    }
+    return;
+  }
+
+  // efficiency: >1 means better than target
+  const e = roas ? x.roas / T : T / x.cpa;
+  const metric = roas ? `ROAS ${fmtRoas(x.roas)}` : `CPA ${fmtMoney(x.cpa)}`;
+  const vs = roas ? `vs. ${fmtRoas(T)} target` : `vs. ${fmtMoney(T)} target`;
+
+  if (e < 0.5){
+    x.v='cut';
+    x.save = roas ? Math.max(0, x.cost - x.value/T) : Math.max(0, x.cost - x.conv*T);
+    x.why = `${metric} ${vs}. ${roas?'Returns less than half of target':'Costs over 2× target'} per conversion.`;
+  } else if (e < 0.83){
+    x.v='trim';
+    x.save = roas ? Math.max(0, x.cost - x.value/T) : Math.max(0, x.cost - x.conv*T);
+    x.why = `${metric} ${vs}. ${pct(roas?1-e:1/e-1)} ${roas?'below':'over'} target, so lower bids or tighten the match type.`;
+    if (!enoughClicks && x.conv<S.minconv) { x.v='low'; x.save=0; x.why = `${metric} ${vs}, but only ${fmtNum(x.clicks)} clicks. Too early to judge.`; }
+  } else if (e < 1.25 || x.conv < S.minconv){
+    x.v='keep';
+    x.why = e>=1.25 ? `${metric} ${vs}. Looks strong, but only ${fmtNum(x.conv,1)} conversion${x.conv===1?'':'s'}, so let it build more data.`
+                    : `${metric} ${vs}. On target.`;
+  } else {
+    x.v='scale';
+    let tip = '';
+    if (x.lisB!=null && x.lisB>=0.1) tip += ` Losing ${pct(x.lisB)} of impressions to budget, so raise the campaign budget.`;
+    if (x.lisR!=null && x.lisR>=0.1) tip += ` Losing ${pct(x.lisR)} to rank, so raise bids.`;
+    if (!tip && (x.lisB!=null || x.lisR!=null)) tip = ' Already near full impression share, so expand with close variants or broader match.';
+    if (!tip) tip = ' Raise bids/budget or test broader match types.';
+    x.why = `${metric} ${vs}. ${pct(roas?e-1:1-1/e)} ${roas?'above':'under'} target.` + tip;
+  }
+}
+
+/* ---------- Load ---------- */
+function loadText(text, name){
+  const d = detectDelimiter(text);
+  const rows = parseDelimited(text, d);
+  if (rows.length<2){ alertErr('That file looks empty or isn’t a CSV/TSV.'); return; }
+  S.fileName = name; S.rows = rows;
+  S.headerIdx = detectHeader(rows);
+  S.headers = rows[S.headerIdx].map(h=>String(h).trim());
+  S.map = guessMap(S.headers);
+  S.cur = detectCurrency(rows, S.map.cost);
+  S.target = null; S.zerocut = null; S.filter='all'; S.q=''; $('q').value='';
+  $('start').hidden = true; $('work').hidden = false;
+  $('fname').textContent = name;
+  renderMap();
+  recompute(true);
+  $('fmeta').textContent = `· ${S.items.length} keywords · ${d==='\t'?'tab':d===';'?'semicolon':'comma'}-separated`;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function alertErr(msg){
+  const e=$('maperr'); e.textContent=msg; e.hidden=false;
+  if ($('work').hidden){ // still on start screen
+    const d=$('drop'); let p=d.querySelector('.err');
+    if(!p){p=document.createElement('div');p.className='err';d.appendChild(p);}
+    p.textContent=msg;
+  }
+}
+
+function recompute(resetGoal){
+  const missing = FIELDS.filter(f=>f.req && S.map[f.k]<0).map(f=>f.label);
+  const err=$('maperr');
+  if (missing.length){
+    err.textContent = `Couldn’t find: ${missing.join(', ')}. Pick the matching columns under “Column mapping”.`;
+    err.hidden=false; $('mapbox').open=true;
+    S.items=[]; renderResults(); return;
+  }
+  err.hidden=true;
+  S.items = buildItems();
+  S.acct = accountStats(S.items);
+  const hasValue = S.map.value>-1 && S.acct.value>0;
+  if (resetGoal){
+    S.mode = hasValue ? 'roas' : 'cpa';
+    setGoalDefaults();
+  }
+  if (!hasValue && S.mode==='roas'){ S.mode='cpa'; setGoalDefaults(); }
+  renderSettings(hasValue);
+  S.items.forEach(classify);
+  renderResults();
+}
+
+function niceRound(n){
+  if (!isFinite(n) || n<=0) return 0;
+  const p = Math.pow(10, Math.floor(Math.log10(n))-1);
+  return Math.round(n/p)*p;
+}
+function setGoalDefaults(){
+  const a=S.acct;
+  if (S.mode==='roas'){
+    S.target = isFinite(a.roas) && a.roas>0 ? +a.roas.toFixed(2) : 3;
+    // break-even-ish spend: avg conversion value / target ROAS, ×2
+    const be = isFinite(a.aov) ? a.aov / S.target : (a.cost/Math.max(1,S.items.length));
+    S.zerocut = niceRound(be*2) || 50;
+  } else {
+    S.target = isFinite(a.cpa) && a.cpa>0 ? niceRound(a.cpa) : 50;
+    S.zerocut = niceRound(S.target*1.5) || 75;
+  }
+  S.minclicks = isFinite(a.cr) && a.cr>0 ? Math.max(10, Math.min(100, Math.round(1.5/a.cr))) : 20;
+}
+
+/* ---------- Render: mapping & settings ---------- */
+function renderMap(){
+  const g=$('mapgrid'); g.innerHTML='';
+  FIELDS.forEach(f=>{
+    const l=document.createElement('label'); l.className='f';
+    l.innerHTML = `<span>${f.label}${f.req?' <span class="req">*</span>':''}</span>`;
+    const s=document.createElement('select');
+    s.innerHTML = `<option value="-1">(none)</option>` + S.headers.map((h,i)=>`<option value="${i}">${esc(h||'Column '+(i+1))}</option>`).join('');
+    s.value = String(S.map[f.k]);
+    s.onchange = ()=>{ S.map[f.k]=+s.value; if(f.k==='cost') S.cur=detectCurrency(S.rows,S.map.cost); renderMapSum(); recompute(['cost','conv','value','clicks'].includes(f.k)); };
+    l.appendChild(s); g.appendChild(l);
+  });
+  renderMapSum();
+}
+function renderMapSum(){
+  const found = FIELDS.filter(f=>S.map[f.k]>-1).length;
+  $('mapsum').textContent = `· ${found} of ${FIELDS.length} columns detected`;
+}
+
+function renderSettings(hasValue){
+  document.querySelectorAll('#mode button').forEach(b=>{
+    b.classList.toggle('on', b.dataset.m===S.mode);
+    b.disabled = b.dataset.m==='roas' && !hasValue;
+    b.title = b.disabled ? 'Map a conversion value / revenue column to use ROAS' : '';
+  });
+  $('tlabel').textContent = S.mode==='roas' ? 'Target ROAS (e.g. 4 = 400%)' : `Target CPA (${S.cur})`;
+  $('target').value = S.target;
+  $('zerocut').value = S.zerocut;
+  $('minclicks').value = S.minclicks;
+  $('minconv').value = S.minconv;
+  $('minclicks').parentElement.hidden = S.map.clicks<0;
+  const a=S.acct;
+  $('acctline').textContent = `Account average for this file: ${fmtMoney(a.cost,0)} spend, ${fmtNum(a.conv,1)} conversions, CPA ${fmtMoney(a.cpa)}`
+    + (hasValue?`, ROAS ${fmtRoas(a.roas)}`:'') + (isFinite(a.cr)?`, conv. rate ${(a.cr*100).toFixed(1)}%`:'')
+    + `. Targets default to your averages. Set them to your real break-even numbers.`;
+}
+
+/* ---------- Render: results ---------- */
+function renderResults(){
+  const items=S.items, by={};
+  BUCKETS.forEach(b=>by[b.k]={n:0,cost:0,conv:0,value:0,save:0});
+  items.forEach(x=>{ const b=by[x.v]; b.n++; b.cost+=x.cost; b.conv+=x.conv; b.value+=x.value; b.save+=x.save; });
+  const total = S.acct ? S.acct.cost : 0;
+  const roas = S.mode==='roas';
+
+  // KPIs
+  const waste = by.cut.cost, over = by.trim.save + by.cut.save;
+  const cutZero = items.filter(x=>x.v==='cut' && (roas?x.value:x.conv)<=0).reduce((s,x)=>s+x.cost,0);
+  const sc = by.scale;
+  const scEff = roas ? (sc.cost? sc.value/sc.cost : NaN) : (sc.conv? sc.cost/sc.conv : NaN);
+  $('kpis').innerHTML = !items.length ? '' : [
+    kpi('Keywords analyzed', fmtNum(items.length), `${fmtMoney(total,0)} total spend`),
+    kpi('Spend on “Cut” keywords', fmtMoney(waste,0), `${total?pct(waste/total):'0%'} of spend · ${fmtMoney(cutZero,0)} with zero ${roas?'revenue':'conversions'}`, 'bad'),
+    kpi('Spend above target', fmtMoney(over,0), 'What you’d save by cutting and trimming to target', 'bad'),
+    kpi('Ready to scale', fmtNum(sc.n), sc.n ? `${roas?'ROAS':'CPA'} ${roas?fmtRoas(scEff):fmtMoney(scEff)} on ${fmtMoney(sc.cost,0)}` : 'None beat target with enough data', 'good'),
+  ].join('');
+
+  // Buckets
+  $('buckets').innerHTML = BUCKETS.map(b=>{
+    const s=by[b.k];
+    const eff = roas ? (s.cost?fmtRoas(s.value/s.cost):'—') : (s.conv?fmtMoney(s.cost/s.conv):'—');
+    return `<button class="bucket b-${b.k}${S.filter===b.k?' on':''}" data-b="${b.k}">
+      <div class="t">${b.t}</div><div class="n">${fmtNum(s.n)}</div>
+      <div class="d">${b.d}<br>${fmtMoney(s.cost,0)} spend · ${roas?'ROAS':'CPA'} ${eff}</div></button>`;
+  }).join('');
+  $('buckets').querySelectorAll('.bucket').forEach(el=>el.onclick=()=>{
+    S.filter = S.filter===el.dataset.b ? 'all' : el.dataset.b; S.limit=200; renderResults();
+  });
+
+  // Spend share
+  $('share').innerHTML = total ? BUCKETS.map(b=>`<span style="width:${by[b.k].cost/total*100}%;background:var(--${b.k})"></span>`).join('') : '';
+  $('legend').innerHTML = BUCKETS.map(b=>`<span><i style="background:var(--${b.k})"></i>${b.t} ${total?pct(by[b.k].cost/total):''}</span>`).join('');
+
+  renderTable();
+}
+function kpi(l,v,s,cls){ return `<div class="kpi ${cls||''}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`; }
+
+const COLS = () => {
+  const roas=S.mode==='roas', m=S.map, c=[
+    {k:'keyword',t:'Keyword'},
+    {k:'v',t:'Verdict'},
+  ];
+  if (m.clicks>-1) c.push({k:'clicks',t:'Clicks',n:1});
+  c.push({k:'cost',t:'Cost',n:1},{k:'conv',t:'Conv.',n:1});
+  if (m.value>-1) c.push({k:'value',t:'Value',n:1});
+  c.push(roas?{k:'roas',t:'ROAS',n:1}:{k:'cpa',t:'CPA',n:1});
+  if (roas) c.push({k:'cpa',t:'CPA',n:1});
+  c.push({k:'save',t:'Over target',n:1},{k:'why',t:'Why'});
+  return c;
+};
+const ORDER = {cut:0,trim:1,keep:2,scale:3,low:4};
+
+function viewItems(){
+  const q=S.q.toLowerCase();
+  let v = S.items.filter(x => (S.filter==='all'||x.v===S.filter) &&
+    (!q || x.keyword.toLowerCase().includes(q) || x.campaign.toLowerCase().includes(q) || x.adgroup.toLowerCase().includes(q)));
+  const {key,dir}=S.sort;
+  v.sort((a,b)=>{
+    let A=a[key],B=b[key];
+    if (key==='v'){A=ORDER[A];B=ORDER[B];}
+    if (typeof A==='string') return dir*A.localeCompare(B);
+    A=isFinite(A)?A:(dir>0?Infinity:-Infinity); B=isFinite(B)?B:(dir>0?Infinity:-Infinity);
+    return dir*(A-B) || (b.cost-a.cost);
+  });
+  return v;
+}
+
+function renderTable(){
+  const cols=COLS(), t=$('tbl');
+  t.tHead.innerHTML = '<tr>'+cols.map(c=>`<th data-k="${c.k}" class="${c.n?'num':''}">${c.t}${S.sort.key===c.k?`<span class="arr">${S.sort.dir>0?'▲':'▼'}</span>`:''}</th>`).join('')+'</tr>';
+  t.tHead.querySelectorAll('th').forEach(th=>{ if(th.dataset.k!=='why') th.onclick=()=>{
+    const k=th.dataset.k; S.sort = {key:k, dir: S.sort.key===k ? -S.sort.dir : (['keyword','v'].includes(k)?1:-1)}; renderTable();
+  };});
+  const v=viewItems(), shown=v.slice(0,S.limit);
+  const bl = Object.fromEntries(BUCKETS.map(b=>[b.k,b.t]));
+  t.tBodies[0].innerHTML = shown.length ? shown.map(x=>'<tr>'+cols.map(c=>{
+    switch(c.k){
+      case 'keyword': {
+        const sub=[x.match, x.campaign, x.adgroup].filter(Boolean).map(esc).join(' · ');
+        return `<td class="kw">${esc(x.keyword)}${sub?`<span class="sub">${sub}</span>`:''}</td>`;
+      }
+      case 'v': return `<td><span class="pill p-${x.v}">${bl[x.v]}</span></td>`;
+      case 'clicks': return `<td class="num">${fmtNum(x.clicks)}</td>`;
+      case 'cost': case 'value': return `<td class="num">${fmtMoney(x[c.k])}</td>`;
+      case 'save': return `<td class="num">${x.save>0?fmtMoney(x.save):'—'}</td>`;
+      case 'conv': return `<td class="num">${fmtNum(x.conv,2)}</td>`;
+      case 'cpa': return `<td class="num">${fmtMoney(x.cpa)}</td>`;
+      case 'roas': return `<td class="num">${fmtRoas(x.roas)}</td>`;
+      case 'why': return `<td class="why">${esc(x.why)}</td>`;
+    }
+  }).join('')+'</tr>').join('')
+  : `<tr><td colspan="${cols.length}" class="muted" style="text-align:center;padding:24px">${S.items.length?'No keywords match this filter.':'No data yet.'}</td></tr>`;
+  const more=$('more'); more.hidden = v.length<=S.limit;
+  more.firstElementChild.textContent = `Show more (${fmtNum(v.length-S.limit)} remaining)`;
+}
+
+/* ---------- Export ---------- */
+function csvCell(v){ v=String(v==null?'':v); return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
+function download(name, text, type){
+  const blob=new Blob([text],{type}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},500);
+}
+function exportView(){
+  const bl = Object.fromEntries(BUCKETS.map(b=>[b.k,b.t]));
+  const head=['Keyword','Match type','Campaign','Ad group','Verdict','Clicks','Cost','Conversions','Conv. value','CPA','ROAS','Spend over target','Reason'];
+  const lines=[head.join(',')].concat(viewItems().map(x=>[
+    x.keyword,x.match,x.campaign,x.adgroup,bl[x.v],x.clicks,x.cost.toFixed(2),x.conv,x.value.toFixed(2),
+    isFinite(x.cpa)?x.cpa.toFixed(2):'',isFinite(x.roas)?x.roas.toFixed(2):'',x.save.toFixed(2),x.why
+  ].map(csvCell).join(',')));
+  const base=S.fileName.replace(/\.[^.]+$/,'');
+  download(`${base}-triage${S.filter!=='all'?'-'+S.filter:''}.csv`, '﻿'+lines.join('\r\n'), 'text/csv');
+}
+function copyNegatives(){
+  const list=[...new Set(S.items.filter(x=>x.v==='cut').map(x=>x.keyword.replace(/^[\[\"+]+|[\]\"]+$/g,'').replace(/\+/g,'')))];
+  const msg=$('copied');
+  if(!list.length){ msg.textContent='No keywords in the Cut list.'; msg.hidden=false; return; }
+  const text=list.map(k=>`[${k}]`).join('\n');
+  const done=()=>{ msg.textContent=`Copied ${list.length} keywords as exact-match negatives. Paste them into a negative keyword list, or just pause the originals.`; msg.hidden=false; };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, ()=>download('negatives.txt',text,'text/plain'));
+  else download('negatives.txt',text,'text/plain');
+}
+
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ---------- Sample data (Google Ads export format) ---------- */
+function sampleCSV(){
+  let seed=7; const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+  const camps={
+    'Brand':['copyfororiginals','copy for originals','copy for originals reviews','copy for originals pricing'],
+    'Services - Copywriting':['ppc copywriter','ad copywriter','google ads copywriter','landing page copywriter','conversion copywriter','hire a copywriter','freelance copywriter','copywriting services','b2b copywriter','saas copywriter','email copywriter','sales page copywriter'],
+    'Services - PPC':['ppc agency','ppc management','google ads management','ppc consultant','ppc audit','google ads expert','microsoft ads agency','paid search agency','ppc management pricing','ppc specialist'],
+    'Generic':['copywriting','what is copywriting','copywriting examples','free copywriting templates','copywriting jobs','how to write ad copy','ai copywriting tool','copywriting course','ad copy generator','marketing agency'],
+  };
+  const prof={ // [ctr, cpc, cr, aov]
+    'Brand':[.25,1.1,.14,320],'Services - Copywriting':[.05,6.5,.045,420],'Services - PPC':[.04,9,.035,560],'Generic':[.03,3.2,.012,220]
+  };
+  const lines=['Search keyword report','"September 1, 2026 - September 30, 2026"',
+    'Keyword status,Keyword,Match type,Campaign,Ad group,Clicks,Impr.,CTR,Currency code,Avg. CPC,Cost,Conversions,Conv. value,Cost / conv.,Search lost IS (budget),Search lost IS (rank)'];
+  const mt=['Exact match','Phrase match','Broad match'];
+  Object.entries(camps).forEach(([c,kws])=>{
+    const [ctr,cpc,cr,aov]=prof[c];
+    kws.forEach((k,i)=>{
+      const m = mt[(i+k.length)%3];
+      const vol = Math.round((c==='Brand'?400:c==='Generic'?6000:1500)*(0.2+rnd()*1.6)*(m==='Broad match'?1.6:1));
+      const quality = (0.25+rnd()*1.9)*(/free|jobs|what is|course|generator/.test(k)?0:1);
+      const clicks = Math.max(0,Math.round(vol*ctr*(0.6+rnd()*0.8)));
+      const cost = clicks*cpc*(0.7+rnd()*0.6);
+      const conv = Math.round(clicks*cr*quality*10)/10;
+      const value = conv*aov*(0.7+rnd()*0.6);
+      const lb = rnd()<.35 ? (rnd()*40).toFixed(2)+'%' : '< 10%';
+      const lr = rnd()<.5 ? (rnd()*55).toFixed(2)+'%' : '< 10%';
+      lines.push(['Enabled',k,m,c,c.replace(/^.* - /,''),clicks,vol,(clicks/Math.max(1,vol)*100).toFixed(2)+'%','USD',
+        (clicks?cost/clicks:0).toFixed(2),cost.toFixed(2),conv.toFixed(2),value.toFixed(2),conv?(cost/conv).toFixed(2):'0.00',lb,lr].map(csvCell).join(','));
+    });
+  });
+  lines.push('Total: Account,--,--,--,--,0,0,--,USD,--,0,0,0,--,--,--');
+  return lines.join('\n');
+}
+
+/* ---------- Theme (remembered per browser; the only thing ever stored) ---------- */
+const THEME_KEY='keyword-triage-theme';
+function applyTheme(t){ if(t==='light'||t==='dark') document.documentElement.setAttribute('data-theme',t); else document.documentElement.removeAttribute('data-theme'); }
+try{ applyTheme(localStorage.getItem(THEME_KEY)); }catch(e){}
+$('btnTheme').onclick=()=>{
+  const cur=document.documentElement.getAttribute('data-theme');
+  const isDark = cur==='dark' || (!cur && matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = isDark ? 'light' : 'dark';
+  applyTheme(next); try{ localStorage.setItem(THEME_KEY,next); }catch(e){}
+};
+
+/* ---------- Wire up ---------- */
+const fileIn=$('file');
+$('pick').onclick=()=>fileIn.click();
+fileIn.onchange=()=>{ if(fileIn.files[0]) readFile(fileIn.files[0]); fileIn.value=''; };
+function readFile(f){
+  if (/\.xlsx?$/i.test(f.name)){ alertErr('Excel files aren’t supported yet. In Excel or Google Sheets, use File › Save as / Download › CSV, then drop the CSV here.'); return; }
+  const r=new FileReader();
+  r.onload=()=>{ try{ loadText(decode(r.result), f.name); } catch(e){ alertErr('Couldn’t read that file: '+e.message); } };
+  r.readAsArrayBuffer(f);
+}
+const drop=$('drop');
+['dragenter','dragover'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
+document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f) readFile(f); });
+$('sample').onclick=()=>loadText(sampleCSV(),'sample-keyword-report.csv');
+$('reset').onclick=()=>{ S.rows=[];S.items=[]; $('work').hidden=true; $('start').hidden=false; };
+
+document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{ if(b.disabled||S.mode===b.dataset.m)return; S.mode=b.dataset.m; setGoalDefaults(); recompute(false); });
+const onNum=(id,key,min)=>$(id).addEventListener('input',()=>{ const v=parseFloat($(id).value); if(isFinite(v)&&v>=min){ S[key]=v; S.items.forEach(classify); renderResults(); }});
+onNum('target','target',0.0001); onNum('zerocut','zerocut',0); onNum('minclicks','minclicks',0); onNum('minconv','minconv',0);
+
+let qt; $('q').addEventListener('input',e=>{ clearTimeout(qt); qt=setTimeout(()=>{S.q=e.target.value.trim();S.limit=200;renderTable();},120); });
+$('more').firstElementChild.onclick=()=>{ S.limit+=300; renderTable(); };
+$('exportView').onclick=exportView;
+$('exportNeg').onclick=copyNegatives;
+})();
+</script>
+</body>
+</html>

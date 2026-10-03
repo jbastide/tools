@@ -6,6 +6,7 @@
 
 - [Keyword Triage: Google Ads keyword profitability checker](https://tools.copyfororiginals.com/keyword-triage/): Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV or .xlsx) and labels each keyword Cut, Trim bids, Keep, Scale or Needs data against a target CPA or ROAS. The page documents every rule, default threshold and formula the tool uses.
 - [Negative Keyword Finder: Google Ads search terms analyzer](https://tools.copyfororiginals.com/negative-keywords/): Reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or .xlsx) and flags the search terms that break two limits you enter before uploading: an unacceptable cost per conversion, and a spend limit with no conversions. It also finds words shared across many search terms that spent past the spend limit without converting. Copies them as exact-match and phrase-match negative keywords. The page documents every rule, default and safeguard, including why it recommends 90 days of data.
+- [Lead Gen Search Campaign Checklist](https://tools.copyfororiginals.com/search-checklist/): An interactive preflight checklist for Google Ads lead gen Search campaigns covering account settings, campaign settings, bidding and budget, keywords and ads, and post-launch checks. Sizes the daily budget at 1× (minimum) and 2× (recommended) the target CPA.
 - [Short-Form Script Pacing & Hook Timer](https://tools.copyfororiginals.com/script-timer/): Times a short-form video script by retention zone (3s / 15s / 30s / 60s) and grades the hook.
 
 ## Research

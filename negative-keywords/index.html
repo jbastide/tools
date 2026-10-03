@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://tools.copyfororiginals.com/negative-keywords/">
 <meta property="og:site_name" content="Copy for Originals Tools">
 <meta property="og:title" content="Negative Keyword Finder: Free Google Ads Search Terms Analyzer">
-<meta property="og:description" content="Drop in a search terms report and get the negative keywords to add: search terms and recurring words that spent money and never converted. Runs in your browser. Nothing is uploaded.">
+<meta property="og:description" content="Set your CPA and spend limits, drop in a search terms report, and get the negative keywords to add: search terms and words that broke your limits. Runs in your browser. Nothing is uploaded.">
 <meta property="article:modified_time" content="2026-10-03">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%94%3C/text%3E%3C/svg%3E">
 <!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
@@ -38,7 +38,7 @@
       "name": "Negative Keyword Finder",
       "alternateName": ["Google Ads search terms analyzer", "Search term report analyzer", "Negative keyword tool", "Wasted ad spend finder"],
       "url": "https://tools.copyfororiginals.com/negative-keywords/",
-      "description": "Negative Keyword Finder is a free, browser-based tool that reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or Excel .xlsx) and lists the search terms and recurring words that spent at least two times the account's average cost per conversion without a single conversion. It formats them as exact-match and phrase-match negative keywords ready to paste. The report is processed entirely in the browser and is never uploaded.",
+      "description": "Negative Keyword Finder is a free, browser-based tool that reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or Excel .xlsx) and flags the search terms that break two limits you set before uploading: an unacceptable cost per conversion, and a spend limit with no conversions. It also finds recurring words that spent past the spend limit without converting. It formats them as exact-match and phrase-match negative keywords ready to paste. The report is processed entirely in the browser and is never uploaded.",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "PPC negative keyword research",
       "operatingSystem": "Any (web browser)",
@@ -50,8 +50,9 @@
       "publisher": { "@id": "https://copyfororiginals.com/#org" },
       "featureList": [
         "Reads Google Ads and Microsoft Ads search terms reports in CSV, TSV, UTF-16 text or Excel (.xlsx)",
-        "Flags search terms with zero conversions once they spend two times the account's average cost per conversion",
-        "Finds recurring words and two-word phrases (n-grams) that spent that much across many search terms without converting",
+        "Asks for two limits before upload: an unacceptable cost per conversion and a spend limit with no conversions",
+        "Flags search terms with zero conversions once they reach the spend limit, and converting search terms whose cost per conversion is above the unacceptable limit",
+        "Finds recurring words and two-word phrases (n-grams) that spent past the spend limit across many search terms without converting",
         "Never suggests a word that appears in one of your own keywords or in a converting search term",
         "Optionally flags search terms with a click-through rate under 1% over at least 300 impressions",
         "Skips search terms already excluded in the account",
@@ -82,8 +83,9 @@
       "mainEntity": [
         {"@type": "Question", "name": "What is a negative keyword?", "acceptedAnswer": {"@type": "Answer", "text": "A negative keyword tells Google Ads or Microsoft Ads not to show your ad for searches that contain it. Adding \"free\" as a negative keyword, for example, stops your ads from showing for “free ad copy templates” and every other search that includes the word free."}},
         {"@type": "Question", "name": "How do I find negative keywords in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Find negative keywords in the search terms report, which lists the real searches that triggered your ads. Look for search terms that spent money without converting, and for words that keep appearing in those searches. Negative Keyword Finder does this automatically: export the search terms report for the last 90 days and drop it into the tool."}},
-        {"@type": "Question", "name": "How much should a search term spend before I add it as a negative keyword?", "acceptedAnswer": {"@type": "Answer", "text": "Add a search term as a negative keyword once it has spent about twice your average cost per conversion without converting. A search term that converts as well as your account average has only about a 14% chance of reaching that spend with zero conversions, so most terms that get there are genuinely poor. Negative Keyword Finder uses 2× your average cost per conversion as its default threshold."}},
-        {"@type": "Question", "name": "What date range should I use for a search terms report?", "acceptedAnswer": {"@type": "Answer", "text": "Use the last 90 days for most accounts. A longer range lets more search terms reach the spend threshold, makes zero conversions stronger evidence, and shows more low-volume search terms. If the account spends more than about $1,000 a day, the last 30 days is enough. If you changed targeting or your offer recently, use only the period since the change."}},
+        {"@type": "Question", "name": "How much should a search term spend before I add it as a negative keyword?", "acceptedAnswer": {"@type": "Answer", "text": "Add a search term as a negative keyword once it has spent 1.5 to 2 times your target cost per conversion without converting. A search term that converts at your target rate has only about a 14% chance of spending 2× your target CPA with zero conversions, so most terms that get there are genuinely poor. Negative Keyword Finder asks you to enter this spend limit before you upload a report."}},
+        {"@type": "Question", "name": "What cost per conversion is too high for a search term?", "acceptedAnswer": {"@type": "Answer", "text": "A search term’s cost per conversion is too high when it is above your break-even CPA, the gross profit from one conversion. A search term above that loses money on every conversion it brings, so it is a candidate for a negative keyword even though it converts. Negative Keyword Finder asks for this unacceptable cost per conversion before you upload, and flags converting search terms that exceed it once they have spent at least that amount."}},
+        {"@type": "Question", "name": "What date range should I use for a search terms report?", "acceptedAnswer": {"@type": "Answer", "text": "Use the last 90 days for most accounts. A longer range lets more search terms reach your limits, makes zero conversions stronger evidence, and shows more low-volume search terms. If the account spends more than about $1,000 a day, the last 30 days is enough. If you changed targeting or your offer recently, use only the period since the change."}},
         {"@type": "Question", "name": "Should I add search terms with a low CTR as negative keywords?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes. A search term shown hundreds of times with a click-through rate under 1% usually means searchers don’t see your ad as relevant, such as “google ads login” for an agency. These terms cost little because few people click, so Negative Keyword Finder lists them separately and leaves them unselected for you to review."}},
         {"@type": "Question", "name": "Should negative keywords be exact match or phrase match?", "acceptedAnswer": {"@type": "Answer", "text": "Use exact match to block one specific search term and phrase match to block a word or phrase wherever it appears. Negative Keyword Finder copies individual search terms as exact match, like [copywriting jobs remote], and recurring words as phrase match, like \"jobs\", which also blocks future searches containing that word."}},
         {"@type": "Question", "name": "Does Negative Keyword Finder work with Microsoft Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Negative Keyword Finder reads Microsoft Ads (formerly Bing Ads) search terms reports in CSV or Excel format and recognizes Microsoft column names such as Spend and Conv. The negatives it copies use the same bracket and quote notation that Microsoft Ads accepts."}},
@@ -149,9 +151,24 @@ button,select,input{font:inherit;color:inherit}
 .byline{margin:4px 0 0}
 
 /* ---------- Start ---------- */
-.drop{margin-top:28px;border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:48px 20px;text-align:center;transition:border-color .15s,background .15s}
+.panel{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.panel h2,.drop h2{font-size:20px;margin:0 0 4px;letter-spacing:-.01em}
+.step{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;margin-right:9px;vertical-align:2px}
+.limits{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.limits label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14.5px}
+.money{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:0 12px}
+.money span{color:var(--muted);font-weight:600}
+.money input{border:0;background:none;outline:none;padding:10px 6px;width:100%;font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}
+.money:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.money.need{border-color:var(--waste);box-shadow:0 0 0 3px var(--waste-bg)}
+.limits .hint{font-weight:400;margin:0}
+.drop.locked{opacity:.5}
+.drop.locked .btn{cursor:not-allowed}
+.lockmsg{font-weight:600;color:var(--accent);margin:0 0 6px}
+.drop:not(.locked) .lockmsg{display:none}
+.why{display:inline-block;font-size:11.5px;font-weight:650;border-radius:999px;padding:1px 8px;margin-right:6px;background:var(--waste-bg);color:var(--waste);vertical-align:1px}
+.drop{margin-top:16px;border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:48px 20px;text-align:center;transition:border-color .15s,background .15s}
 .drop.over{border-color:var(--accent);background:var(--soft)}
-.drop h2{font-size:21px;margin-bottom:6px;letter-spacing:-.01em}
 .drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 .privacy{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px;font-size:13px;color:var(--muted)}
 .privacy svg{color:var(--ok);flex:none}
@@ -240,6 +257,8 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 @media (max-width:600px){
   .hero{padding:22px 18px}
   .row{gap:11px;padding:12px 14px}
+  .panel{padding:18px 16px}
+  .limits{grid-template-columns:1fr}
   .bar{bottom:8px}
   .bar .acts{width:100%}
   .bar .acts .btn{flex:1;white-space:nowrap}
@@ -262,13 +281,28 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <header>
   <h1>Negative Keyword Finder <span class="h1sub">Find the search terms wasting your ad budget</span></h1>
-  <p class="lede">Negative Keyword Finder is a free search terms analyzer that finds the negative keywords to add in Google Ads and Microsoft Ads. Drop in a search terms report and it lists the searches and words that spent money without a single conversion, ready to paste.</p>
+  <p class="lede">Negative Keyword Finder is a free search terms analyzer that finds the negative keywords to add in Google Ads and Microsoft Ads. Set the cost per conversion you won’t pay and how much a search may spend without converting, drop in a search terms report, and it lists every search and word that broke your limits, ready to paste.</p>
   <p class="byline small muted">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>
 </header>
 
 <section id="start">
-  <div class="drop" id="drop">
-    <h2>Drop your search terms report here</h2>
+  <div class="panel">
+    <h2><span class="step">1</span>Set your limits</h2>
+    <p class="muted small">Search terms that break either limit are flagged as negative keywords.</p>
+    <div class="limits">
+      <label for="preCpa">Unacceptable cost per conversion
+        <span class="money" id="moneyCpa"><span data-cur>$</span><input type="number" id="preCpa" min="0" step="any" inputmode="decimal" placeholder="e.g. 100" required aria-describedby="hintCpa"></span>
+        <span class="hint" id="hintCpa">Usually your break-even CPA: the gross profit from one conversion. Search terms that converted, but cost more than this per conversion, are flagged.</span>
+      </label>
+      <label for="preSpend">Spend limit with no conversions
+        <span class="money" id="moneySpend"><span data-cur>$</span><input type="number" id="preSpend" min="0" step="any" inputmode="decimal" placeholder="e.g. 150" required aria-describedby="hintSpend"></span>
+        <span class="hint" id="hintSpend">Search terms that spent this much without a single conversion are flagged. A good starting point is 1.5–2× your target CPA.</span>
+      </label>
+    </div>
+  </div>
+  <div class="drop locked" id="drop">
+    <h2><span class="step">2</span>Drop your search terms report here</h2>
+    <p class="lockmsg" id="lockmsg">Enter both limits above to continue.</p>
     <p class="muted">Excel or CSV, from Google Ads or Microsoft Ads. The last 90 days works best.</p>
     <div class="actions">
       <button class="btn primary" id="pick">Choose file</button>
@@ -316,11 +350,11 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     </div>
 
     <div id="pane-terms">
-      <p class="rule">Search terms that spent at least <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Spend threshold"> with no conversions.</p>
+      <p class="rule">Search terms that spent <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Spend limit with no conversions"> with no conversions, or cost more than <span class="cur" data-cur></span><input type="number" min="0" step="any" id="cpaIn" aria-label="Unacceptable cost per conversion"> per conversion.</p>
       <p class="hint" id="hintTerms"></p>
     </div>
     <div id="pane-words" hidden>
-      <p class="rule">Words that appear in 2 or more search terms, spent at least <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Spend threshold"> together, and never converted.</p>
+      <p class="rule">Words that appear in 2 or more search terms, spent at least <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Spend limit with no conversions"> together, and never converted.</p>
       <p class="hint">Copied as phrase match, like <code>"jobs"</code>, which also blocks future searches containing the word. A word that appears in one of your keywords or in any converting search is never suggested.</p>
     </div>
     <div id="pane-low" hidden>
@@ -345,7 +379,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="summary">
   <h2>What Negative Keyword Finder does</h2>
-  <p>Negative Keyword Finder reads the search terms report from Google Ads or Microsoft Ads and finds the searches that are clearly wasting money: search terms, and words shared across many search terms, that spent at least twice your average cost per conversion without converting once. It formats them as negative keywords you can paste straight into your account.</p>
+  <p>Negative Keyword Finder reads the search terms report from Google Ads or Microsoft Ads and finds the searches that are wasting money against two limits you set: an unacceptable cost per conversion, and how much a search may spend without converting. It flags search terms that break either limit, plus words shared across many search terms that spent past the spend limit without converting. It formats them as negative keywords you can paste straight into your account.</p>
   <div class="tablewrap">
   <table class="facts">
     <caption>Negative Keyword Finder at a glance</caption>
@@ -354,7 +388,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
       <tr><th scope="row">Works with</th><td>Google Ads and Microsoft Ads (Bing Ads) search terms reports</td></tr>
       <tr><th scope="row">File formats</th><td>CSV, TSV, UTF-16 text and Excel .xlsx. The old Excel 97–2003 .xls format is not supported.</td></tr>
       <tr><th scope="row">Required columns</th><td>Search term, Cost and Conversions</td></tr>
-      <tr><th scope="row">Main rule</th><td>Zero conversions after spending 2× the account’s average cost per conversion</td></tr>
+      <tr><th scope="row">Your limits</th><td>An unacceptable cost per conversion and a spend limit with no conversions. Both are required and are entered before the report is uploaded.</td></tr>
       <tr><th scope="row">Recommended data</th><td>The last 90 days (30 days for accounts spending over about $1,000 a day)</td></tr>
       <tr><th scope="row">Outputs</th><td>Exact-match negatives for search terms, phrase-match negatives for words, and a CSV export</td></tr>
       <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request, so the file cannot be uploaded.</td></tr>
@@ -367,19 +401,20 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="how-to">
   <h2>How to find negative keywords from a search terms report</h2>
-  <p>To find negative keywords, export the search terms report for the last 90 days, drop it into Negative Keyword Finder, review the flagged search terms and words, and paste the negatives into a negative keyword list.</p>
+  <p>To find negative keywords, set your two limits in Negative Keyword Finder, export the search terms report for the last 90 days, drop it in, review the flagged search terms and words, and paste the negatives into a negative keyword list.</p>
   <ol>
+    <li><b>Set your limits.</b> Enter the cost per conversion you won’t pay (usually your break-even CPA) and how much a search may spend without converting (1.5–2× your target CPA is a good start). Both are required: the upload box stays locked until they are filled in, because every result is measured against them.</li>
     <li><b>Export the search terms report.</b> In Google Ads, go to Campaigns › Insights and reports › Search terms, set the date range to the last 90 days, and choose Download › .csv or Excel. In Microsoft Ads, open Keywords › Search terms, set the same range, and download it as CSV or Excel.</li>
     <li><b>Load the file.</b> Drop it onto the upload box at the top of this page, or click Choose file. Negative Keyword Finder finds the header row, the columns, the currency and the date range automatically.</li>
-    <li><b>Review the Search terms tab.</b> Every search term that spent 2× your average cost per conversion without converting is listed and selected. Untick anything you want to keep.</li>
-    <li><b>Review the Words tab.</b> These are single words and two-word phrases, such as “jobs” or “how to”, that appear in many search terms that together spent the same amount without converting. One phrase-match negative blocks all of them, plus future searches with the same word.</li>
+    <li><b>Review the Search terms tab.</b> Every search term that broke a limit is listed and selected, with a label saying which one: “No conversions” or its cost per conversion, such as “$390 per conversion”. Untick anything you want to keep.</li>
+    <li><b>Review the Words tab.</b> These are single words and two-word phrases, such as “jobs” or “how to”, that appear in many search terms that together spent past your spend limit without converting. One phrase-match negative blocks all of them, plus future searches with the same word.</li>
     <li><b>Copy and paste.</b> Click Copy negatives and paste the list into a shared negative keyword list or a campaign’s negative keywords. Search terms that a selected word already blocks are left out of the copy, so the list has no duplicates.</li>
   </ol>
 </section>
 
 <section id="rules">
   <h2>How Negative Keyword Finder decides a search term is bad</h2>
-  <p>Negative Keyword Finder only flags search terms with zero conversions. A search term that converted at least once is never suggested, however expensive it was, because the right fix for a converting but costly search is usually a bid or match-type change, not a negative. (For that, see <a href="../keyword-triage/">Keyword Triage</a>.)</p>
+  <p>Negative Keyword Finder judges every search term against the two limits you enter before uploading. A search term is flagged when it spent at least your spend limit with zero conversions, or when it converted but its cost per conversion is above your unacceptable limit. There are no hidden defaults taken from the report, so every result reads the same way: this search broke this limit. (To judge the keywords you bid on rather than the searches they matched, see <a href="../keyword-triage/">Keyword Triage</a>.)</p>
   <div class="tablewrap">
   <table>
     <caption>The three lists and their rules</caption>
@@ -387,22 +422,25 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
       <tr><th scope="col">List</th><th scope="col">Rule</th><th scope="col">Copied as</th><th scope="col">Selected by default</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Search terms</th><td>Zero conversions and cost at or above the spend threshold (default 2× average cost per conversion)</td><td>Exact match, <code>[search term]</code></td><td>Yes</td></tr>
-      <tr><th scope="row">Words</th><td>A word or two-word phrase that appears in 2 or more search terms, whose search terms together have zero conversions and cost at or above the spend threshold</td><td>Phrase match, <code>"word"</code></td><td>Yes</td></tr>
+      <tr><th scope="row">Search terms</th><td>Zero conversions and cost at or above your spend limit, or cost per conversion above your unacceptable limit with cost at or above that limit</td><td>Exact match, <code>[search term]</code></td><td>Yes</td></tr>
+      <tr><th scope="row">Words</th><td>A word or two-word phrase that appears in 2 or more search terms, whose search terms together have zero conversions and cost at or above your spend limit</td><td>Phrase match, <code>"word"</code></td><td>Yes</td></tr>
       <tr><th scope="row">Low CTR</th><td>Zero conversions, at least 300 impressions and a click-through rate under 1%, and not already in the Search terms list</td><td>Exact match, <code>[search term]</code></td><td>No</td></tr>
     </tbody>
   </table>
   </div>
 
-  <h3>Why the threshold is 2× your average cost per conversion</h3>
-  <p>A search term that converts as well as your account average would, after spending one average cost per conversion, be expected to produce one conversion. After spending 2× that amount it would be expected to produce two, and the chance it still has zero is about 14% (e<sup>−2</sup>). At 3× the chance drops to about 5%. Two times is the point where most search terms with zero conversions are genuinely poor rather than unlucky, without waiting so long that the waste piles up.</p>
-  <p>The default is your account’s average cost per conversion in the uploaded file (total cost ÷ total conversions), doubled and rounded to two significant figures. With a $60 average, the threshold is $120. If the file has no conversions at all, the default is $100. You can type any amount into the sentence above the list.</p>
+  <h3>How to choose your unacceptable cost per conversion</h3>
+  <p>Use your break-even CPA: the gross profit from one conversion. If a sale brings in $200 of gross profit, a search term that costs more than $200 per conversion loses money on every sale it brings. A converting search term is flagged only once it has spent at least this limit, so a small fraction of a conversion on a few dollars of spend isn’t judged on too little data.</p>
+
+  <h3>How to choose your spend limit with no conversions</h3>
+  <p>A good starting point is 1.5 to 2 times your target CPA. A search term that converts at your target rate would be expected to produce two conversions after spending 2× your target CPA, and the chance it still has zero is about 14% (e<sup>−2</sup>). At 1.5× the chance is about 22%, and at 3× about 5%. A higher limit flags fewer search terms with more confidence; a lower limit catches waste sooner.</p>
+  <p>After uploading, both limits appear inside the sentence above the results and can be changed there. Negative Keyword Finder also shows the report’s own average cost per conversion for reference, and warns you if that average is already above your unacceptable limit.</p>
 
   <h3>Why words find more waste than single search terms</h3>
-  <p>Most wasted spend in a search terms report is spread across hundreds of search terms that each spent a few dollars, too little for any one of them to judge. Negative Keyword Finder groups search terms by the words they share, which PPC managers call n-gram analysis. If “jobs” appears in 14 search terms that spent $260 together and none converted, “jobs” is a negative keyword even though no single search term with “jobs” crossed the threshold.</p>
+  <p>Most wasted spend in a search terms report is spread across hundreds of search terms that each spent a few dollars, too little for any one of them to judge. Negative Keyword Finder groups search terms by the words they share, which PPC managers call n-gram analysis. If “jobs” appears in 14 search terms that spent $260 together and none converted, “jobs” is a negative keyword even though no single search term with “jobs” reached the spend limit.</p>
   <p>Three safeguards keep word suggestions from blocking good traffic:</p>
   <ul>
-    <li>A word is only suggested if every search term containing it has zero conversions.</li>
+    <li>A word is only suggested if every search term containing it has zero conversions. Words are never flagged for a high cost per conversion, because a phrase-match negative would block every converting search that contains them.</li>
     <li>A word that appears in any of your own keywords (from the report’s Keyword column) is never suggested, since negating it would block that keyword.</li>
     <li>Filler words such as “for”, “the” and “in”, and question words such as “how”, “what” and “near”, are never suggested alone. They appear only inside phrases such as “how to” or “near me”. A two-word phrase is dropped when one of its words is already suggested on its own.</li>
   </ul>
@@ -421,7 +459,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="date-range">
   <h2>What date range should a search terms report cover?</h2>
-  <p>Use the last 90 days for most accounts. A longer range helps in three ways: more search terms reach the spend threshold, zero conversions over 90 days is stronger evidence than over 14, and the report includes more of the low-volume search terms that Google Ads hides from short ranges. A negative for a search term that no longer appears costs nothing.</p>
+  <p>Use the last 90 days for most accounts. A longer range helps in three ways: more search terms reach your limits, zero conversions over 90 days is stronger evidence than over 14, and the report includes more of the low-volume search terms that Google Ads hides from short ranges. A negative for a search term that no longer appears costs nothing.</p>
   <ul>
     <li><b>Spending over about $1,000 a day:</b> 30 days is enough data and keeps the list current.</li>
     <li><b>Recently changed targeting, match types or your offer:</b> use only the period since the change.</li>
@@ -452,10 +490,10 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="example">
   <h2>Worked example: finding negative keywords in a $9,000 account</h2>
-  <p>This example account spent $9,000 for 150 conversions over 90 days, an average cost per conversion of $60, so the spend threshold is $120.</p>
+  <p>This example account spent $9,000 for 150 conversions over 90 days. Its break-even CPA is $100, so that is the unacceptable cost per conversion, and the spend limit with no conversions is $120.</p>
   <div class="tablewrap">
   <table>
-    <caption>Search terms judged against a $120 threshold</caption>
+    <caption>Search terms judged against a $100 CPA limit and a $120 spend limit</caption>
     <thead>
       <tr><th scope="col">Search term or word</th><th scope="col" class="num">Cost</th><th scope="col" class="num">Conversions</th><th scope="col">Result</th></tr>
     </thead>
@@ -463,14 +501,15 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
       <tr><td>copywriting jobs remote</td><td class="num">$164</td><td class="num">0</td><td>Negative <code>[copywriting jobs remote]</code>, past $120</td></tr>
       <tr><td>marketing agency near me</td><td class="num">$131</td><td class="num">0</td><td>Negative <code>[marketing agency near me]</code>, past $120</td></tr>
       <tr><td>how to write ad copy</td><td class="num">$96</td><td class="num">0</td><td>Not flagged alone, under $120</td></tr>
-      <tr><td>ppc copywriter</td><td class="num">$480</td><td class="num">9</td><td>Never flagged, it converts</td></tr>
+      <tr><td>cheap ppc agency</td><td class="num">$390</td><td class="num">1</td><td>Negative <code>[cheap ppc agency]</code>, $390 per conversion is over $100</td></tr>
+      <tr><td>ppc copywriter</td><td class="num">$480</td><td class="num">9</td><td>Kept, $53 per conversion is under $100</td></tr>
       <tr><td>“free”, in 9 search terms</td><td class="num">$212</td><td class="num">0</td><td>Negative <code>"free"</code></td></tr>
       <tr><td>“how to”, in 6 search terms including “how to write ad copy”</td><td class="num">$184</td><td class="num">0</td><td>Negative <code>"how to"</code>, which also blocks the $96 term above</td></tr>
       <tr><td>google ads login, 2,400 impressions at 0.4% CTR</td><td class="num">$11</td><td class="num">0</td><td>Listed under Low CTR for review</td></tr>
     </tbody>
   </table>
   </div>
-  <p>Selecting the first two search terms and the two words blocks $691 of spend that produced no conversions, about 8% of the account’s spend, with four negatives.</p>
+  <p>Selecting the three flagged search terms and the two words gives five negatives that block $1,081, about 12% of the account’s spend. $691 of it produced no conversions, and the other $390 bought one conversion at almost four times the break-even CPA.</p>
 </section>
 
 <section id="columns">
@@ -484,8 +523,8 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     </thead>
     <tbody>
       <tr><th scope="row">Search term</th><td>Yes</td><td>Search term</td><td>Search term</td><td>The searches being judged</td></tr>
-      <tr><th scope="row">Cost</th><td>Yes</td><td>Cost</td><td>Spend</td><td>The spend threshold and wasted spend</td></tr>
-      <tr><th scope="row">Conversions</th><td>Yes</td><td>Conversions</td><td>Conv. or Conversions</td><td>The zero-conversion rule</td></tr>
+      <tr><th scope="row">Cost</th><td>Yes</td><td>Cost</td><td>Spend</td><td>Both limits and wasted spend</td></tr>
+      <tr><th scope="row">Conversions</th><td>Yes</td><td>Conversions</td><td>Conv. or Conversions</td><td>Both limits</td></tr>
       <tr><th scope="row">Clicks, Impressions</th><td>No</td><td>Clicks, Impr.</td><td>Clicks, Impr.</td><td>The Low CTR list</td></tr>
       <tr><th scope="row">Keyword</th><td>No</td><td>Keyword</td><td>Keyword</td><td>Protecting words used in your own keywords</td></tr>
       <tr><th scope="row">Added/Excluded</th><td>No</td><td>Added/Excluded</td><td>Added/Excluded</td><td>Skipping search terms that are already negatives or keywords</td></tr>
@@ -523,10 +562,13 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
   <p>Find negative keywords in the search terms report, which lists the real searches that triggered your ads. Look for search terms that spent money without converting, and for words that keep appearing in those searches. Negative Keyword Finder does this automatically: export the search terms report for the last 90 days and drop it into the tool.</p>
 
   <h3>How much should a search term spend before I add it as a negative keyword?</h3>
-  <p>Add a search term as a negative keyword once it has spent about twice your average cost per conversion without converting. A search term that converts as well as your account average has only about a 14% chance of reaching that spend with zero conversions, so most terms that get there are genuinely poor. Negative Keyword Finder uses 2× your average cost per conversion as its default threshold.</p>
+  <p>Add a search term as a negative keyword once it has spent 1.5 to 2 times your target cost per conversion without converting. A search term that converts at your target rate has only about a 14% chance of spending 2× your target CPA with zero conversions, so most terms that get there are genuinely poor. Negative Keyword Finder asks you to enter this spend limit before you upload a report.</p>
+
+  <h3>What cost per conversion is too high for a search term?</h3>
+  <p>A search term’s cost per conversion is too high when it is above your break-even CPA, the gross profit from one conversion. A search term above that loses money on every conversion it brings, so it is a candidate for a negative keyword even though it converts. Negative Keyword Finder asks for this unacceptable cost per conversion before you upload, and flags converting search terms that exceed it once they have spent at least that amount.</p>
 
   <h3>What date range should I use for a search terms report?</h3>
-  <p>Use the last 90 days for most accounts. A longer range lets more search terms reach the spend threshold, makes zero conversions stronger evidence, and shows more low-volume search terms. If the account spends more than about $1,000 a day, the last 30 days is enough. If you changed targeting or your offer recently, use only the period since the change.</p>
+  <p>Use the last 90 days for most accounts. A longer range lets more search terms reach your limits, makes zero conversions stronger evidence, and shows more low-volume search terms. If the account spends more than about $1,000 a day, the last 30 days is enough. If you changed targeting or your offer recently, use only the period since the change.</p>
 
   <h3>Should I add search terms with a low CTR as negative keywords?</h3>
   <p>Sometimes. A search term shown hundreds of times with a click-through rate under 1% usually means searchers don’t see your ad as relevant, such as “google ads login” for an agency. These terms cost little because few people click, so Negative Keyword Finder lists them separately and leaves them unselected for you to review.</p>
@@ -598,7 +640,7 @@ const MIN_WORD_TERMS = 2;
 const $ = id => document.getElementById(id);
 const S = {
   fileName:'', rows:[], sheets:null, headerIdx:0, headers:[], map:{}, cur:'$',
-  terms:[], acct:null, spend:100, minImpr:300, ctrMax:0.01, days:null,
+  terms:[], acct:null, spend:null, cpaMax:null, pre:{cpa:null, spend:null}, minImpr:300, ctrMax:0.01, days:null,
   skipped:{excluded:0, added:0}, tab:'terms', unchecked:new Set(), checked:new Set(), limit:100,
   lists:{terms:[], words:[], low:[]}
 };
@@ -845,7 +887,7 @@ function accountStats(terms){
 
 function setDefaults(){
   const a=S.acct;
-  S.spend = isFinite(a.cpa) && a.cpa>0 ? (niceRound(a.cpa*2) || 100) : 100;
+  S.spend = S.pre.spend; S.cpaMax = S.pre.cpa;
   // Shopping-style accounts run low CTRs across the board; don't flag everything.
   const c = isFinite(a.ctr) && a.ctr>0 && a.ctr<0.03 ? Math.max(0.001, Math.round(a.ctr/3*1000)/1000) : 0.01;
   S.ctrMax = Math.min(0.01, c);
@@ -857,8 +899,15 @@ function analyze(){
   const T=S.terms, spend=S.spend, kw=S.kwTokens;
   const hasCtr = S.map.clicks>-1 && S.map.impr>-1;
 
-  const terms = T.filter(x=>!x.isKeyword && x.conv<=0 && x.cost>0 && x.cost>=spend)
-    .sort((a,b)=>b.cost-a.cost);
+  // Two limits: no conversions after the spend limit, or converted but over the CPA limit.
+  // The CPA rule also needs a full conversion's worth of spend, so a sliver of a
+  // fractional conversion on a few dollars isn't judged.
+  const terms = T.filter(x=>{
+    if (x.isKeyword || x.cost<=0) return false;
+    if (x.conv<=0){ x.why='zero'; return x.cost>=spend; }
+    x.cpa = x.cost/x.conv; x.why='cpa';
+    return x.cpa>S.cpaMax && x.cost>=S.cpaMax;
+  }).sort((a,b)=>b.cost-a.cost);
 
   // N-grams across every search term (converting ones included, so a word that ever converts is out).
   const g = new Map();
@@ -897,8 +946,8 @@ function selection(){
     blocked.set(x.text,x);
     if (!coveredBy(x)) termNegs.push({x,kind:k});
   }));
-  let cost=0; blocked.forEach(x=>cost+=x.cost);
-  return {words, termNegs, coveredBy, cost, blockedCount:blocked.size, count: words.length+termNegs.length};
+  let cost=0, conv=0, convCost=0; blocked.forEach(x=>{cost+=x.cost; if(x.conv>0){conv+=x.conv; convCost+=x.cost;}});
+  return {words, termNegs, coveredBy, cost, conv, convCost, blockedCount:blocked.size, count: words.length+termNegs.length};
 }
 
 /* ---------- Load ---------- */
@@ -973,6 +1022,7 @@ function recompute(resetDefaults){
 
 function syncInputs(){
   document.querySelectorAll('.spendIn').forEach(el=>{ if (document.activeElement!==el) el.value = S.spend; });
+  if (document.activeElement!==$('cpaIn')) $('cpaIn').value = S.cpaMax;
   document.querySelectorAll('[data-cur]').forEach(el=>el.textContent=S.cur);
   if (document.activeElement!==$('imprIn')) $('imprIn').value = S.minImpr;
   if (document.activeElement!==$('ctrIn')) $('ctrIn').value = +(S.ctrMax*100).toFixed(2);
@@ -1001,22 +1051,24 @@ function render(){
   hero.classList.toggle('clean', !totalFound);
   if (!totalFound){
     $('heroAmt').textContent = '✓';
-    $('heroWhat').textContent = 'No obviously wasted spend';
-    $('heroSub').textContent = `No search term or word spent ${fmtMoney(S.spend)} without converting.${L.low.length?' Check Low CTR for searches that may be off-topic.':' Lower the amount below to look closer.'}`;
+    $('heroWhat').textContent = 'Nothing over your limits';
+    $('heroSub').textContent = `No search term spent ${fmtMoney(S.spend)} without converting or cost more than ${fmtMoney(S.cpaMax)} per conversion.${L.low.length?' Check Low CTR for searches that may be off-topic.':''}`;
   } else {
     $('heroAmt').textContent = fmtMoney(sel.cost,0);
     $('heroWhat').textContent = sel.count
-      ? `spent on searches that never converted`
+      ? (sel.conv>0 ? 'spent on searches over your limits' : 'spent on searches that never converted')
       : 'Nothing selected';
     $('heroSub').textContent = sel.count
-      ? `Blocking the ${plural(sel.count,'negative keyword')} below would have saved ${a.cost?Math.max(1,Math.round(sel.cost/a.cost*100)):0}% of the ${fmtMoney(a.cost,0)} in this report, across ${plural(sel.blockedCount,'search term')}.`
+      ? `Blocking the ${plural(sel.count,'negative keyword')} below would have cut ${a.cost?Math.max(1,Math.round(sel.cost/a.cost*100)):0}% of the ${fmtMoney(a.cost,0)} in this report, across ${plural(sel.blockedCount,'search term')}`
+        + (sel.conv>0 ? `. ${fmtMoney(sel.cost-sel.convCost,0)} of it produced no conversions; the rest bought ${sel.conv===1?'1 conversion':fmtNum(sel.conv,1)+' conversions at'} ${sel.conv===1?'for '+fmtMoney(sel.convCost):fmtMoney(sel.convCost/sel.conv)+' each'}.` : '. None of it produced a conversion.')
       : 'Tick search terms or words below to build your negative keyword list.';
   }
 
   // Notes
   const notes=[];
   if (!(a.conv>0)) notes.push('This report has no conversions at all. Check that conversion tracking is working before adding negatives, or everything that spent money will look like waste.');
-  else if (S.days && S.days<28) notes.push(`This report covers ${S.days} days. A 90-day report lets more search terms reach the threshold and finds more waste.`);
+  else if (S.days && S.days<28) notes.push(`This report covers ${S.days} days. A 90-day report lets more search terms reach your limits and finds more waste.`);
+  if (isFinite(a.cpa) && S.cpaMax && a.cpa > S.cpaMax) notes.push(`This report’s average cost per conversion is ${fmtMoney(a.cpa)}, above your ${fmtMoney(S.cpaMax)} limit, so many converting search terms will be flagged. Double-check the limit.`);
   $('note').hidden = !notes.length; $('note').textContent = notes.join(' ');
 
   // Tabs
@@ -1027,10 +1079,8 @@ function render(){
   if (!hasCtr && S.tab==='low') S.tab='terms';
   $('tabs').querySelectorAll('button').forEach(b=>{ b.classList.toggle('on', b.dataset.t===S.tab); b.setAttribute('aria-selected', b.dataset.t===S.tab); });
   ['terms','words','low'].forEach(t=>$('pane-'+t).hidden = t!==S.tab);
-  $('hintTerms').innerHTML = (isFinite(a.cpa)
-    ? `Default is 2× your average cost per conversion of ${esc(fmtMoney(a.cpa))}.`
-    : `Default is ${esc(fmtMoney(100))} because this report has no conversions.`)
-    + ` Copied as exact match, like <code>[copywriting jobs]</code>.`;
+  $('hintTerms').innerHTML = (isFinite(a.cpa) ? `This report’s average cost per conversion is ${esc(fmtMoney(a.cpa))}. ` : '')
+    + `Copied as exact match, like <code>[copywriting jobs]</code>.`;
 
   renderList(sel);
 
@@ -1045,7 +1095,7 @@ function renderList(sel){
   const k=S.tab, items=S.lists[k], box=$('list');
   if (!items.length){
     const msg = {
-      terms: `No search term spent ${esc(fmtMoney(S.spend))} without converting.`,
+      terms: `No search term spent ${esc(fmtMoney(S.spend))} without converting or cost more than ${esc(fmtMoney(S.cpaMax))} per conversion.`,
       words: `No word shared by 2 or more search terms spent ${esc(fmtMoney(S.spend))} without converting.`,
       low: `No search term had ${fmtNum(S.minImpr)}+ impressions and a CTR under ${+(S.ctrMax*100).toFixed(2)}%.`,
     }[k];
@@ -1066,12 +1116,16 @@ function renderList(sel){
     }
     const by = sel.coveredBy(x);
     const meta = [];
+    const tag = k!=='terms' ? '' : x.why==='cpa'
+      ? `<span class="why">${esc(fmtMoney(x.cpa))} per conversion</span>`
+      : `<span class="why">No conversions</span>`;
+    if (k==='terms' && x.why==='cpa') meta.push(plural(+x.conv.toFixed(1),'conversion'));
     if (S.map.clicks>-1) meta.push(plural(x.clicks,'click'));
     if (k==='low' || (S.map.impr>-1 && S.map.clicks>-1 && x.impr)) meta.push(`${fmtNum(x.impr)} impr.`, `${(x.impr?x.clicks/x.impr*100:0).toFixed(1)}% CTR`);
     if (x.camps.size===1) meta.push(esc([...x.camps][0])); else if (x.camps.size>1) meta.push(`${x.camps.size} campaigns`);
     return `<label class="row${by?' covered':''}"><input type="checkbox" data-k="${esc(x.text)}"${on?' checked':''}>
       <span class="main"><span class="t">${esc(x.display)}</span>
-      <span class="m">${meta.join(' · ')}</span>
+      <span class="m">${tag}${meta.join(' · ')}</span>
       ${by?`<span class="cov">Already blocked by "${esc(by)}"</span>`:''}</span>
       <span class="amt">${esc(fmtMoney(x.cost,0))}</span></label>`;
   }).join('');
@@ -1111,7 +1165,7 @@ function csvCell(v){ v=String(v==null?'':v); return /[",\n\r]/.test(v)?'"'+v.rep
 function downloadCsv(){
   const list=negatives(); if(!list.length) return;
   const head=['Negative keyword','Keyword text','Match type','Source','Search terms blocked','Cost','Clicks','Conversions'];
-  const lines=[head.join(',')].concat(list.map(r=>[r.neg,r.kw,r.match,r.type,r.n,r.x.cost.toFixed(2),r.x.clicks,0].map(csvCell).join(',')));
+  const lines=[head.join(',')].concat(list.map(r=>[r.neg,r.kw,r.match,r.type,r.n,r.x.cost.toFixed(2),r.x.clicks,+r.x.conv.toFixed(2)].map(csvCell).join(',')));
   const base=S.fileName.replace(/\.[^.]+$/,'');
   download(`${base}-negatives.csv`, '﻿'+lines.join('\r\n'), 'text/csv');
   toast(`Downloaded ${plural(list.length,'negative keyword')} as CSV.`);
@@ -1136,6 +1190,10 @@ function sampleCSV(){
     ['copy for originals reviews',C.br,'copy for originals',1.2,24,3],
     ['saas copywriter',C.cw,'saas copywriter',6.3,12,1],['b2b copywriter',C.cw,'b2b copywriter',6.0,15,1],
     ['email copywriter',C.cw,'email copywriter',5.4,18,1],['ppc specialist for hire',C.ppc,'ppc specialist',8.4,14,1],
+  ];
+  const pricey=[ // converts, but at a cost per conversion nobody wants
+    ['cheap ppc management',C.ppc,'ppc management',8.9,48,1],['copywriter for hire cheap',C.cw,'copywriting services',5.8,44,1],
+    ['ppc agency vs in house',C.ppc,'ppc agency',9.2,36,1],
   ];
   const big=[ // obvious single-term waste
     ['copywriting jobs remote',C.cw,'copywriting services',4.0,41],['marketing agency near me',C.ppc,'ppc agency',8.7,15],
@@ -1168,6 +1226,7 @@ function sampleCSV(){
   };
   const imprFor = clicks => Math.round(clicks/(0.035+rnd()*0.05));
   good.forEach(([t,c,k,cpc,cl,cv])=>{ const cost=cl*cpc*(0.85+rnd()*0.3); push(t,c,k,cl,imprFor(cl),cost,cv); });
+  pricey.forEach(([t,c,k,cpc,cl,cv])=>{ const cost=cl*cpc*(0.95+rnd()*0.1); push(t,c,k,cl,imprFor(cl),cost,cv); });
   big.forEach(([t,c,k,cpc,cl])=>{ const cost=cl*cpc*(0.9+rnd()*0.2); push(t,c,k,cl,imprFor(cl),cost,0); });
   Object.entries(families).forEach(([w,terms])=>terms.forEach(t=>{
     const camp = /ppc|google|bing|microsoft|marketing/.test(t) ? C.ppc : C.cw;
@@ -1200,7 +1259,7 @@ $('btnTheme').onclick=()=>{
 
 /* ---------- Wire up ---------- */
 const fileIn=$('file');
-$('pick').onclick=()=>fileIn.click();
+$('pick').onclick=()=>{ if(!needLimits()) fileIn.click(); };
 fileIn.onchange=()=>{ if(fileIn.files[0]) readFile(fileIn.files[0]); fileIn.value=''; };
 function readFile(f){
   const r=new FileReader();
@@ -1218,15 +1277,30 @@ $('sheetSel').onchange=e=>showSheet(+e.target.value, S.fileName);
 const drop=$('drop');
 ['dragenter','dragover'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
 ['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
-document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f) readFile(f); });
-$('sample').onclick=()=>loadText(sampleCSV(),'sample-search-terms-report.csv');
+// Step 1 gates step 2: nothing loads until both limits are set.
+const needLimits = ()=>{
+  const miss = [['preCpa','moneyCpa','cpa'],['preSpend','moneySpend','spend']].filter(([,,k])=>!(S.pre[k]>0));
+  if (!miss.length) return false;
+  miss.forEach(([,m])=>$(m).classList.add('need'));
+  const t=$(miss[0][0]); t.focus(); t.scrollIntoView({block:'center',behavior:'smooth'});
+  return true;
+};
+const lock = ()=>$('drop').classList.toggle('locked', !(S.pre.cpa>0 && S.pre.spend>0));
+[['preCpa','moneyCpa','cpa'],['preSpend','moneySpend','spend']].forEach(([i,m,k])=>$(i).addEventListener('input',()=>{
+  const v=parseFloat($(i).value); S.pre[k] = isFinite(v)&&v>0 ? v : null;
+  $(m).classList.remove('need'); lock();
+}));
+document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f && !$('start').hidden && !needLimits()) readFile(f); });
+$('sample').onclick=()=>{ if(!needLimits()) loadText(sampleCSV(),'sample-search-terms-report.csv'); };
 $('reset').onclick=()=>{ S.rows=[]; S.terms=[]; $('work').hidden=true; $('start').hidden=false; $('mapbox').hidden=true; window.scrollTo({top:0}); };
 $('mapToggle').onclick=()=>{ $('mapbox').hidden=!$('mapbox').hidden; };
 
 $('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.tab=b.dataset.t; S.limit=100; render(); });
 let it;
 const onInput=(fn)=>e=>{ clearTimeout(it); it=setTimeout(()=>{ if(fn(parseFloat(e.target.value))){ syncInputs(); analyze(); render(); } },150); };
-document.querySelectorAll('.spendIn').forEach(el=>el.addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>=0){ S.spend=v; return true; } })));
+// Edits after upload carry back to step 1, so "New report" keeps them.
+document.querySelectorAll('.spendIn').forEach(el=>el.addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.spend=S.pre.spend=v; $('preSpend').value=v; return true; } })));
+$('cpaIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.cpaMax=S.pre.cpa=v; $('preCpa').value=v; return true; } }));
 $('imprIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>=1){ S.minImpr=Math.round(v); return true; } }));
 $('ctrIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.ctrMax=v/100; return true; } }));
 $('copy').onclick=copyNegs;

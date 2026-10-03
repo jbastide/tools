@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>PPC Troubleshooter: Why Isn't My Google Ads Campaign Working?</title>
+<meta name="description" content="Pick what's going wrong with your Google Ads campaign, answer a few questions, and get a diagnosis: bad luck, a budget too small for your CPC, broken tracking, or a setting to fix.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/ppc-troubleshooter/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.copyfororiginals.com/ppc-troubleshooter/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="PPC Troubleshooter: why isn't my Google Ads campaign working?">
+<meta property="og:description" content="Zero conversions, two $100 clicks, or results that tanked after a good start? Pick the problem, answer a few questions, and see whether it's luck, budget or a setting.">
+<meta property="article:modified_time" content="2026-10-03">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A9%BA%3C/text%3E%3C/svg%3E">
+<!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
+     keep the two in sync when either changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tools.copyfororiginals.com/ppc-troubleshooter/#app",
+      "name": "PPC Troubleshooter",
+      "alternateName": ["Google Ads troubleshooter", "Why is my Google Ads campaign not converting", "Google Ads no conversions diagnosis tool"],
+      "url": "https://tools.copyfororiginals.com/ppc-troubleshooter/",
+      "description": "PPC Troubleshooter is a free, interactive diagnosis tool for Google Ads campaigns that aren't working. You pick the problem, such as spending money with zero conversions, a budget used up by a few expensive clicks, results that dropped after a good start, a rising cost per click, or ads that barely spend. It asks follow-up questions one at a time and returns a ranked list of causes and fixes. It also shows, with simple math and a picture, whether the result is likely bad luck from too few clicks.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "PPC campaign troubleshooting",
+      "operatingSystem": "Any (web browser)",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "dateModified": "2026-10-03",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tools.copyfororiginals.com/ppc-troubleshooter/#page",
+      "url": "https://tools.copyfororiginals.com/ppc-troubleshooter/",
+      "name": "PPC Troubleshooter: why isn't my Google Ads campaign working?",
+      "inLanguage": "en",
+      "dateModified": "2026-10-03",
+      "mainEntity": { "@id": "https://tools.copyfororiginals.com/ppc-troubleshooter/#app" },
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/" },
+          { "@type": "ListItem", "position": 2, "name": "PPC Troubleshooter", "item": "https://tools.copyfororiginals.com/ppc-troubleshooter/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/ppc-troubleshooter/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "How many clicks before I know a Google Ads campaign isn't working?", "acceptedAnswer": {"@type": "Answer", "text": "Divide 3 by your expected conversion rate. At 5 conversions per 100 clicks, that is about 60 clicks. A campaign that works would get zero conversions from 59 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck."}},
+        {"@type": "Question", "name": "How much budget do I need for Google Ads lead generation?", "acceptedAnswer": {"@type": "Answer", "text": "Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At a $55 cost per click and 5 conversions per 100 clicks, one lead costs about $1,100, so that is about $3,300 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy."}},
+        {"@type": "Question", "name": "Why did my Google Ads campaign work at first and then stop?", "acceptedAnswer": {"@type": "Answer", "text": "Usually one of three things. The good start was partly luck and later weeks fell back to normal. A change such as a new bid strategy, a new target or a large budget change restarted the learning period. Or a website change broke the conversion tracking or the form. With fewer than about 30 conversions in total, a drop by half can easily be luck."}},
+        {"@type": "Question", "name": "Is a high cost per click a problem in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Not by itself. Cost per click is the price of one visitor; cost per lead is the price of a customer. If cost per click rises but cost per lead stays at or under your target, the campaign is fine. If both rise, check the bid strategy first, especially Target impression share, then broad match, competitors in Auction insights and Quality Score."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f5f6f8; --panel:#fff; --panel-2:#f9fafb; --edge:#e1e5ec; --fg:#141821; --fg-2:#4a5361; --fg-3:#7b8697;
+  --accent:#4f46e5; --accent-bg:rgba(79,70,229,.08); --accent-edge:rgba(79,70,229,.45);
+  --gold:#e3a008; --miss:#d3d9e2;
+  --fix:#b42318; --fix-bg:#fdecea; --chk:#975a07; --chk-bg:#fdf3dc; --ok:#17733d; --ok-bg:#e5f4ea;
+  --shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px -12px rgba(16,24,40,.12);
+  --ui:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0e13; --panel:#14171f; --panel-2:#181c25; --edge:#272c38; --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
+    --accent:#818cf8; --accent-bg:rgba(129,140,248,.12); --accent-edge:rgba(129,140,248,.55);
+    --gold:#f5c542; --miss:#363c4a;
+    --fix:#ff8a80; --fix-bg:rgba(255,99,88,.12); --chk:#f2c35b; --chk-bg:rgba(242,195,91,.12); --ok:#6fd49a; --ok-bg:rgba(111,212,154,.12);
+    --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0e13; --panel:#14171f; --panel-2:#181c25; --edge:#272c38; --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
+  --accent:#818cf8; --accent-bg:rgba(129,140,248,.12); --accent-edge:rgba(129,140,248,.55);
+  --gold:#f5c542; --miss:#363c4a;
+  --fix:#ff8a80; --fix-bg:rgba(255,99,88,.12); --chk:#f2c35b; --chk-bg:rgba(242,195,91,.12); --ok:#6fd49a; --ok-bg:rgba(111,212,154,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--ui);-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:28px 16px 64px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button,input{font:inherit;color:inherit}
+
+.crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;font-size:14px}
+.crumbs a{text-decoration:none;color:var(--fg-2)}
+.crumbs a:hover{color:var(--accent)}
+.icon-btn{border:1px solid var(--edge);background:transparent;padding:7px 9px;border-radius:10px;cursor:pointer;line-height:0;color:var(--fg-2)}
+.icon-btn:hover{border-color:var(--fg-3)}
+.intro{margin:0 0 28px}
+h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacing:-.028em;text-wrap:balance}
+.intro p{margin:0 0 8px;color:var(--fg-2);max-width:640px}
+.small{font-size:13px;color:var(--fg-3)}
+
+/* ---------- Step 1: problems ---------- */
+.step-label{font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);margin:0 0 10px}
+.problems{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:0 0 8px;padding:0;list-style:none}
+.prob{width:100%;height:100%;text-align:left;background:var(--panel);border:1.5px solid var(--edge);border-radius:16px;padding:16px 16px 15px;cursor:pointer;
+  box-shadow:var(--shadow);transition:border-color .12s,transform .12s,background .12s;display:flex;flex-direction:column;gap:4px}
+.prob:hover{border-color:var(--accent-edge);transform:translateY(-1px)}
+.prob b{font-size:16px;font-weight:650;letter-spacing:-.01em;line-height:1.3}
+.prob span{font-size:13.5px;color:var(--fg-2);line-height:1.4}
+.prob[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg)}
+.problems.chosen .prob[aria-pressed="false"]{opacity:.55}
+.problems.chosen .prob[aria-pressed="false"]:hover{opacity:1}
+
+/* ---------- Thread ---------- */
+#flow{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--panel);border:1px solid var(--edge);border-radius:18px;box-shadow:var(--shadow);padding:20px 20px 18px}
+.enter{animation:enter .28s ease-out}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.q h2{font-size:19px;line-height:1.3;letter-spacing:-.015em;margin:0 0 6px;outline:none;text-wrap:pretty}
+.q .help{margin:0 0 14px;color:var(--fg-2);font-size:14.5px}
+.q .help b{color:var(--fg)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--panel-2);border:1.5px solid var(--edge);border-radius:12px;padding:12px 14px;cursor:pointer;transition:border-color .1s,background .1s}
+.opt:hover{border-color:var(--accent-edge)}
+.opt .t{flex:1;font-weight:560;font-size:15.5px;line-height:1.35}
+.opt .t small{display:block;font-weight:400;font-size:13px;color:var(--fg-3);margin-top:1px}
+.opt .tick{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--fg-3);flex:0 0 auto;display:grid;place-items:center}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg)}
+.opt[aria-pressed="true"] .tick{background:var(--accent);border-color:var(--accent)}
+.opt[aria-pressed="true"] .tick::after{content:"";width:9px;height:5px;border:2px solid #fff;border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px;color:var(--fg-2)}
+.inp{display:flex;align-items:center;border:1.5px solid var(--edge);background:var(--panel-2);border-radius:12px;padding:0 12px}
+.inp:focus-within{border-color:var(--accent)}
+.inp span{color:var(--fg-3);font-weight:600}
+.inp input{width:100%;border:0;outline:0;background:transparent;padding:11px 4px;font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;min-width:0}
+.primary{border:0;background:var(--accent);color:#fff;font-weight:620;font-size:15px;padding:11px 18px;border-radius:12px;cursor:pointer}
+.primary:hover{filter:brightness(1.07)}
+.primary:disabled{opacity:.4;cursor:default;filter:none}
+.ghost{border:1px solid var(--edge);background:transparent;color:var(--fg-2);font-weight:560;font-size:13.5px;padding:7px 12px;border-radius:10px;cursor:pointer}
+.ghost:hover{border-color:var(--fg-3);color:var(--fg)}
+.err{color:var(--fix);font-size:14px;margin:0 0 10px}
+
+.done{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;background:transparent;border:1px solid var(--edge);border-radius:14px}
+.done .qq{flex:1;min-width:0;font-size:14px;color:var(--fg-3);line-height:1.4}
+.done .qq b{display:block;color:var(--fg);font-size:15px;font-weight:600;margin-top:2px}
+.done .ghost{padding:5px 10px;font-size:13px}
+
+/* ---------- Insight cards & visuals ---------- */
+.insight{border-width:1.5px}
+.verdict{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+.verdict i{font-style:normal;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:12px;color:#fff}
+.v-fix{color:var(--fix)} .v-fix i{background:var(--fix)}
+.v-chk{color:var(--chk)} .v-chk i{background:var(--chk)}
+.v-ok{color:var(--ok)} .v-ok i{background:var(--ok)}
+:root[data-theme="dark"] .verdict i{color:#111}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verdict i{color:#111}}
+.insight h2{font-size:21px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+.insight p{margin:0 0 10px;color:var(--fg-2)}
+.insight p b{color:var(--fg)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.stat{background:var(--panel-2);border:1px solid var(--edge);border-radius:12px;padding:10px 12px}
+.stat b{display:block;font-size:24px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat span{display:block;font-size:12.5px;color:var(--fg-3);line-height:1.3;margin-top:2px}
+
+.kid{margin-top:16px;border-top:1px dashed var(--edge);padding-top:16px}
+.kid-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin:0 0 6px}
+.kid-h .badge{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border-radius:999px;padding:2px 8px}
+.kid .story{font-size:15.5px;color:var(--fg);line-height:1.55}
+.slider{margin:14px 0 6px}
+.slider label{display:flex;justify-content:space-between;gap:8px;font-size:14px;color:var(--fg-2);margin-bottom:6px;flex-wrap:wrap}
+.slider label b{color:var(--fg);font-variant-numeric:tabular-nums}
+.slider input{width:100%;accent-color:var(--accent)}
+.slider .mine{background:none;border:0;padding:0;color:var(--accent);cursor:pointer;font-size:13.5px;text-decoration:underline}
+.sub-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;font-weight:650;color:var(--fg-2);margin:16px 0 8px;flex-wrap:wrap}
+.legend{display:flex;gap:14px;font-size:12.5px;color:var(--fg-3);font-weight:500}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.dots{display:flex;flex-wrap:wrap;gap:4px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--miss)}
+.dot.hit{background:var(--gold);box-shadow:0 0 0 2px var(--panel),0 0 0 3.5px var(--gold)}
+.more{font-size:12.5px;color:var(--fg-3);align-self:center;margin-left:4px}
+.waffle{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;max-width:420px}
+.waffle i{aspect-ratio:1;border-radius:3px;background:var(--miss)}
+.waffle i.hit{background:var(--gold)}
+.cap{font-size:14.5px;margin:10px 0 0;color:var(--fg-2)}
+.cap b{color:var(--fg)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:130px;padding-top:18px;border-bottom:1px solid var(--edge)}
+.bar{flex:1;position:relative;background:var(--gold);border-radius:4px 4px 0 0;min-height:2px}
+.bar.zero{background:var(--miss)}
+.bar span{position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:11.5px;color:var(--fg-2);font-variant-numeric:tabular-nums}
+.bar-x{display:flex;gap:6px;font-size:11px;color:var(--fg-3);margin-top:4px}
+.bar-x span{flex:1;text-align:center}
+
+/* ---------- Diagnosis ---------- */
+.diag h2{font-size:24px;margin:0 0 4px;letter-spacing:-.02em}
+.diag > p{margin:0 0 16px;color:var(--fg-2)}
+.finding{border:1px solid var(--edge);border-left-width:4px;border-radius:12px;padding:14px 16px;margin-bottom:10px;background:var(--panel)}
+.finding.fix{border-left-color:var(--fix)} .finding.chk{border-left-color:var(--chk)} .finding.ok{border-left-color:var(--ok)}
+.finding h3{font-size:16.5px;margin:0 0 6px;line-height:1.35}
+.finding p{margin:0 0 8px;font-size:15px;color:var(--fg-2)}
+.finding .plain{background:var(--accent-bg);border-radius:10px;padding:8px 12px;color:var(--fg);font-size:14.5px}
+.finding .plain b{color:var(--accent);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-right:4px}
+.finding ol{margin:4px 0 0;padding-left:20px;font-size:15px}
+.finding li{margin-bottom:4px}
+.diag-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+
+/* ---------- Explainer ---------- */
+.prose{margin:64px 0 0}
+.prose h2{font-size:22px;letter-spacing:-.015em;margin:40px 0 10px;text-wrap:balance}
+.prose ul,.prose ol{padding-left:20px}
+.prose li{margin-bottom:6px}
+.prose table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0;font-variant-numeric:tabular-nums}
+.prose caption{text-align:left;font-size:13px;color:var(--fg-3);margin-bottom:6px}
+.prose th,.prose td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--edge);vertical-align:top}
+.prose thead th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3)}
+.prose code{font-size:.92em;background:var(--panel);border:1px solid var(--edge);border-radius:6px;padding:1px 5px}
+.tbl{overflow-x:auto}
+.faq h3{font-size:16.5px;margin:22px 0 6px}
+footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--edge);padding-top:16px}
+
+@media (max-width:520px){
+  .card{padding:16px 14px 14px;border-radius:16px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat b{font-size:20px}
+  .waffle{gap:2px}
+  .dot{width:12px;height:12px}
+}
+@media (prefers-reduced-motion:reduce){.enter{animation:none}.prob{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumbs">
+  <a href="../">&larr; All tools</a>
+  <button type="button" class="icon-btn" id="btnTheme" title="Toggle light / dark" aria-label="Toggle light or dark theme">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+  </button>
+</nav>
+
+<header class="intro">
+  <h1>Why isn’t my Google Ads campaign working?</h1>
+  <p>PPC Troubleshooter is a step-by-step diagnosis tool for Google Ads campaigns that aren’t working. Pick what’s going wrong, answer a few questions, and it tells you whether you’re looking at bad luck, a budget too small for your clicks, or something you need to fix.</p>
+  <p class="small">Runs entirely in your browser. Nothing you type is sent anywhere. · By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>
+</header>
+
+<section aria-labelledby="pick">
+  <p class="step-label" id="pick">What’s going wrong?</p>
+  <ul class="problems" id="problems">
+    <li><button type="button" class="prob" data-flow="noconv" aria-pressed="false"><b>I spent money and got zero leads</b><span>Clicks are coming in, conversions aren’t.</span></button></li>
+    <li><button type="button" class="prob" data-flow="pricey" aria-pressed="false"><b>A few expensive clicks ate my budget</b><span>Two or three clicks and the money’s gone.</span></button></li>
+    <li><button type="button" class="prob" data-flow="tanked" aria-pressed="false"><b>It worked at first, then stopped</b><span>Good first weeks, then leads dried up.</span></button></li>
+    <li><button type="button" class="prob" data-flow="cpcup" aria-pressed="false"><b>My cost per click keeps climbing</b><span>Same keywords, higher prices.</span></button></li>
+    <li><button type="button" class="prob" data-flow="nospend" aria-pressed="false"><b>My ads barely show or spend</b><span>Few impressions, budget left unused.</span></button></li>
+  </ul>
+</section>
+
+<div id="flow" aria-live="polite"></div>
+
+<main class="prose">
+  <h2>What PPC Troubleshooter does</h2>
+  <p>PPC Troubleshooter diagnoses five common Google Ads problems: spending money with zero conversions, a budget used up by a few expensive clicks, results that dropped after a good start, a rising cost per click, and ads that barely spend. For each problem, PPC Troubleshooter asks follow-up questions one at a time, then lists the likely causes in three groups: <b>Fix first</b>, <b>Check</b> and <b>Good news</b>. Each cause comes with the steps to take. Where your numbers matter, PPC Troubleshooter runs the math and shows it as a picture so you can tell bad luck from a real problem.</p>
+
+  <h2>Why did my Google Ads campaign spend money and get zero conversions?</h2>
+  <p>With only a few dozen clicks, zero conversions is often bad luck rather than a broken campaign. If 5 out of every 100 visitors become leads, each click has a 95% chance of not converting. The chance that every one of 20 clicks misses is 0.95<sup>20</sup>, or about 36%. So more than a third of perfectly healthy campaigns get zero leads from their first 20 clicks.</p>
+  <p>PPC Troubleshooter uses the formula <code>chance of zero = (1 − conversion rate)<sup>clicks</sup></code>. It calls the result normal bad luck when that chance is 25% or more, unlucky when it is between 5% and 25%, and not luck when it is under 5%. At a 5% conversion rate, the tipping point is 59 clicks: past that, zero conversions happens less than 5% of the time, so something is broken. Common causes are conversion tracking that isn’t recording, irrelevant search terms, and a landing page that doesn’t ask for the lead.</p>
+
+  <h2>Why does my budget only buy a few expensive clicks?</h2>
+  <p>In expensive industries such as legal, insurance and finance, the top ad for a valuable keyword can cost $50 to $100 or more per click. A small budget then buys only one or two clicks, and one or two clicks rarely produce a lead. Your expected cost per lead is your cost per click divided by your conversion rate.</p>
+  <p>Worked example: a law firm pays $55 a click and has $100 to spend. $100 buys 1 click. At 5 leads per 100 clicks, that one click has a 5% chance of becoming a lead, so 95 out of 100 firms in this spot would get nothing. One lead costs about $55 ÷ 0.05 = $1,100. Getting at least one lead in 90% of months takes 45 clicks, or $2,475 a month. Giving Smart Bidding room to work takes a daily budget of at least 3× the cost per lead, about $3,300 a day or $100,320 a month (daily × 30.4).</p>
+  <div class="tbl"><table>
+    <caption>Budget tiers PPC Troubleshooter calculates</caption>
+    <thead><tr><th>Tier</th><th>Formula</th><th>$55 CPC, 5% conversion rate</th></tr></thead>
+    <tbody>
+      <tr><td>Expected cost per lead</td><td>CPC ÷ conversion rate</td><td>$1,100</td></tr>
+      <tr><td>A lead in most months (90% chance)</td><td>CPC × ⌈ln 0.1 ÷ ln(1 − rate)⌉ clicks</td><td>$2,475 a month</td></tr>
+      <tr><td>Enough for Smart Bidding</td><td>3 × cost per lead a day × 30.4</td><td>$100,320 a month</td></tr>
+    </tbody>
+  </table></div>
+  <p>If neither tier is affordable, PPC Troubleshooter recommends shrinking the campaign to fit: exact match on a handful of high-intent keywords, a smaller area, a max CPC limit, and pay-per-lead options such as Google Local Services Ads where your business type qualifies.</p>
+
+  <h2>Why did my campaign work at first and then stop?</h2>
+  <p>A drop after a good start has three usual causes: the good start was partly luck, a change restarted the learning period, or a website change broke the tracking or the form. PPC Troubleshooter tests the first cause with your numbers. It asks how many leads came in during the good stretch and since, and over how many days. If the lead rate had stayed the same, the later period’s share of all leads would follow a binomial distribution. PPC Troubleshooter reports the chance of a drop at least as big as yours. At 10% or more it calls the drop likely luck; from 2% to 10%, probably real; under 2%, real.</p>
+  <p>Worked example: 4 leads in the first 7 days, then 3 leads in the next 14 days. The weekly rate fell from 4 to 1.5, yet with the same underlying rate a split this lopsided or worse happens about 17% of the time. That drop could easily be luck, and the right move is to change nothing for two more weeks.</p>
+
+  <h2>Why is my Google Ads cost per click going up?</h2>
+  <p>Cost per click usually rises because of the bid strategy, not the market. Target impression share pays whatever it takes to reach the top of the page. Maximize conversions without a target CPA bids more as the budget grows. Broad match and AI Max reach into vaguer, pricier searches. New competitors in Auction insights and falling Quality Scores also raise prices. A higher cost per click is not a problem if cost per lead holds at or under target.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <h3>How many clicks before I know a Google Ads campaign isn’t working?</h3>
+    <p>Divide 3 by your expected conversion rate. At 5 conversions per 100 clicks, that is about 60 clicks. A campaign that works would get zero conversions from 59 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck.</p>
+    <h3>How much budget do I need for Google Ads lead generation?</h3>
+    <p>Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At a $55 cost per click and 5 conversions per 100 clicks, one lead costs about $1,100, so that is about $3,300 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy.</p>
+    <h3>Why did my Google Ads campaign work at first and then stop?</h3>
+    <p>Usually one of three things. The good start was partly luck and later weeks fell back to normal. A change such as a new bid strategy, a new target or a large budget change restarted the learning period. Or a website change broke the conversion tracking or the form. With fewer than about 30 conversions in total, a drop by half can easily be luck.</p>
+    <h3>Is a high cost per click a problem in Google Ads?</h3>
+    <p>Not by itself. Cost per click is the price of one visitor; cost per lead is the price of a customer. If cost per click rises but cost per lead stays at or under your target, the campaign is fine. If both rise, check the bid strategy first, especially Target impression share, then broad match, competitors in Auction insights and Quality Score.</p>
+  </div>
+  <p>Related: set a campaign up right with the <a href="../search-checklist/">Lead Gen Search Campaign Checklist</a>, find wasted spend with the <a href="../negative-keywords/">Negative Keyword Finder</a>, and sort keywords by profit with <a href="../keyword-triage/">Keyword Triage</a>.</p>
+</main>
+
+<footer>
+  <span>Static page. No uploads, no tracking, no dependencies, no network requests.</span>
+  <span>Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a></span>
+</footer>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- number helpers ---------- */
+function usd(n){
+  if(!isFinite(n)) return '—';
+  if(n>=100) return '$'+Math.round(n).toLocaleString('en-US');
+  const r=Math.round(n*100)/100;
+  return '$'+r.toLocaleString('en-US',{minimumFractionDigits:r%1?2:0,maximumFractionDigits:2});
+}
+function pct(x){
+  if(x<=0) return '0%'; if(x>=1) return '100%';
+  if(x<0.01) return 'under 1%'; if(x>0.99) return 'over 99%';
+  return Math.round(x*100)+'%';
+}
+const num=n=>Math.round(n).toLocaleString('en-US');
+function dec(n){ return n>=10?num(n):n>=1||n===0?(Math.round(n*10)/10).toLocaleString('en-US'):(Math.round(n*100)/100).toLocaleString('en-US'); }
+const plural=(n,one,many)=>n===1?one:(many||one+'s');
+const pZero=(n,p)=>Math.pow(1-p,n);
+const clicksFor=(chanceOfZero,p)=>Math.ceil(Math.log(chanceOfZero)/Math.log(1-p)); // clicks until P(0) < chanceOfZero
+function binomCdf(k,n,q){ // P(X <= k), X ~ Binomial(n, q)
+  if(k>=n) return 1; if(q<=0) return 1; if(q>=1) return 0;
+  let lp=n*Math.log(1-q), s=Math.exp(lp);
+  const r=Math.log(q/(1-q));
+  for(let i=0;i<k;i++){ lp+=Math.log((n-i)/(i+1))+r; s+=Math.exp(lp); }
+  return Math.min(1,s);
+}
+function poisson(l){
+  if(l>30){ let u=0,v=0; while(!u)u=Math.random(); while(!v)v=Math.random();
+    return Math.max(0,Math.round(l+Math.sqrt(l)*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v))); }
+  const L=Math.exp(-l); let k=0,p=1; do{k++;p*=Math.random();}while(p>L); return k-1;
+}
+const rateOf=a=>parseFloat(a.rate);
+const SB_MONTH=3*30.4; // Smart Bidding budget: daily budget of 3× cost per lead, same rule as the checklist
+const inHundred=p=>Math.round(p*100);
+
+/* ---------- shared questions ---------- */
+const RATE={id:'rate',type:'choice',
+  q:'Out of every 100 people who click your ad, how many do you think will call or fill out your form?',
+  help:'That’s your conversion rate. Most lead gen pages land somewhere from 2 to 10 out of 100. Not sure? Pick the middle one.',
+  options:[{v:'0.02',label:'About 2',sub:'Tough market, or the page is just OK'},{v:'0.05',label:'About 5',sub:'Typical'},{v:'0.1',label:'About 10',sub:'Strong page, urgent need (like a locksmith)'}]};
+const TRACK={id:'track',type:'choice',
+  q:'Have you tested your conversion tracking yourself?',
+  help:'Fill out your own form (or call your tracked number and stay on for a minute). Within a day it should show up under <b>Goals → Conversions → Summary</b>.',
+  options:[{v:'yes',label:'Yes, my test showed up'},{v:'no',label:'I tested, and it didn’t show up'},{v:'unsure',label:'I haven’t tested it'}]};
+const BID={id:'bid',type:'choice',q:'Which bid strategy is the campaign using?',
+  help:'It’s in the Bid strategy column of the Campaigns table.',
+  options:[{v:'maxclicks',label:'Maximize clicks'},{v:'maxconv',label:'Maximize conversions',sub:'With no target CPA'},{v:'tcpa',label:'Maximize conversions with a target CPA'},{v:'tis',label:'Target impression share'},{v:'manual',label:'Manual CPC'},{v:'unsure',label:'Not sure'}]};
+const TERMS={id:'terms',type:'choice',q:'Open Insights and reports → Search terms. What do most of them look like?',
+  help:'These are the actual searches people typed before clicking your ad, not your keywords.',
+  options:[{v:'good',label:'Things a real customer would type'},{v:'junk',label:'Lots of unrelated searches',sub:'Jobs, free, DIY, how-to, other cities, other businesses'},{v:'notlooked',label:'I haven’t looked'}]};
+const AUCTION={id:'auction',type:'choice',q:'In Insights and reports → Auction insights, has a new competitor shown up, or has overlap gone up?',
+  options:[{v:'yes',label:'Yes'},{v:'no',label:'No, it looks the same'},{v:'notlooked',label:'I haven’t looked'}]};
+
+/* ---------- finding builders ---------- */
+const F=(level,title,why,actions,plain)=>({level,title,why,actions:actions||[],plain});
+const negLink='<a href="../negative-keywords/">Negative Keyword Finder</a>';
+const checklistLink='<a href="../search-checklist/">Lead Gen Search Campaign Checklist</a>';
+
+function trackingFinding(a){
+  if(a.track==='no') return F('fix','Your tracking is broken, so leads may be happening without being counted',
+    'Your own test didn’t show up in Google Ads. Until it does, every number in the account is wrong, and Smart Bidding is optimizing toward nothing.',
+    ['Check your inbox, phone log or CRM for leads during the campaign’s dates. If there are leads there, the campaign works and only the tracking is broken.',
+     'Under Goals → Conversions → Summary, check the lead action’s status and make sure it’s set to <b>Primary</b>.',
+     'Use Google Tag Assistant on your thank-you page to see whether the conversion tag fires.',
+     'Fix tracking before you change anything else.'],
+    'It’s like a scoreboard that’s unplugged. The team might be scoring, but the board says zero.');
+  if(a.track==='unsure') return F('fix','Test your conversion tracking before anything else',
+    'Broken tracking is the most common reason a campaign shows zero conversions. It takes five minutes to rule out.',
+    ['Submit your own form, or call your tracked number and stay on for at least a minute.',
+     'Within 24 hours, check Goals → Conversions → Summary for the test conversion.',
+     'Also check your inbox, phone log or CRM for real leads during the campaign’s dates.']);
+  return null;
+}
+function termsFinding(a){
+  if(a.terms==='junk') return F('fix','You’re paying for the wrong searches',
+    'Your ads are showing for searches that were never going to become customers. Every one of those clicks is money that couldn’t convert.',
+    ['Add the bad searches as negative keywords. The '+negLink+' finds them for you.',
+     'Switch broad match keywords to phrase or exact match.',
+     'Add a shared negative list for jobs, careers, salary, free, DIY, how to and course.']);
+  if(a.terms==='notlooked') return F('chk','Look at your search terms',
+    'The Search terms report shows what people actually typed. It’s where most wasted spend hides.',
+    ['Open Insights and reports → Search terms for the whole date range.',
+     'Add anything a customer wouldn’t type as a negative keyword. The '+negLink+' can sort a downloaded report for you.']);
+  return null;
+}
+
+/* ---------- visuals ---------- */
+function gumball({spend,cpc,p,label}){
+  const el=document.createElement('div'); el.className='kid';
+  const base=Math.max(1,Math.floor(spend/cpc));
+  const max=Math.min(5000,Math.max(base*4,clicksFor(0.02,p),10));
+  el.innerHTML=`<div class="kid-h"><span class="badge">Explain it like I’m 10</span></div>
+    <p class="story"></p>
+    <div class="slider"><label><span>What if ${esc(label)} was <b class="amt"></b>?</span><button type="button" class="mine">Back to mine</button></label>
+      <input type="range" min="1" max="${max}" step="1" value="${base}" aria-label="Spend, in clicks"></div>
+    <div class="stats"><div class="stat"><b class="s-clicks"></b><span>gumballs (clicks) you can buy</span></div>
+      <div class="stat"><b class="s-exp"></b><span>gold ones (leads) you’d expect</span></div>
+      <div class="stat"><b class="s-any"></b><span>chance of getting at least one</span></div></div>
+    <div class="sub-h"><span>One try: every dot is a click you paid for</span><button type="button" class="ghost again">Spend it again</button></div>
+    <div class="dots" role="img"></div>
+    <div class="sub-h"><span class="w-h"></span><span class="legend"><span><i style="background:var(--gold)"></i>Got a lead</span><span><i style="background:var(--miss)"></i>Got zero</span></span></div>
+    <div class="waffle" role="img"></div>
+    <p class="cap"></p>`;
+  const r=el.querySelector('input'), q=s=>el.querySelector(s);
+  function draw(rollOnly){
+    const n=+r.value, amt=n===base?spend:n*cpc, p0=pZero(n,p), one=Math.round(1/p);
+    q('.amt').textContent=usd(amt); q('.mine').hidden=(n===base);
+    if(!rollOnly){
+      let end;
+      if(p0>0.5) end='So most of the time you walk away with no gold one. The machine isn’t broken. You just didn’t get enough tries.';
+      else if(p0>0.1) end='You’ll usually get a gold one, but not every time. Some people still walk away with zero, just from bad luck.';
+      else end='With this many tries, almost everyone gets at least one gold gumball. If you got none, something other than luck is going on.';
+      q('.story').innerHTML=`Picture a gumball machine. Each gumball costs <b>${usd(cpc)}</b>: that’s one click. About <b>1 in ${one}</b> gumballs is gold: that’s someone who calls you. With <b>${usd(amt)}</b> you can buy <b>${num(n)} ${plural(n,'gumball')}</b>. ${end}`;
+      q('.s-clicks').textContent=num(n); q('.s-exp').textContent=dec(n*p); q('.s-any').textContent=pct(1-p0);
+      const zero=Math.round(p0*100);
+      q('.waffle').innerHTML=Array.from({length:100},(_,i)=>`<i class="${i<100-zero?'hit':''}"></i>`).join('');
+      q('.waffle').setAttribute('aria-label',`${100-zero} of 100 squares gold, ${zero} gray`);
+      q('.w-h').textContent=`If 100 people each spent exactly ${usd(amt)}`;
+      q('.cap').innerHTML=zero===0?`Almost all 100 would get at least one lead (fewer than 1 in 100 gets zero).`
+        :`<b>${zero}</b> of them would get <b>zero leads</b>. <b>${100-zero}</b> would get at least one. Same ads, same page, different luck.`;
+    }
+    const shown=Math.min(n,300); let hits=0, html='';
+    for(let i=0;i<shown;i++){ const h=Math.random()<p; if(h)hits++; html+=`<i class="dot${h?' hit':''}"></i>`; }
+    if(n>shown) html+=`<span class="more">+${num(n-shown)} more</span>`;
+    q('.dots').innerHTML=html;
+    q('.dots').setAttribute('aria-label',`${shown} clicks, ${hits} became ${plural(hits,'lead')}`);
+  }
+  r.addEventListener('input',()=>draw());
+  q('.again').addEventListener('click',()=>draw(true));
+  q('.mine').addEventListener('click',()=>{r.value=base;draw();});
+  draw(); return el;
+}
+
+function weeksViz(perDay){
+  const el=document.createElement('div'); el.className='kid';
+  el.innerHTML=`<div class="kid-h"><span class="badge">Explain it like I’m 10</span></div>
+    <p class="story">Flip a coin 10 times and you might get 7 heads. Flip it 10 more and you might get 3. The coin didn’t change; that’s just how luck works with small numbers. Below is <b>one campaign that never changes</b>, getting the average number of leads yours got (about <b>${dec(perDay*7)} a week</b>). Watch how much the weeks jump around anyway.</p>
+    <div class="sub-h"><span>12 weeks, same campaign, nothing changed</span><button type="button" class="ghost again">Run 12 more weeks</button></div>
+    <div class="bars" role="img"></div><div class="bar-x">${Array.from({length:12},(_,i)=>`<span>W${i+1}</span>`).join('')}</div>`;
+  function draw(){
+    const w=Array.from({length:12},()=>poisson(perDay*7)), m=Math.max(1,...w);
+    const b=el.querySelector('.bars');
+    b.innerHTML=w.map((v,i)=>`<div class="bar${v?'':' zero'}" style="height:${Math.max(2,v/m*100)}%" title="Week ${i+1}: ${v} ${plural(v,'lead')}"><span>${v}</span></div>`).join('');
+    b.setAttribute('aria-label','Leads per week: '+w.join(', '));
+  }
+  el.querySelector('.again').addEventListener('click',draw);
+  draw(); return el;
+}
+
+function insightCard(level,head,title,body){
+  const el=document.createElement('section'); el.className='card insight';
+  const mark={fix:'!',chk:'?',ok:'✓'}[level];
+  el.innerHTML=`<p class="verdict v-${level}"><i aria-hidden="true">${mark}</i>${esc(head)}</p><h2>${title}</h2>${body}`;
+  return el;
+}
+
+/* ---------- flows ---------- */
+const FLOWS={
+
+noconv:{name:'I spent money and got zero leads',steps:[
+  {id:'nums',type:'numbers',q:'How much has the campaign spent, and how many clicks has it had?',
+   help:'Both are columns in the Campaigns table. Set the date range to “since the campaign started.”',
+   fields:[{id:'spent',label:'Spent so far',pre:'$'},{id:'clicks',label:'Clicks so far',int:true}],
+   check:v=>v.spent>0&&v.clicks>=1?null:'Enter what you’ve spent and at least 1 click.',
+   summary:v=>`${usd(v.spent)} spent, ${num(v.clicks)} ${plural(v.clicks,'click')} (${usd(v.spent/v.clicks)} each)`},
+  RATE,
+  {id:'luck',type:'insight',render(a){
+    const n=a.nums.clicks, p=rateOf(a), cpc=a.nums.spent/n, p0=pZero(n,p), n05=clicksFor(0.05,p);
+    let lvl,head,title,body;
+    if(p0>=0.25){lvl='ok';head='Probably just bad luck';title=`Zero leads from ${num(n)} ${plural(n,'click')} is normal`;
+      body=`<p>Even if everything is set up right and ${inHundred(p)} in 100 visitors call you, a campaign gets zero leads from ${num(n)} ${plural(n,'click')} <b>${pct(p0)} of the time</b>. It’s too early to judge.</p><p>Wait until about <b>${num(n05)} clicks</b> (roughly ${usd(n05*cpc)} at your cost per click). Past that, zero leads would happen less than 5% of the time if things worked.</p>`;}
+    else if(p0>=0.05){lvl='chk';head='Unlucky, but possible';title=`Zero leads from ${num(n)} clicks is getting unlikely`;
+      body=`<p>A working campaign would get zero leads from ${num(n)} clicks only <b>${pct(p0)} of the time</b>. That can still happen, but it’s worth checking the basics in the next questions.</p><p>By about <b>${num(n05)} clicks</b> (roughly ${usd(n05*cpc)}) it would be under 5%.</p>`;}
+    else {lvl='fix';head='This isn’t bad luck';title=`Something is broken: ${num(n)} clicks should have brought leads`;
+      body=`<p>If ${inHundred(p)} in 100 visitors became leads, ${num(n)} clicks with zero leads would happen <b>${pct(p0)} of the time</b>. Something is stopping conversions: usually tracking, the wrong searches, or the page. The next questions narrow it down.</p>`;}
+    const c=insightCard(lvl,head,title,body+`<div class="stats"><div class="stat"><b>${usd(cpc)}</b><span>your cost per click</span></div><div class="stat"><b>${dec(n*p)}</b><span>leads expected by now</span></div><div class="stat"><b>${usd(cpc/p)}</b><span>expected cost per lead</span></div></div>`);
+    c.append(gumball({spend:a.nums.spent,cpc,p,label:'your spend'})); return c;}},
+  TRACK, TERMS, BID,
+  {id:'lp',type:'choice',q:'Where do your ads send people?',
+   options:[{v:'home',label:'My homepage'},{v:'page',label:'A page about that exact service',sub:'With the form or phone number near the top'}]},
+  {id:'settings',type:'choice',q:'Have you turned off Display Network and Search Partners, and set location targeting to “Presence”?',
+   help:'All three are in Campaign settings. The defaults send your ads to banner sites, partner sites and people outside your area.',
+   options:[{v:'yes',label:'Yes, all three'},{v:'no',label:'No, or not sure'}]},
+ ],
+ diagnose(a){
+  const out=[], n=a.nums.clicks, p=rateOf(a), cpc=a.nums.spent/n, p0=pZero(n,p), n05=clicksFor(0.05,p);
+  const t=trackingFinding(a); if(t) out.push(t);
+  if(p0>=0.25) out.push(F('ok','You probably haven’t had enough clicks to judge',
+    `A healthy campaign gets zero leads from ${num(n)} ${plural(n,'click')} ${pct(p0)} of the time at ${inHundred(p)} conversions per 100 clicks.`,
+    ['Don’t pause or rebuild yet. Big changes restart Google’s learning and you’d be judging luck all over again.',
+     `Keep it running until about ${num(n05)} clicks (≈ ${usd(n05*cpc)}). If there are still zero leads then, it isn’t luck.`],
+    `You bought ${num(n)} ${plural(n,'lottery ticket')} where about 1 in ${Math.round(1/p)} wins. Losing isn’t proof the lottery is rigged.`));
+  else if(p0>=0.05) out.push(F('chk','Unlucky so far, but close to the line',
+    `Zero leads from ${num(n)} clicks happens ${pct(p0)} of the time when nothing is wrong.`,
+    ['Work through the other items here first.',`Give it until about ${num(n05)} clicks before you call it broken.`]));
+  else out.push(F('fix','It’s not luck: something is blocking conversions',
+    `At ${inHundred(p)} conversions per 100 clicks you’d expect about ${dec(n*p)} leads by now, and zero happens only ${pct(p0)} of the time.`,
+    ['Start with tracking, then search terms, then the landing page.']));
+  const s=termsFinding(a); if(s) out.push(s);
+  if(a.bid==='maxclicks') out.push(F('chk','Maximize clicks buys clicks, not customers',
+    'It goes for the most clicks per dollar, which are often the least likely to call.',
+    ['Once tracking is confirmed, switch to Maximize conversions.','Until then, set a max CPC bid limit so a single click can’t eat the day.']));
+  if(a.bid==='tcpa') out.push(F('chk','A target CPA without conversion history makes Google guess',
+    'Target CPA works by learning from past conversions. With none, it has nothing to learn from.',
+    ['Remove the target and run Maximize conversions until you have about 30 conversions.','Then add a target equal to your actual cost per lead.']));
+  if(a.lp==='home') out.push(F('chk','Send clicks to a page about that exact service',
+    'A homepage makes the visitor hunt for what they searched for. Many leave instead.',
+    ['Point each ad group at the page for that service.','Put the phone number and a short form near the top.','Submit the form yourself and check that the conversion records.']));
+  if(a.settings==='no') out.push(F('chk','Check the three settings that leak budget',
+    'Display Network, Search Partners and “Presence or interest” location targeting are on by default and send ads to people unlikely to become customers.',
+    ['Turn off Display Network and Search Partners in Campaign settings.','Under Locations → Location options, choose “Presence: people in or regularly in your included locations.”','The '+checklistLink+' covers the rest.']));
+  return out;
+ }},
+
+pricey:{name:'A few expensive clicks ate my budget',steps:[
+  {id:'nums',type:'numbers',q:'What’s your monthly budget, and what are you paying per click?',
+   help:'Avg. CPC is a column in the Campaigns table. If you’ve only had a click or two, use Keyword Planner’s <b>Top of page bid (high range)</b> for your main keywords instead.',
+   fields:[{id:'budget',label:'Monthly budget',pre:'$'},{id:'cpc',label:'Cost per click',pre:'$'}],
+   check:v=>v.budget>0&&v.cpc>0?null:'Enter both numbers.',
+   summary:v=>`${usd(v.budget)} a month, ${usd(v.cpc)} a click`},
+  {id:'ind',type:'choice',q:'What kind of business is it?',
+   options:[{v:'legal',label:'Legal'},{v:'fin',label:'Insurance, finance or loans'},{v:'home',label:'Home services',sub:'Plumbing, HVAC, roofing, pest control…'},{v:'health',label:'Health, dental or medical'},{v:'b2b',label:'B2B or software'},{v:'other',label:'Something else'}]},
+  RATE,
+  {id:'math',type:'insight',render(a){
+    const {budget,cpc}=a.nums, p=rateOf(a), clicks=Math.floor(budget/cpc), cpa=cpc/p, leads=clicks*p, p0=pZero(clicks,p);
+    let lvl,head,title,body;
+    if(clicks<1){lvl='fix';head='Budget smaller than one click';title=`${usd(budget)} a month can’t buy even one ${usd(cpc)} click`;
+      body=`<p>Google may still spend it on one click (it can go up to twice the daily budget on a given day), but you can’t expect leads from a budget this size at this price.</p>`;}
+    else if(leads<1){lvl='fix';head='The math is the problem';title=`Your budget buys ${num(clicks)} ${plural(clicks,'click')} a month. One lead costs about ${usd(cpa)}.`;
+      body=`<p>At ${usd(cpc)} a click and ${inHundred(p)} leads per 100 clicks, each lead costs about <b>${usd(cpa)}</b>. Your budget is ${usd(budget)}, so you’ll get <b>zero leads in ${pct(p0)} of months</b>. Nothing is broken; the budget is just smaller than the price of a lead.</p>`;}
+    else if(budget<cpa*SB_MONTH){lvl='chk';head='Enough for some leads, not for Smart Bidding';title=`About ${dec(leads)} leads a month, and some months zero`;
+      body=`<p>Each lead costs about <b>${usd(cpa)}</b>. Your ${usd(budget)} buys about ${num(clicks)} clicks and ${dec(leads)} leads a month. Results will swing from month to month, and Smart Bidding is held back until the daily budget reaches about 3× the cost per lead (${usd(cpa*3)}).</p>`;}
+    else {lvl='ok';head='Budget fits your click price';title=`About ${dec(leads)} leads a month at ${usd(cpa)} each`;
+      body=`<p>Your daily budget is at least 3× your cost per lead, so Smart Bidding has room to work. If a few expensive clicks still eat it, look at bid strategy and match types next.</p>`;}
+    const c=insightCard(lvl,head,title,body+`<div class="stats"><div class="stat"><b>${num(clicks)}</b><span>clicks a month</span></div><div class="stat"><b>${usd(cpa)}</b><span>expected cost per lead</span></div><div class="stat"><b>${usd(cpa*SB_MONTH)}</b><span>a month so Smart Bidding isn’t held back (3× cost per lead a day)</span></div></div>`);
+    c.append(gumball({spend:budget,cpc,p,label:'your monthly budget'})); return c;}},
+  BID,
+  {id:'match',type:'choice',q:'What match types are your keywords?',help:'Broad match has no punctuation. Phrase match has "quotes"; exact match has [brackets].',
+   options:[{v:'broad',label:'Mostly broad'},{v:'tight',label:'Phrase or exact'},{v:'unsure',label:'Not sure'}]},
+  {id:'raise',type:'choice',when:a=>{if(!a.nums||!a.rate)return true;const p=rateOf(a);return a.nums.budget<a.nums.cpc/p*SB_MONTH;},
+   q:'Could you afford either of these each month?',
+   help:'Both use your cost per click and conversion rate.',
+   options:a=>{const p=rateOf(a),cpc=a.nums.cpc,lo=clicksFor(0.1,p)*cpc,hi=cpc/p*SB_MONTH,o=[];
+     if(a.nums.budget<lo) o.push({v:'low',label:usd(lo)+' a month',sub:'A lead in about 9 of 10 months'});
+     o.push({v:'high',label:usd(hi)+' a month',sub:'A daily budget of 3× your cost per lead, so Smart Bidding isn’t held back'});
+     o.push({v:'no',label:'Neither, I need to make my budget work'}); return o;}},
+ ],
+ diagnose(a){
+  const out=[], {budget,cpc}=a.nums, p=rateOf(a), cpa=cpc/p, clicks=Math.floor(budget/cpc), lo=clicksFor(0.1,p)*cpc, hi=cpa*SB_MONTH;
+  if(clicks*p<1) out.push(F('fix','Your budget is smaller than the price of one lead',
+    `At ${usd(cpc)} a click and ${inHundred(p)} leads per 100 clicks, a lead costs about ${usd(cpa)}. ${usd(budget)} a month buys ${num(clicks)} ${plural(clicks,'click')}.`,[],
+    `It’s like trying to buy a ${usd(cpa)} bike with ${usd(budget)}. Sometimes you find one on sale, but usually you go home without a bike.`));
+  else if(budget<hi) out.push(F('chk','Expect a few lumpy months',
+    `${usd(budget)} buys about ${dec(clicks*p)} leads a month at ${usd(cpa)} each. Smart Bidding needs a daily budget of about 3× the cost per lead (${usd(cpa*3)} a day) to bid freely and learn.`,
+    ['Judge results over three months, not three weeks.','Keep everything in one campaign so the budget isn’t split.']));
+  if(a.raise==='high') out.push(F('ok',`Plan: ${usd(hi)} a month (${usd(cpa*3)} a day)`,
+    'A daily budget of 3× your cost per lead means one expensive lead or a few costly clicks can’t use up the day, so Smart Bidding can enter every auction it would win.',
+    [`Set the daily budget to ${usd(cpa*3)}.`,'Use Maximize conversions. Add a target CPA after about 30 conversions.','Raise the budget in steps of 20% or less so learning doesn’t restart.']));
+  if(a.raise==='low') out.push(F('chk',`Plan: ${usd(lo)} a month gets a lead most months`,
+    `That buys ${num(clicksFor(0.1,p))} clicks, enough that 9 months out of 10 bring at least one lead. It’s still too few conversions for Smart Bidding to learn quickly.`,
+    [`Set the daily budget to ${usd(lo/30.4)}.`,'Pair it with the small-budget tactics below so each click counts.']));
+  if(a.raise==='no'||a.raise==='low'||clicks*p<1&&!a.raise) out.push(F('fix','Make a small budget fit an expensive market',
+    'You can’t afford the broad, top-of-page auction, so shrink the campaign to the clicks most likely to turn into a customer.',
+    ['Run one campaign only. Splitting a small budget starves every piece.',
+     'Use exact match on 3 to 10 high-intent keywords, like “[service] near me” or “[service] [your city]”. Skip research terms like “how much does…”.',
+     `Use Manual CPC or Maximize clicks with a max CPC limit around ${usd(cpc*0.6)}. You’ll lose the top spot sometimes, and that’s fine.`,
+     'Shrink the area to where your best customers are, and run ads only when someone can answer the phone.',
+     'Try Microsoft Ads, where the same keywords often cost less.']));
+  if(a.ind==='legal'||a.ind==='fin') out.push(F('chk','You’re in one of the most expensive auctions on Google',
+    'Legal, insurance and finance clicks are expensive because one customer can be worth thousands. Big firms with big budgets set the price for the top spot.',
+    ['Check Keyword Planner’s “Top of page bid (high range)” to see what the top spot really costs.',
+     a.ind==='legal'?'Look at Google Local Services Ads. Many legal practice areas qualify, and you pay per lead instead of per click.':'Look at longer, more specific keywords that big advertisers ignore.',
+     'Build your Google Business Profile and reviews. Map results are free clicks.']));
+  if(a.ind==='home') out.push(F('chk','Try Google Local Services Ads',
+    'Most home services qualify for Local Services Ads, which charge per lead instead of per click and show above search ads.',
+    ['Apply at ads.google.com/local-services-ads and complete the background check.','Run it alongside a small exact-match Search campaign.']));
+  if((a.bid==='maxconv'||a.bid==='tcpa')&&budget<hi) out.push(F('chk','Smart Bidding reaches for the expensive clicks',
+    'Maximize conversions bids high on clicks it thinks will convert. With a small budget, two of those can use up the day, and it has too little data to bid well.',
+    [`Switch to Manual CPC or Maximize clicks with a max CPC limit until you have 15 to 30 conversions.`,'Then switch back to Maximize conversions.']));
+  if(a.bid==='maxclicks') out.push(F('chk','Set a max CPC bid limit',
+    'Without a limit, Maximize clicks can pay whatever a click costs.',
+    [`Under Bidding, set a maximum CPC bid limit, for example ${usd(cpc*0.6)}.`]));
+  if(a.bid==='tis') out.push(F('fix','Target impression share pays whatever it takes to be on top',
+    'It bids to show at the top, regardless of what a click costs or whether it converts.',
+    ['Switch to Manual CPC or Maximize clicks with a max CPC limit.']));
+  if(a.match==='broad') out.push(F('fix','Broad match is pulling in pricier, vaguer searches',
+    'Broad match lets Google show your ad for anything it decides is related, including expensive general terms.',
+    ['Switch to phrase or exact match.','Check Search terms and add negatives. The '+negLink+' helps.']));
+  return out;
+ }},
+
+tanked:{name:'It worked at first, then stopped',steps:[
+  {id:'nums',type:'numbers',q:'How many leads came in during the good stretch, and how many since?',
+   help:'Rough numbers are fine. Use the Conversions column with a custom date range for each period.',
+   fields:[{id:'l1',label:'Leads in the good stretch',int:true},{id:'d1',label:'Days it lasted',int:true},{id:'l2',label:'Leads since',int:true},{id:'d2',label:'Days since',int:true}],
+   check:v=>v.l1>=1&&v.d1>=1&&v.l2>=0&&v.d2>=1?null:'Enter at least 1 lead in the good stretch, and at least 1 day for each period.',
+   summary:v=>`${num(v.l1)} ${plural(v.l1,'lead')} in ${num(v.d1)} ${plural(v.d1,'day')}, then ${num(v.l2)} in ${num(v.d2)} ${plural(v.d2,'day')}`},
+  {id:'test',type:'insight',render(a){
+    const {l1,d1,l2,d2}=a.nums, w1=l1/d1*7, w2=l2/d2*7, L=l1+l2, pv=binomCdf(l2,L,d2/(d1+d2));
+    let lvl,head,title,body;
+    if(w2>=w1){lvl='ok';head='No real drop';title='Your lead rate didn’t actually fall';
+      body=`<p>Per week, you got ${dec(w1)} leads in the good stretch and ${dec(w2)} since. If it feels slower, it may be the cost per lead or lead quality that changed. Those are covered in the next questions.</p>`;}
+    else if(pv>=0.10){lvl='ok';head='Could easily be luck';title=`A drop this big happens ${pct(pv)} of the time with nothing wrong`;
+      body=`<p>You went from <b>${dec(w1)}</b> to <b>${dec(w2)}</b> leads a week. That feels like a crash, but with only ${num(L)} leads in total, a campaign that never changed would show a drop at least this big <b>${pct(pv)} of the time</b>. The good stretch was probably a bit lucky too.</p>`;}
+    else if(pv>=0.02){lvl='chk';head='Probably a real drop';title=`Only a ${pct(pv)} chance this is luck`;
+      body=`<p>You went from ${dec(w1)} to ${dec(w2)} leads a week. With ${num(L)} leads in total, luck alone would cause a drop this big just ${pct(pv)} of the time. Probably something changed. The next questions find it.</p>`;}
+    else {lvl='fix';head='A real drop';title='This isn’t luck. Something changed.';
+      body=`<p>You went from ${dec(w1)} to ${dec(w2)} leads a week. If nothing had changed, a drop this big would happen ${pct(pv)} of the time. The next questions find the cause.</p>`;}
+    const c=insightCard(lvl,head,title,body+`<div class="stats"><div class="stat"><b>${dec(w1)}</b><span>leads a week, good stretch</span></div><div class="stat"><b>${dec(w2)}</b><span>leads a week since</span></div><div class="stat"><b>${w2>=w1?'—':pct(pv)}</b><span>chance it’s just luck</span></div></div>`);
+    c.append(weeksViz(L/(d1+d2))); return c;}},
+  {id:'changes',type:'multi',q:'Did you change any of these right before it dropped?',help:'Pick all that apply.',
+   options:[{v:'bid',label:'Bid strategy or target CPA'},{v:'budget',label:'Budget, by more than 20%'},{v:'kw',label:'Added keywords or broad match'},{v:'ads',label:'Edited or replaced ads'},{v:'site',label:'Changed the website, form or phone number'},{v:'none',label:'Nothing',excl:true}]},
+  TRACK,
+  {id:'cpc',type:'choice',q:'Compared to the good stretch, what happened to your average cost per click?',
+   options:[{v:'up',label:'Went up a lot',sub:'25% or more'},{v:'same',label:'About the same'},{v:'down',label:'Went down'}]},
+  AUCTION, TERMS,
+  {id:'season',type:'choice',q:'Is this usually a slower time of year for your business?',
+   options:[{v:'yes',label:'Yes'},{v:'no',label:'No'},{v:'unsure',label:'Not sure'}]},
+ ],
+ diagnose(a){
+  const out=[], {l1,d1,l2,d2}=a.nums, w1=l1/d1*7, w2=l2/d2*7, L=l1+l2, pv=binomCdf(l2,L,d2/(d1+d2)), ch=a.changes||[];
+  if(ch.includes('site')) out.push(F('fix','Your website change may have broken the tracking or the form',
+    'Site updates often remove the conversion tag, change the thank-you page URL, or break the form itself.',
+    ['Submit your own form and confirm the lead reaches you.','Check that the conversion records in Google Ads within a day.','If you changed your phone number, update call assets and call tracking.']));
+  const t=trackingFinding(a); if(t) out.push(t);
+  if(w2<w1&&pv>=0.10) out.push(F('ok','The drop is small enough to be luck',
+    `With ${num(L)} leads in total, a campaign that didn’t change at all would show a drop this big ${pct(pv)} of the time.`,
+    ['Don’t change anything for two more weeks. Changes now restart learning and make the next few weeks harder to read.','Judge on 30 or more conversions, not a few good or bad days.'],
+    'If you flip a coin and get 4 heads in a row, then 1 in the next 4, the coin didn’t break.'));
+  if(ch.includes('bid')||ch.includes('budget')) out.push(F('fix','You restarted the learning period',
+    'A new bid strategy, a new target, or a budget change of more than about 20% sends Smart Bidding back into learning, which usually means 1 to 2 weeks of worse results.',
+    ['Leave it alone for 2 weeks while the status says Learning.','Next time, change targets by 15% or less, at least 2 weeks apart.']));
+  if(ch.includes('kw')) out.push(F('chk','New keywords brought in different traffic',
+    'New keywords, especially broad match, often get clicks before they get leads.',
+    ['Compare conversion rate on the new keywords with the old ones.','Pause new keywords that spent your cost per lead without converting.']));
+  if(ch.includes('ads')) out.push(F('chk','Your new ads may convert worse',
+    'Replacing ads resets their history and can change what people expect when they land.',
+    ['Compare the old and new ads’ conversion rates in the Ads report.','If the old ad did better, bring it back.']));
+  if(a.cpc==='up') out.push(F('chk','You’re paying more for each click',
+    'At the same conversion rate, a higher cost per click buys fewer leads for the same budget.',
+    ['Check your bid strategy. Maximize conversions and Target impression share both raise bids as they chase volume.','Run the “cost per click keeps climbing” check above for the full list.']));
+  if(a.auction==='yes') out.push(F('chk','A competitor moved in',
+    'A new competitor raises prices and takes some of the top spots and clicks you used to win.',
+    ['Don’t try to outbid them on every term. Focus budget on the keywords that bring you the cheapest leads.','Give searchers a reason to pick you: price, reviews, speed or a guarantee in the ad.']));
+  const s=termsFinding(a); if(s) out.push(s);
+  if(a.season==='yes') out.push(F('ok','Some of this is the season',
+    'Demand for many services rises and falls through the year, and fewer searches mean fewer leads.',
+    ['Compare the same weeks last year, if you have the data.','Check the trend for your main keyword in Google Trends.']));
+  return out;
+ }},
+
+cpcup:{name:'My cost per click keeps climbing',steps:[
+  BID,
+  {id:'cpa',type:'choice',q:'Did your cost per lead go up too?',
+   options:[{v:'yes',label:'Yes, leads cost more'},{v:'no',label:'No, cost per lead held steady or got better'},{v:'unknown',label:'I don’t track leads in Google Ads'}]},
+  {id:'raised',type:'choice',q:'Did you raise the budget recently?',options:[{v:'yes',label:'Yes'},{v:'no',label:'No'}]},
+  {id:'match',type:'choice',q:'Are broad match keywords or AI Max turned on?',options:[{v:'yes',label:'Yes'},{v:'no',label:'No, phrase and exact only'},{v:'unsure',label:'Not sure'}]},
+  AUCTION,
+  {id:'qs',type:'choice',q:'Have your Quality Scores dropped?',help:'In the Keywords table, add the Quality Score columns (Columns → Quality Score).',
+   options:[{v:'yes',label:'Yes, they went down'},{v:'no',label:'No'},{v:'notlooked',label:'I haven’t looked'}]},
+ ],
+ diagnose(a){
+  const out=[];
+  if(a.cpa==='no') out.push(F('ok','A higher cost per click isn’t a problem if leads cost the same',
+    'You don’t pay for clicks to get clicks. If cost per lead held, Google is paying more for better clicks.',
+    ['Watch cost per lead, not cost per click.','Only act if cost per lead goes above your target.'],
+    'If a pricier fishing spot catches more fish, the fish cost the same even though the ticket costs more.'));
+  if(a.cpa==='unknown') out.push(F('fix','Set up conversion tracking',
+    'Without it, cost per click is the only number you can see, and it can’t tell you whether a click is worth it.',
+    ['Track form submissions and calls longer than 60 seconds as Primary conversions.','The '+checklistLink+' lists every tracking setting.']));
+  if(a.bid==='tis') out.push(F('fix','Target impression share pays whatever it takes to be on top',
+    'It bids to win the top spot no matter what a click costs, so prices climb as competitors bid back.',
+    ['Switch to Maximize conversions with a target CPA.','If you must keep it, set a low maximum CPC bid limit.']));
+  if(a.bid==='maxconv'&&a.raised==='yes') out.push(F('chk','A bigger budget buys pricier clicks',
+    'Maximize conversions tries to spend the whole budget. Once the cheap clicks are used up, it buys more expensive ones.',
+    ['Add a target CPA to cap what it pays per lead.','If cost per lead rose more than the budget did, go back toward the old budget.']));
+  else if(a.bid==='maxconv') out.push(F('chk','Add a target CPA',
+    'Without a target, Maximize conversions will pay a lot for each lead if it thinks the click will convert.',
+    ['Once you have about 30 conversions, set a target CPA equal to your last 30 days’ cost per lead.']));
+  if(a.bid==='maxclicks') out.push(F('chk','Set a max CPC bid limit',
+    'Without one, Maximize clicks pays whatever a click costs to use up the budget.',
+    ['Set a maximum CPC bid limit under Bidding.','Switch to Maximize conversions once tracking is working.']));
+  if(a.match==='yes') out.push(F('chk','Broad match and AI Max reach for broader, pricier searches',
+    'Both let Google show your ads for searches you didn’t pick, including expensive general terms.',
+    ['Check Search terms for costly searches that don’t convert, and add negatives. The '+negLink+' helps.','Turn off AI Max until the campaign hits its target with phrase and exact match.']));
+  if(a.auction==='yes') out.push(F('chk','More competition means higher prices',
+    'Every advertiser in the auction raises the price of the spots above them.',
+    ['Don’t chase the top position. Spot 2 or 3 often brings leads for less.','Move budget to the keywords and hours with the cheapest leads.']));
+  if(a.auction==='notlooked') out.push(F('chk','Check Auction insights',
+    'It shows who else is bidding on your keywords and how often they beat you.',
+    ['Compare the last 30 days to the 30 before, and look for new names and higher overlap.']));
+  if(a.qs==='yes') out.push(F('fix','Lower Quality Score means you pay more for the same spot',
+    'Google charges less to ads that match the search and land on a useful page.',
+    ['Put the keyword in the ad headline.','Split ad groups so each one covers one service.','Make the landing page about that exact service, and make it fast on phones.']));
+  return out;
+ }},
+
+nospend:{name:'My ads barely show or spend',steps:[
+  {id:'status',type:'choice',q:'What does the Status column say for the campaign or its keywords?',
+   options:[{v:'target',label:'Limited by bid strategy target'},{v:'disapproved',label:'Not eligible, Disapproved or Under review'},{v:'lowvol',label:'Low search volume (on keywords)'},{v:'billing',label:'Account suspended or payment issue'},{v:'eligible',label:'Eligible or Learning; it just barely spends'}]},
+  BID,
+  {id:'match',type:'choice',q:'What match types are your keywords?',options:[{v:'exact',label:'Mostly exact'},{v:'mixed',label:'Phrase or broad'}]},
+  {id:'geo',type:'choice',q:'How big is the area you target?',options:[{v:'small',label:'A small town or a tight radius'},{v:'city',label:'A city or metro area'},{v:'big',label:'A state, region or country'}]},
+  {id:'sched',type:'choice',q:'Do you limit ads to certain days or hours?',options:[{v:'yes',label:'Yes'},{v:'no',label:'No, they run all the time'}]},
+ ],
+ diagnose(a){
+  const out=[];
+  if(a.status==='billing') out.push(F('fix','Fix billing or the suspension first',
+    'Nothing runs until the account is in good standing.',
+    ['Open Billing → Summary and resolve any payment issue.','For a suspension, read the email from Google and follow the appeal steps.']));
+  if(a.status==='disapproved') out.push(F('fix','Your ads or keywords aren’t allowed to run',
+    'Disapproved ads don’t show. “Under review” usually clears in 1 to 2 business days.',
+    ['Open the Ads table and hover over the status to see the policy.','Fix the ad or landing page and appeal from the same place.','Some industries (legal, financial, health) need certification first.']));
+  if(a.status==='target'||a.bid==='tcpa') out.push(F('fix','Your target CPA is too low to win auctions',
+    'Google only enters auctions it thinks it can win at your target. Set it too low and it sits out.',
+    ['Raise the target CPA by 20% and give it a week.','If you have fewer than 30 conversions, remove the target and use Maximize conversions until you do.']));
+  if(a.status==='lowvol') out.push(F('fix','Not enough people search those exact words',
+    'Keywords marked Low search volume don’t show until searches pick up.',
+    ['Use phrase match versions of your keywords.','Add the plain words customers use, like “plumber” instead of “residential plumbing contractor.”']));
+  if(a.bid==='manual') out.push(F('chk','Your bids may be below what the auction needs',
+    'Manual bids under the first-page price rarely show.',
+    ['In the Keywords table, add the “First page bid estimate” column.','Raise bids on your best keywords to at least that estimate.']));
+  if(a.match==='exact'&&a.geo==='small') out.push(F('chk','Your net is very small',
+    'Exact match in a small area can mean only a handful of searches a day.',
+    ['Add phrase match versions of your best keywords.','Widen the radius to the farthest place you’d actually drive to.']));
+  else if(a.match==='exact') out.push(F('chk','Exact match only may be too narrow',
+    'Exact match shows ads only for searches that mean the same thing as your keyword.',
+    ['Add phrase match versions of your best keywords and watch Search terms for junk.']));
+  else if(a.geo==='small') out.push(F('chk','Your area may be too small',
+    'Fewer people means fewer searches.',
+    ['Widen the radius to the farthest customer you’d serve.']));
+  if(a.sched==='yes') out.push(F('chk','Your ad schedule may be cutting out busy hours',
+    'Many people search for services in the evening and on weekends.',
+    ['Run ads all the time for two weeks, then cut only the hours that don’t bring leads.']));
+  if(a.status==='eligible'&&!out.length) out.push(F('ok','It may just need time',
+    'A new campaign in Learning often spends slowly for its first few days.',
+    ['Give it a week before changing anything.']));
+  return out;
+ }},
+};
+
+/* ---------- engine ---------- */
+let flowId=null, A={}, seen=new Set();
+const optsOf=(s)=>typeof s.options==='function'?s.options(A):s.options;
+const qOf=(s)=>typeof s.q==='function'?s.q(A):s.q;
+function activeSteps(){ return FLOWS[flowId].steps.filter(s=>!s.when||s.when(A)); }
+
+function summaryText(s){
+  if(s.type==='numbers') return s.summary(A[s.id]);
+  const o=optsOf(s);
+  if(s.type==='multi') return A[s.id].map(v=>(o.find(x=>x.v===v)||{}).label).join(', ');
+  return (o.find(x=>x.v===A[s.id])||{label:A[s.id]}).label;
+}
+
+function doneEl(s){
+  const el=document.createElement('div'); el.className='done'; el.dataset.step=s.id;
+  el.innerHTML=`<div class="qq">${esc(qOf(s))}<b>${esc(summaryText(s))}</b></div><button type="button" class="ghost">Change</button>`;
+  el.querySelector('button').onclick=()=>{
+    const ids=FLOWS[flowId].steps.map(x=>x.id), i=ids.indexOf(s.id);
+    ids.slice(i).forEach(id=>{delete A[id]; seen.delete(id);}); render();
+  };
+  return el;
+}
+
+function questionEl(s){
+  const el=document.createElement('section'); el.className='card q'; el.dataset.step=s.id;
+  const help=s.help?`<p class="help">${s.help}</p>`:'';
+  el.innerHTML=`<h2 tabindex="-1">${esc(qOf(s))}</h2>${help}`;
+  if(s.type==='numbers'){
+    const prev=A['_'+s.id]||{};
+    el.insertAdjacentHTML('beforeend',`<div class="fields">${s.fields.map(f=>`<div class="field"><label for="f-${f.id}">${f.label}</label><div class="inp">${f.pre?`<span>${f.pre}</span>`:''}<input id="f-${f.id}" type="number" inputmode="${f.int?'numeric':'decimal'}" min="0" step="${f.int?1:'any'}" value="${prev[f.id]??''}"></div></div>`).join('')}</div><p class="err" hidden></p><button type="button" class="primary">Continue</button>`);
+    const go=()=>{
+      const v={}; s.fields.forEach(f=>{const x=parseFloat(el.querySelector('#f-'+f.id).value); v[f.id]=f.int?Math.round(x):x;});
+      const bad=s.fields.some(f=>!isFinite(v[f.id]))?'Fill in every box.':s.check(v);
+      if(bad){const e=el.querySelector('.err'); e.textContent=bad; e.hidden=false; return;}
+      A[s.id]=v; A['_'+s.id]=v; render();
+    };
+    el.querySelector('.primary').onclick=go;
+    el.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')go();}));
+  } else {
+    const opts=optsOf(s), wrap=document.createElement('div'); wrap.className='opts'; wrap.setAttribute('role','group');
+    const picked=new Set();
+    opts.forEach(o=>{
+      const b=document.createElement('button'); b.type='button'; b.className='opt'; b.setAttribute('aria-pressed','false');
+      b.innerHTML=`<span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:''}</span>${s.type==='multi'?'<span class="tick" aria-hidden="true"></span>':''}`;
+      b.onclick=()=>{
+        if(s.type!=='multi'){ A[s.id]=o.v; render(); return; }
+        if(picked.has(o.v)) picked.delete(o.v);
+        else { if(o.excl) picked.clear(); else opts.filter(x=>x.excl).forEach(x=>picked.delete(x.v)); picked.add(o.v); }
+        wrap.querySelectorAll('.opt').forEach((x,i)=>x.setAttribute('aria-pressed',picked.has(opts[i].v)));
+        cont.disabled=!picked.size;
+      };
+      wrap.append(b);
+    });
+    el.append(wrap);
+    let cont;
+    if(s.type==='multi'){
+      cont=document.createElement('button'); cont.type='button'; cont.className='primary'; cont.textContent='Continue'; cont.disabled=true; cont.style.marginTop='12px';
+      cont.onclick=()=>{A[s.id]=opts.filter(o=>picked.has(o.v)).map(o=>o.v); render();};
+      el.append(cont);
+    }
+  }
+  return el;
+}
+
+const LEVELS={fix:'Fix first',chk:'Check',ok:'Good news'};
+function diagnosisEl(list){
+  const order={fix:0,chk:1,ok:2}; list=list.slice().sort((x,y)=>order[x.level]-order[y.level]);
+  if(!list.length) list=[F('ok','Nothing in your answers points to a setup problem','Your settings look sound. Small numbers swing a lot, so give the campaign more time before changing it.',['Check back after another 2 weeks of data.'])];
+  const el=document.createElement('section'); el.className='card diag'; el.dataset.step='_diag';
+  el.innerHTML=`<p class="verdict v-ok" style="color:var(--accent)">Diagnosis</p><h2 tabindex="-1">What to do, in order</h2><p>Based on your answers. Start at the top.</p>`+
+    list.map(f=>`<article class="finding ${f.level}"><p class="verdict v-${f.level}"><i aria-hidden="true">${{fix:'!',chk:'?',ok:'✓'}[f.level]}</i>${LEVELS[f.level]}</p><h3>${f.title}</h3><p>${f.why}</p>${f.plain?`<p class="plain"><b>In plain words</b>${f.plain}</p>`:''}${f.actions.length?`<ol>${f.actions.map(x=>`<li>${x}</li>`).join('')}</ol>`:''}</article>`).join('')+
+    `<div class="diag-actions"><button type="button" class="primary" id="copy">Copy as text</button><button type="button" class="ghost" id="restart">Start over</button></div>`;
+  el.querySelector('#restart').onclick=()=>pick(null);
+  el.querySelector('#copy').onclick=e=>{
+    const strip=h=>{const d=document.createElement('div'); d.innerHTML=h; return d.textContent;};
+    const lines=['PPC Troubleshooter: '+FLOWS[flowId].name,''];
+    activeSteps().filter(s=>s.type!=='insight'&&A[s.id]!==undefined).forEach(s=>lines.push('- '+qOf(s)+' '+summaryText(s)));
+    lines.push('');
+    list.forEach(f=>{lines.push(`[${LEVELS[f.level]}] ${strip(f.title)}`, strip(f.why)); f.actions.forEach((x,i)=>lines.push(`  ${i+1}. ${strip(x)}`)); lines.push('');});
+    lines.push('https://tools.copyfororiginals.com/ppc-troubleshooter/');
+    const btn=e.currentTarget;
+    (navigator.clipboard?navigator.clipboard.writeText(lines.join('\n')):Promise.reject()).then(()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy as text',1600);},()=>{btn.textContent='Copy failed';});
+  };
+  return el;
+}
+
+function render(){
+  const host=$('flow'); host.innerHTML='';
+  if(!flowId) return;
+  const flow=FLOWS[flowId]; let active=null;
+  for(const s of activeSteps()){
+    if(s.type==='insight'){ const c=s.render(A); c.dataset.step=s.id; host.append(c); continue; }
+    if(A[s.id]!==undefined){ host.append(doneEl(s)); continue; }
+    active=questionEl(s); host.append(active); break;
+  }
+  if(!active) host.append(diagnosisEl(flow.diagnose(A)));
+  // animate and scroll to whatever just appeared
+  const fresh=[...host.children].filter(c=>c.dataset.step&&!seen.has(c.dataset.step)&&!c.classList.contains('done'));
+  fresh.forEach(c=>{c.classList.add('enter'); seen.add(c.dataset.step);});
+  const target=fresh[0];
+  if(target){
+    target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    const h=target.querySelector('h2[tabindex]'); if(h) h.focus({preventScroll:true});
+  }
+}
+
+function pick(id){
+  flowId=id; A={}; seen=new Set();
+  document.querySelectorAll('.prob').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.flow===id)));
+  $('problems').classList.toggle('chosen',!!id);
+  render();
+  if(!id) $('problems').scrollIntoView({behavior:'smooth',block:'center'});
+}
+document.querySelectorAll('.prob').forEach(b=>b.onclick=()=>pick(b.dataset.flow===flowId?null:b.dataset.flow));
+
+/* ---------- theme ---------- */
+const THEME_KEY='ppc-troubleshooter-theme';
+function applyTheme(t){ if(t==='light'||t==='dark') document.documentElement.setAttribute('data-theme',t); else document.documentElement.removeAttribute('data-theme'); }
+try{ applyTheme(localStorage.getItem(THEME_KEY)); }catch(e){}
+$('btnTheme').onclick=()=>{
+  const cur=document.documentElement.getAttribute('data-theme');
+  const isDark=cur==='dark'||(!cur&&matchMedia('(prefers-color-scheme: dark)').matches);
+  const next=isDark?'light':'dark'; applyTheme(next); try{localStorage.setItem(THEME_KEY,next);}catch(e){}
+};
+</script>
+</body>
+</html>

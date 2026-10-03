@@ -67,8 +67,8 @@
       "@type": "FAQPage",
       "@id": "https://tools.copyfororiginals.com/ppc-troubleshooter/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "How many clicks before I know a Google Ads campaign isn't working?", "acceptedAnswer": {"@type": "Answer", "text": "Divide 3 by your expected conversion rate. At 5 conversions per 100 clicks, that is about 60 clicks. A campaign that works would get zero conversions from 59 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck."}},
-        {"@type": "Question", "name": "How much budget do I need for Google Ads lead generation?", "acceptedAnswer": {"@type": "Answer", "text": "Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At a $55 cost per click and 5 conversions per 100 clicks, one lead costs about $1,100, so that is about $3,300 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy."}},
+        {"@type": "Question", "name": "How many clicks before I know a Google Ads campaign isn't working?", "acceptedAnswer": {"@type": "Answer", "text": "Divide 3 by your expected conversion rate. At 2.5 conversions per 100 clicks, that is about 120 clicks. A campaign that works would get zero conversions from 119 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck."}},
+        {"@type": "Question", "name": "How much budget do I need for Google Ads lead generation?", "acceptedAnswer": {"@type": "Answer", "text": "Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At a $55 cost per click and 2.5 conversions per 100 clicks, one lead costs about $2,200, so that is about $6,600 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy."}},
         {"@type": "Question", "name": "Why did my Google Ads campaign work at first and then stop?", "acceptedAnswer": {"@type": "Answer", "text": "Usually one of three things. The good start was partly luck and later weeks fell back to normal. A change such as a new bid strategy, a new target or a large budget change restarted the learning period. Or a website change broke the conversion tracking or the form. With fewer than about 30 conversions in total, a drop by half can easily be luck."}},
         {"@type": "Question", "name": "Is a high cost per click a problem in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Not by itself. Cost per click is the price of one visitor; cost per lead is the price of a customer. If cost per click rises but cost per lead stays at or under your target, the campaign is fine. If both rise, check the bid strategy first, especially Target impression share, then broad match, competitors in Auction insights and Quality Score."}}
       ]
@@ -161,6 +161,19 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .ghost{border:1px solid var(--edge);background:transparent;color:var(--fg-2);font-weight:560;font-size:13.5px;padding:7px 12px;border-radius:10px;cursor:pointer}
 .ghost:hover{border-color:var(--fg-3);color:var(--fg)}
 .err{color:var(--fix);font-size:14px;margin:0 0 10px}
+.rate{margin:4px 0 16px}
+.rate-val{margin:0 0 8px;font-size:15px;color:var(--fg-2)}
+.rate-val b{font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--fg);font-variant-numeric:tabular-nums}
+.band{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 9px;vertical-align:4px;color:var(--accent);background:var(--accent-bg)}
+.band[data-band="High"]{color:var(--chk);background:var(--chk-bg)}
+.rate input[type=range]{width:100%;accent-color:var(--accent);margin:0}
+.marks{position:relative;height:44px;margin:4px 9px 0}
+.mark{position:absolute;transform:translateX(-50%);background:none;border:0;padding:4px 6px;cursor:pointer;text-align:center;border-radius:8px;line-height:1.2;color:var(--fg-3)}
+.mark::before{content:"";display:block;width:1.5px;height:6px;background:currentColor;margin:0 auto 3px;opacity:.6}
+.mark b{display:block;font-size:13px;color:var(--fg-2)}
+.mark span{font-size:11.5px;white-space:nowrap}
+.mark:hover b,.mark[aria-pressed="true"] b{color:var(--accent)}
+.rate-sub{margin:6px 0 0;font-size:13.5px;color:var(--fg-3)}
 
 .done{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;background:transparent;border:1px solid var(--edge);border-radius:14px}
 .done .qq{flex:1;min-width:0;font-size:14px;color:var(--fg-3);line-height:1.4}
@@ -282,19 +295,20 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
   <p>PPC Troubleshooter diagnoses five common Google Ads problems: spending money with zero conversions, a budget used up by a few expensive clicks, results that dropped after a good start, a rising cost per click, and ads that barely spend. For each problem, PPC Troubleshooter asks follow-up questions one at a time, then lists the likely causes in three groups: <b>Fix first</b>, <b>Check</b> and <b>Good news</b>. Each cause comes with the steps to take. Where your numbers matter, PPC Troubleshooter runs the math and shows it as a picture so you can tell bad luck from a real problem.</p>
 
   <h2>Why did my Google Ads campaign spend money and get zero conversions?</h2>
-  <p>With only a few dozen clicks, zero conversions is often bad luck rather than a broken campaign. If 5 out of every 100 visitors become leads, each click has a 95% chance of not converting. The chance that every one of 20 clicks misses is 0.95<sup>20</sup>, or about 36%. So more than a third of perfectly healthy campaigns get zero leads from their first 20 clicks.</p>
-  <p>PPC Troubleshooter uses the formula <code>chance of zero = (1 − conversion rate)<sup>clicks</sup></code>. It calls the result normal bad luck when that chance is 25% or more, unlucky when it is between 5% and 25%, and not luck when it is under 5%. At a 5% conversion rate, the tipping point is 59 clicks: past that, zero conversions happens less than 5% of the time, so something is broken. Common causes are conversion tracking that isn’t recording, irrelevant search terms, and a landing page that doesn’t ask for the lead.</p>
+  <p>With only a few dozen clicks, zero conversions is often bad luck rather than a broken campaign. If 2.5 out of every 100 visitors become leads, a typical rate for lead gen, each click has a 97.5% chance of not converting. The chance that every one of 20 clicks misses is 0.975<sup>20</sup>, or about 60%. So more than half of perfectly healthy campaigns get zero leads from their first 20 clicks.</p>
+  <p>PPC Troubleshooter uses the formula <code>chance of zero = (1 − conversion rate)<sup>clicks</sup></code>. It calls the result normal bad luck when that chance is 25% or more, unlucky when it is between 5% and 25%, and not luck when it is under 5%. At a 2.5% conversion rate, the tipping point is 119 clicks: past that, zero conversions happens less than 5% of the time, so something is broken. Common causes are conversion tracking that isn’t recording, irrelevant search terms, and a landing page that doesn’t ask for the lead.</p>
 
   <h2>Why does my budget only buy a few expensive clicks?</h2>
   <p>In expensive industries such as legal, insurance and finance, the top ad for a valuable keyword can cost $50 to $100 or more per click. A small budget then buys only one or two clicks, and one or two clicks rarely produce a lead. Your expected cost per lead is your cost per click divided by your conversion rate.</p>
-  <p>Worked example: a law firm pays $55 a click and has $100 to spend. $100 buys 1 click. At 5 leads per 100 clicks, that one click has a 5% chance of becoming a lead, so 95 out of 100 firms in this spot would get nothing. One lead costs about $55 ÷ 0.05 = $1,100. Getting at least one lead in 90% of months takes 45 clicks, or $2,475 a month. Giving Smart Bidding room to work takes a daily budget of at least 3× the cost per lead, about $3,300 a day or $100,320 a month (daily × 30.4).</p>
+  <p>PPC Troubleshooter asks for your conversion rate on a slider from 0.5 to 10 leads per 100 clicks, marked Low (1), Medium (2.5) and High (5). If you don’t know your rate, use Medium. Five in 100 is already a strong result for most lead gen Search campaigns.</p>
+  <p>Worked example: a law firm pays $55 a click and has $100 to spend. $100 buys 1 click. At 2.5 leads per 100 clicks, that one click has a 2.5% chance of becoming a lead, so about 98 out of 100 firms in this spot would get nothing. One lead costs about $55 ÷ 0.025 = $2,200. Getting at least one lead in 90% of months takes 91 clicks, or $5,005 a month. Giving Smart Bidding room to work takes a daily budget of at least 3× the cost per lead, about $6,600 a day or $200,640 a month (daily × 30.4).</p>
   <div class="tbl"><table>
     <caption>Budget tiers PPC Troubleshooter calculates</caption>
-    <thead><tr><th>Tier</th><th>Formula</th><th>$55 CPC, 5% conversion rate</th></tr></thead>
+    <thead><tr><th>Tier</th><th>Formula</th><th>$55 CPC, 2.5% conversion rate</th></tr></thead>
     <tbody>
-      <tr><td>Expected cost per lead</td><td>CPC ÷ conversion rate</td><td>$1,100</td></tr>
-      <tr><td>A lead in most months (90% chance)</td><td>CPC × ⌈ln 0.1 ÷ ln(1 − rate)⌉ clicks</td><td>$2,475 a month</td></tr>
-      <tr><td>Enough for Smart Bidding</td><td>3 × cost per lead a day × 30.4</td><td>$100,320 a month</td></tr>
+      <tr><td>Expected cost per lead</td><td>CPC ÷ conversion rate</td><td>$2,200</td></tr>
+      <tr><td>A lead in most months (90% chance)</td><td>CPC × ⌈ln 0.1 ÷ ln(1 − rate)⌉ clicks</td><td>$5,005 a month</td></tr>
+      <tr><td>Enough for Smart Bidding</td><td>3 × cost per lead a day × 30.4</td><td>$200,640 a month</td></tr>
     </tbody>
   </table></div>
   <p>If neither tier is affordable, PPC Troubleshooter recommends shrinking the campaign to fit: exact match on a handful of high-intent keywords, a smaller area, a max CPC limit, and pay-per-lead options such as Google Local Services Ads where your business type qualifies.</p>
@@ -309,9 +323,9 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
   <h2>Frequently asked questions</h2>
   <div class="faq">
     <h3>How many clicks before I know a Google Ads campaign isn’t working?</h3>
-    <p>Divide 3 by your expected conversion rate. At 5 conversions per 100 clicks, that is about 60 clicks. A campaign that works would get zero conversions from 59 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck.</p>
+    <p>Divide 3 by your expected conversion rate. At 2.5 conversions per 100 clicks, that is about 120 clicks. A campaign that works would get zero conversions from 119 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck.</p>
     <h3>How much budget do I need for Google Ads lead generation?</h3>
-    <p>Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At a $55 cost per click and 5 conversions per 100 clicks, one lead costs about $1,100, so that is about $3,300 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy.</p>
+    <p>Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At a $55 cost per click and 2.5 conversions per 100 clicks, one lead costs about $2,200, so that is about $6,600 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy.</p>
     <h3>Why did my Google Ads campaign work at first and then stop?</h3>
     <p>Usually one of three things. The good start was partly luck and later weeks fell back to normal. A change such as a new bid strategy, a new target or a large budget change restarted the learning period. Or a website change broke the conversion tracking or the form. With fewer than about 30 conversions in total, a drop by half can easily be luck.</p>
     <h3>Is a high cost per click a problem in Google Ads?</h3>
@@ -343,6 +357,7 @@ function pct(x){
   return Math.round(x*100)+'%';
 }
 const num=n=>Math.round(n).toLocaleString('en-US');
+const pct2=p=>inHundred(p)+'%';
 function dec(n){ return n>=10?num(n):n>=1||n===0?(Math.round(n*10)/10).toLocaleString('en-US'):(Math.round(n*100)/100).toLocaleString('en-US'); }
 const plural=(n,one,many)=>n===1?one:(many||one+'s');
 const pZero=(n,p)=>Math.pow(1-p,n);
@@ -361,13 +376,15 @@ function poisson(l){
 }
 const rateOf=a=>parseFloat(a.rate);
 const SB_MONTH=3*30.4; // Smart Bidding budget: daily budget of 3× cost per lead, same rule as the checklist
-const inHundred=p=>Math.round(p*100);
+const inHundred=p=>(Math.round(p*1000)/10).toLocaleString('en-US'); // 0.025 -> "2.5"
+const rateBand=p=>p<0.015?'Low':p<0.04?'Medium':'High';
 
 /* ---------- shared questions ---------- */
-const RATE={id:'rate',type:'choice',
-  q:'Out of every 100 people who click your ad, how many do you think will call or fill out your form?',
-  help:'That’s your conversion rate. Most lead gen pages land somewhere from 2 to 10 out of 100. Not sure? Pick the middle one.',
-  options:[{v:'0.02',label:'About 2',sub:'Tough market, or the page is just OK'},{v:'0.05',label:'About 5',sub:'Typical'},{v:'0.1',label:'About 10',sub:'Strong page, urgent need (like a locksmith)'}]};
+const RATE={id:'rate',type:'slider',
+  q:'Out of every 100 people who click your ad, how many will call or fill out your form?',
+  help:'That’s your conversion rate. If you don’t know yours, start at <b>Medium</b>. Five in 100 is already a strong result for most lead gen campaigns.',
+  min:0.5,max:10,step:0.5,start:2.5,
+  marks:[{v:1,label:'Low',sub:'Cold traffic, tough market'},{v:2.5,label:'Medium',sub:'Typical lead gen'},{v:5,label:'High',sub:'Strong page, urgent need'}]};
 const TRACK={id:'track',type:'choice',
   q:'Have you tested your conversion tracking yourself?',
   help:'Fill out your own form (or call your tracked number and stay on for a minute). Within a day it should show up under <b>Goals → Conversions → Summary</b>.',
@@ -777,6 +794,7 @@ function activeSteps(){ return FLOWS[flowId].steps.filter(s=>!s.when||s.when(A))
 
 function summaryText(s){
   if(s.type==='numbers') return s.summary(A[s.id]);
+  if(s.type==='slider'){ const p=parseFloat(A[s.id]); return `${inHundred(p)} in 100 (${pct2(p)}, ${rateBand(p).toLowerCase()})`; }
   const o=optsOf(s);
   if(s.type==='multi') return A[s.id].map(v=>(o.find(x=>x.v===v)||{}).label).join(', ');
   return (o.find(x=>x.v===A[s.id])||{label:A[s.id]}).label;
@@ -807,6 +825,23 @@ function questionEl(s){
     };
     el.querySelector('.primary').onclick=go;
     el.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')go();}));
+  } else if(s.type==='slider'){
+    const prev=A['_'+s.id]??s.start, pos=v=>((v-s.min)/(s.max-s.min)*100)+'%';
+    el.insertAdjacentHTML('beforeend',`<div class="rate">
+      <p class="rate-val"><b></b> in 100 <span class="band"></span></p>
+      <input type="range" min="${s.min}" max="${s.max}" step="${s.step}" value="${prev}" aria-label="Leads per 100 clicks">
+      <div class="marks">${s.marks.map(m=>`<button type="button" class="mark" data-v="${m.v}" style="left:${pos(m.v)}"><b>${m.label}</b><span>${m.v} in 100</span></button>`).join('')}</div>
+      <p class="rate-sub"></p></div><button type="button" class="primary">Continue</button>`);
+    const r=el.querySelector('input[type=range]');
+    const upd=()=>{const v=+r.value, p=v/100, band=rateBand(p), m=s.marks.find(x=>x.label===band);
+      el.querySelector('.rate-val b').textContent=inHundred(p);
+      el.querySelector('.band').textContent=band; el.querySelector('.band').dataset.band=band;
+      el.querySelector('.rate-sub').textContent=`${pct2(p)} conversion rate · about 1 lead every ${Math.round(1/p)} clicks · ${m.sub}`;
+      el.querySelectorAll('.mark').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.v===v)));};
+    r.addEventListener('input',upd);
+    el.querySelectorAll('.mark').forEach(b=>b.onclick=()=>{r.value=b.dataset.v;upd();});
+    el.querySelector('.primary').onclick=()=>{A['_'+s.id]=+r.value; A[s.id]=String(+r.value/100); render();};
+    upd();
   } else {
     const opts=optsOf(s), wrap=document.createElement('div'); wrap.className='opts'; wrap.setAttribute('role','group');
     const picked=new Set();

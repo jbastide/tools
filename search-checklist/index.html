@@ -70,7 +70,7 @@
         {"@type": "Question", "name": "What location option should a lead gen campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use \"Presence: People in or regularly in your included locations.\" The default, \"Presence or interest,\" also shows ads to people outside your area who search about it, so a plumber in Denver pays for clicks from people in Ohio reading about Denver. Change it under Campaign settings, Locations, Location options."}},
         {"@type": "Question", "name": "Should I turn off auto-apply recommendations in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-applied recommendations can add broad match keywords, raise budgets, change bid strategies and add keywords without asking. Turn off every type under Recommendations, Auto-apply, then review recommendations by hand and apply only the ones that help."}},
         {"@type": "Question", "name": "What bid strategy should a lead gen Search campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use Maximize conversions with a target CPA set to the cost per lead you can afford. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM. A brand-new account with no conversion history can start without a target and add one after about 30 conversions."}},
-        {"@type": "Question", "name": "How big should my Google Ads daily budget be?", "acceptedAnswer": {"@type": "Answer", "text": "Set the daily budget to at least your target CPA, and ideally twice it. One target CPA a day allows about 30 conversions a month, the volume Smart Bidding needs to learn. Twice the target CPA keeps the budget from capping the bid strategy. Monthly spend is about 30.4 times the daily budget."}},
+        {"@type": "Question", "name": "How big should my Google Ads daily budget be?", "acceptedAnswer": {"@type": "Answer", "text": "Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget."}},
         {"@type": "Question", "name": "Do I need auto-tagging on in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-tagging adds a GCLID to every ad click, which Google Analytics, offline conversion imports and enhanced conversions for leads use to tie a lead back to the click that produced it. Turn it on under Admin, Account settings, Auto-tagging."}}
       ]
     }
@@ -359,8 +359,8 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
               <span class="line"><span class="c">Target CPA</span><span class="lead"></span><span class="r" id="r-tcpa">Set</span></span>
               <span class="note">Your target cost per lead. Use <b>Max conversion value + target ROAS</b> instead only if each lead has a value imported from your CRM.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-budget"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
-              <span class="line"><span class="c">Daily budget</span><span class="lead"></span><span class="r" id="r-budget">≥ 1× target CPA</span></span>
-              <span class="note">2× target CPA is better, so the budget never caps the bid strategy. See performance data.</span></label></li>
+              <span class="line"><span class="c">Daily budget</span><span class="lead"></span><span class="r" id="r-budget">≥ 3× target CPA</span></span>
+              <span class="note">Less than 3× and the budget caps the bid strategy before it can learn. See performance data.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-limited"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Campaign count</span><span class="lead"></span><span class="r">Fewest that fit budget</span></span>
               <span class="note">Each campaign needs its own budget at or above the minimum. Splitting $100 a day five ways starves all five.</span></label></li>
@@ -450,9 +450,9 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
   </table></div>
 
   <h2>How the checklist sizes a daily budget from target CPA</h2>
-  <p>The Lead Gen Search Campaign Checklist sets the minimum daily budget at 1× your target CPA and the recommended daily budget at 2× your target CPA. At 1×, the campaign can buy about one lead a day, or about 30 a month, which is the conversion volume Smart Bidding needs to learn. At 2×, the budget rarely caps the bid strategy. Monthly spend is the daily budget × 30.4, the average days in a month Google uses for its monthly spending limit.</p>
-  <p>Worked example: with a $60 target cost per lead, the minimum daily budget is $60 and the recommended daily budget is $120. That is about $1,824 and $3,648 a month, enough for roughly 30 and 61 leads a month at target.</p>
-  <p>If 1× your target CPA is more than you can spend each day, run one campaign instead of several, use exact match only, and tighten the location to the area that brings your best customers.</p>
+  <p>The Lead Gen Search Campaign Checklist sets the minimum daily budget at 3× your target CPA. A budget of 1× or 2× sounds like enough to buy one or two leads a day, but in practice one expensive lead or a few costly clicks uses up the day. The campaign then shows as limited by budget, Smart Bidding sits out auctions it would win, and it learns slowly from too few conversions. At 3×, the budget leaves room for the bid strategy to work. Monthly spend is the daily budget × 30.4, the average days in a month Google uses for its monthly spending limit.</p>
+  <p>Worked example: with a $60 target cost per lead, the minimum daily budget is $180. That is about $5,472 a month, enough for roughly 91 leads a month at target.</p>
+  <p>If 3× your target CPA is more than you can spend each day, run one campaign instead of several, use exact match only, and tighten the location to the area that brings your best customers.</p>
 
   <h2>Frequently asked questions</h2>
   <div class="faq">
@@ -463,7 +463,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <h3>What bid strategy should a lead gen Search campaign use?</h3>
     <p>Use Maximize conversions with a target CPA set to the cost per lead you can afford. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM. A brand-new account with no conversion history can start without a target and add one after about 30 conversions.</p>
     <h3>How big should my Google Ads daily budget be?</h3>
-    <p>Set the daily budget to at least your target CPA, and ideally twice it. One target CPA a day allows about 30 conversions a month, the volume Smart Bidding needs to learn. Twice the target CPA keeps the budget from capping the bid strategy. Monthly spend is about 30.4 times the daily budget.</p>
+    <p>Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget.</p>
     <h3>Do I need auto-tagging on in Google Ads?</h3>
     <p>Yes. Auto-tagging adds a GCLID to every ad click, which Google Analytics, offline conversion imports and enhanced conversions for leads use to tie a lead back to the click that produced it. Turn it on under Admin, Account settings, Auto-tagging.</p>
   </div>
@@ -507,18 +507,17 @@ function renderPerf(){
   const out=$('perf-out');
   if(!(v>0)){
     out.innerHTML='<p class="perf-empty" id="cpa-help">Enter the most you’ll pay for one lead. Use your lead-to-customer rate × profit per customer if you don’t know it.</p>';
-    $('r-tcpa').textContent='Set'; $('r-budget').textContent='≥ 1× target CPA';
+    $('r-tcpa').textContent='Set'; $('r-budget').textContent='≥ 3× target CPA';
     return;
   }
-  const min=v, rec=v*2;
+  const min=v*3;
   out.innerHTML='<table class="perf-t"><tbody>'+
     '<tr><th>Target CPA<span class="sub">Enter in bid strategy</span></th><td>'+usd(v)+'</td></tr>'+
-    '<tr><th>Minimum daily budget<span class="sub">1× target · ≈ '+Math.round(30.4)+' leads/mo</span></th><td>'+usd(min)+'</td></tr>'+
-    '<tr class="key"><th>Recommended daily budget<span class="sub">2× target · ≈ '+Math.round(60.8)+' leads/mo</span></th><td>'+usd(rec)+'</td></tr>'+
-    '<tr><th>Monthly spend<span class="sub">Daily × 30.4, minimum – recommended</span></th><td>'+usd(Math.round(min*30.4))+' – '+usd(Math.round(rec*30.4))+'</td></tr>'+
+    '<tr class="key"><th>Minimum daily budget<span class="sub">3× target CPA</span></th><td>'+usd(min)+'</td></tr>'+
+    '<tr><th>Monthly spend<span class="sub">Daily × 30.4 · ≈ '+Math.round(3*30.4)+' leads/mo at target</span></th><td>'+usd(Math.round(min*30.4))+'</td></tr>'+
     '</tbody></table>';
   $('r-tcpa').textContent=usd(v);
-  $('r-budget').textContent=usd(rec)+' / day';
+  $('r-budget').textContent=usd(min)+' / day';
 }
 $('cpa').value=state.cpa||'';
 $('cpa').addEventListener('input',()=>{state.cpa=$('cpa').value; save(state); renderPerf();});

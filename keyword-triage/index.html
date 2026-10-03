@@ -7,34 +7,88 @@
      No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Keyword Triage: Find Unprofitable PPC Keywords (Private, In-Browser)</title>
-<meta name="description" content="Free PPC keyword analyzer. Upload a Google Ads or Microsoft Ads keyword report and see which keywords to cut, trim, keep, or scale. Runs entirely in your browser, so your data is never uploaded.">
+<title>Keyword Triage: Free Google Ads Keyword Profitability Checker (Private, In-Browser)</title>
+<meta name="description" content="Keyword Triage is a free Google Ads and Microsoft Ads keyword profitability checker. Upload a keyword report and every keyword is labeled Cut, Trim bids, Keep, Scale or Needs data against your target CPA or ROAS. Runs entirely in your browser; the report is never uploaded.">
+<meta name="author" content="Copy for Originals">
 <meta name="color-scheme" content="light dark">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/keyword-triage/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Keyword Triage: Find Unprofitable PPC Keywords">
-<meta property="og:description" content="Upload a keyword report and see which keywords lose money and which are worth scaling. Runs entirely in your browser. Nothing is uploaded.">
+<meta property="og:url" content="https://tools.copyfororiginals.com/keyword-triage/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="Keyword Triage: Free Google Ads Keyword Profitability Checker">
+<meta property="og:description" content="Upload a Google Ads or Microsoft Ads keyword report and see which keywords lose money, which to keep, and which to scale. Runs entirely in your browser. Nothing is uploaded.">
+<meta property="article:modified_time" content="2026-10-03">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8E%3C/text%3E%3C/svg%3E">
+<!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
+     keep the two in sync when either changes. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Keyword Triage",
-  "description": "Private PPC keyword analyzer. Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV, or Excel) and sorts every keyword into Cut, Trim bids, Keep, Scale, or Needs data against your target CPA or ROAS. Runs fully client-side; the report never leaves the browser.",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "All",
-  "browserRequirements": "Requires JavaScript. Runs fully client-side.",
-  "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "featureList": [
-    "Reads Google Ads and Microsoft Ads keyword exports in CSV, TSV, UTF-16, or Excel (.xlsx)",
-    "Automatic column detection with manual override",
-    "CPA or ROAS goal, defaulting to the account average",
-    "Flags zero-conversion keywords past a spend threshold",
-    "Uses Search lost IS (budget / rank) to say how to scale winners",
-    "Estimates spend above target",
-    "Exports results to CSV and copies the cut list as exact-match negatives",
-    "Content-Security-Policy blocks all network requests, so data cannot leave the page"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tools.copyfororiginals.com/keyword-triage/#app",
+      "name": "Keyword Triage",
+      "alternateName": ["Google Ads keyword profitability checker", "PPC keyword profitability analyzer", "Unprofitable keyword finder"],
+      "url": "https://tools.copyfororiginals.com/keyword-triage/",
+      "description": "Keyword Triage is a free, browser-based keyword profitability checker for Google Ads and Microsoft Ads. It reads a keyword report (CSV, TSV or Excel .xlsx) and labels every keyword Cut, Trim bids, Keep, Scale or Needs data by comparing its CPA or ROAS with your target. The report is processed entirely in the browser and is never uploaded.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "PPC keyword analysis",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript. Runs fully client-side.",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "dateModified": "2026-10-03",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" },
+      "featureList": [
+        "Reads Google Ads and Microsoft Ads keyword or search term reports in CSV, TSV, UTF-16 text or Excel (.xlsx)",
+        "Detects columns automatically, with manual override",
+        "Judges each keyword against a target CPA or target ROAS, defaulting to the account average",
+        "Cuts zero-conversion keywords once spend passes a threshold (default 1.5 times target CPA)",
+        "Uses Search lost IS (budget) and Search lost IS (rank) to say whether budget or bids limit a winning keyword",
+        "Estimates spend above target for Cut and Trim keywords",
+        "Exports results to CSV and copies the Cut list as exact-match negative keywords",
+        "A Content-Security-Policy blocks all network requests, so the report cannot leave the page"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tools.copyfororiginals.com/keyword-triage/#page",
+      "url": "https://tools.copyfororiginals.com/keyword-triage/",
+      "name": "Keyword Triage: Free Google Ads Keyword Profitability Checker",
+      "inLanguage": "en",
+      "dateModified": "2026-10-03",
+      "mainEntity": { "@id": "https://tools.copyfororiginals.com/keyword-triage/#app" },
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Keyword Triage", "item": "https://tools.copyfororiginals.com/keyword-triage/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/keyword-triage/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is a good CPA for Google Ads keywords?", "acceptedAnswer": {"@type": "Answer", "text": "A good CPA is any CPA below your break-even CPA, which is the gross profit you make from one conversion. If a sale brings in $200 of gross profit, any keyword with a CPA under $200 is profitable before overhead. Keyword Triage defaults to your account average CPA, so replace it with your break-even CPA or your target CPA for the most useful verdicts."}},
+        {"@type": "Question", "name": "How do I calculate break-even ROAS?", "acceptedAnswer": {"@type": "Answer", "text": "Break-even ROAS is 1 divided by your gross margin. A product with a 40% gross margin has a break-even ROAS of 2.5 (1 ÷ 0.40), meaning every $1 of ad spend must bring back $2.50 in revenue to cover product costs. Enter it in Keyword Triage as a target ROAS of 2.5."}},
+        {"@type": "Question", "name": "When should I pause a keyword with zero conversions?", "acceptedAnswer": {"@type": "Answer", "text": "Pause a zero-conversion keyword once it has spent more than you would pay for one conversion, with some margin for bad luck. Keyword Triage uses 1.5× your target CPA as the default cut threshold, so with a $50 target CPA a keyword is cut after spending $75 with no conversions."}},
+        {"@type": "Question", "name": "How much data do I need before judging a keyword?", "acceptedAnswer": {"@type": "Answer", "text": "Use 60 to 90 days of data so most keywords have enough clicks to judge. Keyword Triage leaves a keyword in Needs data until it reaches the minimum clicks, which defaults to about 1.5 expected conversions’ worth of clicks (1.5 ÷ your conversion rate, between 10 and 100 clicks)."}},
+        {"@type": "Question", "name": "Does Keyword Triage work with Microsoft Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Keyword Triage reads Microsoft Ads (formerly Bing Ads) keyword reports in CSV or Excel format and recognizes Microsoft column names such as Spend, Revenue and Impression share lost to budget."}},
+        {"@type": "Question", "name": "Can Keyword Triage change bids or pause keywords in my account?", "acceptedAnswer": {"@type": "Answer", "text": "No. Keyword Triage never connects to Google Ads or Microsoft Ads. It only reads the file you give it, and you make any changes in your ad account yourself."}},
+        {"@type": "Question", "name": "Is Keyword Triage free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Keyword Triage is free, needs no account or sign-up, and has no usage limits."}}
+      ]
+    }
   ]
 }
 </script>
@@ -103,6 +157,8 @@ header.top{display:flex;gap:24px;align-items:flex-end;justify-content:space-betw
 .drop{border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:44px 20px;text-align:center;transition:border-color .15s,background .15s}
 .drop.over{border-color:var(--accent);background:var(--soft)}
 .drop h2{font-size:20px;margin-bottom:6px}
+.goal-first{margin-top:0}
+.step{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;margin-right:8px;vertical-align:2px}
 .drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
 .howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
 .howto div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;font-size:13px;color:var(--muted)}
@@ -162,9 +218,33 @@ tr:last-child td{border-bottom:0}
 .p-scale{background:var(--scale-bg);color:var(--scale)} .p-keep{background:var(--keep-bg);color:var(--keep)} .p-trim{background:var(--trim-bg);color:var(--trim)} .p-cut{background:var(--cut-bg);color:var(--cut)} .p-low{background:var(--low-bg);color:var(--low)}
 .more{text-align:center;margin-top:12px}
 
-.method{margin-top:28px}
-.method ul{padding-left:20px;margin:6px 0 0}
-.method li{margin-bottom:6px}
+.h1sub{display:block;font-size:clamp(16px,2vw,19px);font-weight:600;color:var(--muted);letter-spacing:0;margin-top:6px}
+.byline{margin:4px 0 0}
+
+/* Reference article: plain, crawlable HTML that explains every rule the tool applies. */
+.doc{max-width:780px;margin:56px auto 0;font-size:15.5px;line-height:1.65}
+.doc section{padding-top:28px;margin-top:28px;border-top:1px solid var(--line)}
+.doc section:first-child{border-top:0;margin-top:0;padding-top:0}
+.doc h2{font-size:22px;letter-spacing:-.01em;margin:0 0 10px}
+.doc h3{font-size:16.5px;margin:22px 0 6px}
+.doc p{margin:0 0 12px}
+.doc ul,.doc ol{padding-left:22px;margin:0 0 12px}
+.doc li{margin-bottom:6px}
+.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+.doc .tablewrap{margin:4px 0 14px}
+.doc table{font-size:13.5px}
+.doc caption{caption-side:top;text-align:left;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:0 0 8px}
+.doc th,.doc td{white-space:normal;vertical-align:top}
+.doc th{position:static;cursor:default;user-select:auto}
+.doc tbody th{background:none;font-weight:600}
+table.facts{border:1px solid var(--line);border-radius:var(--radius);border-collapse:separate;border-spacing:0;overflow:hidden;margin:4px 0 0}
+table.facts caption{padding-bottom:8px}
+table.facts th{width:32%;color:var(--muted);font-weight:600}
+.doc .pill{white-space:nowrap}
+.doc dl{margin:0}
+.doc dt{font-weight:700;margin-top:12px}
+.doc dd{margin:2px 0 0;color:var(--muted)}
+@media (max-width:600px){ .doc{font-size:15px} table.facts th{width:38%} }
 footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
 [hidden]{display:none!important}
 </style>
@@ -181,8 +261,9 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <header class="top">
   <div>
-    <h1>Keyword Triage</h1>
-    <p class="lede">Upload a keyword report and see which keywords are losing money, which to keep, and which are worth more budget.</p>
+    <h1>Keyword Triage <span class="h1sub">Google Ads keyword profitability checker</span></h1>
+    <p class="lede">Keyword Triage is a free tool that checks the profitability of every keyword in a Google Ads or Microsoft Ads report. Upload the report and each keyword is labeled Cut, Trim bids, Keep, Scale or Needs data against your target CPA or ROAS.</p>
+    <p class="byline small muted">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>
   </div>
   <div class="shield">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -191,8 +272,22 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 </header>
 
 <section id="start">
-  <div class="drop" id="drop">
-    <h2>Drop your keyword report here</h2>
+  <div class="panel goal-first">
+    <h2><span class="step">1</span>Set your goal</h2>
+    <div class="settings-row">
+      <div>
+        <div class="small muted" style="margin-bottom:4px">Optimize for</div>
+        <div class="seg" id="preMode">
+          <button type="button" data-m="cpa" class="on">Target CPA</button>
+          <button type="button" data-m="roas">Target ROAS</button>
+        </div>
+      </div>
+      <label class="f"><span id="preLabel">Target cost per conversion</span><input type="number" id="preTarget" min="0" step="any" placeholder="e.g. 80"></label>
+    </div>
+    <p class="hint" id="preHint">Leave blank to judge keywords against your account’s average CPA. You can change it after uploading.</p>
+  </div>
+  <div class="drop" id="drop" style="margin-top:18px">
+    <h2><span class="step">2</span>Drop your keyword report here</h2>
     <p class="muted">Excel (.xlsx), CSV or TSV export from Google Ads or Microsoft Ads, or any spreadsheet with one row per keyword.</p>
     <div class="actions">
       <button class="btn primary" id="pick">Choose file</button>
@@ -264,17 +359,208 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
   </div>
 </section>
 
-<section class="method panel">
-  <h2>How verdicts are decided</h2>
-  <ul class="small">
-    <li><b style="color:var(--cut)">Cut</b>: spent past your threshold with zero conversions, or CPA is over 2× target (ROAS under half of target). These lose money.</li>
-    <li><b style="color:var(--trim)">Trim bids</b>: converting, but 20–100% over target CPA (or ROAS 50–83% of target). Lower bids or tighten the match type before cutting.</li>
-    <li><b style="color:var(--keep)">Keep</b>: on target, give or take 20%. Also good performers that don't have enough conversions yet to be sure.</li>
-    <li><b style="color:var(--scale)">Scale</b>: at least 20% better than target with enough conversions to trust. If the report includes <i>Search lost IS</i>, it says whether budget or bids are holding the keyword back.</li>
-    <li><b style="color:var(--low)">Needs data</b>: not enough clicks or spend to call yet. Leave these running.</li>
-  </ul>
-  <p class="small muted" style="margin-top:10px">These are starting points, not autopilot. Check the conversion lag, seasonality and assisted conversions before pausing anything big.</p>
+<article class="doc" id="guide">
+
+<section id="summary">
+  <h2>What Keyword Triage does</h2>
+  <p>Keyword Triage reads a keyword report exported from Google Ads or Microsoft Ads and tells you, keyword by keyword, whether the keyword is profitable at your target cost per acquisition (CPA) or target return on ad spend (ROAS). Each keyword gets one of five verdicts, a one-line reason, and an estimate of how much it spent above target.</p>
+  <table class="facts">
+    <caption>Keyword Triage at a glance</caption>
+    <tbody>
+      <tr><th scope="row">What it is</th><td>A free, browser-based keyword profitability checker for pay-per-click (PPC) search ads</td></tr>
+      <tr><th scope="row">Works with</th><td>Google Ads and Microsoft Ads (Bing Ads) keyword reports and search term reports</td></tr>
+      <tr><th scope="row">File formats</th><td>CSV, TSV, UTF-16 text and Excel .xlsx. The old Excel 97–2003 .xls format is not supported.</td></tr>
+      <tr><th scope="row">Required columns</th><td>Keyword, Cost and Conversions</td></tr>
+      <tr><th scope="row">Goal types</th><td>Target CPA or target ROAS. Both default to the account average in the uploaded file.</td></tr>
+      <tr><th scope="row">Verdicts</th><td>Cut, Trim bids, Keep, Scale, Needs data</td></tr>
+      <tr><th scope="row">Outputs</th><td>Verdict table, CSV export, and the Cut list copied as exact-match negative keywords</td></tr>
+      <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request, so the file cannot be uploaded.</td></tr>
+      <tr><th scope="row">Account access</th><td>None. Keyword Triage never connects to your ad account and cannot change bids, budgets or keywords.</td></tr>
+      <tr><th scope="row">Price</th><td>Free, no sign-up</td></tr>
+    </tbody>
+  </table>
 </section>
+
+<section id="how-to">
+  <h2>How to find unprofitable keywords in Google Ads with Keyword Triage</h2>
+  <p>To find unprofitable Google Ads keywords, export a keyword report covering 60 to 90 days, drop it into Keyword Triage, set your break-even CPA or ROAS, and review the keywords labeled Cut.</p>
+  <ol>
+    <li><b>Export the report.</b> In Google Ads, go to Campaigns › Keywords › Search keywords, set the date range to the last 60–90 days, and choose Download › Excel .csv or .xlsx. In Microsoft Ads, go to Campaigns › Keywords, set the date range, and choose Download › CSV or Excel.</li>
+    <li><b>Load the file.</b> Drop the file onto the upload box at the top of this page, or click Choose file. Keyword Triage detects the header row, the columns and the currency automatically.</li>
+    <li><b>Set your goal.</b> Choose Cost per conversion (CPA) or Return on ad spend (ROAS). Replace the default, which is your account average, with your real break-even number.</li>
+    <li><b>Review the Cut list.</b> Click the Cut card to filter the table. Every row explains its verdict, such as “Spent $410 with no conversions across 96 clicks.”</li>
+    <li><b>Act on it.</b> Pause the Cut keywords, or click Copy cut list as negatives and paste the exact-match negatives into a negative keyword list. Lower bids on Trim keywords, and give Scale keywords more budget or higher bids.</li>
+  </ol>
+</section>
+
+<section id="verdicts">
+  <h2>How Keyword Triage decides if a keyword is profitable</h2>
+  <p>Keyword Triage compares each keyword’s CPA or ROAS with your target and sorts it into one of five verdicts. A keyword with no conversions is judged on spend alone: it is cut once its spend reaches the zero-conversion threshold.</p>
+  <div class="tablewrap">
+  <table class="ref">
+    <caption>Keyword Triage verdict rules</caption>
+    <thead>
+      <tr><th scope="col">Verdict</th><th scope="col">Rule in CPA mode</th><th scope="col">Rule in ROAS mode</th><th scope="col">Recommended action</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row"><span class="pill p-cut">Cut</span></th><td>No conversions after spending the zero-conversion threshold, or CPA more than 2× target</td><td>No conversion value after spending the threshold, or ROAS below 50% of target</td><td>Pause the keyword or add it as a negative</td></tr>
+      <tr><th scope="row"><span class="pill p-trim">Trim bids</span></th><td>CPA about 20% to 100% above target</td><td>ROAS 50% to 83% of target</td><td>Lower the bid or tighten the match type before cutting</td></tr>
+      <tr><th scope="row"><span class="pill p-keep">Keep</span></th><td>CPA within about 20% of target, or better than target with fewer conversions than the scaling minimum</td><td>ROAS 83% to 125% of target, or better with fewer conversions than the scaling minimum</td><td>Leave it running</td></tr>
+      <tr><th scope="row"><span class="pill p-scale">Scale</span></th><td>CPA at least 20% below target, with at least the minimum conversions to scale (default 2)</td><td>ROAS at least 125% of target, with at least the minimum conversions to scale</td><td>Raise budget or bids, guided by lost impression share</td></tr>
+      <tr><th scope="row"><span class="pill p-low">Needs data</span></th><td>No conversions and spend below the threshold, or an over-target keyword with too few clicks and conversions to judge</td><td>Same as CPA mode, using conversion value</td><td>Leave it running and check again later</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>The efficiency score behind each verdict</h3>
+  <p>Keyword Triage converts every converting keyword into one efficiency score, where 1.0 means exactly on target and higher is better:</p>
+  <ul>
+    <li><b>CPA mode:</b> efficiency = target CPA ÷ keyword CPA, where keyword CPA = cost ÷ conversions.</li>
+    <li><b>ROAS mode:</b> efficiency = keyword ROAS ÷ target ROAS, where keyword ROAS = conversion value ÷ cost.</li>
+  </ul>
+  <p>The verdict cut-offs are: efficiency below 0.5 is Cut, 0.5 to 0.83 is Trim bids, 0.83 to 1.25 is Keep, and 1.25 or higher is Scale. A keyword with efficiency of 1.25 or higher but fewer conversions than the scaling minimum stays in Keep until it has more data.</p>
+
+  <h3>Default thresholds</h3>
+  <p>Every threshold can be edited in the Your goal panel. Keyword Triage sets the defaults from the uploaded report:</p>
+  <ul>
+    <li><b>Target CPA</b> defaults to the account CPA (total cost ÷ total conversions), rounded to two significant figures.</li>
+    <li><b>Target ROAS</b> defaults to the account ROAS (total conversion value ÷ total cost).</li>
+    <li><b>Zero-conversion cut threshold</b> defaults to 1.5× target CPA in CPA mode. In ROAS mode it defaults to 2 × (average conversion value ÷ target ROAS).</li>
+    <li><b>Minimum clicks before judging</b> defaults to 1.5 ÷ the account conversion rate, kept between 10 and 100 clicks. At a 3% conversion rate the default is 50 clicks.</li>
+    <li><b>Minimum conversions to scale</b> defaults to 2.</li>
+  </ul>
+</section>
+
+<section id="spend-above-target">
+  <h2>How “Spend above target” is calculated</h2>
+  <p>Spend above target is the amount a keyword spent beyond what its results were worth at your target. Keyword Triage adds it up across Cut and Trim bids keywords to estimate how much you would save by cutting and trimming to target.</p>
+  <ul>
+    <li><b>CPA mode:</b> spend above target = cost − (conversions × target CPA).</li>
+    <li><b>ROAS mode:</b> spend above target = cost − (conversion value ÷ target ROAS).</li>
+    <li><b>Zero-conversion keywords</b> in Cut count their full cost as spend above target.</li>
+  </ul>
+</section>
+
+<section id="impression-share">
+  <h2>How Keyword Triage uses Search lost impression share</h2>
+  <p>For keywords labeled Scale, Keyword Triage reads the Search lost IS (budget) and Search lost IS (rank) columns, when the report has them, to say what is limiting the keyword.</p>
+  <ul>
+    <li><b>Search lost IS (budget) of 10% or more:</b> the campaign budget is capping the keyword, so raise the campaign budget.</li>
+    <li><b>Search lost IS (rank) of 10% or more:</b> Ad Rank is capping the keyword, so raise the bid.</li>
+    <li><b>Both under 10%:</b> the keyword already shows for nearly every eligible search, so grow it with close variants or broader match types.</li>
+  </ul>
+  <p>Google Ads reports Search lost IS (budget) only at the campaign level, so a keyword report usually includes Search lost IS (rank) alone (<a href="https://support.google.com/google-ads/answer/7103314" rel="noopener">Google Ads Help: Get impression share data</a>). To get budget advice, add the campaign’s lost impression share as a column before loading the file. Google Ads reports very low impression share as “&lt; 10%” and very high share as “&gt; 90%”. Keyword Triage reads these as 5% and 95%.</p>
+</section>
+
+<section id="example">
+  <h2>Worked example: seven Google Ads keywords at a $50 target CPA</h2>
+  <p>This example uses a target CPA of $50, so the default zero-conversion cut threshold is $75 (1.5 × $50) and the minimum conversions to scale is 2.</p>
+  <div class="tablewrap">
+  <table class="ref">
+    <caption>Seven keywords judged against a $50 target CPA</caption>
+    <thead>
+      <tr><th scope="col">Keyword</th><th scope="col" class="num">Cost</th><th scope="col" class="num">Conversions</th><th scope="col" class="num">CPA</th><th scope="col" class="num">Efficiency</th><th scope="col">Verdict</th><th scope="col" class="num">Spend above target</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>copywriting jobs</td><td class="num">$410</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td>Cut (no conversions, spend past $75)</td><td class="num">$410</td></tr>
+      <tr><td>ppc management pricing</td><td class="num">$620</td><td class="num">5</td><td class="num">$124</td><td class="num">0.40</td><td>Cut (CPA over 2× target)</td><td class="num">$370</td></tr>
+      <tr><td>freelance copywriter</td><td class="num">$390</td><td class="num">6</td><td class="num">$65</td><td class="num">0.77</td><td>Trim bids (30% over target)</td><td class="num">$90</td></tr>
+      <tr><td>google ads copywriter</td><td class="num">$310</td><td class="num">6</td><td class="num">$51.67</td><td class="num">0.97</td><td>Keep (on target)</td><td class="num">—</td></tr>
+      <tr><td>saas copywriter</td><td class="num">$35</td><td class="num">1</td><td class="num">$35</td><td class="num">1.43</td><td>Keep (strong, but only 1 conversion)</td><td class="num">—</td></tr>
+      <tr><td>ppc audit</td><td class="num">$360</td><td class="num">12</td><td class="num">$30</td><td class="num">1.67</td><td>Scale (40% under target)</td><td class="num">—</td></tr>
+      <tr><td>b2b copywriter</td><td class="num">$70</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td>Needs data ($70 of the $75 threshold)</td><td class="num">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>In this example, the two Cut keywords and one Trim bids keyword spent $870 above target ($410 + $370 + $90). If “ppc audit” also shows 25% Search lost IS (budget), Keyword Triage recommends raising that campaign’s budget.</p>
+</section>
+
+<section id="columns">
+  <h2>Which report columns Keyword Triage needs</h2>
+  <p>Keyword Triage needs three columns: Keyword, Cost and Conversions. Optional columns make the advice more specific. Column names are matched automatically, and any column can be reassigned under Column mapping.</p>
+  <div class="tablewrap">
+  <table class="ref">
+    <caption>Columns Keyword Triage reads</caption>
+    <thead>
+      <tr><th scope="col">Column</th><th scope="col">Required</th><th scope="col">Google Ads name</th><th scope="col">Microsoft Ads name</th><th scope="col">Used for</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Keyword</th><td>Yes</td><td>Keyword, Search keyword or Search term</td><td>Keyword or Search term</td><td>Identifying each row</td></tr>
+      <tr><th scope="row">Cost</th><td>Yes</td><td>Cost</td><td>Spend</td><td>CPA, ROAS and spend above target</td></tr>
+      <tr><th scope="row">Conversions</th><td>Yes</td><td>Conversions</td><td>Conversions or Conv.</td><td>CPA and the zero-conversion rule</td></tr>
+      <tr><th scope="row">Conversion value</th><td>No</td><td>Conv. value</td><td>Revenue</td><td>ROAS mode (unavailable without it)</td></tr>
+      <tr><th scope="row">Clicks</th><td>No</td><td>Clicks</td><td>Clicks</td><td>The minimum clicks rule and the default threshold</td></tr>
+      <tr><th scope="row">Match type, Campaign, Ad group</th><td>No</td><td>Match type, Campaign, Ad group</td><td>Match type, Campaign name, Ad group name</td><td>Labels and filtering</td></tr>
+      <tr><th scope="row">Lost impression share</th><td>No</td><td>Search lost IS (budget), Search lost IS (rank)</td><td>Impression share lost to budget, Impression share lost to rank</td><td>Scaling advice</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Summary rows such as “Total: Account” are skipped automatically. Keyword Triage can also triage a search term report: load it, then set the Keyword field to the Search term column under Column mapping, and the Cut list becomes a list of search terms to add as negatives.</p>
+</section>
+
+<section id="privacy">
+  <h2>Is my keyword report uploaded anywhere?</h2>
+  <p>No. Keyword Triage reads the file with the browser’s FileReader API and analyzes it in JavaScript on your device. The page sets a Content-Security-Policy with <code>default-src 'none'</code> and <code>connect-src 'none'</code>, which tells the browser to block every network request the page could make, including fetch, XHR, beacons, external scripts, fonts and images. The only thing Keyword Triage stores is your light or dark theme preference. You can load the page, disconnect from the internet, and it keeps working.</p>
+</section>
+
+<section id="limits">
+  <h2>What Keyword Triage does not account for</h2>
+  <p>Keyword Triage judges keywords on the last-click conversions and costs in the report, so its verdicts are starting points, not autopilot. Check these before pausing a high-spend keyword:</p>
+  <ul>
+    <li><b>Conversion lag:</b> Google Ads credits a conversion to the date of the click, and conversions can be reported up to 90 days later, so recent days can show an inflated CPA and a deflated ROAS (<a href="https://support.google.com/google-ads/answer/9347141" rel="noopener">Google Ads Help: About conversion lag reporting</a>). End the date range a few days before today, or check the Days to conversion segment first.</li>
+    <li><b>Assisted conversions:</b> upper-funnel keywords can start journeys that another keyword gets credit for.</li>
+    <li><b>Seasonality:</b> a date range that spans a peak or a slump can misjudge a keyword’s normal performance.</li>
+    <li><b>Lifetime value:</b> a keyword that loses money on the first purchase can still be profitable on repeat purchases.</li>
+    <li><b>Brand keywords:</b> brand terms often look extremely efficient because they capture demand that would have converted anyway.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Frequently asked questions</h2>
+
+  <h3>What is a good CPA for Google Ads keywords?</h3>
+  <p>A good CPA is any CPA below your break-even CPA, which is the gross profit you make from one conversion. If a sale brings in $200 of gross profit, any keyword with a CPA under $200 is profitable before overhead. Keyword Triage defaults to your account average CPA, so replace it with your break-even CPA or your target CPA for the most useful verdicts.</p>
+
+  <h3>How do I calculate break-even ROAS?</h3>
+  <p>Break-even ROAS is 1 divided by your gross margin. A product with a 40% gross margin has a break-even ROAS of 2.5 (1 ÷ 0.40), meaning every $1 of ad spend must bring back $2.50 in revenue to cover product costs. Enter it in Keyword Triage as a target ROAS of 2.5.</p>
+
+  <h3>When should I pause a keyword with zero conversions?</h3>
+  <p>Pause a zero-conversion keyword once it has spent more than you would pay for one conversion, with some margin for bad luck. Keyword Triage uses 1.5× your target CPA as the default cut threshold, so with a $50 target CPA a keyword is cut after spending $75 with no conversions.</p>
+
+  <h3>How much data do I need before judging a keyword?</h3>
+  <p>Use 60 to 90 days of data so most keywords have enough clicks to judge. Keyword Triage leaves a keyword in Needs data until it reaches the minimum clicks, which defaults to about 1.5 expected conversions’ worth of clicks (1.5 ÷ your conversion rate, between 10 and 100 clicks).</p>
+
+  <h3>Does Keyword Triage work with Microsoft Ads?</h3>
+  <p>Yes. Keyword Triage reads Microsoft Ads (formerly Bing Ads) keyword reports in CSV or Excel format and recognizes Microsoft column names such as Spend, Revenue and Impression share lost to budget.</p>
+
+  <h3>Can Keyword Triage change bids or pause keywords in my account?</h3>
+  <p>No. Keyword Triage never connects to Google Ads or Microsoft Ads. It only reads the file you give it, and you make any changes in your ad account yourself.</p>
+
+  <h3>Is Keyword Triage free?</h3>
+  <p>Yes. Keyword Triage is free, needs no account or sign-up, and has no usage limits.</p>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <dl>
+    <dt>CPA (cost per acquisition)</dt>
+    <dd>Cost divided by conversions. The average amount spent to get one conversion.</dd>
+    <dt>ROAS (return on ad spend)</dt>
+    <dd>Conversion value divided by cost. A ROAS of 4 means $4 of revenue for every $1 spent.</dd>
+    <dt>Break-even CPA</dt>
+    <dd>The gross profit from one conversion. Keywords with a CPA above it lose money.</dd>
+    <dt>Break-even ROAS</dt>
+    <dd>1 divided by gross margin. Keywords with a ROAS below it lose money.</dd>
+    <dt>Search lost IS (budget)</dt>
+    <dd>The share of eligible impressions a keyword missed because its campaign ran out of budget.</dd>
+    <dt>Search lost IS (rank)</dt>
+    <dd>The share of eligible impressions a keyword missed because its Ad Rank (bid and quality) was too low.</dd>
+    <dt>Exact-match negative keyword</dt>
+    <dd>A negative keyword in square brackets, such as [copywriting jobs], that blocks ads only for that exact search.</dd>
+  </dl>
+</section>
+
+</article>
 
 <footer>
   <span>Runs fully client-side. No uploads, no tracking, no dependencies, no network requests.</span>
@@ -312,7 +598,7 @@ const $ = id => document.getElementById(id);
 const S = {
   fileName:'', rows:[], headerIdx:0, headers:[], map:{}, items:[],
   mode:'cpa', target:null, zerocut:null, minclicks:20, minconv:2,
-  acct:null, filter:'all', q:'', sort:{key:'cost',dir:-1}, limit:200, cur:'$'
+  acct:null, pre:{mode:'cpa', target:null}, goalNote:'', filter:'all', q:'', sort:{key:'cost',dir:-1}, limit:200, cur:'$'
 };
 
 /* ---------- File reading ---------- */
@@ -646,8 +932,11 @@ function recompute(resetGoal){
   S.items = buildItems();
   S.acct = accountStats(S.items);
   const hasValue = S.map.value>-1 && S.acct.value>0;
+  S.goalNote = '';
   if (resetGoal){
-    S.mode = hasValue ? 'roas' : 'cpa';
+    S.mode = S.pre.target ? S.pre.mode : (hasValue ? 'roas' : 'cpa');
+    if (S.mode==='roas' && !hasValue && S.pre.target)
+      S.goalNote = 'You set a target ROAS, but this report has no conversion value / revenue column, so it’s using CPA instead. Map a value column under “Column mapping” to use ROAS. ';
     setGoalDefaults();
   }
   if (!hasValue && S.mode==='roas'){ S.mode='cpa'; setGoalDefaults(); }
@@ -661,15 +950,16 @@ function niceRound(n){
   const p = Math.pow(10, Math.floor(Math.log10(n))-1);
   return Math.round(n/p)*p;
 }
+const userTarget = mode => S.pre.mode===mode && S.pre.target>0 ? S.pre.target : null;
 function setGoalDefaults(){
   const a=S.acct;
   if (S.mode==='roas'){
-    S.target = isFinite(a.roas) && a.roas>0 ? +a.roas.toFixed(2) : 3;
+    S.target = userTarget('roas') || (isFinite(a.roas) && a.roas>0 ? +a.roas.toFixed(2) : 3);
     // break-even-ish spend: avg conversion value / target ROAS, ×2
     const be = isFinite(a.aov) ? a.aov / S.target : (a.cost/Math.max(1,S.items.length));
     S.zerocut = niceRound(be*2) || 50;
   } else {
-    S.target = isFinite(a.cpa) && a.cpa>0 ? niceRound(a.cpa) : 50;
+    S.target = userTarget('cpa') || (isFinite(a.cpa) && a.cpa>0 ? niceRound(a.cpa) : 50);
     S.zerocut = niceRound(S.target*1.5) || 75;
   }
   S.minclicks = isFinite(a.cr) && a.cr>0 ? Math.max(10, Math.min(100, Math.round(1.5/a.cr))) : 20;
@@ -709,7 +999,8 @@ function renderSettings(hasValue){
   const a=S.acct;
   $('acctline').textContent = `Account average for this file: ${fmtMoney(a.cost,0)} spend, ${fmtNum(a.conv,1)} conversions, CPA ${fmtMoney(a.cpa)}`
     + (hasValue?`, ROAS ${fmtRoas(a.roas)}`:'') + (isFinite(a.cr)?`, conv. rate ${(a.cr*100).toFixed(1)}%`:'')
-    + `. Targets default to your averages. Set them to your real break-even numbers.`;
+    + '. ' + (userTarget(S.mode) ? 'Judging against the target you set.' : `No target set, so this uses your account average. Enter your real break-even ${S.mode==='roas'?'ROAS':'CPA'} above for sharper verdicts.`);
+  if (S.goalNote) $('acctline').textContent = S.goalNote + $('acctline').textContent;
 }
 
 /* ---------- Render: results ---------- */
@@ -908,11 +1199,27 @@ const drop=$('drop');
 ['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
 document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f) readFile(f); });
 $('sample').onclick=()=>loadText(sampleCSV(),'sample-keyword-report.csv');
-$('reset').onclick=()=>{ S.rows=[];S.items=[]; $('work').hidden=true; $('start').hidden=false; };
+$('reset').onclick=()=>{ S.rows=[];S.items=[]; $('work').hidden=true; $('start').hidden=false; syncPre(); };
 
 document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{ if(b.disabled||S.mode===b.dataset.m)return; S.mode=b.dataset.m; setGoalDefaults(); recompute(false); });
 const onNum=(id,key,min)=>$(id).addEventListener('input',()=>{ const v=parseFloat($(id).value); if(isFinite(v)&&v>=min){ S[key]=v; S.items.forEach(classify); renderResults(); }});
-onNum('target','target',0.0001); onNum('zerocut','zerocut',0); onNum('minclicks','minclicks',0); onNum('minconv','minconv',0);
+onNum('target','target',0.0001);
+$('target').addEventListener('input',()=>{ const v=parseFloat($('target').value); if(isFinite(v)&&v>0){ S.pre={mode:S.mode,target:v}; syncPre(); } });
+function syncPre(){
+  document.querySelectorAll('#preMode button').forEach(b=>b.classList.toggle('on', b.dataset.m===S.pre.mode));
+  const roas = S.pre.mode==='roas';
+  $('preLabel').textContent = roas ? 'Target ROAS (e.g. 4 = 400%)' : 'Target cost per conversion';
+  $('preTarget').placeholder = roas ? 'e.g. 4' : 'e.g. 80';
+  if (document.activeElement!==$('preTarget')) $('preTarget').value = S.pre.target || '';
+  $('preHint').textContent = roas
+    ? 'Your report needs a conversion value or revenue column for ROAS. Leave blank to use your account’s average ROAS.'
+    : 'Leave blank to judge keywords against your account’s average CPA. You can change it after uploading.';
+}
+document.querySelectorAll('#preMode button').forEach(b=>b.onclick=()=>{
+  if (S.pre.mode===b.dataset.m) return;
+  S.pre={mode:b.dataset.m, target:null}; syncPre();
+});
+$('preTarget').addEventListener('input',()=>{ const v=parseFloat($('preTarget').value); S.pre.target = isFinite(v)&&v>0 ? v : null; }); onNum('zerocut','zerocut',0); onNum('minclicks','minclicks',0); onNum('minconv','minconv',0);
 
 let qt; $('q').addEventListener('input',e=>{ clearTimeout(qt); qt=setTimeout(()=>{S.q=e.target.value.trim();S.limit=200;renderTable();},120); });
 $('more').firstElementChild.onclick=()=>{ S.limit+=300; renderTable(); };

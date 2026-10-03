@@ -1,0 +1,6 @@
+# All crawlers, including AI search and answer engines (OAI-SearchBot, ChatGPT-User,
+# PerplexityBot, Claude-SearchBot, Claude-User, Googlebot, Bingbot), are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://tools.copyfororiginals.com/sitemap.xml

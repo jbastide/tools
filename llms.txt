@@ -1,0 +1,13 @@
+# Copy for Originals Tools
+
+> Small, free, single-purpose web tools for PPC marketers, copywriters and short-form video scriptwriters. Every tool runs entirely in the browser; nothing is uploaded.
+
+## Tools
+
+- [Keyword Triage: Google Ads keyword profitability checker](https://tools.copyfororiginals.com/keyword-triage/): Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV or .xlsx) and labels each keyword Cut, Trim bids, Keep, Scale or Needs data against a target CPA or ROAS. The page documents every rule, default threshold and formula the tool uses.
+- [Short-Form Script Pacing & Hook Timer](https://tools.copyfororiginals.com/script-timer/): Times a short-form video script by retention zone (3s / 15s / 30s / 60s) and grades the hook.
+
+## Research
+
+- [How to write content that LLMs retrieve and cite](https://tools.copyfororiginals.com/rag-friendly-content/): An evidence-rated guide to answer engine optimization (AEO) and RAG-friendly content, with sources and a 12-point checklist.
+- [Speaking rate study of top YouTube Shorts](https://tools.copyfororiginals.com/script-timer/study/): Speaking rate and hook length measured in 132 top YouTube Shorts.

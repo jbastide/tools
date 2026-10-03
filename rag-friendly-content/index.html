@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Write Content That LLMs Retrieve and Cite: An Evidence-Rated AEO Guide</title>
+<meta name="description" content="What makes a web page easy for ChatGPT, Claude, Perplexity, Copilot and Google AI Overviews to retrieve and cite. Every practice is rated by the strength of its evidence, with sources, plus a 12-point checklist.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/rag-friendly-content/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/rag-friendly-content/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="How to Write Content That LLMs Retrieve and Cite">
+<meta property="og:description" content="An evidence-rated guide to answer engine optimization (AEO) and RAG-friendly content, with sources and a checklist.">
+<meta property="article:modified_time" content="2026-10-03">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/rag-friendly-content/#article",
+      "headline": "How to Write Content That LLMs Retrieve and Cite: An Evidence-Rated AEO Guide",
+      "alternativeHeadline": "RAG-friendly content and answer engine optimization (AEO), rated by evidence",
+      "description": "What makes a web page easy for ChatGPT, Claude, Perplexity, Copilot and Google AI Overviews to retrieve and cite, with every practice rated by the strength of its evidence.",
+      "url": "https://tools.copyfororiginals.com/rag-friendly-content/",
+      "inLanguage": "en",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" },
+      "about": ["Answer engine optimization", "Generative engine optimization", "Retrieval-augmented generation"],
+      "citation": [
+        "https://arxiv.org/abs/2311.09735",
+        "https://arxiv.org/abs/2605.25517",
+        "https://arxiv.org/abs/2609.35077",
+        "https://arxiv.org/abs/2509.11353",
+        "https://vercel.com/blog/the-rise-of-the-ai-crawler",
+        "https://ahrefs.com/blog/schema-ai-citations/",
+        "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+        "https://ahrefs.com/blog/why-chatgpt-cites-pages/",
+        "https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/",
+        "https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/",
+        "https://www.anthropic.com/news/contextual-retrieval",
+        "https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers"
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/" },
+          { "@type": "ListItem", "position": 2, "name": "RAG-friendly content guide", "item": "https://tools.copyfororiginals.com/rag-friendly-content/" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --soft:#f1f3f7; --line:#dfe3ea; --ink:#141821; --muted:#4a5361; --faint:#7b8697;
+  --accent:#4f46e5; --accent-soft:rgba(79,70,229,.09);
+  --strong:#12805c; --strong-bg:#e3f4ec; --mod:#2563a8; --mod-bg:#e4eef9; --inf:#a35c00; --inf-bg:#fbefdc; --weak:#6b7280; --weak-bg:#eeeff1;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0e13; --panel:#14171f; --soft:#1b1f29; --line:#272c38; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394;
+    --accent:#818cf8; --accent-soft:rgba(129,140,248,.13);
+    --strong:#34d399; --strong-bg:rgba(52,211,153,.14); --mod:#7aa7f5; --mod-bg:rgba(122,167,245,.14);
+    --inf:#fbbf24; --inf-bg:rgba(251,191,36,.13); --weak:#a3a9b3; --weak-bg:rgba(163,169,179,.14);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#0c0e13; --panel:#14171f; --soft:#1b1f29; --line:#272c38; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394;
+    --accent:#818cf8; --accent-soft:rgba(129,140,248,.13);
+    --strong:#34d399; --strong-bg:rgba(52,211,153,.14); --mod:#7aa7f5; --mod-bg:rgba(122,167,245,.14);
+    --inf:#fbbf24; --inf-bg:rgba(251,191,36,.13); --weak:#a3a9b3; --weak-bg:rgba(163,169,179,.14);
+    color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:28px 16px 64px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.crumbs{font-size:14px;margin-bottom:26px}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--accent)}
+h1{font-size:clamp(28px,4.6vw,40px);line-height:1.12;letter-spacing:-.022em;margin:0 0 14px}
+h2{font-size:clamp(21px,3vw,25px);line-height:1.25;letter-spacing:-.01em;margin:0 0 12px}
+h3{font-size:17px;margin:24px 0 8px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:7px}
+.lede{font-size:18.5px;color:var(--muted)}
+.byline{font-size:14px;color:var(--faint);margin:0 0 8px}
+section{border-top:1px solid var(--line);padding-top:30px;margin-top:34px}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;margin:24px 0 0}
+.tldr p:last-child{margin-bottom:0}
+.tldr h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:14px;color:var(--muted);margin:14px 0 0;padding:0;list-style:none}
+.legend li{margin:0}
+.ev{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;border-radius:999px;padding:1px 8px;white-space:nowrap;vertical-align:1px}
+.ev-strong{background:var(--strong-bg);color:var(--strong)} .ev-mod{background:var(--mod-bg);color:var(--mod)}
+.ev-inf{background:var(--inf-bg);color:var(--inf)} .ev-weak{background:var(--weak-bg);color:var(--weak)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:6px 0 16px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+caption{caption-side:top;text-align:left;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:12px 12px 4px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+thead th{background:var(--soft);font-weight:600}
+tbody th{font-weight:600}
+tr:last-child td,tr:last-child th{border-bottom:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+code{font-size:13.5px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+ol.check{counter-reset:c;list-style:none;padding:0}
+ol.check li{counter-increment:c;position:relative;padding-left:38px;margin-bottom:10px}
+ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13px;display:grid;place-items:center}
+.sources li{font-size:14.5px}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:14px;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+
+<header>
+  <h1>How to write content that LLMs retrieve and cite</h1>
+  <p class="lede">RAG-friendly content is web content that a retrieval-augmented generation (RAG) pipeline can fetch, split into chunks, match to a question and quote without losing meaning. This guide explains what answer engines such as ChatGPT, Claude, Perplexity, Microsoft Copilot and Google AI Overviews do with a page, and rates every common answer engine optimization (AEO) practice by the strength of its evidence.</p>
+  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>
+  <ul class="legend" aria-label="Evidence ratings used on this page">
+    <li><span class="ev ev-strong">Strong</span> primary docs, peer-reviewed or controlled experiment</li>
+    <li><span class="ev ev-mod">Moderate</span> large observational or industry study</li>
+    <li><span class="ev ev-inf">Inference</span> follows from how RAG works, not tested on production engines</li>
+    <li><span class="ev ev-weak">Weak</span> widely believed, little or mixed evidence</li>
+  </ul>
+  <div class="tldr">
+    <h2>Short answer</h2>
+    <p>A page gets cited by answer engines when every fact is in the raw HTML (most AI crawlers don’t run JavaScript), when each section makes sense on its own, when headings closely match the questions people actually ask, and when the text contains specific, quotable facts such as numbers, formulas, prices and dates. Schema markup and llms.txt files show no measurable effect on citations. Domain authority and presence in the Google and Bing indexes still matter more than any single page-level change.</p>
+  </div>
+</header>
+
+<section id="pipeline">
+  <h2>How answer engines process a web page</h2>
+  <p>An answer engine processes a web page in five steps: it fetches the HTML, extracts the main text, splits the text into chunks, retrieves the chunks closest to each sub-question, and reranks them before quoting the best ones. Each step drops some content, and each one implies a writing rule.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>The RAG pipeline and what each step means for writers</caption>
+    <thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">What to do</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1. Fetch</th><td>None of the major AI crawlers render JavaScript, including those from OpenAI, Anthropic, Meta, ByteDance and Perplexity. Only Google’s Gemini (through Googlebot) and AppleBot render it. <span class="ev ev-strong">Strong</span> <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" rel="noopener">Vercel</a></td><td>Server-render or prerender every fact. A JavaScript app needs a static text explanation beside it.</td></tr>
+      <tr><th scope="row">2. Extract</th><td>Main-content extractors such as Mozilla Readability discard nodes that are hidden (the <code>hidden</code> attribute, <code>display:none</code>, <code>aria-hidden</code>) and blocks that look like boilerplate. Tables with header cells are kept as data. <span class="ev ev-strong">Strong</span> <a href="https://github.com/mozilla/readability" rel="noopener">Readability source</a></td><td>Use real <code>&lt;table&gt;</code> elements with <code>&lt;th&gt;</code> headers. Don’t hide important answers in tabs, accordions or images.</td></tr>
+      <tr><th scope="row">3. Chunk</th><td>The page is split into passages of a few hundred tokens. A passage cut from its context loses meaning: Anthropic reduced failed retrievals by 49%, and by 67% with reranking, by adding the missing context back to each chunk. <span class="ev ev-strong">Strong</span> <a href="https://www.anthropic.com/news/contextual-retrieval" rel="noopener">Anthropic</a></td><td>Make every section self-contained. Repeat the subject’s name instead of writing “it” or “this tool”.</td></tr>
+      <tr><th scope="row">4. Retrieve</th><td>Engines expand one question into many sub-queries (“query fan-out”). In March 2026, only 38% of pages cited in Google AI Overviews ranked in the top 10 for the original query, down from about 76% in July 2025. <span class="ev ev-mod">Moderate</span> <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/" rel="noopener">Ahrefs</a></td><td>Write headings as the literal questions people ask, and cover the related sub-questions, not only the main topic.</td></tr>
+      <tr><th scope="row">5. Rerank</th><td>LLM rerankers favor passages that look recent. Adding dates moved the top-10 results’ mean publication year forward by up to 4.78 years and reversed up to 25% of preferences between equally relevant passages. <span class="ev ev-strong">Strong</span> <a href="https://arxiv.org/abs/2509.11353" rel="noopener">Fang et al.</a></td><td>Lead with the answer. Show a real “Last updated” date and change it only for substantive updates.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="crawl">
+  <h2>Why JavaScript-rendered content is invisible to most AI crawlers</h2>
+  <p>JavaScript-rendered content is invisible to ChatGPT, Claude and Perplexity crawlers because those crawlers download the HTML and never execute the scripts. Vercel’s analysis of crawler traffic found that some AI crawlers download JavaScript files without running them, and that ChatGPT’s and Claude’s crawlers spend about 34% of their fetches on 404 pages, compared with about 8% for Googlebot. <span class="ev ev-strong">Strong</span></p>
+  <p>To see what an AI crawler sees, request the page with <code>curl</code> and read the raw HTML. Anything missing from that output, such as text inserted by React, numbers drawn on a canvas, or results computed in the browser, cannot be cited.</p>
+</section>
+
+<section id="structure">
+  <h2>How to structure a page so each section can be retrieved on its own</h2>
+  <p>Structure a page so that every H2 section answers one question completely in roughly 150 to 400 words, starts with the direct answer, and names its subject explicitly. Retrieval systems judge each chunk alone, so a section that depends on the one above it is hard to match to a question. <span class="ev ev-inf">Inference</span></p>
+  <ul>
+    <li><b>One H1, then a clean H2 and H3 tree.</b> Heading-aware splitters cut at headings and often attach the heading path to the chunk.</li>
+    <li><b>Open with a definition:</b> “X is a Y that does Z for W.” A definition is the ideal standalone chunk.</li>
+    <li><b>Answer first, then explain.</b> Treat every section as a small inverted pyramid.</li>
+    <li><b>Repeat the entity name.</b> A chunk that says “it supports CSV” can’t be matched to the question “Does Keyword Triage support CSV?”.</li>
+    <li><b>Write formulas and thresholds as plain text,</b> for example “efficiency = target CPA ÷ keyword CPA; below 0.5 is Cut”.</li>
+    <li><b>Use real tables and lists.</b> Microsoft recommends comparison tables, numbered steps and Q&amp;A formats for content it wants Copilot to quote. <a href="https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers" rel="noopener">Microsoft Advertising</a></li>
+  </ul>
+</section>
+
+<section id="writing">
+  <h2>Which writing techniques increase AI citations</h2>
+  <p>The writing techniques with the best evidence are matching the user’s question closely, adding statistics, quotations and cited sources, and stating explicit prices, numbers and dates. Formatting changes on their own have little effect.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Writing techniques rated by evidence</caption>
+    <thead><tr><th scope="col">Technique</th><th scope="col">Evidence</th><th scope="col">What the research found</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Close match to the question</th><td><span class="ev ev-mod">Moderate</span></td><td>In about 2.1 million citations across ChatGPT, Claude, Google AI and Gemini, how closely page content matched the prompt was the strongest page-level factor (β = +0.37). <a href="https://arxiv.org/abs/2609.35077" rel="noopener">Moore &amp; Dunne, 2026</a>. In 1.4 million ChatGPT prompts, cited pages’ titles were closer to the prompt than non-cited pages’ titles (cosine similarity 0.602 vs. 0.484). <a href="https://ahrefs.com/blog/why-chatgpt-cites-pages/" rel="noopener">Ahrefs</a></td></tr>
+      <tr><th scope="row">Statistics, quotations and cited sources</th><td><span class="ev ev-strong">Strong</span></td><td>The GEO paper (KDD 2024) found these rewrites raised a source’s visibility in generated answers by up to about 40%, with the biggest gains for lower-ranked sources. Keyword stuffing performed worse than doing nothing. <a href="https://arxiv.org/abs/2311.09735" rel="noopener">Aggarwal et al.</a></td></tr>
+      <tr><th scope="row">Explicit prices, numbers and timestamps</th><td><span class="ev ev-strong">Strong</span></td><td>In 252,000 controlled trials across six LLMs, explicit prices and recent timestamps consistently increased selection, while formatting-only changes had minimal effect. <a href="https://arxiv.org/abs/2605.25517" rel="noopener">Vishwakarma et al., 2026</a></td></tr>
+      <tr><th scope="row">Visible freshness</th><td><span class="ev ev-strong">Strong</span></td><td>LLM rerankers promote passages that look recent (see step 5 above). Page age also had a small effect in the 2.1-million-citation study (β = +0.05).</td></tr>
+      <tr><th scope="row">Worked examples and glossaries</th><td><span class="ev ev-inf">Inference</span></td><td>These give the engine self-contained, verifiable facts to quote. Not tested directly.</td></tr>
+      <tr><th scope="row">FAQ blocks</th><td><span class="ev ev-weak">Weak</span></td><td>Small positive association (β = +0.07) that was not significant after controls. Still useful because FAQ questions match real queries.</td></tr>
+      <tr><th scope="row">Author bylines and trust cues</th><td><span class="ev ev-weak">Weak</span></td><td>Modest effects in controlled trials. Unproven in production engines.</td></tr>
+      <tr><th scope="row">Page speed and Core Web Vitals</th><td><span class="ev ev-weak">Weak</span></td><td>No effect once the domain was controlled for.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="schema">
+  <h2>Does schema markup help with AI citations?</h2>
+  <p>Schema markup on its own does not measurably increase AI citations. When Ahrefs tracked 1,885 pages that added JSON-LD schema between August 2025 and March 2026 against matched control pages, citations changed by −4.6% in Google AI Overviews, +2.4% in AI Mode and +2.2% in ChatGPT, and the last two were statistically indistinguishable from zero. <span class="ev ev-mod">Moderate</span> <a href="https://ahrefs.com/blog/schema-ai-citations/" rel="noopener">Ahrefs</a></p>
+  <p>In a separate test, none of five AI systems found a product price that existed only in JSON-LD. ChatGPT, Claude and Gemini fetched the page directly, and Perplexity and Google AI Mode answered from their search indexes. <span class="ev ev-strong">Strong</span> <a href="https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/" rel="noopener">searchVIU</a></p>
+  <p>Schema is still worth adding for classic search and for describing entities: <code>WebApplication</code> or <code>SoftwareApplication</code> for tools, <code>Article</code>, <code>Organization</code>, <code>BreadcrumbList</code> and <code>dateModified</code>. The rule is that JSON-LD must repeat visible text and never be the only place a fact appears.</p>
+</section>
+
+<section id="llms-txt">
+  <h2>Does llms.txt help AI search visibility?</h2>
+  <p>There is no evidence that llms.txt increases AI citations. SE Ranking analyzed about 300,000 domains, found llms.txt on about 10% of them, and found no meaningful relationship between having the file and how often a domain is cited. <span class="ev ev-mod">Moderate</span> <a href="https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/" rel="noopener">Search Engine Journal</a></p>
+  <p>An llms.txt file, as proposed at <a href="https://llmstxt.org" rel="noopener">llmstxt.org</a>, is a Markdown file at the site root with an H1 name, a one-line summary in a blockquote, and H2 sections of annotated links. It is cheap to add and can help coding agents pointed at documentation, but don’t expect it to change answer-engine citations.</p>
+</section>
+
+<section id="bots">
+  <h2>Which AI crawlers to allow in robots.txt</h2>
+  <p>To appear in AI answers, allow the search and user-fetch crawlers. Blocking the training crawlers keeps your content out of model training, but does not remove you from AI search answers.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>AI crawlers and what blocking them does</caption>
+    <thead><tr><th scope="col">Crawler</th><th scope="col">Used for</th><th scope="col">Blocking it…</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">OAI-SearchBot, ChatGPT-User</th><td>ChatGPT search and user-requested fetches</td><td>removes you from ChatGPT answers</td></tr>
+      <tr><th scope="row">Claude-SearchBot, Claude-User</th><td>Claude search and user-requested fetches</td><td>removes you from Claude answers</td></tr>
+      <tr><th scope="row">PerplexityBot, Perplexity-User</th><td>Perplexity’s index and user-requested fetches</td><td>removes you from Perplexity answers</td></tr>
+      <tr><th scope="row">Googlebot, Bingbot</th><td>Google AI Overviews and AI Mode; Microsoft Copilot</td><td>removes you from search and AI answers</td></tr>
+      <tr><th scope="row">GPTBot, ClaudeBot, Google-Extended, Applebot-Extended</th><td>Model training</td><td>does not remove you from AI search answers</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Copilot answers from Bing’s index, so submit your sitemap to Bing Webmaster Tools as well as Google Search Console.</p>
+</section>
+
+<section id="case-study">
+  <h2>Example: making Keyword Triage RAG-friendly</h2>
+  <p><a href="../keyword-triage/">Keyword Triage</a> is a Google Ads keyword profitability checker on this site. Before the rewrite, its verdict rules, default thresholds and formulas existed only in JavaScript. A crawler that doesn’t run JavaScript saw about 340 words and no thresholds.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Keyword Triage before and after the rewrite</caption>
+    <thead><tr><th scope="col">Change</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Words visible without JavaScript</th><td>342</td><td>about 2,470</td></tr>
+      <tr><th scope="row">H1</th><td>Keyword Triage</td><td>Keyword Triage: Google Ads keyword profitability checker</td></tr>
+      <tr><th scope="row">Opening sentence</th><td>A task description</td><td>A definition: “Keyword Triage is a free tool that checks the profitability of every keyword…”</td></tr>
+      <tr><th scope="row">Rules and formulas</th><td>In JavaScript only</td><td>A verdict table, the efficiency formula, every default threshold and the spend-above-target formula, all in visible text</td></tr>
+      <tr><th scope="row">Worked example</th><td>None</td><td>Seven keywords at a $50 target CPA, checked against the tool’s actual output</td></tr>
+      <tr><th scope="row">Question-shaped sections</th><td>1</td><td>10, plus a 7-question FAQ and a glossary</td></tr>
+      <tr><th scope="row">Sources and freshness</th><td>None</td><td>Two Google Ads Help citations, a byline and a “Last updated” date</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="checklist">
+  <h2>RAG-friendly content checklist</h2>
+  <p>Use this 12-point checklist before publishing any page you want answer engines to cite.</p>
+  <ol class="check">
+    <li>Every fact is in server-rendered HTML. Check it with <code>curl</code>.</li>
+    <li>One H1 that names the entity and the category people search for.</li>
+    <li>A definitional first sentence: “X is a Y that does Z.”</li>
+    <li>Question-shaped H2s, each answered in its first sentence.</li>
+    <li>Self-contained sections that repeat the entity’s name instead of “it”.</li>
+    <li>Numbers, thresholds, formulas and prices in plain text.</li>
+    <li>A worked example with real numbers.</li>
+    <li>Real tables with captions and header cells, and lists for steps.</li>
+    <li>Two or three citations to primary sources.</li>
+    <li>An FAQ for adjacent questions, a glossary and a limitations section.</li>
+    <li>A visible byline and “Last updated” date that match <code>dateModified</code>.</li>
+    <li>A canonical URL, a sitemap with <code>lastmod</code>, a robots.txt that allows search and user crawlers, and submission to both Google Search Console and Bing Webmaster Tools.</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ul class="sources">
+    <li>Aggarwal et al., “GEO: Generative Engine Optimization,” KDD 2024. <a href="https://arxiv.org/abs/2311.09735" rel="noopener">arXiv 2311.09735</a></li>
+    <li>Vishwakarma, Kumar &amp; Jamidar, “What Gets Cited: Competitive GEO in AI Answer Engines,” May 2026. <a href="https://arxiv.org/abs/2605.25517" rel="noopener">arXiv 2605.25517</a></li>
+    <li>Moore &amp; Dunne (Discovered Labs), “What Drives Citations in Production Large Language Models?,” May 2026. <a href="https://arxiv.org/abs/2609.35077" rel="noopener">arXiv 2609.35077</a></li>
+    <li>Fang, Tao, Chen, Chang &amp; Sakai, “Do Large Language Models Favor Recent Content? A Study on Recency Bias in LLM-Based Reranking.” <a href="https://arxiv.org/abs/2509.11353" rel="noopener">arXiv 2509.11353</a></li>
+    <li>Vercel, “The rise of the AI crawler.” <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" rel="noopener">vercel.com</a></li>
+    <li>Anthropic, “Introducing Contextual Retrieval.” <a href="https://www.anthropic.com/news/contextual-retrieval" rel="noopener">anthropic.com</a></li>
+    <li>Ahrefs, study of how many AI Overview citations rank in the top 10, March 2026. <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/" rel="noopener">ahrefs.com</a></li>
+    <li>Ahrefs, study of why ChatGPT cites pages (1.4 million prompts). <a href="https://ahrefs.com/blog/why-chatgpt-cites-pages/" rel="noopener">ahrefs.com</a></li>
+    <li>Ahrefs, study of schema markup and AI citations (1,885 pages). <a href="https://ahrefs.com/blog/schema-ai-citations/" rel="noopener">ahrefs.com</a></li>
+    <li>searchVIU, test of what ChatGPT, Claude, Perplexity and Gemini extract from schema markup. <a href="https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/" rel="noopener">searchviu.com</a></li>
+    <li>Search Engine Journal, report on SE Ranking’s llms.txt study of 300,000 domains. <a href="https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/" rel="noopener">searchenginejournal.com</a></li>
+    <li>Microsoft Advertising, guidance on optimizing content for inclusion in AI search answers, October 2025. <a href="https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers" rel="noopener">about.ads.microsoft.com</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>Static page. No scripts, no tracking. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+</footer>
+</div>
+</body>
+</html>

@@ -51,7 +51,7 @@
       "featureList": [
         "Reads Google Ads and Microsoft Ads keyword or search term reports in CSV, TSV, UTF-16 text or Excel (.xlsx)",
         "Detects columns automatically, with manual override",
-        "Judges each keyword against a target CPA or target ROAS, defaulting to the account average",
+        "Judges each keyword against a target CPA or target ROAS that you enter before uploading",
         "Cuts zero-conversion keywords once spend passes a threshold (default 1.5 times target CPA)",
         "Uses Search lost IS (budget) and Search lost IS (rank) to say whether budget or bids limit a winning keyword",
         "Estimates spend above target for Cut and Trim keywords",
@@ -80,7 +80,7 @@
       "@type": "FAQPage",
       "@id": "https://tools.copyfororiginals.com/keyword-triage/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "What is a good CPA for Google Ads keywords?", "acceptedAnswer": {"@type": "Answer", "text": "A good CPA is any CPA below your break-even CPA, which is the gross profit you make from one conversion. If a sale brings in $200 of gross profit, any keyword with a CPA under $200 is profitable before overhead. Keyword Triage defaults to your account average CPA, so replace it with your break-even CPA or your target CPA for the most useful verdicts."}},
+        {"@type": "Question", "name": "What is a good CPA for Google Ads keywords?", "acceptedAnswer": {"@type": "Answer", "text": "A good CPA is any CPA below your break-even CPA, which is the gross profit you make from one conversion. If a sale brings in $200 of gross profit, any keyword with a CPA under $200 is profitable before overhead. Keyword Triage asks for your break-even CPA or target CPA before you upload a report, because every verdict is measured against it."}},
         {"@type": "Question", "name": "How do I calculate break-even ROAS?", "acceptedAnswer": {"@type": "Answer", "text": "Break-even ROAS is 1 divided by your gross margin. A product with a 40% gross margin has a break-even ROAS of 2.5 (1 ÷ 0.40), meaning every $1 of ad spend must bring back $2.50 in revenue to cover product costs. Enter it in Keyword Triage as a target ROAS of 2.5."}},
         {"@type": "Question", "name": "When should I pause a keyword with zero conversions?", "acceptedAnswer": {"@type": "Answer", "text": "Pause a zero-conversion keyword once it has spent more than you would pay for one conversion, with some margin for bad luck. Keyword Triage uses 1.5× your target CPA as the default cut threshold, so with a $50 target CPA a keyword is cut after spending $75 with no conversions."}},
         {"@type": "Question", "name": "How much data do I need before judging a keyword?", "acceptedAnswer": {"@type": "Answer", "text": "Use 60 to 90 days of data so most keywords have enough clicks to judge. Keyword Triage leaves a keyword in Needs data until it reaches the minimum clicks, which defaults to about 1.5 expected conversions’ worth of clicks (1.5 ÷ your conversion rate, between 10 and 100 clicks)."}},
@@ -158,6 +158,11 @@ header.top{display:flex;gap:24px;align-items:flex-end;justify-content:space-betw
 .drop.over{border-color:var(--accent);background:var(--soft)}
 .drop h2{font-size:20px;margin-bottom:6px}
 .goal-first{margin-top:0}
+.drop.locked{opacity:.55}
+.drop.locked .btn{cursor:not-allowed}
+.lockmsg{font-weight:600;color:var(--accent);margin:0 0 6px}
+.drop:not(.locked) .lockmsg{display:none}
+#preTarget.need{border-color:var(--cut);outline:2px solid var(--cut);outline-offset:0}
 .step{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;margin-right:8px;vertical-align:2px}
 .drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
 .howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
@@ -282,12 +287,13 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
           <button type="button" data-m="roas">Target ROAS</button>
         </div>
       </div>
-      <label class="f"><span id="preLabel">Target cost per conversion</span><input type="number" id="preTarget" min="0" step="any" placeholder="e.g. 80"></label>
+      <label class="f"><span id="preLabel">Target cost per conversion</span><input type="number" id="preTarget" min="0" step="any" placeholder="e.g. 80" required aria-describedby="preHint"></label>
     </div>
-    <p class="hint" id="preHint">Leave blank to judge keywords against your account’s average CPA. You can change it after uploading.</p>
+    <p class="hint" id="preHint">Use your break-even CPA: the gross profit from one conversion. A keyword that costs more than this per conversion is losing money.</p>
   </div>
   <div class="drop" id="drop" style="margin-top:18px">
     <h2><span class="step">2</span>Drop your keyword report here</h2>
+    <p class="lockmsg" id="lockmsg">Enter your target above to continue.</p>
     <p class="muted">Excel (.xlsx), CSV or TSV export from Google Ads or Microsoft Ads, or any spreadsheet with one row per keyword.</p>
     <div class="actions">
       <button class="btn primary" id="pick">Choose file</button>
@@ -322,11 +328,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <h2>Your goal</h2>
     <div class="settings-row">
       <div>
-        <div class="small muted" style="margin-bottom:4px">Optimize for</div>
-        <div class="seg" id="mode">
-          <button data-m="cpa">Cost per conversion (CPA)</button>
-          <button data-m="roas">Return on ad spend (ROAS)</button>
-        </div>
+        <div class="small muted" style="margin-bottom:4px">Optimizing for</div>
+        <div id="modeName" style="font-weight:600;padding:7px 0"></div>
       </div>
       <label class="f"><span id="tlabel">Target CPA</span><input type="number" id="target" min="0" step="any"></label>
       <label class="f">Cut zero-conversion keywords after spending<input type="number" id="zerocut" min="0" step="any"></label>
@@ -371,7 +374,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
       <tr><th scope="row">Works with</th><td>Google Ads and Microsoft Ads (Bing Ads) keyword reports and search term reports</td></tr>
       <tr><th scope="row">File formats</th><td>CSV, TSV, UTF-16 text and Excel .xlsx. The old Excel 97–2003 .xls format is not supported.</td></tr>
       <tr><th scope="row">Required columns</th><td>Keyword, Cost and Conversions</td></tr>
-      <tr><th scope="row">Goal types</th><td>Target CPA or target ROAS. Both default to the account average in the uploaded file.</td></tr>
+      <tr><th scope="row">Goal types</th><td>Target CPA or target ROAS. The target is required and is entered before the report is uploaded.</td></tr>
       <tr><th scope="row">Verdicts</th><td>Cut, Trim bids, Keep, Scale, Needs data</td></tr>
       <tr><th scope="row">Outputs</th><td>Verdict table, CSV export, and the Cut list copied as exact-match negative keywords</td></tr>
       <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request, so the file cannot be uploaded.</td></tr>
@@ -383,11 +386,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="how-to">
   <h2>How to find unprofitable keywords in Google Ads with Keyword Triage</h2>
-  <p>To find unprofitable Google Ads keywords, export a keyword report covering 60 to 90 days, drop it into Keyword Triage, set your break-even CPA or ROAS, and review the keywords labeled Cut.</p>
+  <p>To find unprofitable Google Ads keywords, enter your break-even CPA or ROAS in Keyword Triage, export a keyword report covering 60 to 90 days, drop it in, and review the keywords labeled Cut.</p>
   <ol>
+    <li><b>Set your target.</b> Choose Target CPA or Target ROAS and enter your break-even number. The target is required: the upload box stays locked until it is filled in, because every verdict is measured against it.</li>
     <li><b>Export the report.</b> In Google Ads, go to Campaigns › Keywords › Search keywords, set the date range to the last 60–90 days, and choose Download › Excel .csv or .xlsx. In Microsoft Ads, go to Campaigns › Keywords, set the date range, and choose Download › CSV or Excel.</li>
     <li><b>Load the file.</b> Drop the file onto the upload box at the top of this page, or click Choose file. Keyword Triage detects the header row, the columns and the currency automatically.</li>
-    <li><b>Set your goal.</b> Choose Cost per conversion (CPA) or Return on ad spend (ROAS). Replace the default, which is your account average, with your real break-even number.</li>
     <li><b>Review the Cut list.</b> Click the Cut card to filter the table. Every row explains its verdict, such as “Spent $410 with no conversions across 96 clicks.”</li>
     <li><b>Act on it.</b> Pause the Cut keywords, or click Copy cut list as negatives and paste the exact-match negatives into a negative keyword list. Lower bids on Trim keywords, and give Scale keywords more budget or higher bids.</li>
   </ol>
@@ -421,10 +424,8 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
   <p>The verdict cut-offs are: efficiency below 0.5 is Cut, 0.5 to 0.83 is Trim bids, 0.83 to 1.25 is Keep, and 1.25 or higher is Scale. A keyword with efficiency of 1.25 or higher but fewer conversions than the scaling minimum stays in Keep until it has more data.</p>
 
   <h3>Default thresholds</h3>
-  <p>Every threshold can be edited in the Your goal panel. Keyword Triage sets the defaults from the uploaded report:</p>
+  <p>The target CPA or target ROAS has no default; you enter it before uploading. Every other threshold can be edited in the Your goal panel after upload, and Keyword Triage sets their defaults from your target and the uploaded report:</p>
   <ul>
-    <li><b>Target CPA</b> defaults to the account CPA (total cost ÷ total conversions), rounded to two significant figures.</li>
-    <li><b>Target ROAS</b> defaults to the account ROAS (total conversion value ÷ total cost).</li>
     <li><b>Zero-conversion cut threshold</b> defaults to 1.5× target CPA in CPA mode. In ROAS mode it defaults to 2 × (average conversion value ÷ target ROAS).</li>
     <li><b>Minimum clicks before judging</b> defaults to 1.5 ÷ the account conversion rate, kept between 10 and 100 clicks. At a 3% conversion rate the default is 50 clicks.</li>
     <li><b>Minimum conversions to scale</b> defaults to 2.</li>
@@ -519,7 +520,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
   <h2>Frequently asked questions</h2>
 
   <h3>What is a good CPA for Google Ads keywords?</h3>
-  <p>A good CPA is any CPA below your break-even CPA, which is the gross profit you make from one conversion. If a sale brings in $200 of gross profit, any keyword with a CPA under $200 is profitable before overhead. Keyword Triage defaults to your account average CPA, so replace it with your break-even CPA or your target CPA for the most useful verdicts.</p>
+  <p>A good CPA is any CPA below your break-even CPA, which is the gross profit you make from one conversion. If a sale brings in $200 of gross profit, any keyword with a CPA under $200 is profitable before overhead. Keyword Triage asks for your break-even CPA or target CPA before you upload a report, because every verdict is measured against it.</p>
 
   <h3>How do I calculate break-even ROAS?</h3>
   <p>Break-even ROAS is 1 divided by your gross margin. A product with a 40% gross margin has a break-even ROAS of 2.5 (1 ÷ 0.40), meaning every $1 of ad spend must bring back $2.50 in revenue to cover product costs. Enter it in Keyword Triage as a target ROAS of 2.5.</p>
@@ -598,7 +599,7 @@ const $ = id => document.getElementById(id);
 const S = {
   fileName:'', rows:[], headerIdx:0, headers:[], map:{}, items:[],
   mode:'cpa', target:null, zerocut:null, minclicks:20, minconv:2,
-  acct:null, pre:{mode:'cpa', target:null}, goalNote:'', filter:'all', q:'', sort:{key:'cost',dir:-1}, limit:200, cur:'$'
+  acct:null, pre:{mode:'cpa', target:null}, zerocutTouched:false, filter:'all', q:'', sort:{key:'cost',dir:-1}, limit:200, cur:'$'
 };
 
 /* ---------- File reading ---------- */
@@ -901,7 +902,7 @@ function loadRows(rows, name, label){
   S.headers = rows[S.headerIdx].map(h=>String(h).trim());
   S.map = guessMap(S.headers);
   S.cur = detectCurrency(rows, S.map.cost);
-  S.target = null; S.zerocut = null; S.filter='all'; S.q=''; $('q').value='';
+  S.target = null; S.zerocut = null; S.zerocutTouched = false; S.filter='all'; S.q=''; $('q').value='';
   $('start').hidden = true; $('work').hidden = false;
   $('fname').textContent = name;
   renderMap();
@@ -932,14 +933,12 @@ function recompute(resetGoal){
   S.items = buildItems();
   S.acct = accountStats(S.items);
   const hasValue = S.map.value>-1 && S.acct.value>0;
-  S.goalNote = '';
-  if (resetGoal){
-    S.mode = S.pre.target ? S.pre.mode : (hasValue ? 'roas' : 'cpa');
-    if (S.mode==='roas' && !hasValue && S.pre.target)
-      S.goalNote = 'You set a target ROAS, but this report has no conversion value / revenue column, so it’s using CPA instead. Map a value column under “Column mapping” to use ROAS. ';
-    setGoalDefaults();
+  if (resetGoal){ S.mode = S.pre.mode; setGoalDefaults(); }
+  if (S.mode==='roas' && !hasValue){
+    err.textContent = 'ROAS needs revenue, but this report has no conversion value or revenue column. Pick it under “Column mapping”, or click Start over and choose Target CPA.';
+    err.hidden=false; $('mapbox').open=true;
+    S.items=[]; renderResults(); return;
   }
-  if (!hasValue && S.mode==='roas'){ S.mode='cpa'; setGoalDefaults(); }
   renderSettings(hasValue);
   S.items.forEach(classify);
   renderResults();
@@ -950,19 +949,21 @@ function niceRound(n){
   const p = Math.pow(10, Math.floor(Math.log10(n))-1);
   return Math.round(n/p)*p;
 }
-const userTarget = mode => S.pre.mode===mode && S.pre.target>0 ? S.pre.target : null;
 function setGoalDefaults(){
+  S.target = S.pre.target;
+  setZeroCut();
+  const a=S.acct;
+  S.minclicks = isFinite(a.cr) && a.cr>0 ? Math.max(10, Math.min(100, Math.round(1.5/a.cr))) : 20;
+}
+
+// The zero-conversion cut threshold follows the target until someone edits it.
+function setZeroCut(){
   const a=S.acct;
   if (S.mode==='roas'){
-    S.target = userTarget('roas') || (isFinite(a.roas) && a.roas>0 ? +a.roas.toFixed(2) : 3);
     // break-even-ish spend: avg conversion value / target ROAS, ×2
     const be = isFinite(a.aov) ? a.aov / S.target : (a.cost/Math.max(1,S.items.length));
     S.zerocut = niceRound(be*2) || 50;
-  } else {
-    S.target = userTarget('cpa') || (isFinite(a.cpa) && a.cpa>0 ? niceRound(a.cpa) : 50);
-    S.zerocut = niceRound(S.target*1.5) || 75;
-  }
-  S.minclicks = isFinite(a.cr) && a.cr>0 ? Math.max(10, Math.min(100, Math.round(1.5/a.cr))) : 20;
+  } else S.zerocut = niceRound(S.target*1.5) || 75;
 }
 
 /* ---------- Render: mapping & settings ---------- */
@@ -985,11 +986,7 @@ function renderMapSum(){
 }
 
 function renderSettings(hasValue){
-  document.querySelectorAll('#mode button').forEach(b=>{
-    b.classList.toggle('on', b.dataset.m===S.mode);
-    b.disabled = b.dataset.m==='roas' && !hasValue;
-    b.title = b.disabled ? 'Map a conversion value / revenue column to use ROAS' : '';
-  });
+  $('modeName').textContent = S.mode==='roas' ? 'Return on ad spend (ROAS)' : 'Cost per conversion (CPA)';
   $('tlabel').textContent = S.mode==='roas' ? 'Target ROAS (e.g. 4 = 400%)' : `Target CPA (${S.cur})`;
   $('target').value = S.target;
   $('zerocut').value = S.zerocut;
@@ -997,10 +994,9 @@ function renderSettings(hasValue){
   $('minconv').value = S.minconv;
   $('minclicks').parentElement.hidden = S.map.clicks<0;
   const a=S.acct;
-  $('acctline').textContent = `Account average for this file: ${fmtMoney(a.cost,0)} spend, ${fmtNum(a.conv,1)} conversions, CPA ${fmtMoney(a.cpa)}`
+  $('acctline').textContent = `This file: ${fmtMoney(a.cost,0)} spend, ${fmtNum(a.conv,1)} conversions, CPA ${fmtMoney(a.cpa)}`
     + (hasValue?`, ROAS ${fmtRoas(a.roas)}`:'') + (isFinite(a.cr)?`, conv. rate ${(a.cr*100).toFixed(1)}%`:'')
-    + '. ' + (userTarget(S.mode) ? 'Judging against the target you set.' : `No target set, so this uses your account average. Enter your real break-even ${S.mode==='roas'?'ROAS':'CPA'} above for sharper verdicts.`);
-  if (S.goalNote) $('acctline').textContent = S.goalNote + $('acctline').textContent;
+    + `. Every verdict compares a keyword with your target ${S.mode==='roas'?'ROAS of '+fmtRoas(S.target):'CPA of '+fmtMoney(S.target)}.`;
 }
 
 /* ---------- Render: results ---------- */
@@ -1179,7 +1175,6 @@ $('btnTheme').onclick=()=>{
 
 /* ---------- Wire up ---------- */
 const fileIn=$('file');
-$('pick').onclick=()=>fileIn.click();
 fileIn.onchange=()=>{ if(fileIn.files[0]) readFile(fileIn.files[0]); fileIn.value=''; };
 function readFile(f){
   const r=new FileReader();
@@ -1197,14 +1192,24 @@ $('sheetSel').onchange=e=>showSheet(+e.target.value, S.fileName);
 const drop=$('drop');
 ['dragenter','dragover'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
 ['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
-document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f) readFile(f); });
-$('sample').onclick=()=>loadText(sampleCSV(),'sample-keyword-report.csv');
+// Step 1 gates step 2: nothing loads until there is a target.
+const needTarget = ()=>{
+  if (S.pre.target>0) return false;
+  const t=$('preTarget'); t.classList.add('need'); t.focus(); t.scrollIntoView({block:'center',behavior:'smooth'});
+  return true;
+};
+document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f && !$('start').hidden && !needTarget()) readFile(f); });
+$('pick').onclick=()=>{ if(!needTarget()) fileIn.click(); };
+$('sample').onclick=()=>{ if(!needTarget()) loadText(sampleCSV(),'sample-keyword-report.csv'); };
 $('reset').onclick=()=>{ S.rows=[];S.items=[]; $('work').hidden=true; $('start').hidden=false; syncPre(); };
-
-document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{ if(b.disabled||S.mode===b.dataset.m)return; S.mode=b.dataset.m; setGoalDefaults(); recompute(false); });
 const onNum=(id,key,min)=>$(id).addEventListener('input',()=>{ const v=parseFloat($(id).value); if(isFinite(v)&&v>=min){ S[key]=v; S.items.forEach(classify); renderResults(); }});
-onNum('target','target',0.0001);
-$('target').addEventListener('input',()=>{ const v=parseFloat($('target').value); if(isFinite(v)&&v>0){ S.pre={mode:S.mode,target:v}; syncPre(); } });
+$('target').addEventListener('input',()=>{
+  const v=parseFloat($('target').value); if(!(isFinite(v)&&v>0)) return;
+  S.target=v; S.pre={mode:S.mode,target:v}; syncPre();
+  if (!S.zerocutTouched){ setZeroCut(); $('zerocut').value=S.zerocut; }
+  renderSettings(S.map.value>-1 && S.acct.value>0); S.items.forEach(classify); renderResults();
+});
+$('zerocut').addEventListener('input',()=>{ S.zerocutTouched=true; });
 function syncPre(){
   document.querySelectorAll('#preMode button').forEach(b=>b.classList.toggle('on', b.dataset.m===S.pre.mode));
   const roas = S.pre.mode==='roas';
@@ -1212,14 +1217,19 @@ function syncPre(){
   $('preTarget').placeholder = roas ? 'e.g. 4' : 'e.g. 80';
   if (document.activeElement!==$('preTarget')) $('preTarget').value = S.pre.target || '';
   $('preHint').textContent = roas
-    ? 'Your report needs a conversion value or revenue column for ROAS. Leave blank to use your account’s average ROAS.'
-    : 'Leave blank to judge keywords against your account’s average CPA. You can change it after uploading.';
+    ? 'Use your break-even ROAS: 1 ÷ your gross margin (a 40% margin needs 2.5). Your report needs a conversion value or revenue column.'
+    : 'Use your break-even CPA: the gross profit from one conversion. A keyword that costs more than this per conversion is losing money.';
+  $('drop').classList.toggle('locked', !(S.pre.target>0));
 }
 document.querySelectorAll('#preMode button').forEach(b=>b.onclick=()=>{
   if (S.pre.mode===b.dataset.m) return;
   S.pre={mode:b.dataset.m, target:null}; syncPre();
 });
-$('preTarget').addEventListener('input',()=>{ const v=parseFloat($('preTarget').value); S.pre.target = isFinite(v)&&v>0 ? v : null; }); onNum('zerocut','zerocut',0); onNum('minclicks','minclicks',0); onNum('minconv','minconv',0);
+$('preTarget').addEventListener('input',()=>{
+  const v=parseFloat($('preTarget').value); S.pre.target = isFinite(v)&&v>0 ? v : null;
+  $('preTarget').classList.remove('need'); $('drop').classList.toggle('locked', !S.pre.target);
+});
+$('drop').classList.add('locked'); onNum('zerocut','zerocut',0); onNum('minclicks','minclicks',0); onNum('minconv','minconv',0);
 
 let qt; $('q').addEventListener('input',e=>{ clearTimeout(qt); qt=setTimeout(()=>{S.q=e.target.value.trim();S.limit=200;renderTable();},120); });
 $('more').firstElementChild.onclick=()=>{ S.limit+=300; renderTable(); };

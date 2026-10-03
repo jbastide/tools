@@ -9,6 +9,7 @@ inline CSS and vanilla JS, no build step, no dependencies, no network requests a
 | --- | --- | --- |
 | Short-Form Script Pacing & Hook Timer | [`script-timer/`](script-timer/) | Times a short-form video script in real time, splits it into retention zones (3s / 15s / 30s / 60s), and grades the hook against first-sentence lengths measured in 132 top YouTube Shorts (green inside 3s, note to 5s, warning past 5s). Default pace is the measured 193 WPM median. |
 | Keyword Triage (Google Ads keyword profitability checker) | [`keyword-triage/`](keyword-triage/) | Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV or Excel) and sorts each keyword into Cut, Trim bids, Keep, Scale or Needs data against a target CPA or ROAS. A Content-Security-Policy blocks every network request, so the report can't leave the browser. |
+| Negative Keyword Finder (Google Ads search terms analyzer) | [`negative-keywords/`](negative-keywords/) | Reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or Excel) and lists search terms and recurring words (1- and 2-grams) with zero conversions after spending 2× the account's average cost per conversion, plus low-CTR terms to review. Copies them as exact- and phrase-match negatives. Same no-network Content-Security-Policy as Keyword Triage. |
 
 ## Guides
 
@@ -28,6 +29,7 @@ Pages then serves:
 - `https://jbastide.github.io/tools/` — the index
 - `https://jbastide.github.io/tools/script-timer/` — the script timer
 - `https://jbastide.github.io/tools/keyword-triage/` — the keyword triage tool
+- `https://jbastide.github.io/tools/negative-keywords/` — the negative keyword finder
 
 `.nojekyll` is present so files are served verbatim rather than passed through Jekyll.
 

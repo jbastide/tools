@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy guarantee: this policy forbids the page from contacting ANY server.
+     No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Negative Keyword Finder: Free Google Ads Search Terms Analyzer (Private, In-Browser)</title>
+<meta name="description" content="Free negative keyword tool. Drop in a Google Ads or Microsoft Ads search terms report and get the search terms and words wasting spend. Private: nothing is uploaded.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/negative-keywords/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.copyfororiginals.com/negative-keywords/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="Negative Keyword Finder: Free Google Ads Search Terms Analyzer">
+<meta property="og:description" content="Drop in a search terms report and get the negative keywords to add: search terms and recurring words that spent money and never converted. Runs in your browser. Nothing is uploaded.">
+<meta property="article:modified_time" content="2026-10-03">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%94%3C/text%3E%3C/svg%3E">
+<!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
+     keep the two in sync when either changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tools.copyfororiginals.com/negative-keywords/#app",
+      "name": "Negative Keyword Finder",
+      "alternateName": ["Google Ads search terms analyzer", "Search term report analyzer", "Negative keyword tool", "Wasted ad spend finder"],
+      "url": "https://tools.copyfororiginals.com/negative-keywords/",
+      "description": "Negative Keyword Finder is a free, browser-based tool that reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or Excel .xlsx) and lists the search terms and recurring words that spent at least two times the account's average cost per conversion without a single conversion. It formats them as exact-match and phrase-match negative keywords ready to paste. The report is processed entirely in the browser and is never uploaded.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "PPC negative keyword research",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires JavaScript. Runs fully client-side.",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "dateModified": "2026-10-03",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" },
+      "featureList": [
+        "Reads Google Ads and Microsoft Ads search terms reports in CSV, TSV, UTF-16 text or Excel (.xlsx)",
+        "Flags search terms with zero conversions once they spend two times the account's average cost per conversion",
+        "Finds recurring words and two-word phrases (n-grams) that spent that much across many search terms without converting",
+        "Never suggests a word that appears in one of your own keywords or in a converting search term",
+        "Optionally flags search terms with a click-through rate under 1% over at least 300 impressions",
+        "Skips search terms already excluded in the account",
+        "Copies the selection as exact-match and phrase-match negative keywords, or downloads it as CSV",
+        "A Content-Security-Policy blocks all network requests, so the report cannot leave the page"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tools.copyfororiginals.com/negative-keywords/#page",
+      "url": "https://tools.copyfororiginals.com/negative-keywords/",
+      "name": "Negative Keyword Finder: Free Google Ads Search Terms Analyzer",
+      "inLanguage": "en",
+      "dateModified": "2026-10-03",
+      "mainEntity": { "@id": "https://tools.copyfororiginals.com/negative-keywords/#app" },
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Negative Keyword Finder", "item": "https://tools.copyfororiginals.com/negative-keywords/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/negative-keywords/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is a negative keyword?", "acceptedAnswer": {"@type": "Answer", "text": "A negative keyword tells Google Ads or Microsoft Ads not to show your ad for searches that contain it. Adding \"free\" as a negative keyword, for example, stops your ads from showing for “free ad copy templates” and every other search that includes the word free."}},
+        {"@type": "Question", "name": "How do I find negative keywords in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Find negative keywords in the search terms report, which lists the real searches that triggered your ads. Look for search terms that spent money without converting, and for words that keep appearing in those searches. Negative Keyword Finder does this automatically: export the search terms report for the last 90 days and drop it into the tool."}},
+        {"@type": "Question", "name": "How much should a search term spend before I add it as a negative keyword?", "acceptedAnswer": {"@type": "Answer", "text": "Add a search term as a negative keyword once it has spent about twice your average cost per conversion without converting. A search term that converts as well as your account average has only about a 14% chance of reaching that spend with zero conversions, so most terms that get there are genuinely poor. Negative Keyword Finder uses 2× your average cost per conversion as its default threshold."}},
+        {"@type": "Question", "name": "What date range should I use for a search terms report?", "acceptedAnswer": {"@type": "Answer", "text": "Use the last 90 days for most accounts. A longer range lets more search terms reach the spend threshold, makes zero conversions stronger evidence, and shows more low-volume search terms. If the account spends more than about $1,000 a day, the last 30 days is enough. If you changed targeting or your offer recently, use only the period since the change."}},
+        {"@type": "Question", "name": "Should I add search terms with a low CTR as negative keywords?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes. A search term shown hundreds of times with a click-through rate under 1% usually means searchers don’t see your ad as relevant, such as “google ads login” for an agency. These terms cost little because few people click, so Negative Keyword Finder lists them separately and leaves them unselected for you to review."}},
+        {"@type": "Question", "name": "Should negative keywords be exact match or phrase match?", "acceptedAnswer": {"@type": "Answer", "text": "Use exact match to block one specific search term and phrase match to block a word or phrase wherever it appears. Negative Keyword Finder copies individual search terms as exact match, like [copywriting jobs remote], and recurring words as phrase match, like \"jobs\", which also blocks future searches containing that word."}},
+        {"@type": "Question", "name": "Does Negative Keyword Finder work with Microsoft Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Negative Keyword Finder reads Microsoft Ads (formerly Bing Ads) search terms reports in CSV or Excel format and recognizes Microsoft column names such as Spend and Conv. The negatives it copies use the same bracket and quote notation that Microsoft Ads accepts."}},
+        {"@type": "Question", "name": "Can Negative Keyword Finder add negatives to my account?", "acceptedAnswer": {"@type": "Answer", "text": "No. Negative Keyword Finder never connects to Google Ads or Microsoft Ads. It only reads the file you give it. You paste the negatives into a negative keyword list or a campaign yourself."}},
+        {"@type": "Question", "name": "Is Negative Keyword Finder free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Negative Keyword Finder is free, needs no account or sign-up, and has no usage limits."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --ink:#141821; --muted:#4a5361; --faint:#7b8697; --line:#dfe3ea; --soft:#f1f3f7;
+  --accent:#4f46e5; --accent-ink:#ffffff;
+  --waste:#c2283a; --waste-bg:#fbe5e7;
+  --ok:#12805c; --ok-bg:#e3f4ec;
+  --radius:14px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0e13; --panel:#14171f; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394; --line:#272c38; --soft:#1b1f29;
+    --accent:#818cf8; --accent-ink:#0c0e13;
+    --waste:#f87171; --waste-bg:rgba(248,113,113,.14);
+    --ok:#34d399; --ok-bg:rgba(52,211,153,.14);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#0c0e13; --panel:#14171f; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394; --line:#272c38; --soft:#1b1f29;
+    --accent:#818cf8; --accent-ink:#0c0e13;
+    --waste:#f87171; --waste-bg:rgba(248,113,113,.14);
+    --ok:#34d399; --ok-bg:rgba(52,211,153,.14);
+    color-scheme:dark;
+}
+:root[data-theme="light"]{color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:clamp(30px,4.4vw,42px);line-height:1.08;margin:0 0 12px;letter-spacing:-.025em}
+h2{font-size:18px;margin:0 0 12px}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button,select,input{font:inherit;color:inherit}
+
+.crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;font-size:14px}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--accent)}
+.btn{border:1px solid var(--line);background:var(--panel);padding:9px 16px;border-radius:10px;cursor:pointer;font-weight:550}
+.btn:hover{border-color:var(--faint)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:650}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.icon{padding:7px 9px;line-height:0}
+.btn.quiet{border:0;background:none;padding:0;color:var(--accent);font-weight:550}
+.btn.quiet:hover{text-decoration:underline}
+
+.h1sub{display:block;font-size:clamp(16px,2vw,19px);font-weight:600;color:var(--muted);letter-spacing:-.005em;margin-top:8px}
+.lede{font-size:17px;color:var(--muted);max-width:640px}
+.byline{margin:4px 0 0}
+
+/* ---------- Start ---------- */
+.drop{margin-top:28px;border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:48px 20px;text-align:center;transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--accent);background:var(--soft)}
+.drop h2{font-size:21px;margin-bottom:6px;letter-spacing:-.01em}
+.drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.privacy{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px;font-size:13px;color:var(--muted)}
+.privacy svg{color:var(--ok);flex:none}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.steps div{font-size:13px;color:var(--muted);padding:14px 16px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
+.steps b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+.err{background:var(--waste-bg);color:var(--waste);border-radius:10px;padding:10px 14px;margin-top:14px;text-align:left}
+
+/* ---------- Results ---------- */
+.filebar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:28px;font-size:14px}
+.filebar .name{font-weight:650;word-break:break-all}
+.filebar .meta{color:var(--muted)}
+.filebar .acts{display:flex;gap:14px;align-items:center}
+.filebar select{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
+#mapbox{margin-top:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+#mapbox[hidden]{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:10px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+label.f select{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;color:var(--ink);width:100%}
+.req{color:var(--waste)}
+
+.hero{margin-top:26px;padding:30px 28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.hero .amt{font-size:clamp(44px,8vw,64px);line-height:1;font-weight:750;letter-spacing:-.035em;color:var(--waste);font-variant-numeric:tabular-nums}
+.hero.clean .amt{color:var(--ok)}
+.hero .what{font-size:19px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
+.hero .sub{color:var(--muted);margin:6px 0 0;font-size:14.5px}
+.note{margin-top:12px;font-size:13px;color:var(--muted);background:var(--soft);border-radius:10px;padding:9px 12px}
+
+.tabs{display:flex;gap:4px;margin-top:22px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:4px;width:max-content;max-width:100%;overflow-x:auto}
+.tabs button{border:0;background:none;padding:7px 14px;border-radius:9px;cursor:pointer;font-weight:550;color:var(--muted);white-space:nowrap}
+.tabs button .c{font-variant-numeric:tabular-nums;margin-left:6px;color:var(--faint);font-weight:600}
+.tabs button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.tabs button.on .c{color:var(--accent)}
+
+.rule{margin:18px 2px 4px;font-size:15.5px;line-height:1.9}
+.rule input{width:5.2em;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:2px 8px;font-weight:650;text-align:right;font-variant-numeric:tabular-nums}
+.rule input.short{width:3.8em}
+.rule .cur{font-weight:650}
+.hint{font-size:13px;color:var(--muted);margin:2px 2px 0}
+
+.list{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.listhead{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.row{display:flex;gap:14px;align-items:flex-start;padding:13px 16px;border-bottom:1px solid var(--line);cursor:pointer}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--soft)}
+.row input{margin:3px 0 0;width:17px;height:17px;accent-color:var(--accent);flex:none;cursor:pointer}
+.row .main{flex:1;min-width:0}
+.row .t{font-weight:600;word-break:break-word}
+.row .m{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.row .eg{display:block;font-size:12.5px;color:var(--faint);margin-top:2px}
+.row .amt{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap;padding-top:1px}
+.row.covered .t,.row.covered .amt{color:var(--faint)}
+.row .cov{display:inline-block;font-size:11.5px;font-weight:600;color:var(--accent);margin-top:4px}
+.empty{padding:28px 16px;text-align:center;color:var(--muted)}
+.more{display:block;width:100%;border:0;border-top:1px solid var(--line);background:none;padding:12px;color:var(--accent);cursor:pointer;font-weight:550}
+
+.bar{position:sticky;bottom:12px;margin-top:18px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px 12px 18px;box-shadow:0 8px 28px rgba(15,20,35,.12)}
+.bar .sum{font-size:14.5px}
+.bar .sum b{font-variant-numeric:tabular-nums}
+.bar .acts{display:flex;gap:8px}
+.toast{font-size:13px;color:var(--ok);margin:10px 2px 0}
+
+/* ---------- Reference article ---------- */
+.doc{margin-top:72px;font-size:15.5px;line-height:1.65}
+.doc section{padding-top:30px;margin-top:30px;border-top:1px solid var(--line)}
+.doc section:first-child{border-top:0;margin-top:0;padding-top:0}
+.doc h2{font-size:22px;letter-spacing:-.015em;margin:0 0 10px}
+.doc h3{font-size:16.5px;margin:22px 0 6px}
+.doc ul,.doc ol{padding-left:22px;margin:0 0 12px}
+.doc li{margin-bottom:6px}
+.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:6px 0 14px}
+.doc table{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--panel)}
+.doc th,.doc td{padding:8px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.doc thead th{background:var(--soft);font-weight:600}
+.doc tbody th{font-weight:600}
+.doc tr:last-child td,.doc tr:last-child th{border-bottom:0}
+.doc td.num,.doc th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.doc caption{caption-side:top;text-align:left;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:10px 11px 8px;background:var(--panel)}
+table.facts th{width:30%;color:var(--muted)}
+.doc dl{margin:0}
+.doc dt{font-weight:700;margin-top:12px}
+.doc dd{margin:2px 0 0;color:var(--muted)}
+footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:600px){
+  .hero{padding:22px 18px}
+  .row{gap:11px;padding:12px 14px}
+  .bar{bottom:8px}
+  .bar .acts{width:100%}
+  .bar .acts .btn{flex:1;white-space:nowrap}
+  .tabs{width:100%}
+  .tabs button{flex:1;padding:7px 8px}
+  table.facts th{width:38%}
+}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="crumbs">
+  <a href="../">&larr; All tools</a>
+  <button type="button" class="btn icon" id="btnTheme" title="Toggle light / dark" aria-label="Toggle light or dark theme">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+  </button>
+</nav>
+
+<header>
+  <h1>Negative Keyword Finder <span class="h1sub">Find the search terms wasting your ad budget</span></h1>
+  <p class="lede">Negative Keyword Finder is a free search terms analyzer that finds the negative keywords to add in Google Ads and Microsoft Ads. Drop in a search terms report and it lists the searches and words that spent money without a single conversion, ready to paste.</p>
+  <p class="byline small muted">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>
+</header>
+
+<section id="start">
+  <div class="drop" id="drop">
+    <h2>Drop your search terms report here</h2>
+    <p class="muted">Excel or CSV, from Google Ads or Microsoft Ads. The last 90 days works best.</p>
+    <div class="actions">
+      <button class="btn primary" id="pick">Choose file</button>
+      <button class="btn" id="sample">Try a sample report</button>
+    </div>
+    <div class="privacy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span>Your report never leaves this page. It’s read on your device and the page is blocked from contacting any server.</span>
+    </div>
+    <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/tab-separated-values,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+  </div>
+  <div class="steps">
+    <div><b>Google Ads</b>Campaigns › Insights and reports › Search terms. Set the date range to the last 90 days, then Download › .csv or Excel.</div>
+    <div><b>Microsoft Ads</b>Keywords › Search terms. Set the last 90 days, then Download › CSV or Excel.</div>
+  </div>
+</section>
+
+<section id="work" hidden>
+  <div class="filebar">
+    <div><span class="name" id="fname"></span> <span class="meta" id="fmeta"></span></div>
+    <div class="acts">
+      <select id="sheetSel" hidden aria-label="Sheet"></select>
+      <button class="btn quiet" id="mapToggle">Columns</button>
+      <button class="btn quiet" id="reset">New report</button>
+    </div>
+  </div>
+  <div id="mapbox" hidden>
+    <div class="small muted">Columns are matched automatically. Change any that look wrong.</div>
+    <div class="grid" id="mapgrid"></div>
+  </div>
+  <div id="maperr" class="err" hidden></div>
+
+  <div id="results">
+    <div class="hero" id="hero">
+      <div class="amt" id="heroAmt"></div>
+      <div class="what" id="heroWhat"></div>
+      <p class="sub" id="heroSub"></p>
+    </div>
+    <div class="note" id="note" hidden></div>
+
+    <div class="tabs" role="tablist" id="tabs">
+      <button role="tab" data-t="terms">Search terms<span class="c" id="cTerms"></span></button>
+      <button role="tab" data-t="words">Words<span class="c" id="cWords"></span></button>
+      <button role="tab" data-t="low">Low CTR<span class="c" id="cLow"></span></button>
+    </div>
+
+    <div id="pane-terms">
+      <p class="rule">Search terms that spent at least <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Spend threshold"> with no conversions.</p>
+      <p class="hint" id="hintTerms"></p>
+    </div>
+    <div id="pane-words" hidden>
+      <p class="rule">Words that appear in 2 or more search terms, spent at least <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Spend threshold"> together, and never converted.</p>
+      <p class="hint">Copied as phrase match, like <code>"jobs"</code>, which also blocks future searches containing the word. A word that appears in one of your keywords or in any converting search is never suggested.</p>
+    </div>
+    <div id="pane-low" hidden>
+      <p class="rule">Search terms shown at least <input type="number" min="1" step="1" id="imprIn" aria-label="Minimum impressions"> times with a click-through rate under <input type="number" min="0" step="0.1" id="ctrIn" class="short" aria-label="CTR threshold">% and no conversions.</p>
+      <p class="hint">People see your ad for these and don’t click, a sign the search isn’t what you sell. They cost little, so they start unselected. Pick the ones that are clearly off.</p>
+    </div>
+
+    <div class="list" id="list"></div>
+
+    <div class="bar" id="bar">
+      <div class="sum" id="barSum"></div>
+      <div class="acts">
+        <button class="btn" id="dl">Download CSV</button>
+        <button class="btn primary" id="copy">Copy negatives</button>
+      </div>
+    </div>
+    <p class="toast" id="toast" hidden role="status"></p>
+  </div>
+</section>
+
+<article class="doc" id="guide">
+
+<section id="summary">
+  <h2>What Negative Keyword Finder does</h2>
+  <p>Negative Keyword Finder reads the search terms report from Google Ads or Microsoft Ads and finds the searches that are clearly wasting money: search terms, and words shared across many search terms, that spent at least twice your average cost per conversion without converting once. It formats them as negative keywords you can paste straight into your account.</p>
+  <div class="tablewrap">
+  <table class="facts">
+    <caption>Negative Keyword Finder at a glance</caption>
+    <tbody>
+      <tr><th scope="row">What it is</th><td>A free, browser-based search terms analyzer that finds negative keywords for pay-per-click (PPC) search campaigns</td></tr>
+      <tr><th scope="row">Works with</th><td>Google Ads and Microsoft Ads (Bing Ads) search terms reports</td></tr>
+      <tr><th scope="row">File formats</th><td>CSV, TSV, UTF-16 text and Excel .xlsx. The old Excel 97–2003 .xls format is not supported.</td></tr>
+      <tr><th scope="row">Required columns</th><td>Search term, Cost and Conversions</td></tr>
+      <tr><th scope="row">Main rule</th><td>Zero conversions after spending 2× the account’s average cost per conversion</td></tr>
+      <tr><th scope="row">Recommended data</th><td>The last 90 days (30 days for accounts spending over about $1,000 a day)</td></tr>
+      <tr><th scope="row">Outputs</th><td>Exact-match negatives for search terms, phrase-match negatives for words, and a CSV export</td></tr>
+      <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request, so the file cannot be uploaded.</td></tr>
+      <tr><th scope="row">Account access</th><td>None. It never connects to your ad account and cannot add or change anything.</td></tr>
+      <tr><th scope="row">Price</th><td>Free, no sign-up</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="how-to">
+  <h2>How to find negative keywords from a search terms report</h2>
+  <p>To find negative keywords, export the search terms report for the last 90 days, drop it into Negative Keyword Finder, review the flagged search terms and words, and paste the negatives into a negative keyword list.</p>
+  <ol>
+    <li><b>Export the search terms report.</b> In Google Ads, go to Campaigns › Insights and reports › Search terms, set the date range to the last 90 days, and choose Download › .csv or Excel. In Microsoft Ads, open Keywords › Search terms, set the same range, and download it as CSV or Excel.</li>
+    <li><b>Load the file.</b> Drop it onto the upload box at the top of this page, or click Choose file. Negative Keyword Finder finds the header row, the columns, the currency and the date range automatically.</li>
+    <li><b>Review the Search terms tab.</b> Every search term that spent 2× your average cost per conversion without converting is listed and selected. Untick anything you want to keep.</li>
+    <li><b>Review the Words tab.</b> These are single words and two-word phrases, such as “jobs” or “how to”, that appear in many search terms that together spent the same amount without converting. One phrase-match negative blocks all of them, plus future searches with the same word.</li>
+    <li><b>Copy and paste.</b> Click Copy negatives and paste the list into a shared negative keyword list or a campaign’s negative keywords. Search terms that a selected word already blocks are left out of the copy, so the list has no duplicates.</li>
+  </ol>
+</section>
+
+<section id="rules">
+  <h2>How Negative Keyword Finder decides a search term is bad</h2>
+  <p>Negative Keyword Finder only flags search terms with zero conversions. A search term that converted at least once is never suggested, however expensive it was, because the right fix for a converting but costly search is usually a bid or match-type change, not a negative. (For that, see <a href="../keyword-triage/">Keyword Triage</a>.)</p>
+  <div class="tablewrap">
+  <table>
+    <caption>The three lists and their rules</caption>
+    <thead>
+      <tr><th scope="col">List</th><th scope="col">Rule</th><th scope="col">Copied as</th><th scope="col">Selected by default</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Search terms</th><td>Zero conversions and cost at or above the spend threshold (default 2× average cost per conversion)</td><td>Exact match, <code>[search term]</code></td><td>Yes</td></tr>
+      <tr><th scope="row">Words</th><td>A word or two-word phrase that appears in 2 or more search terms, whose search terms together have zero conversions and cost at or above the spend threshold</td><td>Phrase match, <code>"word"</code></td><td>Yes</td></tr>
+      <tr><th scope="row">Low CTR</th><td>Zero conversions, at least 300 impressions and a click-through rate under 1%, and not already in the Search terms list</td><td>Exact match, <code>[search term]</code></td><td>No</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Why the threshold is 2× your average cost per conversion</h3>
+  <p>A search term that converts as well as your account average would, after spending one average cost per conversion, be expected to produce one conversion. After spending 2× that amount it would be expected to produce two, and the chance it still has zero is about 14% (e<sup>−2</sup>). At 3× the chance drops to about 5%. Two times is the point where most search terms with zero conversions are genuinely poor rather than unlucky, without waiting so long that the waste piles up.</p>
+  <p>The default is your account’s average cost per conversion in the uploaded file (total cost ÷ total conversions), doubled and rounded to two significant figures. With a $60 average, the threshold is $120. If the file has no conversions at all, the default is $100. You can type any amount into the sentence above the list.</p>
+
+  <h3>Why words find more waste than single search terms</h3>
+  <p>Most wasted spend in a search terms report is spread across hundreds of search terms that each spent a few dollars, too little for any one of them to judge. Negative Keyword Finder groups search terms by the words they share, which PPC managers call n-gram analysis. If “jobs” appears in 14 search terms that spent $260 together and none converted, “jobs” is a negative keyword even though no single search term with “jobs” crossed the threshold.</p>
+  <p>Three safeguards keep word suggestions from blocking good traffic:</p>
+  <ul>
+    <li>A word is only suggested if every search term containing it has zero conversions.</li>
+    <li>A word that appears in any of your own keywords (from the report’s Keyword column) is never suggested, since negating it would block that keyword.</li>
+    <li>Filler words such as “for”, “the” and “in”, and question words such as “how”, “what” and “near”, are never suggested alone. They appear only inside phrases such as “how to” or “near me”. A two-word phrase is dropped when one of its words is already suggested on its own.</li>
+  </ul>
+
+  <h3>Why low click-through rate is a separate list</h3>
+  <p>A click-through rate (CTR) under 1% across at least 300 impressions usually means searchers don’t see your ad as an answer to their search, like “google ads login” for an agency. These searches rarely cost much, because you pay per click, so they are listed separately and start unselected. If the account’s overall CTR is under 3%, as is common in Shopping campaigns, the default CTR threshold drops to a third of the account average so normal searches aren’t flagged.</p>
+
+  <h3>What is skipped</h3>
+  <ul>
+    <li>Search terms marked Excluded in the Added/Excluded column, because they are already negatives.</li>
+    <li>Search terms marked Added, or identical to one of your keywords, because they are keywords. Pause them instead.</li>
+    <li>Total and summary rows, such as “Total: Account”.</li>
+  </ul>
+  <p>A search term that appears in several campaigns or ad groups is judged on its combined cost and conversions across all of them. That is deliberately cautious: a search term that converts in one campaign is never suggested as a negative for any.</p>
+</section>
+
+<section id="date-range">
+  <h2>What date range should a search terms report cover?</h2>
+  <p>Use the last 90 days for most accounts. A longer range helps in three ways: more search terms reach the spend threshold, zero conversions over 90 days is stronger evidence than over 14, and the report includes more of the low-volume search terms that Google Ads hides from short ranges. A negative for a search term that no longer appears costs nothing.</p>
+  <ul>
+    <li><b>Spending over about $1,000 a day:</b> 30 days is enough data and keeps the list current.</li>
+    <li><b>Recently changed targeting, match types or your offer:</b> use only the period since the change.</li>
+    <li><b>Long sales cycle:</b> end the range a week or two before today, so recent clicks have had time to convert.</li>
+    <li><b>How often:</b> run it every two to four weeks, using the period since your last pass once the account is clean.</li>
+  </ul>
+  <p>Negative Keyword Finder reads the date range from the top of a Google Ads export and shows it next to the file name. It suggests a longer range if the report covers fewer than 28 days.</p>
+</section>
+
+<section id="match-types">
+  <h2>Which match type should negative keywords use?</h2>
+  <p>Negative keywords match differently from regular keywords: they do not match close variants, plurals or misspellings (<a href="https://support.google.com/google-ads/answer/2453972" rel="noopener">Google Ads Help: About negative keywords</a>). Negative Keyword Finder uses the match type that blocks exactly what the data supports.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Negative keyword match types</caption>
+    <thead>
+      <tr><th scope="col">Match type</th><th scope="col">Notation</th><th scope="col">Blocks</th><th scope="col">Used for</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Exact</th><td><code>[copywriting jobs remote]</code></td><td>Only that exact search</td><td>Individual search terms</td></tr>
+      <tr><th scope="row">Phrase</th><td><code>"jobs"</code></td><td>Any search containing the word or phrase, in that order</td><td>Words and two-word phrases</td></tr>
+      <tr><th scope="row">Broad</th><td><code>jobs</code></td><td>Any search containing all the words, in any order</td><td>Not used by this tool</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Both Google Ads and Microsoft Ads accept this notation when you paste a list into a negative keyword list, one negative per line.</p>
+</section>
+
+<section id="example">
+  <h2>Worked example: finding negative keywords in a $9,000 account</h2>
+  <p>This example account spent $9,000 for 150 conversions over 90 days, an average cost per conversion of $60, so the spend threshold is $120.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Search terms judged against a $120 threshold</caption>
+    <thead>
+      <tr><th scope="col">Search term or word</th><th scope="col" class="num">Cost</th><th scope="col" class="num">Conversions</th><th scope="col">Result</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>copywriting jobs remote</td><td class="num">$164</td><td class="num">0</td><td>Negative <code>[copywriting jobs remote]</code>, past $120</td></tr>
+      <tr><td>marketing agency near me</td><td class="num">$131</td><td class="num">0</td><td>Negative <code>[marketing agency near me]</code>, past $120</td></tr>
+      <tr><td>how to write ad copy</td><td class="num">$96</td><td class="num">0</td><td>Not flagged alone, under $120</td></tr>
+      <tr><td>ppc copywriter</td><td class="num">$480</td><td class="num">9</td><td>Never flagged, it converts</td></tr>
+      <tr><td>“free”, in 9 search terms</td><td class="num">$212</td><td class="num">0</td><td>Negative <code>"free"</code></td></tr>
+      <tr><td>“how to”, in 6 search terms including “how to write ad copy”</td><td class="num">$184</td><td class="num">0</td><td>Negative <code>"how to"</code>, which also blocks the $96 term above</td></tr>
+      <tr><td>google ads login, 2,400 impressions at 0.4% CTR</td><td class="num">$11</td><td class="num">0</td><td>Listed under Low CTR for review</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Selecting the first two search terms and the two words blocks $691 of spend that produced no conversions, about 8% of the account’s spend, with four negatives.</p>
+</section>
+
+<section id="columns">
+  <h2>Which report columns does Negative Keyword Finder need?</h2>
+  <p>Negative Keyword Finder needs three columns: Search term, Cost and Conversions. Column names are matched automatically, and any of them can be reassigned under Columns.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Columns Negative Keyword Finder reads</caption>
+    <thead>
+      <tr><th scope="col">Column</th><th scope="col">Required</th><th scope="col">Google Ads name</th><th scope="col">Microsoft Ads name</th><th scope="col">Used for</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Search term</th><td>Yes</td><td>Search term</td><td>Search term</td><td>The searches being judged</td></tr>
+      <tr><th scope="row">Cost</th><td>Yes</td><td>Cost</td><td>Spend</td><td>The spend threshold and wasted spend</td></tr>
+      <tr><th scope="row">Conversions</th><td>Yes</td><td>Conversions</td><td>Conv. or Conversions</td><td>The zero-conversion rule</td></tr>
+      <tr><th scope="row">Clicks, Impressions</th><td>No</td><td>Clicks, Impr.</td><td>Clicks, Impr.</td><td>The Low CTR list</td></tr>
+      <tr><th scope="row">Keyword</th><td>No</td><td>Keyword</td><td>Keyword</td><td>Protecting words used in your own keywords</td></tr>
+      <tr><th scope="row">Added/Excluded</th><td>No</td><td>Added/Excluded</td><td>Added/Excluded</td><td>Skipping search terms that are already negatives or keywords</td></tr>
+      <tr><th scope="row">Campaign, Ad group</th><td>No</td><td>Campaign, Ad group</td><td>Campaign name, Ad group name</td><td>Showing where each search term ran</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>A keyword report is not a search terms report. If you load one, Negative Keyword Finder says so and explains where to find the search terms report.</p>
+</section>
+
+<section id="privacy">
+  <h2>Is my search terms report uploaded anywhere?</h2>
+  <p>No. Negative Keyword Finder reads the file with the browser’s FileReader API and analyzes it in JavaScript on your device. The page sets a Content-Security-Policy with <code>default-src 'none'</code> and <code>connect-src 'none'</code>, which tells the browser to block every network request the page could make, including fetch, XHR, beacons, external scripts, fonts and images. Nothing about the report is stored. The only thing saved is your light or dark theme choice. You can load the page, disconnect from the internet, and it keeps working.</p>
+</section>
+
+<section id="limits">
+  <h2>What Negative Keyword Finder does not account for</h2>
+  <p>The lists are based on the cost and conversions in your report, so treat them as a short list to review, not autopilot. Check these before adding a high-spend negative:</p>
+  <ul>
+    <li><b>Conversion lag:</b> conversions are credited to the day of the click and can arrive days later, so very recent clicks can look like waste. End the date range a little before today if your customers take time to buy.</li>
+    <li><b>Conversion tracking:</b> if a conversion action is missing or broken, good search terms look like zero-conversion terms. The tool warns you when a file has no conversions at all.</li>
+    <li><b>Assisted conversions:</b> a research-style search can start a journey that a later search gets credit for.</li>
+    <li><b>Brand and competitor terms:</b> decide these on strategy, not on one report.</li>
+    <li><b>Hidden search terms:</b> Google Ads does not show every search term, only those with enough volume, so some waste is invisible in any report.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Frequently asked questions</h2>
+
+  <h3>What is a negative keyword?</h3>
+  <p>A negative keyword tells Google Ads or Microsoft Ads not to show your ad for searches that contain it. Adding "free" as a negative keyword, for example, stops your ads from showing for “free ad copy templates” and every other search that includes the word free.</p>
+
+  <h3>How do I find negative keywords in Google Ads?</h3>
+  <p>Find negative keywords in the search terms report, which lists the real searches that triggered your ads. Look for search terms that spent money without converting, and for words that keep appearing in those searches. Negative Keyword Finder does this automatically: export the search terms report for the last 90 days and drop it into the tool.</p>
+
+  <h3>How much should a search term spend before I add it as a negative keyword?</h3>
+  <p>Add a search term as a negative keyword once it has spent about twice your average cost per conversion without converting. A search term that converts as well as your account average has only about a 14% chance of reaching that spend with zero conversions, so most terms that get there are genuinely poor. Negative Keyword Finder uses 2× your average cost per conversion as its default threshold.</p>
+
+  <h3>What date range should I use for a search terms report?</h3>
+  <p>Use the last 90 days for most accounts. A longer range lets more search terms reach the spend threshold, makes zero conversions stronger evidence, and shows more low-volume search terms. If the account spends more than about $1,000 a day, the last 30 days is enough. If you changed targeting or your offer recently, use only the period since the change.</p>
+
+  <h3>Should I add search terms with a low CTR as negative keywords?</h3>
+  <p>Sometimes. A search term shown hundreds of times with a click-through rate under 1% usually means searchers don’t see your ad as relevant, such as “google ads login” for an agency. These terms cost little because few people click, so Negative Keyword Finder lists them separately and leaves them unselected for you to review.</p>
+
+  <h3>Should negative keywords be exact match or phrase match?</h3>
+  <p>Use exact match to block one specific search term and phrase match to block a word or phrase wherever it appears. Negative Keyword Finder copies individual search terms as exact match, like [copywriting jobs remote], and recurring words as phrase match, like "jobs", which also blocks future searches containing that word.</p>
+
+  <h3>Does Negative Keyword Finder work with Microsoft Ads?</h3>
+  <p>Yes. Negative Keyword Finder reads Microsoft Ads (formerly Bing Ads) search terms reports in CSV or Excel format and recognizes Microsoft column names such as Spend and Conv. The negatives it copies use the same bracket and quote notation that Microsoft Ads accepts.</p>
+
+  <h3>Can Negative Keyword Finder add negatives to my account?</h3>
+  <p>No. Negative Keyword Finder never connects to Google Ads or Microsoft Ads. It only reads the file you give it. You paste the negatives into a negative keyword list or a campaign yourself.</p>
+
+  <h3>Is Negative Keyword Finder free?</h3>
+  <p>Yes. Negative Keyword Finder is free, needs no account or sign-up, and has no usage limits.</p>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <dl>
+    <dt>Search term</dt>
+    <dd>The exact words someone typed into Google or Bing when your ad was shown. Different from a keyword, which is what you bid on.</dd>
+    <dt>Search terms report</dt>
+    <dd>The Google Ads and Microsoft Ads report that lists the search terms that triggered your ads, with their clicks, cost and conversions.</dd>
+    <dt>Negative keyword</dt>
+    <dd>A word or phrase that stops your ad from showing for searches that contain it.</dd>
+    <dt>Negative keyword list</dt>
+    <dd>A shared list of negative keywords that can be applied to many campaigns at once.</dd>
+    <dt>Cost per conversion (CPA)</dt>
+    <dd>Cost divided by conversions. The average amount spent to get one conversion.</dd>
+    <dt>Click-through rate (CTR)</dt>
+    <dd>Clicks divided by impressions. The share of people who saw the ad and clicked it.</dd>
+    <dt>N-gram analysis</dt>
+    <dd>Grouping search terms by the single words (1-grams) or word pairs (2-grams) they contain, to find patterns too spread out to see term by term.</dd>
+    <dt>Wasted spend</dt>
+    <dd>Spend on search terms that produced no conversions.</dd>
+  </dl>
+</section>
+
+</article>
+
+<footer>
+  <span>Runs fully client-side. No uploads, no tracking, no dependencies, no network requests.</span>
+  <span>Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a></span>
+</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Columns ---------- */
+const FIELDS = [
+  {k:'term',     label:'Search term', req:true, rx:[/^search term$/,/^search terms?$/,/^search query$/,/^query$/,/^search term text$/,/search term/,/query/]},
+  {k:'cost',     label:'Cost / Spend', req:true, rx:[/^cost$/,/^spend$/,/^cost \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/]},
+  {k:'conv',     label:'Conversions', req:true, rx:[/^conversions$/,/^conv\.?$/,/^all conv\.?$/,/^purchases$/,/^conversions/]},
+  {k:'clicks',   label:'Clicks', rx:[/^clicks$/,/clicks/]},
+  {k:'impr',     label:'Impressions', rx:[/^impr\.?$/,/^impressions$/,/impr/]},
+  {k:'keyword',  label:'Keyword', rx:[/^keyword$/,/^keyword text$/,/^search keyword$/]},
+  {k:'status',   label:'Added/Excluded', rx:[/^added\/excluded$/,/added.*excluded/,/^status$/]},
+  {k:'campaign', label:'Campaign', rx:[/^campaign$/,/^campaign name$/]},
+  {k:'adgroup',  label:'Ad group', rx:[/^ad group$/,/^ad group name$/]},
+];
+const STOP = new Set('a an the for to of in on at by with and or is are be it its my me i you your from vs this that as our we us'.split(' '));
+// Too broad to block alone, but meaningful in a phrase: "how to", "near me", "what is".
+const WEAK = new Set('how what why where when who which near does do can much many'.split(' '));
+const MIN_WORD_TERMS = 2;
+
+const $ = id => document.getElementById(id);
+const S = {
+  fileName:'', rows:[], sheets:null, headerIdx:0, headers:[], map:{}, cur:'$',
+  terms:[], acct:null, spend:100, minImpr:300, ctrMax:0.01, days:null,
+  skipped:{excluded:0, added:0}, tab:'terms', unchecked:new Set(), checked:new Set(), limit:100,
+  lists:{terms:[], words:[], low:[]}
+};
+
+/* ---------- File reading (shared approach with Keyword Triage) ---------- */
+function decode(buf){
+  const b = new Uint8Array(buf);
+  if (b[0]===0xFF && b[1]===0xFE) return new TextDecoder('utf-16le').decode(buf);
+  if (b[0]===0xFE && b[1]===0xFF) return new TextDecoder('utf-16be').decode(buf);
+  let zeros=0; const n=Math.min(b.length,400);
+  for(let i=1;i<n;i+=2) if(b[i]===0) zeros++;
+  if (n>20 && zeros > n/4) return new TextDecoder('utf-16le').decode(buf);
+  return new TextDecoder('utf-8').decode(buf).replace(/^﻿/,'');
+}
+function detectDelimiter(text){
+  const sample = text.split(/\r?\n/).slice(0,15).join('\n');
+  const c = d => (sample.match(new RegExp(d==='\t'?'\\t':'\\'+d,'g'))||[]).length;
+  const counts = [[',',c(',')],['\t',c('\t')],[';',c(';')]];
+  counts.sort((a,b)=>b[1]-a[1]);
+  return counts[0][1] ? counts[0][0] : ',';
+}
+function parseDelimited(text, d){
+  const rows=[]; let row=[], f='', q=false;
+  for (let i=0;i<text.length;i++){
+    const ch=text[i];
+    if (q){
+      if (ch==='"'){ if (text[i+1]==='"'){ f+='"'; i++; } else q=false; }
+      else f+=ch;
+    } else if (ch==='"' && f==='') q=true;
+    else if (ch===d){ row.push(f); f=''; }
+    else if (ch==='\n' || ch==='\r'){
+      if (ch==='\r' && text[i+1]==='\n') i++;
+      row.push(f); rows.push(row); row=[]; f='';
+    } else f+=ch;
+  }
+  if (f!=='' || row.length){ row.push(f); rows.push(row); }
+  return rows.filter(r => r.some(c => c.trim()!==''));
+}
+const norm = s => String(s||'').trim().toLowerCase().replace(/\s+/g,' ');
+
+function headerScore(rows){
+  let best=0, bestScore=-1;
+  for (let i=0;i<Math.min(rows.length,20);i++){
+    const cells = rows[i].map(norm);
+    let score=0;
+    FIELDS.forEach(f => { if (cells.some(c => f.rx.slice(0,3).some(r=>r.test(c)))) score += f.req?3:1; });
+    // A keyword report has Keyword + Cost + Conversions too; count it so we can explain the mix-up.
+    if (cells.includes('keyword') || cells.includes('search keyword')) score += 1;
+    if (score>bestScore){ bestScore=score; best=i; }
+  }
+  return [best, bestScore];
+}
+function guessMap(headers){
+  const h = headers.map(norm), used=new Set(), map={};
+  FIELDS.forEach(f => {
+    for (const r of f.rx){
+      const i = h.findIndex((c,ix)=>!used.has(ix) && r.test(c));
+      if (i>-1){ map[f.k]=i; used.add(i); return; }
+    }
+    map[f.k] = -1;
+  });
+  return map;
+}
+
+/* An .xlsx file is a zip of XML parts. Read the zip directory by hand, inflate entries
+   with the browser's DecompressionStream, and parse the XML with DOMParser. */
+async function readXlsx(buf){
+  const u=new Uint8Array(buf), dv=new DataView(buf), td=new TextDecoder();
+  let eocd=-1;
+  for (let i=u.length-22;i>=Math.max(0,u.length-22-65535);i--) if (dv.getUint32(i,true)===0x06054b50){ eocd=i; break; }
+  if (eocd<0) throw new Error('it isn’t a valid .xlsx file');
+  const count=dv.getUint16(eocd+10,true), entries={};
+  let p=dv.getUint32(eocd+16,true);
+  for (let i=0;i<count;i++){
+    if (dv.getUint32(p,true)!==0x02014b50) break;
+    const nl=dv.getUint16(p+28,true), xl=dv.getUint16(p+30,true), cl=dv.getUint16(p+32,true);
+    const name=td.decode(u.subarray(p+46,p+46+nl));
+    entries[name.toLowerCase()]={method:dv.getUint16(p+10,true), size:dv.getUint32(p+20,true), off:dv.getUint32(p+42,true)};
+    p+=46+nl+xl+cl;
+  }
+  async function part(name){
+    const e=entries[name.replace(/^\//,'').toLowerCase()];
+    if (!e) return null;
+    const start=e.off+30+dv.getUint16(e.off+26,true)+dv.getUint16(e.off+28,true);
+    const data=u.subarray(start,start+e.size);
+    if (e.method===0) return td.decode(data);
+    if (e.method!==8) throw new Error('it uses an unsupported compression method');
+    if (typeof DecompressionStream==='undefined') throw new Error('this browser can’t unzip Excel files. Save it as CSV, or update your browser');
+    const out=await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+    return td.decode(out);
+  }
+  const xml = t => new DOMParser().parseFromString(t,'application/xml');
+  const tags = (node,tag) => Array.from(node.getElementsByTagNameNS('*',tag));
+  const attr = (el,local) => { for (const a of el.attributes) if (a.localName===local) return a.value; return null; };
+  const wbPath = Object.keys(entries).find(k=>/(^|\/)workbook\.xml$/.test(k)) || 'xl/workbook.xml';
+  const base = wbPath.replace(/[^/]*$/,'');
+  const wbText = await part(wbPath);
+  if (!wbText) throw new Error('it has no workbook inside. Is it really an .xlsx?');
+  const relsText = await part(base+'_rels/'+wbPath.slice(base.length)+'.rels');
+  const rels = {};
+  if (relsText) tags(xml(relsText),'Relationship').forEach(r=>{
+    const t=r.getAttribute('Target'); rels[r.getAttribute('Id')] = t.startsWith('/') ? t.slice(1) : base+t;
+  });
+  const ssText = await part(base+'sharedStrings.xml');
+  const shared = ssText ? tags(xml(ssText),'si').map(si =>
+    tags(si,'t').filter(t=>t.parentNode.localName!=='rPh').map(t=>t.textContent).join('')) : [];
+  const colIdx = ref => { let n=0; for (const ch of ref.replace(/\d+$/,'').toUpperCase()) n=n*26+ch.charCodeAt(0)-64; return n-1; };
+  const sheets=[];
+  for (const [i,sh] of tags(xml(wbText),'sheet').entries()){
+    const path = rels[attr(sh,'id')] || `${base}worksheets/sheet${i+1}.xml`;
+    const text = await part(path);
+    if (!text) continue;
+    const rows=[];
+    tags(xml(text),'row').forEach((row,ri)=>{
+      const r = (+row.getAttribute('r')||ri+1)-1, out=[];
+      tags(row,'c').forEach((c,ci)=>{
+        const ref=c.getAttribute('r'), col = ref ? colIdx(ref) : ci, t=c.getAttribute('t');
+        const v = tags(c,'v')[0], raw = v ? v.textContent : '';
+        let val;
+        if (t==='s') val = shared[+raw] ?? '';
+        else if (t==='inlineStr') val = tags(c,'t').map(x=>x.textContent).join('');
+        else if (t==='b') val = raw==='1' ? 'TRUE' : 'FALSE';
+        else if (t==='str' || t==='e') val = raw;
+        else { const n=Number(raw); val = raw==='' ? '' : (isFinite(n) ? (Math.abs(n)<1e-6 ? '0' : String(+n.toPrecision(15))) : raw); }
+        out[col]=val;
+      });
+      for (let k=0;k<out.length;k++) if (out[k]==null) out[k]='';
+      rows[r]=out;
+    });
+    sheets.push({name: sh.getAttribute('name') || `Sheet ${i+1}`, rows: rows.filter(r=>r && r.some(c=>String(c).trim()!==''))});
+  }
+  return sheets;
+}
+
+/* ---------- Numbers & formatting ---------- */
+function num(v){
+  let s = String(v==null?'':v).trim();
+  if (!s || s==='--' || s==='-' || /^n\/?a$/i.test(s)) return 0;
+  const neg = /^\(.*\)$/.test(s) || /^-/.test(s);
+  s = s.replace(/[^\d.,]/g,'');
+  if (!s) return 0;
+  const lc=s.lastIndexOf(','), ld=s.lastIndexOf('.');
+  if (lc>-1 && ld>-1){ s = lc>ld ? s.replace(/\./g,'').replace(',', '.') : s.replace(/,/g,''); }
+  else if (lc>-1){ s = /^\d{1,3}(,\d{3})+$/.test(s) ? s.replace(/,/g,'') : s.replace(',', '.'); }
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : (neg ? -n : n);
+}
+function detectCurrency(){
+  const col=S.map.cost;
+  if (col<0) return '$';
+  for (let i=S.headerIdx+1;i<Math.min(S.rows.length,S.headerIdx+40);i++){
+    const m = String(S.rows[i][col]||'').match(/R\$|A\$|C\$|[$€£¥₹]/);
+    if (m) return m[0];
+  }
+  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$'};
+  const h = String(S.headers[col]||'').match(/\((\w{3})\)/);
+  if (h && codes[h[1].toUpperCase()]) return codes[h[1].toUpperCase()];
+  const cc = S.headers.findIndex(x=>/currency/i.test(x));
+  if (cc>-1){ const v=String((S.rows[S.headerIdx+1]||[])[cc]||'').trim().toUpperCase(); if (codes[v]) return codes[v]; }
+  return '$';
+}
+const fmtMoney = (n, dp) => {
+  if (!isFinite(n)) return '—';
+  const d = dp!=null ? dp : (Math.abs(n)<100 && n%1 ? 2 : 0);
+  return S.cur + n.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});
+};
+const fmtNum = (n,dp=0) => isFinite(n) ? n.toLocaleString(undefined,{maximumFractionDigits:dp}) : '—';
+const plural = (n,w,ws) => `${fmtNum(n)} ${n===1?w:(ws||w+'s')}`;
+function niceRound(n){
+  if (!isFinite(n) || n<=0) return 0;
+  const p = Math.pow(10, Math.floor(Math.log10(n))-1);
+  return Math.round(n/p)*p;
+}
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ---------- Text ---------- */
+const tokenize = s => norm(s).split(' ').map(t=>t.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu,'')).filter(Boolean);
+const cleanKw = s => norm(String(s).replace(/^[\[\"+]+|[\]\"]+$/g,'').replace(/\+/g,' '));
+// Characters Google Ads rejects in keywords.
+const forNeg = s => s.replace(/[!@%^*()={};~`<>?\\|\[\]"]/g,' ').replace(/\s+/g,' ').trim();
+
+function grams(tokens){
+  const g = new Set();
+  tokens.forEach((t,i)=>{
+    if (!STOP.has(t) && !WEAK.has(t) && t.length>1) g.add(t);
+    if (i<tokens.length-1 && !(STOP.has(t) && STOP.has(tokens[i+1]))) g.add(t+' '+tokens[i+1]);
+  });
+  return g;
+}
+
+/* Date range from the title lines above the header, e.g. "July 5, 2026 - October 2, 2026". */
+function detectDays(){
+  const text = S.rows.slice(0,S.headerIdx).map(r=>r.join(' ')).join(' ');
+  const pats = [
+    /([A-Z][a-z]{2,8}\.? \d{1,2},? \d{4})\s*(?:-|–|—|to)\s*([A-Z][a-z]{2,8}\.? \d{1,2},? \d{4})/,
+    /(\d{4}-\d{2}-\d{2})\s*(?:-|–|—|to|,)\s*(\d{4}-\d{2}-\d{2})/,
+    /(\d{1,2}\/\d{1,2}\/\d{4})\s*(?:-|–|—|to|,)\s*(\d{1,2}\/\d{1,2}\/\d{4})/,
+  ];
+  for (const p of pats){
+    const m = text.match(p);
+    if (m){ const a=Date.parse(m[1]), b=Date.parse(m[2]); if (isFinite(a)&&isFinite(b)&&b>=a) return Math.round((b-a)/864e5)+1; }
+  }
+  return null;
+}
+
+/* ---------- Build ---------- */
+function buildTerms(){
+  const m=S.map, by=new Map(), kwTokens=new Set(), kwExact=new Set();
+  const get = (r,k) => m[k]>-1 ? r[m[k]] : '';
+  S.skipped = {excluded:0, added:0};
+  for (let i=S.headerIdx+1;i<S.rows.length;i++){
+    const r=S.rows[i];
+    const raw = String(get(r,'term')||'').trim();
+    const first = String(r[0]||'').trim();
+    if (!raw || raw==='--' || /^total/i.test(raw) || /^total/i.test(first)) continue;
+    const kw = cleanKw(get(r,'keyword'));
+    if (kw && kw!=='--'){ kwExact.add(kw); tokenize(kw).forEach(t=>kwTokens.add(t)); }
+    const st = norm(get(r,'status'));
+    if (/excluded/.test(st)){ S.skipped.excluded++; continue; }
+    const text = norm(raw);
+    let x = by.get(text);
+    if (!x){ x={text, display:raw, cost:0, conv:0, clicks:0, impr:0, camps:new Set(), added:false}; by.set(text,x); }
+    x.cost += num(get(r,'cost')); x.conv += num(get(r,'conv'));
+    x.clicks += num(get(r,'clicks')); x.impr += num(get(r,'impr'));
+    const c = String(get(r,'campaign')||'').trim(); if (c && c!=='--') x.camps.add(c);
+    if (/^added/.test(st)) x.added = true;
+  }
+  const terms = [...by.values()];
+  terms.forEach(x=>{
+    x.tokens = tokenize(x.text);
+    x.grams = grams(x.tokens);
+    if (x.added || kwExact.has(x.text)){ x.isKeyword = true; if (x.added) S.skipped.added++; x.tokens.forEach(t=>kwTokens.add(t)); }
+  });
+  S.kwTokens = kwTokens;
+  return terms;
+}
+
+function accountStats(terms){
+  const t = terms.reduce((a,x)=>{a.cost+=x.cost;a.conv+=x.conv;a.clicks+=x.clicks;a.impr+=x.impr;return a;},{cost:0,conv:0,clicks:0,impr:0});
+  t.cpa = t.conv ? t.cost/t.conv : NaN;
+  t.ctr = t.impr ? t.clicks/t.impr : NaN;
+  return t;
+}
+
+function setDefaults(){
+  const a=S.acct;
+  S.spend = isFinite(a.cpa) && a.cpa>0 ? (niceRound(a.cpa*2) || 100) : 100;
+  // Shopping-style accounts run low CTRs across the board; don't flag everything.
+  const c = isFinite(a.ctr) && a.ctr>0 && a.ctr<0.03 ? Math.max(0.001, Math.round(a.ctr/3*1000)/1000) : 0.01;
+  S.ctrMax = Math.min(0.01, c);
+  S.minImpr = 300;
+}
+
+/* ---------- Analyze ---------- */
+function analyze(){
+  const T=S.terms, spend=S.spend, kw=S.kwTokens;
+  const hasCtr = S.map.clicks>-1 && S.map.impr>-1;
+
+  const terms = T.filter(x=>!x.isKeyword && x.conv<=0 && x.cost>0 && x.cost>=spend)
+    .sort((a,b)=>b.cost-a.cost);
+
+  // N-grams across every search term (converting ones included, so a word that ever converts is out).
+  const g = new Map();
+  T.forEach(x=>x.grams.forEach(w=>{
+    let a=g.get(w); if(!a){a={w,cost:0,conv:0,clicks:0,terms:[]}; g.set(w,a);}
+    a.cost+=x.cost; a.conv+=x.conv; a.clicks+=x.clicks; a.terms.push(x);
+  }));
+  let words = [...g.values()].filter(a=>{
+    if (a.conv>0 || a.terms.length<MIN_WORD_TERMS || a.cost<spend || a.cost<=0) return false;
+    if (a.w.split(' ').some(t=>kw.has(t))) return false;
+    return true;
+  });
+  const uni = new Set(words.filter(a=>!a.w.includes(' ')).map(a=>a.w));
+  words = words.filter(a=>!a.w.includes(' ') || !a.w.split(' ').some(t=>uni.has(t)));
+  words.sort((a,b)=>b.cost-a.cost);
+
+  const inTerms = new Set(terms.map(x=>x.text));
+  const low = !hasCtr ? [] : T.filter(x=>!x.isKeyword && x.conv<=0 && x.impr>=S.minImpr && x.clicks/x.impr < S.ctrMax && !inTerms.has(x.text))
+    .sort((a,b)=>b.impr-a.impr);
+
+  S.lists = {terms, words, low};
+}
+
+const id = (kind, s) => kind+':'+s;
+const isSel = (kind, key) => kind==='low' ? S.checked.has(id(kind,key)) : !S.unchecked.has(id(kind,key));
+
+function selection(){
+  const words = S.lists.words.filter(a=>isSel('words',a.w));
+  const wset = new Set(words.map(a=>a.w));
+  const coveredBy = x => { for (const w of x.grams) if (wset.has(w)) return w; return null; };
+  const blocked = new Map();
+  words.forEach(a=>a.terms.forEach(x=>blocked.set(x.text,x)));
+  const termNegs=[];
+  ['terms','low'].forEach(k=>S.lists[k].forEach(x=>{
+    if (!isSel(k,x.text)) return;
+    blocked.set(x.text,x);
+    if (!coveredBy(x)) termNegs.push({x,kind:k});
+  }));
+  let cost=0; blocked.forEach(x=>cost+=x.cost);
+  return {words, termNegs, coveredBy, cost, blockedCount:blocked.size, count: words.length+termNegs.length};
+}
+
+/* ---------- Load ---------- */
+function loadText(text, name){
+  const d = detectDelimiter(text);
+  const rows = parseDelimited(text, d);
+  if (rows.length<2){ startErr('That file looks empty, or it isn’t a CSV or Excel file.'); return; }
+  S.sheets = null;
+  loadRows(rows, name);
+}
+function loadSheets(sheets, name){
+  sheets = sheets.filter(sh=>sh.rows.length>=2);
+  if (!sheets.length){ startErr('That workbook has no sheets with data in them.'); return; }
+  let best=0, bestScore=-1;
+  sheets.forEach((sh,i)=>{ const sc=headerScore(sh.rows)[1]; if(sc>bestScore){bestScore=sc;best=i;} });
+  S.sheets = sheets;
+  showSheet(best, name);
+}
+function showSheet(i, name){
+  const sel=$('sheetSel');
+  sel.innerHTML = S.sheets.map((sh,j)=>`<option value="${j}">${esc(sh.name)}</option>`).join('');
+  sel.value = String(i);
+  sel.hidden = S.sheets.length<2;
+  loadRows(S.sheets[i].rows, name);
+}
+function loadRows(rows, name){
+  S.fileName = name; S.rows = rows;
+  const stale=$('drop').querySelector('.err'); if (stale) stale.remove();
+  S.headerIdx = headerScore(rows)[0];
+  S.headers = rows[S.headerIdx].map(h=>String(h).trim());
+  S.map = guessMap(S.headers);
+  S.days = detectDays();
+  S.unchecked.clear(); S.checked.clear(); S.tab='terms'; S.limit=100;
+  if (!S.sheets) $('sheetSel').hidden = true;
+  $('start').hidden = true; $('work').hidden = false; $('toast').hidden = true;
+  $('fname').textContent = name;
+  renderMap();
+  recompute(true);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function startErr(msg){
+  const d=$('drop'); let p=d.querySelector('.err');
+  if(!p){p=document.createElement('div');p.className='err';d.appendChild(p);}
+  p.textContent=msg;
+}
+
+function recompute(resetDefaults){
+  S.cur = detectCurrency();
+  const missing = FIELDS.filter(f=>f.req && S.map[f.k]<0);
+  const err=$('maperr');
+  if (missing.length){
+    const kwReport = S.map.term<0 && S.headers.some(h=>/^(search )?keyword$/i.test(h.trim()));
+    err.innerHTML = kwReport
+      ? `This looks like a <b>keyword</b> report. Negative keywords come from the <b>search terms</b> report: in Google Ads, Campaigns › Insights and reports › Search terms. If this file does have search terms, pick that column under Columns.`
+      : `Couldn’t find: ${missing.map(f=>f.label).join(', ')}. Pick the matching columns under Columns.`;
+    err.hidden=false; $('mapbox').hidden=false; $('results').hidden=true;
+    $('fmeta').textContent='';
+    return;
+  }
+  err.hidden=true; $('results').hidden=false;
+  S.terms = buildTerms();
+  S.acct = accountStats(S.terms);
+  if (resetDefaults) setDefaults();
+  syncInputs();
+  analyze();
+  const meta = [plural(S.terms.length,'search term')];
+  if (S.days) meta.push(`${S.days} days`);
+  if (S.skipped.excluded) meta.push(`${fmtNum(S.skipped.excluded)} already excluded`);
+  $('fmeta').textContent = '· '+meta.join(' · ');
+  render();
+}
+
+function syncInputs(){
+  document.querySelectorAll('.spendIn').forEach(el=>{ if (document.activeElement!==el) el.value = S.spend; });
+  document.querySelectorAll('[data-cur]').forEach(el=>el.textContent=S.cur);
+  if (document.activeElement!==$('imprIn')) $('imprIn').value = S.minImpr;
+  if (document.activeElement!==$('ctrIn')) $('ctrIn').value = +(S.ctrMax*100).toFixed(2);
+}
+
+/* ---------- Render ---------- */
+function renderMap(){
+  const g=$('mapgrid'); g.innerHTML='';
+  FIELDS.forEach(f=>{
+    const l=document.createElement('label'); l.className='f';
+    l.innerHTML = `<span>${f.label}${f.req?' <span class="req">*</span>':''}</span>`;
+    const s=document.createElement('select');
+    s.innerHTML = `<option value="-1">(none)</option>` + S.headers.map((h,i)=>`<option value="${i}">${esc(h||'Column '+(i+1))}</option>`).join('');
+    s.value = String(S.map[f.k]);
+    s.onchange = ()=>{ S.map[f.k]=+s.value; recompute(['cost','conv','clicks','impr'].includes(f.k)); };
+    l.appendChild(s); g.appendChild(l);
+  });
+}
+
+function render(){
+  const a=S.acct, L=S.lists, sel=selection();
+  const hasCtr = S.map.clicks>-1 && S.map.impr>-1;
+
+  // Hero
+  const hero=$('hero'), totalFound = L.terms.length + L.words.length;
+  hero.classList.toggle('clean', !totalFound);
+  if (!totalFound){
+    $('heroAmt').textContent = '✓';
+    $('heroWhat').textContent = 'No obviously wasted spend';
+    $('heroSub').textContent = `No search term or word spent ${fmtMoney(S.spend)} without converting.${L.low.length?' Check Low CTR for searches that may be off-topic.':' Lower the amount below to look closer.'}`;
+  } else {
+    $('heroAmt').textContent = fmtMoney(sel.cost,0);
+    $('heroWhat').textContent = sel.count
+      ? `spent on searches that never converted`
+      : 'Nothing selected';
+    $('heroSub').textContent = sel.count
+      ? `Blocking the ${plural(sel.count,'negative keyword')} below would have saved ${a.cost?Math.max(1,Math.round(sel.cost/a.cost*100)):0}% of the ${fmtMoney(a.cost,0)} in this report, across ${plural(sel.blockedCount,'search term')}.`
+      : 'Tick search terms or words below to build your negative keyword list.';
+  }
+
+  // Notes
+  const notes=[];
+  if (!(a.conv>0)) notes.push('This report has no conversions at all. Check that conversion tracking is working before adding negatives, or everything that spent money will look like waste.');
+  else if (S.days && S.days<28) notes.push(`This report covers ${S.days} days. A 90-day report lets more search terms reach the threshold and finds more waste.`);
+  $('note').hidden = !notes.length; $('note').textContent = notes.join(' ');
+
+  // Tabs
+  $('cTerms').textContent = L.terms.length;
+  $('cWords').textContent = L.words.length;
+  $('cLow').textContent = L.low.length;
+  $('tabs').querySelector('[data-t="low"]').hidden = !hasCtr;
+  if (!hasCtr && S.tab==='low') S.tab='terms';
+  $('tabs').querySelectorAll('button').forEach(b=>{ b.classList.toggle('on', b.dataset.t===S.tab); b.setAttribute('aria-selected', b.dataset.t===S.tab); });
+  ['terms','words','low'].forEach(t=>$('pane-'+t).hidden = t!==S.tab);
+  $('hintTerms').innerHTML = (isFinite(a.cpa)
+    ? `Default is 2× your average cost per conversion of ${esc(fmtMoney(a.cpa))}.`
+    : `Default is ${esc(fmtMoney(100))} because this report has no conversions.`)
+    + ` Copied as exact match, like <code>[copywriting jobs]</code>.`;
+
+  renderList(sel);
+
+  // Bar
+  $('barSum').innerHTML = sel.count
+    ? `<b>${plural(sel.count,'negative')}</b> <span class="muted">· ${esc(fmtMoney(sel.cost,0))} blocked</span>`
+    : `<span class="muted">No negatives selected</span>`;
+  $('copy').disabled = $('dl').disabled = !sel.count;
+}
+
+function renderList(sel){
+  const k=S.tab, items=S.lists[k], box=$('list');
+  if (!items.length){
+    const msg = {
+      terms: `No search term spent ${esc(fmtMoney(S.spend))} without converting.`,
+      words: `No word shared by 2 or more search terms spent ${esc(fmtMoney(S.spend))} without converting.`,
+      low: `No search term had ${fmtNum(S.minImpr)}+ impressions and a CTR under ${+(S.ctrMax*100).toFixed(2)}%.`,
+    }[k];
+    box.innerHTML = `<div class="empty">${msg}</div>`; return;
+  }
+  const key = x => k==='words' ? x.w : x.text;
+  const allOn = items.every(x=>isSel(k,key(x)));
+  const head = `<div class="listhead"><span>Sorted by ${k==='low'?'impressions':'spend'}</span><button class="btn quiet" data-all="${allOn?0:1}">${allOn?'Deselect all':'Select all'}</button></div>`;
+  const rows = items.slice(0,S.limit).map(x=>{
+    const on = isSel(k,key(x));
+    if (k==='words'){
+      const eg = x.terms.slice().sort((a,b)=>b.cost-a.cost).slice(0,3).map(t=>esc(t.display)).join(', ');
+      return `<label class="row"><input type="checkbox" data-k="${esc(x.w)}"${on?' checked':''}>
+        <span class="main"><span class="t">${esc(x.w)}</span>
+        <span class="m">In ${plural(x.terms.length,'search term')}${x.clicks?` · ${plural(x.clicks,'click')}`:''} · 0 conversions</span>
+        <span class="eg">${eg}${x.terms.length>3?', …':''}</span></span>
+        <span class="amt">${esc(fmtMoney(x.cost,0))}</span></label>`;
+    }
+    const by = sel.coveredBy(x);
+    const meta = [];
+    if (S.map.clicks>-1) meta.push(plural(x.clicks,'click'));
+    if (k==='low' || (S.map.impr>-1 && S.map.clicks>-1 && x.impr)) meta.push(`${fmtNum(x.impr)} impr.`, `${(x.impr?x.clicks/x.impr*100:0).toFixed(1)}% CTR`);
+    if (x.camps.size===1) meta.push(esc([...x.camps][0])); else if (x.camps.size>1) meta.push(`${x.camps.size} campaigns`);
+    return `<label class="row${by?' covered':''}"><input type="checkbox" data-k="${esc(x.text)}"${on?' checked':''}>
+      <span class="main"><span class="t">${esc(x.display)}</span>
+      <span class="m">${meta.join(' · ')}</span>
+      ${by?`<span class="cov">Already blocked by "${esc(by)}"</span>`:''}</span>
+      <span class="amt">${esc(fmtMoney(x.cost,0))}</span></label>`;
+  }).join('');
+  const more = items.length>S.limit ? `<button class="more" id="moreBtn">Show ${fmtNum(items.length-S.limit)} more</button>` : '';
+  box.innerHTML = head + rows + more;
+  box.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.onchange=()=>{ setSel(k, cb.dataset.k, cb.checked); render(); });
+  box.querySelector('[data-all]').onclick = e=>{ e.preventDefault(); const on=e.target.dataset.all==='1'; items.forEach(x=>setSel(k,key(x),on)); render(); };
+  const mb=$('moreBtn'); if (mb) mb.onclick=()=>{ S.limit+=200; render(); };
+}
+function setSel(kind, key, on){
+  const i=id(kind,key);
+  if (kind==='low'){ on ? S.checked.add(i) : S.checked.delete(i); }
+  else { on ? S.unchecked.delete(i) : S.unchecked.add(i); }
+}
+
+/* ---------- Output ---------- */
+function negatives(){
+  const sel=selection(), seen=new Set(), out=[];
+  sel.words.forEach(a=>{ const n=forNeg(a.w); if(n && !seen.has('p'+n)){ seen.add('p'+n); out.push({neg:`"${n}"`, kw:n, match:'Phrase', type:'Word', x:a, n:a.terms.length}); }});
+  sel.termNegs.forEach(({x})=>{ const n=forNeg(x.text); if(n && !seen.has('e'+n)){ seen.add('e'+n); out.push({neg:`[${n}]`, kw:n, match:'Exact', type:'Search term', x, n:1}); }});
+  return out;
+}
+function toast(msg){ const t=$('toast'); t.textContent=msg; t.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(()=>t.hidden=true, 9000); }
+function download(name, text, type){
+  const blob=new Blob([text],{type}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},500);
+}
+function copyNegs(){
+  const list=negatives(); if(!list.length) return;
+  const text=list.map(x=>x.neg).join('\n');
+  const done=()=>toast(`Copied ${plural(list.length,'negative keyword')}. Paste them into a negative keyword list or a campaign’s negative keywords, one per line.`);
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, ()=>{ download('negative-keywords.txt',text,'text/plain'); toast('Clipboard was blocked, so the list was downloaded as a text file instead.'); });
+  else { download('negative-keywords.txt',text,'text/plain'); toast('Downloaded the list as a text file.'); }
+}
+function csvCell(v){ v=String(v==null?'':v); return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
+function downloadCsv(){
+  const list=negatives(); if(!list.length) return;
+  const head=['Negative keyword','Keyword text','Match type','Source','Search terms blocked','Cost','Clicks','Conversions'];
+  const lines=[head.join(',')].concat(list.map(r=>[r.neg,r.kw,r.match,r.type,r.n,r.x.cost.toFixed(2),r.x.clicks,0].map(csvCell).join(',')));
+  const base=S.fileName.replace(/\.[^.]+$/,'');
+  download(`${base}-negatives.csv`, '﻿'+lines.join('\r\n'), 'text/csv');
+  toast(`Downloaded ${plural(list.length,'negative keyword')} as CSV.`);
+}
+
+/* ---------- Sample report (Google Ads search terms export format) ---------- */
+function sampleCSV(){
+  let seed=11; const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+  const C={cw:'Services - Copywriting', ppc:'Services - PPC', br:'Brand'};
+  // [term, campaign, keyword, cpc, clicks, conversions]
+  const good=[
+    ['ppc copywriter',C.cw,'ppc copywriter',6.8,72,9],['hire ppc copywriter',C.cw,'ppc copywriter',7.2,28,5],
+    ['google ads copywriter',C.cw,'google ads copywriter',6.5,51,6],['google ads copywriter for hire',C.cw,'google ads copywriter',6.9,16,3],
+    ['landing page copywriter',C.cw,'landing page copywriter',5.9,64,7],['landing page copywriting services',C.cw,'landing page copywriter',6.1,30,3],
+    ['conversion copywriter',C.cw,'conversion copywriter',6.4,40,4],['copywriting services',C.cw,'copywriting services',5.2,88,8],
+    ['copywriting services pricing',C.cw,'copywriting services',5.6,22,3],['ad copywriting agency',C.cw,'ad copywriter',6.6,25,2],
+    ['ppc agency',C.ppc,'ppc agency',9.4,96,9],['ppc agency for small business',C.ppc,'ppc agency',9.1,34,4],
+    ['ppc management services',C.ppc,'ppc management',9.8,70,7],['google ads management',C.ppc,'google ads management',10.2,82,8],
+    ['google ads management company',C.ppc,'google ads management',10.6,31,4],['ppc consultant',C.ppc,'ppc consultant',8.7,38,3],
+    ['ppc audit service',C.ppc,'ppc audit',8.2,27,4],['microsoft ads agency',C.ppc,'microsoft ads agency',6.1,21,2],
+    ['copy for originals',C.br,'copy for originals',1.1,140,22],['copyfororiginals',C.br,'copy for originals',1.0,61,9],
+    ['copy for originals reviews',C.br,'copy for originals',1.2,24,3],
+    ['saas copywriter',C.cw,'saas copywriter',6.3,12,1],['b2b copywriter',C.cw,'b2b copywriter',6.0,15,1],
+    ['email copywriter',C.cw,'email copywriter',5.4,18,1],['ppc specialist for hire',C.ppc,'ppc specialist',8.4,14,1],
+  ];
+  const big=[ // obvious single-term waste
+    ['copywriting jobs remote',C.cw,'copywriting services',4.0,41],['marketing agency near me',C.ppc,'ppc agency',8.7,15],
+    ['copywriting',C.cw,'copywriting services',3.1,52],['ppc',C.ppc,'ppc agency',5.4,29],
+    ['google ads certification',C.ppc,'google ads management',4.6,30],['what is ppc',C.ppc,'ppc management',4.2,33],
+    ['ai ad copy generator',C.cw,'ad copywriter',3.8,37],['digital marketing agency',C.ppc,'ppc agency',9.6,14],
+  ];
+  const families={ // recurring words, each term too small to judge alone
+    free:['free ad copy generator','free copywriting templates','free google ads audit tool','free landing page copy','ppc audit free','free ad copy examples','free copywriting course','free ppc tools','free sales page template'],
+    jobs:['ppc jobs','copywriter jobs entry level','google ads jobs remote','ppc specialist jobs','freelance copywriting jobs','marketing copywriter jobs'],
+    salary:['ppc specialist salary','copywriter salary','google ads manager salary','ppc manager salary uk'],
+    course:['ppc course online','google ads course','copywriting course online','best ppc course','ad copywriting course udemy'],
+    'how to':['how to write ad copy','how to write google ads','how to become a copywriter','how to run google ads','how to do ppc yourself','how to write landing page copy'],
+    template:['ad copy template','landing page copy template','google ads template','ppc report template','copywriting template pdf'],
+    reddit:['best ppc agency reddit','copywriter reddit','google ads agency reddit worth it'],
+    examples:['ad copy examples','landing page copy examples','google ads examples','ppc ad examples'],
+  };
+  const lowctr=[ // navigational / off-topic searches people don't click
+    ['google ads login',C.ppc,'google ads management',2400,10,1.1],['google ads customer service phone number',C.ppc,'google ads management',1300,6,1.2],
+    ['bing ads sign in',C.ppc,'microsoft ads agency',820,3,0.9],['chatgpt',C.cw,'ad copywriter',3100,9,0.8],
+    ['grammarly',C.cw,'copywriting services',950,4,0.9],['canva ads',C.cw,'ad copywriter',640,3,1.0],
+  ];
+  const lines=['Search terms report','"July 5, 2026 - October 2, 2026"',
+    'Search term,Match type,Added/Excluded,Campaign,Ad group,Keyword,Clicks,Impr.,CTR,Currency code,Avg. CPC,Cost,Conv. rate,Conversions,Cost / conv.'];
+  const mts=['Phrase match','Broad match','Exact match (close variant)','Phrase match (close variant)'];
+  const push=(term,camp,kw,clicks,impr,cost,conv,status)=>{
+    lines.push([term,mts[Math.floor(rnd()*mts.length)],status||'None',camp,camp.replace(/^.* - /,''),kw,clicks,impr,
+      (impr?clicks/impr*100:0).toFixed(2)+'%','USD',(clicks?cost/clicks:0).toFixed(2),cost.toFixed(2),
+      (clicks?conv/clicks*100:0).toFixed(2)+'%',conv.toFixed(2),conv?(cost/conv).toFixed(2):'0.00'].map(csvCell).join(','));
+  };
+  const imprFor = clicks => Math.round(clicks/(0.035+rnd()*0.05));
+  good.forEach(([t,c,k,cpc,cl,cv])=>{ const cost=cl*cpc*(0.85+rnd()*0.3); push(t,c,k,cl,imprFor(cl),cost,cv); });
+  big.forEach(([t,c,k,cpc,cl])=>{ const cost=cl*cpc*(0.9+rnd()*0.2); push(t,c,k,cl,imprFor(cl),cost,0); });
+  Object.entries(families).forEach(([w,terms])=>terms.forEach(t=>{
+    const camp = /ppc|google|bing|microsoft|marketing/.test(t) ? C.ppc : C.cw;
+    const kw = camp===C.ppc ? 'ppc agency' : 'copywriting services';
+    const cl = 3+Math.floor(rnd()*9), cost = cl*(3+rnd()*4.5);
+    push(t,camp,kw,cl,imprFor(cl),cost,0);
+  }));
+  lowctr.forEach(([t,c,k,im,cl,cpc])=>push(t,c,k,cl,im,cl*cpc,0));
+  // A long tail of small, unremarkable searches.
+  const tail=['ppc help','adwords consultant','sem agency','paid search consultant','google ads expert near me','ad copy writer','copywriter for ads','web copywriter','website copywriting','conversion rate copywriter','ppc freelancer','google ads freelancer','facebook ads copywriter','product description writer','seo copywriter','ppc ad agency','search ads agency'];
+  tail.forEach(t=>{ const cl=1+Math.floor(rnd()*6); const camp=/ppc|ads|adwords|sem|search/.test(t)?C.ppc:C.cw; push(t,camp,camp===C.ppc?'ppc agency':'copywriting services',cl,imprFor(cl),cl*(4+rnd()*5),rnd()<.25?1:0); });
+  // Already handled in the account.
+  push('copywriting jobs',C.cw,'copywriting services',22,610,88.4,0,'Excluded');
+  push('free ppc audit',C.ppc,'ppc audit',14,390,81.2,0,'Excluded');
+  push('ppc copywriting agency',C.cw,'ppc copywriter',19,420,131.5,2,'Added');
+  lines.push('Total: Account,--,--,--,--,--,0,0,--,USD,--,0,--,0,--');
+  return lines.join('\n');
+}
+
+/* ---------- Theme (remembered per browser; the only thing ever stored) ---------- */
+const THEME_KEY='negative-keywords-theme';
+function applyTheme(t){ if(t==='light'||t==='dark') document.documentElement.setAttribute('data-theme',t); else document.documentElement.removeAttribute('data-theme'); }
+try{ applyTheme(localStorage.getItem(THEME_KEY)); }catch(e){}
+$('btnTheme').onclick=()=>{
+  const cur=document.documentElement.getAttribute('data-theme');
+  const isDark = cur==='dark' || (!cur && matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = isDark ? 'light' : 'dark';
+  applyTheme(next); try{ localStorage.setItem(THEME_KEY,next); }catch(e){}
+};
+
+/* ---------- Wire up ---------- */
+const fileIn=$('file');
+$('pick').onclick=()=>fileIn.click();
+fileIn.onchange=()=>{ if(fileIn.files[0]) readFile(fileIn.files[0]); fileIn.value=''; };
+function readFile(f){
+  const r=new FileReader();
+  r.onload=async ()=>{
+    try{
+      const b=new Uint8Array(r.result,0,Math.min(8,r.result.byteLength));
+      if (b[0]===0x50 && b[1]===0x4B && b[2]===0x03 && b[3]===0x04) loadSheets(await readXlsx(r.result), f.name);
+      else if (b[0]===0xD0 && b[1]===0xCF && b[2]===0x11 && b[3]===0xE0) startErr('That’s the old Excel 97–2003 (.xls) format. Open it in Excel and save it as .xlsx or CSV, then drop it here.');
+      else loadText(decode(r.result), f.name);
+    } catch(e){ startErr('Couldn’t read that file: '+e.message+'.'); }
+  };
+  r.readAsArrayBuffer(f);
+}
+$('sheetSel').onchange=e=>showSheet(+e.target.value, S.fileName);
+const drop=$('drop');
+['dragenter','dragover'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
+document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f) readFile(f); });
+$('sample').onclick=()=>loadText(sampleCSV(),'sample-search-terms-report.csv');
+$('reset').onclick=()=>{ S.rows=[]; S.terms=[]; $('work').hidden=true; $('start').hidden=false; $('mapbox').hidden=true; window.scrollTo({top:0}); };
+$('mapToggle').onclick=()=>{ $('mapbox').hidden=!$('mapbox').hidden; };
+
+$('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.tab=b.dataset.t; S.limit=100; render(); });
+let it;
+const onInput=(fn)=>e=>{ clearTimeout(it); it=setTimeout(()=>{ if(fn(parseFloat(e.target.value))){ syncInputs(); analyze(); render(); } },150); };
+document.querySelectorAll('.spendIn').forEach(el=>el.addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>=0){ S.spend=v; return true; } })));
+$('imprIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>=1){ S.minImpr=Math.round(v); return true; } }));
+$('ctrIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.ctrMax=v/100; return true; } }));
+$('copy').onclick=copyNegs;
+$('dl').onclick=downloadCsv;
+})();
+</script>
+</body>
+</html>

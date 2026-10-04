@@ -68,7 +68,7 @@
       "@id": "https://tools.copyfororiginals.com/ppc-troubleshooter/#faq",
       "mainEntity": [
         {"@type": "Question", "name": "How many clicks before I know a Google Ads campaign isn't working?", "acceptedAnswer": {"@type": "Answer", "text": "Divide 3 by your expected conversion rate. At 2.5 conversions per 100 clicks, that is about 120 clicks. A campaign that works would get zero conversions from 119 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck."}},
-        {"@type": "Question", "name": "How much budget do I need for Google Ads lead generation?", "acceptedAnswer": {"@type": "Answer", "text": "Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At the legal average of $9.87 a click and 2.5 conversions per 100 clicks, one lead costs about $395, so that is about $1,184 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy."}},
+        {"@type": "Question", "name": "How much budget do I need for Google Ads lead generation?", "acceptedAnswer": {"@type": "Answer", "text": "Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At $40 a click and 2.5 conversions per 100 clicks, one lead costs about $1,600, so that is about $4,800 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy."}},
         {"@type": "Question", "name": "Why did my Google Ads campaign work at first and then stop?", "acceptedAnswer": {"@type": "Answer", "text": "Usually one of three things. The good start was partly luck and later weeks fell back to normal. A change such as a new bid strategy, a new target or a large budget change restarted the learning period. Or a website change broke the conversion tracking or the form. With fewer than about 30 conversions in total, a drop by half can easily be luck."}},
         {"@type": "Question", "name": "Is a high cost per click a problem in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Not by itself. Cost per click is the price of one visitor; cost per lead is the price of a customer. If cost per click rises but cost per lead stays at or under your target, the campaign is fine. If both rise, check the bid strategy first, especially Target impression share, then broad match, competitors in Auction insights and Quality Score."}}
       ]
@@ -161,17 +161,13 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .ghost{border:1px solid var(--edge);background:transparent;color:var(--fg-2);font-weight:560;font-size:13.5px;padding:7px 12px;border-radius:10px;cursor:pointer}
 .ghost:hover{border-color:var(--fg-3);color:var(--fg)}
 .err{color:var(--fix);font-size:14px;margin:0 0 10px}
-.niche{margin-bottom:12px}
-.niche select{width:100%;font:inherit;font-size:16px;font-weight:560;color:var(--fg);background:var(--panel-2);border:1.5px solid var(--edge);border-radius:12px;padding:11px 12px}
-.niche select:focus{outline:none;border-color:var(--accent)}
-.cpc-note{margin:5px 2px 0;font-size:12.5px;color:var(--fg-3);min-height:1em}
-.kp{margin:0 0 16px;border:1px solid var(--edge);border-radius:12px;background:var(--panel-2)}
-.kp summary{cursor:pointer;padding:10px 14px;font-size:14px;font-weight:600;color:var(--accent);list-style:none}
-.kp summary::-webkit-details-marker{display:none}
-.kp summary::before{content:"ⓘ";margin-right:7px}
-.kp ol{margin:0;padding:0 16px 12px 34px;font-size:14px;color:var(--fg-2)}
-.kp li{margin-bottom:6px}
-.kp li b{color:var(--fg)}
+.where{margin:0 0 16px;border:1px solid var(--edge);border-radius:12px;background:var(--panel-2);padding:12px 14px}
+.where-h{margin:0 0 8px;font-size:13.5px;font-weight:650;color:var(--fg-2)}
+.seg{display:inline-flex;border:1px solid var(--edge);border-radius:10px;padding:2px;background:var(--panel);margin-bottom:8px}
+.seg button{border:0;background:transparent;font-size:13px;font-weight:600;color:var(--fg-3);padding:6px 12px;border-radius:8px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent-bg);color:var(--accent)}
+.where-b{margin:0;font-size:14px;color:var(--fg-2);line-height:1.5}
+.where-b b{color:var(--fg)}
 .rate{margin:4px 0 16px}
 .rate-val{margin:0 0 8px;font-size:15px;color:var(--fg-2)}
 .rate-val b{font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--fg);font-variant-numeric:tabular-nums}
@@ -310,20 +306,21 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
   <p>PPC Troubleshooter uses the formula <code>chance of zero = (1 − conversion rate)<sup>clicks</sup></code>. It calls the result normal bad luck when that chance is 25% or more, unlucky when it is between 5% and 25%, and not luck when it is under 5%. At a 2.5% conversion rate, the tipping point is 119 clicks: past that, zero conversions happens less than 5% of the time, so something is broken. Common causes are conversion tracking that isn’t recording, irrelevant search terms, and a landing page that doesn’t ask for the lead.</p>
 
   <h2>Why does my budget only buy a few expensive clicks?</h2>
-  <p>Because clicks in some niches cost several times more than in others, and a small budget buys too few of them to expect a lead. Attorneys and legal services average $9.87 a click, more than four times restaurants and food at $2.05. The top spot for a niche’s most valuable keywords often costs several times the niche average on top of that. Your expected cost per lead is your cost per click divided by your conversion rate.</p>
+  <p>Because the keywords that bring customers in competitive niches are expensive, and a small budget buys too few of them to expect a lead. Your expected cost per lead is your cost per click divided by your conversion rate. PPC Troubleshooter asks for your own average cost per click from your Google Ads account, or for campaigns that haven’t run, the Top of page bid (high range) from Keyword Planner.</p>
   <p>PPC Troubleshooter asks for your conversion rate on a slider from 0.5 to 10 leads per 100 clicks, marked Low (1), Medium (2.5) and High (5). If you don’t know your rate, use Medium. Five in 100 is already a strong result for most lead gen Search campaigns.</p>
-  <p>Worked example: a law firm pays the legal average of $9.87 a click and has $100 a month. $100 buys 10 clicks. At 2.5 leads per 100 clicks, the chance that all 10 miss is 0.975<sup>10</sup>, about 78%, so roughly 78 out of 100 firms in this spot would get no lead that month. One lead costs about $9.87 ÷ 0.025 = $395. Getting at least one lead in 90% of months takes 91 clicks, or $898 a month. Giving Smart Bidding room to work takes a daily budget of at least 3× the cost per lead, about $1,184 a day or $36,006 a month (daily × 30.4).</p>
+  <p>Worked example: a personal injury firm’s account shows an average cost per click of $40, and its budget is $100 a month. $100 buys 2 clicks. At 2.5 leads per 100 clicks, the chance that both miss is 0.975<sup>2</sup>, about 95%, so roughly 95 out of 100 firms in this spot would get no lead that month. One lead costs about $40 ÷ 0.025 = $1,600. Getting at least one lead in 90% of months takes 91 clicks, or $3,640 a month. Giving Smart Bidding room to work takes a daily budget of at least 3× the cost per lead, about $4,800 a day or $145,920 a month (daily × 30.4).</p>
   <div class="tbl"><table>
     <caption>Budget tiers PPC Troubleshooter calculates</caption>
-    <thead><tr><th>Tier</th><th>Formula</th><th>Legal, $9.87 CPC, 2.5% conversion rate</th></tr></thead>
+    <thead><tr><th>Tier</th><th>Formula</th><th>$40 CPC, 2.5% conversion rate</th></tr></thead>
     <tbody>
-      <tr><td>Expected cost per lead</td><td>CPC ÷ conversion rate</td><td>$395</td></tr>
-      <tr><td>A lead in most months (90% chance)</td><td>CPC × ⌈ln 0.1 ÷ ln(1 − rate)⌉ clicks</td><td>$898 a month</td></tr>
-      <tr><td>Enough for Smart Bidding</td><td>3 × cost per lead a day × 30.4</td><td>$36,006 a month</td></tr>
+      <tr><td>Expected cost per lead</td><td>CPC ÷ conversion rate</td><td>$1,600</td></tr>
+      <tr><td>A lead in most months (90% chance)</td><td>CPC × ⌈ln 0.1 ÷ ln(1 − rate)⌉ clicks</td><td>$3,640 a month</td></tr>
+      <tr><td>Enough for Smart Bidding</td><td>3 × cost per lead a day × 30.4</td><td>$145,920 a month</td></tr>
     </tbody>
   </table></div>
-  <h2>What is the average cost per click in my niche?</h2>
-  <p>PPC Troubleshooter fills in your niche’s average Google Ads cost per click from LocaliQ’s 2026 Search Advertising Benchmarks, which cover WordStream campaign data from April 2025 to March 2026. The average across all niches is $5.42. An average blends every keyword and ad position, so it sits closer to a typical first-page price than to the cost of the top spot. You can type over it with your own number.</p>
+  <h2>Why doesn’t PPC Troubleshooter use industry average CPCs?</h2>
+  <p>Because an industry average can be several times lower than what your own keywords cost. An average mixes every keyword, ad position and city in a niche, from cheap long-tail searches in small towns to the most contested terms in big cities. LocaliQ’s legal benchmarks put personal injury at $9.30 a click on average, while the keywords that bring injury cases in a large city cost far more at the top of the page. Budgeting with the average would make a $100 budget look like 10 clicks when it buys 2. So PPC Troubleshooter asks for your own number and uses averages only to say how expensive a niche is.</p>
+  <p>The averages below come from LocaliQ’s 2026 Search Advertising Benchmarks, which cover WordStream campaign data from April 2025 to March 2026. The average across all niches is $5.42. Use them to compare niches, not to set a budget.</p>
   <div class="tbl"><table>
     <caption>Average Google Ads cost per click by niche (LocaliQ 2026)</caption>
     <thead><tr><th>Niche</th><th>Average CPC</th></tr></thead>
@@ -353,8 +350,7 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
       <tr><td>Travel</td><td>$2.14</td></tr>
     </tbody>
   </table></div>
-  <h2>What is the average cost per click for each legal practice area?</h2>
-  <p>PPC Troubleshooter also lists seven legal practice areas under Attorneys &amp; Legal Services. Their averages come from LocaliQ’s Legal Search Advertising Benchmarks, a sample of 256 US search campaigns from April 2022 to March 2023, so they are older than the niche averages above. Criminal defense had the highest average cost per click at $12.30 and family law the lowest at $7.69. These are averages across every keyword in a practice area; the most competitive keywords in large cities, especially for personal injury, often cost many times more, so check Keyword Planner for your area.</p>
+  <p>LocaliQ’s Legal Search Advertising Benchmarks break legal out by practice area, from a sample of 256 US search campaigns between April 2022 and March 2023. Criminal defense had the highest average at $12.30 and family law the lowest at $7.69. The same caution applies: these are averages across every keyword, and the keywords you want most will cost more.</p>
   <div class="tbl"><table>
     <caption>Average Google Ads cost per click by legal practice area (LocaliQ, Apr 2022 – Mar 2023)</caption>
     <thead><tr><th>Practice area</th><th>Average CPC</th></tr></thead>
@@ -369,7 +365,8 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
     </tbody>
   </table></div>
 
-  <p>To find your own cost per click before launch, open Keyword Planner (Tools, Planning, Keyword Planner, Get search volume and forecasts), enter your main keywords and service area, and read <b>Top of page bid (low range)</b>. Google describes the low range as about the 20th percentile of what advertisers paid for a top-of-page position, and the high range as about the 80th percentile. The low range is the closest Keyword Planner gets to a typical first-page price. Once a campaign runs, use the Avg. CPC column, and the First page bid estimate column in the Keywords table.</p>
+  <h2>How do I find my real cost per click?</h2>
+  <p>If your ads have run, use the Avg. CPC column in the Campaigns table, with the date range set to the campaign’s whole life. If they haven’t, open Keyword Planner (Tools, Planning, Keyword Planner, Get search volume and forecasts), enter your main keywords and service area, and read <b>Top of page bid (high range)</b> for the keywords you care most about. Google describes the high range as about the 80th percentile of what advertisers paid for a top-of-page position, and the low range as about the 20th percentile. PPC Troubleshooter recommends planning with the high range, because the clicks that use up small budgets are the contested ones near the top of the page.</p>
 
   <p>If neither tier is affordable, PPC Troubleshooter recommends shrinking the campaign to fit: exact match on a handful of high-intent keywords, a smaller area, a max CPC limit, and pay-per-lead options such as Google Local Services Ads where your business type qualifies.</p>
 
@@ -385,7 +382,7 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
     <h3>How many clicks before I know a Google Ads campaign isn’t working?</h3>
     <p>Divide 3 by your expected conversion rate. At 2.5 conversions per 100 clicks, that is about 120 clicks. A campaign that works would get zero conversions from 119 clicks less than 5% of the time, so zero conversions past that point means something is broken. Before that point, zero conversions is often just bad luck.</p>
     <h3>How much budget do I need for Google Ads lead generation?</h3>
-    <p>Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At the legal average of $9.87 a click and 2.5 conversions per 100 clicks, one lead costs about $395, so that is about $1,184 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy.</p>
+    <p>Your expected cost per lead is your cost per click divided by your conversion rate. For Smart Bidding, set a daily budget of at least 3 times that cost per lead, so one expensive lead can't use up the day. At $40 a click and 2.5 conversions per 100 clicks, one lead costs about $1,600, so that is about $4,800 a day. A smaller budget can still bring leads with manual bids and exact match, but results will be lumpy.</p>
     <h3>Why did my Google Ads campaign work at first and then stop?</h3>
     <p>Usually one of three things. The good start was partly luck and later weeks fell back to normal. A change such as a new bid strategy, a new target or a large budget change restarted the learning period. Or a website change broke the conversion tracking or the form. With fewer than about 30 conversions in total, a drop by half can easily be luck.</p>
     <h3>Is a high cost per click a problem in Google Ads?</h3>
@@ -439,37 +436,12 @@ const SB_MONTH=3*30.4; // Smart Bidding budget: daily budget of 3× cost per lea
 const inHundred=p=>(Math.round(p*1000)/10).toLocaleString('en-US'); // 0.025 -> "2.5"
 const rateBand=p=>p<0.015?'Low':p<0.04?'Medium':'High';
 
-/* ---------- niche CPCs ----------
-   Average cost per click by industry, LocaliQ 2026 Search Advertising Benchmarks
-   (WordStream data, April 2025 – March 2026). Keep in sync with the table in the explainer. */
-const NICHES=[
-  ['pets','Animals & Pets',4.06],['apparel','Apparel / Fashion & Jewelry',4.44],['arts','Arts & Entertainment',1.63],
-  ['legal','Attorneys & Legal Services',9.87,'legal'],['autosale','Automotive — For Sale',2.27],['autorepair','Automotive — Repair, Service & Parts',4.35],
-  ['beauty','Beauty & Personal Care',4.62],['business','Business Services',5.87,'b2b'],['career','Career & Employment',5.81],
-  ['dental','Dentists & Dental Services',8.00,'health'],['education','Education & Instruction',4.81],['finance','Finance & Insurance',3.39,'fin'],
-  ['furniture','Furniture',3.97],['fitness','Health & Fitness',6.17,'health'],['home','Home & Home Improvement',8.33,'home'],
-  ['industrial','Industrial & Commercial',5.87,'b2b'],['personal','Personal Services',7.17],['physicians','Physicians & Surgeons',4.76,'health'],
-  ['realestate','Real Estate',3.22],['restaurants','Restaurants & Food',2.05],['shopping','Shopping, Collectibles & Gifts',4.14],
-  ['sports','Sports & Recreation',2.77],['travel','Travel',2.14],['other','Something else',null]
-].map(([id,label,cpc,ind])=>({id,label,cpc,ind:ind||'other'}));
-/* Legal practice areas: LocaliQ Legal Search Advertising Benchmarks, 256 US campaigns,
-   April 2022 – March 2023. Older than the main list; the page says so wherever they show. */
-const LEGAL_SUBS=[
-  ['legal-pi','Accidents & Personal Injury',9.30],['legal-bankruptcy','Bankruptcy',11.70],['legal-criminal','Criminal Defense',12.30],
-  ['legal-estate','Estate & Probate (incl. wills)',7.92],['legal-family','Family Law (incl. divorce)',7.69],
-  ['legal-general','General Practice',9.97],['legal-tax','Tax Law',11.82]
-].map(([id,label,cpc])=>({id,label:'Legal: '+label,short:label,cpc,ind:'legal',sub:true}));
-const nicheOf=id=>NICHES.find(n=>n.id===id)||LEGAL_SUBS.find(n=>n.id===id);
-const nicheOptions=()=>NICHES.map(n=>n.id==='legal'
-  ? `<optgroup label="Attorneys & Legal Services"><option value="legal">All legal · ${usd(n.cpc)}</option>${LEGAL_SUBS.map(x=>`<option value="${x.id}">${esc(x.short)} · ${usd(x.cpc)}</option>`).join('')}</optgroup>`
-  : `<option value="${n.id}">${esc(n.label)}${n.cpc?' · '+usd(n.cpc):''}</option>`).join('');
-const KP_HELP=`<details class="kp"><summary>How do I find my real cost per click?</summary>
-  <ol>
-    <li><b>Campaign already running?</b> Use the <b>Avg. CPC</b> column in the Campaigns table. In the Keywords table, add the <b>First page bid estimate</b> column to see roughly what each keyword needs to show on page one.</li>
-    <li><b>Not live yet?</b> In Google Ads, open <b>Tools → Planning → Keyword Planner → Get search volume and forecasts</b>. Paste your 5 to 10 main keywords and set the location to your service area.</li>
-    <li>Read <b>Top of page bid (low range)</b>. Google defines it as roughly the 20th percentile of what advertisers paid to show at the top of the page, so it’s the closest Keyword Planner gets to a typical first-page price. <b>High range</b> (about the 80th percentile) is what the very top spot costs.</li>
-    <li>Average the low-range bids of the keywords you’ll actually run, and enter that here.</li>
-  </ol></details>`;
+const WHERE_CPC=`<div class="where" role="group" aria-label="Where to find your cost per click">
+  <p class="where-h">Where do I find my cost per click?</p>
+  <div class="seg"><button type="button" aria-pressed="true" data-w="ran">My ads have run</button><button type="button" aria-pressed="false" data-w="new">Not live yet</button></div>
+  <p class="where-b" data-w="ran">In Google Ads, open <b>Campaigns</b>, set the date range to “since the campaign started,” and copy the <b>Avg. CPC</b> column for this campaign.</p>
+  <p class="where-b" data-w="new" hidden>Open <b>Tools → Planning → Keyword Planner → Get search volume and forecasts</b>. Paste your main keywords, set your service area, and copy the <b>Top of page bid (high range)</b> for the keywords you care most about. That’s roughly what the clicks that eat small budgets cost.</p>
+</div>`;
 
 /* ---------- shared questions ---------- */
 const RATE={id:'rate',type:'slider',
@@ -652,9 +624,14 @@ noconv:{name:'I spent money and got zero leads',steps:[
  }},
 
 pricey:{name:'A few expensive clicks ate my budget',steps:[
-  {id:'nums',type:'nichecpc',q:'What’s your niche, your monthly budget, and your cost per click?',
-   help:'Pick your niche and we’ll fill in its average cost per click. If you know your own, type over it.',
-   summary:v=>`${nicheOf(v.niche).label} · ${usd(v.budget)} a month · ${usd(v.cpc)} a click${v.own?'':' (niche average)'}`},
+  {id:'nums',type:'numbers',q:'What’s your monthly budget, and what do your clicks actually cost?',
+   help:'Use your own cost per click, not an industry average. Averages mix cheap and expensive keywords, so they can be several times lower than what yours cost.',
+   fields:[{id:'budget',label:'Monthly budget',pre:'$'},{id:'cpc',label:'Your avg. cost per click',pre:'$'}],
+   after:WHERE_CPC,
+   check:v=>v.budget>0&&v.cpc>0?null:'Enter your monthly budget and your cost per click.',
+   summary:v=>`${usd(v.budget)} a month, ${usd(v.cpc)} a click`},
+  {id:'ind',type:'choice',q:'What kind of business is it?',help:'Some business types have cheaper ways to get leads than Search ads.',
+   options:[{v:'legal',label:'Law firm'},{v:'home',label:'Home services',sub:'Plumbing, HVAC, roofing, pest control…'},{v:'dental',label:'Dentist'},{v:'other',label:'Something else'}]},
   RATE,
   {id:'math',type:'insight',render(a){
     const {budget,cpc}=a.nums, p=rateOf(a), clicks=Math.floor(budget/cpc), cpa=cpc/p, leads=clicks*p, p0=pZero(clicks,p);
@@ -681,7 +658,7 @@ pricey:{name:'A few expensive clicks ate my budget',steps:[
      o.push({v:'no',label:'Neither, I need to make my budget work'}); return o;}},
  ],
  diagnose(a){
-  const out=[], {budget,cpc}=a.nums, niche=nicheOf(a.nums.niche), ind=niche.ind, p=rateOf(a), cpa=cpc/p, clicks=Math.floor(budget/cpc), lo=clicksFor(0.1,p)*cpc, hi=cpa*SB_MONTH;
+  const out=[], {budget,cpc}=a.nums, ind=a.ind, p=rateOf(a), cpa=cpc/p, clicks=Math.floor(budget/cpc), lo=clicksFor(0.1,p)*cpc, hi=cpa*SB_MONTH;
   if(clicks*p<1) out.push(F('fix','Your budget is smaller than the price of one lead',
     `At ${usd(cpc)} a click and ${inHundred(p)} leads per 100 clicks, a lead costs about ${usd(cpa)}. ${usd(budget)} a month buys ${num(clicks)} ${plural(clicks,'click')}.`,[],
     `It’s like trying to buy a ${usd(cpa)} bike with ${usd(budget)}. Sometimes you find one on sale, but usually you go home without a bike.`));
@@ -701,14 +678,9 @@ pricey:{name:'A few expensive clicks ate my budget',steps:[
      `Use Manual CPC or Maximize clicks with a max CPC limit around ${usd(cpc*0.6)}. You’ll lose the top spot sometimes, and that’s fine.`,
      'Shrink the area to where your best customers are, and run ads only when someone can answer the phone.',
      'Try Microsoft Ads, where the same keywords often cost less.']));
-  if(niche.cpc&&cpc>=niche.cpc*2) out.push(F('chk',`Your clicks cost ${dec(cpc/niche.cpc)}× your niche’s average`,
-    `${niche.label} averages ${usd(niche.cpc)} a click${niche.sub?' (2022–23 data)':''}. Paying ${usd(cpc)} usually means you’re chasing the top spot, bidding on the most contested keywords, or advertising in a big, crowded city.`,
-    ['Check the bid strategy. Target impression share and Maximize conversions without a target both push toward the top spot.',
-     'Look at Search terms for broad, expensive searches and add negatives.',
-     'Add longer, more specific keywords. They cost less because fewer advertisers bid on them.']));
-  const top=niche.sub?nicheOf('legal'):niche;
-  if(top.cpc>=8) out.push(F('chk','You’re in one of the most expensive niches on Google',
-    `${top.label} averages ${usd(top.cpc)} a click, one of the three highest of 23 niches in LocaliQ’s 2026 benchmarks. One customer is worth a lot, so competitors bid high, and the top spot for your main keywords can cost several times the average.`,
+  const AVG={legal:['Attorneys and legal services',9.87],home:['Home and home improvement',8.33],dental:['Dentists',8.00]}[ind];
+  if(AVG) out.push(F('chk','You’re in one of the most expensive niches on Google',
+    `${AVG[0]} are one of the three most expensive of 23 niches in LocaliQ’s 2026 benchmarks, averaging ${usd(AVG[1])} a click across all keywords. One customer is worth a lot, so competitors bid high on the keywords that matter most, and those cost well above the average. Your ${usd(cpc)} is the number to plan with.`,
     ['Check Keyword Planner’s “Top of page bid (high range)” to see what the top spot really costs in your area.',
      ind==='legal'?'Look at Google Local Services Ads. Many legal practice areas qualify, and you pay per lead instead of per click.':'Look at longer, more specific keywords that big advertisers ignore.',
      'Build your Google Business Profile and reviews. Map results are free clicks.']));
@@ -887,7 +859,7 @@ const qOf=(s)=>typeof s.q==='function'?s.q(A):s.q;
 function activeSteps(){ return FLOWS[flowId].steps.filter(s=>!s.when||s.when(A)); }
 
 function summaryText(s){
-  if(s.type==='numbers'||s.type==='nichecpc') return s.summary(A[s.id]);
+  if(s.type==='numbers') return s.summary(A[s.id]);
   if(s.type==='slider'){ const p=parseFloat(A[s.id]); return `${inHundred(p)} in 100 (${pct2(p)}, ${rateBand(p).toLowerCase()})`; }
   const o=optsOf(s);
   if(s.type==='multi') return A[s.id].map(v=>(o.find(x=>x.v===v)||{}).label).join(', ');
@@ -910,7 +882,10 @@ function questionEl(s){
   el.innerHTML=`<h2 tabindex="-1">${esc(qOf(s))}</h2>${help}`;
   if(s.type==='numbers'){
     const prev=A['_'+s.id]||{};
-    el.insertAdjacentHTML('beforeend',`<div class="fields">${s.fields.map(f=>`<div class="field"><label for="f-${f.id}">${f.label}</label><div class="inp">${f.pre?`<span>${f.pre}</span>`:''}<input id="f-${f.id}" type="number" inputmode="${f.int?'numeric':'decimal'}" min="0" step="${f.int?1:'any'}" value="${prev[f.id]??''}"></div></div>`).join('')}</div><p class="err" hidden></p><button type="button" class="primary">Continue</button>`);
+    el.insertAdjacentHTML('beforeend',`<div class="fields">${s.fields.map(f=>`<div class="field"><label for="f-${f.id}">${f.label}</label><div class="inp">${f.pre?`<span>${f.pre}</span>`:''}<input id="f-${f.id}" type="number" inputmode="${f.int?'numeric':'decimal'}" min="0" step="${f.int?1:'any'}" value="${prev[f.id]??''}"></div></div>`).join('')}</div>${s.after||''}<p class="err" hidden></p><button type="button" class="primary">Continue</button>`);
+    el.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{
+      el.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+      el.querySelectorAll('.where-b').forEach(x=>x.hidden=x.dataset.w!==b.dataset.w);});
     const go=()=>{
       const v={}; s.fields.forEach(f=>{const x=parseFloat(el.querySelector('#f-'+f.id).value); v[f.id]=f.int?Math.round(x):x;});
       const bad=s.fields.some(f=>!isFinite(v[f.id]))?'Fill in every box.':s.check(v);
@@ -919,31 +894,6 @@ function questionEl(s){
     };
     el.querySelector('.primary').onclick=go;
     el.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')go();}));
-  } else if(s.type==='nichecpc'){
-    const prev=A['_'+s.id]||{};
-    el.insertAdjacentHTML('beforeend',`<div class="field niche"><label for="f-niche">Niche</label>
-        <select id="f-niche"><option value="">Choose your niche…</option>${nicheOptions()}</select></div>
-      <div class="fields">
-        <div class="field"><label for="f-budget">Monthly budget</label><div class="inp"><span>$</span><input id="f-budget" type="number" inputmode="decimal" min="0" step="any" value="${prev.budget??''}"></div></div>
-        <div class="field"><label for="f-cpc">Cost per click</label><div class="inp"><span>$</span><input id="f-cpc" type="number" inputmode="decimal" min="0" step="any" value="${prev.cpc??''}"></div><p class="cpc-note"></p></div>
-      </div>${KP_HELP}<p class="err" hidden></p><button type="button" class="primary">Continue</button>`);
-    const sel=el.querySelector('#f-niche'), cpcIn=el.querySelector('#f-cpc'), note=el.querySelector('.cpc-note');
-    let own=!!prev.own;
-    const showNote=()=>{const n=nicheOf(sel.value);
-      note.textContent=!n?'':!n.cpc?'Enter your own, or find it with Keyword Planner below.':own?`Your number. Niche average is ${usd(n.cpc)}.`
-        :n.sub?'Practice-area average (2022–23 data). Big-city keywords often cost far more. Type over it if you know yours.':'Niche average. Type over it if you know yours.';};
-    sel.value=prev.niche||'';
-    sel.onchange=()=>{const n=nicheOf(sel.value); if(n&&n.cpc){cpcIn.value=n.cpc.toFixed(2); own=false;} else if(n){cpcIn.value=''; own=true;} showNote();};
-    cpcIn.addEventListener('input',()=>{const n=nicheOf(sel.value); own=!(n&&n.cpc&&Math.abs(parseFloat(cpcIn.value)-n.cpc)<0.005); showNote();});
-    const go=()=>{
-      const v={niche:sel.value,budget:parseFloat(el.querySelector('#f-budget').value),cpc:parseFloat(cpcIn.value),own};
-      const bad=!v.niche?'Choose your niche.':!(v.budget>0)||!(v.cpc>0)?'Enter your monthly budget and cost per click.':null;
-      if(bad){const e=el.querySelector('.err'); e.textContent=bad; e.hidden=false; return;}
-      A[s.id]=v; A['_'+s.id]=v; render();
-    };
-    el.querySelector('.primary').onclick=go;
-    el.querySelectorAll('input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')go();}));
-    showNote();
   } else if(s.type==='slider'){
     const prev=A['_'+s.id]??s.start, pos=v=>((v-s.min)/(s.max-s.min)*100)+'%';
     el.insertAdjacentHTML('beforeend',`<div class="rate">

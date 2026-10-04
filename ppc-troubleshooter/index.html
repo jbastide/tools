@@ -353,6 +353,22 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
       <tr><td>Travel</td><td>$2.14</td></tr>
     </tbody>
   </table></div>
+  <h2>What is the average cost per click for each legal practice area?</h2>
+  <p>PPC Troubleshooter also lists seven legal practice areas under Attorneys &amp; Legal Services. Their averages come from LocaliQ’s Legal Search Advertising Benchmarks, a sample of 256 US search campaigns from April 2022 to March 2023, so they are older than the niche averages above. Criminal defense had the highest average cost per click at $12.30 and family law the lowest at $7.69. These are averages across every keyword in a practice area; the most competitive keywords in large cities, especially for personal injury, often cost many times more, so check Keyword Planner for your area.</p>
+  <div class="tbl"><table>
+    <caption>Average Google Ads cost per click by legal practice area (LocaliQ, Apr 2022 – Mar 2023)</caption>
+    <thead><tr><th>Practice area</th><th>Average CPC</th></tr></thead>
+    <tbody>
+      <tr><td>Accidents &amp; Personal Injury</td><td>$9.30</td></tr>
+      <tr><td>Bankruptcy</td><td>$11.70</td></tr>
+      <tr><td>Criminal Defense</td><td>$12.30</td></tr>
+      <tr><td>Estate &amp; Probate (incl. wills)</td><td>$7.92</td></tr>
+      <tr><td>Family Law (incl. divorce)</td><td>$7.69</td></tr>
+      <tr><td>General Practice</td><td>$9.97</td></tr>
+      <tr><td>Tax Law</td><td>$11.82</td></tr>
+    </tbody>
+  </table></div>
+
   <p>To find your own cost per click before launch, open Keyword Planner (Tools, Planning, Keyword Planner, Get search volume and forecasts), enter your main keywords and service area, and read <b>Top of page bid (low range)</b>. Google describes the low range as about the 20th percentile of what advertisers paid for a top-of-page position, and the high range as about the 80th percentile. The low range is the closest Keyword Planner gets to a typical first-page price. Once a campaign runs, use the Avg. CPC column, and the First page bid estimate column in the Keywords table.</p>
 
   <p>If neither tier is affordable, PPC Troubleshooter recommends shrinking the campaign to fit: exact match on a handful of high-intent keywords, a smaller area, a max CPC limit, and pay-per-lead options such as Google Local Services Ads where your business type qualifies.</p>
@@ -436,7 +452,17 @@ const NICHES=[
   ['realestate','Real Estate',3.22],['restaurants','Restaurants & Food',2.05],['shopping','Shopping, Collectibles & Gifts',4.14],
   ['sports','Sports & Recreation',2.77],['travel','Travel',2.14],['other','Something else',null]
 ].map(([id,label,cpc,ind])=>({id,label,cpc,ind:ind||'other'}));
-const nicheOf=id=>NICHES.find(n=>n.id===id);
+/* Legal practice areas: LocaliQ Legal Search Advertising Benchmarks, 256 US campaigns,
+   April 2022 – March 2023. Older than the main list; the page says so wherever they show. */
+const LEGAL_SUBS=[
+  ['legal-pi','Accidents & Personal Injury',9.30],['legal-bankruptcy','Bankruptcy',11.70],['legal-criminal','Criminal Defense',12.30],
+  ['legal-estate','Estate & Probate (incl. wills)',7.92],['legal-family','Family Law (incl. divorce)',7.69],
+  ['legal-general','General Practice',9.97],['legal-tax','Tax Law',11.82]
+].map(([id,label,cpc])=>({id,label:'Legal: '+label,short:label,cpc,ind:'legal',sub:true}));
+const nicheOf=id=>NICHES.find(n=>n.id===id)||LEGAL_SUBS.find(n=>n.id===id);
+const nicheOptions=()=>NICHES.map(n=>n.id==='legal'
+  ? `<optgroup label="Attorneys & Legal Services"><option value="legal">All legal · ${usd(n.cpc)}</option>${LEGAL_SUBS.map(x=>`<option value="${x.id}">${esc(x.short)} · ${usd(x.cpc)}</option>`).join('')}</optgroup>`
+  : `<option value="${n.id}">${esc(n.label)}${n.cpc?' · '+usd(n.cpc):''}</option>`).join('');
 const KP_HELP=`<details class="kp"><summary>How do I find my real cost per click?</summary>
   <ol>
     <li><b>Campaign already running?</b> Use the <b>Avg. CPC</b> column in the Campaigns table. In the Keywords table, add the <b>First page bid estimate</b> column to see roughly what each keyword needs to show on page one.</li>
@@ -676,12 +702,13 @@ pricey:{name:'A few expensive clicks ate my budget',steps:[
      'Shrink the area to where your best customers are, and run ads only when someone can answer the phone.',
      'Try Microsoft Ads, where the same keywords often cost less.']));
   if(niche.cpc&&cpc>=niche.cpc*2) out.push(F('chk',`Your clicks cost ${dec(cpc/niche.cpc)}× your niche’s average`,
-    `${niche.label} averages ${usd(niche.cpc)} a click. Paying ${usd(cpc)} usually means you’re chasing the top spot, bidding on the most contested keywords, or advertising in a big, crowded city.`,
+    `${niche.label} averages ${usd(niche.cpc)} a click${niche.sub?' (2022–23 data)':''}. Paying ${usd(cpc)} usually means you’re chasing the top spot, bidding on the most contested keywords, or advertising in a big, crowded city.`,
     ['Check the bid strategy. Target impression share and Maximize conversions without a target both push toward the top spot.',
      'Look at Search terms for broad, expensive searches and add negatives.',
      'Add longer, more specific keywords. They cost less because fewer advertisers bid on them.']));
-  if(niche.cpc>=8) out.push(F('chk','You’re in one of the most expensive niches on Google',
-    `${niche.label} averages ${usd(niche.cpc)} a click, one of the three highest of 23 niches in LocaliQ’s 2026 benchmarks. One customer is worth a lot, so competitors bid high, and the top spot for your main keywords can cost several times the average.`,
+  const top=niche.sub?nicheOf('legal'):niche;
+  if(top.cpc>=8) out.push(F('chk','You’re in one of the most expensive niches on Google',
+    `${top.label} averages ${usd(top.cpc)} a click, one of the three highest of 23 niches in LocaliQ’s 2026 benchmarks. One customer is worth a lot, so competitors bid high, and the top spot for your main keywords can cost several times the average.`,
     ['Check Keyword Planner’s “Top of page bid (high range)” to see what the top spot really costs in your area.',
      ind==='legal'?'Look at Google Local Services Ads. Many legal practice areas qualify, and you pay per lead instead of per click.':'Look at longer, more specific keywords that big advertisers ignore.',
      'Build your Google Business Profile and reviews. Map results are free clicks.']));
@@ -895,7 +922,7 @@ function questionEl(s){
   } else if(s.type==='nichecpc'){
     const prev=A['_'+s.id]||{};
     el.insertAdjacentHTML('beforeend',`<div class="field niche"><label for="f-niche">Niche</label>
-        <select id="f-niche"><option value="">Choose your niche…</option>${NICHES.map(n=>`<option value="${n.id}">${esc(n.label)}${n.cpc?' · '+usd(n.cpc):''}</option>`).join('')}</select></div>
+        <select id="f-niche"><option value="">Choose your niche…</option>${nicheOptions()}</select></div>
       <div class="fields">
         <div class="field"><label for="f-budget">Monthly budget</label><div class="inp"><span>$</span><input id="f-budget" type="number" inputmode="decimal" min="0" step="any" value="${prev.budget??''}"></div></div>
         <div class="field"><label for="f-cpc">Cost per click</label><div class="inp"><span>$</span><input id="f-cpc" type="number" inputmode="decimal" min="0" step="any" value="${prev.cpc??''}"></div><p class="cpc-note"></p></div>
@@ -903,7 +930,8 @@ function questionEl(s){
     const sel=el.querySelector('#f-niche'), cpcIn=el.querySelector('#f-cpc'), note=el.querySelector('.cpc-note');
     let own=!!prev.own;
     const showNote=()=>{const n=nicheOf(sel.value);
-      note.textContent=!n?'':!n.cpc?'Enter your own, or find it with Keyword Planner below.':own?`Your number. Niche average is ${usd(n.cpc)}.`:'Niche average. Type over it if you know yours.';};
+      note.textContent=!n?'':!n.cpc?'Enter your own, or find it with Keyword Planner below.':own?`Your number. Niche average is ${usd(n.cpc)}.`
+        :n.sub?'Practice-area average (2022–23 data). Big-city keywords often cost far more. Type over it if you know yours.':'Niche average. Type over it if you know yours.';};
     sel.value=prev.niche||'';
     sel.onchange=()=>{const n=nicheOf(sel.value); if(n&&n.cpc){cpcIn.value=n.cpc.toFixed(2); own=false;} else if(n){cpcIn.value=''; own=true;} showNote();};
     cpcIn.addEventListener('input',()=>{const n=nicheOf(sel.value); own=!(n&&n.cpc&&Math.abs(parseFloat(cpcIn.value)-n.cpc)<0.005); showNote();});

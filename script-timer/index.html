@@ -81,54 +81,39 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="../site.css">
 <style>
-/* ---------- tokens ---------- */
+/* ---------- tokens (palette + fonts come from site.css; these are page aliases) ---------- */
 :root{
-  --bg:#f7f8fa; --panel:#ffffff; --panel-2:#f1f3f7; --edge:#dfe3ea; --edge-2:#e9ecf2;
-  --fg:#141821; --fg-2:#4a5361; --fg-3:#7b8697;
-  --accent:#4f46e5; --accent-fg:#ffffff; --focus:#4f46e5;
-  --warn:#b45309; --warn-bg:#fef3c7; --warn-edge:#fcd34d;
-  --danger:#b91c1c; --ok:#047857;
-  --z1:rgba(16,185,129,.20); --z1s:#10b981;
-  --z2:rgba(99,102,241,.18); --z2s:#6366f1;
-  --z3:rgba(245,158,11,.22); --z3s:#f59e0b;
-  --z4:rgba(168,85,247,.18); --z4s:#a855f7;
-  --z5:rgba(148,163,184,.26); --z5s:#94a3b8;
-  --shadow:0 1px 2px rgba(16,20,30,.06), 0 8px 24px rgba(16,20,30,.06);
-  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
-  --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
+  --panel-2:var(--soft); --edge:var(--line); --edge-2:color-mix(in srgb,var(--line) 70%,var(--panel));
+  --fg:var(--ink); --fg-2:var(--muted); --fg-3:var(--faint);
+  --accent-fg:var(--on-accent); --focus:var(--accent);
+  --warn:var(--ochre); --warn-bg:var(--ochre-bg); --warn-edge:color-mix(in srgb,var(--ochre) 35%,transparent);
+  --danger:var(--red); --ok:var(--moss);
+  /* retention zones: moss, lake, rapeseed ochre, lingonberry heather, stone */
+  --heather:#8a4a6b;
+  --z1s:var(--moss);    --z1:color-mix(in srgb,var(--z1s) 20%,transparent);
+  --z2s:var(--lake);    --z2:color-mix(in srgb,var(--z2s) 20%,transparent);
+  --z3s:var(--ochre);   --z3:color-mix(in srgb,var(--z3s) 22%,transparent);
+  --z4s:var(--heather); --z4:color-mix(in srgb,var(--z4s) 20%,transparent);
+  --z5s:var(--stone);   --z5:color-mix(in srgb,var(--z5s) 22%,transparent);
+  --shadow:0 1px 2px rgba(30,35,32,.06), 0 8px 24px rgba(30,35,32,.06);
   --sbw:0px; --edh:420px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0c0e13; --panel:#14171f; --panel-2:#1b1f29; --edge:#272c38; --edge-2:#20242e;
-    --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
-    --accent:#6366f1; --accent-fg:#ffffff; --focus:#818cf8;
-    --warn:#fbbf24; --warn-bg:rgba(251,191,36,.12); --warn-edge:rgba(251,191,36,.35);
-    --danger:#f87171; --ok:#34d399;
-    --z1:rgba(16,185,129,.24); --z2:rgba(99,102,241,.26); --z3:rgba(245,158,11,.22);
-    --z4:rgba(168,85,247,.24); --z5:rgba(148,163,184,.20);
+    --heather:#d9a6c2;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0c0e13; --panel:#14171f; --panel-2:#1b1f29; --edge:#272c38; --edge-2:#20242e;
-  --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
-  --accent:#6366f1; --accent-fg:#ffffff; --focus:#818cf8;
-  --warn:#fbbf24; --warn-bg:rgba(251,191,36,.12); --warn-edge:rgba(251,191,36,.35);
-  --danger:#f87171; --ok:#34d399;
-  --z1:rgba(16,185,129,.24); --z2:rgba(99,102,241,.26); --z3:rgba(245,158,11,.22);
-  --z4:rgba(168,85,247,.24); --z5:rgba(148,163,184,.20);
+  --heather:#d9a6c2;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
 }
 
 /* ---------- base ---------- */
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);
-  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{font-size:16px;line-height:1.55}
 h1,h2,h3{line-height:1.25;margin:0}
-a{color:var(--accent)}
 button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
@@ -163,18 +148,18 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit
 .tog input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
   background:var(--fg-3);transition:transform .15s,background .15s}
 .tog input:checked{background:var(--accent);border-color:var(--accent)}
-.tog input:checked::after{transform:translateX(14px);background:#fff}
+.tog input:checked::after{transform:translateX(14px);background:var(--on-accent)}
 
 .acts{display:flex;gap:8px}
 .btn{border:1px solid var(--edge);background:var(--panel);color:var(--fg-2);padding:7px 12px;border-radius:9px;
   font-size:13px;font-weight:550;cursor:pointer;white-space:nowrap;transition:border-color .12s,color .12s,background .12s}
 .btn:hover{border-color:var(--fg-3);color:var(--fg)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
-.btn.primary:hover{filter:brightness(1.08);color:var(--accent-fg)}
+.btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-fg)}
 .btn.icon{padding:7px 9px;line-height:0}
 
 /* ---------- legend ---------- */
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;padding:14px 0 10px;font-size:12px;color:var(--fg-2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0;padding:14px 0 10px;font-size:12px;color:var(--fg-2)}
 .legend .chip{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .legend .sw{width:22px;height:12px;border-radius:3px;display:inline-block}
 .legend .sw.z1{background:var(--z1);box-shadow:inset 0 0 0 1px var(--z1s)}
@@ -206,7 +191,7 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit
 #mirror .z2{background:var(--z2)}
 #mirror .z3{background:var(--z3)}
 #mirror .z4{background:var(--z4)}
-#mirror .z5{background:var(--z5);box-shadow:0 -2px 0 rgba(239,68,68,.45) inset}
+#mirror .z5{background:var(--z5);box-shadow:0 -2px 0 color-mix(in srgb,var(--red) 45%,transparent) inset}
 .plain #mirror span{background:none;box-shadow:none}
 #script{position:absolute;inset:0;width:100%;height:100%;background:transparent;color:var(--fg);
   resize:none;overflow-y:scroll;overflow-x:hidden;display:block;caret-color:var(--accent)}
@@ -260,7 +245,7 @@ th{font-weight:600;color:var(--fg);font-size:13px;background:var(--panel-2)}
 tbody tr:last-child td{border-bottom:0}
 td:first-child{color:var(--fg);font-weight:550}
 hr{border:0;border-top:1px solid var(--edge);margin:44px 0}
-footer{padding:22px 0 40px;font-size:12.5px;color:var(--fg-3);border-top:1px solid var(--edge)}
+footer{margin-top:0;padding:22px 0 40px;font-size:12.5px;color:var(--fg-3);border-top:1px solid var(--edge)}
 footer p{margin:0 0 4px;max-width:72ch}
 
 @media (max-width:760px){
@@ -552,7 +537,7 @@ footer p{margin:0 0 4px;max-width:72ch}
 
 <footer class="wrap">
   <p>Estimates only. Real runtime depends on your delivery, edit pace, and how much silence survives the cut.</p>
-  <p>Runs fully client-side. No tracking, no dependencies, no network requests.</p>
+  <p>Runs fully client-side. No tracking, no third-party requests.</p>
 </footer>
 
 <script>

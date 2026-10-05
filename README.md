@@ -1,17 +1,17 @@
 # tools
 
-Small, single-purpose static web tools. Every page is self-contained: one HTML file with
-inline CSS and vanilla JS, no build step, no dependencies, no network requests at runtime.
+Small, single-purpose static web tools. Every page is one HTML file with
+vanilla JS that links the shared [`site.css`](site.css): no build step, no dependencies, no third-party requests.
 
 ## Contents
 
 | Tool | Path | What it does |
 | --- | --- | --- |
 | Short-Form Script Pacing & Hook Timer | [`script-timer/`](script-timer/) | Times a short-form video script in real time, splits it into retention zones (3s / 15s / 30s / 60s), and grades the hook against first-sentence lengths measured in 132 top YouTube Shorts (green inside 3s, note to 5s, warning past 5s). Default pace is the measured 193 WPM median. |
-| Keyword Triage (Google Ads keyword profitability checker) | [`keyword-triage/`](keyword-triage/) | Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV or Excel) and sorts each keyword into Cut, Trim bids, Keep, Scale or Needs data against a target CPA or ROAS. A Content-Security-Policy blocks every network request, so the report can't leave the browser. |
-| Negative Keyword Finder (Google Ads search terms analyzer) | [`negative-keywords/`](negative-keywords/) | Reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or Excel) and flags search terms that break two limits entered before upload (an unacceptable cost per conversion, and a spend limit with no conversions), recurring words (1- and 2-grams) that passed the spend limit without converting, and low-CTR terms to review. Copies them as exact- and phrase-match negatives. Same no-network Content-Security-Policy as Keyword Triage. |
+| Keyword Triage (Google Ads keyword profitability checker) | [`keyword-triage/`](keyword-triage/) | Reads a Google Ads or Microsoft Ads keyword report (CSV, TSV or Excel) and sorts each keyword into Cut, Trim bids, Keep, Scale or Needs data against a target CPA or ROAS. A Content-Security-Policy blocks every request except the site's own stylesheet, so the report can't leave the browser. |
+| Negative Keyword Finder (Google Ads search terms analyzer) | [`negative-keywords/`](negative-keywords/) | Reads a Google Ads or Microsoft Ads search terms report (CSV, TSV or Excel) and flags search terms that break two limits entered before upload (an unacceptable cost per conversion, and a spend limit with no conversions), recurring words (1- and 2-grams) that passed the spend limit without converting, and low-CTR terms to review. Copies them as exact- and phrase-match negatives. Same Content-Security-Policy as Keyword Triage. |
 | Lead Gen Search Campaign Checklist | [`search-checklist/`](search-checklist/) | A laminated cockpit-style preflight checklist for Google Ads lead gen Search campaigns in five phases (account, campaign settings, bidding & budget, keywords & ads, after launch). Enter a target CPA and it sets the minimum daily budget at 3× the target CPA. Checks are saved in the browser. |
-| PPC Troubleshooter | [`ppc-troubleshooter/`](ppc-troubleshooter/) | Pick a Google Ads problem (zero conversions, a few expensive clicks, results that dropped after a good start, rising CPC, ads that barely spend), answer follow-up questions one at a time, and get ranked causes and fixes. Asks for your own cost per click (from the account, or Keyword Planner's top of page bid high range), not an industry average, since averages can be several times too low. Runs the luck math (chance of zero conversions, a binomial test for drops, budget tiers from CPC ÷ conversion rate) and shows it as a gumball-machine picture. No network requests. |
+| PPC Troubleshooter | [`ppc-troubleshooter/`](ppc-troubleshooter/) | Pick a Google Ads problem (zero conversions, a few expensive clicks, results that dropped after a good start, rising CPC, ads that barely spend), answer follow-up questions one at a time, and get ranked causes and fixes. Asks for your own cost per click (from the account, or Keyword Planner's top of page bid high range), not an industry average, since averages can be several times too low. Runs the luck math (chance of zero conversions, a binomial test for drops, budget tiers from CPC ÷ conversion rate) and shows it as a gumball-machine picture. No third-party requests. |
 
 ## Guides
 
@@ -52,10 +52,23 @@ python3 -m http.server 8000
 ## Conventions for adding a tool
 
 - One directory per tool, containing a single `index.html`.
-- Keep it dependency-free. No CDNs — they can be blocked by ad blockers or go down.
+- Link the shared stylesheet with a relative path (`<link rel="stylesheet" href="../site.css">`) and keep
+  only page-specific rules inline. Use its tokens (`--accent`, `--moss`, `--ochre`, `--red`, `--lake`,
+  `--stone` and their `-bg` tints) instead of new hex colors. A page with a Content-Security-Policy needs
+  `style-src 'self' 'unsafe-inline'` so the stylesheet can load.
+- Keep it dependency-free. No CDNs or web fonts — they can be blocked by ad blockers or go down.
 - Include a `<title>`, a meta description, and a `SoftwareApplication` JSON-LD block.
-- Support light and dark via `prefers-color-scheme`.
+- Light and dark come from `site.css` via `prefers-color-scheme`; check both.
 - Add a row to the table above, a card to the root `index.html`, and entries to `sitemap.xml` and `llms.txt`.
+
+### Site style
+
+`site.css` holds the look: Apple-style restraint (content first, hierarchy from size and weight, one
+accent, sentence case, plenty of space), Scandinavian assembly-manual clarity (numbered steps in outlined
+circles, plain labels), and a palette from the Västra Götaland countryside — birch-bark paper, granite
+text, spruce green accent, Falu red for warnings, rapeseed ochre for caution, lake blue and moss. The only
+decoration is the spruce-and-lake horizon at the foot of every page. The checklist's laminated cockpit
+card keeps its own printed look, with Falu red and ochre accents.
 
 ### Writing tool pages so answer engines can read them
 

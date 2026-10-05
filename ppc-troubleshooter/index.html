@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <title>PPC Troubleshooter: Why Isn't My Google Ads Campaign Working?</title>
 <meta name="description" content="Pick what's going wrong with your Google Ads campaign, answer a few questions, and get a diagnosis: bad luck, a budget too small for your CPC, broken tracking, or a setting to fix.">
@@ -76,38 +76,21 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="../site.css">
 <style>
 :root{
-  --bg:#f5f6f8; --panel:#fff; --panel-2:#f9fafb; --edge:#e1e5ec; --fg:#141821; --fg-2:#4a5361; --fg-3:#7b8697;
-  --accent:#4f46e5; --accent-bg:rgba(79,70,229,.08); --accent-edge:rgba(79,70,229,.45);
-  --gold:#e3a008; --miss:#d3d9e2;
-  --fix:#b42318; --fix-bg:#fdecea; --chk:#975a07; --chk-bg:#fdf3dc; --ok:#17733d; --ok-bg:#e5f4ea;
-  --shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px -12px rgba(16,24,40,.12);
-  --ui:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
-  color-scheme:light;
+  --fg:var(--ink); --fg-2:var(--muted); --fg-3:var(--faint); --edge:var(--line); --panel-2:var(--soft);
+  --accent-bg:var(--accent-soft); --accent-edge:color-mix(in srgb,var(--accent) 45%,transparent);
+  --fix:var(--red); --fix-bg:var(--red-bg); --chk:var(--ochre); --chk-bg:var(--ochre-bg); --ok:var(--moss); --ok-bg:var(--moss-bg);
+  --gold:#d9a521; --miss:#d8d4c9;
+  --shadow:0 1px 2px rgba(30,35,32,.05),0 8px 24px -12px rgba(30,35,32,.12);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0c0e13; --panel:#14171f; --panel-2:#181c25; --edge:#272c38; --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
-    --accent:#818cf8; --accent-bg:rgba(129,140,248,.12); --accent-edge:rgba(129,140,248,.55);
-    --gold:#f5c542; --miss:#363c4a;
-    --fix:#ff8a80; --fix-bg:rgba(255,99,88,.12); --chk:#f2c35b; --chk-bg:rgba(242,195,91,.12); --ok:#6fd49a; --ok-bg:rgba(111,212,154,.12);
-    --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark;
-  }
+  :root:not([data-theme="light"]){--gold:#e8c65a; --miss:#38413b; --shadow:0 1px 2px rgba(0,0,0,.3)}
 }
-:root[data-theme="dark"]{
-  --bg:#0c0e13; --panel:#14171f; --panel-2:#181c25; --edge:#272c38; --fg:#e9edf5; --fg-2:#a9b4c4; --fg-3:#788394;
-  --accent:#818cf8; --accent-bg:rgba(129,140,248,.12); --accent-edge:rgba(129,140,248,.55);
-  --gold:#f5c542; --miss:#363c4a;
-  --fix:#ff8a80; --fix-bg:rgba(255,99,88,.12); --chk:#f2c35b; --chk-bg:rgba(242,195,91,.12); --ok:#6fd49a; --ok-bg:rgba(111,212,154,.12);
-  --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark;
-}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--ui);-webkit-font-smoothing:antialiased}
+:root[data-theme="dark"]{--gold:#e8c65a; --miss:#38413b; --shadow:0 1px 2px rgba(0,0,0,.3)}
+body{font-size:16px;line-height:1.55}
 .wrap{max-width:760px;margin:0 auto;padding:28px 16px 64px}
-a{color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 button,input{font:inherit;color:inherit}
 
 .crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;font-size:14px}
@@ -121,7 +104,9 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .small{font-size:13px;color:var(--fg-3)}
 
 /* ---------- Step 1: problems ---------- */
-.step-label{font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);margin:0 0 10px}
+.step-label{font-size:14px;font-weight:650;color:var(--fg-2);margin:0 0 10px}
+.intro + section{margin-top:0}
+.problems li{margin:0}
 .problems{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:0 0 8px;padding:0;list-style:none}
 .prob{width:100%;height:100%;text-align:left;background:var(--panel);border:1.5px solid var(--edge);border-radius:16px;padding:16px 16px 15px;cursor:pointer;
   box-shadow:var(--shadow);transition:border-color .12s,transform .12s,background .12s;display:flex;flex-direction:column;gap:4px}
@@ -148,15 +133,15 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .opt .tick{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--fg-3);flex:0 0 auto;display:grid;place-items:center}
 .opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-bg)}
 .opt[aria-pressed="true"] .tick{background:var(--accent);border-color:var(--accent)}
-.opt[aria-pressed="true"] .tick::after{content:"";width:9px;height:5px;border:2px solid #fff;border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.opt[aria-pressed="true"] .tick::after{content:"";width:9px;height:5px;border:2px solid var(--on-accent);border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
 .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
 .field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px;color:var(--fg-2)}
 .inp{display:flex;align-items:center;border:1.5px solid var(--edge);background:var(--panel-2);border-radius:12px;padding:0 12px}
 .inp:focus-within{border-color:var(--accent)}
 .inp span{color:var(--fg-3);font-weight:600}
 .inp input{width:100%;border:0;outline:0;background:transparent;padding:11px 4px;font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;min-width:0}
-.primary{border:0;background:var(--accent);color:#fff;font-weight:620;font-size:15px;padding:11px 18px;border-radius:12px;cursor:pointer}
-.primary:hover{filter:brightness(1.07)}
+.primary{border:0;background:var(--accent);color:var(--on-accent);font-weight:620;font-size:15px;padding:11px 18px;border-radius:12px;cursor:pointer}
+.primary:hover{background:var(--accent-hover)}
 .primary:disabled{opacity:.4;cursor:default;filter:none}
 .ghost{border:1px solid var(--edge);background:transparent;color:var(--fg-2);font-weight:560;font-size:13.5px;padding:7px 12px;border-radius:10px;cursor:pointer}
 .ghost:hover{border-color:var(--fg-3);color:var(--fg)}
@@ -171,7 +156,7 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .rate{margin:4px 0 16px}
 .rate-val{margin:0 0 8px;font-size:15px;color:var(--fg-2)}
 .rate-val b{font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--fg);font-variant-numeric:tabular-nums}
-.band{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 9px;vertical-align:4px;color:var(--accent);background:var(--accent-bg)}
+.band{display:inline-block;margin-left:6px;font-size:13px;font-weight:650;border-radius:999px;padding:2px 9px;vertical-align:4px;color:var(--accent);background:var(--accent-bg)}
 .band[data-band="High"]{color:var(--chk);background:var(--chk-bg)}
 .rate input[type=range]{width:100%;accent-color:var(--accent);margin:0}
 .marks{position:relative;height:44px;margin:4px 9px 0}
@@ -189,13 +174,11 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 
 /* ---------- Insight cards & visuals ---------- */
 .insight{border-width:1.5px}
-.verdict{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-.verdict i{font-style:normal;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:12px;color:#fff}
+.verdict{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:650;margin:0 0 6px}
+.verdict i{font-style:normal;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:12px;color:var(--on-accent)}
 .v-fix{color:var(--fix)} .v-fix i{background:var(--fix)}
 .v-chk{color:var(--chk)} .v-chk i{background:var(--chk)}
 .v-ok{color:var(--ok)} .v-ok i{background:var(--ok)}
-:root[data-theme="dark"] .verdict i{color:#111}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .verdict i{color:#111}}
 .insight h2{font-size:21px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
 .insight p{margin:0 0 10px;color:var(--fg-2)}
 .insight p b{color:var(--fg)}
@@ -206,7 +189,7 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 
 .kid{margin-top:16px;border-top:1px dashed var(--edge);padding-top:16px}
 .kid-h{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin:0 0 6px}
-.kid-h .badge{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border-radius:999px;padding:2px 8px}
+.kid-h .badge{font-size:12.5px;font-weight:650;color:var(--accent);background:var(--accent-bg);border-radius:999px;padding:2px 8px}
 .kid .story{font-size:15.5px;color:var(--fg);line-height:1.55}
 .slider{margin:14px 0 6px}
 .slider label{display:flex;justify-content:space-between;gap:8px;font-size:14px;color:var(--fg-2);margin-bottom:6px;flex-wrap:wrap}
@@ -214,7 +197,7 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .slider input{width:100%;accent-color:var(--accent)}
 .slider .mine{background:none;border:0;padding:0;color:var(--accent);cursor:pointer;font-size:13.5px;text-decoration:underline}
 .sub-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;font-weight:650;color:var(--fg-2);margin:16px 0 8px;flex-wrap:wrap}
-.legend{display:flex;gap:14px;font-size:12.5px;color:var(--fg-3);font-weight:500}
+.legend{display:flex;gap:14px;margin:0;padding:0;font-size:12.5px;color:var(--fg-3);font-weight:500}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
 .dots{display:flex;flex-wrap:wrap;gap:4px}
 .dot{width:14px;height:14px;border-radius:50%;background:var(--miss)}
@@ -240,7 +223,7 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .finding h3{font-size:16.5px;margin:0 0 6px;line-height:1.35}
 .finding p{margin:0 0 8px;font-size:15px;color:var(--fg-2)}
 .finding .plain{background:var(--accent-bg);border-radius:10px;padding:8px 12px;color:var(--fg);font-size:14.5px}
-.finding .plain b{color:var(--accent);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-right:4px}
+.finding .plain b{color:var(--accent);font-size:13px;font-weight:650;margin-right:4px}
 .finding ol{margin:4px 0 0;padding-left:20px;font-size:15px}
 .finding li{margin-bottom:4px}
 .diag-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
@@ -253,7 +236,7 @@ h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin:0 0 12px;letter-spacin
 .prose table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0;font-variant-numeric:tabular-nums}
 .prose caption{text-align:left;font-size:13px;color:var(--fg-3);margin-bottom:6px}
 .prose th,.prose td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--edge);vertical-align:top}
-.prose thead th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3)}
+.prose thead th{font-size:13px;font-weight:600;color:var(--fg-3)}
 .prose code{font-size:.92em;background:var(--panel);border:1px solid var(--edge);border-radius:6px;padding:1px 5px}
 .tbl{overflow-x:auto}
 .faq h3{font-size:16.5px;margin:22px 0 6px}
@@ -392,7 +375,7 @@ footer{margin-top:44px;font-size:13px;color:var(--fg-3);display:flex;gap:12px;ju
 </main>
 
 <footer>
-  <span>Static page. No uploads, no tracking, no dependencies, no network requests.</span>
+  <span>Static page. No uploads, no tracking, no third-party requests.</span>
   <span>Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a></span>
 </footer>
 </div>

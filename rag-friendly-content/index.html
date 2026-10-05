@@ -64,70 +64,7 @@
   ]
 }
 </script>
-<style>
-:root{
-  --bg:#f7f8fa; --panel:#ffffff; --soft:#f1f3f7; --line:#dfe3ea; --ink:#141821; --muted:#4a5361; --faint:#7b8697;
-  --accent:#4f46e5; --accent-soft:rgba(79,70,229,.09);
-  --strong:#12805c; --strong-bg:#e3f4ec; --mod:#2563a8; --mod-bg:#e4eef9; --inf:#a35c00; --inf-bg:#fbefdc; --weak:#6b7280; --weak-bg:#eeeff1;
-  color-scheme:light;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0c0e13; --panel:#14171f; --soft:#1b1f29; --line:#272c38; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394;
-    --accent:#818cf8; --accent-soft:rgba(129,140,248,.13);
-    --strong:#34d399; --strong-bg:rgba(52,211,153,.14); --mod:#7aa7f5; --mod-bg:rgba(122,167,245,.14);
-    --inf:#fbbf24; --inf-bg:rgba(251,191,36,.13); --weak:#a3a9b3; --weak-bg:rgba(163,169,179,.14);
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-    --bg:#0c0e13; --panel:#14171f; --soft:#1b1f29; --line:#272c38; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394;
-    --accent:#818cf8; --accent-soft:rgba(129,140,248,.13);
-    --strong:#34d399; --strong-bg:rgba(52,211,153,.14); --mod:#7aa7f5; --mod-bg:rgba(122,167,245,.14);
-    --inf:#fbbf24; --inf-bg:rgba(251,191,36,.13); --weak:#a3a9b3; --weak-bg:rgba(163,169,179,.14);
-    color-scheme:dark;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:780px;margin:0 auto;padding:28px 16px 64px}
-a{color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.crumbs{font-size:14px;margin-bottom:26px}
-.crumbs a{color:var(--muted);text-decoration:none}
-.crumbs a:hover{color:var(--accent)}
-h1{font-size:clamp(28px,4.6vw,40px);line-height:1.12;letter-spacing:-.022em;margin:0 0 14px}
-h2{font-size:clamp(21px,3vw,25px);line-height:1.25;letter-spacing:-.01em;margin:0 0 12px}
-h3{font-size:17px;margin:24px 0 8px}
-p{margin:0 0 14px}
-ul,ol{margin:0 0 14px;padding-left:22px}
-li{margin-bottom:7px}
-.lede{font-size:18.5px;color:var(--muted)}
-.byline{font-size:14px;color:var(--faint);margin:0 0 8px}
-section{border-top:1px solid var(--line);padding-top:30px;margin-top:34px}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;margin:24px 0 0}
-.tldr p:last-child{margin-bottom:0}
-.tldr h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
-.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:14px;color:var(--muted);margin:14px 0 0;padding:0;list-style:none}
-.legend li{margin:0}
-.ev{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;border-radius:999px;padding:1px 8px;white-space:nowrap;vertical-align:1px}
-.ev-strong{background:var(--strong-bg);color:var(--strong)} .ev-mod{background:var(--mod-bg);color:var(--mod)}
-.ev-inf{background:var(--inf-bg);color:var(--inf)} .ev-weak{background:var(--weak-bg);color:var(--weak)}
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:6px 0 16px;background:var(--panel)}
-table{border-collapse:collapse;width:100%;font-size:14.5px}
-caption{caption-side:top;text-align:left;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:12px 12px 4px}
-th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
-thead th{background:var(--soft);font-weight:600}
-tbody th{font-weight:600}
-tr:last-child td,tr:last-child th{border-bottom:0}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
-code{font-size:13.5px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
-ol.check{counter-reset:c;list-style:none;padding:0}
-ol.check li{counter-increment:c;position:relative;padding-left:38px;margin-bottom:10px}
-ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13px;display:grid;place-items:center}
-.sources li{font-size:14.5px}
-footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:14px;color:var(--faint)}
-</style>
+<link rel="stylesheet" href="../site.css">
 </head>
 <body>
 <div class="wrap">
@@ -135,6 +72,7 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-si
 <nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
 
 <header>
+  <p class="kicker">Guide · Answer engines</p>
   <h1>How to write content that LLMs retrieve and cite</h1>
   <p class="lede">RAG-friendly content is web content that a retrieval-augmented generation (RAG) pipeline can fetch, split into chunks, match to a question and quote without losing meaning. This guide explains what answer engines such as ChatGPT, Claude, Perplexity, Microsoft Copilot and Google AI Overviews do with a page, and rates every common answer engine optimization (AEO) practice by the strength of its evidence.</p>
   <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>

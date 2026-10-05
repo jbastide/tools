@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Copy for Originals Tools">
 <meta property="og:title" content="Lead Gen Search Campaign Checklist for Google Ads">
 <meta property="og:description" content="Every setting to check before a lead gen Search campaign goes live, laid out like a cockpit checklist. Enter your target cost per lead to size the budget.">
-<meta property="article:modified_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
      keep the two in sync when either changes. -->
@@ -42,7 +42,7 @@
       "operatingSystem": "Any (web browser)",
       "isAccessibleForFree": true,
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-10-05",
       "author": { "@id": "https://copyfororiginals.com/#org" },
       "publisher": { "@id": "https://copyfororiginals.com/#org" }
     },
@@ -52,7 +52,7 @@
       "url": "https://tools.copyfororiginals.com/search-checklist/",
       "name": "Lead Gen Search Campaign Checklist for Google Ads",
       "inLanguage": "en",
-      "dateModified": "2026-10-03",
+      "dateModified": "2026-10-05",
       "mainEntity": { "@id": "https://tools.copyfororiginals.com/search-checklist/#app" },
       "author": { "@id": "https://copyfororiginals.com/#org" },
       "breadcrumb": {
@@ -69,7 +69,8 @@
       "mainEntity": [
         {"@type": "Question", "name": "What location option should a lead gen campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use \"Presence: People in or regularly in your included locations.\" The default, \"Presence or interest,\" also shows ads to people outside your area who search about it, so a plumber in Denver pays for clicks from people in Ohio reading about Denver. Change it under Campaign settings, Locations, Location options."}},
         {"@type": "Question", "name": "Should I turn off auto-apply recommendations in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-applied recommendations can add broad match keywords, raise budgets, change bid strategies and add keywords without asking. Turn off every type under Recommendations, Auto-apply, then review recommendations by hand and apply only the ones that help."}},
-        {"@type": "Question", "name": "What bid strategy should a lead gen Search campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use Maximize conversions with a target CPA set to the cost per lead you can afford. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM. A brand-new account with no conversion history can start without a target and add one after about 30 conversions."}},
+        {"@type": "Question", "name": "What bid strategy should a lead gen Search campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use Maximize conversions with a target CPA from day one, even in a new account, because the target CPA is the guardrail on cost per lead. Build it as a portfolio bid strategy in the shared library so you can also set a max CPC bid limit. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM."}},
+        {"@type": "Question", "name": "What should the max CPC bid limit be?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the low-range top-of-page bid that Keyword Planner shows for your main keywords. That is usually enough to show on the first page without paying for the top spot, where clicks cost the most. Set it in the advanced settings of a portfolio bid strategy, and raise it 10–20% if the campaign barely spends after 14 days."}},
         {"@type": "Question", "name": "How big should my Google Ads daily budget be?", "acceptedAnswer": {"@type": "Answer", "text": "Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget."}},
         {"@type": "Question", "name": "Do I need auto-tagging on in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-tagging adds a GCLID to every ad click, which Google Analytics, offline conversion imports and enhanced conversions for leads use to tie a lead back to the click that produced it. Turn it on under Admin, Account settings, Auto-tagging."}}
       ]
@@ -248,7 +249,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 <header class="intro">
   <h1>Lead Gen Search Campaign Checklist</h1>
   <p>Lead Gen Search Campaign Checklist is a preflight checklist for Google Ads Search campaigns that generate leads. Work through it top to bottom before a campaign goes live. Tap each item as you set it.</p>
-  <p class="small">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-03">October 3, 2026</time></p>
+  <p class="small">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-05">October 5, 2026</time></p>
 </header>
 
 <div class="laminate">
@@ -257,7 +258,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <div class="card-head">
       <div class="l">Google Ads · Search<br>Lead generation</div>
       <div class="card-title"><b>Normal Procedures</b><span>Campaign Preflight</span></div>
-      <div class="r">Rev 1 · 03 Oct 2026<br>Do not auto-apply</div>
+      <div class="r">Rev 2 · 05 Oct 2026<br>Do not auto-apply</div>
     </div>
 
     <div class="panels">
@@ -353,11 +354,14 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
           <ol class="items">
             <li class="item"><label><input type="checkbox" id="c-bid"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
-              <span class="line"><span class="c">Bid strategy</span><span class="lead"></span><span class="r">Max conversions</span></span>
-              <span class="note">Maximize conversions, not Maximize clicks or Manual CPC.</span></label></li>
+              <span class="line"><span class="c">Bid strategy</span><span class="lead"></span><span class="r">Portfolio max conv.</span></span>
+              <span class="note">Maximize conversions, built in Tools › Shared library › Bid strategies, then attach the campaign. Only a portfolio strategy has a max CPC limit.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-tcpa"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Target CPA</span><span class="lead"></span><span class="r" id="r-tcpa">Set</span></span>
-              <span class="note">Your target cost per lead. Use <b>Max conversion value + target ROAS</b> instead only if each lead has a value imported from your CRM.</span></label></li>
+              <span class="note">Set it from day one, even with no history. It’s the guardrail on cost per lead. Use <b>Max conversion value + target ROAS</b> instead only if each lead has a value imported from your CRM.</span></label></li>
+            <li class="item"><label><input type="checkbox" id="c-maxcpc"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
+              <span class="line"><span class="c">Max CPC bid limit</span><span class="lead"></span><span class="r">Top-of-page bid, low range</span></span>
+              <span class="note">In the portfolio’s advanced settings. Take the value from Keyword Planner for your main keywords. It keeps you on page one without paying for the top spot.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-budget"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Daily budget</span><span class="lead"></span><span class="r" id="r-budget">≥ 3× target CPA</span></span>
               <span class="note">Less than 3× and the budget caps the bid strategy before it can learn. See performance data.</span></label></li>
@@ -365,7 +369,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
               <span class="line"><span class="c">Campaign count</span><span class="lead"></span><span class="r">Fewest that fit budget</span></span>
               <span class="note">Each campaign needs its own budget at or above the minimum. Splitting $100 a day five ways starves all five.</span></label></li>
           </ol>
-          <div class="callout note"><strong>Note</strong>No conversion history yet? Launch on Maximize conversions without a target. After about 30 leads, add a target CPA equal to your actual 30-day cost per lead, then lower it 10–15% at a time.</div>
+          <div class="callout note"><strong>Note</strong>Target CPA caps what you pay per lead. Max CPC caps what you pay per click. If the campaign barely spends after 14 days, raise the max CPC limit 10–20% first, then the target CPA.</div>
           <div class="stamp" role="status">Bidding complete</div>
         </section>
 
@@ -461,7 +465,9 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <h3>Should I turn off auto-apply recommendations in Google Ads?</h3>
     <p>Yes. Auto-applied recommendations can add broad match keywords, raise budgets, change bid strategies and add keywords without asking. Turn off every type under Recommendations, Auto-apply, then review recommendations by hand and apply only the ones that help.</p>
     <h3>What bid strategy should a lead gen Search campaign use?</h3>
-    <p>Use Maximize conversions with a target CPA set to the cost per lead you can afford. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM. A brand-new account with no conversion history can start without a target and add one after about 30 conversions.</p>
+    <p>Use Maximize conversions with a target CPA from day one, even in a new account, because the target CPA is the guardrail on cost per lead. Build it as a portfolio bid strategy in the shared library so you can also set a max CPC bid limit. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM.</p>
+    <h3>What should the max CPC bid limit be?</h3>
+    <p>Start with the low-range top-of-page bid that Keyword Planner shows for your main keywords. That is usually enough to show on the first page without paying for the top spot, where clicks cost the most. Set it in the advanced settings of a portfolio bid strategy, and raise it 10–20% if the campaign barely spends after 14 days.</p>
     <h3>How big should my Google Ads daily budget be?</h3>
     <p>Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget.</p>
     <h3>Do I need auto-tagging on in Google Ads?</h3>

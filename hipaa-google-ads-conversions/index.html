@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HIPAA-Compliant Conversion Tracking for Google Ads: Options for Healthcare Practices Compared</title>
+<meta name="description" content="How a healthcare practice can track Google Ads conversions without sending PHI to Google. Compares Curve, Ours Privacy, Freshpaint, enterprise CDPs, server-side GTM, offline conversion imports and HIPAA call tracking, with prices, setup effort and sources. Educational only, not legal advice.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/hipaa-google-ads-conversions/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/hipaa-google-ads-conversions/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="HIPAA-Compliant Conversion Tracking for Google Ads: Options Compared">
+<meta property="og:description" content="Every option a healthcare practice has for Google Ads conversion tracking without sending PHI to Google, with prices, setup effort and sources.">
+<meta property="article:modified_time" content="2026-10-05">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A9%BA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/hipaa-google-ads-conversions/#article",
+      "headline": "HIPAA-Compliant Conversion Tracking for Google Ads: Options for Healthcare Practices Compared",
+      "description": "How a healthcare practice can track Google Ads conversions without sending protected health information to Google, comparing healthcare tracking platforms, enterprise CDPs, server-side GTM, offline conversion imports and HIPAA call tracking by price, setup effort and fit for practices without an IT department.",
+      "url": "https://tools.copyfororiginals.com/hipaa-google-ads-conversions/",
+      "inLanguage": "en",
+      "datePublished": "2026-10-05",
+      "dateModified": "2026-10-05",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" },
+      "about": ["HIPAA", "Google Ads conversion tracking", "Healthcare marketing", "Offline conversion import"],
+      "citation": [
+        "https://support.google.com/analytics/answer/13297105",
+        "https://docs.cloud.google.com/docs/security/compliance/hipaa",
+        "https://support.google.com/google-ads/answer/7475709",
+        "https://support.google.com/google-ads/answer/7014069",
+        "https://support.google.com/google-ads/answer/2998031",
+        "https://www.aha.org/news/news/2024-06-20-judge-rules-favor-aha-vacating-hhs-online-tracking-bulletin-unlawful-and-beyond-agency-authority",
+        "https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/07/no-hashing-still-doesnt-make-your-data-anonymous",
+        "https://www.curvecompliance.com/pricing",
+        "https://oursprivacy.com/pricing",
+        "https://www.freshpaint.io/pricing",
+        "https://www.vendr.com/marketplace/freshpaint",
+        "https://www.callrail.com/pricing",
+        "https://stape.io/price"
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/" },
+          { "@type": "ListItem", "position": 2, "name": "HIPAA-compliant Google Ads conversion tracking", "item": "https://tools.copyfororiginals.com/hipaa-google-ads-conversions/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/hipaa-google-ads-conversions/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is Google Ads HIPAA compliant?", "acceptedAnswer": {"@type": "Answer", "text": "No. Google does not sign a business associate agreement (BAA) for Google Ads, so a healthcare practice can use Google Ads only if no protected health information reaches Google. In practice that means sending only the ad click ID, a timestamp, an optional value and a neutral conversion name."}},
+        {"@type": "Question", "name": "Is Freshpaint the only HIPAA-compliant option for Google Ads conversions?", "acceptedAnswer": {"@type": "Answer", "text": "No. Curve and Ours Privacy are healthcare tracking platforms that compete directly with Freshpaint, enterprise CDPs such as Segment, RudderStack, Tealium and Piwik PRO offer a BAA on their top tiers, server-side Google Tag Manager can run on a host that signs a BAA, and Google Ads offline conversion imports are free."}},
+        {"@type": "Question", "name": "What is the cheapest HIPAA-compliant way to track Google Ads conversions?", "acceptedAnswer": {"@type": "Answer", "text": "A Google Ads offline conversion import that sends only the click ID is free. The practice captures the GCLID in its website form, then uploads the click ID, a neutral conversion name and the conversion time by CSV or Google Sheets within 90 days of the click. The cost is staff time, not a subscription."}},
+        {"@type": "Question", "name": "Can a healthcare practice run Google Ads without conversion tracking?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A practice can run Manual CPC and judge Google Ads by the relationship between ad spend and new-patient growth over time instead of by a tracked conversion count. Smart Bidding strategies such as Maximize conversions need conversion data, but Manual CPC does not."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --soft:#f1f3f7; --line:#dfe3ea; --ink:#141821; --muted:#4a5361; --faint:#7b8697;
+  --accent:#4f46e5; --accent-soft:rgba(79,70,229,.09);
+  --strong:#12805c; --strong-bg:#e3f4ec; --mod:#2563a8; --mod-bg:#e4eef9; --inf:#a35c00; --inf-bg:#fbefdc; --weak:#6b7280; --weak-bg:#eeeff1;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0e13; --panel:#14171f; --soft:#1b1f29; --line:#272c38; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394;
+    --accent:#818cf8; --accent-soft:rgba(129,140,248,.13);
+    --strong:#34d399; --strong-bg:rgba(52,211,153,.14); --mod:#7aa7f5; --mod-bg:rgba(122,167,245,.14);
+    --inf:#fbbf24; --inf-bg:rgba(251,191,36,.13); --weak:#a3a9b3; --weak-bg:rgba(163,169,179,.14);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#0c0e13; --panel:#14171f; --soft:#1b1f29; --line:#272c38; --ink:#e9edf5; --muted:#a9b4c4; --faint:#788394;
+    --accent:#818cf8; --accent-soft:rgba(129,140,248,.13);
+    --strong:#34d399; --strong-bg:rgba(52,211,153,.14); --mod:#7aa7f5; --mod-bg:rgba(122,167,245,.14);
+    --inf:#fbbf24; --inf-bg:rgba(251,191,36,.13); --weak:#a3a9b3; --weak-bg:rgba(163,169,179,.14);
+    color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:28px 16px 64px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.crumbs{font-size:14px;margin-bottom:26px}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--accent)}
+h1{font-size:clamp(28px,4.6vw,40px);line-height:1.12;letter-spacing:-.022em;margin:0 0 14px}
+h2{font-size:clamp(21px,3vw,25px);line-height:1.25;letter-spacing:-.01em;margin:0 0 12px}
+h3{font-size:17px;margin:24px 0 8px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:7px}
+.lede{font-size:18.5px;color:var(--muted)}
+.byline{font-size:14px;color:var(--faint);margin:0 0 8px}
+section{border-top:1px solid var(--line);padding-top:30px;margin-top:34px}
+.tldr,.caveats{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;margin:24px 0 0}
+.caveats{border-left-color:var(--inf)}
+.tldr p:last-child,.caveats ul:last-child{margin-bottom:0}
+.tldr h2,.caveats h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
+.caveats li{font-size:15px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:14px;color:var(--muted);margin:14px 0 0;padding:0;list-style:none}
+.legend li{margin:0}
+.ev{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;border-radius:999px;padding:1px 8px;white-space:nowrap;vertical-align:1px}
+.ev-strong{background:var(--strong-bg);color:var(--strong)} .ev-mod{background:var(--mod-bg);color:var(--mod)}
+.ev-inf{background:var(--inf-bg);color:var(--inf)} .ev-weak{background:var(--weak-bg);color:var(--weak)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:6px 0 16px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+caption{caption-side:top;text-align:left;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:12px 12px 4px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+thead th{background:var(--soft);font-weight:600}
+tbody th{font-weight:600}
+tbody tr.group th{background:var(--soft);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+#options table{min-width:680px}
+tr:last-child td,tr:last-child th{border-bottom:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+code{font-size:13.5px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+ol.check{counter-reset:c;list-style:none;padding:0}
+ol.check li{counter-increment:c;position:relative;padding-left:38px;margin-bottom:10px}
+ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13px;display:grid;place-items:center}
+.sources li{font-size:14.5px}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:14px;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+
+<header>
+  <h1>HIPAA-compliant conversion tracking for Google Ads: the options compared</h1>
+  <p class="lede">HIPAA-compliant conversion tracking for Google Ads is a way for a healthcare practice to tell Google Ads which ad clicks became leads or patients without sending protected health information (PHI) to Google, which does not sign a business associate agreement (BAA) for Google Ads. This guide compares every option we found as of October 2026, from healthcare tracking platforms such as Freshpaint to free offline conversion imports, with prices, setup effort, and whether a practice without an IT department can realistically run each one. This guide is educational only and is not legal advice. Confirm any tracking setup with a healthcare attorney or your compliance officer before you use it.</p>
+  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Last updated <time datetime="2026-10-05">October 5, 2026</time> · Sources accessed October 5, 2026</p>
+  <div class="tldr">
+    <h2>Short answer</h2>
+    <p>Every compliant option works the same way at the end: Google receives only the ad click ID, a timestamp, an optional value and a neutral conversion name, never anything that identifies the patient or the care they asked about. What differs is who does the work and what it costs. A Google Ads offline conversion import is free but takes staff time. Managed healthcare platforms such as Curve and Ours Privacy do the setup for you, from roughly $900 to a few thousand dollars a month. Freshpaint and the enterprise CDPs typically cost tens of thousands of dollars a year. For a practice whose ad budget doesn’t justify those costs, Manual CPC judged by new-patient growth is a sound alternative.</p>
+  </div>
+  <div class="caveats" id="limits">
+    <h2>What this guide could not verify</h2>
+    <p>This guide is desk research from public sources, not a hands-on test of each platform. Read the prices and policy points with these gaps in mind:</p>
+    <ul>
+      <li><b>Most vendors don’t publish prices.</b> Each price below is labeled by where it came from. Curve’s $899 a month comes only from Curve’s own blog; its pricing page says “contact sales”. The Ours Privacy estimate comes from a dental-marketing review site. Vendr figures are medians across all of a vendor’s buyers, mostly larger companies, not small practices.</li>
+      <li><b>One Google policy question is unresolved.</b> Google’s customer data policy bars health-related conversions from enhanced conversions and store sales uploads. We could not confirm whether it also covers plain offline imports that send only the click ID. Ask your Google rep and your counsel.</li>
+      <li><b>No Google page says outright that Google Ads and Google Tag Manager are not covered by a BAA.</b> Google says so for Google Analytics, and neither product appears on Google Cloud’s list of BAA-covered services. The rest comes from secondary sources.</li>
+      <li><b>Some primary pages were unavailable.</b> Freshpaint’s setup docs are behind a login, and the HHS tracking bulletin page and a CallRail support article returned errors, so those points rely on law-firm and industry summaries.</li>
+      <li><b>Addingwell’s and TAGGRS’s BAA status</b> comes from one third-party article, not from those companies.</li>
+      <li><b>This changes quickly.</b> Prices, plans and Google policies are as of October 5, 2026.</li>
+    </ul>
+  </div>
+</header>
+
+<section id="why">
+  <h2>Why can’t a healthcare practice use the standard Google Ads conversion tag?</h2>
+  <p>A healthcare practice can’t safely use the standard Google Ads conversion tag because the tag sends Google the visitor’s IP address, page URLs and browser identifiers, and Google does not sign a business associate agreement (BAA) for Google Ads. Without a BAA, no PHI may reach Google.</p>
+  <ul>
+    <li><b>Google Analytics:</b> Google’s help page says Google “does not offer Business Associate Agreements in connection with this service.” <span class="ev ev-strong">Primary</span> <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">Google Analytics Help</a></li>
+    <li><b>Google Cloud does sign a BAA,</b> and Cloud Run is a covered service, but Google Ads, Google Analytics and Google Tag Manager are not on the covered list. <span class="ev ev-strong">Primary</span> <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">Google Cloud</a></li>
+    <li><b>The HHS tracking bulletin is narrower than it was.</b> On June 20, 2024, a federal court in <i>American Hospital Association v. Becerra</i> vacated the part of the HHS bulletin that treated an IP address plus a visit to a public health page as PHI, and HHS withdrew its appeal in August 2024. The rest of the bulletin stands: tracking on login-protected pages such as patient portals, and anything a patient types about their health, are still treated as PHI. <span class="ev ev-mod">Law-firm summaries</span> <a href="https://www.aha.org/news/news/2024-06-20-judge-rules-favor-aha-vacating-hhs-online-tracking-bulletin-unlawful-and-beyond-agency-authority" rel="noopener">AHA</a>, <a href="https://www.hklaw.com/en/insights/publications/2024/06/american-hospital-assn-v-becerra-are-tracking-tools-ok-again" rel="noopener">Holland &amp; Knight</a></li>
+    <li><b>Lawsuits don’t depend on HIPAA alone.</b> Pixel class actions often use state wiretap laws. Sutter Health’s $21.5 million settlement over Google Analytics and Meta Pixel on its patient-portal login page received final approval in March 2026. <a href="https://www.classaction.org/news/21.5m-sutter-health-settlement-ends-class-action-lawsuit-over-alleged-patient-info-sharing-with-google-facebook" rel="noopener">ClassAction.org</a></li>
+  </ul>
+  <div class="tablewrap">
+  <table>
+    <caption>What a compliant setup sends to Google Ads</caption>
+    <thead><tr><th scope="col">Send</th><th scope="col">Never send</th></tr></thead>
+    <tbody>
+      <tr><td>The click ID (GCLID, GBRAID or WBRAID)</td><td>Name, email or phone number, even hashed</td></tr>
+      <tr><td>The conversion time</td><td>IP address or full page URLs</td></tr>
+      <tr><td>An optional value</td><td>Pages, titles or form fields that name a condition or treatment</td></tr>
+      <tr><td>A neutral conversion name such as “Lead” or “New patient”</td><td>Conversion names that reveal the service, such as “IVF consult booked”</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="options">
+  <h2>What are the options for HIPAA-compliant Google Ads conversion tracking?</h2>
+  <p>A healthcare practice has five kinds of options for HIPAA-compliant Google Ads conversion tracking: a healthcare tracking platform, an enterprise CDP with a BAA tier, server-side Google Tag Manager on a host that signs a BAA, a free Google Ads offline conversion import, and HIPAA call tracking for phone leads. Freshpaint is one healthcare tracking platform, not the only one.</p>
+  <ul class="legend" aria-label="Price source labels used on this page">
+    <li><span class="ev ev-strong">Published</span> on the vendor’s pricing page</li>
+    <li><span class="ev ev-inf">Vendor claim</span> vendor’s blog, not its pricing page</li>
+    <li><span class="ev ev-mod">Vendr</span> median of buyer-reported contracts</li>
+    <li><span class="ev ev-weak">Estimate</span> third-party estimate</li>
+  </ul>
+  <div class="tablewrap">
+  <table>
+    <caption>HIPAA-compliant conversion tracking options, October 2026</caption>
+    <thead><tr><th scope="col">Option</th><th scope="col">BAA</th><th scope="col">Price</th><th scope="col">Setup effort</th><th scope="col">Without IT staff?</th></tr></thead>
+    <tbody>
+      <tr class="group"><th scope="rowgroup" colspan="5">Healthcare tracking platforms</th></tr>
+      <tr><th scope="row">Curve</th><td>Every plan</td><td>$899/mo <span class="ev ev-inf">Vendor claim</span></td><td>Low. Curve does the configuration and says practices can be live in about a week.</td><td>Yes</td></tr>
+      <tr><th scope="row">Ours Privacy</th><td>From the Essential plan (up to 50,000 monthly tracked users)</td><td>Contact sales. Low to mid four figures a month <span class="ev ev-weak">Estimate</span></td><td>Low to medium. Connect Google Ads, add a site script and map events. Hands-on setup is a paid add-on.</td><td>Mostly. Someone, such as the web designer, has to add the script.</td></tr>
+      <tr><th scope="row">Freshpaint</th><td>Yes</td><td>Contact sales. $35,000/yr median, range $27,800–$50,200 <span class="ev ev-mod">Vendr</span></td><td>Medium. Standard onboarding on the Comply plan.</td><td>With vendor onboarding, at a higher price</td></tr>
+      <tr class="group"><th scope="rowgroup" colspan="5">Enterprise CDPs and analytics with a BAA tier</th></tr>
+      <tr><th scope="row">Piwik PRO</th><td>Enterprise tiers only, not Business</td><td>Enterprise from €366/mo without a BAA <span class="ev ev-strong">Published</span>. BAA tiers: contact sales.</td><td>Medium. An implementation specialist sets it up.</td><td>With vendor help, at enterprise prices</td></tr>
+      <tr><th scope="row">Twilio Segment</th><td>Business tier only</td><td>$55,600/yr median <span class="ev ev-mod">Vendr</span></td><td>High. Needs a developer.</td><td>No</td></tr>
+      <tr><th scope="row">RudderStack</th><td>Enterprise only</td><td>$50,958/yr median <span class="ev ev-mod">Vendr</span></td><td>High. Needs a developer.</td><td>No</td></tr>
+      <tr><th scope="row">Tealium</th><td>Private Cloud and HIPAA cloud, not Public Cloud</td><td>Contact sales. No credible figure found.</td><td>High. Enterprise CDP.</td><td>No</td></tr>
+      <tr class="group"><th scope="rowgroup" colspan="5">Server-side Google Tag Manager on a host that signs a BAA</th></tr>
+      <tr><th scope="row">Google Cloud Run</th><td>Google Cloud BAA covers Cloud Run</td><td>About $45/mo per server, two or more recommended <span class="ev ev-strong">Published</span>, plus a consultant</td><td>High. Deploy manually in a BAA-covered project and write the rules that strip PHI.</td><td>No</td></tr>
+      <tr><th scope="row">Stape</th><td>Custom plan only</td><td>Contact sales. Standard plans ($0–$167/mo) have no BAA. <span class="ev ev-strong">Published</span></td><td>High. Stape hosts; you configure the PHI stripping.</td><td>No</td></tr>
+      <tr class="group"><th scope="rowgroup" colspan="5">Google Ads feature</th></tr>
+      <tr><th scope="row">Offline conversion import (click ID only)</th><td>Not needed if only the click ID is sent</td><td>Free</td><td>Low to medium. The website form has to capture the click ID.</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Addingwell and TAGGRS, two other managed server-side GTM hosts, do not offer a BAA according to <a href="https://dumbdata.co/post/hipaa-and-server-side-gtm-the-hosting-decision-most-teams-overlook/" rel="noopener">Dumbdata</a>. We found no BAA for Jitsu, and could not verify one for mParticle. Server-side GTM is a filter, not a way around the missing Google BAA: whatever leaves the server for Google still has to be free of PHI.</p>
+</section>
+
+<section id="cost">
+  <h2>How much does HIPAA-compliant conversion tracking cost?</h2>
+  <p>HIPAA-compliant conversion tracking for Google Ads costs anywhere from nothing to about $55,000 a year, depending mostly on who does the setup and upkeep.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Cost tiers for HIPAA-compliant Google Ads conversion tracking</caption>
+    <thead><tr><th scope="col">Tier</th><th scope="col">Typical cost</th><th scope="col">What you’re paying for</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Offline conversion import</th><td>$0, plus staff time</td><td>Nothing: Google doesn’t charge for imports</td></tr>
+      <tr><th scope="row">Server-side GTM on Cloud Run</th><td>About $90+/mo hosting, plus a one-time consultant setup</td><td>Hosting; a consultant writes and maintains the PHI-stripping rules</td></tr>
+      <tr><th scope="row">Managed healthcare platform</th><td>About $900 to a few thousand dollars a month</td><td>The vendor’s BAA, setup and ongoing maintenance</td></tr>
+      <tr><th scope="row">Freshpaint or an enterprise CDP</th><td>About $27,000–$56,000 a year (Vendr medians and ranges)</td><td>A full data platform, usually sized for larger organizations</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Server-side GTM consultants publish little pricing. Packaged setups start at a few hundred euros according to <a href="https://data-marketing-school.com/en/blog/gtm-server-side-cost/" rel="noopener">Data Marketing School</a>, and full projects start in the low five figures according to <a href="https://pilotdigital.com/services/analytics-consulting/server-side-tracking-analytics/" rel="noopener">Pilot Digital</a>. Both are vendors selling the service.</p>
+</section>
+
+<section id="no-it">
+  <h2>Which option fits a practice without an IT department?</h2>
+  <p>A practice without an IT department has three realistic paths: pay a managed healthcare platform to do the work, run a free offline conversion import with existing staff, or skip conversion-based bidding and run Manual CPC. The right choice depends on how the tracking cost compares with the ad budget.</p>
+  <ul>
+    <li><b>Managed platform (Curve, Ours Privacy).</b> The least work for the practice and the highest cost. At Curve’s $899 a month, a practice spending $3,000 a month on Google Ads would pay about 30% of its ad budget again for tracking; a practice spending $15,000 a month would pay about 6%.</li>
+    <li><b>Offline conversion import.</b> Free, and practical for a front desk that can update a spreadsheet. It needs the website form to capture the click ID, which many scheduling and EHR booking widgets can’t do. See the steps below.</li>
+    <li><b>Manual CPC.</b> No conversion data sent to Google at all. Results are judged by new-patient growth against ad spend. See <a href="#manual-cpc">Can Manual CPC work without conversion tracking?</a></li>
+  </ul>
+  <p>Server-side GTM and the enterprise CDPs need a developer or analytics consultant to set up and maintain, so they fit practices that already work with one.</p>
+</section>
+
+<section id="offline-import">
+  <h2>How does a Google Ads offline conversion import work?</h2>
+  <p>A Google Ads offline conversion import records a conversion by uploading the ad click ID (GCLID) and the conversion time, so Google learns which clicks produced patients without receiving any patient data. Google doesn’t charge for it. <span class="ev ev-strong">Primary</span> <a href="https://support.google.com/google-ads/answer/7014069" rel="noopener">Google Ads Help</a></p>
+  <ol class="check">
+    <li>Turn on auto-tagging in Google Ads (Admin, Account settings), so every ad click carries a GCLID in the landing page URL.</li>
+    <li>Add a hidden field to the website contact or booking form that saves the GCLID with the lead.</li>
+    <li>Create an import conversion action with a neutral name such as “Qualified lead” or “New patient”, and wait 4 to 6 hours before the first upload.</li>
+    <li>When a lead becomes a patient, add a row with only the GCLID, the conversion name, the conversion time and an optional value.</li>
+    <li>Upload by CSV, a scheduled Google Sheets upload or Google’s Data Manager, within 90 days of the click. Upload on a steady schedule, daily if you use Smart Bidding. Imported conversions take 24 to 48 hours to appear.</li>
+  </ol>
+  <p>The hard step is the second one: if the booking tool can’t store the GCLID, there is nothing to upload. Also keep in mind the open question in <a href="#limits">What this guide could not verify</a>: Google’s sensitive-category rule names enhanced conversions and store sales, and we could not confirm whether it also covers click-ID-only imports.</p>
+</section>
+
+<section id="enhanced">
+  <h2>Can a healthcare practice use enhanced conversions?</h2>
+  <p>Enhanced conversions are risky for a healthcare practice because Google’s own policy excludes health-related conversions from them. Google’s customer data policy says conversions in sensitive categories, which include “health or medical information,” can’t be used for measurement in enhanced conversions or store sales uploads. <span class="ev ev-strong">Primary</span> <a href="https://support.google.com/google-ads/answer/7475709" rel="noopener">Google Ads Help</a></p>
+  <p>Enhanced conversions send a hashed email address or phone number. The FTC has said that hashing does not make data anonymous. <a href="https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/07/no-hashing-still-doesnt-make-your-data-anonymous" rel="noopener">FTC, July 2024</a></p>
+  <p>Some healthcare tracking platforms, including Curve and Freshpaint, describe enhanced conversions with PHI removed in their own materials. If a vendor offers it, ask the vendor how it fits Google’s policy, and have your counsel review the answer before turning it on.</p>
+</section>
+
+<section id="calls">
+  <h2>How do you track phone calls from Google Ads under HIPAA?</h2>
+  <p>To track phone calls from Google Ads under HIPAA, use a call tracking service that signs a BAA and send Google only the call conversion, never call recordings, transcripts or caller details. A BAA with the call tracking vendor does not extend to Google.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>HIPAA call tracking with a BAA, October 2026</caption>
+    <thead><tr><th scope="col">Vendor</th><th scope="col">BAA</th><th scope="col">Price</th><th scope="col">Setup</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">CallRail</th><td>Healthcare plans only</td><td>From $150/mo <span class="ev ev-strong">Published</span></td><td>Self-serve, 14-day trial</td></tr>
+      <tr><th scope="row">CallTrackingMetrics</th><td>From Marketing Pro</td><td>Marketing Pro $179/mo <span class="ev ev-strong">Published</span></td><td>Self-serve</td></tr>
+      <tr><th scope="row">Invoca</th><td>Yes</td><td>$27,880/yr median, plus onboarding <span class="ev ev-mod">Vendr</span></td><td>Implementation team; built for larger organizations</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Industry summaries report that CallRail’s Healthcare plan restricts integrations that send call data outside the BAA. Freshpaint and Ours Privacy both publish CallRail integrations for practices that already use one of those platforms.</p>
+</section>
+
+<section id="june-2026">
+  <h2>What changed for Google Ads offline conversion imports in June 2026?</h2>
+  <p>Starting June 15, 2026, Google moved offline conversion imports and enhanced conversions for leads to the Data Manager API and blocked them in the Google Ads API for new integrations. <span class="ev ev-strong">Primary</span> <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">Google Ads Help</a></p>
+  <p>Manual CSV and Google Sheets uploads still work, so the change matters most to practices that wanted a custom API connection. Vendors with existing integrations, such as RudderStack, say their connections are unaffected.</p>
+</section>
+
+<section id="manual-cpc">
+  <h2>Can Manual CPC work without conversion tracking?</h2>
+  <p>Manual CPC can work well without conversion tracking when a practice judges Google Ads by the relationship between ad spend and new-patient growth over time, instead of by a tracked conversion count. Smart Bidding strategies such as Maximize conversions need conversion data to bid; Manual CPC doesn’t.</p>
+  <p>In Copy for Originals’ client work, a Manual CPC account with high-six-figure spend held its own against a Maximize conversions campaign once the benchmark was the practice’s actual new-patient growth rather than a tracked “conversion.” That is one client’s experience, not a controlled study, but it shows the tradeoff is about measurement, not about whether a practice can compete.</p>
+  <p>To run Google Ads this way, track monthly ad spend next to new patients from the practice management system, ask new patients how they found the practice, and watch how new-patient numbers move when spend goes up or down. The <a href="../search-checklist/">Lead Gen Search Campaign Checklist</a> assumes conversion tracking; a Manual CPC checklist is coming soon.</p>
+</section>
+
+<section id="faq">
+  <h2>HIPAA Google Ads conversion tracking FAQ</h2>
+  <h3>Is Google Ads HIPAA compliant?</h3>
+  <p>No. Google does not sign a business associate agreement (BAA) for Google Ads, so a healthcare practice can use Google Ads only if no protected health information reaches Google. In practice that means sending only the ad click ID, a timestamp, an optional value and a neutral conversion name.</p>
+  <h3>Is Freshpaint the only HIPAA-compliant option for Google Ads conversions?</h3>
+  <p>No. Curve and Ours Privacy are healthcare tracking platforms that compete directly with Freshpaint, enterprise CDPs such as Segment, RudderStack, Tealium and Piwik PRO offer a BAA on their top tiers, server-side Google Tag Manager can run on a host that signs a BAA, and Google Ads offline conversion imports are free.</p>
+  <h3>What is the cheapest HIPAA-compliant way to track Google Ads conversions?</h3>
+  <p>A Google Ads offline conversion import that sends only the click ID is free. The practice captures the GCLID in its website form, then uploads the click ID, a neutral conversion name and the conversion time by CSV or Google Sheets within 90 days of the click. The cost is staff time, not a subscription.</p>
+  <h3>Can a healthcare practice run Google Ads without conversion tracking?</h3>
+  <p>Yes. A practice can run Manual CPC and judge Google Ads by the relationship between ad spend and new-patient growth over time instead of by a tracked conversion count. Smart Bidding strategies such as Maximize conversions need conversion data, but Manual CPC does not.</p>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <p>All sources accessed October 5, 2026. Page dates are shown where the page gives one.</p>
+  <h3>Google and regulators</h3>
+  <ul class="sources">
+    <li>Google Analytics Help, “HIPAA and Google Analytics.” <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">support.google.com</a></li>
+    <li>Google Cloud, HIPAA compliance and covered products (updated October 2, 2026). <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">docs.cloud.google.com</a></li>
+    <li>Google Ads Help, customer data policies. <a href="https://support.google.com/google-ads/answer/7475709" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, offline conversion imports. <a href="https://support.google.com/google-ads/answer/7014069" rel="noopener">support.google.com</a> and <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">support.google.com</a></li>
+    <li>Google, server-side Tag Manager Cloud Run setup guide (updated May 12, 2026). <a href="https://developers.google.com/tag-platform/tag-manager/server-side/cloud-run-setup-guide" rel="noopener">developers.google.com</a></li>
+    <li>American Hospital Association, ruling in <i>AHA v. Becerra</i>, June 20, 2024. <a href="https://www.aha.org/news/news/2024-06-20-judge-rules-favor-aha-vacating-hhs-online-tracking-bulletin-unlawful-and-beyond-agency-authority" rel="noopener">aha.org</a></li>
+    <li>Holland &amp; Knight, “American Hospital Ass’n v. Becerra: Are Tracking Tools OK Again?”, June 2024. <a href="https://www.hklaw.com/en/insights/publications/2024/06/american-hospital-assn-v-becerra-are-tracking-tools-ok-again" rel="noopener">hklaw.com</a></li>
+    <li>Proskauer, HHS OCR withdraws its appeal, August 2024. <a href="https://www.proskauer.com/blog/shortly-after-its-online-tracking-technologies-bulletin-is-declared-unlawful-hhs-ocr-stands-down-withdraws-appeal" rel="noopener">proskauer.com</a></li>
+    <li>FTC, “No, hashing still doesn’t make your data anonymous,” July 24, 2024. <a href="https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/07/no-hashing-still-doesnt-make-your-data-anonymous" rel="noopener">ftc.gov</a></li>
+    <li>ClassAction.org, Sutter Health $21.5 million settlement. <a href="https://www.classaction.org/news/21.5m-sutter-health-settlement-ends-class-action-lawsuit-over-alleged-patient-info-sharing-with-google-facebook" rel="noopener">classaction.org</a></li>
+  </ul>
+  <h3>Vendors and pricing</h3>
+  <ul class="sources">
+    <li>Curve, pricing and healthcare practices pages. <a href="https://www.curvecompliance.com/pricing" rel="noopener">curvecompliance.com/pricing</a>, <a href="https://www.curvecompliance.com/solutions/healthcare-practices" rel="noopener">healthcare practices</a></li>
+    <li>Curve blog, Google’s June 15 offline conversion API change (source of the $899/mo figure). <a href="https://www.curvecompliance.com/article/google-killed-the-old-offline-conversion-api-on-june-15-here-s-what-healthcare-marketers-need-to" rel="noopener">curvecompliance.com</a></li>
+    <li>Ours Privacy, pricing (September 25, 2026) and Google Ads destination docs. <a href="https://oursprivacy.com/pricing" rel="noopener">oursprivacy.com</a>, <a href="https://docs.oursprivacy.com/docs/destination-google" rel="noopener">docs.oursprivacy.com</a></li>
+    <li>Growdent, Ours Privacy review (August 28, 2026; source of the four-figure estimate). <a href="https://growdent.io/ours-privacy-review/" rel="noopener">growdent.io</a></li>
+    <li>Freshpaint, pricing. <a href="https://www.freshpaint.io/pricing" rel="noopener">freshpaint.io</a></li>
+    <li>Vendr buyer data for <a href="https://www.vendr.com/marketplace/freshpaint" rel="noopener">Freshpaint</a>, <a href="https://www.vendr.com/marketplace/twilio-segment" rel="noopener">Twilio Segment</a>, <a href="https://www.vendr.com/marketplace/rudderstack" rel="noopener">RudderStack</a> and <a href="https://www.vendr.com/marketplace/invoca" rel="noopener">Invoca</a>.</li>
+    <li>Piwik PRO, pricing, HIPAA page and Business plan BAA page. <a href="https://piwik.pro/pricing/" rel="noopener">pricing</a>, <a href="https://piwik.pro/hipaa/" rel="noopener">HIPAA</a>, <a href="https://piwik.pro/business-plan-baa/" rel="noopener">Business plan BAA</a></li>
+    <li>Twilio Segment, HIPAA-eligible Segment (June 26, 2026). <a href="https://www.twilio.com/docs/segment/privacy/hipaa-eligible-segment" rel="noopener">twilio.com</a></li>
+    <li>RudderStack, pricing and Google Ads Offline Conversions docs. <a href="https://www.rudderstack.com/pricing/" rel="noopener">pricing</a>, <a href="https://www.rudderstack.com/docs/destinations/streaming-destinations/google-ads-offline-conversions/" rel="noopener">docs</a></li>
+    <li>Tealium, HIPAA compliance and customer data. <a href="https://tealium.com/hipaa-compliance-and-customer-data/" rel="noopener">tealium.com</a></li>
+    <li>Stape, pricing and HIPAA tracking guide (September 4, 2026). <a href="https://stape.io/price" rel="noopener">pricing</a>, <a href="https://stape.io/blog/make-your-tracking-hipaa-compliant" rel="noopener">guide</a></li>
+    <li>Dumbdata, “HIPAA and server-side GTM: the hosting decision most teams overlook,” September 28, 2026. <a href="https://dumbdata.co/post/hipaa-and-server-side-gtm-the-hosting-decision-most-teams-overlook/" rel="noopener">dumbdata.co</a></li>
+    <li>Data Marketing School, server-side GTM cost, April 30, 2026. <a href="https://data-marketing-school.com/en/blog/gtm-server-side-cost/" rel="noopener">data-marketing-school.com</a></li>
+    <li>Pilot Digital, server-side tracking services. <a href="https://pilotdigital.com/services/analytics-consulting/server-side-tracking-analytics/" rel="noopener">pilotdigital.com</a></li>
+    <li>CallRail, pricing and healthcare pages. <a href="https://www.callrail.com/pricing" rel="noopener">pricing</a>, <a href="https://www.callrail.com/healthcare" rel="noopener">healthcare</a></li>
+    <li>Improvado, CallRail and HIPAA. <a href="https://improvado.io/blog/callrail-hipaa" rel="noopener">improvado.io</a></li>
+    <li>CallTrackingMetrics, Terms of Service (effective October 1, 2026). <a href="https://www.ctm.com/legal/tos/" rel="noopener">ctm.com</a>; pricing via <a href="https://www.capterra.com/p/152004/Call-tracking-software/pricing/" rel="noopener">Capterra</a></li>
+    <li>Invoca, company information (June 2026). <a href="https://www.invoca.com/llm-info" rel="noopener">invoca.com</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>Educational only, not legal advice. Static page. No scripts, no tracking. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+</footer>
+</div>
+</body>
+</html>

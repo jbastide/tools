@@ -18,6 +18,7 @@ inline CSS and vanilla JS, no build step, no dependencies, no network requests a
 | Guide | Path | What it covers |
 | --- | --- | --- |
 | How to write content that LLMs retrieve and cite | [`rag-friendly-content/`](rag-friendly-content/) | What answer engines do with a page, each AEO practice rated by evidence, and a 12-point checklist. |
+| HIPAA-compliant conversion tracking for Google Ads | [`hipaa-google-ads-conversions/`](hipaa-google-ads-conversions/) | Healthcare tracking platforms, enterprise CDPs, server-side GTM, offline conversion imports and HIPAA call tracking compared by price, setup effort and fit for practices without IT staff, with dated sources and a section on what couldn't be verified. Educational only, not legal advice. |
 
 ## Deploying
 

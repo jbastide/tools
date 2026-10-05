@@ -70,7 +70,7 @@
         {"@type": "Question", "name": "What location option should a lead gen campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use \"Presence: People in or regularly in your included locations.\" The default, \"Presence or interest,\" also shows ads to people outside your area who search about it, so a plumber in Denver pays for clicks from people in Ohio reading about Denver. Change it under Campaign settings, Locations, Location options."}},
         {"@type": "Question", "name": "Should I turn off auto-apply recommendations in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-applied recommendations can add broad match keywords, raise budgets, change bid strategies and add keywords without asking. Turn off every type under Recommendations, Auto-apply, then review recommendations by hand and apply only the ones that help."}},
         {"@type": "Question", "name": "What bid strategy should a lead gen Search campaign use?", "acceptedAnswer": {"@type": "Answer", "text": "Use Maximize conversions with a target CPA from day one, even in a new account, because the target CPA is the guardrail on cost per lead. Build it as a portfolio bid strategy in the shared library so you can also set a max CPC bid limit. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM."}},
-        {"@type": "Question", "name": "What should the max CPC bid limit be?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the low-range top-of-page bid that Keyword Planner shows for your main keywords. That is usually enough to show on the first page without paying for the top spot, where clicks cost the most. Set it in the advanced settings of a portfolio bid strategy, and raise it 10–20% if the campaign barely spends after 14 days."}},
+        {"@type": "Question", "name": "What should the max CPC bid limit be?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the low-range top-of-page bid that Keyword Planner shows for your main keywords, plus 15%. That is usually enough to show on the first page without paying for the top spot, where clicks cost the most. Set it in the advanced settings of a portfolio bid strategy. If the campaign has no clicks or leads after 7 days, bracket the bid: double it, and if it starts spending, come back down halfway until both spend and cost per lead hold. Low-volume keywords need these big moves, because small changes take weeks to show any effect."}},
         {"@type": "Question", "name": "How many ad groups should a new lead gen campaign have?", "acceptedAnswer": {"@type": "Answer", "text": "Start with one ad group for your one core service, with 5–20 keywords and one landing page. A small test budget spread across several ad groups gives each one too few clicks and leads to tell what works. Add a second ad group only when the budget can cover another three times your target CPA a day."}},
         {"@type": "Question", "name": "How big should my Google Ads daily budget be?", "acceptedAnswer": {"@type": "Answer", "text": "Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget."}},
         {"@type": "Question", "name": "Do I need auto-tagging on in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-tagging adds a GCLID to every ad click, which Google Analytics, offline conversion imports and enhanced conversions for leads use to tie a lead back to the click that produced it. Turn it on under Admin, Account settings, Auto-tagging."}}
@@ -259,7 +259,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <div class="card-head">
       <div class="l">Google Ads · Search<br>Lead generation</div>
       <div class="card-title"><b>Normal Procedures</b><span>Campaign Preflight</span></div>
-      <div class="r">Rev 2 · 05 Oct 2026<br>Do not auto-apply</div>
+      <div class="r">Rev 3 · 05 Oct 2026<br>Do not auto-apply</div>
     </div>
 
     <div class="panels">
@@ -361,8 +361,8 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
               <span class="line"><span class="c">Target CPA</span><span class="lead"></span><span class="r" id="r-tcpa">Set</span></span>
               <span class="note">Set it from day one, even with no history. It’s the guardrail on cost per lead. Use <b>Max conversion value + target ROAS</b> instead only if each lead has a value imported from your CRM.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-maxcpc"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
-              <span class="line"><span class="c">Max CPC bid limit</span><span class="lead"></span><span class="r">Top-of-page bid, low range</span></span>
-              <span class="note">In the portfolio’s advanced settings. Take the value from Keyword Planner for your main keywords. It keeps you on page one without paying for the top spot.</span></label></li>
+              <span class="line"><span class="c">Max CPC bid limit</span><span class="lead"></span><span class="r">Low top-of-page bid + 15%</span></span>
+              <span class="note">In the portfolio’s advanced settings. Take Keyword Planner’s low-range top-of-page bid for your main keywords and add 15%. That gets you onto page one without paying for the top spot.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-budget"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Daily budget</span><span class="lead"></span><span class="r" id="r-budget">≥ 3× target CPA</span></span>
               <span class="note">Less than 3× and the budget caps the bid strategy before it can learn. See performance data.</span></label></li>
@@ -370,7 +370,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
               <span class="line"><span class="c">Campaign count</span><span class="lead"></span><span class="r">Fewest that fit budget</span></span>
               <span class="note">Each campaign needs its own budget at or above the minimum. Splitting $100 a day five ways starves all five.</span></label></li>
           </ol>
-          <div class="callout note"><strong>Note</strong>Target CPA caps what you pay per lead. Max CPC caps what you pay per click. If the campaign barely spends after 14 days, raise the max CPC limit 10–20% first, then the target CPA.</div>
+          <div class="callout note"><strong>Note</strong>Target CPA caps what you pay per lead. Max CPC caps what you pay per click. No clicks or leads after 7 days? Move the max CPC, not the target. Low-volume keywords need big moves: double it, and if it starts spending, come back down halfway until spend and cost per lead both hold.</div>
           <div class="stamp" role="status">Bidding complete</div>
         </section>
 
@@ -403,8 +403,8 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
           <div class="sec-bar"><span class="phase">5</span><h2>After Launch</h2><span class="count"></span></div>
           <ol class="items">
             <li class="item"><label><input type="checkbox" id="c-learn"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
-              <span class="line"><span class="c">Learning period</span><span class="lead"></span><span class="r">Hands off 14 days</span></span>
-              <span class="note">No bid strategy, target or big budget changes while the status says Learning.</span></label></li>
+              <span class="line"><span class="c">Learning period</span><span class="lead"></span><span class="r">First read at 7 days</span></span>
+              <span class="note">Expect clicks and early leads within a week. If there are none, act. Waiting out “Learning” is how campaigns go stale.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-terms"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Search terms</span><span class="lead"></span><span class="r">Weekly</span></span>
               <span class="note">Add negatives. <a href="../negative-keywords/">Negative Keyword Finder</a> does the sorting.</span></label></li>
@@ -412,7 +412,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
               <span class="line"><span class="c">Recommendations</span><span class="lead"></span><span class="r">Review, don’t accept all</span></span>
               <span class="note">Dismiss “raise budget,” “add broad match” and “remove target” unless the data supports them.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-target"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
-              <span class="line"><span class="c">Target CPA changes</span><span class="lead"></span><span class="r">≤ 15% · 2 wks apart</span></span>
+              <span class="line"><span class="c">Target CPA changes</span><span class="lead"></span><span class="r">≤ 15% · weekly</span></span>
               <span class="note">Bigger jumps restart learning.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-kw"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Keyword profitability</span><span class="lead"></span><span class="r">Monthly</span></span>
@@ -468,7 +468,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <h3>What bid strategy should a lead gen Search campaign use?</h3>
     <p>Use Maximize conversions with a target CPA from day one, even in a new account, because the target CPA is the guardrail on cost per lead. Build it as a portfolio bid strategy in the shared library so you can also set a max CPC bid limit. Use Maximize conversion value with a target ROAS only if you send Google a value for each lead, such as from your CRM.</p>
     <h3>What should the max CPC bid limit be?</h3>
-    <p>Start with the low-range top-of-page bid that Keyword Planner shows for your main keywords. That is usually enough to show on the first page without paying for the top spot, where clicks cost the most. Set it in the advanced settings of a portfolio bid strategy, and raise it 10–20% if the campaign barely spends after 14 days.</p>
+    <p>Start with the low-range top-of-page bid that Keyword Planner shows for your main keywords, plus 15%. That is usually enough to show on the first page without paying for the top spot, where clicks cost the most. Set it in the advanced settings of a portfolio bid strategy. If the campaign has no clicks or leads after 7 days, bracket the bid: double it, and if it starts spending, come back down halfway until both spend and cost per lead hold. Low-volume keywords need these big moves, because small changes take weeks to show any effect.</p>
     <h3>How many ad groups should a new lead gen campaign have?</h3>
     <p>Start with one ad group for your one core service, with 5–20 keywords and one landing page. A small test budget spread across several ad groups gives each one too few clicks and leads to tell what works. Add a second ad group only when the budget can cover another three times your target CPA a day.</p>
     <h3>How big should my Google Ads daily budget be?</h3>

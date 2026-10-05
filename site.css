@@ -79,6 +79,8 @@ blockquote cite{font-size:14px;font-style:normal;color:var(--faint)}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--accent)}
 .kicker{font-size:14px;font-weight:600;color:var(--accent);margin:0 0 12px;letter-spacing:.005em}
+.kicker a{color:inherit;text-decoration:none}
+.kicker a:hover{text-decoration:underline}
 .lede{font-size:20px;line-height:1.5;color:var(--muted);letter-spacing:-.005em}
 .byline{font-size:14px;color:var(--faint);margin:0 0 8px}
 .byline a{color:inherit}

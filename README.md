@@ -18,7 +18,8 @@ vanilla JS that links the shared [`site.css`](site.css): no build step, no depen
 
 | Guide | Path | What it covers |
 | --- | --- | --- |
-| The PPC Gumball Rule | [`ppc-gumball-rule/`](ppc-gumball-rule/) | Original rule: zero conversions after 3× expected cost per conversion is 95% unlikely to be luck. Lookup tables and a calculator. Part of the AI Overview citation experiment. |
+| Google Ads no conversions study | [`ppc-no-conversions-study/`](ppc-no-conversions-study/) | 62 coded Google Ads Community and r/PPC threads scored with the PPC Gumball Rule, with a CSV of the data. Original-research arm of the experiment. |
+| The PPC Gumball Rule | [`ppc-gumball-rule/`](ppc-gumball-rule/) | Named rule of thumb: zero conversions after 3× expected cost per conversion is 95% unlikely to be luck. Lookup tables and a calculator. Part of the AI Overview citation experiment. |
 | Personal injury Google Ads budget | [`personal-injury-google-ads-budget/`](personal-injury-google-ads-budget/) | Minimum monthly budget = 3 × expected cost per lead, with tables and a calculator. Commercial layer of the experiment. |
 | Google Ads for law firms: five short answers | [`law-firm-google-ads-faq/`](law-firm-google-ads-faq/) | Formatting-only control page for the experiment: known facts, no new numbers. |
 | Should AI fully manage your Google Ads campaigns? | [`should-ai-manage-google-ads/`](should-ai-manage-google-ads/) | Pros and cons of Google’s automation and AI agents in lead gen Search campaigns, with dated sources. AI suggests, a person approves. |

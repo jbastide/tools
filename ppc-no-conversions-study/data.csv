@@ -1,0 +1,63 @@
+source,thread_url,thread_date,clicks,total_spend,currency,results_reported,stated_target_cpa,stated_conversion_rate_pct,campaign_type,light_at_1pct,light_at_2_5pct,light_at_5pct,replies_said_too_early,first_reply_diagnosis,poster_confirmed_cause
+Google Ads Community,https://support.google.com/google-ads/thread/123494919?hl=en,2022-01-11,,,INR,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/153206534?hl=en,2022-05-07,,,,0,,,search,,,,yes,too_early_more_data,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/145937817?hl=en,2022-05-31,,,,0,,,unknown,,,,yes,too_early_more_data,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/215798012?hl=en,2023-07-26,,,,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/216529645?hl=en,2023-07-30,,,,0,,,unknown,,,,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/219043922?hl=en,2023-08-14,,,,0,,,unknown,,,,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/231767658?hl=en,2023-10-28,,,,0,,,unknown,,,,no,none,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/267937156?hl=en,2024-06-15,,,,0,,,unknown,,,,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/327392506?hl=en,2025-05-01,,,,0,,,search,,,,no,tracking,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/339401051?hl=en,2025-07-01,,,,0,,,unknown,,,,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/338103858?hl=en,2025-07-31,,,USD,0,,,search,,,,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/354532293?hl=en,2025-10-03,97,50.94,MYR,0,,,unknown,green,yellow,red,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/383033590?hl=en,2026-01-05,,,,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/383767660?hl=en,2026-01-08,,,,0,,,search,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/384813028?hl=en,2026-01-13,,,GBP,0,,,unknown,,,,no,budget_too_small,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/387709438?hl=en,2026-01-25,31,,,0,,,unknown,green,green,green,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/397139842?hl=en,2026-02-27,,,,0,,,unknown,,,,no,none,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/404917563?hl=en,2026-04-03,,,,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/410432370?hl=en,2026-04-20,,,,0,,,search,,,,no,keywords_search_terms,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/413059655?hl=en,2026-05-08,,2000,unknown,1,,,unknown,,,,no,invalid_clicks_bots,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/420951282?hl=en,2026-06-09,,,,0,,,unknown,,,,no,pmax_or_smart,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/429920904?hl=en,2026-07-12,,,,0,,,unknown,,,,no,invalid_clicks_bots,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/457401422?hl=en,2026-08-06,,,MYR,0,,,unknown,,,,no,ad_copy,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/441107626?hl=en,2026-08-22,,,CAD,0,,,unknown,,,,no,competition_or_cpc,tracking
+Google Ads Community,https://support.google.com/google-ads/thread/442483681?hl=en,2026-08-27,,20000,unknown,0,,,unknown,,,,no,tracking,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/461051480?hl=en,2026-08-28,,,,0,,,unknown,,,,yes,tracking,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/443039234?hl=en,2026-08-29,,,,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/463856469?hl=en,2026-09-07,882,3500,PKR,0,,,unknown,red,red,red,no,none,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/446153485?hl=en,2026-09-09,,840,INR,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/465140222?hl=en,2026-09-12,,,,0,,,unknown,,,,no,tracking,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/447986234?hl=en,2026-09-14,,,,0,,,video,,,,yes,too_early_more_data,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/449536954?hl=en,2026-09-18,,,,0,,,unknown,,,,no,other,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/468005259?hl=en,2026-09-24,,,AED,0,,,smart,,,,no,pmax_or_smart,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/453778059?hl=en,2026-09-26,,,,0,,,unknown,,,,no,tracking,unknown
+Google Ads Community,https://support.google.com/google-ads/thread/469439690?hl=en,2026-09-30,,,,0,,,unknown,,,,no,invalid_clicks_bots,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1kh1qe3/0_conversion_in_367_clic/,2025-05-07,367,83.09,EUR,0,,,shopping,red,red,red,yes,too_early_more_data,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1kj6bcb/no_sales_after_192_clicks_264_spend/,2025-05-10,192,264,USD,0,,,shopping,green,red,red,yes,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1kjqs8r/248_spent_0_leads_am_i_just_bad_at_ads_or_is_this/,2025-05-11,59,177,USD,1,,,search,green,green,yellow,yes,too_early_more_data,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1kmmdot/3k_clicks_but_no_conversions/,2025-05-14,3200,,,0,,,search,red,red,red,no,none,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1ljc1q8/trying_to_start_up_a_manual_cpc_campaign_already/,2025-06-24,250,1000,USD,0,,,shopping,yellow,red,red,yes,too_early_more_data,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1m37t5a/google_ads_5_ctr_191_clicks_no_conversions/,2025-07-18,191,,,0,,,unknown,green,red,red,yes,landing_page,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1n0gny0/230_spent_68_clicks_0_leads_any_advice/,2025-08-26,68,230,GBP,0,,,search,green,green,red,yes,too_early_more_data,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1nc8u71/no_conversions_after_600_on_google_advice_needed/,2025-09-09,,600,USD,0,,,search,,,,no,display_or_partners,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1nhpt2z/firsttime_google_ads_campaign_no_conversions/,2025-09-15,190,324,GBP,0,,,search,green,red,red,yes,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1nnk89b/chf_250_spent_150_clicks_no_conversions_is_this/,2025-09-22,150,250,CHF,0,,1,search,green,red,red,yes,none,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1oot1hg/first_full_day_980_impressions_42_clicks_0/,2025-11-05,42,,USD,0,,,unknown,green,green,yellow,yes,none,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1or4vd6/3000_in_ads_no_conversions_help/,2025-11-07,1179,3389.4,USD,0,,,search,red,red,red,yes,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1pqo4x4/google_ads_for_local_auto_insurance_leads_10_days/,2025-12-19,600,,USD,0,,,pmax,red,red,red,no,competition_or_cpc,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1ql0e34/high_ctr_zero_conversions_unable_to_figure_out/,2026-01-23,,,INR,0,,,search,,,,no,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1r57cal/b2b_mineral_industry_search_ads_getting_clicks/,2026-02-15,,,,0,,,search,,,,yes,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1rgn94v/need_help_diagnosing_this_no_conversions/,2026-02-27,,,,1,,,pmax,,,,yes,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1ruez5e/google_ads_call_campaign_150_clicks_but_zero/,2026-03-15,152,2000,INR,0,,,search,green,red,red,no,tracking,tracking
+r/PPC,https://www.reddit.com/r/PPC/comments/1s5v78h/12_ctr_on_google_ads_but_0_conversions_for_my/,2026-03-28,50,120,EUR,0,,,search,green,green,yellow,yes,offer_or_price,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1sen8aj/google_ads_7000_clicks_0_conversions_on_first_day/,2026-04-07,7000,70,USD,0,15,,unknown,red,red,red,no,none,location_settings
+r/PPC,https://www.reddit.com/r/PPC/comments/1stwt61/burning_budget_on_google_ads_with_no_real_leads/,2026-04-23,,,USD,1,320,,search,,,,yes,other,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1tgq2s3/500_spent_on_google_ads_539_clicks_0_conversions/,2026-05-18,539,500,USD,0,,,search,red,red,red,no,none,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1u6x6p3/google_ads_no_submit_lead_form_490_clicks/,2026-06-15,490,,,0,,,search,red,red,red,no,landing_page,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1uy4g3n/google_ads_abrupt_zero_conversions_advice/,2026-07-16,,,unknown,0,,,search,,,,yes,tracking,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1v3eyn0/626_spent_on_google_search_ads_61_clicks_but_zero/,2026-07-22,61,626,USD,0,,,search,green,green,red,yes,ad_copy,keywords_search_terms
+r/PPC,https://www.reddit.com/r/PPC/comments/1v4a74d/b2b_google_ads_campaign_has_clicks_but_no/,2026-07-23,60,600,USD,0,,,search,green,green,red,no,keywords_search_terms,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1vnykr6/new_google_ads_account_pmax_for_heat_pumps_no/,2026-08-14,,,AUD,1,,,pmax,,,,yes,other,unknown
+r/PPC,https://www.reddit.com/r/PPC/comments/1vz8peg/161_clicks_zero_sales_over_the_past_2_days/,2026-08-26,161,,unknown,0,,,shopping,green,red,red,yes,offer_or_price,unknown

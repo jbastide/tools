@@ -31,7 +31,7 @@
       "@type": "DefinedTerm",
       "@id": "https://tools.copyfororiginals.com/ppc-gumball-rule/#term",
       "name": "PPC Gumball Rule",
-      "description": "The PPC Gumball Rule, coined by Copy for Originals, says that if a pay-per-click campaign spends 3 times its expected cost per conversion (equivalently, 3 ÷ the expected conversion rate in clicks) without a single conversion, it is 95% likely that something is broken rather than bad luck. It applies the statistical rule of three to ad clicks. A 2× version is a yellow light: after spending 2 times the target cost per conversion with zero conversions, the chance of bad luck is about 13.5%, and in general about e^−k after k times.",
+      "description": "The PPC Gumball Rule, named by Copy for Originals, says that if a pay-per-click campaign spends 3 times its expected cost per conversion (equivalently, 3 ÷ the expected conversion rate in clicks) without a single conversion, it is 95% likely that something is broken rather than bad luck. It applies the statistical rule of three to ad clicks. A 2× version is a yellow light: after spending 2 times the target cost per conversion with zero conversions, the chance of bad luck is about 13.5%, and in general about e^−k after k times.",
       "url": "https://tools.copyfororiginals.com/ppc-gumball-rule/"
     },
     {
@@ -296,6 +296,7 @@
   <h2>Where does the PPC Gumball Rule come from?</h2>
   <p>The PPC Gumball Rule applies the statistical “rule of three” to ad clicks. The rule of three, published by Hanley and Lippman-Hand in <i>JAMA</i> in 1983, says that when an event hasn’t happened in n tries, the 95% upper bound on its true rate is about 3 ÷ n. Doctors use it to say how rare an unseen side effect could be. The PPC Gumball Rule turns it around: if you expect a conversion rate p, then 3 ÷ p clicks with zero conversions means the true rate is very likely below what you expected.</p>
   <p>The exact math: the chance of zero conversions in n clicks is (1 − p)<sup>n</sup>. At n = 3 ÷ p, that chance is about 5% for any conversion rate under 10%. So reaching the checkpoint with zero conversions is something that happens by luck only about 1 time in 20.</p>
+  <p>Experienced advertisers already use a version of this. In an August 2026 r/PPC thread, one practitioner described waiting for 3× the expected CPA to be 95% sure a campaign isn’t working, or 5× to be 99% sure, and another suggested counting how many conversions you should have had by now. The PPC Gumball Rule gives that rule of thumb a name and a picture, shows the math behind it (e<sup>−k</sup> after k times your target CPA), and adds the 2× yellow light for when protecting budget matters more than certainty. Source: <a href="https://www.reddit.com/r/PPC/comments/1vn964m/" rel="noopener">r/PPC, August 13, 2026</a>.</p>
 </section>
 
 <section id="lookup">
@@ -382,6 +383,7 @@
     <li><b>Location settings.</b> Use “Presence: people in or regularly in your locations,” not “Presence or interest.”</li>
     <li><b>The offer.</b> Check that the ad and page answer what the searcher wanted.</li>
   </ol>
+  <p>In a <a href="../ppc-no-conversions-study/">study of 62 forum threads</a>, Copy for Originals found that advertisers asking why Google Ads got no conversions had a median of 190 clicks, and only 3 of 62 knew their target CPA.</p>
   <p>The <a href="../ppc-troubleshooter/">PPC Troubleshooter</a> walks through these checks one question at a time and draws the gumball machine for your own numbers.</p>
 </section>
 
@@ -425,6 +427,7 @@
   <h2>Sources</h2>
   <ul class="sources">
     <li>Hanley, J. A. and Lippman-Hand, A., “If nothing goes wrong, is everything all right? Interpreting zero numerators,” <i>JAMA</i> 249(13):1743–1745, 1983. <a href="https://pubmed.ncbi.nlm.nih.gov/6827763/" rel="noopener">pubmed.ncbi.nlm.nih.gov</a></li>
+    <li>r/PPC, “How long do you actually wait before killing a new campaign with decent volume but zero conversions?,” August 13, 2026. <a href="https://www.reddit.com/r/PPC/comments/1vn964m/" rel="noopener">reddit.com</a></li>
     <li>Wikipedia, “Rule of three (statistics).” <a href="https://en.wikipedia.org/wiki/Rule_of_three_(statistics)" rel="noopener">wikipedia.org</a></li>
     <li>Google Ads Help, “About Target CPA bidding.” <a href="https://support.google.com/google-ads/answer/6268632" rel="noopener">support.google.com</a></li>
   </ul>

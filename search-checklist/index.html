@@ -75,6 +75,7 @@
         {"@type": "Question", "name": "When should I pause a keyword with no conversions?", "acceptedAnswer": {"@type": "Answer", "text": "Pause a keyword once it has spent twice your target CPA with no conversions, but check the last 30, 14 and 7 days side by side first. If the 30-day numbers are bad but the 14-day and 7-day numbers are better, the keyword is recovering, so keep it. With a $60 target CPA, the pause line is $120 spent with no leads."}},
         {"@type": "Question", "name": "Should I pin headlines in a responsive search ad?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if your headlines come from customer research. Write them from the words and themes customers use in reviews, sales calls and surveys, then pin the strongest headlines and descriptions, with a call to action in both a headline and a description. Google will often rate the ad strength as Poor, but ad strength scores variety, not results, and a pinned ad built on customer language often outperforms a long list of headlines left for machine learning to mix."}},
         {"@type": "Question", "name": "Can a healthcare practice use this checklist?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. HIPAA limits the conversion data a healthcare practice can send to Google, and most small practices can’t pay for a compliant tracking platform or set up anonymized server-side conversions. Without that conversion data, Smart Bidding strategies like Maximize conversions can’t work, so a small practice should run Manual CPC instead. A separate Manual CPC checklist is coming soon."}},
+        {"@type": "Question", "name": "Do I need AI Max or broad match to show ads in Google’s AI results?", "acceptedAnswer": {"@type": "Answer", "text": "You need broad match, not AI Max. Broad match is the only keyword match type confirmed to show ads in Google’s AI-generated results. Google says it is testing phrase and exact match there, with no official rollout as of October 2026. AI Max is mostly a rebrand of existing automated features. Broad match reaches much wider than phrase or exact, so use it from the start only if the budget is well above three times your target CPA a day, and only with a strong negative keyword list."}},
         {"@type": "Question", "name": "How big should my Google Ads daily budget be?", "acceptedAnswer": {"@type": "Answer", "text": "Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget."}},
         {"@type": "Question", "name": "Do I need auto-tagging on in Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Auto-tagging adds a GCLID to every ad click, which Google Analytics, offline conversion imports and enhanced conversions for leads use to tie a lead back to the click that produced it. Turn it on under Admin, Account settings, Auto-tagging."}}
       ]
@@ -265,7 +266,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <div class="card-head">
       <div class="l">Google Ads · Search<br>Lead generation</div>
       <div class="card-title"><b>Normal Procedures</b><span>Campaign Preflight</span></div>
-      <div class="r">Rev 7 · 05 Oct 2026<br>Do not auto-apply</div>
+      <div class="r">Rev 8 · 05 Oct 2026<br>Do not auto-apply</div>
     </div>
 
     <div class="callout warn stop" role="note"><strong>Warning · Healthcare</strong>Healthcare practice? Stop here. HIPAA limits the conversion data you can send Google, and most small practices can’t pay for a compliant tracking platform or set up anonymized server-side conversions. Without that data, Smart Bidding can’t work, so you’ll run Manual CPC instead. A Manual CPC checklist is coming soon.</div>
@@ -325,7 +326,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
               <span class="note">Match the languages your team can answer the phone in.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-aimax"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">AI Max for Search</span><span class="lead"></span><span class="r">Off</span></span>
-              <span class="note">Expands to searches and landing pages you didn’t choose. Test it later, against a proven baseline.</span></label></li>
+              <span class="note">Google pushes it hard, but it’s mostly a rebrand of automations this card already turns off. You don’t need it to reach AI results. Broad match keywords do that.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-broad"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Broad match setting</span><span class="lead"></span><span class="r">Off</span></span>
               <span class="note">The campaign-level switch that turns every keyword into broad match.</span></label></li>
@@ -387,7 +388,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
           <ol class="items">
             <li class="item"><label><input type="checkbox" id="c-match"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Match types</span><span class="lead"></span><span class="r">Phrase + exact</span></span>
-              <span class="note">Add broad match only after the campaign is hitting its target CPA.</span></label></li>
+              <span class="note">Want to show in Google’s AI results? Broad match is the only match type confirmed to get there. Phrase and exact are in testing, not rolled out (October 2026). Broad reaches much wider, so add it only if the budget is well above the 3× minimum, and only with a strong negative keyword list.</span></label></li>
             <li class="item"><label><input type="checkbox" id="c-groups"><span class="box"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L27 4"/></svg></span>
               <span class="line"><span class="c">Ad groups</span><span class="lead"></span><span class="r">1 to start</span></span>
               <span class="note">One core service, 5–20 keywords, one landing page. More ad groups split a small test budget too thin to learn anything. Add the next one only when the budget covers another 3× target CPA a day.</span></label></li>
@@ -488,6 +489,8 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
     <p>Yes, if your headlines come from customer research. Write them from the words and themes customers use in reviews, sales calls and surveys, then pin the strongest headlines and descriptions, with a call to action in both a headline and a description. Google will often rate the ad strength as Poor, but ad strength scores variety, not results, and a pinned ad built on customer language often outperforms a long list of headlines left for machine learning to mix.</p>
     <h3>Can a healthcare practice use this checklist?</h3>
     <p>Usually not. HIPAA limits the conversion data a healthcare practice can send to Google, and most small practices can’t pay for a compliant tracking platform or set up anonymized server-side conversions. Without that conversion data, Smart Bidding strategies like Maximize conversions can’t work, so a small practice should run Manual CPC instead. A separate Manual CPC checklist is coming soon.</p>
+    <h3>Do I need AI Max or broad match to show ads in Google’s AI results?</h3>
+    <p>You need broad match, not AI Max. Broad match is the only keyword match type confirmed to show ads in Google’s AI-generated results. Google says it is testing phrase and exact match there, with no official rollout as of October 2026. AI Max is mostly a rebrand of existing automated features. Broad match reaches much wider than phrase or exact, so use it from the start only if the budget is well above three times your target CPA a day, and only with a strong negative keyword list.</p>
     <h3>How big should my Google Ads daily budget be?</h3>
     <p>Set the daily budget to at least three times your target CPA. Below that, one expensive lead or a few costly clicks can use up the day, so the campaign shows as limited by budget and Smart Bidding can't bid in every auction it would win. Monthly spend is about 30.4 times the daily budget.</p>
     <h3>Do I need auto-tagging on in Google Ads?</h3>

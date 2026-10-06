@@ -95,3 +95,22 @@ in static HTML below the interactive part. See `keyword-triage/` for the pattern
 - Show a visible "Last updated" date that matches `dateModified` in JSON-LD, and update it only for
   real changes.
 - JSON-LD (`WebApplication`, `FAQPage`, `BreadcrumbList`) has to mirror visible text word for word.
+
+Learned on the PPC Troubleshooter rebuild (October 2026), see `ppc-troubleshooter/` for the pattern:
+
+- If the tool's verdicts, causes or fixes live in JavaScript, write them out as a static table per
+  problem (cause → how it's spotted → what to do), copied from the JS wording. That content is
+  invisible to crawlers otherwise, and it is usually the best content on the page.
+- Phrase `<h2>`s the way beginners type them, not the way we describe the feature: "clicks but no
+  conversions", "not spending", "dropped when I didn't change anything", "so high all of a sudden",
+  "eligible but no impressions". Forum titles are numbers first, then a plea: "$500 spent, 539 clicks,
+  0 conversions. Is this normal?" An H2 or FAQ that echoes that shape gets matched.
+- Lead the `<title>` with the primary query; the `<h1>` can stay the broader question.
+- Quote official labels verbatim (Google's status names and definitions) and verify each against
+  the help page before publishing. Map label → meaning → fix in one table; nobody else does.
+- Add a Sources section with URLs and the access date, and cite our own research pages with the
+  specific number.
+- Generate the FAQ from one list so the visible text and the FAQPage JSON-LD can't drift.
+- Give wide tables `class="wide"` (min-width inside the `.tbl` scroller) so columns don't squash on
+  phones; the page itself must never scroll sideways.
+- Update `llms.txt` to state the page's new facts and numbers; answer engines read it first.

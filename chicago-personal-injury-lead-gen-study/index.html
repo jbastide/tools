@@ -52,7 +52,7 @@
       "@type": "Dataset",
       "@id": "https://tools.copyfororiginals.com/chicago-personal-injury-lead-gen-study/#data",
       "name": "Chicago personal injury law firms: Google reviews, ad creatives and advertiser names (Copy for Originals, 2026)",
-      "description": "100 Chicago personal injury law firms from Google local results on 2026-10-06, with Google rating and review count, review star breakdown (94 firms), years in business, Google Business Profile 24-hour listing, Google Ads Transparency Center creative count and the advertiser name shown.",
+      "description": "100 Chicago personal injury law firms from Google local results on 2026-10-06, with Google rating and review count, review star breakdown (94 firms), years in business, Google Business Profile 24-hour listing, Google Ads Transparency Center creative count and the advertiser name shown; plus pooled complaint codes for 207 lowest-rated Google reviews at 11 firms (onestar-themes.csv).",
       "creator": {"@id": "https://copyfororiginals.com/#org"},
       "datePublished": "2026-10-06",
       "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -67,7 +67,9 @@
         {"@type": "Question", "name": "Do Chicago personal injury advertisers track their calls?",
          "acceptedAnswer": {"@type": "Answer", "text": "Half do not show it. Of 42 advertising Chicago personal injury firms whose homepages could be fetched, 20 had no call tracking script and 17 had no chat widget in the raw mobile HTML. Scripts loaded through Google Tag Manager are not detected, so this is a flag, not a verdict."}},
         {"@type": "Question", "name": "What share of Chicago personal injury law firm Google reviews are one star?",
-         "acceptedAnswer": {"@type": "Answer", "text": "3.9%. Across 94 Chicago personal injury firms with a visible star breakdown, 1,396 of 35,932 Google reviews were one star on 2026-10-06. The median one-star rate for firms with at least 50 reviews was 2.5%, and five firms held 51% of all one-star reviews."}}
+         "acceptedAnswer": {"@type": "Answer", "text": "3.9%. Across 94 Chicago personal injury firms with a visible star breakdown, 1,396 of 35,932 Google reviews were one star on 2026-10-06. The median one-star rate for firms with at least 50 reviews was 2.5%, and five firms held 51% of all one-star reviews."}},
+        {"@type": "Question", "name": "What do one-star reviews of Chicago personal injury law firms complain about?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Mostly not being called back. In 207 of the lowest-rated Google reviews at 11 Chicago personal injury firms, read 2026-10-06, 38% describe unreturned calls or an unreachable lawyer, 31% a slow case with no updates, 24% money (a smaller settlement than told, fees, a held check), 20% a case declined or dropped after intake, and 16% rude or dismissive staff. 43% of those reviews got a response from the firm."}}
       ]
     }
   ]
@@ -92,7 +94,7 @@
   <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Original research</p>
   <h1>Chicago personal injury lead generation: an OSINT study of 100 law firms</h1>
   <p class="lede">The Chicago personal injury lead generation study is a data study of 100 Chicago personal injury law firms built only from public sources: Google local results, the Google Ads Transparency Center, each firm’s homepage HTML, Google review star breakdowns and r/Lawyertalk. It measures who advertises on Google, what intake technology their sites run, how they are reviewed, and what lawyers say about lead generation, so a firm buying paid ads can see where it stands without any private client data.</p>
-  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Published <time datetime="2026-10-06">October 6, 2026</time> · Last updated <time datetime="2026-10-06">October 6, 2026</time> · Version 1 · <a href="data.csv">Download the data (CSV)</a></p>
+  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Published <time datetime="2026-10-06">October 6, 2026</time> · Last updated <time datetime="2026-10-06">October 6, 2026</time> · Version 2 · <a href="data.csv">Download the firm data (CSV)</a> · <a href="onestar-themes.csv">One-star complaint counts (CSV)</a></p>
   <div class="stats">
     <div class="stat"><b>45 of 100</b><span>Chicago personal injury firms with Google ad creatives on record</span></div>
     <div class="stat"><b>20 of 42</b><span>advertisers with no call tracking script on the homepage</span></div>
@@ -111,6 +113,7 @@
     <li>Of 87 fetched homepages, 84% offer a free consultation, 70% state a dollar amount recovered, 43% claim 24/7 availability, 43% say “no fee unless we win”, 30% mention Spanish and 11% offer a text-message link.</li>
     <li>Google Business Profile lists 74 of 100 firms as “Open 24 hours”, but only 31 of the 65 fetched homepages in that group repeat a 24/7 promise.</li>
     <li>Across 94 firms with a visible star breakdown, <b>one-star reviews are 3.9%</b> of 35,932 Google reviews. Advertisers have a median one-star rate of 2.9% against 1.4% for non-advertisers.</li>
+    <li>Across <b>207 of the lowest-rated Google reviews</b> at 11 Chicago personal injury firms, 38% describe not being called back or being unable to reach anyone, 31% a slow case with no updates, 24% money (a smaller settlement than told, fees, a held check), and 20% a case declined or dropped after intake. 43% received a response from the firm.</li>
     <li>On r/Lawyertalk between May 22 and October 6, 2026, intake and answering problems appeared in 64 marketing-related posts; Google Ads appeared in 7.</li>
   </ul>
 </section>
@@ -242,7 +245,28 @@
   </table>
   </div>
   <p>Among the nine firms with 1,000 or more reviews, the one-star rate ranges from 1.8% to 9.3%. Volume and satisfaction are different things: the two firms with the most one-star reviews, The Illinois Hammer (208) and Malman Law (206), are also two of the four most-reviewed firms in Chicago.</p>
-  <p><b>What the one-star reviews say.</b> Version 1 of this study read the 30 lowest-rated Google reviews of one high-volume firm as a pilot for the full one-star text study. Three complaint types dominated that sample: the firm declined or dropped the case after a long intake call, often with no reason given; nobody called back or the caller could not reach a lawyer; and a settlement or process took far longer, or came out smaller, than the caller says they were told. Several callers described giving all their details to a phone screener and then being turned away. The full read across the top 20 firms by one-star count is scheduled for version 2 of this study, and this section will be replaced with counts when it lands.</p>
+  <h3>What do the one-star reviews of Chicago personal injury firms complain about?</h3>
+  <p>Not being called back. Across 207 of the lowest-rated Google reviews at 11 Chicago personal injury firms, read on October 6, 2026, 38% describe calls, emails or texts that were never returned or a lawyer who could not be reached, 31% describe a case that dragged for years with no updates, 24% describe money (a settlement smaller than the caller says they were told, fees, or a check held), and 20% describe a case declined or dropped after intake. Each review could carry more than one code.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Complaint codes in 207 lowest-rated Google reviews, 11 Chicago personal injury firms, October 6, 2026 (a review can carry several codes)</caption>
+    <thead><tr><th scope="col">Complaint</th><th scope="col">Reviews</th><th scope="col">Share</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">No callback, unreachable, voicemail never returned</th><td>78</td><td>38%</td></tr>
+      <tr><th scope="row">Slow case, years, no status updates</th><td>64</td><td>31%</td></tr>
+      <tr><th scope="row">Money: smaller settlement than told, fees, check held</th><td>50</td><td>24%</td></tr>
+      <tr><th scope="row">Case declined, dropped or made conditional after intake</th><td>41</td><td>20%</td></tr>
+      <tr><th scope="row">Rude or dismissive staff or intake</th><td>33</td><td>16%</td></tr>
+      <tr><th scope="row">Passed between lawyers or case managers, staff turnover</th><td>16</td><td>8%</td></tr>
+      <tr><th scope="row">Phone screener took every detail, then nothing happened</th><td>12</td><td>6%</td></tr>
+      <tr><th scope="row">Firm contacted the caller unprompted</th><td>7</td><td>3%</td></tr>
+      <tr><th scope="row">Language or accent barrier</th><td>2</td><td>1%</td></tr>
+      <tr><th scope="row">Other or unspecified</th><td>34</td><td>16%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Eighty-eight of the 207 reviews (43%) had a response from the firm. The spread is wide: three firms answered 90% or more of their worst reviews and four answered 15% or fewer. For a paid-ad buyer the first and fourth rows are the ones that matter. Thirty-eight percent of the worst reviews are about reachability, which is the thing a paid click pays for, and one in five comes from a caller who was turned away, often after a long intake call, which means a hard-screening intake funnel produces one-star reviews even when it makes the right call on the case.</p>
+  <p>Method: the 11 firms are the firms with the most one-star reviews whose Google Maps review list could be sorted by “Lowest rating” during collection, excluding one whose Maps listing could not be matched to its Chicago office. For each firm the first 15 to 30 lowest-rated reviews were read, reviewer names removed, and each review coded with one or more of ten codes. Four high-volume firms (The Illinois Hammer, Walner Law, Levin &amp; Perconti and Lerner and Rowe) could not be sorted during collection and are scheduled for version 3. Per-firm complaint profiles are not published; only the pooled counts above.</p>
 </section>
 
 <section id="serp">
@@ -289,6 +313,8 @@
       <p class="rule">Illinois Rule 7.2(b) bars giving anything of value to a person for recommending the lawyer’s services, and comment [5] treats endorsements as recommendations, so do not pay, discount or gift for reviews. Rule 1.6 confidentiality applies to review replies; an Illinois lawyer has been disciplined for revealing case details while answering a negative review, and ABA Formal Opinion 496 (2021) says a negative review alone does not open the self-defense exception. The FTC’s rule on consumer reviews, in force since October 2024, bans fake reviews and bought testimonials.</p></li>
     <li><b>Own your Google Ads account and your tracking.</b> Twelve of the 45 advertisers run ads under an agency, a holding entity or a partner’s name, and lawyers on r/Lawyertalk warn that some agencies build campaigns in accounts the firm does not control. Confirm in writing that the Google Ads account, the Tag Manager container, the call tracking account and the domain are registered to the firm.
       <p class="rule">If a vendor sells you leads rather than ads, Illinois Rule 7.2(c), as amended effective July 1, 2025, treats it as an intermediary connecting service: the lawyer must disclose the relationship and any connecting fee to the client, and the service’s charges may not be contingent on the outcome or calculated as a percentage of the fee. Read the rule before signing a pay-per-lead contract.</p></li>
+    <li><b>Write the decline.</b> One in five of the worst reviews comes from a caller the firm turned away, often after a long intake call, and 6% from a caller whose details were taken by a screener and never followed up. Decide quickly, tell the caller in writing why the firm cannot take the matter, and point them to a bar referral service. A declined caller who hears back the same day rarely writes a review; one who hears nothing writes the review you will answer for a year.
+      <p class="rule">Illinois Rule 7.3 does not restrict a firm from answering a caller who contacted it first. Keep the decline free of legal advice about the merits unless a lawyer has reviewed the matter, and do not reveal anything the caller told you if you later reply to a review (Rule 1.6).</p></li>
   </ol>
   <p>Two things the data cannot support yet: it cannot say what any firm spends, and it cannot say how fast any firm answers.</p>
 </section>
@@ -300,7 +326,7 @@
     <li><b>Websites:</b> guessed each domain from the firm name and verified the page title, then looked up the misses by searching the firm name and reading the organic result.</li>
     <li><b>Ads:</b> opened the Google Ads Transparency Center for each domain with the region set to United States and recorded the creative count and advertiser name.</li>
     <li><b>Technology:</b> fetched each homepage with a mobile user agent and matched vendor and wording patterns in the raw HTML. Eleven sites were blocked by bot protection and two were unreachable.</li>
-    <li><b>Reviews:</b> opened each firm on Google Maps and read the star breakdown; six small firms could not be matched to one listing. Read the 30 lowest-rated reviews of one firm as a pilot.</li>
+    <li><b>Reviews:</b> opened each firm on Google Maps and read the star breakdown; six small firms could not be matched to one listing. For the 11 firms with the most one-star reviews that could be sorted, read the 15 to 30 lowest-rated reviews, removed reviewer names, and coded each with one or more of ten complaint codes (207 reviews).</li>
     <li><b>Reddit:</b> pulled every r/Lawyertalk post in the date range from the Arctic Shift archive, filtered by keyword locally, and read the comment trees of the strongest threads.</li>
     <li><b>Rules:</b> read Illinois Rules of Professional Conduct 7.1, 7.2 (as amended July 1, 2025), 7.3 and 7.4 from the Illinois Courts site and checked each recommendation against them.</li>
   </ol>
@@ -314,7 +340,7 @@
     <li><b>Creative counts are not spend.</b> They cover all time, and Local Services Ads are not included.</li>
     <li><b>Homepage-only technology scan.</b> Tools loaded through Tag Manager or on landing pages are not seen, so absence of call tracking is a flag, not a verdict. Thirteen sites could not be fetched.</li>
     <li><b>No paid results page data.</b> Ads and Local Services Ads could not be observed from outside the United States.</li>
-    <li><b>Review text is a pilot.</b> One firm’s 30 lowest reviews were read; the full one-star study is version 2.</li>
+    <li><b>Review text covers 11 firms.</b> The 207 coded reviews are the lowest-rated at the 11 most-negatively-reviewed firms that could be sorted, so they describe what goes wrong at high-volume firms, not the average firm. Coding was done by one reader. Four high-volume firms are still to be read.</li>
     <li><b>Reddit is national</b> and covers four and a half months of one subreddit.</li>
     <li><b>Not legal advice.</b> Rule citations are pointers to public text, read on October 6, 2026. Rules change; check the current version and ask counsel.</li>
   </ul>
@@ -328,6 +354,8 @@
   <p>Half do not show it. Of 42 advertising Chicago personal injury firms whose homepages could be fetched, 20 had no call tracking script and 17 had no chat widget in the raw mobile HTML. Scripts loaded through Google Tag Manager are not detected, so this is a flag, not a verdict.</p>
   <h3>What share of Chicago personal injury law firm Google reviews are one star?</h3>
   <p>3.9%. Across 94 Chicago personal injury firms with a visible star breakdown, 1,396 of 35,932 Google reviews were one star on October 6, 2026. The median one-star rate for firms with at least 50 reviews was 2.5%, and five firms held 51% of all one-star reviews.</p>
+  <h3>What do one-star reviews of Chicago personal injury law firms complain about?</h3>
+  <p>Mostly not being called back. In 207 of the lowest-rated Google reviews at 11 Chicago personal injury firms, read October 6, 2026, 38% describe unreturned calls or an unreachable lawyer, 31% a slow case with no updates, 24% money (a smaller settlement than told, fees, a held check), 20% a case declined or dropped after intake, and 16% rude or dismissive staff. Forty-three percent of those reviews got a response from the firm.</p>
   <h3>Can an Illinois law firm offer a discount for a Google review?</h3>
   <p>Illinois Rule 7.2(b) bars giving anything of value to a person for recommending the lawyer’s services, and comment [5] treats an endorsement as a recommendation. Asking for a review is not the problem; paying for one is. This is a pointer to the rule, not legal advice.</p>
   <h3>Can this study be repeated for another city or practice area?</h3>
@@ -360,7 +388,7 @@
     <li>Copy for Originals, “How much should a personal injury law firm spend on Google Ads?” <a href="../personal-injury-google-ads-budget/">tools.copyfororiginals.com</a></li>
   </ul>
   <p>How to cite: Copy for Originals, “Chicago personal injury lead generation: an OSINT study of 100 law firms,” version 1, October 6, 2026, https://tools.copyfororiginals.com/chicago-personal-injury-lead-gen-study/. Data licensed CC BY 4.0.</p>
-  <p>Change log: version 1, October 6, 2026, first publication. Planned for version 2: one-star review text across the 20 firms with the most one-star reviews, and paid results page composition from a Chicago vantage point.</p>
+  <p>Change log: version 1, October 6, 2026, first publication. Version 2, October 6, 2026, added the coded one-star review study (207 reviews, 11 firms) and the eighth action, “Write the decline.” Planned for version 3: the four high-volume firms whose reviews could not be sorted, and paid results page composition from a Chicago vantage point.</p>
 </section>
 
 <footer>

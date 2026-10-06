@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Privacy guarantee: this policy forbids the page from contacting ANY server.
      No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Negative Keyword Finder: Free Google Ads Search Terms Analyzer (Private, In-Browser)</title>
 <meta name="description" content="Free negative keyword tool. Drop in a Google Ads or Microsoft Ads search terms report and get the search terms and words wasting spend. Private: nothing is uploaded.">
@@ -57,7 +57,7 @@
         "Optionally flags search terms with a click-through rate under 1% over at least 300 impressions",
         "Skips search terms already excluded in the account",
         "Copies the selection as exact-match and phrase-match negative keywords, or downloads it as CSV",
-        "A Content-Security-Policy blocks every network request except the site’s own stylesheet, so the report cannot leave the page"
+        "A Content-Security-Policy blocks every network request except the site’s own stylesheet and fonts, so the report cannot leave the page"
       ]
     },
     {
@@ -119,7 +119,7 @@ button,select,input{font:inherit;color:inherit}
 .crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;font-size:14px}
 .crumbs a{text-decoration:none;color:var(--muted)}
 .crumbs a:hover{color:var(--accent)}
-.btn{border:1px solid var(--line);background:var(--panel);padding:9px 16px;border-radius:10px;cursor:pointer;font-weight:550}
+.btn{border:1px solid var(--line);background:var(--panel);padding:9px 16px;border-radius:0;cursor:pointer;font-weight:550}
 .btn:hover{border-color:var(--faint)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:650}
 .btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
@@ -137,7 +137,7 @@ button,select,input{font:inherit;color:inherit}
 .step{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;margin-right:9px;vertical-align:2px}
 .limits{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
 .limits label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14.5px}
-.money{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:0 12px}
+.money{display:flex;align-items:center;border:1px solid var(--line);border-radius:0;background:var(--bg);padding:0 12px}
 .money span{color:var(--muted);font-weight:600}
 .money input{border:0;background:none;outline:none;padding:10px 6px;width:100%;font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}
 .money:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
@@ -147,28 +147,28 @@ button,select,input{font:inherit;color:inherit}
 .drop.locked .btn{cursor:not-allowed}
 .lockmsg{font-weight:600;color:var(--accent);margin:0 0 6px}
 .drop:not(.locked) .lockmsg{display:none}
-.why{display:inline-block;font-size:11.5px;font-weight:650;border-radius:999px;padding:1px 8px;margin-right:6px;background:var(--waste-bg);color:var(--waste);vertical-align:1px}
+.why{display:inline-block;font-size:11.5px;font-weight:650;border-radius:0;padding:1px 8px;margin-right:6px;background:var(--waste-bg);color:var(--waste);vertical-align:1px}
 .drop{margin-top:16px;border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:48px 20px;text-align:center;transition:border-color .15s,background .15s}
 .drop.over{border-color:var(--accent);background:var(--soft)}
 .drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 .privacy{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px;font-size:13px;color:var(--muted)}
 .privacy svg{color:var(--ok);flex:none}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
-.steps div{font-size:13px;color:var(--muted);padding:14px 16px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
+.steps div{font-size:13px;color:var(--muted);padding:14px 16px;border-radius:0;background:var(--panel);border:1px solid var(--line)}
 .steps b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
-.err{background:var(--waste-bg);color:var(--waste);border-radius:10px;padding:10px 14px;margin-top:14px;text-align:left}
+.err{background:var(--waste-bg);color:var(--waste);border-radius:0;padding:10px 14px;margin-top:14px;text-align:left}
 
 /* ---------- Results ---------- */
 .filebar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:28px;font-size:14px}
 .filebar .name{font-weight:650;word-break:break-all}
 .filebar .meta{color:var(--muted)}
 .filebar .acts{display:flex;gap:14px;align-items:center}
-.filebar select{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
-#mapbox{margin-top:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.filebar select{background:var(--panel);border:1px solid var(--line);border-radius:0;padding:4px 8px}
+#mapbox{margin-top:10px;background:var(--panel);border:1px solid var(--line);border-radius:0;padding:14px 16px}
 #mapbox[hidden]{display:none}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:10px}
 label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
-label.f select{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;color:var(--ink);width:100%}
+label.f select{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:6px 8px;color:var(--ink);width:100%}
 .req{color:var(--waste)}
 
 .hero{margin-top:26px;padding:30px 28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
@@ -176,16 +176,16 @@ label.f select{background:var(--bg);border:1px solid var(--line);border-radius:8
 .hero.clean .amt{color:var(--ok)}
 .hero .what{font-size:19px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
 .hero .sub{color:var(--muted);margin:6px 0 0;font-size:14.5px}
-.note{margin-top:12px;font-size:13px;color:var(--muted);background:var(--soft);border-radius:10px;padding:9px 12px}
+.note{margin-top:12px;font-size:13px;color:var(--muted);background:var(--soft);border-radius:0;padding:9px 12px}
 
-.tabs{display:flex;gap:4px;margin-top:22px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:4px;width:max-content;max-width:100%;overflow-x:auto}
-.tabs button{border:0;background:none;padding:7px 14px;border-radius:9px;cursor:pointer;font-weight:550;color:var(--muted);white-space:nowrap}
+.tabs{display:flex;gap:4px;margin-top:22px;background:var(--soft);border:1px solid var(--line);border-radius:0;padding:4px;width:max-content;max-width:100%;overflow-x:auto}
+.tabs button{border:0;background:none;padding:7px 14px;border-radius:0;cursor:pointer;font-weight:550;color:var(--muted);white-space:nowrap}
 .tabs button .c{font-variant-numeric:tabular-nums;margin-left:6px;color:var(--faint);font-weight:600}
 .tabs button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
 .tabs button.on .c{color:var(--accent)}
 
 .rule{margin:18px 2px 4px;font-size:15.5px;line-height:1.9}
-.rule input{width:5.2em;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:2px 8px;font-weight:650;text-align:right;font-variant-numeric:tabular-nums}
+.rule input{width:5.2em;background:var(--panel);border:1px solid var(--line);border-radius:0;padding:2px 8px;font-weight:650;text-align:right;font-variant-numeric:tabular-nums}
 .rule input.short{width:3.8em}
 .rule .cur{font-weight:650}
 .hint{font-size:13px;color:var(--muted);margin:2px 2px 0}
@@ -221,8 +221,8 @@ label.f select{background:var(--bg);border:1px solid var(--line);border-radius:8
 .doc h3{font-size:16.5px;margin:22px 0 6px}
 .doc ul,.doc ol{padding-left:22px;margin:0 0 12px}
 .doc li{margin-bottom:6px}
-.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:6px 0 14px}
+.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:0;padding:1px 5px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:0;margin:6px 0 14px}
 .doc table{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--panel)}
 .doc th,.doc td{padding:8px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .doc thead th{background:var(--soft);font-weight:600}
@@ -372,7 +372,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
       <tr><th scope="row">Your limits</th><td>An unacceptable cost per conversion and a spend limit with no conversions. Both are required and are entered before the report is uploaded.</td></tr>
       <tr><th scope="row">Recommended data</th><td>The last 90 days (30 days for accounts spending over about $1,000 a day)</td></tr>
       <tr><th scope="row">Outputs</th><td>Exact-match negatives for search terms, phrase-match negatives for words, and a CSV export</td></tr>
-      <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request except the site’s own stylesheet, so the file cannot be uploaded.</td></tr>
+      <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request except the site’s own stylesheet and fonts, so the file cannot be uploaded.</td></tr>
       <tr><th scope="row">Account access</th><td>None. It never connects to your ad account and cannot add or change anything.</td></tr>
       <tr><th scope="row">Price</th><td>Free, no sign-up</td></tr>
     </tbody>

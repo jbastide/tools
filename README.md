@@ -65,19 +65,19 @@ python3 -m http.server 8000
   only page-specific rules inline. Use its tokens (`--accent`, `--moss`, `--ochre`, `--red`, `--lake`,
   `--stone` and their `-bg` tints) instead of new hex colors. A page with a Content-Security-Policy needs
   `style-src 'self' 'unsafe-inline'` so the stylesheet can load.
-- Keep it dependency-free. No CDNs or web fonts — they can be blocked by ad blockers or go down.
+- Keep it dependency-free. No CDNs. The only web fonts are the self-hosted ones in `fonts/`.
 - Include a `<title>`, a meta description, and a `SoftwareApplication` JSON-LD block.
 - Light and dark come from `site.css` via `prefers-color-scheme`; check both.
 - Add a row to the table above, a card to the root `index.html`, and entries to `sitemap.xml` and `llms.txt`.
 
 ### Site style
 
-`site.css` holds the look: Apple-style restraint (content first, hierarchy from size and weight, one
-accent, sentence case, plenty of space), Scandinavian assembly-manual clarity (numbered steps in outlined
-circles, plain labels), and a palette from the Västra Götaland countryside — birch-bark paper, granite
-text, spruce green accent, Falu red for warnings, rapeseed ochre for caution, lake blue and moss. The only
-decoration is the spruce-and-lake horizon at the foot of every page. The checklist's laminated cockpit
-card keeps its own printed look, with Falu red and ochre accents.
+`site.css` holds the look, and it is the same look as copyfororiginals.com: paper, ink and one
+blaze-orange accent; Big Shoulders Display in heavy caps for headings and labels; Literata for reading;
+square corners and thick black rules instead of rounded cards. The fonts are self-hosted in `fonts/`
+(SIL Open Font License), so pages still make no third-party requests; tool pages allow them with
+`font-src 'self'` in their Content-Security-Policy. Keep page-specific rules inline and built on the
+tokens (`--ink`, `--accent`, `--panel`, `--line-strong`, `--display`, `--sans`).
 
 ### Writing tool pages so answer engines can read them
 

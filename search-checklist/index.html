@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Lead Gen Search Campaign Checklist: Google Ads Setup Settings</title>
 <meta name="description" content="A preflight checklist for Google Ads lead gen Search campaigns: presence-only locations, Maximize conversions with a target CPA, auto-apply off, auto-tagging on, and a budget sized to your cost per lead.">
@@ -116,7 +116,7 @@ button,input{font:inherit;color:inherit}
 .crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;font-size:14px}
 .crumbs a{text-decoration:none;color:var(--muted)}
 .crumbs a:hover{color:var(--accent)}
-.btn{border:1px solid var(--line);background:transparent;padding:7px 9px;border-radius:10px;cursor:pointer;line-height:0;color:var(--muted)}
+.btn{border:1px solid var(--line);background:transparent;padding:7px 9px;border-radius:0;cursor:pointer;line-height:0;color:var(--muted)}
 .btn:hover{border-color:var(--faint)}
 .intro{max-width:680px;margin:0 0 28px}
 h1{font-size:clamp(28px,4.2vw,40px);line-height:1.08;margin:0 0 12px;letter-spacing:-.025em;text-wrap:balance}
@@ -124,7 +124,7 @@ h1{font-size:clamp(28px,4.2vw,40px);line-height:1.08;margin:0 0 12px;letter-spac
 .small{font-size:13px}
 
 /* ---------- The laminated card ---------- */
-.laminate{position:relative;padding:14px;border-radius:26px;
+.laminate{position:relative;padding:14px;border-radius:0;
   background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,.12) 40%,rgba(255,255,255,.35));
   border:1px solid rgba(120,130,150,.35);
   box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 18px 40px -18px rgba(10,20,40,.35),0 2px 6px rgba(10,20,40,.12)}
@@ -133,7 +133,7 @@ h1{font-size:clamp(28px,4.2vw,40px);line-height:1.08;margin:0 0 12px;letter-spac
   background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.2) 38%,transparent 47%,transparent 70%,rgba(255,255,255,.1) 76%,transparent 82%)}
 .hole{position:absolute;top:22px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;
   background:var(--bg);box-shadow:inset 0 2px 3px rgba(0,0,0,.35),0 0 0 4px rgba(150,155,165,.35);z-index:2}
-.card{position:relative;background:var(--card);color:var(--card-ink);border-radius:14px;overflow:hidden;
+.card{position:relative;background:var(--card);color:var(--card-ink);border-radius:0;overflow:hidden;
   font-family:var(--card-sans);border:2px solid var(--card-ink)}
 .card-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:12px;padding:46px 22px 14px;border-bottom:3px solid var(--card-ink)}
 .card-head .l,.card-head .r{font:600 12px/1.3 var(--card-sans);letter-spacing:.06em;text-transform:uppercase;color:var(--card-mute)}
@@ -160,7 +160,7 @@ ol.items{list-style:none;margin:0;padding:4px 0 0}
 .item label{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:8px 18px 7px;cursor:pointer;align-items:start}
 .item label:hover{background:rgba(17,18,20,.045)}
 .item input{position:absolute;opacity:0;width:1px;height:1px}
-.box{width:20px;height:20px;border:2px solid var(--card-ink);border-radius:3px;margin-top:1px;position:relative;background:#fff}
+.box{width:20px;height:20px;border:2px solid var(--card-ink);border-radius:0;margin-top:1px;position:relative;background:#fff}
 .box svg{position:absolute;inset:-7px -6px -4px -3px;width:30px;height:30px;overflow:visible}
 .box path{fill:none;stroke:var(--grease);stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:40;stroke-dashoffset:40;transition:stroke-dashoffset .22s ease-out}
@@ -190,7 +190,7 @@ ol.items{list-style:none;margin:0;padding:4px 0 0}
   font:700 12px/1 var(--card-sans);letter-spacing:.14em;text-transform:uppercase}
 .perf-in{display:flex;align-items:center;gap:8px;padding:10px;border-bottom:1px solid rgba(17,18,20,.3);flex-wrap:wrap}
 .perf-in label{font:700 13px/1.2 var(--card-sans);text-transform:uppercase;letter-spacing:.04em;flex:1 1 140px}
-.money{display:flex;align-items:center;border:2px solid var(--card-ink);background:#fff;padding:0 8px;border-radius:3px}
+.money{display:flex;align-items:center;border:2px solid var(--card-ink);background:#fff;padding:0 8px;border-radius:0}
 .money span{font:700 18px/1 var(--card-sans)}
 .money input{width:96px;border:0;outline:0;background:transparent;padding:7px 4px;font:700 20px/1 var(--card-sans);color:var(--card-ink);font-variant-numeric:tabular-nums}
 .money:focus-within{outline:2px solid var(--accent);outline-offset:2px}
@@ -205,7 +205,7 @@ table.perf-t{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nu
 
 .card-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 18px 12px;border-top:3px solid var(--card-ink);
   font:600 11px/1.3 var(--card-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--card-mute)}
-.reset{border:2px solid var(--card-ink);background:transparent;color:var(--card-ink);font:700 12px/1 var(--card-sans);letter-spacing:.12em;text-transform:uppercase;padding:8px 12px 7px;border-radius:3px;cursor:pointer}
+.reset{border:2px solid var(--card-ink);background:transparent;color:var(--card-ink);font:700 12px/1 var(--card-sans);letter-spacing:.12em;text-transform:uppercase;padding:8px 12px 7px;border-radius:0;cursor:pointer}
 .reset:hover{background:var(--card-ink);color:var(--card)}
 .reset.arm{background:var(--card-red);border-color:var(--card-red);color:#fff}
 
@@ -232,7 +232,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
   .card-head .l,.card-head .r{text-align:center}
 }
 @media (max-width:480px){
-  .laminate{padding:8px;border-radius:20px}
+  .laminate{padding:8px;border-radius:0}
   .hole{top:14px}
   .item label{padding:8px 12px 7px}
   .sec-bar{padding-inline:12px}

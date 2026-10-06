@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Privacy guarantee: this policy forbids the page from contacting ANY server.
      No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Keyword Triage: Free Google Ads Keyword Profitability Checker (Private, In-Browser)</title>
 <meta name="description" content="Keyword Triage is a free Google Ads and Microsoft Ads keyword profitability checker. Upload a keyword report and every keyword is labeled Cut, Trim bids, Keep, Scale or Needs data against your target CPA or ROAS. Runs entirely in your browser; the report is never uploaded.">
@@ -56,7 +56,7 @@
         "Uses Search lost IS (budget) and Search lost IS (rank) to say whether budget or bids limit a winning keyword",
         "Estimates spend above target for Cut and Trim keywords",
         "Exports results to CSV and copies the Cut list as exact-match negative keywords",
-        "A Content-Security-Policy blocks every network request except the site’s own stylesheet, so the report cannot leave the page"
+        "A Content-Security-Policy blocks every network request except the site’s own stylesheet and fonts, so the report cannot leave the page"
       ]
     },
     {
@@ -118,7 +118,7 @@ a{color:var(--accent)}
 .crumbs a:hover{color:var(--accent)}
 .btn.icon{padding:7px 9px;line-height:0}
 button,select,input{font:inherit;color:inherit}
-.btn{border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:8px;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:0;cursor:pointer}
 .btn:hover{border-color:var(--muted)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
 .btn.link{border:0;background:none;padding:0;color:var(--accent);text-decoration:underline;cursor:pointer}
@@ -150,16 +150,16 @@ header.top{display:flex;gap:24px;align-items:flex-end;justify-content:space-betw
 details summary{cursor:pointer;font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}
 label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
-label.f select,label.f input{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 9px;color:var(--ink);width:100%}
+label.f select,label.f input{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:7px 9px;color:var(--ink);width:100%}
 .req{color:var(--cut)}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:0;overflow:hidden}
 .seg button{border:0;background:var(--bg);padding:7px 14px;cursor:pointer}
 .seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:600}
 .seg button:disabled{opacity:.45;cursor:not-allowed}
 .settings-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
 .settings-row label.f{min-width:150px;flex:1}
 .hint{font-size:12px;color:var(--muted);margin-top:8px}
-.err{background:var(--cut-bg);color:var(--cut);border-radius:8px;padding:10px 12px;margin-top:12px}
+.err{background:var(--cut-bg);color:var(--cut);border-radius:0;padding:10px 12px;margin-top:12px}
 
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:18px}
 .kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
@@ -177,13 +177,13 @@ label.f select,label.f input{background:var(--bg);border:1px solid var(--line);b
 .bucket .d{font-size:12px;color:var(--muted)}
 .b-scale{border-left-color:var(--scale)} .b-keep{border-left-color:var(--keep)} .b-trim{border-left-color:var(--trim)} .b-cut{border-left-color:var(--cut)} .b-low{border-left-color:var(--low)}
 
-.share{display:flex;height:14px;border-radius:7px;overflow:hidden;margin-top:14px;background:var(--soft)}
+.share{display:flex;height:14px;border-radius:0;overflow:hidden;margin-top:14px;background:var(--soft)}
 .share span{display:block;height:100%}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:0;margin-right:5px;vertical-align:-1px}
 
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:12px}
-.toolbar input[type=search]{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:220px;flex:1;max-width:360px}
+.toolbar input[type=search]{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:7px 10px;min-width:220px;flex:1;max-width:360px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);margin:0}
 table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
 th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
@@ -194,7 +194,7 @@ td.kw{white-space:normal;min-width:180px;font-weight:600}
 td.kw .sub{display:block;font-weight:400;color:var(--muted);font-size:12px}
 td.why{white-space:normal;min-width:240px;color:var(--muted)}
 tr:last-child td{border-bottom:0}
-.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.pill{display:inline-block;padding:2px 9px;border-radius:0;font-size:12px;font-weight:700}
 .p-scale{background:var(--scale-bg);color:var(--scale)} .p-keep{background:var(--keep-bg);color:var(--keep)} .p-trim{background:var(--trim-bg);color:var(--trim)} .p-cut{background:var(--cut-bg);color:var(--cut)} .p-low{background:var(--low-bg);color:var(--low)}
 .more{text-align:center;margin-top:12px}
 
@@ -210,7 +210,7 @@ tr:last-child td{border-bottom:0}
 .doc p{margin:0 0 12px}
 .doc ul,.doc ol{padding-left:22px;margin:0 0 12px}
 .doc li{margin-bottom:6px}
-.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:0;padding:1px 5px}
 .doc .tablewrap{margin:4px 0 14px}
 .doc table{font-size:13.5px}
 .doc caption{caption-side:top;text-align:left;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:0;padding:0 0 8px}
@@ -352,7 +352,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
       <tr><th scope="row">Goal types</th><td>Target CPA or target ROAS. The target is required and is entered before the report is uploaded.</td></tr>
       <tr><th scope="row">Verdicts</th><td>Cut, Trim bids, Keep, Scale, Needs data</td></tr>
       <tr><th scope="row">Outputs</th><td>Verdict table, CSV export, and the Cut list copied as exact-match negative keywords</td></tr>
-      <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request except the site’s own stylesheet, so the file cannot be uploaded.</td></tr>
+      <tr><th scope="row">Privacy</th><td>The report is processed in the browser. A Content-Security-Policy blocks every network request except the site’s own stylesheet and fonts, so the file cannot be uploaded.</td></tr>
       <tr><th scope="row">Account access</th><td>None. Keyword Triage never connects to your ad account and cannot change bids, budgets or keywords.</td></tr>
       <tr><th scope="row">Price</th><td>Free, no sign-up</td></tr>
     </tbody>

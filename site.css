@@ -144,12 +144,19 @@ ol.check li::before{content:counter(c);position:absolute;left:0;top:-1px;width:3
 a.card{display:block;padding:20px 22px;background:var(--panel);border:2px solid var(--line);text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
 a.card:hover{border-color:var(--line-strong);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--accent)}
 a.card b{display:block;font-family:var(--display);font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin-bottom:8px;color:var(--ink)}
-a.card span{color:var(--muted);font-size:15px;line-height:1.5}
+a.card > span{color:var(--muted);font-size:15px;line-height:1.5}
 a.card .backed{display:block;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--faint)}
 a.card .backed em{font-style:normal;color:var(--accent-hover)}
-.tag{display:inline-block;font:700 12px/1.6 var(--display);text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;margin-bottom:10px;background:var(--ink);color:var(--bg)}
-.tag.red{background:var(--red-bg);color:var(--red)}
-.tag.ochre{background:var(--ochre-bg);color:var(--ochre)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tag{display:inline-block;font:700 12px/1.6 var(--display);text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;margin:0}
+/* Topic tags: one color per subject, so a reader can scan the list by what it is about */
+.tag.law{background:var(--lake-bg);color:var(--lake)}
+.tag.ads{background:var(--accent-soft);color:var(--accent-hover)}
+.tag.health{background:var(--red-bg);color:var(--red)}
+.tag.content{background:var(--moss-bg);color:var(--moss)}
+.tag.video{background:var(--ochre-bg);color:var(--ochre)}
+/* Note tags: format and evidence, quiet by design so the topic color carries the eye */
+.tag.note{background:transparent;border:1.5px solid var(--line);color:var(--muted);padding:.5px 7px}
 .group-label{font:700 14px/1.4 var(--display);text-transform:uppercase;letter-spacing:.14em;color:var(--accent-hover);margin:48px 0 14px}
 
 /* Footer */

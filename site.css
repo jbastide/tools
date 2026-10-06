@@ -165,3 +165,13 @@ button,.btn,input[type="submit"],input[type="button"]{font-family:var(--display)
 button,.btn{border-width:2px}
 input,select,textarea{border-radius:0}
 input[type="text"],input[type="number"],input[type="search"],input[type="url"],input[type="email"],select,textarea{font-family:var(--sans)}
+
+/* Main-site navigation, shared with copyfororiginals.com */
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding:18px clamp(16px,4vw,48px);border-bottom:3px solid var(--line-strong);background:var(--bg)}
+.site-nav-brand{font:900 20px/1 var(--display);text-transform:uppercase;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.site-nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;margin:0;padding:0}
+.site-nav li{margin:0}
+.site-nav ul a{font:700 13px/1.4 var(--display);text-transform:uppercase;letter-spacing:.1em;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.site-nav ul a:hover{color:var(--accent-hover);border-bottom-color:var(--accent)}
+.site-nav ul a[aria-current="true"]{border-bottom-color:var(--ink)}
+@media (max-width:560px){.site-nav{padding-block:14px}.site-nav ul{gap:4px 16px}}

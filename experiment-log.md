@@ -123,3 +123,11 @@ from the law firm pages.
 At Jesse's request, `google-ads-for-law-firms/` links to `ppc-no-conversions-study/` in the "how can a
 firm tell if it's working" paragraph (the 3 of 62 and median 190 clicks figures) and in the guides table.
 All three experiment arms are now linked from the hub; none of the arm pages' text changed.
+
+### 2026-10-13: hub guides-table audit after the parallel sessions
+
+Compared every law firm page in `sitemap.xml` against the links in `google-ads-for-law-firms/`. All
+experiment arms and all pages added by the parallel sessions on October 13 were already linked, except
+`law-firm-websites-ai-crawlers-study/`, which was in the index, README, llms.txt and sitemap but not the
+hub. Added one guides-table row for it. The Gumball Rule (3 links) and forum study (2 links) survived
+every rewrite and commit of the hub that day.

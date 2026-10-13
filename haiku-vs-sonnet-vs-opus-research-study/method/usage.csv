@@ -1,0 +1,10 @@
+run,model_id,model_responses,tool_calls,web_search_calls,searches_run,searches_refused_site_blocked,searches_refused_by_cap,web_fetch_calls,shell_calls,shell_calls_fetching_pages,input_tokens,cache_write_tokens,cache_read_tokens,peak_context_tokens,responses_over_100k,visible_output_tokens_est,cost_input_side_usd,cost_output_est_usd,cost_search_fees_usd,cost_est_usd,minutes,audit_own_site_or_key,audit_paths_outside_own_folder
+haiku-1,claude-haiku-5-5,24,40,16,15,1,0,1,22,8,48,139817,1650599,139819,6,17368,0.087,0.043,0.15,0.281,8.8,,
+haiku-2,claude-haiku-5-5,28,38,12,10,2,0,0,25,12,56,149606,1926346,149608,10,12843,0.11,0.032,0.1,0.242,6.8,,
+haiku-3,claude-haiku-5-5,36,49,19,17,2,0,1,28,4,72,145418,2530607,145420,10,14555,0.111,0.036,0.17,0.317,9.8,,
+sonnet-1,claude-sonnet-5-5,46,67,28,26,2,0,2,36,4,92,146521,3603581,146523,0,14338,0.727,0.143,0.26,1.13,9.7,,
+sonnet-2,claude-sonnet-5-5,44,60,26,24,2,0,2,31,9,88,142297,3183685,142299,0,16488,0.674,0.165,0.24,1.079,9.2,,
+sonnet-3,claude-sonnet-5-5,45,56,21,19,2,0,1,33,15,90,138118,3345187,138120,0,14022,0.68,0.14,0.19,1.01,10.1,,
+opus-1,claude-opus-5-5,54,70,22,20,2,0,1,46,29,108,170986,5587256,189944,0,28207,1.973,0.564,0.2,2.737,15.4,copyfororiginals,
+opus-2,claude-opus-5-5,49,69,22,20,2,0,1,45,10,98,305895,4474719,188527,0,27330,2.425,0.547,0.2,3.171,30.2,copyfororiginals,
+opus-3,claude-opus-5-5,45,68,27,26,1,0,3,37,5,90,172410,4268988,191368,0,24674,1.716,0.493,0.26,2.47,14.4,copyfororiginals,

@@ -1,0 +1,230 @@
+{
+ "graded": 593,
+ "flags": [
+  {
+   "id": "B004",
+   "grade": "PART",
+   "why": "call forwarding/VoIP exception not in quote"
+  },
+  {
+   "id": "B007",
+   "grade": "PART",
+   "why": "not-accept instruction not in quote"
+  },
+  {
+   "id": "B012",
+   "grade": "PART",
+   "why": "platform-specific opinion point missing"
+  },
+  {
+   "id": "B017",
+   "grade": "PART",
+   "why": "Google may record and review not shown"
+  },
+  {
+   "id": "B037",
+   "grade": "PART",
+   "why": "exemption request not in quote"
+  },
+  {
+   "id": "B053",
+   "grade": "PART",
+   "why": "exclusion request not in quote"
+  },
+  {
+   "id": "B057",
+   "grade": "PART",
+   "why": "private-line callback not in quote"
+  },
+  {
+   "id": "B064",
+   "grade": "PART",
+   "why": "anonymized/aggregate not in quote"
+  },
+  {
+   "id": "B072",
+   "grade": "PART",
+   "why": "unsupported tag/verified domain not shown"
+  },
+  {
+   "id": "B086",
+   "grade": "PART",
+   "why": "only drop-down step shown"
+  },
+  {
+   "id": "B091",
+   "grade": "PART",
+   "why": "passing to provider/no recording not shown"
+  },
+  {
+   "id": "B096",
+   "grade": "NOT",
+   "why": "quote cut off before 'aren't'"
+  },
+  {
+   "id": "B101",
+   "grade": "PART",
+   "why": "lawyer cannot provide one not shown"
+  },
+  {
+   "id": "B102",
+   "grade": "PART",
+   "why": "manual enable not shown"
+  },
+  {
+   "id": "B118",
+   "grade": "PART",
+   "why": "do-not-accept part not shown"
+  },
+  {
+   "id": "B133",
+   "grade": "PART",
+   "why": "not downloadable not shown"
+  },
+  {
+   "id": "B150",
+   "grade": "NOT",
+   "why": "quote cut off before 'are recorded'"
+  },
+  {
+   "id": "B154",
+   "grade": "PART",
+   "why": "purposes list cut off"
+  },
+  {
+   "id": "B161",
+   "grade": "PART",
+   "why": "do-not-accept part not shown"
+  },
+  {
+   "id": "B172",
+   "grade": "PART",
+   "why": "exceptions not in quote"
+  },
+  {
+   "id": "B181",
+   "grade": "PART",
+   "why": "affiliates' products use not shown"
+  },
+  {
+   "id": "B198",
+   "grade": "PART",
+   "why": "callback/contact details not shown"
+  },
+  {
+   "id": "B219",
+   "grade": "PART",
+   "why": "opt-in condition not shown"
+  },
+  {
+   "id": "B239",
+   "grade": "PART",
+   "why": "basic details/callback not shown"
+  },
+  {
+   "id": "B247",
+   "grade": "PART",
+   "why": "AI listening not shown"
+  },
+  {
+   "id": "B269",
+   "grade": "PART",
+   "why": "notice and consent steps not shown"
+  },
+  {
+   "id": "B277",
+   "grade": "PART",
+   "why": "purposes list cut off"
+  },
+  {
+   "id": "B283",
+   "grade": "NOT",
+   "why": "quote doesn't mention recording or glossing over"
+  },
+  {
+   "id": "B321",
+   "grade": "PART",
+   "why": "30 days not in quote"
+  },
+  {
+   "id": "B343",
+   "grade": "PART",
+   "why": "Google not controlling use not shown"
+  },
+  {
+   "id": "B348",
+   "grade": "PART",
+   "why": "playback use not shown"
+  },
+  {
+   "id": "B362",
+   "grade": "PART",
+   "why": "intent examples not in quote"
+  },
+  {
+   "id": "B366",
+   "grade": "PART",
+   "why": "notice/consent steps not in quote"
+  },
+  {
+   "id": "B389",
+   "grade": "PART",
+   "why": "no-clause-for-law-firms and not-accept missing"
+  },
+  {
+   "id": "B391",
+   "grade": "PART",
+   "why": "turn-on exception not shown"
+  },
+  {
+   "id": "B394",
+   "grade": "PART",
+   "why": "Google denying disputes not shown"
+  },
+  {
+   "id": "B444",
+   "grade": "PART",
+   "why": "listening for message not shown"
+  },
+  {
+   "id": "B501",
+   "grade": "PART",
+   "why": "drop-down and Save steps missing"
+  },
+  {
+   "id": "B511",
+   "grade": "PART",
+   "why": "avoid prospective-client advice not shown"
+  },
+  {
+   "id": "B538",
+   "grade": "PART",
+   "why": "eligible sources not shown"
+  },
+  {
+   "id": "B542",
+   "grade": "PART",
+   "why": "call reporting requirement cut off"
+  },
+  {
+   "id": "B545",
+   "grade": "PART",
+   "why": "later steps not shown"
+  },
+  {
+   "id": "B560",
+   "grade": "PART",
+   "why": "same-as-LSA claim not shown"
+  },
+  {
+   "id": "B561",
+   "grade": "PART",
+   "why": "attorney-client-only point not shown"
+  },
+  {
+   "id": "B581",
+   "grade": "PART",
+   "why": "intent signals not shown"
+  }
+ ]
+}

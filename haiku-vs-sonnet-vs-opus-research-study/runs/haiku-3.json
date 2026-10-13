@@ -1,0 +1,489 @@
+{
+  "claims": [
+    {
+      "id": "c1",
+      "question": "Q1",
+      "claim": "Google says it records inbound Local Services Ads calls that come through its forwarding number in the US and Canada.",
+      "url": "https://support.google.com/localservices/answer/6224859",
+      "quote": "Note that in the US and Canada, all inbound calls from customers via the Google forwarding number are recorded by Google to improve quality and support policies and research",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Page is the LSA 'Manage leads and jobs' help article."
+    },
+    {
+      "id": "c2",
+      "question": "Q1",
+      "claim": "Google's LSA data page says all phone calls, emails and texts delivered through Google may be monitored or recorded, without naming any country.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "All phone calls, emails, and text-based communications delivered through Google may be monitored or recorded to detect spam or unauthorized behavior and to improve quality, support policies, and research",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "General wording; the page names no countries for recording."
+    },
+    {
+      "id": "c3",
+      "question": "Q2",
+      "claim": "Call recording is turned on by default in Google Ads for eligible accounts, which is the setting that governs recording of calls from Google Ads.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "The call recording setting is now enabled by default to allow for AI-powered lead qualification.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Page carries a 2026 copyright footer but no publication date."
+    },
+    {
+      "id": "c4",
+      "question": "Q2",
+      "claim": "Recording stays off for accounts that switched it off earlier, and for accounts identified as healthcare or financial services, unless they turn it on.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Exceptions: Call recording will remain turned off if you previously turned it off, or if your business was identified as operating in healthcare or financial services.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c5",
+      "question": "Q2",
+      "claim": "Google Ads recording applies to calls made to call ads, call assets or calls from website visits, but not to calls from location assets.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Only calls made directly to call ads, call assets or calls from website visits are eligible; calls from your location assets are not supported for recording at this time.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c6",
+      "question": "Q2",
+      "claim": "Recording requires that calls run through a Google forwarding number, which in turn needs call reporting turned on.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Calls must flow through a Google Forwarding Number. This requires call reporting to be turned on in your account settings.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c7",
+      "question": "Q2",
+      "claim": "Google says recording and AI-qualified conversions are available only for calls to phone numbers in the United States and Canada.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Currently, call recording and AI-qualified conversions are only available for calls involving phone numbers in the United States and Canada.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c8",
+      "question": "Q2",
+      "claim": "Google's AI-qualified call leads page says recording is available only when both the dialing and receiving numbers are in the US or Canada.",
+      "url": "https://support.google.com/google-ads/answer/16913326",
+      "quote": "Regional availability: Call recording is currently only available when both the dialing and receiving phone numbers are located in the United States or Canada.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c9",
+      "question": "Q3",
+      "claim": "A Google Ads caller hears a short automated message at the start of the call saying the conversation will be recorded for quality purposes.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Callers will hear a short automated message at the beginning of the call notifying them that the conversation will be recorded for quality purposes.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c10",
+      "question": "Q3",
+      "claim": "On Local Services calls, the caller hears a prerecorded notice just before the business hears the 'Call from Google' notification.",
+      "url": "https://support.google.com/localservices/answer/6224859",
+      "quote": "customers are notified of this by a pre-recorded message immediately before you hear the “Call from Google” notification",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "The business-side step is the 'Call from Google' notification; the page does not describe a separate notice on the business's phone."
+    },
+    {
+      "id": "c11",
+      "question": "Q4",
+      "claim": "Google Ads says recorded calls are available for playback for 30 days after the date of the call.",
+      "url": "https://support.google.com/google-ads/answer/9882109",
+      "quote": "Recorded calls are available for 30 days after the date of the call.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Page 'Play your call recordings' (Google Ads help, 2026 footer, no publication date). The current settings page does not state a retention period."
+    },
+    {
+      "id": "c12",
+      "question": "Q4",
+      "claim": "Local Services Ads call recordings and messages are retained for up to 180 days before they are destroyed.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "Call recordings and messages are retained up to 180 days before they are destroyed.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "The same sentence appears at support.google.com/adwords/answer/7496727, which redirects to this page."
+    },
+    {
+      "id": "c13",
+      "question": "Q4",
+      "claim": "Local Services Ads recordings and messages in legal verticals are kept for 60 days rather than 180.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "Recordings and messages in legal verticals are retained for 60 days.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "The page does not define 'legal verticals'."
+    },
+    {
+      "id": "c14",
+      "question": "Q5",
+      "claim": "In Google Ads, only administrators can set up call recording, but MCC and direct users with Admin or Standard access can play recordings once it is enabled.",
+      "url": "https://support.google.com/google-ads/answer/9882109",
+      "quote": "Although only users with Administrative access to the Google Ads account can set up and manage call recording, MCC and direct users with Admin or direct users with Standard access will be able to play recordings, once enabled.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c15",
+      "question": "Q5",
+      "claim": "Local Services providers can listen to phone lead recordings in the lead inbox, in the US only.",
+      "url": "https://support.google.com/localservices/answer/6224859",
+      "quote": "Listen to phone lead recordings (US only)",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c16",
+      "question": "Q5",
+      "claim": "Local Services providers may review recordings to track conversations, and Google says it does not control how they use them.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "Providers may review call recordings in order to track conversations. Google does not monitor or control how providers use the recordings.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c17",
+      "question": "Q5",
+      "claim": "Google says it reviews Local Services calls and recordings on a limited basis, for purposes that include billing disputes, billing advertisers, enforcing policies and product improvement.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "Google reviews emails, texts, or call recordings routed through Google’s system on a limited basis for the following purposes:",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "The purposes are listed below this sentence on the page."
+    },
+    {
+      "id": "c18",
+      "question": "Q5",
+      "claim": "Google says Google Ads call recordings are used to evaluate lead quality, monitor spam and fraud, and improve conversion reporting accuracy.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Recordings are used to evaluate lead quality, monitor spam and fraud, and improve the accuracy of your conversion reporting.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c19",
+      "question": "Q5",
+      "claim": "Google says its AI evaluates call recordings to decide whether a call counts as a qualified lead.",
+      "url": "https://support.google.com/google-ads/answer/16913326",
+      "quote": "AI-qualified call leads use Google AI to evaluate call recordings (the call recording setting must be turned on) to determine the actual quality of the conversation.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c20",
+      "question": "Q5",
+      "claim": "Google says Call Details reports now show an AI-generated summary and hashtags for each call.",
+      "url": "https://support.google.com/google-ads/answer/16913326",
+      "quote": "Your Call Details reports will now feature a concise AI-generated summary of the call and specific hashtags",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c21",
+      "question": "Q6",
+      "claim": "A Google Ads advertiser can turn call recording off under Account settings, in the Call ads drop-down, by selecting Off under Call recording and saving.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Under “Call recording”, select On or Off.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Steps on the page: Admin menu, Account settings, open the Call ads drop-down, Call recording On or Off, Save."
+    },
+    {
+      "id": "c22",
+      "question": "Q6",
+      "claim": "Turning call recording off stops Google's AI from analysing calls for lead quality, and conversions fall back to call duration.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Disabling call recording will prevent the AI from analyzing conversations for lead quality. In this case, the system will fall back to using call duration to measure conversions.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c23",
+      "question": "Q6",
+      "claim": "Turning call reporting off, which is a separate setting, stops Google Ads from counting 'Calls from ads' as conversions.",
+      "url": "https://support.google.com/google-ads/answer/9141717",
+      "quote": "Conversion tracking: If you turn call reporting off, Google Ads will stop tracking \"Calls from ads\" as conversions.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Call reporting is a separate switch from call recording. The page says the direct business number is then shown in ads."
+    },
+    {
+      "id": "c24",
+      "question": "Q7",
+      "claim": "Google Ads automatically skips recording for advertisers in sensitive industries, named as specific healthcare or financial services, unless they opt in.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "Sensitive Verticals: To protect user privacy, call recording is automatically skipped for advertisers in sensitive industries, like specific healthcare or financial services unless explicitly enabled by the advertiser by accepting Call Ads Supplemental Terms.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c25",
+      "question": "Q7",
+      "claim": "Local Services call recordings and messages are not available for health care verticals or tax specialists.",
+      "url": "https://support.google.com/localservices/answer/6224859",
+      "quote": "Call recordings and messages aren't available for health care verticals or tax specialists.",
+      "source_type": "google_help",
+      "source_date": ""
+    },
+    {
+      "id": "c26",
+      "question": "Q7",
+      "claim": "Legal services are not named as excluded from recording on these pages; Local Services gives legal verticals a shorter 60-day retention instead.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "Recordings and messages in legal verticals are retained for 60 days.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "This is an absence finding across the cited pages, not a statement by Google. The Call Ads Supplemental Terms text was not retrieved."
+    },
+    {
+      "id": "c27",
+      "question": "Q8",
+      "claim": "The North Carolina State Bar Ethics Committee withdrew Proposed 2021 FEO 5, its proposed opinion on pay-per-lead programs, at its April 2022 meeting.",
+      "url": "https://www.ncbar.gov/for-lawyers/ethics-and-governing-rules/ethics-articles/the-difficulty-of-opining-on-internet-advertising-programs-such-as-google-s-lsa-program-like-catching-smoke-with-bare-hands/",
+      "quote": "Therefore, at its meeting in April 2022, the Ethics Committee withdrew Proposed 2021 FEO 5.",
+      "source_type": "state_bar",
+      "source_date": "Summer 2022",
+      "note": "Article by Suzanne Lever in the NC State Bar Journal (Vol. 27, No. 2, Summer 2022), written by bar ethics staff. Status: withdrawn, not adopted. Single source; not confirmed elsewhere."
+    },
+    {
+      "id": "c28",
+      "question": "Q8",
+      "claim": "The North Carolina proposed opinion was prompted by a pay-per-lead platform recording and retaining potential client communications.",
+      "url": "https://www.ncbar.gov/for-lawyers/ethics-and-governing-rules/ethics-articles/the-difficulty-of-opining-on-internet-advertising-programs-such-as-google-s-lsa-program-like-catching-smoke-with-bare-hands/",
+      "quote": "The feature of the advertising program that resulted in the inquiry to the Ethics Committee was the recording and retention of potential client communications by the advertising platform company.",
+      "source_type": "state_bar",
+      "source_date": "Summer 2022",
+      "note": "The article does not state that the platform was Google in this sentence; the article title refers to Google's LSA program."
+    },
+    {
+      "id": "c29",
+      "question": "Q8",
+      "claim": "The North Carolina ethics staff say lawyers must make reasonable investigations into any advertising program or technology service before using it.",
+      "url": "https://www.ncbar.gov/for-lawyers/ethics-and-governing-rules/ethics-articles/the-difficulty-of-opining-on-internet-advertising-programs-such-as-google-s-lsa-program-like-catching-smoke-with-bare-hands/",
+      "quote": "lawyers are reminded of their duty to make reasonable investigations into any advertising program—or technology service—before deciding whether to participate in the program or utilize the technology.",
+      "source_type": "state_bar",
+      "source_date": "Summer 2022"
+    },
+    {
+      "id": "c30",
+      "question": "Q8",
+      "claim": "Connecticut Informal Opinion 13-08 (June 19, 2013) says a lawyer may use a pay-per-call service that records calls only with reasonable confidentiality safeguards, including a contract that bars vendor access.",
+      "url": "https://ezel.ai/ethics-opinions/ctbar/13-08-recorded-intake-call-confidentiality",
+      "quote": "Only with reasonable confidentiality safeguards. The contract must deny the vendor access, and no third party may review a recording without the client's informed consent.",
+      "source_type": "other",
+      "source_date": "June 19, 2013",
+      "note": "Secondary: ezel.ai summary of CT Bar Informal Opinion 13-08. The CT Bar's own copy was not reached. The page says the opinion is advisory and dated 2013."
+    },
+    {
+      "id": "c31",
+      "question": "Q8",
+      "claim": "The Connecticut opinion describes a pay-per-call service that could record calls on the vendor's server, which is close to a tracking-number arrangement.",
+      "url": "https://ezel.ai/ethics-opinions/ctbar/13-08-recorded-intake-call-confidentiality",
+      "quote": "A pay-per-call Yellow Pages service assigned an advertising number, forwarded incoming calls to the lawyer, and could optionally record the calls on the vendor's server.",
+      "source_type": "other",
+      "source_date": "June 19, 2013",
+      "note": "Secondary summary, as above."
+    },
+    {
+      "id": "c32",
+      "question": "Q8",
+      "claim": "The Connecticut opinion assumed callers would be warned before recording, and noted that unilateral recording is generally unlawful unless Connecticut General Statutes section 52-570d is satisfied, outside its own jurisdiction.",
+      "url": "https://ezel.ai/ethics-opinions/ctbar/13-08-recorded-intake-call-confidentiality",
+      "quote": "The opinion assumed that every caller would receive a warning before recording. It noted, outside the Committee's jurisdiction, that unilateral recording generally is unlawful unless Connecticut General Statutes § 52-570d is satisfied.",
+      "source_type": "other",
+      "source_date": "June 19, 2013",
+      "note": "Secondary summary, as above."
+    },
+    {
+      "id": "c33",
+      "question": "Q8",
+      "claim": "NYC Bar Formal Opinion 2026-2 (August 5, 2026) says an attorney should get consent of all other parties before recording a call and weigh whether recording is tactically wise.",
+      "url": "https://www.nycbar.org/reports/formal-opinion-2026-2-ethical-use-of-ai-for-recording-transcribing-and-summarizing-non-client-conversations/",
+      "quote": "The Opinion concludes that, as is true with clients, an attorney should obtain consent of all other parties to a call before recording it, and should consider whether recording, transcribing and summarizing is tactically well-advised in the particular circumstances.",
+      "source_type": "state_bar",
+      "source_date": "August 5, 2026",
+      "note": "New York authority on AI recording of non-client calls, including prospective clients. It does not address Google ads or call tracking. Advisory outside New York."
+    },
+    {
+      "id": "c34",
+      "question": "Q8",
+      "claim": "NYC Bar Formal Opinion 2026-2 says recording a prospective-client conversation presents a paradox.",
+      "url": "https://www.nycbar.org/reports/formal-opinion-2026-2-ethical-use-of-ai-for-recording-transcribing-and-summarizing-non-client-conversations/",
+      "quote": "the question whether to record conversations with the prospective client presents a paradox.",
+      "source_type": "state_bar",
+      "source_date": "August 5, 2026",
+      "note": "Same opinion as above."
+    },
+    {
+      "id": "c35",
+      "question": "Q8",
+      "claim": "NYC Bar Formal Opinion 2026-2 says that in some contexts the risk of recording will outweigh its value.",
+      "url": "https://www.nycbar.org/reports/formal-opinion-2026-2-ethical-use-of-ai-for-recording-transcribing-and-summarizing-non-client-conversations/",
+      "quote": "in some of these contexts, the risk involved in recording the conversation will outweigh the value of doing so.",
+      "source_type": "state_bar",
+      "source_date": "August 5, 2026",
+      "note": "Same opinion as above."
+    },
+    {
+      "id": "c36",
+      "question": "Q9",
+      "claim": "A Local Search Forum poster says the Local Services dashboard shows all calls as recorded and that disputes can be filed from it.",
+      "url": "https://localsearchforum.com/threads/ad-fraud-with-local-service-ads.57616/",
+      "quote": "There's a dashboard with all your calls, which are recorded. Just click the \"dispute\" button, that's it.",
+      "source_type": "thread",
+      "source_date": "",
+      "note": "Poster is not identified as a lawyer or law-firm staff. The thread is general LSA discussion, not legal-specific."
+    },
+    {
+      "id": "c37",
+      "question": "Q9",
+      "claim": "A Local Search Forum poster says they hold recordings showing certain Local Services calls should not have been charged, but Google denied the disputes.",
+      "url": "https://localsearchforum.com/threads/denied-disputes-with-local-service-ads.58192/",
+      "quote": "I have solid evidence (recordings) that I should not have been charged for these calls.",
+      "source_type": "thread",
+      "source_date": "",
+      "note": "Poster is not identified as a lawyer or law-firm staff; the poster describes a business with a 'clear agreement' and 'calls' but does not name a practice area."
+    },
+    {
+      "id": "c38",
+      "question": "Q10",
+      "claim": "Using Google Ads call recording means the advertiser agrees to the Call Ads Supplemental Terms and confirms it has given notice to its agents, employees and anyone else who may take part in the calls.",
+      "url": "https://support.google.com/google-ads/answer/16913427",
+      "quote": "By using call recording features, you agree to the Call Ads Supplemental Terms and you acknowledge that you have provided notice to your agents, employees, and any other party that may participate in the Communications.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "The full text of the Call Ads Supplemental Terms was not retrieved."
+    },
+    {
+      "id": "c39",
+      "question": "Q10",
+      "claim": "Under Google's older call-ad terms, an advertiser who declined to accept recording of a limited sample of calls could not create or edit call ads and assets.",
+      "url": "https://support.google.com/google-ads/answer/7412639",
+      "quote": "If you choose not to accept, your account will not be able to create or edit call ads and assets.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Older model (limited sample of calls). Page is undated apart from a 2026 copyright footer."
+    },
+    {
+      "id": "c40",
+      "question": "Q10",
+      "claim": "Google says an advertiser that cannot take part in recording for legal or regulatory reasons may ask Google for an exemption.",
+      "url": "https://support.google.com/google-ads/answer/7412639",
+      "quote": "If you have questions about eligibility or can't participate in call recording for legal or regulatory reasons, contact Google to request an exemption from monitoring and recording.",
+      "source_type": "google_help",
+      "source_date": "",
+      "note": "Older page as above."
+    },
+    {
+      "id": "c41",
+      "question": "Q10",
+      "claim": "Local Services providers may separately record calls under their own privacy policies.",
+      "url": "https://support.google.com/localservices/answer/7281751",
+      "quote": "providers may choose to independently record calls or messages",
+      "source_type": "google_help",
+      "source_date": ""
+    }
+  ],
+  "leads": [
+    {
+      "question": "Q9",
+      "what": "Lawyer or law-firm threads on Reddit (r/LawFirm, r/Lawyers) about LSA or Google Ads call recording. Reddit blocked both curl and the search tool's domain filter, so I could not check any thread.",
+      "url": "https://www.reddit.com/r/LawFirm/",
+      "why_not_a_claim": "Reddit returned HTTP 403 to curl and the search tool cannot filter to reddit.com."
+    },
+    {
+      "question": "Q9",
+      "what": "Marketing blog on the 2025 LSA terms and attorney-client privilege; it says intake calls are stored about 60 to 70 days and are not privileged.",
+      "url": "https://lafleur.marketing/blog/what-law-firms-need-to-know-about-googles-2025-lsa-terms-and-conditions-and-attorney-client-privilege-risks/",
+      "why_not_a_claim": "Secondary marketing source; page was not fetched, only a search excerpt was seen."
+    },
+    {
+      "question": "Q8",
+      "what": "Orange County Bar Association 'Ethically Speaking' column (December 2021, Nicole Nuzzo) on vendors recording initial client calls; it says a caller prompt alone does not meet the lawyer's ethical duties.",
+      "url": "https://ocbar.org/All-News/News-View/ArticleId/6203/December-2021-Ethically-Speaking-Marketing-Mishap-Recording-Initial-Client-Calls-to-Maximize-Return-on-Investment",
+      "why_not_a_claim": "Page returned HTTP 404 to both curl and WebFetch; only a search excerpt was available."
+    },
+    {
+      "question": "Q8",
+      "what": "Original Connecticut Bar Association copy of Informal Opinion 13-08 (June 19, 2013).",
+      "url": "https://ezel.ai/ethics-opinions/ctbar/13-08-recorded-intake-call-confidentiality",
+      "why_not_a_claim": "The CT Bar's own PDF link was not located; the claims above use the ezel.ai secondary summary."
+    },
+    {
+      "question": "Q10",
+      "what": "Search Engine Land on Google's 2025 LSA terms update: Google claimed rights to use and analyse profile content, including prospective customers' calls, and an attorney is quoted saying lawyers cannot use LSA.",
+      "url": "https://searchengineland.com/google-asset-ownership-local-services-ads-454561",
+      "why_not_a_claim": "Page not fetched; text seen only as a search excerpt."
+    },
+    {
+      "question": "Q4",
+      "what": "Secondary blog says Google defaulted call recording to on for eligible US and Canada accounts that had not made a choice, from July 1, 2026.",
+      "url": "https://elevarus.com/google-ads-call-recording-opt-in-july-2026-playbook/",
+      "why_not_a_claim": "Secondary source; not fetched. Google's own page does not give this date."
+    }
+  ],
+  "not_found": [
+    {
+      "question": "Q1",
+      "what": "Whether Google records Local Services calls outside the US and Canada. The LSA data page has a 'Consumer data outside North America' section that does not mention call recording."
+    },
+    {
+      "question": "Q2",
+      "what": "Whether Google Ads call recording applies to calls from location assets or call-only campaigns other than as described on the settings page. The page says location-asset calls are not supported for recording."
+    },
+    {
+      "question": "Q3",
+      "what": "Whether the advertiser's own phone plays any notice to the business on Google Ads calls. Only the caller-side notice was found."
+    },
+    {
+      "question": "Q4",
+      "what": "Retention period for the AI analysis of call recordings, or whether AI copies last longer than the playback window. Google's AI-qualified page and settings page do not state one."
+    },
+    {
+      "question": "Q4",
+      "what": "A definition of 'legal verticals' in the Local Services retention rule. The page uses the term without defining it."
+    },
+    {
+      "question": "Q5",
+      "what": "Which Google staff or systems review recordings, and any access controls on that review. Only the purposes and the limited-basis wording were found."
+    },
+    {
+      "question": "Q6",
+      "what": "A Local Services setting that lets a provider turn off Google's own recording. Only the provider's right to record separately was found."
+    },
+    {
+      "question": "Q6",
+      "what": "Google's own statement of what happens to existing recordings when recording is turned off. A third-party guide (from the 2020 launch) says playback of existing recordings stops, but I could not identify or verify that page, and Google's current pages do not say it."
+    },
+    {
+      "question": "Q7",
+      "what": "Any legal-specific exclusion in the Call Ads Supplemental Terms. Their full text was not retrieved."
+    },
+    {
+      "question": "Q8",
+      "what": "A state bar ethics opinion that directly addresses Google Ads call recording (or its default-on change in 2026). Searches surfaced only the withdrawn NC proposal, the 2013 Connecticut opinion (pay-per-call analogue), and NYC 2026-2 (AI recording of non-client calls). I did not check every state's opinion database."
+    },
+    {
+      "question": "Q8",
+      "what": "A current bar opinion on Google Local Services Ads call recording after NC withdrew its proposal in 2022."
+    },
+    {
+      "question": "Q9",
+      "what": "First-hand posts by lawyers or law-firm staff about Google recording calls, in Reddit, Google Ads Community, Avvo, Lawyerist or similar. Reddit was blocked; the Google Ads Community and Avvo searches returned no matching threads; the Local Search Forum threads that do discuss recordings are not from identified lawyers."
+    },
+    {
+      "question": "Q10",
+      "what": "The advertiser's obligation under the Call Ads Supplemental Terms to obtain staff or caller consent beyond giving notice. Only the notice wording was found."
+    }
+  ]
+}

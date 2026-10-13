@@ -1,0 +1,54 @@
+list,id,fact,haiku_runs,sonnet_runs,opus_runs,runs_found
+key,K01,Local Services Ads: all inbound calls through the Google forwarding number are recorded in the US and Canada,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K02,Local Services Ads: callers are told by a pre-recorded message,2,3,3,haiku-1 haiku-2 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K03,"Local Services Ads: the business hears ""Call from Google"", and may not hear it with call forwarding or VoIP",2,3,3,haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K04,Local Services Ads: recordings in legal verticals are retained for 60 days,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K05,Local Services Ads: recordings are otherwise retained up to 180 days,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K06,Local Services Ads: recordings are not available for health care verticals or tax specialists,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K07,Local Services Ads: Google reviews recordings on a limited basis for listed purposes,2,2,3,haiku-2 haiku-3 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K08,Local Services Ads: providers may review recordings and Google does not control how they use them,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K09,Google Ads: call recording is now enabled by default for AI lead qualification,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K10,Google Ads: recording stays off for businesses identified as healthcare or financial services,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K11,"Google Ads: recording needs a Google forwarding number, so call reporting must be on",3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K12,"Google Ads: only calls to call ads, call assets or from website visits are eligible; location assets are not",2,3,3,haiku-1 haiku-2 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K13,Google Ads: recording applies only in the United States and Canada,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K14,Google Ads: Google's AI evaluates the recorded calls,2,3,3,haiku-1 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K15,Google Ads: call reports show an AI-generated summary and hashtags,2,3,3,haiku-1 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K16,"Google Ads: recordings are used to evaluate lead quality, monitor spam and fraud, and improve conversion reporting",3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K17,Google Ads: callers hear a short automated message that the call will be recorded,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K18,Google Ads: recorded calls can be played for 30 days,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K19,Google Ads: recordings cannot be downloaded,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K20,"Google Ads: Admin and Standard users, including manager accounts, can play recordings",3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K21,"Google Ads: with recording off, conversions fall back to call duration",3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K22,Google Ads: turning call reporting off stops Google tracking the calls and shows the firm's own number,0,1,2,sonnet-1 opus-2 opus-3
+key,K23,Call Ads Supplemental Terms: the advertiser has given notice to its agents and employees that calls may be recorded,3,3,3,haiku-1 haiku-2 haiku-3 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K24,North Carolina: Proposed 2021 FEO 5 was withdrawn in April 2022,2,3,3,haiku-1 haiku-2 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+key,K25,Wisconsin: State Bar ethics counsel article of January 2021 on Local Services Ads and prospective clients,1,3,3,haiku-1 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X01,"Date of the Google Ads default: unset accounts switch to recording on July 1, 2026 (Google email, quoted in trade press)",1,3,1,haiku-1 sonnet-1 sonnet-2 sonnet-3 opus-1
+extra,X02,"The same email: leaving the setting empty after June 30, 2026 counts as consent",1,1,1,haiku-1 sonnet-1 opus-1
+extra,X03,"Call Ads Supplemental Terms say Google records ""a sample"" of calls, while the help page says ""all calls""",1,2,3,haiku-2 sonnet-1 sonnet-3 opus-1 opus-2 opus-3
+extra,X04,"An older Google Ads page still live says a ""small percentage"" of calls is recorded",3,2,3,haiku-1 haiku-2 haiku-3 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X05,"The playback page says website-tag calls are unsupported, against the settings page",1,0,3,haiku-3 opus-1 opus-2 opus-3
+extra,X06,"Local Services provider terms: the firm authorizes Google to access, monitor and record",1,3,3,haiku-1 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X07,"Local Services provider terms: Google may use what it collects ""as Content"" under its licence",0,3,3,sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X08,Local Services provider terms: the firm must tell its team and get their consent,1,3,3,haiku-1 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X09,Local Services consumer terms: the caller agrees Google may record,0,1,3,sonnet-3 opus-1 opus-2 opus-3
+extra,X10,Local Services recordings are not available for any category in Europe,0,1,1,sonnet-3 opus-3
+extra,X11,Pay-per-lead goals in Google Ads: recordings kept in the Lead Manager up to 30 days,0,0,0,
+extra,X12,"Local Services recording covers follow-up calls, not only the first",0,1,3,sonnet-3 opus-1 opus-2 opus-3
+extra,X13,A consumer can ask Google to delete the record of a Local Services call,0,0,3,opus-1 opus-2 opus-3
+extra,X14,Supplemental Terms: HIPAA-covered advertisers are told not to accept and to ask for exclusion,1,3,3,haiku-2 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X15,Supplemental Terms: the advertiser must comply with the Telephone Consumer Protection Act,1,3,3,haiku-2 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X16,Supplemental Terms: an agency must notify its client and get the client's consent,0,3,3,sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X17,Playback is blocked when the ad's domain is not verified,0,0,1,opus-1
+extra,X18,Recordings feed AI classification used by Smart Bidding,1,0,3,haiku-2 opus-1 opus-2 opus-3
+extra,X19,Wisconsin article's conclusion: without informed consent the lawyer breaches confidentiality,0,3,3,sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X20,Wisconsin article: the caller notice is not enough for informed consent,0,3,3,sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X21,North Carolina article: sample script for staff answering a recorded line,2,3,3,haiku-1 haiku-2 sonnet-1 sonnet-2 sonnet-3 opus-1 opus-2 opus-3
+extra,X22,Connecticut Informal Opinion 2013-08 on a pay-per-call service that records calls,3,0,1,haiku-1 haiku-2 haiku-3 opus-1
+extra,X23,New York City Bar Formal Opinion 2026-2 on recording calls with prospective clients,0,0,0,
+extra,X24,"Text of the withdrawn North Carolina proposal, from a secondary reproduction",0,0,2,opus-1 opus-2
+extra,X25,"A Reddit thread, quoted",0,0,0,
+extra,X26,"A Local Search Forum thread, quoted",2,0,3,haiku-1 haiku-2 opus-1 opus-2 opus-3
+extra,X27,"A LinkedIn post or comment, quoted",0,0,0,
+extra,X28,"A lawyer's or legal marketer's blog or podcast, quoted",1,1,3,haiku-1 sonnet-3 opus-1 opus-2 opus-3

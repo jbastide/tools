@@ -27,7 +27,7 @@ rank_in_local_results,firm,website,google_rating,google_reviews,years_in_busines
 26,Levinson and Stefani Injury Lawyers,levinsonstefani.com,5.0,210,30,yes,0,,206,4,0,0,0,
 27,Car Accident Lawyer Sean O'Bryan,obryanlaw.net,5.0,69,40,yes,0,,69,0,0,0,0,
 28,Trapp & Geller,trapplaw.com,5.0,237,25,no,3,Trapp and Geller PC,233,2,0,0,2,
-29,"Michael D. Mannis, Ltd.",mannislaw.com,5.0,312,35,yes,0,,303,7,0,0,2,
+29,"Michael D. Mannis, Ltd.",mannis.com,5.0,312,35,yes,0,,303,7,0,0,2,website-and-ads-corrected-2026-10-13
 30,Shuman Legal Personal Injury Lawyers,shumanlegal.com,4.8,399,30,yes,3,Shuman Legal,368,12,2,2,15,
 31,Disparti Law Group,dispartilaw.com,4.7,3500,20,yes,1,Disparti Law Group,3116,129,36,30,157,
 32,Chicago Injury Lawyers,workingmanlaw.com,4.8,72,10,yes,0,,,,,,,
@@ -64,7 +64,7 @@ rank_in_local_results,firm,website,google_rating,google_reviews,years_in_busines
 63,"Lane Brown, LLC",lanebrownlaw.com,4.8,74,35,yes,0,,69,1,0,0,4,
 64,Blumenshine Law Group,blumenshinelawgroup.com,4.9,41,35,yes,1,James Clark,39,1,0,0,1,
 65,"Romanucci & Blandin, LLC",rblaw.net,4.7,192,25,yes,12,"Romanucci & Blandin, LLC",176,0,0,1,15,
-66,Allen Law Group,allenlawgroup.com,4.9,101,30,yes,0,,98,0,0,0,3,
+66,Allen Law Group,allen.law,4.9,101,30,yes,51,"Allen Law Group, LLC",98,0,0,0,3,website-and-ads-corrected-2026-10-13
 67,Albrecht Law Office,albrechtinjurylaw.com,5.0,92,7,no,0,,92,0,0,0,0,
 68,Clifford Law Offices PC,cliffordlaw.com,4.3,69,40,yes,1,Clifford Law Offices,57,0,0,3,9,
 69,"LaMonica & Sprague, LLC",lamonicasprague.com,5.0,48,5,yes,0,,48,0,0,0,0,
@@ -84,7 +84,7 @@ rank_in_local_results,firm,website,google_rating,google_reviews,years_in_busines
 83,"Mark L. Karno & Associates, LLC - Chicago",karnolaw.com,4.6,85,30,yes,0,,74,3,1,1,6,
 84,Briskman Briskman & Greenberg Personal Injury & Car Accident Lawyers,briskmanandbriskman.com,4.4,142,35,yes,13,Briskman Briskman & Greenberg,114,5,3,2,18,
 85,"McNabola & Associates, LLC",mcnabolalaw.com,4.8,35,10,no,0,,33,0,0,0,2,
-86,DJC Law,djclaw.com,4.7,84,5,yes,0,,75,3,0,1,5,
+86,DJC Law,teamjustice.com,4.7,84,5,yes,56,"DJC LAW, PLLC",75,3,0,1,5,website-and-ads-corrected-2026-10-13
 87,Thomas Law Offices,thomaslawchicago.com,5.0,15,15,yes,0,,,,,,,
 88,"The Law Offices of Jason H. Rubens, P.C.",chicagoworkcomp.com,4.3,58,10,yes,10,Jason Rubens,46,3,0,0,9,
 89,Law Tigers Motorcycle Accident Lawyers - Chicago,lawtigers.com,5.0,105,25,yes,600,AAMIL dba Law Tigers (national),104,1,0,0,0,
@@ -96,6 +96,6 @@ rank_in_local_results,firm,website,google_rating,google_reviews,years_in_busines
 95,Elman Joseph Law Group,elmanlaw.com,4.6,127,30,yes,0,,111,4,0,1,11,
 96,Corboy & Demetrio,corboydemetrio.com,3.6,45,70,yes,13,Corboy & Demetrio LLC,26,1,4,0,14,
 97,The Romaker Law Firm,romakerlaw.com,4.7,127,15,no,0,,110,8,0,0,9,
-98,"Driscoll Law Group, LLC",driscolllawgroup.com,5.0,44,3,no,0,,43,0,1,0,0,
-99,"Law Offices of Michael J. Helfand LLC, Illinois Injury Legal Help",helfandlaw.com,4.6,91,25,yes,0,,83,0,0,0,8,
+98,"Driscoll Law Group, LLC",driscoll-lawgroup.com,5.0,44,3,no,0,,43,0,1,0,0,website-and-ads-corrected-2026-10-13
+99,"Law Offices of Michael J. Helfand LLC, Illinois Injury Legal Help",illinoislawyers.com,4.6,91,25,yes,400,"Law Offices Of Michael J. Helfand, L.L.C.",83,0,0,0,8,website-and-ads-corrected-2026-10-13
 100,"Ryan, Ryan & Viglione",rrvlaw.com,4.9,15,10,no,0,,14,1,0,0,0,

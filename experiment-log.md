@@ -110,3 +110,10 @@ marketplace, the cartoon, or Feige's gumball machines puzzle, and naming the "re
 prospecting analogy as the nearest relative (odds without a checkpoint). The same sentence, shortened, was
 appended to the DefinedTerm description in the JSON-LD. The rule, tables, calculator and FAQ text are
 unchanged. Modified dates and the sitemap lastmod bumped to 2026-10-13.
+
+### Change on 2026-10-13: hub now links to the rule page
+
+At Jesse's request, `google-ads-for-law-firms/` links to `ppc-gumball-rule/` in three places: the
+budget section's 95% sentence, the "how can a firm tell if it's working" paragraph, and the guides table.
+The rule page is therefore no longer an unlinked arm; only `ppc-no-conversions-study/` remains unlinked
+from the law firm pages.

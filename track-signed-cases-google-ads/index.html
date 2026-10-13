@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Law Firms Track Signed Cases Back to Google Ads Clicks</title>
+<meta name="description" content="Importing signed cases into Google Ads as offline conversions: the click ID, the setup steps, calls, the 90-day limit, and what client data Google receives.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/track-signed-cases-google-ads/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/track-signed-cases-google-ads/">
+<meta property="og:site_name" content="Copy for Originals">
+<meta property="og:title" content="How does a law firm track signed cases back to Google Ads clicks?">
+<meta property="og:description" content="Importing signed cases into Google Ads as offline conversions: the click ID, the setup steps, calls, the 90-day limit, and what client data Google receives.">
+<meta property="article:published_time" content="2026-10-13">
+<meta property="article:modified_time" content="2026-10-13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%BE%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/track-signed-cases-google-ads/#article",
+      "headline": "How does a law firm track signed cases back to Google Ads clicks?",
+      "description": "Importing signed cases into Google Ads as offline conversions: the click ID, the setup steps, calls, the 90-day limit, and what client data Google receives.",
+      "url": "https://tools.copyfororiginals.com/track-signed-cases-google-ads/",
+      "inLanguage": "en",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "publisher": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "about": [
+        "Google Ads",
+        "Offline conversion import",
+        "Law firm marketing",
+        "Client intake",
+        "Client confidentiality"
+      ],
+      "isPartOf": {
+        "@type": "Article",
+        "@id": "https://tools.copyfororiginals.com/google-ads-for-law-firms/#article"
+      },
+      "citation": [
+        "https://support.google.com/google-ads/answer/2998031",
+        "https://support.google.com/google-ads/answer/7012522",
+        "https://support.google.com/google-ads/answer/15081888",
+        "https://support.google.com/google-ads/answer/9744275",
+        "https://support.google.com/google-ads/answer/15713840",
+        "https://support.google.com/google-ads/answer/6301373",
+        "https://support.google.com/google-ads/answer/11461796",
+        "https://support.google.com/google-ads/answer/7686480",
+        "https://support.google.com/google-ads/answer/6268632"
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Tools",
+            "item": "https://tools.copyfororiginals.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Google Ads for law firms",
+            "item": "https://tools.copyfororiginals.com/google-ads-for-law-firms/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tracking signed cases",
+            "item": "https://tools.copyfororiginals.com/track-signed-cases-google-ads/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/track-signed-cases-google-ads/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does a law firm track signed cases back to Google Ads clicks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By importing signed cases into Google Ads as offline conversions. The firm stores the Google click ID with each lead in its intake system, and when the lead signs, uploads that click ID with a conversion name and the date. Google Ads matches the click ID to the ad click and reports the signed case against the campaign, ad group and keyword that produced it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should a law firm track signed cases instead of leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because a lead is not a case, and the two can move in opposite directions. One personal injury firm’s Local Services Ads cost per lead stayed near $220 from February to April 2025 while the share of leads that signed fell from 26% to 4%. A firm that counted leads would have seen no change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Google click ID (GCLID)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Google click ID, or GCLID, is a code Google adds to the landing page address each time someone clicks an ad. Google’s definition reads: “Google Click ID (GCLID) is a URL parameter passed with ad clicks. This parameter identifies the campaign along with other attributes of the click.” It identifies the click, not the person."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you set up a signed-case import in Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set up a signed-case import in five steps: turn on auto-tagging, capture the click ID on every form, store it with the lead in the intake system, create an offline conversion action for signed cases, and upload signed cases on a schedule. Google’s setup page lists the same requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you track signed cases that started as phone calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are two ways. Google’s call conversion import matches an uploaded list of calls that became cases to the calls it tracked, using the caller’s phone number and the call start time, and it requires Google forwarding numbers. The other way is a call tracking service that ties each call to the click ID, so the call can be imported like a form lead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long after the click can a signed case be imported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ninety days. Google’s guidelines say offline conversions “uploaded more than 90 days after the associated last click won’t be imported into Google Ads,” and the limit is 63 days for enhanced conversions for leads. A retainer signed within three months of the click can be imported; a settlement two years later cannot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What client information does Google receive in an offline conversion import?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With a click ID import, Google receives the click ID, a conversion name, the date and time, and an optional value. None of those identifies the client. Enhanced conversions for leads, which Google now recommends, also sends hashed contact details such as an email address, and the call import sends the caller’s phone number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should signed cases be a primary or a secondary conversion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with signed cases as a secondary conversion, which Google uses for reporting only, unless the firm signs enough cases for bidding to learn from. Google recommends judging Target CPA over a period with at least 30 conversions, and a firm that signs fewer cases than that from ads gives bidding too little to learn from."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a law firm do with signed-case data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use signed-case data to work out cost per signed case for each campaign and keyword, then move budget toward the ones that produce cases. Cost per signed case = (ad spend + agency fee) ÷ signed cases."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../site.css">
+<style>.tablewrap table.wide{min-width:720px}</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/">Home</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts">Thoughts</a></li>
+    <li><a href="https://www.copyfororiginals.com/digital-marketing-services">Services</a></li>
+    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Tools</a></li>
+    <li><a href="https://www.copyfororiginals.com/about">About</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs">FAQs</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+
+<header>
+  <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · <a href="../google-ads-for-law-firms/">Google Ads for law firms</a> · Guide</p>
+  <h1>How does a law firm track signed cases back to Google Ads clicks?</h1>
+  <p class="lede">A law firm tracks signed cases back to Google Ads by importing them as offline conversions. The firm saves the Google click ID that arrives with each lead, and when that lead signs a retainer, sends the click ID back to Google Ads with a conversion name and a date. Google Ads then shows signed cases next to each campaign and keyword. This guide covers the setup, phone calls, the time limit, and how little client information the import needs.</p>
+  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Published <time datetime="2026-10-13">October 13, 2026</time> · Last updated <time datetime="2026-10-13">October 13, 2026</time></p>
+  <p class="scope"><b>Educational only, not legal advice.</b> This page describes Google Ads features from Google’s help pages as read on October 13, 2026. What client information your firm may send to an ad platform is a question for your own counsel and your state bar’s rules.</p>
+</header>
+
+<section id="short-answer">
+  <h2>How does a law firm track signed cases back to Google Ads clicks?</h2>
+  <p>By importing signed cases into Google Ads as offline conversions. The firm stores the Google click ID with each lead in its intake system, and when the lead signs, uploads that click ID with a conversion name and the date. Google Ads matches the click ID to the ad click and reports the signed case against the campaign, ad group and keyword that produced it.</p>
+  <div class="tablewrap">
+  <table class="wide">
+    <caption>Three ways to import signed cases into Google Ads, and what each sends to Google</caption>
+    <thead><tr><th scope="col">Method</th><th scope="col">Works for</th><th scope="col">What the firm sends</th><th scope="col">Upload limit</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Click ID import (GCLID)</th><td>Leads from website forms, and calls tied to a click ID</td><td>Click ID, conversion name, date and time, optional value</td><td>90 days after the last click</td></tr>
+      <tr><th scope="row">Enhanced conversions for leads</th><td>Leads from website forms</td><td>The above, plus hashed contact details such as an email address</td><td>63 days after the last click</td></tr>
+      <tr><th scope="row">Call conversion import</th><td>Calls through a Google forwarding number</td><td>Caller’s phone number, call start time, conversion name and time</td><td>Not stated on the pages we read</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>This page is part of the <a href="../google-ads-for-law-firms/">Google Ads for law firms</a> guide.</p>
+</section>
+
+<section id="why-signed-cases">
+  <h2>Why should a law firm track signed cases instead of leads?</h2>
+  <p>Because a lead is not a case, and the two can move in opposite directions. One personal injury firm’s Local Services Ads cost per lead stayed near $220 from February to April 2025 while the share of leads that signed fell from 26% to 4%. A firm that counted leads would have seen no change.</p>
+  <p>That firm’s figures are in our <a href="../personal-injury-lawyer-leads/#cost-per-signed-case">personal injury lawyer leads guide</a>: 85 leads and 22 signed cases in February, 52 leads and 2 signed cases in April, and a cost per signed case that went from $843 to $5,719.</p>
+  <p>Google’s bidding has the same blind spot. Without an import it treats a wrong-number call and a signed case as the same conversion, and bids for more of whichever is cheaper.</p>
+  <p>Not knowing is common. In 9 of the 188 r/LawFirm threads where owners described their own paid marketing, the owner said they could not tell which leads came from where, and in 12 the owner said the firm’s own intake was the problem. Among 42 Chicago personal injury advertisers, 20 showed no call tracking on the homepage and 37 showed no intake system.</p>
+</section>
+
+<section id="click-id">
+  <h2>What is a Google click ID (GCLID)?</h2>
+  <p>A Google click ID, or GCLID, is a code Google adds to the landing page address each time someone clicks an ad. Google’s definition reads: “Google Click ID (GCLID) is a URL parameter passed with ad clicks. This parameter identifies the campaign along with other attributes of the click.” It identifies the click, not the person.</p>
+  <p>The code shows up at the end of the landing page address as <code>gclid=</code> followed by a long string of letters and numbers. It is there only when auto-tagging is on, which Google says is what activates it. Google’s setup page notes that the click ID is case sensitive, so it has to be stored exactly as it arrived.</p>
+  <p>The click ID is what makes the import work without naming anyone. Google already knows which campaign, keyword and ad each click ID belongs to. The firm only has to tell it which click IDs became cases.</p>
+</section>
+
+<section id="setup">
+  <h2>How do you set up a signed-case import in Google Ads?</h2>
+  <p>Set up a signed-case import in five steps: turn on auto-tagging, capture the click ID on every form, store it with the lead in the intake system, create an offline conversion action for signed cases, and upload signed cases on a schedule. Google’s setup page lists the same requirements.</p>
+  <ol class="check">
+    <li><b>Turn on auto-tagging.</b> In Google’s words, “You’ve enabled auto-tagging. This lets you import offline conversions.”</li>
+    <li><b>Capture the click ID on every form.</b> Google’s page says to add “a hidden form field for the GCLID” to each form, and to update the site’s pages so the click ID is kept in a cookie or local storage while the visitor moves around the site. This is a job for whoever maintains the website.</li>
+    <li><b>Store it with the lead.</b> The click ID has to land in the same record as the lead in the intake or case management system, so that when the lead signs, the firm can find the click ID again.</li>
+    <li><b>Create the conversion action.</b> In Google Ads go to Goals, Summary, create a conversion action, and choose offline conversions. Name it plainly, such as “Signed case.”</li>
+    <li><b>Upload on a schedule.</b> Google’s Data Manager can connect to a Google Sheet or a file store, or to Salesforce or HubSpot, and imports from it in repeated runs. For sheets and files it looks back 90 days on every run; for Salesforce and HubSpot the first run imports only the last 14 days.</li>
+  </ol>
+  <p>Each row of the upload holds a click ID, the conversion name, and the date and time the case was signed. Google will not count the same conversion twice: its guidelines say a repeat of the same click ID, conversion name, date and time “it’ll only be counted once.”</p>
+  <p>Google changed the plumbing in 2026. Its page says that from June 15, 2026, uploads through the old Google Ads API route are blocked and moved to the Data Manager API, and that from April 2026 enhanced conversions became a single on/off setting. A firm setting this up now should use Data Manager.</p>
+</section>
+
+<section id="phone-calls">
+  <h2>How do you track signed cases that started as phone calls?</h2>
+  <p>There are two ways. Google’s call conversion import matches an uploaded list of calls that became cases to the calls it tracked, using the caller’s phone number and the call start time, and it requires Google forwarding numbers. The other way is a call tracking service that ties each call to the click ID, so the call can be imported like a form lead.</p>
+  <p>Google describes its own method this way: keep track of your sales calls, “recording details like the caller’s phone number, and when those calls lead to a sale,” upload that file, and “Google Ads then matches the call info in your file with the calls tracked through your Google Ads conversion action.” Its page says the import “requires Google forwarding numbers,” and covers calls from call ads, call assets and tracked website numbers.</p>
+  <p>Two things follow for a law firm. The firm has to keep the caller’s number and the call time with the lead record. And calls through Google forwarding numbers are the ones Google records by default, which <a href="../does-google-record-calls-to-law-firms/">our page on call recording</a> covers.</p>
+  <p>Many law firm leads are phone calls. A firm that imports only form leads will see only part of its signed cases in Google Ads, so decide how calls will be handled before building the rest.</p>
+</section>
+
+<section id="time-limit">
+  <h2>How long after the click can a signed case be imported?</h2>
+  <p>Ninety days. Google’s guidelines say offline conversions “uploaded more than 90 days after the associated last click won’t be imported into Google Ads,” and the limit is 63 days for enhanced conversions for leads. A retainer signed within three months of the click can be imported; a settlement two years later cannot.</p>
+  <p>Where people decide within days or weeks, the limit is not a problem. It matters in two cases:</p>
+  <ul>
+    <li><b>Slow decisions.</b> An estate planning or business client who takes four months to sign cannot be imported. Import an earlier step for those matters, such as a paid consultation.</li>
+    <li><b>Fees that arrive later.</b> A contingency fee can arrive months or years after signing. Import the signed case with an estimated value, not the eventual fee.</li>
+  </ul>
+  <p>Upload at least weekly so that no case ages past the limit while it waits in a spreadsheet.</p>
+</section>
+
+<section id="client-information">
+  <h2>What client information does Google receive in an offline conversion import?</h2>
+  <p>With a click ID import, Google receives the click ID, a conversion name, the date and time, and an optional value. None of those identifies the client. Enhanced conversions for leads, which Google now recommends, also sends hashed contact details such as an email address, and the call import sends the caller’s phone number.</p>
+  <div class="tablewrap">
+  <table class="wide">
+    <caption>What each import method sends to Google about a client</caption>
+    <thead><tr><th scope="col">Method</th><th scope="col">Sent to Google</th><th scope="col">Identifies the person?</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Click ID import</th><td>Click ID, conversion name, date and time, optional value</td><td>No, if the conversion name and value are neutral</td></tr>
+      <tr><th scope="row">Enhanced conversions for leads</th><td>Hashed “user-provided data, such as email addresses,” which Google matches to signed-in Google accounts</td><td>It is hashed, and it is what Google uses to match the person</td></tr>
+      <tr><th scope="row">Call conversion import</th><td>The caller’s phone number and the call start time</td><td>Yes. Google lists phone numbers as personally identifiable information.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Google now recommends enhanced conversions for leads over a click ID import, saying advertisers who added first-party data “saw a median 10% increase in conversions” recorded. For a law firm the trade is accuracy against how much is disclosed about who became a client.</p>
+  <p>A click ID import can be kept neutral in three ways:</p>
+  <ul>
+    <li><b>The conversion name.</b> “Signed case” says nothing. “DUI retainer” or “Divorce client” tells Google what the person hired a lawyer for.</li>
+    <li><b>The value.</b> Use one estimated figure per practice area, the same for every case, not the fee for that client.</li>
+    <li><b>Nothing else.</b> Do not add names, notes or case details to the upload. Google’s own policy defines personally identifiable information to include email addresses, phone numbers and full names.</li>
+  </ul>
+  <p>ABA Model Rule 1.6(c) says: “A lawyer shall make reasonable efforts to prevent the inadvertent or unauthorized disclosure of, or unauthorized access to, information relating to the representation of a client.” Whether hashed contact details or caller numbers may go to an ad platform under your state’s version is a question for your own counsel. The click ID import is the method that asks the least.</p>
+  <p>This is the same approach medical practices use to keep patient details out of Google Ads. Our <a href="../hipaa-google-ads-conversions/">HIPAA conversion tracking guide</a> compares the tools that do it, and <a href="../healthcare-ppc-for-law-firms/">Why healthcare PPC experience transfers to law firm Google Ads</a> explains the overlap.</p>
+</section>
+
+<section id="primary-or-secondary">
+  <h2>Should signed cases be a primary or a secondary conversion?</h2>
+  <p>Start with signed cases as a secondary conversion, which Google uses for reporting only, unless the firm signs enough cases for bidding to learn from. Google recommends judging Target CPA over a period with at least 30 conversions, and a firm that signs fewer cases than that from ads gives bidding too little to learn from.</p>
+  <p>Google’s definitions: primary conversion actions are “reported in the ‘Conversions’ column in your reports and used for bidding.” Secondary actions “are for observation only. They are used for reporting in the ‘All conversions’ column in your reports, but not for bidding.”</p>
+  <p>Google’s Target CPA page recommends measuring performance “for the last 30 days, including at least 30 conversions.” A firm that signs eight cases a month from ads gives the bidding system too few signals if signed cases are the only primary conversion.</p>
+  <p>So a small firm can keep bidding on leads, meaning form submissions and calls of 60 seconds or more, and add signed cases as a secondary action. The firm sees signed cases by keyword in the “All conversions” column and makes the budget decisions itself. Once signed cases pass about 30 a month, they can become the primary conversion.</p>
+  <p>Google’s setup page warns that the setting matters: “Misconfiguring these settings can prevent Smart Bidding from optimizing effectively.”</p>
+</section>
+
+<section id="using-the-data">
+  <h2>What should a law firm do with signed-case data?</h2>
+  <p>Use signed-case data to work out cost per signed case for each campaign and keyword, then move budget toward the ones that produce cases. Cost per signed case = (ad spend + agency fee) ÷ signed cases.</p>
+  <p>After a month or two of imports, three questions have answers that leads alone could not give:</p>
+  <ul>
+    <li><b>Which keywords produce cases?</b> A keyword with many leads and no signed cases is a candidate to pause. <a href="../keyword-triage/">Keyword Triage</a> sorts a keyword report against a target cost per conversion in the browser.</li>
+    <li><b>What can the firm pay for a lead?</b> With a real share of leads that sign, the <a href="../target-cpa-roas/">Target CPA &amp; ROAS Calculator</a> works out a target from what a case is worth.</li>
+    <li><b>Is the agency reporting cases?</b> The <a href="../law-firm-google-ads-agency-scorecard/">law firm Google Ads agency scorecard</a> asks whether reports show signed cases and cost per signed case, and whether call tracking is reconciled with the intake log.</li>
+  </ul>
+  <p>Small numbers still need care. Five signed cases from one keyword and none from another is not yet a verdict on either.</p>
+</section>
+
+<section id="next">
+  <h2>Want signed cases showing in your Google Ads account?</h2>
+  <p>Copy for Originals sets up click ID capture, the signed-case conversion action and the scheduled upload, using a click ID import with neutral names and values unless your firm decides otherwise. We manage Google Ads and do not give legal opinions. <a href="https://www.copyfororiginals.com/contact">Contact Copy for Originals</a>.</p>
+</section>
+
+<section id="limits">
+  <h2>Limitations</h2>
+  <ul>
+    <li>Google changed how these imports work during 2026 and may change them again. The steps and menu names are from Google’s help pages as read on October 13, 2026.</li>
+    <li>The pages we read do not state an upload time limit for call conversion imports.</li>
+    <li>The 30-cases-a-month threshold for making signed cases primary follows from Google’s recommendation for judging Target CPA. It is our reading, not a Google rule.</li>
+    <li>This page does not cover Performance Max, Local Services Ads lead ratings, or the Google Ads API.</li>
+    <li>The r/LawFirm counts are what owners wrote in public threads, and the Chicago counts come from homepage scans that miss tools loaded through a tag manager.</li>
+    <li>The ABA Model Rule text was read from an archived copy of the ABA’s page. No state’s rules are covered.</li>
+    <li>Not legal advice.</li>
+  </ul>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <p>Each source was read on October 13, 2026.</p>
+  <ul class="sources">
+    <li>Google Ads Help, “About offline conversion imports.” <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “Set up offline conversions using Google Click ID (GCLID).” <a href="https://support.google.com/google-ads/answer/7012522" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “Guidelines for importing offline conversions.” <a href="https://support.google.com/google-ads/answer/15081888" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “Google Click Identifier (GCLID): Definition.” <a href="https://support.google.com/google-ads/answer/9744275" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “About auto-tagging.” <a href="https://support.google.com/google-ads/answer/3095550" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “About enhanced conversions for leads.” <a href="https://support.google.com/google-ads/answer/15713840" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “Using Google Ads Data Manager with enhanced conversions for leads.” <a href="https://support.google.com/google-ads/answer/15707550" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “About importing call conversions” and “Import phone call conversions.” <a href="https://support.google.com/google-ads/answer/6301373" rel="noopener">support.google.com</a>, <a href="https://support.google.com/google-ads/answer/6275629" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “About primary and secondary conversion actions.” <a href="https://support.google.com/google-ads/answer/11461796" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “About Target CPA bidding.” <a href="https://support.google.com/google-ads/answer/6268632" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, “Understanding PII in Google’s contracts and policies.” <a href="https://support.google.com/google-ads/answer/7686480" rel="noopener">support.google.com</a></li>
+    <li>American Bar Association, Model Rule 1.6, “Confidentiality of Information.” <a href="https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_6_confidentiality_of_information/" rel="noopener">americanbar.org</a> (read from the Internet Archive copy)</li>
+    <li>Copy for Originals, <a href="../personal-injury-lawyer-leads/">Personal injury lawyer leads</a>: one firm’s leads and signed cases, February and April 2025.</li>
+    <li>Copy for Originals, <a href="../law-firm-google-ads-agency-scorecard/">law firm Google Ads agency scorecard</a> and its data file: 9 of 188 threads where owners could not tell which leads came from where; 12 where the firm’s own intake was the problem.</li>
+    <li>Copy for Originals, <a href="../chicago-personal-injury-lead-gen-study/">Chicago personal injury lead generation study</a>: 20 of 42 advertisers with no call tracking and 37 with no intake system on the homepage.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Educational only, not legal advice. Static page. No scripts, no tracking. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+</footer>
+</div>
+</body>
+</html>

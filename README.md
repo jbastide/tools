@@ -30,6 +30,31 @@ vanilla JS that links the shared [`site.css`](site.css): no build step, no depen
 | How to write content that LLMs retrieve and cite | [`rag-friendly-content/`](rag-friendly-content/) | What answer engines do with a page, each AEO practice rated by evidence, and a 12-point checklist. |
 | HIPAA-compliant conversion tracking for Google Ads | [`hipaa-google-ads-conversions/`](hipaa-google-ads-conversions/) | Healthcare tracking platforms, enterprise CDPs, server-side GTM, offline conversion imports and HIPAA call tracking compared by price, setup effort and fit for practices without IT staff, with dated sources and a section on what couldn't be verified. Educational only, not legal advice. |
 
+## Service pages (Swedish and English)
+
+Pages for Swedish companies. Each one exists twice, as separate static URLs: Swedish under `sv/`, English at the root.
+
+| Page | Swedish | English | What it covers |
+| --- | --- | --- | --- |
+| Google Ads for lead generation in Sweden | [`sv/google-ads-leadgenerering/`](sv/google-ads-leadgenerering/) | [`google-ads-lead-generation-sweden/`](google-ads-lead-generation-sweden/) | Managed Google Ads for Swedish businesses from Tidaholm: stopping the bleeding, cleaning up a messy account, visibility, clicks without inquiries, digital marknadsföring, price, budget, in-person vs remote, consent and VAT. |
+| Google Ads in the USA for Swedish companies | [`sv/google-ads-usa/`](sv/google-ads-usa/) | [`google-ads-usa-for-swedish-companies/`](google-ads-usa-for-swedish-companies/) | US lead generation from Sweden: differences from the Swedish market, where to start, test budgets, time zones and who answers, measurement, price. |
+| English copywriting for Swedish companies | [`sv/engelsk-copywriting-usa/`](sv/engelsk-copywriting-usa/) | [`english-copywriting-for-swedish-companies/`](english-copywriting-for-swedish-companies/) | American English sales copy: Swedish habits in English text, translation vs copywriting, what a US buyer looks for, US advertising rules, price and process. |
+| Swedish hub | [`sv/`](sv/) | the root index | Overview of the three services in Swedish, plus the tools described in Swedish. |
+
+### Conventions for bilingual pages
+
+- One static file per language, never a JavaScript toggle or `data-en` attributes: AI crawlers don't run
+  JavaScript, so text swapped in by script is invisible to them.
+- Swedish pages live under `sv/` with Swedish slugs and `<html lang="sv">`; the English page sits at the
+  root with an English slug. `sv/` pages link the stylesheet as `../../site.css`.
+- Each page links its counterpart with `<link rel="alternate" hreflang>` (sv, en, and x-default pointing at
+  the English page) and with the visible `.lang-switch` in the `.pagebar` (both in `site.css`).
+- The two versions carry the same facts, numbers, sources and dates. Change both in the same commit.
+- Every question `<h2>`/`<h3>` and the paragraph under it is mirrored word for word in the FAQPage JSON-LD.
+- Facts about the business (price, minimum fee, meeting area, managed ad spend) are repeated on all of
+  these pages and in `llms.txt`; a change to one of them means a search across `sv/`, the three English
+  pages, the index cards and `llms.txt`.
+
 ## Deploying
 
 GitHub Pages serves this repo as-is from the default branch:

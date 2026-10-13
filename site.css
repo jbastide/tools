@@ -182,3 +182,20 @@ input[type="text"],input[type="number"],input[type="search"],input[type="url"],i
 .site-nav ul a:hover{color:var(--accent-hover);border-bottom-color:var(--accent)}
 .site-nav ul a[aria-current="true"]{border-bottom-color:var(--ink)}
 @media (max-width:560px){.site-nav{padding-block:14px}.site-nav ul{gap:4px 16px}}
+
+/* Pages that exist in Swedish and English: breadcrumb on the left, language switch on the right.
+   Each language is its own static URL (crawlers don't run JS), linked with hreflang. */
+.pagebar{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-bottom:40px}
+.pagebar .crumbs{margin-bottom:0}
+.lang-switch{display:flex;gap:6px;margin:0;padding:0;list-style:none;font:700 13px/1.4 var(--display);text-transform:uppercase;letter-spacing:.12em}
+.lang-switch li{margin:0}
+.lang-switch a,.lang-switch span{display:block;padding:3px 10px;border:2px solid var(--line);color:var(--muted);text-decoration:none}
+.lang-switch a:hover{border-color:var(--line-strong);color:var(--ink)}
+.lang-switch [aria-current]{border-color:var(--line-strong);background:var(--ink);color:var(--bg)}
+
+/* Service pages */
+.btn-cta{display:inline-block;padding:13px 22px;background:var(--accent);color:var(--on-accent);border:2px solid var(--line-strong);font:700 16px/1.2 var(--display);text-transform:uppercase;letter-spacing:.08em;text-decoration:none}
+.btn-cta:hover{background:var(--ink);color:var(--bg)}
+.tablewrap table.wide{min-width:640px}
+.tldr + .tablewrap{margin-top:20px}
+header + .cards{margin-top:28px}

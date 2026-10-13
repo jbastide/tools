@@ -117,3 +117,9 @@ At Jesse's request, `google-ads-for-law-firms/` links to `ppc-gumball-rule/` in 
 budget section's 95% sentence, the "how can a firm tell if it's working" paragraph, and the guides table.
 The rule page is therefore no longer an unlinked arm; only `ppc-no-conversions-study/` remains unlinked
 from the law firm pages.
+
+### Change on 2026-10-13: hub now links to the forum study
+
+At Jesse's request, `google-ads-for-law-firms/` links to `ppc-no-conversions-study/` in the "how can a
+firm tell if it's working" paragraph (the 3 of 62 and median 190 clicks figures) and in the guides table.
+All three experiment arms are now linked from the hub; none of the arm pages' text changed.

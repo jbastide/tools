@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blockerar advokatbyråers webbplatser AI-sökrobotar? robots.txt, brandväggar och llms.txt hos 100 personskadebyråer i Chicago (studie 2026)</title>
-<meta name="description" content="Copy for Originals granskade webbplatserna för 100 personskadebyråer i Chicago den 13 oktober 2026. Bara 3 förbjuder en AI-sökrobot i robots.txt, men 15 av 78 testbara webbplatser avvisade en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot, och 14 av dessa 15 saknar en regel i robots.txt mot den sökrobot de avvisade. 33 av 75 publicerar en llms.txt-fil. Data ingår.">
+<meta name="description" content="Copy for Originals granskade webbplatserna för 100 personskadebyråer i Chicago den 13 och 14 oktober 2026. Bara 3 förbjuder en AI-sökrobot i robots.txt, men 13 av 78 testbara webbplatser avvisade en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot i alla fem körningarna, och 11 av dessa 13 släppte igenom samma förfrågan under Googlebots och Bingbots namn. 42 av 92 publicerar en llms.txt-fil. Data ingår.">
 <meta name="author" content="Copy for Originals">
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="index,follow,max-snippet:-1">
@@ -18,9 +18,9 @@
 <meta property="og:locale" content="sv_SE">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Blockerar advokatbyråers webbplatser AI-sökrobotar? En studie av 100 personskadebyråer i Chicago">
-<meta property="og:description" content="3 av 100 förbjuder en AI-sökrobot i robots.txt. 15 av 78 avvisar en på servern. 33 av 75 publicerar en llms.txt-fil.">
+<meta property="og:description" content="3 av 100 förbjuder en AI-sökrobot i robots.txt. 13 av 78 avvisar en på servern, och 11 av dem släpper igenom Googlebots namn. 42 av 92 publicerar en llms.txt-fil.">
 <meta property="article:published_time" content="2026-10-13">
-<meta property="article:modified_time" content="2026-10-13">
+<meta property="article:modified_time" content="2026-10-14">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
@@ -36,11 +36,11 @@
       "@type": "Article",
       "@id": "https://tools.copyfororiginals.com/sv/advokatbyraers-webbplatser-ai-sokrobotar-studie/#article",
       "headline": "Blockerar advokatbyråers webbplatser AI-sökrobotar? robots.txt, brandväggar och llms.txt hos 100 personskadebyråer i Chicago",
-      "description": "Copy for Originals granskade robots.txt-filen, llms.txt-filen och startsidans svar på webbplatserna för 100 personskadebyråer i Chicago den 13 oktober 2026. Bara 3 förbjuder en AI-sökrobot i robots.txt, men 15 av 78 testbara webbplatser avvisade en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot.",
+      "description": "Copy for Originals granskade webbplatserna för 100 personskadebyråer i Chicago den 13 och 14 oktober 2026. Bara 3 förbjuder en AI-sökrobot i robots.txt, men 13 av 78 testbara webbplatser avvisade en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot i alla fem körningarna, och 11 av dessa 13 släppte igenom samma förfrågan under Googlebots och Bingbots namn. 42 av 92 publicerar en llms.txt-fil. Data ingår.",
       "url": "https://tools.copyfororiginals.com/sv/advokatbyraers-webbplatser-ai-sokrobotar-studie/",
       "inLanguage": "sv",
       "datePublished": "2026-10-13",
-      "dateModified": "2026-10-13",
+      "dateModified": "2026-10-14",
       "author": {
         "@id": "https://copyfororiginals.com/#org"
       },
@@ -78,7 +78,7 @@
       "@type": "Dataset",
       "@id": "https://tools.copyfororiginals.com/sv/advokatbyraers-webbplatser-ai-sokrobotar-studie/#data",
       "name": "AI-sökrobotars åtkomst till webbplatserna för 100 personskadebyråer i Chicago (Copy for Originals, 2026)",
-      "description": "En rad per webbplats för 100 personskadebyråer i Chicago, granskade den 13 oktober 2026: var robots.txt-filen lästes, vilka AI-sökrobotar den nämner och förbjuder, eventuell Content-Signal-rad, om det finns en llms.txt-fil och vad som genererade den, samt hur startsidan svarade på en förfrågan i webbläsarstil och på förfrågningar med namnen GPTBot, ClaudeBot och PerplexityBot i tre körningar.",
+      "description": "En rad per webbplats för 100 personskadebyråer i Chicago, granskade den 13 och 14 oktober 2026: var robots.txt-filen lästes, vilka AI-sökrobotar den nämner och förbjuder, eventuell Content-Signal-rad, om det finns en llms.txt-fil och vad som genererade den, och hur startsidan svarade på en förfrågan i webbläsarstil och på förfrågningar med namnen GPTBot, ClaudeBot, PerplexityBot, Googlebot och Bingbot i fem körningar från Sverige och tre körningar från Chicago.",
       "creator": {
         "@id": "https://copyfororiginals.com/#org"
       },
@@ -100,7 +100,15 @@
           "name": "Blockerar advokatbyråers webbplatser AI-sökrobotar som GPTBot och ClaudeBot?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Få gör det i robots.txt, fler gör det på servern. I en studie som Copy for Originals gjorde av webbplatserna för 100 personskadebyråer i Chicago den 13 oktober 2026 förbjöd 3 minst en AI-sökrobot i robots.txt. Av de 78 webbplatser som gick att testa på servern avvisade 15 en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot i alla tre körningarna: 11 avvisade ClaudeBot, 9 avvisade GPTBot och 2 avvisade PerplexityBot."
+            "text": "Få gör det i robots.txt, fler gör det på servern. I en studie som Copy for Originals gjorde av webbplatserna för 100 personskadebyråer i Chicago den 13 och 14 oktober 2026 förbjöd 3 minst en AI-sökrobot i robots.txt. Av de 78 webbplatser som gick att testa på servern avvisade 13 en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot i alla fem körningarna: 10 avvisade ClaudeBot, 8 avvisade GPTBot och 2 avvisade PerplexityBot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Avvisar webbplatser som stänger ute AI-sökrobotar också Googlebot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oftast inte. I studien från Copy for Originals släppte 11 av de 13 advokatbyråer vars webbplatser avvisade en förfrågan med en AI-sökrobots namn igenom samma förfrågan varje gång den bar Googlebots eller Bingbots namn. Av alla 78 testade webbplatser avvisade 2 Googlebots namn och 4 Bingbots namn."
           }
         },
         {
@@ -108,7 +116,7 @@
           "name": "Kan en webbplats blockera AI-sökrobotar utan att det syns i robots.txt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. En brandvägg, ett webbhotell eller ett säkerhetstillägg kan avvisa en sökrobot innan själva webbplatsen svarar, och robots.txt ändras inte. I studien från Copy for Originals hade 14 av de 15 advokatbyråer vars webbplatser avvisade en förfrågan med en AI-sökrobots namn ingen regel i robots.txt mot just den sökroboten, och 3 av dem nämnde den avvisade sökroboten i robots.txt utan att förbjuda den."
+            "text": "Ja. En brandvägg, ett webbhotell eller ett säkerhetstillägg kan avvisa en sökrobot innan själva webbplatsen svarar, och robots.txt ändras inte. I studien från Copy for Originals hade 12 av de 13 advokatbyråer vars webbplatser avvisade en förfrågan med en AI-sökrobots namn ingen regel i robots.txt mot just den sökroboten, och 2 av dem nämnde den avvisade sökroboten i robots.txt utan att förbjuda den."
           }
         },
         {
@@ -116,7 +124,7 @@
           "name": "Hur många advokatbyråer har en llms.txt-fil?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "33 av 75, eller 44 %, i Copy for Originals studie av personskadebyråers webbplatser i Chicago den 13 oktober 2026. Ytterligare 8 av de 75 svarade på llms.txt-adressen med en fil i robots.txt-syntax, något som förslaget till llms.txt inte definierar, och 34 hade ingen fil. Av de 33 filerna uppgav 11 att de hade genererats av Yoast SEO."
+            "text": "42 av 92, eller 46 %, i Copy for Originals studie av personskadebyråers webbplatser i Chicago den 13 och 14 oktober 2026. Ytterligare 8 av de 92 svarade på llms.txt-adressen med en fil i robots.txt-syntax, något som förslaget till llms.txt inte definierar, och 42 hade ingen fil. Av de 42 filerna uppgav 12 att de hade genererats av Yoast SEO."
           }
         }
       ],
@@ -154,13 +162,14 @@
 <header>
   <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Egen undersökning</p>
   <h1>Blockerar advokatbyråers webbplatser AI-sökrobotar?</h1>
-  <p class="lede">Copy for Originals granskade webbplatserna för 100 personskadebyråer i Chicago den 13 oktober 2026. Bara 3 förbjuder en AI-sökrobot i robots.txt. Men 15 av de 78 webbplatser som gick att testa avvisade en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot, och 14 av dessa 15 saknar en regel i robots.txt mot den sökrobot de avvisade.</p>
-  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Publicerad <time datetime="2026-10-13">13 oktober 2026</time> · Senast uppdaterad <time datetime="2026-10-13">13 oktober 2026</time> · <a href="../../law-firm-websites-ai-crawlers-study/data.csv">Ladda ner data (CSV)</a></p>
+  <p class="lede">Copy for Originals granskade webbplatserna för 100 personskadebyråer i Chicago den 13 och 14 oktober 2026. Bara 3 förbjuder en AI-sökrobot i robots.txt. Men 13 av de 78 webbplatser som gick att testa avvisade varje gång en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot, och 11 av dessa 13 släppte igenom samma förfrågan under Googlebots och Bingbots namn.</p>
+  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Publicerad <time datetime="2026-10-13">13 oktober 2026</time> · Senast uppdaterad <time datetime="2026-10-14">14 oktober 2026</time> · Version 2 · <a href="../../law-firm-websites-ai-crawlers-study/data.csv">Ladda ner data (CSV)</a></p>
   <p class="scope"><b>Endast i utbildningssyfte, inte juridisk rådgivning.</b> Studien beskriver offentliga filer och svar från servrar. Om en advokatbyrå ska släppa in AI-sökrobotar på sin webbplats avgör byrån själv.</p>
   <div class="stats">
     <div class="stat"><b>3 av 100</b><span>förbjuder minst en AI-sökrobot i robots.txt</span></div>
-    <div class="stat"><b>15 av 78</b><span>avvisade en förfrågan med en AI-sökrobots namn i alla tre körningarna</span></div>
-    <div class="stat"><b>33 av 75</b><span>publicerar en llms.txt-fil</span></div>
+    <div class="stat"><b>13 av 78</b><span>avvisade en förfrågan med en AI-sökrobots namn i alla fem körningarna</span></div>
+    <div class="stat"><b>11 av 13</b><span>av dem släppte igenom samma förfrågan under Googlebots och Bingbots namn</span></div>
+    <div class="stat"><b>42 av 92</b><span>publicerar en llms.txt-fil</span></div>
   </div>
 </header>
 
@@ -168,9 +177,10 @@
   <h2>Vad visade studien?</h2>
   <ol class="check">
     <li><b>Nästan ingen advokatbyrå blockerar AI-sökrobotar i robots.txt.</b> 11 av 100 robots.txt-filer nämner över huvud taget någon AI-sökrobot, och 3 förbjuder någon. Bara 1 förbjuder både GPTBot och ClaudeBot.</li>
-    <li><b>Avvisningarna sker på servern, där robots.txt inte visar dem.</b> 15 av 78 webbplatser svarade på en förfrågan i webbläsarstil men avvisade varje gång en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot. 14 av de 15 saknar en regel i robots.txt mot den sökrobot de avvisade.</li>
-    <li><b>Namnet ClaudeBot avvisades oftast.</b> 11 webbplatser avvisade ClaudeBot, 9 avvisade GPTBot och 2 avvisade PerplexityBot.</li>
-    <li><b>llms.txt är vanligt och skapas ofta automatiskt.</b> 33 av 75 webbplatser publicerar en sådan fil. 15 av de 33 anger vilket tillägg som skrev filen, och 11 av dem anger Yoast SEO. Ytterligare 8 webbplatser svarar på llms.txt-adressen med regler i robots.txt-stil, som förslaget till llms.txt inte definierar.</li>
+    <li><b>Avvisningarna sker på servern, där robots.txt inte visar dem.</b> 13 av 78 webbplatser svarade på en förfrågan i webbläsarstil men avvisade varje gång en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot. 12 av de 13 saknar en regel i robots.txt mot den sökrobot de avvisade.</li>
+    <li><b>Avvisningarna riktar sig mot AI-sökrobotar, inte mot sökrobotar i allmänhet.</b> 11 av de 13 webbplatserna släppte igenom samma förfrågan varje gång den bar Googlebots eller Bingbots namn.</li>
+    <li><b>Namnet ClaudeBot avvisades oftast.</b> 10 avvisade ClaudeBot, 8 avvisade GPTBot och 2 avvisade PerplexityBot.</li>
+    <li><b>llms.txt är vanligt och skapas ofta automatiskt.</b> 42 av 92 webbplatser publicerar en sådan fil. 19 av de 42 anger vilket tillägg som skrev filen, och 12 av dem anger Yoast SEO. Ytterligare 8 webbplatser svarar på llms.txt-adressen med regler i robots.txt-stil, som förslaget till llms.txt inte definierar.</li>
   </ol>
 </section>
 
@@ -201,52 +211,59 @@
     <li><b>En förbjuder ClaudeBot och sju andra namn</b> (anthropic-ai, Google-Extended, Applebot-Extended, CCBot, Bytespider, meta-externalagent och Amazonbot) men har ingen regel för GPTBot.</li>
     <li><b>En förbjuder GPTBot och meta-externalagent</b> men släpper in ClaudeBot och OAI-SearchBot enligt de vanliga reglerna.</li>
   </ul>
-  <p>Två av de 80 filer som lästes direkt från webbplatserna har en <code>Content-Signal</code>-rad, det format som Cloudflare publicerade den 24 september 2025. Den ena lyder <code>search=yes, ai-input=yes, ai-train=no</code>. Den andra lyder <code>search=yes, ai-input=yes, ai-train=yes</code>.</p>
+  <p>5 av de 93 filer som lästes den 13 oktober 2026 har en <code>Content-Signal</code>-rad, det format som Cloudflare publicerade den 24 september 2025. 4 lyder <code>search=yes, ai-input=yes, ai-train=yes</code>, och 1 lyder <code>search=yes, ai-input=yes, ai-train=no</code>. Tre av filerna som säger ja till träning är identiska bortsett från webbplatsens adress, vilket tyder på att en och samma webbplattform skriver raden åt sina kunder bland advokatbyråerna.</p>
 </section>
 
 <section id="server">
   <h2>Blockerar advokatbyråer AI-sökrobotar på servern i stället?</h2>
-  <p>Ja, oftare än i robots.txt. 15 av 78 webbplatser (19&nbsp;%) skickade startsidan till en förfrågan i webbläsarstil men avvisade samma förfrågan när den bar en AI-sökrobots namn. Varje webbplats fick tre förfrågningar per namn, i ny ordning varje gång, och ”avvisade” betyder här att alla tre avvisades.</p>
+  <p>Ja, oftare än i robots.txt. 13 av 78 webbplatser (17&nbsp;%) skickade startsidan till en förfrågan i webbläsarstil men avvisade samma förfrågan när den bar en AI-sökrobots namn. Varje webbplats fick fem förfrågningar per namn, med minst tre minuters mellanrum och i ny ordning varje gång, och ”avvisade” betyder här att alla fem avvisades.</p>
   <div class="tablewrap">
-  <table>
-    <caption>Hur startsidorna hos 78 advokatbyråer svarade på en förfrågan med en AI-sökrobots namn, tre körningar (Copy for Originals, 13 oktober 2026)</caption>
-    <thead><tr><th scope="col">Namn i förfrågan</th><th scope="col" class="n">Släpptes igenom alla 3 gångerna</th><th scope="col" class="n">Avvisades alla 3 gångerna</th><th scope="col" class="n">Blandat</th></tr></thead>
+  <table class="wide">
+    <caption>Hur startsidorna hos 78 advokatbyråer svarade på en förfrågan med en sökrobots namn, fem körningar (Copy for Originals, 14 oktober 2026)</caption>
+    <thead><tr><th scope="col">Namn i förfrågan</th><th scope="col">Slag</th><th scope="col" class="n">Släpptes igenom alla 5 gångerna</th><th scope="col" class="n">Avvisades alla 5 gångerna</th><th scope="col" class="n">Blandat</th></tr></thead>
     <tbody>
-      <tr><th scope="row">GPTBot</th><td class="n">63</td><td class="n">9 (12 %)</td><td class="n">6</td></tr>
-      <tr><th scope="row">ClaudeBot</th><td class="n">63</td><td class="n">11 (14 %)</td><td class="n">4</td></tr>
-      <tr><th scope="row">PerplexityBot</th><td class="n">75</td><td class="n">2 (3 %)</td><td class="n">1</td></tr>
+      <tr><th scope="row">GPTBot</th><td>AI-sökrobot</td><td class="n">61</td><td class="n">8 (10 %)</td><td class="n">9</td></tr>
+      <tr><th scope="row">ClaudeBot</th><td>AI-sökrobot</td><td class="n">58</td><td class="n">10 (13 %)</td><td class="n">10</td></tr>
+      <tr><th scope="row">PerplexityBot</th><td>AI-sökrobot</td><td class="n">74</td><td class="n">2 (3 %)</td><td class="n">2</td></tr>
+      <tr><th scope="row">Googlebot</th><td>Sökmotorns sökrobot (kontroll)</td><td class="n">76</td><td class="n">2 (3 %)</td><td class="n">0</td></tr>
+      <tr><th scope="row">Bingbot</th><td>Sökmotorns sökrobot (kontroll)</td><td class="n">74</td><td class="n">4 (5 %)</td><td class="n">0</td></tr>
     </tbody>
   </table>
   </div>
-  <p>55 av de 78 webbplatserna släppte igenom alla tre namnen varje gång. 15 avvisade minst ett namn varje gång. De övriga 8 gav blandade svar: 429 <span lang="en">“Too Many Requests”</span> (för många förfrågningar) i en eller två körningar och en vanlig sida i de övriga.</p>
-  <p>Avvisningarna var 403 <span lang="en">“Forbidden”</span> (åtkomst nekad) på 11 webbplatser och 429 <span lang="en">“Too Many Requests”</span> på 4. 7 av de 15 webbplatserna ligger bakom Cloudflare.</p>
+  <p>51 av de 78 webbplatserna släppte igenom alla fem namnen varje gång. 13 avvisade minst en AI-sökrobots namn varje gång. Avvisningarna var 403 <span lang="en">“Forbidden”</span> (åtkomst nekad) på 11 webbplatser och 429 <span lang="en">“Too Many Requests”</span> (för många förfrågningar) på 2. 6 av de 13 webbplatserna ligger bakom Cloudflare.</p>
+  <h3>Avvisar de här webbplatserna också Googlebots namn?</h3>
+  <p>Oftast inte. 11 av de 13 webbplatser som avvisade en AI-sökrobots namn släppte igenom samma förfrågan varje gång den bar Googlebots eller Bingbots namn. 2 avvisade också en sökmotorrobots namn.</p>
+  <p>Det här är viktigt för hur resultatet ska läsas. En webbplats som kontrollerar att en besökare verkligen är den sökrobot den utger sig för att vara skulle visa bort en förfrågan som felaktigt bär Googlebots namn. 11 webbplatser gjorde inte det, så en identitetskontroll är en osannolik förklaring där. De webbplatserna behandlar en AI-sökrobots namn som ett skäl att avvisa.</p>
+  <p>Av alla 78 webbplatser avvisade 2 Googlebots namn varje gång och 4 Bingbots. 3 webbplatser avvisade Bingbots namn men släppte igenom de tre AI-namnen och Googlebots.</p>
   <h3>Syns de här serverblockeringarna i robots.txt?</h3>
-  <p>Nej. Bara 1 av de 15 webbplatserna har en regel i robots.txt mot en sökrobot som den avvisade. 11 har ingen regel alls för AI-sökrobotar. De återstående 3 nämner den avvisade sökroboten i robots.txt utan att förbjuda den, så filen ser ut som en inbjudan medan servern visar bort besökaren.</p>
-  <p>Det fungerar också åt andra hållet. Två webbplatser förbjuder ClaudeBot i robots.txt men släppte ändå igenom förfrågan med ClaudeBots namn varje gång. RFC 9309, standarden för robots.txt, säger att reglerna <span lang="en">“are not a form of access authorization.”</span> (ungefär: ”inte är någon form av åtkomstbehörighet”). Filen anger vad webbplatsen begär av en sökrobot, och sökroboten avgör själv om den rättar sig efter det.</p>
+  <p>Nej. Bara 1 av de 13 webbplatserna har en regel i robots.txt mot en sökrobot som den avvisade. 10 har ingen regel alls för AI-sökrobotar. 2 nämner den avvisade sökroboten i robots.txt utan att förbjuda den, så filen ser ut som en inbjudan medan servern visar bort besökaren.</p>
+  <p>Det fungerar också åt andra hållet. 2 webbplatser förbjuder ClaudeBot i robots.txt men släppte ändå igenom förfrågan med ClaudeBots namn varje gång. RFC 9309, standarden för robots.txt, säger att reglerna <span lang="en">“are not a form of access authorization.”</span> (ungefär: ”inte är någon form av åtkomstbehörighet”). Filen anger vad webbplatsen begär av en sökrobot, och sökroboten avgör själv om den rättar sig efter det.</p>
+  <h3>Håller resultatet från en amerikansk adress?</h3>
+  <p>I stort sett, ja. Tre extra körningar den 13 oktober 2026 gick ut via en VPN-utgång i Chicago med samma sex förfrågningar. 74 webbplatser gick att testa därifrån och 71 från båda platserna. 68 av de 71 hamnade på samma sätt från båda: de avvisade samma namn på AI-sökrobotar, eller inga alls. 12 avvisade minst en AI-sökrobots namn från båda platserna. Från Chicago släppte 13 av de 16 webbplatser som avvisade en AI-sökrobots namn igenom Googlebots och Bingbots namn varje gång.</p>
   <h3>Vad betyder en avvisning för den riktiga sökroboten?</h3>
-  <p>Den bevisar inte att den riktiga sökroboten avvisas. Studiens förfrågningar kom från en vanlig internetuppkoppling, inte från OpenAI:s, Anthropics eller Perplexitys egna adresser. Vissa brandväggar kontrollerar att en besökare som utger sig för att vara en sökrobot kommer från sökrobotens publicerade adresser och avvisar den annars. En webbplats i studien svarade med en sida där det stod <span lang="en">“Checking search engine crawler”</span> (ungefär: ”Kontrollerar sökmotorns sökrobot”), vilket är just en sådan kontroll. En avvisning i tabellen betyder att webbplatsen behandlar sökrobotens namn annorlunda än en webbläsare. Bara webbplatsens egna serverloggar visar vad den riktiga sökroboten får.</p>
+  <p>Den bevisar inte att den riktiga sökroboten avvisas. Studiens förfrågningar kom från vanliga internetuppkopplingar, inte från OpenAI:s, Anthropics eller Perplexitys egna adresser. En avvisning i tabellen betyder att webbplatsen behandlar sökrobotens namn annorlunda än en webbläsare, och jämförelsen med Googlebot visar att det på de flesta av de här webbplatserna är namnet som utlöser avvisningen. Bara webbplatsens egna serverloggar visar vad den riktiga sökroboten får.</p>
   <h3>Hur är det med de 22 webbplatser som hölls utanför testet?</h3>
-  <p>21 webbplatser avvisade redan förfrågan i webbläsarstil, och 1 gick inte att nå, så det fanns inget att jämföra med. Förfrågningarna kom från Sverige, och en del av de här webbplatserna kan avvisa besökare utanför USA.</p>
-  <p>16 av de 21 skickade sidan när samma förfrågan bar namnet GPTBot. 11 av de 16 släppte också igenom ClaudeBot och PerplexityBot. De övriga 5 släppte bara igenom GPTBot. På de här webbplatserna räckte enbart sökrobotens namn för att ta sig förbi en spärr som stoppade en vanlig förfrågan.</p>
+  <p>21 webbplatser avvisade förfrågan i webbläsarstil i varje körning, och 1 gick inte att nå, så det fanns inget att jämföra med. De flesta av de 21 har ett botskydd som visade bort ett skript som utgav sig för att vara en webbläsare: en utmaningssida från Cloudflare på en del, ett enkelt 403-svar på andra.</p>
+  <p>16 av de 21 skickade sidan när samma förfrågan bar namnet GPTBot. 11 släppte igenom alla tre AI-namnen. 5 släppte igenom GPTBots namn men avvisade ClaudeBots och PerplexityBots. På de här webbplatserna räckte enbart sökrobotens namn för att ta sig förbi en spärr som stoppade en vanlig förfrågan.</p>
 </section>
 
 <section id="llms-txt">
   <h2>Hur många advokatbyråer har en llms.txt-fil?</h2>
-  <p>33 av 75, eller 44&nbsp;%. En llms.txt-fil är en markdown-fil i webbplatsens rot, föreslagen den 3 september 2024 för att hjälpa AI-verktyg att använda webbplatsen.</p>
+  <p>42 av 92, eller 46&nbsp;%. En llms.txt-fil är en markdown-fil i webbplatsens rot, föreslagen den 3 september 2024 för att hjälpa AI-verktyg att använda webbplatsen.</p>
   <div class="tablewrap">
   <table>
-    <caption>Vad 75 advokatbyråers webbplatser svarade på /llms.txt (Copy for Originals, 13 oktober 2026)</caption>
+    <caption>Vad 92 advokatbyråers webbplatser svarade på /llms.txt (Copy for Originals, 13 oktober 2026)</caption>
     <thead><tr><th scope="col">Resultat</th><th scope="col" class="n">Webbplatser</th></tr></thead>
     <tbody>
-      <tr><th scope="row">En llms.txt-fil i markdown</th><td class="n">33 (44 %)</td></tr>
-      <tr><th scope="row">En fil i robots.txt-syntax</th><td class="n">8 (11 %)</td></tr>
-      <tr><th scope="row">Ingen fil</th><td class="n">34 (45 %)</td></tr>
+      <tr><th scope="row">En llms.txt-fil i markdown</th><td class="n">42 (46 %)</td></tr>
+      <tr><th scope="row">En fil i robots.txt-syntax</th><td class="n">8 (9 %)</td></tr>
+      <tr><th scope="row">Ingen fil</th><td class="n">42 (46 %)</td></tr>
     </tbody>
   </table>
   </div>
-  <p>25 av de 100 webbplatserna gav inget läsbart svar på den här adressen och är inte medräknade.</p>
-  <p><b>Vem som skrev filerna.</b> 15 av de 33 filerna anger vilken programvara som genererade dem: Yoast SEO i 11, Rank Math i 2, Hostinger Tools i 1 och MileMark Schema Pro i 1. Enligt Yoast är filen <span lang="en">“generated and refreshed automatically”</span> (ungefär: ”genereras och uppdateras automatiskt”) när funktionen väl är påslagen. De övriga 18 filerna säger inget om hur de kom till.</p>
-  <p><b>Hur stora de är.</b> Medianfilen är omkring 7,7 KB. Den minsta är 1,3 KB. Sju är större än 50 KB, och den största hade fortfarande inte tagit slut vid 400 KB, där studien slutade läsa.</p>
+  <p>8 av de 100 webbplatserna gav inget läsbart svar på den här adressen och är inte medräknade.</p>
+  <p><b>Vem som skrev filerna.</b> 19 av de 42 filerna anger vilken programvara som genererade dem: Yoast SEO i 12, Rank Math i 4, All in One SEO i 1, Hostinger Tools i 1 och MileMark Schema Pro i 1. Enligt Yoast är filen <span lang="en">“generated and refreshed automatically”</span> (ungefär: ”genereras och uppdateras automatiskt”) när funktionen väl är påslagen. De övriga 23 filerna säger inget om hur de kom till.</p>
+  <p><b>Hur stora de är.</b> Bland de 35 filer som lästes direkt är medianen omkring 9,1 KB och den minsta 1,3 KB. 11 filer är större än 50 KB, och den största är omkring 2 MB.</p>
   <p><b>Filerna i robots.txt-stil.</b> 8 webbplatser svarar på llms.txt-adressen med rader som <code>User-agent: *</code> och <code>Allow: /</code>. Sex av dem skickar exakt samma fil på 65 byte, som innehåller raden <code>Disallow-Training: /</code>. Förslaget till llms.txt beskriver en markdown-fil med en rubrik och länkar. Det definierar inga åtkomstregler, så ingenting i förslaget säger att en sökrobot ska rätta sig efter de här raderna.</p>
 </section>
 
@@ -254,7 +271,7 @@
   <h2>Hur kan en advokatbyrå kontrollera om den egna webbplatsen blockerar AI-sökrobotar?</h2>
   <ol class="check">
     <li><b>Läs din robots.txt.</b> Öppna <code>yourfirm.com/robots.txt</code> och sök efter GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot och PerplexityBot. En <code>User-agent</code>-rad som nämner någon av dem, följd av <code>Disallow: /</code>, ber den sökroboten att hålla sig borta.</li>
-    <li><b>Fråga om brandväggen.</b> Fråga den som sköter ditt webbhotell, ditt Cloudflare-konto eller ditt säkerhetstillägg om någon botregel avvisar AI-sökrobotar. 14 av de 15 avvisningarna i studien syns inte i robots.txt.</li>
+    <li><b>Fråga om brandväggen.</b> Fråga den som sköter ditt webbhotell, ditt Cloudflare-konto eller ditt säkerhetstillägg om någon botregel avvisar AI-sökrobotar. 12 av de 13 avvisningarna i studien syns inte i robots.txt.</li>
     <li><b>Be om serverloggarna.</b> Be om de loggrader som innehåller sökrobotarnas namn och vilken statuskod var och en fick. 200 betyder att sökroboten fick sidan. 403 eller 429 betyder att den inte fick den. Det är den enda kontrollen som ser den riktiga sökroboten.</li>
     <li><b>Ta ställning till träning och sökning var för sig.</b> Enligt OpenAI hämtar GPTBot innehåll som kan användas för att träna företagets modeller, medan OAI-SearchBot gör webbplatser synliga i ChatGPT:s sökfunktioner. Enligt Anthropic samlar ClaudeBot in innehåll som kan bidra till träning, medan Claude-SearchBot förbättrar sökresultaten. En advokatbyrå kan avvisa den ena och släppa in den andra.</li>
     <li><b>Öppna din llms.txt.</b> Om <code>yourfirm.com/llms.txt</code> finns ska den vara markdown som börjar med en <code>#</code>-rubrik och listar dina sidor. Börjar den med <code>User-agent</code> följer den inte det format som förslaget beskriver.</li>
@@ -266,21 +283,22 @@
   <h2>Hur gjordes studien?</h2>
   <ol class="check">
     <li><b>Urval:</b> de 100 webbplatser för personskadebyråer i Chicago som listas i version 4 av Copy for Originals Chicagostudie.</li>
-    <li><b>robots.txt och llms.txt:</b> varje fil hämtades en gång den 13 oktober 2026 med en user agent i Chrome-stil. 80 robots.txt-filer lästes direkt från webbplatserna. De övriga 20 webbplatserna avvisade förfrågan, så deras robots.txt lästes från den senaste kopian i Internet Archive, sparad mellan 13 januari 2024 och 7 maj 2026. Ingen av de 20 nämner någon AI-sökrobot.</li>
+    <li><b>robots.txt och llms.txt:</b> varje fil hämtades den 13 oktober 2026 med en user agent i Chrome-stil. 80 robots.txt-filer lästes på det sättet. Ytterligare 13 avvisade förfrågan och lästes samma dag på annan väg: 11 via en hämtningstjänst på webben och 2 via adressen i Chicago som beskrivs nedan. De sista 7 lästes från den senaste kopian i Internet Archive, sparad mellan 21 augusti 2025 och 7 maj 2026; ingen av de 7 nämner någon AI-sökrobot. 14 svar om llms.txt kom samma två vägar.</li>
     <li><b>Tolkning av reglerna:</b> reglerna grupperades efter <code>User-agent</code>-rad enligt RFC 9309. En sökrobot räknas som förbjuden när en grupp som nämner den innehåller <code>Disallow: /</code> eller <code>Disallow: /*</code> och ingen <code>Allow: /</code>. Femton namn på AI-sökrobotar kontrollerades; tabellen visar nio.</li>
-    <li><b>Servertest:</b> varje startsida hämtades med en user agent i Chrome-stil och med user agents som innehöll <code>GPTBot/1.3</code>, <code>ClaudeBot/1.0</code> och <code>PerplexityBot/1.0</code>, i tre körningar med ny ordning varje gång. En webbplats räknas som testbar när förfrågan i webbläsarstil gav svaret 200 i alla tre körningarna (78 webbplatser). Ett namn räknas som avvisat när det fick 403 eller 429 i alla tre körningarna.</li>
-    <li><b>llms.txt:</b> ett 200-svar räknas som en fil när det inte är en HTML-sida. Filer som börjar med <code>User-agent</code> räknades för sig. Läsningen avbröts vid 400 KB.</li>
+    <li><b>Servertest:</b> varje startsida hämtades med en user agent i Chrome-stil och med user agents som innehöll <code>GPTBot/1.4</code>, <code>ClaudeBot/1.0</code>, <code>PerplexityBot/1.0</code>, <code>Googlebot/2.1</code> och <code>bingbot/2.0</code>. Det blev fem körningar den 14 oktober 2026 från en vanlig bredbandsuppkoppling i Sverige, med minst tre minuters mellanrum och de sex förfrågningarna i ny ordning varje körning. Utgångsadressen kontrollerades före och efter varje körning. En webbplats räknas som testbar när förfrågan i webbläsarstil gav svaret 200 i alla fem körningarna (78 webbplatser). Ett namn räknas som avvisat när det fick 403 eller 429 i alla fem körningarna, och som blandat när körningarna gav olika svar.</li>
+    <li><b>Andra plats:</b> tre körningar med samma sex förfrågningar den 13 oktober 2026 via en kommersiell VPN-utgång i Chicago. De redovisas för sig och ingår inte i tabellen med 78 webbplatser.</li>
+    <li><b>llms.txt:</b> ett 200-svar räknas som en fil när det inte är en HTML-sida. Filer som börjar med <code>User-agent</code> räknades för sig.</li>
   </ol>
-  <p>Alla webbplatser och alla svarskoder finns i <a href="../../law-firm-websites-ai-crawlers-study/data.csv">datafilen</a>.</p>
+  <p>Alla webbplatser och alla svarskoder finns i <a href="../../law-firm-websites-ai-crawlers-study/data.csv">datafilen</a>, och skripten för insamlingen finns i <a href="https://github.com/jbastide/tools/tree/main/law-firm-websites-ai-crawlers-study/method" rel="noopener">metodmappen på GitHub</a>.</p>
 </section>
 
 <section id="limits">
   <h2>Begränsningar</h2>
   <ul>
-    <li><b>Testförfrågan är inte den riktiga sökroboten.</b> Den bar sökrobotens namn men kom från en vanlig uppkoppling. En webbplats som kontrollerar sökroboternas adresser kan avvisa testet men ändå släppa in den riktiga sökroboten.</li>
-    <li><b>Förfrågningarna kom från Sverige.</b> 21 webbplatser avvisade förfrågan i webbläsarstil och kunde inte testas på servern. Från en amerikansk uppkoppling kan resultaten bli andra.</li>
-    <li><b>En stad, ett rättsområde, en dag.</b> 100 personskadebyråer i Chicago den 13 oktober 2026. Se procentsatserna som en fingervisning.</li>
-    <li><b>20 robots.txt-filer är arkivkopior,</b> en del över ett år gamla. De webbplatserna kan ha ändrat sina regler sedan dess.</li>
+    <li><b>Testförfrågan är inte den riktiga sökroboten.</b> Den bar sökrobotens namn men kom från en vanlig uppkoppling. Jämförelsen med Googlebot och Bingbot gör en identitetskontroll osannolik hos 11 av de 13 webbplatser som avvisade, men bara serverloggar kan avgöra saken.</li>
+    <li><b>22 webbplatser gick inte att testa på servern.</b> 21 avvisade förfrågan i webbläsarstil i varje körning, och 1 gick inte att nå. Från adressen i Chicago avvisade 25 webbplatser den, så en amerikansk adress av det slaget hjälpte inte. En vanlig amerikansk bredbandsuppkoppling är inte testad.</li>
+    <li><b>En stad, ett rättsområde, två dagar.</b> 100 personskadebyråer i Chicago den 13 och 14 oktober 2026. Se procentsatserna som en fingervisning.</li>
+    <li><b>7 robots.txt-filer är arkivkopior,</b> den äldsta från 21 augusti 2025. De webbplatserna kan ha ändrat sina regler sedan dess.</li>
     <li><b>Bara startsidan.</b> En webbplats kan behandla undersidor annorlunda.</li>
     <li><b>Vem som satte regeln är okänt.</b> En avvisning kan komma från advokatbyrån, dess marknadsföringsbyrå, dess webbhotell eller en standardinställning som ingen har valt.</li>
     <li><b>Inte juridisk rådgivning.</b> Studien säger ingenting om huruvida en advokatbyrå bör släppa in eller avvisa AI-sökrobotar.</li>
@@ -290,11 +308,13 @@
 <section id="faq">
   <h2>Vanliga frågor</h2>
   <h3>Blockerar advokatbyråers webbplatser AI-sökrobotar som GPTBot och ClaudeBot?</h3>
-  <p>Få gör det i robots.txt, fler gör det på servern. I en studie som Copy for Originals gjorde av webbplatserna för 100 personskadebyråer i Chicago den 13 oktober 2026 förbjöd 3 minst en AI-sökrobot i robots.txt. Av de 78 webbplatser som gick att testa på servern avvisade 15 en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot i alla tre körningarna: 11 avvisade ClaudeBot, 9 avvisade GPTBot och 2 avvisade PerplexityBot.</p>
+  <p>Få gör det i robots.txt, fler gör det på servern. I en studie som Copy for Originals gjorde av webbplatserna för 100 personskadebyråer i Chicago den 13 och 14 oktober 2026 förbjöd 3 minst en AI-sökrobot i robots.txt. Av de 78 webbplatser som gick att testa på servern avvisade 13 en förfrågan med namnet GPTBot, ClaudeBot eller PerplexityBot i alla fem körningarna: 10 avvisade ClaudeBot, 8 avvisade GPTBot och 2 avvisade PerplexityBot.</p>
+  <h3>Avvisar webbplatser som stänger ute AI-sökrobotar också Googlebot?</h3>
+  <p>Oftast inte. I studien från Copy for Originals släppte 11 av de 13 advokatbyråer vars webbplatser avvisade en förfrågan med en AI-sökrobots namn igenom samma förfrågan varje gång den bar Googlebots eller Bingbots namn. Av alla 78 testade webbplatser avvisade 2 Googlebots namn och 4 Bingbots namn.</p>
   <h3>Kan en webbplats blockera AI-sökrobotar utan att det syns i robots.txt?</h3>
-  <p>Ja. En brandvägg, ett webbhotell eller ett säkerhetstillägg kan avvisa en sökrobot innan själva webbplatsen svarar, och robots.txt ändras inte. I studien från Copy for Originals hade 14 av de 15 advokatbyråer vars webbplatser avvisade en förfrågan med en AI-sökrobots namn ingen regel i robots.txt mot just den sökroboten, och 3 av dem nämnde den avvisade sökroboten i robots.txt utan att förbjuda den.</p>
-  <h3>Hur många advokatbyråer har en llms.txt-fil på sin webbplats?</h3>
-  <p>33 av 75, eller 44&nbsp;%, i Copy for Originals studie av personskadebyråers webbplatser i Chicago den 13 oktober 2026. Ytterligare 8 av de 75 svarade på llms.txt-adressen med en fil i robots.txt-syntax, något som förslaget till llms.txt inte definierar, och 34 hade ingen fil. Av de 33 filerna uppgav 11 att de hade genererats av Yoast SEO.</p>
+  <p>Ja. En brandvägg, ett webbhotell eller ett säkerhetstillägg kan avvisa en sökrobot innan själva webbplatsen svarar, och robots.txt ändras inte. I studien från Copy for Originals hade 12 av de 13 advokatbyråer vars webbplatser avvisade en förfrågan med en AI-sökrobots namn ingen regel i robots.txt mot just den sökroboten, och 2 av dem nämnde den avvisade sökroboten i robots.txt utan att förbjuda den.</p>
+  <h3>Hur många advokatbyråer har en llms.txt-fil?</h3>
+  <p>42 av 92, eller 46&nbsp;%, i Copy for Originals studie av personskadebyråers webbplatser i Chicago den 13 och 14 oktober 2026. Ytterligare 8 av de 92 svarade på llms.txt-adressen med en fil i robots.txt-syntax, något som förslaget till llms.txt inte definierar, och 42 hade ingen fil. Av de 42 filerna uppgav 12 att de hade genererats av Yoast SEO.</p>
 </section>
 
 <section id="sources">
@@ -310,10 +330,11 @@
     <li>Google, ”Google’s common crawlers” (Google-Extended). <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers" rel="noopener">developers.google.com</a></li>
     <li>Common Crawl, ”Frequently asked questions” (CCBot). <a href="https://commoncrawl.org/faq" rel="noopener">commoncrawl.org/faq</a></li>
     <li>RFC 9309, ”Robots Exclusion Protocol”, september 2022. <a href="https://www.rfc-editor.org/rfc/rfc9309.html" rel="noopener">rfc-editor.org</a></li>
-    <li>Internet Archive Wayback Machine, sparade kopior av robots.txt för 20 webbplatser. <a href="https://web.archive.org/" rel="noopener">web.archive.org</a></li>
+    <li>Internet Archive Wayback Machine, sparade kopior av robots.txt för 7 webbplatser. <a href="https://web.archive.org/" rel="noopener">web.archive.org</a></li>
     <li>Copy for Originals, ”Leadgenerering för personskadebyråer i Chicago: en OSINT-studie av 100 advokatbyråer”. <a href="../chicago-personskador-leadgenerering-studie/">tools.copyfororiginals.com</a></li>
   </ul>
-  <p>Så citerar du sidan: Copy for Originals, ”Blockerar advokatbyråers webbplatser AI-sökrobotar?”, 13 oktober 2026, https://tools.copyfororiginals.com/law-firm-websites-ai-crawlers-study/. Data under licensen CC BY 4.0.</p>
+  <p>Så citerar du sidan: Copy for Originals, ”Blockerar advokatbyråers webbplatser AI-sökrobotar?”, version 2, 14 oktober 2026, https://tools.copyfororiginals.com/law-firm-websites-ai-crawlers-study/. Data under licensen CC BY 4.0.</p>
+  <p>Versionshistorik: version 1, 13 oktober 2026, använde tre körningar utan kontrollnamn och redovisade att 15 av 78 webbplatser avvisade en AI-sökrobots namn. Version 2, 14 oktober 2026, gjorde om servertestet med fem körningar med mellanrum från en och samma uppkoppling, lade till Googlebot och Bingbot som kontrollnamn, lade till tre körningar från en adress i Chicago som en andra plats och läste 13 robots.txt-filer på annan väg i stället för äldre arkivkopior. Datan från version 1 finns kvar som <a href="../../law-firm-websites-ai-crawlers-study/pilot-three-runs.csv">pilot-three-runs.csv</a>.</p>
 </section>
 
 <footer>

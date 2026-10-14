@@ -1,0 +1,122 @@
+{
+ "horwitzlaw.com": {
+  "status": 200,
+  "capture": "20260312193825",
+  "bytes": 242,
+  "ctype": "text/plain"
+ },
+ "windycityinjury.com": {
+  "status": 200,
+  "capture": "20260210122550",
+  "bytes": 125,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "levinsonstefani.com": {
+  "status": 200,
+  "capture": "20250821165539",
+  "bytes": 138,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "obryanlaw.net": {
+  "status": 200,
+  "capture": "20251102034708",
+  "bytes": 171,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "mannis.com": {
+  "status": 200,
+  "capture": "20250408101443",
+  "bytes": 103,
+  "ctype": "text/plain"
+ },
+ "eamesinjurylaw.com": {
+  "status": 200,
+  "capture": "20260223072559",
+  "bytes": 124,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "scb-lawyers.com": {
+  "status": 200,
+  "capture": "20260223043823",
+  "bytes": 108,
+  "ctype": "text/plain"
+ },
+ "leonardlawgroup.net": {
+  "status": 200,
+  "capture": "20241004212151",
+  "bytes": 80,
+  "ctype": "text/plain"
+ },
+ "traumalawyers.com": {
+  "status": 200,
+  "capture": "20251201082329",
+  "bytes": 123,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "kramerinjurylaw.com": {
+  "status": 200,
+  "capture": "20240720172109",
+  "bytes": 176,
+  "ctype": "text/plain"
+ },
+ "karnsandkarns.com": {
+  "status": 200,
+  "capture": "20260403232744",
+  "bytes": 405,
+  "ctype": "text/plain"
+ },
+ "anesilaw.com": {
+  "status": 200,
+  "capture": "20260223143031",
+  "bytes": 118,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "albrechtinjurylaw.com": {
+  "status": 200,
+  "capture": "20240113141230",
+  "bytes": 127,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "gwclaw.com": {
+  "status": 200,
+  "capture": "20260102180032",
+  "bytes": 87,
+  "ctype": "text/plain"
+ },
+ "kfeej.com": {
+  "status": 200,
+  "capture": "20260507001938",
+  "bytes": 115,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "geraldfconnorlaw.com": {
+  "status": 200,
+  "capture": "20240403080434",
+  "bytes": 178,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "mcnabolalaw.com": {
+  "status": 200,
+  "capture": "20251009123942",
+  "bytes": 508,
+  "ctype": "text/plain"
+ },
+ "thomaslawchicago.com": {
+  "status": 200,
+  "capture": "20251101012722",
+  "bytes": 113,
+  "ctype": "text/plain"
+ },
+ "romakerlaw.com": {
+  "status": 200,
+  "capture": "20260105061620",
+  "bytes": 69,
+  "ctype": "text/plain; charset=utf-8"
+ },
+ "driscoll-lawgroup.com": {
+  "status": 200,
+  "capture": "20251101032032",
+  "bytes": 80,
+  "ctype": "text/plain"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "note": "Second route: files requested on 2026-10-13 through a web fetch service after the direct request was refused. robots.txt files were transcribed verbatim; llms.txt was classified from the returned text.",
+ "robots_txt": [
+  "albrechtinjurylaw.com",
+  "driscoll-lawgroup.com",
+  "geraldfconnorlaw.com",
+  "karnsandkarns.com",
+  "kramerinjurylaw.com",
+  "leonardlawgroup.net",
+  "mannis.com",
+  "mcnabolalaw.com",
+  "romakerlaw.com",
+  "scb-lawyers.com",
+  "thomaslawchicago.com"
+ ],
+ "llms_txt": {
+  "karnsandkarns.com": {
+   "llms_txt": "yes",
+   "generator": "All in One SEO",
+   "approx_bytes": 482181
+  },
+  "scb-lawyers.com": {
+   "llms_txt": "yes",
+   "generator": "not stated"
+  },
+  "mannis.com": {
+   "llms_txt": "yes",
+   "generator": "not stated"
+  },
+  "kramerinjurylaw.com": {
+   "llms_txt": "yes",
+   "generator": "not stated"
+  },
+  "geraldfconnorlaw.com": {
+   "llms_txt": "yes",
+   "generator": "Yoast SEO"
+  },
+  "thomaslawchicago.com": {
+   "llms_txt": "yes",
+   "generator": "not stated"
+  },
+  "briskmanandbriskman.com": {
+   "llms_txt": "yes",
+   "generator": "Rank Math",
+   "approx_bytes": 2085322
+  },
+  "leonardlawgroup.net": {
+   "llms_txt": "no"
+  },
+  "albrechtinjurylaw.com": {
+   "llms_txt": "no"
+  },
+  "mcnabolalaw.com": {
+   "llms_txt": "no"
+  },
+  "romakerlaw.com": {
+   "llms_txt": "no"
+  },
+  "driscoll-lawgroup.com": {
+   "llms_txt": "no"
+  }
+ },
+ "us_exit": {
+  "gwclaw.com": {
+   "llms_status": 200,
+   "llms_ctype": "text/plain; charset=utf-8"
+  },
+  "horwitzlaw.com": {
+   "llms_status": 200,
+   "llms_ctype": "text/plain"
+  }
+ },
+ "note_us_exit": "Files read on 2026-10-13 during a short pass through a VPN exit in Chicago, for two sites that refused the request from Sweden."
+}

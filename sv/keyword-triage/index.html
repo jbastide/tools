@@ -548,7 +548,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="columns">
   <h2>De här rapportkolumnerna behöver Keyword Triage</h2>
-  <p>Keyword Triage behöver tre kolumner: Keyword, Cost och Conversions. Med de valfria kolumnerna blir råden mer precisa. Kolumnnamnen känns igen automatiskt, och du kan koppla om vilken kolumn som helst under Kolumnkoppling.</p>
+  <p>Keyword Triage behöver tre kolumner: Keyword, Cost och Conversions. Med de valfria kolumnerna blir råden mer precisa. Kolumnnamnen känns igen automatiskt, både i engelska och svenska exporter från Google Ads (Sökord, Kostnad, Konverteringar), och du kan koppla om vilken kolumn som helst under Kolumnkoppling.</p>
   <div class="tablewrap">
   <table class="ref">
     <caption>Kolumner som Keyword Triage läser</caption>
@@ -645,17 +645,17 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 /* ---------- Column definitions ---------- */
 const FIELDS = [
-  {k:'keyword',  label:'Keyword', req:true,  rx:[/^keyword$/,/^search keyword$/,/^keyword text$/,/^keyword\/target$/,/^search term$/,/^query$/,/keyword/]},
-  {k:'cost',     label:'Cost / Spend', req:true, rx:[/^cost$/,/^spend$/,/^cost \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/]},
-  {k:'conv',     label:'Conversions', req:true, rx:[/^conversions$/,/^conv\.?$/,/^purchases$/,/^results$/,/^all conv\.?$/,/^conversions/]},
-  {k:'value',    label:'Conversion value / Revenue', rx:[/^conv\. value$/,/^conversion value$/,/^total conv\. value$/,/^revenue$/,/^conv\. value \(.*\)/,/^all conv\. value$/,/^purchase.*value/,/conv.*value/,/revenue/]},
-  {k:'clicks',   label:'Clicks', rx:[/^clicks$/,/^link clicks$/,/clicks/]},
-  {k:'impr',     label:'Impressions', rx:[/^impr\.?$/,/^impressions$/,/impr/]},
-  {k:'match',    label:'Match type', rx:[/^match type$/,/^keyword match type$/,/match/]},
-  {k:'campaign', label:'Campaign', rx:[/^campaign$/,/^campaign name$/]},
-  {k:'adgroup',  label:'Ad group', rx:[/^ad group$/,/^ad group name$/,/^ad set name$/]},
-  {k:'lisBudget',label:'Search lost IS (budget)', rx:[/lost is \(budget\)/,/lost.*budget/]},
-  {k:'lisRank',  label:'Search lost IS (rank)', rx:[/lost is \(rank\)/,/lost.*rank/]},
+  {k:'keyword',  label:'Keyword', req:true,  rx:[/^(keyword|sökord)$/,/^search keyword$/,/^keyword text$/,/^keyword\/target$/,/^(search term|sökterm)$/,/^query$/,/keyword/,/^sökord/]},
+  {k:'cost',     label:'Cost / Spend', req:true, rx:[/^(cost|kostnad)$/,/^spend$/,/^(cost|kostnad) \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/,/^kostnad(?!\s*\/)/]},
+  {k:'conv',     label:'Conversions', req:true, rx:[/^(conversions|konverteringar)$/,/^(conv|konv)\.?$/,/^purchases$/,/^results$/,/^(all conv|alla konv)\.?$/,/^conversions/,/^konverteringar(?!svärde)/]},
+  {k:'value',    label:'Conversion value / Revenue', rx:[/^(conv\. value|konv\.? ?värde)$/,/^(conversion value|konverteringsvärde)$/,/^total conv\. value$/,/^revenue$/,/^conv\. value \(.*\)/,/^all conv\. value$/,/^purchase.*value/,/conv.*value/,/revenue/,/konv.*värde/,/intäkt/]},
+  {k:'clicks',   label:'Clicks', rx:[/^(clicks|klick)$/,/^link clicks$/,/clicks/]},
+  {k:'impr',     label:'Impressions', rx:[/^(impr|visn)\.?$/,/^(impressions|visningar)$/,/impr/]},
+  {k:'match',    label:'Match type', rx:[/^(match type|matchningstyp)$/,/^keyword match type$/,/match/]},
+  {k:'campaign', label:'Campaign', rx:[/^(campaign|kampanj)$/,/^campaign name$/]},
+  {k:'adgroup',  label:'Ad group', rx:[/^(ad group|annonsgrupp)$/,/^ad group name$/,/^ad set name$/]},
+  {k:'lisBudget',label:'Search lost IS (budget)', rx:[/lost is \(budget\)/,/lost.*budget/,/förl.*budget/]},
+  {k:'lisRank',  label:'Search lost IS (rank)', rx:[/lost is \(rank\)/,/lost.*rank/,/förl.*rank/]},
 ];
 const BUCKETS = [
   {k:'cut',   t:'Stryk',        d:'Går med förlust'},
@@ -833,8 +833,11 @@ function detectCurrency(rows, col){
     if (m) return m[0];
   }
   const h = String(S.headers[col]||'').match(/\((\w{3})\)/);
-  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$'};
-  return h && codes[h[1].toUpperCase()] || '$';
+  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$',SEK:'SEK '};
+  if (h && codes[h[1].toUpperCase()]) return codes[h[1].toUpperCase()];
+  const cc = S.headers.findIndex(x=>/currency|valuta/i.test(x));
+  if (cc>-1){ const v=String((rows[S.headerIdx+1]||[])[cc]||'').trim().toUpperCase(); if (codes[v]) return codes[v]; }
+  return '$';
 }
 const fmtMoney = (n, dp) => {
   if (!isFinite(n)) return '—';

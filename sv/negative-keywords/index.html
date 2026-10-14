@@ -612,7 +612,7 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 <section id="columns">
   <h2>Vilka kolumner i rapporten behöver Negative Keyword Finder?</h2>
-  <p>Negative Keyword Finder behöver tre kolumner: Search term, Cost och Conversions. Kolumnnamnen matchas automatiskt, och du kan koppla om vilken kolumn som helst under Kolumner.</p>
+  <p>Negative Keyword Finder behöver tre kolumner: Search term, Cost och Conversions. Kolumnnamnen matchas automatiskt, både i engelska och svenska exporter från Google Ads (Sökterm, Kostnad, Konverteringar), och du kan koppla om vilken kolumn som helst under Kolumner.</p>
   <div class="tablewrap">
   <table>
     <caption>Kolumner som Negative Keyword Finder läser</caption>
@@ -720,15 +720,15 @@ footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;j
 
 /* ---------- Columns ---------- */
 const FIELDS = [
-  {k:'term',     label:'Sökterm', req:true, rx:[/^search term$/,/^search terms?$/,/^search query$/,/^query$/,/^search term text$/,/search term/,/query/]},
-  {k:'cost',     label:'Kostnad', req:true, rx:[/^cost$/,/^spend$/,/^cost \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/]},
-  {k:'conv',     label:'Konverteringar', req:true, rx:[/^conversions$/,/^conv\.?$/,/^all conv\.?$/,/^purchases$/,/^conversions/]},
-  {k:'clicks',   label:'Klick', rx:[/^clicks$/,/clicks/]},
-  {k:'impr',     label:'Visningar', rx:[/^impr\.?$/,/^impressions$/,/impr/]},
-  {k:'keyword',  label:'Sökord', rx:[/^keyword$/,/^keyword text$/,/^search keyword$/]},
-  {k:'status',   label:'Added/Excluded', rx:[/^added\/excluded$/,/added.*excluded/,/^status$/]},
-  {k:'campaign', label:'Kampanj', rx:[/^campaign$/,/^campaign name$/]},
-  {k:'adgroup',  label:'Annonsgrupp', rx:[/^ad group$/,/^ad group name$/]},
+  {k:'term',     label:'Sökterm', req:true, rx:[/^(search term|sökterm)$/,/^(search terms?|söktermer)$/,/^search query$/,/^query$/,/^search term text$/,/search term/,/query/,/sökterm/]},
+  {k:'cost',     label:'Kostnad', req:true, rx:[/^(cost|kostnad)$/,/^spend$/,/^(cost|kostnad) \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/,/^kostnad(?!\s*\/)/]},
+  {k:'conv',     label:'Konverteringar', req:true, rx:[/^(conversions|konverteringar)$/,/^(conv|konv)\.?$/,/^(all conv|alla konv)\.?$/,/^purchases$/,/^conversions/,/^konverteringar(?!svärde)/]},
+  {k:'clicks',   label:'Klick', rx:[/^(clicks|klick)$/,/clicks/]},
+  {k:'impr',     label:'Visningar', rx:[/^(impr|visn)\.?$/,/^(impressions|visningar)$/,/impr/]},
+  {k:'keyword',  label:'Sökord', rx:[/^(keyword|sökord)$/,/^keyword text$/,/^search keyword$/]},
+  {k:'status',   label:'Added/Excluded', rx:[/^added\/excluded$/,/added.*excluded/,/^status$/,/tillag.*utesl/]},
+  {k:'campaign', label:'Kampanj', rx:[/^(campaign|kampanj)$/,/^campaign name$/]},
+  {k:'adgroup',  label:'Annonsgrupp', rx:[/^(ad group|annonsgrupp)$/,/^ad group name$/]},
 ];
 const STOP = new Set('a an the for to of in on at by with and or is are be it its my me i you your from vs this that as our we us'.split(' '));
 // Too broad to block alone, but meaningful in a phrase: "how to", "near me", "what is".
@@ -786,7 +786,7 @@ function headerScore(rows){
     let score=0;
     FIELDS.forEach(f => { if (cells.some(c => f.rx.slice(0,3).some(r=>r.test(c)))) score += f.req?3:1; });
     // A keyword report has Keyword + Cost + Conversions too; count it so we can explain the mix-up.
-    if (cells.includes('keyword') || cells.includes('search keyword')) score += 1;
+    if (cells.includes('keyword') || cells.includes('search keyword') || cells.includes('sökord')) score += 1;
     if (score>bestScore){ bestScore=score; best=i; }
   }
   return [best, bestScore];
@@ -893,10 +893,10 @@ function detectCurrency(){
     const m = String(S.rows[i][col]||'').match(/R\$|A\$|C\$|[$€£¥₹]/);
     if (m) return m[0];
   }
-  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$'};
+  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$',SEK:'SEK '};
   const h = String(S.headers[col]||'').match(/\((\w{3})\)/);
   if (h && codes[h[1].toUpperCase()]) return codes[h[1].toUpperCase()];
-  const cc = S.headers.findIndex(x=>/currency/i.test(x));
+  const cc = S.headers.findIndex(x=>/currency|valuta/i.test(x));
   if (cc>-1){ const v=String((S.rows[S.headerIdx+1]||[])[cc]||'').trim().toUpperCase(); if (codes[v]) return codes[v]; }
   return '$';
 }
@@ -941,6 +941,13 @@ function detectDays(){
     const m = text.match(p);
     if (m){ const a=Date.parse(m[1]), b=Date.parse(m[2]); if (isFinite(a)&&isFinite(b)&&b>=a) return Math.round((b-a)/864e5)+1; }
   }
+  // Day-month-year with month names, as in Swedish ("1 juli 2026 - 30 september 2026") or UK exports.
+  const MON={jan:0,feb:1,mar:2,apr:3,maj:4,may:4,jun:5,jul:6,aug:7,sep:8,okt:9,oct:9,nov:10,dec:11};
+  const d = text.match(/(\d{1,2}) ([a-zåäö]{3})[a-zåäö]*\.? (\d{4})\s*(?:-|–|—|to|till)\s*(\d{1,2}) ([a-zåäö]{3})[a-zåäö]*\.? (\d{4})/i);
+  if (d && MON[d[2].toLowerCase()]!=null && MON[d[5].toLowerCase()]!=null){
+    const a=Date.UTC(+d[3],MON[d[2].toLowerCase()],+d[1]), b=Date.UTC(+d[6],MON[d[5].toLowerCase()],+d[4]);
+    if (b>=a) return Math.round((b-a)/864e5)+1;
+  }
   return null;
 }
 
@@ -957,14 +964,14 @@ function buildTerms(){
     const kw = cleanKw(get(r,'keyword'));
     if (kw && kw!=='--'){ kwExact.add(kw); tokenize(kw).forEach(t=>kwTokens.add(t)); }
     const st = norm(get(r,'status'));
-    if (/excluded/.test(st)){ S.skipped.excluded++; continue; }
+    if (/excluded|utesl/.test(st)){ S.skipped.excluded++; continue; }
     const text = norm(raw);
     let x = by.get(text);
     if (!x){ x={text, display:raw, cost:0, conv:0, clicks:0, impr:0, camps:new Set(), added:false}; by.set(text,x); }
     x.cost += num(get(r,'cost')); x.conv += num(get(r,'conv'));
     x.clicks += num(get(r,'clicks')); x.impr += num(get(r,'impr'));
     const c = String(get(r,'campaign')||'').trim(); if (c && c!=='--') x.camps.add(c);
-    if (/^added/.test(st)) x.added = true;
+    if (/^(added|tillag)/.test(st)) x.added = true;
   }
   const terms = [...by.values()];
   terms.forEach(x=>{
@@ -1097,7 +1104,7 @@ function recompute(resetDefaults){
   const missing = FIELDS.filter(f=>f.req && S.map[f.k]<0);
   const err=$('maperr');
   if (missing.length){
-    const kwReport = S.map.term<0 && S.headers.some(h=>/^(search )?keyword$/i.test(h.trim()));
+    const kwReport = S.map.term<0 && S.headers.some(h=>/^((search )?keyword|sökord)$/i.test(h.trim()));
     err.innerHTML = kwReport
       ? `Det här ser ut att vara en <b>sökordsrapport</b>. Negativa sökord hittar du i <b>söktermsrapporten</b>, i Google Ads under <span lang="en">Campaigns › Insights and reports › Search terms</span>. Om filen ändå innehåller söktermer väljer du den kolumnen under Kolumner.`
       : `Hittar inte: ${missing.map(f=>f.label).join(', ')}. Välj rätt kolumner under Kolumner.`;

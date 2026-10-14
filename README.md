@@ -43,31 +43,100 @@ vanilla JS that links the shared [`site.css`](site.css): no build step, no depen
 | How to write content that LLMs retrieve and cite | [`rag-friendly-content/`](rag-friendly-content/) | What answer engines do with a page, each AEO practice rated by evidence, and a 12-point checklist. |
 | HIPAA-compliant conversion tracking for Google Ads | [`hipaa-google-ads-conversions/`](hipaa-google-ads-conversions/) | Healthcare tracking platforms, enterprise CDPs, server-side GTM, offline conversion imports and HIPAA call tracking compared by price, setup effort and fit for practices without IT staff, with dated sources and a section on what couldn't be verified. Educational only, not legal advice. |
 
-## Service pages (Swedish and English)
+## Swedish and English
 
-Pages for Swedish companies. Each one exists twice, as separate static URLs: Swedish under `sv/`, English at the root.
+Every page exists twice, as two static URLs: English at the root, Swedish under `sv/`. The English
+homepage is [`index.html`](index.html) and the Swedish homepage is [`sv/index.html`](sv/index.html); each
+lists the same tools, services, studies and guides in its own language.
+
+### Service pages for Swedish companies
 
 | Page | Swedish | English | What it covers |
 | --- | --- | --- | --- |
+| Digital marketing services (overview) | [`sv/digital-marknadsforing/`](sv/digital-marknadsforing/) | [`digital-marketing-services-sweden/`](digital-marketing-services-sweden/) | The offer in one place: the four services, a table from common problems to the right page, key facts (location, meetings, prices, first step), the free tools and the contact section. The Swedish page is the "Tjänster" item in the Swedish top nav. Until October 13, 2026 this content lived at `sv/`. |
 | Google Ads for lead generation in Sweden | [`sv/google-ads-leadgenerering/`](sv/google-ads-leadgenerering/) | [`google-ads-lead-generation-sweden/`](google-ads-lead-generation-sweden/) | Managed Google Ads for Swedish businesses from Tidaholm: stopping the bleeding, cleaning up a messy account, visibility, clicks without inquiries, digital marknadsföring, price, budget, in-person vs remote, consent and VAT. |
 | Google Ads in the USA for Swedish companies | [`sv/google-ads-usa/`](sv/google-ads-usa/) | [`google-ads-usa-for-swedish-companies/`](google-ads-usa-for-swedish-companies/) | US lead generation from Sweden: differences from the Swedish market, where to start, test budgets, time zones and who answers, measurement, price. |
 | English copywriting for Swedish companies | [`sv/engelsk-copywriting-usa/`](sv/engelsk-copywriting-usa/) | [`english-copywriting-for-swedish-companies/`](english-copywriting-for-swedish-companies/) | American English sales copy: Swedish habits in English text, translation vs copywriting, what a US buyer looks for, US advertising rules, price and process. |
-| SEO and AEO for Swedish companies | [`sv/seo-sokmotoroptimering/`](sv/seo-sokmotoroptimering/) | [`seo-aeo-for-swedish-companies/`](seo-aeo-for-swedish-companies/) | Agentic frameworks for original, fact-based content from open sources: what companies want from AEO (Reddit review), SEO vs AEO, Google's position compared with independent evidence, getting cited, measuring, whether it pays, the seven phases, programmatic SEO vs original research, examples, pricing on request. |
-| Swedish hub | [`sv/`](sv/) | the root index | Overview of the four services in Swedish, plus the tools described in Swedish. |
+| SEO and AEO for Swedish companies | [`sv/seo-sokmotoroptimering/`](sv/seo-sokmotoroptimering/) | [`seo-aeo-for-swedish-companies/`](seo-aeo-for-swedish-companies/) | Agentic frameworks for original, fact-based content from open sources: SEO vs AEO, why a company is invisible, the seven phases, who does what, the checking phase, examples from this site, pricing on request. |
+
+### Where each page lives in Swedish
+
+Tools keep their English product names and slugs under `sv/`. Guides and studies have Swedish slugs.
+
+| English | Swedish |
+| --- | --- |
+| [`google-ads-lead-generation-sweden/`](google-ads-lead-generation-sweden/) | [`sv/google-ads-leadgenerering/`](sv/google-ads-leadgenerering/) |
+| [`google-ads-usa-for-swedish-companies/`](google-ads-usa-for-swedish-companies/) | [`sv/google-ads-usa/`](sv/google-ads-usa/) |
+| [`english-copywriting-for-swedish-companies/`](english-copywriting-for-swedish-companies/) | [`sv/engelsk-copywriting-usa/`](sv/engelsk-copywriting-usa/) |
+| [`seo-aeo-for-swedish-companies/`](seo-aeo-for-swedish-companies/) | [`sv/seo-sokmotoroptimering/`](sv/seo-sokmotoroptimering/) |
+| [`digital-marketing-services-sweden/`](digital-marketing-services-sweden/) | [`sv/digital-marknadsforing/`](sv/digital-marknadsforing/) |
+| [`script-timer/`](script-timer/) | [`sv/script-timer/`](sv/script-timer/) |
+| [`script-timer/study/`](script-timer/study/) | [`sv/script-timer/studie/`](sv/script-timer/studie/) |
+| [`keyword-triage/`](keyword-triage/) | [`sv/keyword-triage/`](sv/keyword-triage/) |
+| [`negative-keywords/`](negative-keywords/) | [`sv/negative-keywords/`](sv/negative-keywords/) |
+| [`search-checklist/`](search-checklist/) | [`sv/search-checklist/`](sv/search-checklist/) |
+| [`target-cpa-roas/`](target-cpa-roas/) | [`sv/target-cpa-roas/`](sv/target-cpa-roas/) |
+| [`ppc-troubleshooter/`](ppc-troubleshooter/) | [`sv/ppc-troubleshooter/`](sv/ppc-troubleshooter/) |
+| [`ppc-gumball-rule/`](ppc-gumball-rule/) | [`sv/ppc-gumball-rule/`](sv/ppc-gumball-rule/) |
+| [`82-percent-law-firms-paid-search-roi/`](82-percent-law-firms-paid-search-roi/) | [`sv/82-procent-advokatbyraer-betald-sok/`](sv/82-procent-advokatbyraer-betald-sok/) |
+| [`can-lawyers-bid-on-competitor-names-google-ads/`](can-lawyers-bid-on-competitor-names-google-ads/) | [`sv/far-advokater-bjuda-pa-konkurrenters-namn-google-ads/`](sv/far-advokater-bjuda-pa-konkurrenters-namn-google-ads/) |
+| [`chicago-personal-injury-lead-gen-study/`](chicago-personal-injury-lead-gen-study/) | [`sv/chicago-personskador-leadgenerering-studie/`](sv/chicago-personskador-leadgenerering-studie/) |
+| [`criminal-defense-google-ads-budget/`](criminal-defense-google-ads-budget/) | [`sv/brottmal-google-ads-budget/`](sv/brottmal-google-ads-budget/) |
+| [`does-google-record-calls-to-law-firms/`](does-google-record-calls-to-law-firms/) | [`sv/spelar-google-in-samtal-till-advokatbyraer/`](sv/spelar-google-in-samtal-till-advokatbyraer/) |
+| [`estate-planning-google-ads-budget/`](estate-planning-google-ads-budget/) | [`sv/arvsplanering-google-ads-budget/`](sv/arvsplanering-google-ads-budget/) |
+| [`family-law-google-ads-budget/`](family-law-google-ads-budget/) | [`sv/familjeratt-google-ads-budget/`](sv/familjeratt-google-ads-budget/) |
+| [`google-ads-august-17-update-vs-hormuz/`](google-ads-august-17-update-vs-hormuz/) | [`sv/google-ads-17-augusti-eller-hormuz/`](sv/google-ads-17-augusti-eller-hormuz/) |
+| [`google-ads-for-law-firms/`](google-ads-for-law-firms/) | [`sv/google-ads-for-advokatbyraer/`](sv/google-ads-for-advokatbyraer/) |
+| [`haiku-vs-sonnet-vs-opus-research-study/`](haiku-vs-sonnet-vs-opus-research-study/) | [`sv/haiku-sonnet-opus-researchstudie/`](sv/haiku-sonnet-opus-researchstudie/) |
+| [`healthcare-ppc-for-law-firms/`](healthcare-ppc-for-law-firms/) | [`sv/vard-ppc-for-advokatbyraer/`](sv/vard-ppc-for-advokatbyraer/) |
+| [`hipaa-google-ads-conversions/`](hipaa-google-ads-conversions/) | [`sv/hipaa-google-ads-konverteringar/`](sv/hipaa-google-ads-konverteringar/) |
+| [`how-much-do-legal-marketing-agencies-charge/`](how-much-do-legal-marketing-agencies-charge/) | [`sv/vad-tar-marknadsforingsbyraer-for-advokater-betalt/`](sv/vad-tar-marknadsforingsbyraer-for-advokater-betalt/) |
+| [`law-firm-google-ads-agency-scorecard/`](law-firm-google-ads-agency-scorecard/) | [`sv/advokatbyra-google-ads-byra-poangkort/`](sv/advokatbyra-google-ads-byra-poangkort/) |
+| [`law-firm-google-ads-budget/`](law-firm-google-ads-budget/) | [`sv/advokatbyra-google-ads-budget/`](sv/advokatbyra-google-ads-budget/) |
+| [`law-firm-google-ads-faq/`](law-firm-google-ads-faq/) | [`sv/advokatbyra-google-ads-fragor/`](sv/advokatbyra-google-ads-fragor/) |
+| [`law-firm-websites-ai-crawlers-study/`](law-firm-websites-ai-crawlers-study/) | [`sv/advokatbyraers-webbplatser-ai-sokrobotar-studie/`](sv/advokatbyraers-webbplatser-ai-sokrobotar-studie/) |
+| [`lead-generation-for-lawyers/`](lead-generation-for-lawyers/) | [`sv/leadgenerering-for-advokater/`](sv/leadgenerering-for-advokater/) |
+| [`local-services-ads-vs-google-ads-for-lawyers/`](local-services-ads-vs-google-ads-for-lawyers/) | [`sv/local-services-ads-eller-google-ads-for-advokater/`](sv/local-services-ads-eller-google-ads-for-advokater/) |
+| [`personal-injury-google-ads-budget/`](personal-injury-google-ads-budget/) | [`sv/personskador-google-ads-budget/`](sv/personskador-google-ads-budget/) |
+| [`personal-injury-google-ads/`](personal-injury-google-ads/) | [`sv/personskador-google-ads/`](sv/personskador-google-ads/) |
+| [`personal-injury-lawyer-leads/`](personal-injury-lawyer-leads/) | [`sv/leads-for-personskadeadvokater/`](sv/leads-for-personskadeadvokater/) |
+| [`ppc-no-conversions-study/`](ppc-no-conversions-study/) | [`sv/google-ads-inga-konverteringar-studie/`](sv/google-ads-inga-konverteringar-studie/) |
+| [`rag-friendly-content/`](rag-friendly-content/) | [`sv/innehall-som-llm-hamtar-och-citerar/`](sv/innehall-som-llm-hamtar-och-citerar/) |
+| [`should-ai-manage-google-ads/`](should-ai-manage-google-ads/) | [`sv/ska-ai-skota-google-ads/`](sv/ska-ai-skota-google-ads/) |
+| [`track-signed-cases-google-ads/`](track-signed-cases-google-ads/) | [`sv/spara-tecknade-arenden-google-ads/`](sv/spara-tecknade-arenden-google-ads/) |
 
 ### Conventions for bilingual pages
 
 - One static file per language, never a JavaScript toggle or `data-en` attributes: AI crawlers don't run
   JavaScript, so text swapped in by script is invisible to them.
-- Swedish pages live under `sv/` with Swedish slugs and `<html lang="sv">`; the English page sits at the
-  root with an English slug. `sv/` pages link the stylesheet as `../../site.css`.
+- Swedish pages live under `sv/` with `<html lang="sv">` and link the stylesheet one level further up
+  (`../../site.css`). The English page sits at the root.
 - Each page links its counterpart with `<link rel="alternate" hreflang>` (sv, en, and x-default pointing at
-  the English page) and with the visible `.lang-switch` in the `.pagebar` (both in `site.css`).
-- The two versions carry the same facts, numbers, sources and dates. Change both in the same commit.
+  the English page) and with the visible `.lang-switch`, which is the last item in the `.site-nav` on every
+  page. A Swedish page has a self-referencing canonical.
+- The top nav is in the page's language. On Swedish pages "Tjänster" goes to `sv/digital-marknadsforing/`
+  and "Verktyg" to `sv/`; the other items go to copyfororiginals.com, which is in English.
+- Links on a Swedish page go to Swedish pages. Data files, scripts and run folders are not duplicated: a
+  Swedish study links to the files in the English page's folder (`../../<english-slug>/data.csv`).
+- The two versions carry the same facts, numbers, sources and dates, and the same HTML structure: same
+  tags, same `id`s (the translated guides and tools keep the English `id`s so anchors match). Change both
+  in the same commit. Two pages are generated (`haiku-vs-sonnet-vs-opus-research-study/` by its
+  `method/build.py`, and the three practice-area budget pages by one script): their Swedish pages are
+  translations of the output, so a rebuild that changes text means the same edit in `sv/`.
+- Word-for-word quotations from English-language sources stay in English on the Swedish page, wrapped in
+  `<span lang="en">`, usually followed by a short Swedish gloss that starts with "ungefär:". They were
+  checked against the sources in English; a translated quotation would no longer be one.
+- Google Ads interface labels and tool names stay in English on Swedish pages. Dollar amounts are written
+  `5&nbsp;000 USD`. In the tools, numbers printed by JavaScript keep the script's own formatting (`$5,000`).
+- In the tools' JavaScript only the text shown to the user is translated. Ids, keys, CSS classes, report
+  column names and the regular expressions that recognise uploaded reports are identical in both versions.
 - Every question `<h2>`/`<h3>` and the paragraph under it is mirrored word for word in the FAQPage JSON-LD.
-- Facts about the business (price, minimum fee, meeting area, managed ad spend) are repeated on all of
-  these pages and in `llms.txt`; a change to one of them means a search across `sv/`, the three English
-  pages, the index cards and `llms.txt`.
+- Swedish pages carry no note about how the Swedish text was produced.
+- Facts about the business (price, minimum fee, meeting area, managed ad spend) are repeated on the
+  service pages in both languages, both homepages and `llms.txt`; a change to one of them means a search
+  across all of them.
+- A new page needs both versions, a card on both homepages, two `sitemap.xml` entries and its `llms.txt`
+  entry.
 
 ## Deploying
 
@@ -108,6 +177,7 @@ python3 -m http.server 8000
 - Include a `<title>`, a meta description, and a `SoftwareApplication` JSON-LD block.
 - Light and dark come from `site.css` via `prefers-color-scheme`; check both.
 - Add a row to the table above, a card to the root `index.html`, and entries to `sitemap.xml` and `llms.txt`.
+- Add the Swedish version under `sv/` (see "Conventions for bilingual pages") and its card on `sv/index.html`.
 
 ### Site style
 

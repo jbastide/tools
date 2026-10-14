@@ -1,0 +1,1311 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy guarantee: this policy forbids the page from contacting ANY server.
+     No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Keyword Triage: gratis lönsamhetskontroll av sökord i Google Ads (körs privat i webbläsaren)</title>
+<meta name="description" content="Keyword Triage är ett gratisverktyg som kontrollerar hur lönsamma dina sökord i Google Ads och Microsoft Ads är. Läs in en sökordsrapport så får varje sökord en av bedömningarna Stryk, Sänk budet, Behåll, Skala upp eller Behöver mer data, utifrån ditt mål-CPA eller mål-ROAS. Allt körs i webbläsaren, och rapporten laddas aldrig upp.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/keyword-triage/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/keyword-triage/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/keyword-triage/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/keyword-triage/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.copyfororiginals.com/sv/keyword-triage/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Keyword Triage: gratis lönsamhetskontroll av sökord i Google Ads">
+<meta property="og:description" content="Läs in en sökordsrapport från Google Ads eller Microsoft Ads och se vilka sökord som går med förlust, vilka du ska behålla och vilka du ska skala upp. Allt körs i webbläsaren. Inget laddas upp.">
+<meta property="article:modified_time" content="2026-10-03">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8E%3C/text%3E%3C/svg%3E">
+<!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
+     keep the two in sync when either changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tools.copyfororiginals.com/sv/keyword-triage/#app",
+      "name": "Keyword Triage",
+      "alternateName": [
+        "Lönsamhetskontroll av sökord i Google Ads",
+        "Lönsamhetsanalys av PPC-sökord",
+        "Verktyg som hittar olönsamma sökord"
+      ],
+      "url": "https://tools.copyfororiginals.com/sv/keyword-triage/",
+      "description": "Keyword Triage är ett gratisverktyg som körs i webbläsaren och kontrollerar hur lönsamma sökorden i Google Ads och Microsoft Ads är. Det läser en sökordsrapport (CSV, TSV eller Excel .xlsx) och ger varje sökord bedömningen Stryk, Sänk budet, Behåll, Skala upp eller Behöver mer data genom att jämföra sökordets CPA eller ROAS med ditt mål. Rapporten bearbetas helt i webbläsaren och laddas aldrig upp.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "PPC keyword analysis",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Kräver JavaScript. Körs helt i webbläsaren.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-10-03",
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "publisher": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "featureList": [
+        "Läser sökords- eller söktermsrapporter från Google Ads och Microsoft Ads i CSV, TSV, UTF-16-text eller Excel (.xlsx)",
+        "Hittar kolumnerna automatiskt, och du kan ändra valet själv",
+        "Bedömer varje sökord mot ett mål-CPA eller mål-ROAS som du anger innan du läser in rapporten",
+        "Stryker sökord utan konverteringar när kostnaden passerar en gräns (standard: 1,5 gånger mål-CPA)",
+        "Använder Search lost IS (budget) och Search lost IS (rank) för att visa om budgeten eller buden håller tillbaka ett lönsamt sökord",
+        "Uppskattar kostnaden över målet för sökord med bedömningen Stryk eller Sänk budet",
+        "Exporterar resultatet till CSV och kopierar Stryk-listan som negativa sökord med exakt matchning",
+        "En Content-Security-Policy blockerar alla nätverksanrop utom webbplatsens egen stilmall och typsnitt, så rapporten kan inte lämna sidan"
+      ],
+      "inLanguage": "sv"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tools.copyfororiginals.com/sv/keyword-triage/#page",
+      "url": "https://tools.copyfororiginals.com/sv/keyword-triage/",
+      "name": "Keyword Triage: gratis lönsamhetskontroll av sökord i Google Ads",
+      "inLanguage": "sv",
+      "dateModified": "2026-10-03",
+      "mainEntity": {
+        "@id": "https://tools.copyfororiginals.com/sv/keyword-triage/#app"
+      },
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Verktyg",
+            "item": "https://tools.copyfororiginals.com/sv/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Keyword Triage",
+            "item": "https://tools.copyfororiginals.com/sv/keyword-triage/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/sv/keyword-triage/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vad är en bra CPA för sökord i Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En bra CPA är en CPA som ligger under din break-even-CPA, alltså bruttovinsten på en konvertering. Om en försäljning ger 200 USD i bruttovinst är alla sökord med en CPA under 200 USD lönsamma före omkostnader. Keyword Triage ber om din break-even-CPA eller ditt mål-CPA innan du läser in en rapport, eftersom varje bedömning görs mot det talet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur räknar jag ut break-even-ROAS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Break-even-ROAS är 1 delat med bruttomarginalen. En produkt med 40 % bruttomarginal har en break-even-ROAS på 2,5 (1 ÷ 0,40). Det betyder att 1 USD i annonskostnad måste ge 2,50 USD i intäkter för att täcka produktkostnaderna. Ange det i Keyword Triage som ett mål-ROAS på 2,5."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "När ska jag pausa ett sökord utan konverteringar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pausa ett sökord utan konverteringar när det har kostat mer än du skulle betala för en konvertering, plus lite marginal för otur. Keyword Triage använder 1,5× ditt mål-CPA som standardgräns för att stryka, så med ett mål-CPA på 50 USD stryks ett sökord när det har kostat 75 USD utan att ge någon konvertering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur mycket data behövs innan jag kan bedöma ett sökord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Använd 60 till 90 dagars data, så har de flesta sökord tillräckligt många klick för att kunna bedömas. Keyword Triage låter ett sökord ligga kvar i Behöver mer data tills det har nått minsta antal klick. Som standard är det ungefär så många klick som väntas ge 1,5 konverteringar (1,5 ÷ din konverteringsgrad, mellan 10 och 100 klick)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fungerar Keyword Triage med Microsoft Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Keyword Triage läser sökordsrapporter från Microsoft Ads (tidigare Bing Ads) i CSV- eller Excel-format och känner igen Microsofts kolumnnamn, till exempel Spend, Revenue och Impression share lost to budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan Keyword Triage ändra bud eller pausa sökord i mitt konto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. Keyword Triage kopplar aldrig upp sig mot Google Ads eller Microsoft Ads. Verktyget läser bara filen du ger det, och alla ändringar i annonskontot gör du själv."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Är Keyword Triage gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Keyword Triage är gratis, kräver varken konto eller registrering och du kan använda det hur mycket du vill."
+          }
+        }
+      ],
+      "inLanguage": "sv"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../site.css">
+<style>
+:root{
+  --accent-ink:var(--on-accent);
+  --scale:var(--moss); --scale-bg:var(--moss-bg);
+  --keep:var(--lake); --keep-bg:var(--lake-bg);
+  --trim:var(--ochre); --trim-bg:var(--ochre-bg);
+  --cut:var(--red); --cut-bg:var(--red-bg);
+  --low:var(--stone); --low-bg:var(--stone-bg);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+h2{font-size:18px;margin:0 0 12px}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;font-size:14px}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--accent)}
+.btn.icon{padding:7px 9px;line-height:0}
+button,select,input{font:inherit;color:inherit}
+.btn{border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:0;cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.btn.link{border:0;background:none;padding:0;color:var(--accent);text-decoration:underline;cursor:pointer}
+
+header.top{display:flex;gap:24px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:24px}
+.lede{max-width:640px;font-size:17px;color:var(--muted)}
+.shield{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;max-width:360px;font-size:13px}
+.shield svg{flex:none;margin-top:2px;color:var(--scale)}
+.shield b{display:block;font-size:14px}
+
+.drop{border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:44px 20px;text-align:center;transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--accent);background:var(--soft)}
+.drop h2{font-size:20px;margin-bottom:6px}
+.goal-first{margin-top:0}
+.drop.locked{opacity:.55}
+.drop.locked .btn{cursor:not-allowed}
+.lockmsg{font-weight:600;color:var(--accent);margin:0 0 6px}
+.drop:not(.locked) .lockmsg{display:none}
+#preTarget.need{border-color:var(--cut);outline:2px solid var(--cut);outline-offset:0}
+.step{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;margin-right:8px;vertical-align:2px}
+.drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+.howto div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;font-size:13px;color:var(--muted)}
+.howto b{color:var(--ink);display:block;margin-bottom:4px;font-size:14px}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-top:18px}
+.filebar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.filebar .name{font-weight:600;word-break:break-all}
+details summary{cursor:pointer;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+label.f select,label.f input{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:7px 9px;color:var(--ink);width:100%}
+.req{color:var(--cut)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:0;overflow:hidden}
+.seg button{border:0;background:var(--bg);padding:7px 14px;cursor:pointer}
+.seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:600}
+.seg button:disabled{opacity:.45;cursor:not-allowed}
+.settings-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.settings-row label.f{min-width:150px;flex:1}
+.hint{font-size:12px;color:var(--muted);margin-top:8px}
+.err{background:var(--cut-bg);color:var(--cut);border-radius:0;padding:10px 12px;margin-top:12px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:18px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.kpi .l{font-size:12.5px;color:var(--muted);letter-spacing:0}
+.kpi .v{font-size:24px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:12px;color:var(--muted)}
+.kpi.bad .v{color:var(--cut)} .kpi.good .v{color:var(--scale)}
+
+.buckets{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:12px}
+.bucket{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:var(--panel);cursor:pointer;text-align:left;border-left-width:5px}
+.bucket:hover{border-color:var(--muted)}
+.bucket.on{outline:2px solid var(--accent);outline-offset:1px}
+.bucket .t{font-weight:700}
+.bucket .n{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.bucket .d{font-size:12px;color:var(--muted)}
+.b-scale{border-left-color:var(--scale)} .b-keep{border-left-color:var(--keep)} .b-trim{border-left-color:var(--trim)} .b-cut{border-left-color:var(--cut)} .b-low{border-left-color:var(--low)}
+
+.share{display:flex;height:14px;border-radius:0;overflow:hidden;margin-top:14px;background:var(--soft)}
+.share span{display:block;height:100%}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:0;margin-right:5px;vertical-align:-1px}
+
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:12px}
+.toolbar input[type=search]{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:7px 10px;min-width:220px;flex:1;max-width:360px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);margin:0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{position:sticky;top:0;background:var(--soft);font-weight:600;cursor:pointer;user-select:none}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
+th .arr{opacity:.5;font-size:10px;margin-left:3px}
+td.kw{white-space:normal;min-width:180px;font-weight:600}
+td.kw .sub{display:block;font-weight:400;color:var(--muted);font-size:12px}
+td.why{white-space:normal;min-width:240px;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;padding:2px 9px;border-radius:0;font-size:12px;font-weight:700}
+.p-scale{background:var(--scale-bg);color:var(--scale)} .p-keep{background:var(--keep-bg);color:var(--keep)} .p-trim{background:var(--trim-bg);color:var(--trim)} .p-cut{background:var(--cut-bg);color:var(--cut)} .p-low{background:var(--low-bg);color:var(--low)}
+.more{text-align:center;margin-top:12px}
+
+.h1sub{display:block;font-size:clamp(16px,2vw,19px);font-weight:600;color:var(--muted);letter-spacing:0;margin-top:6px}
+.byline{margin:4px 0 0}
+
+/* Reference article: plain, crawlable HTML that explains every rule the tool applies. */
+.doc{max-width:780px;margin:56px auto 0;font-size:15.5px;line-height:1.65}
+.doc section{padding-top:28px;margin-top:28px;border-top:1px solid var(--line)}
+.doc section:first-child{border-top:0;margin-top:0;padding-top:0}
+.doc h2{font-size:22px;letter-spacing:-.01em;margin:0 0 10px}
+.doc h3{font-size:16.5px;margin:22px 0 6px}
+.doc p{margin:0 0 12px}
+.doc ul,.doc ol{padding-left:22px;margin:0 0 12px}
+.doc li{margin-bottom:6px}
+.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:0;padding:1px 5px}
+.doc .tablewrap{margin:4px 0 14px}
+.doc table{font-size:13.5px}
+.doc caption{caption-side:top;text-align:left;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:0;padding:0 0 8px}
+.doc th,.doc td{white-space:normal;vertical-align:top}
+.doc th{position:static;cursor:default;user-select:auto}
+.doc tbody th{background:none;font-weight:600}
+table.facts{border:1px solid var(--line);border-radius:var(--radius);border-collapse:separate;border-spacing:0;overflow:hidden;margin:4px 0 0}
+table.facts caption{padding-bottom:8px}
+table.facts th{width:32%;color:var(--muted);font-weight:600}
+.doc .pill{white-space:nowrap}
+.doc dl{margin:0}
+.doc dt{font-weight:700;margin-top:12px}
+.doc dd{margin:2px 0 0;color:var(--muted)}
+@media (max-width:600px){ .doc{font-size:15px} table.facts th{width:38%} }
+footer{margin-top:40px;font-size:13px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../keyword-triage/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs">
+  <a href="../">&larr; Alla verktyg</a>
+  <button type="button" class="btn icon" id="btnTheme" title="Växla ljust/mörkt" aria-label="Växla mellan ljust och mörkt tema">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+  </button>
+</nav>
+
+<header class="top">
+  <div>
+    <h1>Keyword Triage <span class="h1sub">Lönsamhetskontroll av sökord i Google Ads</span></h1>
+    <p class="lede">Keyword Triage är ett gratisverktyg som kontrollerar hur lönsamt varje sökord i en rapport från Google Ads eller Microsoft Ads är. Läs in rapporten så får varje sökord en av bedömningarna Stryk, Sänk budet, Behåll, Skala upp eller Behöver mer data, utifrån ditt mål-CPA eller mål-ROAS.</p>
+    <p class="byline small muted">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Senast uppdaterad <time datetime="2026-10-03">3 oktober 2026</time></p>
+  </div>
+  <div class="shield">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div><b>Dina data lämnar aldrig den här sidan</b>Allt körs i din webbläsare. Inget laddas upp eller sparas, och sidan är tekniskt spärrad från att skicka data till någon server. Den fungerar till och med offline.</div>
+  </div>
+</header>
+
+<section id="start">
+  <div class="panel goal-first">
+    <h2><span class="step">1</span>Ange ditt mål</h2>
+    <div class="settings-row">
+      <div>
+        <div class="small muted" style="margin-bottom:4px">Optimera för</div>
+        <div class="seg" id="preMode">
+          <button type="button" data-m="cpa" class="on">Mål-CPA</button>
+          <button type="button" data-m="roas">Mål-ROAS</button>
+        </div>
+      </div>
+      <label class="f"><span id="preLabel">Målkostnad per konvertering</span><input type="number" id="preTarget" min="0" step="any" placeholder="t.ex. 80" required aria-describedby="preHint"></label>
+    </div>
+    <p class="hint" id="preHint">Använd din break-even-CPA: bruttovinsten på en konvertering. Ett sökord som kostar mer än så per konvertering går med förlust.</p>
+  </div>
+  <div class="drop" id="drop" style="margin-top:18px">
+    <h2><span class="step">2</span>Släpp din sökordsrapport här</h2>
+    <p class="lockmsg" id="lockmsg">Ange ditt mål ovan för att gå vidare.</p>
+    <p class="muted">Export i Excel (.xlsx), CSV eller TSV från Google Ads eller Microsoft Ads, eller vilket kalkylark som helst med en rad per sökord.</p>
+    <div class="actions">
+      <button class="btn primary" id="pick">Välj fil</button>
+      <button class="btn" id="sample">Testa med exempeldata</button>
+    </div>
+    <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/tab-separated-values,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+  </div>
+  <div class="howto">
+    <div><b>Google Ads</b>Campaigns › Keywords › Search keywords. Välj datumintervall (60–90 dagar är bäst) och sedan Download › Excel .csv eller .xlsx.</div>
+    <div><b>Microsoft Ads</b>Campaigns › Keywords. Ställ in datumintervallet och välj sedan Download › CSV eller Excel.</div>
+    <div><b>Kolumner som behövs</b>Keyword, Cost och Conversions. Med Conversion value, Clicks, Match type, Campaign, Ad group och Search lost IS blir råden bättre.</div>
+  </div>
+</section>
+
+<section id="work" hidden>
+  <div class="panel">
+    <div class="filebar">
+      <div><span class="name" id="fname"></span> <span class="muted small" id="fmeta"></span></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <label class="f" id="sheetWrap" hidden style="flex-direction:row;align-items:center;gap:6px">Blad <select id="sheetSel"></select></label>
+        <button class="btn" id="reset">Börja om</button>
+      </div>
+    </div>
+    <details id="mapbox" style="margin-top:12px">
+      <summary>Kolumnkoppling <span class="muted small" id="mapsum"></span></summary>
+      <div class="grid" id="mapgrid"></div>
+    </details>
+    <div id="maperr" class="err" hidden></div>
+  </div>
+
+  <div class="panel" id="settings">
+    <h2>Ditt mål</h2>
+    <div class="settings-row">
+      <div>
+        <div class="small muted" style="margin-bottom:4px">Optimerar för</div>
+        <div id="modeName" style="font-weight:600;padding:7px 0"></div>
+      </div>
+      <label class="f"><span id="tlabel">Mål-CPA</span><input type="number" id="target" min="0" step="any"></label>
+      <label class="f">Stryk sökord utan konverteringar när de har kostat<input type="number" id="zerocut" min="0" step="any"></label>
+      <label class="f">Minsta antal klick före bedömning<input type="number" id="minclicks" min="0" step="1"></label>
+      <label class="f">Minsta antal konverteringar för att skala upp<input type="number" id="minconv" min="0" step="any"></label>
+    </div>
+    <p class="hint" id="acctline"></p>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel">
+    <h2>Bedömningar</h2>
+    <div class="buckets" id="buckets"></div>
+    <div class="share" id="share" title="Andel av kostnaden per bedömning"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="panel">
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Filtrera sökord, kampanjer, annonsgrupper…">
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="exportView">Exportera vyn (CSV)</button>
+        <button class="btn" id="exportNeg">Kopiera Stryk-listan som negativa sökord</button>
+      </div>
+    </div>
+    <div class="tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+    <div class="more" id="more" hidden><button class="btn">Visa fler</button></div>
+    <p class="hint" id="copied" hidden></p>
+  </div>
+</section>
+
+<article class="doc" id="guide">
+
+<section id="summary">
+  <h2>Det här gör Keyword Triage</h2>
+  <p>Keyword Triage läser en sökordsrapport som du har exporterat från Google Ads eller Microsoft Ads och visar, sökord för sökord, om sökordet är lönsamt vid ditt mål för kostnad per förvärv (CPA) eller avkastning på annonskostnaden (ROAS). Varje sökord får en av fem bedömningar, en motivering på en rad och en uppskattning av hur mycket det har kostat över målet.</p>
+  <table class="facts">
+    <caption>Keyword Triage i korthet</caption>
+    <tbody>
+      <tr><th scope="row">Vad det är</th><td>Ett gratisverktyg i webbläsaren som kontrollerar hur lönsamma sökorden är i sökannonser med betalning per klick (PPC)</td></tr>
+      <tr><th scope="row">Fungerar med</th><td>Sökordsrapporter och söktermsrapporter från Google Ads och Microsoft Ads (Bing Ads)</td></tr>
+      <tr><th scope="row">Filformat</th><td>CSV, TSV, UTF-16-text och Excel .xlsx. Det gamla formatet .xls från Excel 97–2003 stöds inte.</td></tr>
+      <tr><th scope="row">Kolumner som krävs</th><td>Keyword, Cost och Conversions</td></tr>
+      <tr><th scope="row">Måltyper</th><td>Mål-CPA eller mål-ROAS. Målet är obligatoriskt och anges innan rapporten läses in.</td></tr>
+      <tr><th scope="row">Bedömningar</th><td>Stryk, Sänk budet, Behåll, Skala upp, Behöver mer data</td></tr>
+      <tr><th scope="row">Resultat</th><td>Tabell med bedömningar, CSV-export och Stryk-listan kopierad som negativa sökord med exakt matchning</td></tr>
+      <tr><th scope="row">Integritet</th><td>Rapporten bearbetas i webbläsaren. En Content-Security-Policy blockerar alla nätverksanrop utom webbplatsens egen stilmall och typsnitt, så filen kan inte laddas upp.</td></tr>
+      <tr><th scope="row">Åtkomst till kontot</th><td>Ingen. Keyword Triage kopplar aldrig upp sig mot ditt annonskonto och kan inte ändra bud, budgetar eller sökord.</td></tr>
+      <tr><th scope="row">Pris</th><td>Gratis, ingen registrering</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="how-to">
+  <h2>Så hittar du olönsamma sökord i Google Ads med Keyword Triage</h2>
+  <p>För att hitta olönsamma sökord i Google Ads anger du din break-even-CPA eller break-even-ROAS i Keyword Triage, exporterar en sökordsrapport för 60 till 90 dagar, släpper in den och går igenom sökorden som har fått bedömningen Stryk.</p>
+  <ol>
+    <li><b>Ange ditt mål.</b> Välj Mål-CPA eller Mål-ROAS och skriv in ditt break-even-tal. Målet är obligatoriskt: filrutan är låst tills du har fyllt i det, eftersom varje bedömning görs mot målet.</li>
+    <li><b>Exportera rapporten.</b> I Google Ads går du till Campaigns › Keywords › Search keywords, ställer in datumintervallet på de senaste 60–90 dagarna och väljer Download › Excel .csv eller .xlsx. I Microsoft Ads går du till Campaigns › Keywords, ställer in datumintervallet och väljer Download › CSV eller Excel.</li>
+    <li><b>Läs in filen.</b> Släpp filen i filrutan högst upp på sidan eller klicka på Välj fil. Keyword Triage hittar rubrikraden, kolumnerna och valutan automatiskt.</li>
+    <li><b>Gå igenom Stryk-listan.</b> Klicka på kortet Stryk för att filtrera tabellen. Varje rad förklarar sin bedömning, till exempel ”Har kostat 410&nbsp;USD utan konverteringar på 96 klick.”</li>
+    <li><b>Åtgärda.</b> Pausa sökorden med bedömningen Stryk, eller klicka på Kopiera Stryk-listan som negativa sökord och klistra in de negativa sökorden med exakt matchning i en lista med negativa sökord. Sänk buden på sökorden med Sänk budet, och ge sökorden med Skala upp större budget eller högre bud.</li>
+  </ol>
+</section>
+
+<section id="verdicts">
+  <h2>Så avgör Keyword Triage om ett sökord är lönsamt</h2>
+  <p>Keyword Triage jämför varje sökords CPA eller ROAS med ditt mål och ger det en av fem bedömningar. Ett sökord utan konverteringar bedöms enbart efter vad det har kostat: det stryks när kostnaden når gränsen för sökord utan konverteringar.</p>
+  <div class="tablewrap">
+  <table class="ref">
+    <caption>Reglerna bakom Keyword Triages bedömningar</caption>
+    <thead>
+      <tr><th scope="col">Bedömning</th><th scope="col">Regel i CPA-läge</th><th scope="col">Regel i ROAS-läge</th><th scope="col">Rekommenderad åtgärd</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row"><span class="pill p-cut">Stryk</span></th><td>Inga konverteringar trots att kostnaden har nått gränsen för sökord utan konverteringar, eller en CPA på mer än 2× målet</td><td>Inget konverteringsvärde trots att kostnaden har nått gränsen, eller en ROAS under 50&nbsp;% av målet</td><td>Pausa sökordet eller lägg till det som negativt sökord</td></tr>
+      <tr><th scope="row"><span class="pill p-trim">Sänk budet</span></th><td>CPA ungefär 20&nbsp;% till 100&nbsp;% över målet</td><td>ROAS 50&nbsp;% till 83&nbsp;% av målet</td><td>Sänk budet eller välj en snävare matchningstyp innan du stryker sökordet</td></tr>
+      <tr><th scope="row"><span class="pill p-keep">Behåll</span></th><td>CPA inom ungefär 20&nbsp;% från målet, eller bättre än målet men med färre konverteringar än vad som krävs för att skala upp</td><td>ROAS 83&nbsp;% till 125&nbsp;% av målet, eller bättre men med färre konverteringar än vad som krävs för att skala upp</td><td>Låt det fortsätta gå</td></tr>
+      <tr><th scope="row"><span class="pill p-scale">Skala upp</span></th><td>CPA minst 20&nbsp;% under målet och minst så många konverteringar som krävs för att skala upp (standard: 2)</td><td>ROAS minst 125&nbsp;% av målet och minst så många konverteringar som krävs för att skala upp</td><td>Höj budgeten eller buden, och låt den förlorade visningsandelen avgöra vilket</td></tr>
+      <tr><th scope="row"><span class="pill p-low">Behöver mer data</span></th><td>Inga konverteringar och en kostnad under gränsen, eller ett sökord över målet med för få klick och konverteringar för att kunna bedömas</td><td>Samma som i CPA-läge, men räknat på konverteringsvärde</td><td>Låt det fortsätta gå och titta igen senare</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Effektivitetstalet bakom varje bedömning</h3>
+  <p>Keyword Triage räknar om varje sökord som har konverteringar till ett enda effektivitetstal, där 1,0 betyder exakt på målet och högre är bättre:</p>
+  <ul>
+    <li><b>CPA-läge:</b> effektivitet = mål-CPA ÷ sökordets CPA, där sökordets CPA = kostnad ÷ konverteringar.</li>
+    <li><b>ROAS-läge:</b> effektivitet = sökordets ROAS ÷ mål-ROAS, där sökordets ROAS = konverteringsvärde ÷ kostnad.</li>
+  </ul>
+  <p>Gränserna mellan bedömningarna är: effektivitet under 0,5 ger Stryk, 0,5 till 0,83 ger Sänk budet, 0,83 till 1,25 ger Behåll och 1,25 eller mer ger Skala upp. Ett sökord med en effektivitet på 1,25 eller mer men färre konverteringar än vad som krävs för att skala upp stannar i Behåll tills det finns mer data.</p>
+
+  <h3>Standardgränser</h3>
+  <p>Mål-CPA och mål-ROAS har inget standardvärde; målet anger du innan du läser in rapporten. Alla andra gränser kan du ändra i panelen Ditt mål när rapporten är inläst, och Keyword Triage sätter standardvärdena utifrån ditt mål och den inlästa rapporten:</p>
+  <ul>
+    <li><b>Strykgränsen för sökord utan konverteringar</b> är som standard 1,5× mål-CPA i CPA-läge. I ROAS-läge är den som standard 2 × (genomsnittligt konverteringsvärde ÷ mål-ROAS).</li>
+    <li><b>Minsta antal klick före bedömning</b> är som standard 1,5 ÷ kontots konverteringsgrad, dock lägst 10 och högst 100 klick. Med en konverteringsgrad på 3&nbsp;% blir standardvärdet 50 klick.</li>
+    <li><b>Minsta antal konverteringar för att skala upp</b> är som standard 2.</li>
+  </ul>
+</section>
+
+<section id="spend-above-target">
+  <h2>Så räknas ”Kostnad över målet” ut</h2>
+  <p>Kostnad över målet är det belopp ett sökord har kostat utöver vad resultaten var värda enligt ditt mål. Keyword Triage summerar beloppet för sökorden med Stryk och Sänk budet och uppskattar på så vis hur mycket du skulle spara på att stryka sökord och sänka bud ner till målet.</p>
+  <ul>
+    <li><b>CPA-läge:</b> kostnad över målet = kostnad − (konverteringar × mål-CPA).</li>
+    <li><b>ROAS-läge:</b> kostnad över målet = kostnad − (konverteringsvärde ÷ mål-ROAS).</li>
+    <li><b>Sökord utan konverteringar</b> med bedömningen Stryk räknas med hela sin kostnad som kostnad över målet.</li>
+  </ul>
+</section>
+
+<section id="impression-share">
+  <h2>Så använder Keyword Triage förlorad visningsandel i söknätverket</h2>
+  <p>För sökord med bedömningen Skala upp läser Keyword Triage kolumnerna Search lost IS (budget) och Search lost IS (rank), om de finns i rapporten, och talar om vad som håller tillbaka sökordet.</p>
+  <ul>
+    <li><b>Search lost IS (budget) på 10&nbsp;% eller mer:</b> kampanjbudgeten håller tillbaka sökordet, så höj kampanjbudgeten.</li>
+    <li><b>Search lost IS (rank) på 10&nbsp;% eller mer:</b> annonsrankningen (Ad Rank) håller tillbaka sökordet, så höj budet.</li>
+    <li><b>Båda under 10&nbsp;%:</b> sökordet visas redan vid nästan alla sökningar där det kan visas, så utöka det med nära varianter eller bredare matchningstyper.</li>
+  </ul>
+  <p>Google Ads redovisar Search lost IS (budget) bara på kampanjnivå, så en sökordsrapport innehåller oftast bara Search lost IS (rank) (<a href="https://support.google.com/google-ads/answer/7103314" rel="noopener"><span lang="en">Google Ads Help: Get impression share data</span></a>). Vill du ha råd om budgeten lägger du till kampanjens förlorade visningsandel som en kolumn innan du läser in filen. Google Ads visar mycket låg visningsandel som ”&lt; 10%” och mycket hög som ”&gt; 90%”. Keyword Triage läser dem som 5&nbsp;% och 95&nbsp;%.</p>
+</section>
+
+<section id="example">
+  <h2>Räkneexempel: sju sökord i Google Ads med ett mål-CPA på 50&nbsp;USD</h2>
+  <p>I exemplet är mål-CPA 50&nbsp;USD. Då är standardgränsen för att stryka sökord utan konverteringar 75&nbsp;USD (1,5 × 50&nbsp;USD) och minsta antal konverteringar för att skala upp 2.</p>
+  <div class="tablewrap">
+  <table class="ref">
+    <caption>Sju sökord bedömda mot ett mål-CPA på 50 USD</caption>
+    <thead>
+      <tr><th scope="col">Sökord</th><th scope="col" class="num">Kostnad</th><th scope="col" class="num">Konverteringar</th><th scope="col" class="num">CPA</th><th scope="col" class="num">Effektivitet</th><th scope="col">Bedömning</th><th scope="col" class="num">Kostnad över målet</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>copywriting jobs</td><td class="num">410 USD</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td>Stryk (inga konverteringar, kostnaden över 75 USD)</td><td class="num">410 USD</td></tr>
+      <tr><td>ppc management pricing</td><td class="num">620 USD</td><td class="num">5</td><td class="num">124 USD</td><td class="num">0,40</td><td>Stryk (CPA över 2× målet)</td><td class="num">370 USD</td></tr>
+      <tr><td>freelance copywriter</td><td class="num">390 USD</td><td class="num">6</td><td class="num">65 USD</td><td class="num">0,77</td><td>Sänk budet (30 % över målet)</td><td class="num">90 USD</td></tr>
+      <tr><td>google ads copywriter</td><td class="num">310 USD</td><td class="num">6</td><td class="num">51,67 USD</td><td class="num">0,97</td><td>Behåll (i nivå med målet)</td><td class="num">—</td></tr>
+      <tr><td>saas copywriter</td><td class="num">35 USD</td><td class="num">1</td><td class="num">35 USD</td><td class="num">1,43</td><td>Behåll (starkt, men bara 1 konvertering)</td><td class="num">—</td></tr>
+      <tr><td>ppc audit</td><td class="num">360 USD</td><td class="num">12</td><td class="num">30 USD</td><td class="num">1,67</td><td>Skala upp (40 % under målet)</td><td class="num">—</td></tr>
+      <tr><td>b2b copywriter</td><td class="num">70 USD</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td>Behöver mer data (70 USD av gränsen på 75 USD)</td><td class="num">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>I exemplet har de två sökorden med Stryk och sökordet med Sänk budet tillsammans kostat 870&nbsp;USD över målet (410&nbsp;USD + 370&nbsp;USD + 90&nbsp;USD). Om ”<span lang="en">ppc audit</span>” dessutom har 25&nbsp;% i Search lost IS (budget) rekommenderar Keyword Triage att du höjer budgeten för den kampanjen.</p>
+</section>
+
+<section id="columns">
+  <h2>De här rapportkolumnerna behöver Keyword Triage</h2>
+  <p>Keyword Triage behöver tre kolumner: Keyword, Cost och Conversions. Med de valfria kolumnerna blir råden mer precisa. Kolumnnamnen känns igen automatiskt, och du kan koppla om vilken kolumn som helst under Kolumnkoppling.</p>
+  <div class="tablewrap">
+  <table class="ref">
+    <caption>Kolumner som Keyword Triage läser</caption>
+    <thead>
+      <tr><th scope="col">Kolumn</th><th scope="col">Krävs</th><th scope="col">Namn i Google Ads</th><th scope="col">Namn i Microsoft Ads</th><th scope="col">Används till</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Keyword</th><td>Ja</td><td>Keyword, Search keyword eller Search term</td><td>Keyword eller Search term</td><td>Identifiera varje rad</td></tr>
+      <tr><th scope="row">Cost</th><td>Ja</td><td>Cost</td><td>Spend</td><td>CPA, ROAS och kostnad över målet</td></tr>
+      <tr><th scope="row">Conversions</th><td>Ja</td><td>Conversions</td><td>Conversions eller Conv.</td><td>CPA och regeln för sökord utan konverteringar</td></tr>
+      <tr><th scope="row">Conversion value</th><td>Nej</td><td>Conv. value</td><td>Revenue</td><td>ROAS-läget (går inte att använda utan den)</td></tr>
+      <tr><th scope="row">Clicks</th><td>Nej</td><td>Clicks</td><td>Clicks</td><td>Regeln om minsta antal klick och dess standardgräns</td></tr>
+      <tr><th scope="row">Match type, Campaign, Ad group</th><td>Nej</td><td>Match type, Campaign, Ad group</td><td>Match type, Campaign name, Ad group name</td><td>Etiketter och filtrering</td></tr>
+      <tr><th scope="row">Förlorad visningsandel</th><td>Nej</td><td>Search lost IS (budget), Search lost IS (rank)</td><td>Impression share lost to budget, Impression share lost to rank</td><td>Råd om att skala upp</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Summeringsrader som ”<span lang="en">Total: Account</span>” hoppas över automatiskt. Keyword Triage kan också gå igenom en söktermsrapport: läs in den och koppla sedan fältet Keyword till kolumnen Search term under Kolumnkoppling. Då blir Stryk-listan en lista över söktermer att lägga till som negativa sökord.</p>
+</section>
+
+<section id="privacy">
+  <h2>Laddas min sökordsrapport upp någonstans?</h2>
+  <p>Nej. Keyword Triage läser filen med webbläsarens FileReader-API och analyserar den med JavaScript på din enhet. Sidan har en Content-Security-Policy med <code>default-src 'none'</code> och <code>connect-src 'none'</code>, som säger åt webbläsaren att blockera alla nätverksanrop som sidan skulle kunna göra, däribland fetch, XHR, beacons, externa skript, typsnitt och bilder. Det enda anrop som tillåts går till webbplatsens egen stilmall (<code>style-src 'self'</code>), och ett anrop efter en stilmall kan inte föra med sig din rapport. Det enda Keyword Triage sparar är om du har valt ljust eller mörkt tema. Du kan ladda sidan och koppla ner från internet, och den fungerar ändå.</p>
+</section>
+
+<section id="limits">
+  <h2>Det här tar Keyword Triage inte hänsyn till</h2>
+  <p>Keyword Triage bedömer sökorden efter rapportens kostnader och konverteringar, tillskrivna det sista klicket (last click). Bedömningarna är därför en utgångspunkt, ingen autopilot. Kontrollera det här innan du pausar ett sökord som kostar mycket:</p>
+  <ul>
+    <li><b>Konverteringsfördröjning:</b> Google Ads bokför en konvertering på klickets datum, och konverteringar kan rapporteras upp till 90 dagar i efterhand. De senaste dagarna kan därför visa en för hög CPA och en för låg ROAS (<a href="https://support.google.com/google-ads/answer/9347141" rel="noopener"><span lang="en">Google Ads Help: About conversion lag reporting</span></a>). Låt datumintervallet sluta några dagar före dagens datum, eller titta först på segmentet Days to conversion.</li>
+    <li><b>Assisterade konverteringar:</b> sökord högt upp i tratten kan starta kundresor som ett annat sökord får äran för.</li>
+    <li><b>Säsongsvariationer:</b> ett datumintervall som täcker en topp eller en svacka kan ge en missvisande bild av hur sökordet normalt går.</li>
+    <li><b>Kundens livstidsvärde:</b> ett sökord som går med förlust på det första köpet kan ändå bli lönsamt när kunden köper igen.</li>
+    <li><b>Varumärkessökord:</b> sökord på det egna varumärket ser ofta extremt effektiva ut eftersom de fångar upp efterfrågan som ändå hade lett till en konvertering.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Vanliga frågor</h2>
+
+  <h3>Vad är en bra CPA för sökord i Google Ads?</h3>
+  <p>En bra CPA är en CPA som ligger under din break-even-CPA, alltså bruttovinsten på en konvertering. Om en försäljning ger 200&nbsp;USD i bruttovinst är alla sökord med en CPA under 200&nbsp;USD lönsamma före omkostnader. Keyword Triage ber om din break-even-CPA eller ditt mål-CPA innan du läser in en rapport, eftersom varje bedömning görs mot det talet.</p>
+
+  <h3>Hur räknar jag ut break-even-ROAS?</h3>
+  <p>Break-even-ROAS är 1 delat med bruttomarginalen. En produkt med 40&nbsp;% bruttomarginal har en break-even-ROAS på 2,5 (1 ÷ 0,40). Det betyder att 1&nbsp;USD i annonskostnad måste ge 2,50&nbsp;USD i intäkter för att täcka produktkostnaderna. Ange det i Keyword Triage som ett mål-ROAS på 2,5.</p>
+
+  <h3>När ska jag pausa ett sökord utan konverteringar?</h3>
+  <p>Pausa ett sökord utan konverteringar när det har kostat mer än du skulle betala för en konvertering, plus lite marginal för otur. Keyword Triage använder 1,5× ditt mål-CPA som standardgräns för att stryka, så med ett mål-CPA på 50&nbsp;USD stryks ett sökord när det har kostat 75&nbsp;USD utan att ge någon konvertering.</p>
+
+  <h3>Hur mycket data behövs innan jag kan bedöma ett sökord?</h3>
+  <p>Använd 60 till 90 dagars data, så har de flesta sökord tillräckligt många klick för att kunna bedömas. Keyword Triage låter ett sökord ligga kvar i Behöver mer data tills det har nått minsta antal klick. Som standard är det ungefär så många klick som väntas ge 1,5 konverteringar (1,5 ÷ din konverteringsgrad, mellan 10 och 100 klick).</p>
+
+  <h3>Fungerar Keyword Triage med Microsoft Ads?</h3>
+  <p>Ja. Keyword Triage läser sökordsrapporter från Microsoft Ads (tidigare Bing Ads) i CSV- eller Excel-format och känner igen Microsofts kolumnnamn, till exempel Spend, Revenue och Impression share lost to budget.</p>
+
+  <h3>Kan Keyword Triage ändra bud eller pausa sökord i mitt konto?</h3>
+  <p>Nej. Keyword Triage kopplar aldrig upp sig mot Google Ads eller Microsoft Ads. Verktyget läser bara filen du ger det, och alla ändringar i annonskontot gör du själv.</p>
+
+  <h3>Är Keyword Triage gratis?</h3>
+  <p>Ja. Keyword Triage är gratis, kräver varken konto eller registrering och du kan använda det hur mycket du vill.</p>
+</section>
+
+<section id="glossary">
+  <h2>Ordlista</h2>
+  <dl>
+    <dt>CPA (<span lang="en">cost per acquisition</span>, kostnad per förvärv)</dt>
+    <dd>Kostnaden delad med antalet konverteringar. Vad en konvertering kostar i genomsnitt.</dd>
+    <dt>ROAS (<span lang="en">return on ad spend</span>, avkastning på annonskostnaden)</dt>
+    <dd>Konverteringsvärdet delat med kostnaden. En ROAS på 4 betyder att 1&nbsp;USD i kostnad ger 4&nbsp;USD i intäkter.</dd>
+    <dt>Break-even-CPA</dt>
+    <dd>Bruttovinsten på en konvertering. Sökord med en högre CPA än så går med förlust.</dd>
+    <dt>Break-even-ROAS</dt>
+    <dd>1 delat med bruttomarginalen. Sökord med en lägre ROAS än så går med förlust.</dd>
+    <dt>Search lost IS (budget)</dt>
+    <dd>Den andel av de visningar sökordet kunde ha fått som gick förlorad för att kampanjens budget tog slut.</dd>
+    <dt>Search lost IS (rank)</dt>
+    <dd>Den andel av de visningar sökordet kunde ha fått som gick förlorad för att annonsrankningen (Ad Rank, alltså bud och kvalitet) var för låg.</dd>
+    <dt>Negativt sökord med exakt matchning</dt>
+    <dd>Ett negativt sökord inom hakparenteser, till exempel [copywriting jobs], som bara stoppar annonser vid exakt den sökningen.</dd>
+  </dl>
+</section>
+
+</article>
+
+<footer>
+  <span>Körs helt i webbläsaren. Inga uppladdningar, ingen spårning, inga anrop till tredje part. Inget du läser in lämnar din webbläsare.</span>
+  <span>Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a></span>
+</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Column definitions ---------- */
+const FIELDS = [
+  {k:'keyword',  label:'Keyword', req:true,  rx:[/^keyword$/,/^search keyword$/,/^keyword text$/,/^keyword\/target$/,/^search term$/,/^query$/,/keyword/]},
+  {k:'cost',     label:'Cost / Spend', req:true, rx:[/^cost$/,/^spend$/,/^cost \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/]},
+  {k:'conv',     label:'Conversions', req:true, rx:[/^conversions$/,/^conv\.?$/,/^purchases$/,/^results$/,/^all conv\.?$/,/^conversions/]},
+  {k:'value',    label:'Conversion value / Revenue', rx:[/^conv\. value$/,/^conversion value$/,/^total conv\. value$/,/^revenue$/,/^conv\. value \(.*\)/,/^all conv\. value$/,/^purchase.*value/,/conv.*value/,/revenue/]},
+  {k:'clicks',   label:'Clicks', rx:[/^clicks$/,/^link clicks$/,/clicks/]},
+  {k:'impr',     label:'Impressions', rx:[/^impr\.?$/,/^impressions$/,/impr/]},
+  {k:'match',    label:'Match type', rx:[/^match type$/,/^keyword match type$/,/match/]},
+  {k:'campaign', label:'Campaign', rx:[/^campaign$/,/^campaign name$/]},
+  {k:'adgroup',  label:'Ad group', rx:[/^ad group$/,/^ad group name$/,/^ad set name$/]},
+  {k:'lisBudget',label:'Search lost IS (budget)', rx:[/lost is \(budget\)/,/lost.*budget/]},
+  {k:'lisRank',  label:'Search lost IS (rank)', rx:[/lost is \(rank\)/,/lost.*rank/]},
+];
+const BUCKETS = [
+  {k:'cut',   t:'Stryk',        d:'Går med förlust'},
+  {k:'trim',  t:'Sänk budet',  d:'Konverterar, men över målet'},
+  {k:'keep',  t:'Behåll',       d:'I nivå med målet'},
+  {k:'scale', t:'Skala upp',      d:'Slår målet'},
+  {k:'low',   t:'Behöver mer data', d:'För tidigt att avgöra'},
+];
+
+const $ = id => document.getElementById(id);
+const S = {
+  fileName:'', rows:[], headerIdx:0, headers:[], map:{}, items:[],
+  mode:'cpa', target:null, zerocut:null, minclicks:20, minconv:2,
+  acct:null, pre:{mode:'cpa', target:null}, zerocutTouched:false, filter:'all', q:'', sort:{key:'cost',dir:-1}, limit:200, cur:'$'
+};
+
+/* ---------- File reading ---------- */
+function decode(buf){
+  const b = new Uint8Array(buf);
+  if (b[0]===0xFF && b[1]===0xFE) return new TextDecoder('utf-16le').decode(buf);
+  if (b[0]===0xFE && b[1]===0xFF) return new TextDecoder('utf-16be').decode(buf);
+  // UTF-16 without BOM: lots of zero bytes in the first chunk
+  let zeros=0; const n=Math.min(b.length,400);
+  for(let i=1;i<n;i+=2) if(b[i]===0) zeros++;
+  if (n>20 && zeros > n/4) return new TextDecoder('utf-16le').decode(buf);
+  return new TextDecoder('utf-8').decode(buf).replace(/^﻿/,'');
+}
+
+function detectDelimiter(text){
+  const sample = text.split(/\r?\n/).slice(0,15).join('\n');
+  const c = d => (sample.match(new RegExp(d==='\t'?'\\t':'\\'+d,'g'))||[]).length;
+  const counts = [[',',c(',')],['\t',c('\t')],[';',c(';')]];
+  counts.sort((a,b)=>b[1]-a[1]);
+  return counts[0][1] ? counts[0][0] : ',';
+}
+
+function parseDelimited(text, d){
+  const rows=[]; let row=[], f='', q=false;
+  for (let i=0;i<text.length;i++){
+    const ch=text[i];
+    if (q){
+      if (ch==='"'){ if (text[i+1]==='"'){ f+='"'; i++; } else q=false; }
+      else f+=ch;
+    } else if (ch==='"' && f==='') q=true;
+    else if (ch===d){ row.push(f); f=''; }
+    else if (ch==='\n' || ch==='\r'){
+      if (ch==='\r' && text[i+1]==='\n') i++;
+      row.push(f); rows.push(row); row=[]; f='';
+    } else f+=ch;
+  }
+  if (f!=='' || row.length){ row.push(f); rows.push(row); }
+  return rows.filter(r => r.some(c => c.trim()!==''));
+}
+
+const norm = s => String(s||'').trim().toLowerCase().replace(/\s+/g,' ');
+
+function detectHeader(rows){ return headerScore(rows)[0]; }
+function headerScore(rows){
+  let best=0, bestScore=-1;
+  for (let i=0;i<Math.min(rows.length,20);i++){
+    const cells = rows[i].map(norm);
+    let score=0;
+    FIELDS.forEach(f => { if (cells.some(c => f.rx.slice(0,3).some(r=>r.test(c)))) score += f.req?3:1; });
+    if (score>bestScore){ bestScore=score; best=i; }
+  }
+  return [best, bestScore];
+}
+
+function guessMap(headers){
+  const h = headers.map(norm), used=new Set(), map={};
+  FIELDS.forEach(f => {
+    for (const r of f.rx){
+      const i = h.findIndex((c,ix)=>!used.has(ix) && r.test(c));
+      if (i>-1){ map[f.k]=i; used.add(i); return; }
+    }
+    map[f.k] = -1;
+  });
+  return map;
+}
+
+/* ---------- Excel (.xlsx) ----------
+   An .xlsx file is a zip of XML parts. Read the zip directory by hand, inflate
+   entries with the browser's built-in DecompressionStream, and parse the XML
+   with DOMParser. No libraries, nothing leaves the page. */
+async function readXlsx(buf){
+  const u=new Uint8Array(buf), dv=new DataView(buf), td=new TextDecoder();
+  let eocd=-1;
+  for (let i=u.length-22;i>=Math.max(0,u.length-22-65535);i--) if (dv.getUint32(i,true)===0x06054b50){ eocd=i; break; }
+  if (eocd<0) throw new Error('det är ingen giltig .xlsx-fil');
+  const count=dv.getUint16(eocd+10,true), entries={};
+  let p=dv.getUint32(eocd+16,true);
+  for (let i=0;i<count;i++){
+    if (dv.getUint32(p,true)!==0x02014b50) break;
+    const nl=dv.getUint16(p+28,true), xl=dv.getUint16(p+30,true), cl=dv.getUint16(p+32,true);
+    const name=td.decode(u.subarray(p+46,p+46+nl));
+    entries[name.toLowerCase()]={method:dv.getUint16(p+10,true), size:dv.getUint32(p+20,true), off:dv.getUint32(p+42,true)};
+    p+=46+nl+xl+cl;
+  }
+  async function part(name){
+    const e=entries[name.replace(/^\//,'').toLowerCase()];
+    if (!e) return null;
+    const start=e.off+30+dv.getUint16(e.off+26,true)+dv.getUint16(e.off+28,true);
+    const data=u.subarray(start,start+e.size);
+    if (e.method===0) return td.decode(data);
+    if (e.method!==8) throw new Error('den använder en komprimeringsmetod som inte stöds');
+    if (typeof DecompressionStream==='undefined') throw new Error('webbläsaren kan inte packa upp Excel-filer. Spara filen som CSV eller uppdatera webbläsaren');
+    const out=await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+    return td.decode(out);
+  }
+  const xml = t => new DOMParser().parseFromString(t,'application/xml');
+  const tags = (node,tag) => Array.from(node.getElementsByTagNameNS('*',tag));
+  const attr = (el,local) => { for (const a of el.attributes) if (a.localName===local) return a.value; return null; };
+
+  const wbPath = Object.keys(entries).find(k=>/(^|\/)workbook\.xml$/.test(k)) || 'xl/workbook.xml';
+  const base = wbPath.replace(/[^/]*$/,'');
+  const wbText = await part(wbPath);
+  if (!wbText) throw new Error('den innehåller ingen arbetsbok. Är det verkligen en .xlsx-fil?');
+  const relsText = await part(base+'_rels/'+wbPath.slice(base.length)+'.rels');
+  const rels = {};
+  if (relsText) tags(xml(relsText),'Relationship').forEach(r=>{
+    const t=r.getAttribute('Target'); rels[r.getAttribute('Id')] = t.startsWith('/') ? t.slice(1) : base+t;
+  });
+
+  const ssText = await part(base+'sharedStrings.xml');
+  const shared = ssText ? tags(xml(ssText),'si').map(si =>
+    tags(si,'t').filter(t=>t.parentNode.localName!=='rPh').map(t=>t.textContent).join('')) : [];
+
+  const colIdx = ref => { let n=0; for (const ch of ref.replace(/\d+$/,'').toUpperCase()) n=n*26+ch.charCodeAt(0)-64; return n-1; };
+  const sheets=[];
+  for (const [i,sh] of tags(xml(wbText),'sheet').entries()){
+    const path = rels[attr(sh,'id')] || `${base}worksheets/sheet${i+1}.xml`;
+    const text = await part(path);
+    if (!text) continue;
+    const rows=[];
+    tags(xml(text),'row').forEach((row,ri)=>{
+      const r = (+row.getAttribute('r')||ri+1)-1, out=[];
+      tags(row,'c').forEach((c,ci)=>{
+        const ref=c.getAttribute('r'), col = ref ? colIdx(ref) : ci, t=c.getAttribute('t');
+        const v = tags(c,'v')[0], raw = v ? v.textContent : '';
+        let val;
+        if (t==='s') val = shared[+raw] ?? '';
+        else if (t==='inlineStr') val = tags(c,'t').map(x=>x.textContent).join('');
+        else if (t==='b') val = raw==='1' ? 'TRUE' : 'FALSE';
+        else if (t==='str' || t==='e') val = raw;
+        else { const n=Number(raw); val = raw==='' ? '' : (isFinite(n) ? (Math.abs(n)<1e-6 ? '0' : String(+n.toPrecision(15))) : raw); }
+        out[col]=val;
+      });
+      for (let k=0;k<out.length;k++) if (out[k]==null) out[k]='';
+      rows[r]=out;
+    });
+    sheets.push({name: sh.getAttribute('name') || `Blad ${i+1}`, rows: rows.filter(r=>r && r.some(c=>String(c).trim()!==''))});
+  }
+  return sheets;
+}
+
+/* ---------- Numbers ---------- */
+function num(v){
+  let s = String(v==null?'':v).trim();
+  if (!s || s==='--' || s==='-' || /^n\/?a$/i.test(s)) return 0;
+  if (/^<\s*10\s*%$/.test(s)) return 5;      // Google's "< 10%" for impression share
+  if (/^>\s*90\s*%$/.test(s)) return 95;
+  const neg = /^\(.*\)$/.test(s) || /^-/.test(s);
+  s = s.replace(/[^\d.,]/g,'');
+  if (!s) return 0;
+  const lc=s.lastIndexOf(','), ld=s.lastIndexOf('.');
+  if (lc>-1 && ld>-1){ s = lc>ld ? s.replace(/\./g,'').replace(',', '.') : s.replace(/,/g,''); }
+  else if (lc>-1){ s = /^\d{1,3}(,\d{3})+$/.test(s) ? s.replace(/,/g,'') : s.replace(',', '.'); }
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : (neg ? -n : n);
+}
+function detectCurrency(rows, col){
+  if (col<0) return '$';
+  for (let i=S.headerIdx+1;i<Math.min(rows.length,S.headerIdx+40);i++){
+    const m = String(rows[i][col]||'').match(/[$€£¥₹]|R\$|A\$|C\$/);
+    if (m) return m[0];
+  }
+  const h = String(S.headers[col]||'').match(/\((\w{3})\)/);
+  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$'};
+  return h && codes[h[1].toUpperCase()] || '$';
+}
+const fmtMoney = (n, dp) => {
+  if (!isFinite(n)) return '—';
+  const d = dp!=null ? dp : (Math.abs(n)<100 ? 2 : 0);
+  return S.cur + n.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});
+};
+const fmtNum = (n,dp=0) => isFinite(n) ? n.toLocaleString(undefined,{maximumFractionDigits:dp}) : '—';
+const fmtRoas = n => isFinite(n) ? n.toFixed(2)+'×' : '—';
+const pct = n => Math.round(n*100)+'%';
+
+/* ---------- Build items from rows ---------- */
+function buildItems(){
+  const m=S.map, out=[];
+  const get = (r,k) => m[k]>-1 ? r[m[k]] : '';
+  // Impression share arrives as "12.5%" from CSV but as 0.125 from Excel.
+  const isDiv = {};
+  ['lisBudget','lisRank'].forEach(k=>{
+    let pctSeen=false, max=0;
+    for (let i=S.headerIdx+1;i<S.rows.length && m[k]>-1;i++){ const v=String(S.rows[i][m[k]]||''); if(v.includes('%')) pctSeen=true; max=Math.max(max,num(v)); }
+    isDiv[k] = pctSeen || max>1 ? 100 : 1;
+  });
+  for (let i=S.headerIdx+1;i<S.rows.length;i++){
+    const r=S.rows[i];
+    const kw = String(get(r,'keyword')||'').trim();
+    const first = String(r[0]||'').trim();
+    if (!kw || /^total/i.test(kw) || /^total/i.test(first) || kw==='--') continue;
+    out.push({
+      keyword: kw,
+      match: String(get(r,'match')||'').trim(),
+      campaign: String(get(r,'campaign')||'').trim(),
+      adgroup: String(get(r,'adgroup')||'').trim(),
+      cost: num(get(r,'cost')),
+      conv: num(get(r,'conv')),
+      value: num(get(r,'value')),
+      clicks: num(get(r,'clicks')),
+      impr: num(get(r,'impr')),
+      lisB: m.lisBudget>-1 ? num(get(r,'lisBudget'))/isDiv.lisBudget : null,
+      lisR: m.lisRank>-1 ? num(get(r,'lisRank'))/isDiv.lisRank : null,
+    });
+  }
+  return out;
+}
+
+function accountStats(items){
+  const t = items.reduce((a,x)=>{a.cost+=x.cost;a.conv+=x.conv;a.value+=x.value;a.clicks+=x.clicks;return a;},{cost:0,conv:0,value:0,clicks:0});
+  t.cpa = t.conv ? t.cost/t.conv : NaN;
+  t.roas = t.cost ? t.value/t.cost : NaN;
+  t.cr = t.clicks ? t.conv/t.clicks : NaN;
+  t.aov = t.conv ? t.value/t.conv : NaN;
+  return t;
+}
+
+/* ---------- Classification ---------- */
+function classify(x){
+  const T=S.target, roas = S.mode==='roas';
+  x.cpa = x.conv ? x.cost/x.conv : NaN;
+  x.roas = x.cost ? x.value/x.cost : NaN;
+  x.save = 0;
+  const enoughClicks = !S.map || S.map.clicks<0 || x.clicks >= S.minclicks;
+  const got = roas ? x.value : x.conv;
+
+  if (x.cost<=0){ x.v='low'; x.why='Ingen kostnad under perioden.'; return; }
+
+  if (got<=0){
+    if (x.cost >= S.zerocut){
+      x.v='cut'; x.save=x.cost;
+      x.why = `Har kostat ${fmtMoney(x.cost)} utan ${roas?'intäkter':'konverteringar'}${x.clicks?` på ${fmtNum(x.clicks)} klick`:''}.`;
+    } else {
+      x.v='low';
+      const p = x.cost / S.zerocut;
+      x.why = p>=.5 ? `Inga ${roas?'intäkter':'konverteringar'} än. Kostnaden är uppe i ${pct(p)} av strykgränsen, så håll ett öga på sökordet.`
+                    : `Inga ${roas?'intäkter':'konverteringar'} än, men sökordet har bara kostat ${fmtMoney(x.cost)}.`;
+    }
+    return;
+  }
+
+  // efficiency: >1 means better than target
+  const e = roas ? x.roas / T : T / x.cpa;
+  const metric = roas ? `ROAS ${fmtRoas(x.roas)}` : `CPA ${fmtMoney(x.cpa)}`;
+  const vs = roas ? `mot målet ${fmtRoas(T)}` : `mot målet ${fmtMoney(T)}`;
+
+  if (e < 0.5){
+    x.v='cut';
+    x.save = roas ? Math.max(0, x.cost - x.value/T) : Math.max(0, x.cost - x.conv*T);
+    x.why = `${metric} ${vs}. ${roas?'Ger mindre än hälften av målet':'Kostar mer än 2× målet'} per konvertering.`;
+  } else if (e < 0.83){
+    x.v='trim';
+    x.save = roas ? Math.max(0, x.cost - x.value/T) : Math.max(0, x.cost - x.conv*T);
+    x.why = `${metric} ${vs}. ${pct(roas?1-e:1/e-1)} ${roas?'under':'över'} målet, så sänk buden eller välj en snävare matchningstyp.`;
+    if (!enoughClicks && x.conv<S.minconv) { x.v='low'; x.save=0; x.why = `${metric} ${vs}, men bara ${fmtNum(x.clicks)} klick. För tidigt att bedöma.`; }
+  } else if (e < 1.25 || x.conv < S.minconv){
+    x.v='keep';
+    x.why = e>=1.25 ? `${metric} ${vs}. Ser starkt ut, men har bara ${fmtNum(x.conv,1)} konvertering${x.conv===1?'':'ar'}, så låt det samla mer data.`
+                    : `${metric} ${vs}. I nivå med målet.`;
+  } else {
+    x.v='scale';
+    let tip = '';
+    if (x.lisB!=null && x.lisB>=0.1) tip += ` Tappar ${pct(x.lisB)} av visningarna på grund av budgeten, så höj kampanjbudgeten.`;
+    if (x.lisR!=null && x.lisR>=0.1) tip += ` Tappar ${pct(x.lisR)} på grund av annonsrankningen, så höj buden.`;
+    if (!tip && (x.lisB!=null || x.lisR!=null)) tip = ' Har redan nästan full visningsandel, så utöka med nära varianter eller bredare matchning.';
+    if (!tip) tip = ' Höj buden eller budgeten, eller testa bredare matchningstyper.';
+    x.why = `${metric} ${vs}. ${pct(roas?e-1:1-1/e)} ${roas?'över':'under'} målet.` + tip;
+  }
+}
+
+/* ---------- Load ---------- */
+function loadText(text, name){
+  const d = detectDelimiter(text);
+  const rows = parseDelimited(text, d);
+  if (rows.length<2){ alertErr('Filen verkar vara tom eller är ingen CSV- eller TSV-fil.'); return; }
+  S.sheets = null;
+  loadRows(rows, name, `${d==='\t'?'tabb':d===';'?'semikolon':'komma'}separerad`);
+}
+
+function loadSheets(sheets, name){
+  sheets = sheets.filter(sh=>sh.rows.length>=2);
+  if (!sheets.length){ alertErr('Arbetsboken har inga blad med data.'); return; }
+  // Start on the sheet that looks most like a keyword report.
+  let best=0, bestScore=-1;
+  sheets.forEach((sh,i)=>{ const sc=headerScore(sh.rows)[1]; if(sc>bestScore){bestScore=sc;best=i;} });
+  S.sheets = sheets;
+  showSheet(best, name);
+}
+function showSheet(i, name){
+  const sel=$('sheetSel');
+  sel.innerHTML = S.sheets.map((sh,j)=>`<option value="${j}">${esc(sh.name)}</option>`).join('');
+  sel.value = String(i);
+  loadRows(S.sheets[i].rows, name, S.sheets.length>1 ? `Excel, bladet ”${S.sheets[i].name}”` : 'Excel');
+}
+
+function loadRows(rows, name, label){
+  S.fileName = name; S.rows = rows;
+  const stale=$('drop').querySelector('.err'); if (stale) stale.remove();
+  S.headerIdx = detectHeader(rows);
+  S.headers = rows[S.headerIdx].map(h=>String(h).trim());
+  S.map = guessMap(S.headers);
+  S.cur = detectCurrency(rows, S.map.cost);
+  S.target = null; S.zerocut = null; S.zerocutTouched = false; S.filter='all'; S.q=''; $('q').value='';
+  $('start').hidden = true; $('work').hidden = false;
+  $('fname').textContent = name;
+  renderMap();
+  recompute(true);
+  $('fmeta').textContent = `· ${S.items.length} sökord · ${label}`;
+  $('sheetWrap').hidden = !(S.sheets && S.sheets.length>1);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function alertErr(msg){
+  const e=$('maperr'); e.textContent=msg; e.hidden=false;
+  if ($('work').hidden){ // still on start screen
+    const d=$('drop'); let p=d.querySelector('.err');
+    if(!p){p=document.createElement('div');p.className='err';d.appendChild(p);}
+    p.textContent=msg;
+  }
+}
+
+function recompute(resetGoal){
+  const missing = FIELDS.filter(f=>f.req && S.map[f.k]<0).map(f=>f.label);
+  const err=$('maperr');
+  if (missing.length){
+    err.textContent = `Hittar inte: ${missing.join(', ')}. Välj rätt kolumner under ”Kolumnkoppling”.`;
+    err.hidden=false; $('mapbox').open=true;
+    S.items=[]; renderResults(); return;
+  }
+  err.hidden=true;
+  S.items = buildItems();
+  S.acct = accountStats(S.items);
+  const hasValue = S.map.value>-1 && S.acct.value>0;
+  if (resetGoal){ S.mode = S.pre.mode; setGoalDefaults(); }
+  if (S.mode==='roas' && !hasValue){
+    err.textContent = 'ROAS kräver intäkter, men rapporten har ingen kolumn för konverteringsvärde eller intäkter. Välj kolumnen under ”Kolumnkoppling”, eller klicka på Börja om och välj Mål-CPA.';
+    err.hidden=false; $('mapbox').open=true;
+    S.items=[]; renderResults(); return;
+  }
+  renderSettings(hasValue);
+  S.items.forEach(classify);
+  renderResults();
+}
+
+function niceRound(n){
+  if (!isFinite(n) || n<=0) return 0;
+  const p = Math.pow(10, Math.floor(Math.log10(n))-1);
+  return Math.round(n/p)*p;
+}
+function setGoalDefaults(){
+  S.target = S.pre.target;
+  setZeroCut();
+  const a=S.acct;
+  S.minclicks = isFinite(a.cr) && a.cr>0 ? Math.max(10, Math.min(100, Math.round(1.5/a.cr))) : 20;
+}
+
+// The zero-conversion cut threshold follows the target until someone edits it.
+function setZeroCut(){
+  const a=S.acct;
+  if (S.mode==='roas'){
+    // break-even-ish spend: avg conversion value / target ROAS, ×2
+    const be = isFinite(a.aov) ? a.aov / S.target : (a.cost/Math.max(1,S.items.length));
+    S.zerocut = niceRound(be*2) || 50;
+  } else S.zerocut = niceRound(S.target*1.5) || 75;
+}
+
+/* ---------- Render: mapping & settings ---------- */
+function renderMap(){
+  const g=$('mapgrid'); g.innerHTML='';
+  FIELDS.forEach(f=>{
+    const l=document.createElement('label'); l.className='f';
+    l.innerHTML = `<span>${f.label}${f.req?' <span class="req">*</span>':''}</span>`;
+    const s=document.createElement('select');
+    s.innerHTML = `<option value="-1">(ingen)</option>` + S.headers.map((h,i)=>`<option value="${i}">${esc(h||'Kolumn '+(i+1))}</option>`).join('');
+    s.value = String(S.map[f.k]);
+    s.onchange = ()=>{ S.map[f.k]=+s.value; if(f.k==='cost') S.cur=detectCurrency(S.rows,S.map.cost); renderMapSum(); recompute(['cost','conv','value','clicks'].includes(f.k)); };
+    l.appendChild(s); g.appendChild(l);
+  });
+  renderMapSum();
+}
+function renderMapSum(){
+  const found = FIELDS.filter(f=>S.map[f.k]>-1).length;
+  $('mapsum').textContent = `· ${found} av ${FIELDS.length} kolumner hittade`;
+}
+
+function renderSettings(hasValue){
+  $('modeName').textContent = S.mode==='roas' ? 'Avkastning på annonskostnaden (ROAS)' : 'Kostnad per konvertering (CPA)';
+  $('tlabel').textContent = S.mode==='roas' ? 'Mål-ROAS (t.ex. 4 = 400 %)' : `Mål-CPA (${S.cur})`;
+  $('target').value = S.target;
+  $('zerocut').value = S.zerocut;
+  $('minclicks').value = S.minclicks;
+  $('minconv').value = S.minconv;
+  $('minclicks').parentElement.hidden = S.map.clicks<0;
+  const a=S.acct;
+  $('acctline').textContent = `Den här filen: ${fmtMoney(a.cost,0)} i kostnad, ${fmtNum(a.conv,1)} konverteringar, CPA ${fmtMoney(a.cpa)}`
+    + (hasValue?`, ROAS ${fmtRoas(a.roas)}`:'') + (isFinite(a.cr)?`, konverteringsgrad ${(a.cr*100).toFixed(1)}%`:'')
+    + `. Varje bedömning jämför ett sökord med ditt ${S.mode==='roas'?'mål-ROAS på '+fmtRoas(S.target):'mål-CPA på '+fmtMoney(S.target)}.`;
+}
+
+/* ---------- Render: results ---------- */
+function renderResults(){
+  const items=S.items, by={};
+  BUCKETS.forEach(b=>by[b.k]={n:0,cost:0,conv:0,value:0,save:0});
+  items.forEach(x=>{ const b=by[x.v]; b.n++; b.cost+=x.cost; b.conv+=x.conv; b.value+=x.value; b.save+=x.save; });
+  const total = S.acct ? S.acct.cost : 0;
+  const roas = S.mode==='roas';
+
+  // KPIs
+  const waste = by.cut.cost, over = by.trim.save + by.cut.save;
+  const cutZero = items.filter(x=>x.v==='cut' && (roas?x.value:x.conv)<=0).reduce((s,x)=>s+x.cost,0);
+  const sc = by.scale;
+  const scEff = roas ? (sc.cost? sc.value/sc.cost : NaN) : (sc.conv? sc.cost/sc.conv : NaN);
+  $('kpis').innerHTML = !items.length ? '' : [
+    kpi('Analyserade sökord', fmtNum(items.length), `${fmtMoney(total,0)} i total kostnad`),
+    kpi('Kostnad för sökord med ”Stryk”', fmtMoney(waste,0), `${total?pct(waste/total):'0%'} av kostnaden · ${fmtMoney(cutZero,0)} utan ${roas?'intäkter':'konverteringar'}`, 'bad'),
+    kpi('Kostnad över målet', fmtMoney(over,0), 'Så mycket sparar du på att stryka sökord och sänka bud ner till målet', 'bad'),
+    kpi('Redo att skala upp', fmtNum(sc.n), sc.n ? `${roas?'ROAS':'CPA'} ${roas?fmtRoas(scEff):fmtMoney(scEff)} på ${fmtMoney(sc.cost,0)}` : 'Inga sökord slår målet med tillräckligt mycket data', 'good'),
+  ].join('');
+
+  // Buckets
+  $('buckets').innerHTML = BUCKETS.map(b=>{
+    const s=by[b.k];
+    const eff = roas ? (s.cost?fmtRoas(s.value/s.cost):'—') : (s.conv?fmtMoney(s.cost/s.conv):'—');
+    return `<button class="bucket b-${b.k}${S.filter===b.k?' on':''}" data-b="${b.k}">
+      <div class="t">${b.t}</div><div class="n">${fmtNum(s.n)}</div>
+      <div class="d">${b.d}<br>${fmtMoney(s.cost,0)} i kostnad · ${roas?'ROAS':'CPA'} ${eff}</div></button>`;
+  }).join('');
+  $('buckets').querySelectorAll('.bucket').forEach(el=>el.onclick=()=>{
+    S.filter = S.filter===el.dataset.b ? 'all' : el.dataset.b; S.limit=200; renderResults();
+  });
+
+  // Spend share
+  $('share').innerHTML = total ? BUCKETS.map(b=>`<span style="width:${by[b.k].cost/total*100}%;background:var(--${b.k})"></span>`).join('') : '';
+  $('legend').innerHTML = BUCKETS.map(b=>`<span><i style="background:var(--${b.k})"></i>${b.t} ${total?pct(by[b.k].cost/total):''}</span>`).join('');
+
+  renderTable();
+}
+function kpi(l,v,s,cls){ return `<div class="kpi ${cls||''}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`; }
+
+const COLS = () => {
+  const roas=S.mode==='roas', m=S.map, c=[
+    {k:'keyword',t:'Sökord'},
+    {k:'v',t:'Bedömning'},
+  ];
+  if (m.clicks>-1) c.push({k:'clicks',t:'Klick',n:1});
+  c.push({k:'cost',t:'Kostnad',n:1},{k:'conv',t:'Konv.',n:1});
+  if (m.value>-1) c.push({k:'value',t:'Värde',n:1});
+  c.push(roas?{k:'roas',t:'ROAS',n:1}:{k:'cpa',t:'CPA',n:1});
+  if (roas) c.push({k:'cpa',t:'CPA',n:1});
+  c.push({k:'save',t:'Över målet',n:1},{k:'why',t:'Varför'});
+  return c;
+};
+const ORDER = {cut:0,trim:1,keep:2,scale:3,low:4};
+
+function viewItems(){
+  const q=S.q.toLowerCase();
+  let v = S.items.filter(x => (S.filter==='all'||x.v===S.filter) &&
+    (!q || x.keyword.toLowerCase().includes(q) || x.campaign.toLowerCase().includes(q) || x.adgroup.toLowerCase().includes(q)));
+  const {key,dir}=S.sort;
+  v.sort((a,b)=>{
+    let A=a[key],B=b[key];
+    if (key==='v'){A=ORDER[A];B=ORDER[B];}
+    if (typeof A==='string') return dir*A.localeCompare(B);
+    A=isFinite(A)?A:(dir>0?Infinity:-Infinity); B=isFinite(B)?B:(dir>0?Infinity:-Infinity);
+    return dir*(A-B) || (b.cost-a.cost);
+  });
+  return v;
+}
+
+function renderTable(){
+  const cols=COLS(), t=$('tbl');
+  t.tHead.innerHTML = '<tr>'+cols.map(c=>`<th data-k="${c.k}" class="${c.n?'num':''}">${c.t}${S.sort.key===c.k?`<span class="arr">${S.sort.dir>0?'▲':'▼'}</span>`:''}</th>`).join('')+'</tr>';
+  t.tHead.querySelectorAll('th').forEach(th=>{ if(th.dataset.k!=='why') th.onclick=()=>{
+    const k=th.dataset.k; S.sort = {key:k, dir: S.sort.key===k ? -S.sort.dir : (['keyword','v'].includes(k)?1:-1)}; renderTable();
+  };});
+  const v=viewItems(), shown=v.slice(0,S.limit);
+  const bl = Object.fromEntries(BUCKETS.map(b=>[b.k,b.t]));
+  t.tBodies[0].innerHTML = shown.length ? shown.map(x=>'<tr>'+cols.map(c=>{
+    switch(c.k){
+      case 'keyword': {
+        const sub=[x.match, x.campaign, x.adgroup].filter(Boolean).map(esc).join(' · ');
+        return `<td class="kw">${esc(x.keyword)}${sub?`<span class="sub">${sub}</span>`:''}</td>`;
+      }
+      case 'v': return `<td><span class="pill p-${x.v}">${bl[x.v]}</span></td>`;
+      case 'clicks': return `<td class="num">${fmtNum(x.clicks)}</td>`;
+      case 'cost': case 'value': return `<td class="num">${fmtMoney(x[c.k])}</td>`;
+      case 'save': return `<td class="num">${x.save>0?fmtMoney(x.save):'—'}</td>`;
+      case 'conv': return `<td class="num">${fmtNum(x.conv,2)}</td>`;
+      case 'cpa': return `<td class="num">${fmtMoney(x.cpa)}</td>`;
+      case 'roas': return `<td class="num">${fmtRoas(x.roas)}</td>`;
+      case 'why': return `<td class="why">${esc(x.why)}</td>`;
+    }
+  }).join('')+'</tr>').join('')
+  : `<tr><td colspan="${cols.length}" class="muted" style="text-align:center;padding:24px">${S.items.length?'Inga sökord matchar filtret.':'Inga data än.'}</td></tr>`;
+  const more=$('more'); more.hidden = v.length<=S.limit;
+  more.firstElementChild.textContent = `Visa fler (${fmtNum(v.length-S.limit)} kvar)`;
+}
+
+/* ---------- Export ---------- */
+function csvCell(v){ v=String(v==null?'':v); return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
+function download(name, text, type){
+  const blob=new Blob([text],{type}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},500);
+}
+function exportView(){
+  const bl = Object.fromEntries(BUCKETS.map(b=>[b.k,b.t]));
+  const head=['Keyword','Match type','Campaign','Ad group','Verdict','Clicks','Cost','Conversions','Conv. value','CPA','ROAS','Spend over target','Reason'];
+  const lines=[head.join(',')].concat(viewItems().map(x=>[
+    x.keyword,x.match,x.campaign,x.adgroup,bl[x.v],x.clicks,x.cost.toFixed(2),x.conv,x.value.toFixed(2),
+    isFinite(x.cpa)?x.cpa.toFixed(2):'',isFinite(x.roas)?x.roas.toFixed(2):'',x.save.toFixed(2),x.why
+  ].map(csvCell).join(',')));
+  const base=S.fileName.replace(/\.[^.]+$/,'');
+  download(`${base}-triage${S.filter!=='all'?'-'+S.filter:''}.csv`, '﻿'+lines.join('\r\n'), 'text/csv');
+}
+function copyNegatives(){
+  const list=[...new Set(S.items.filter(x=>x.v==='cut').map(x=>x.keyword.replace(/^[\[\"+]+|[\]\"]+$/g,'').replace(/\+/g,'')))];
+  const msg=$('copied');
+  if(!list.length){ msg.textContent='Det finns inga sökord i Stryk-listan.'; msg.hidden=false; return; }
+  const text=list.map(k=>`[${k}]`).join('\n');
+  const done=()=>{ msg.textContent=`${list.length} sökord kopierade som negativa sökord med exakt matchning. Klistra in dem i en lista med negativa sökord, eller pausa helt enkelt originalen.`; msg.hidden=false; };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, ()=>download('negatives.txt',text,'text/plain'));
+  else download('negatives.txt',text,'text/plain');
+}
+
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ---------- Sample data (Google Ads export format) ---------- */
+function sampleCSV(){
+  let seed=7; const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+  const camps={
+    'Brand':['copyfororiginals','copy for originals','copy for originals reviews','copy for originals pricing'],
+    'Services - Copywriting':['ppc copywriter','ad copywriter','google ads copywriter','landing page copywriter','conversion copywriter','hire a copywriter','freelance copywriter','copywriting services','b2b copywriter','saas copywriter','email copywriter','sales page copywriter'],
+    'Services - PPC':['ppc agency','ppc management','google ads management','ppc consultant','ppc audit','google ads expert','microsoft ads agency','paid search agency','ppc management pricing','ppc specialist'],
+    'Generic':['copywriting','what is copywriting','copywriting examples','free copywriting templates','copywriting jobs','how to write ad copy','ai copywriting tool','copywriting course','ad copy generator','marketing agency'],
+  };
+  const prof={ // [ctr, cpc, cr, aov]
+    'Brand':[.25,1.1,.14,320],'Services - Copywriting':[.05,6.5,.045,420],'Services - PPC':[.04,9,.035,560],'Generic':[.03,3.2,.012,220]
+  };
+  const lines=['Search keyword report','"September 1, 2026 - September 30, 2026"',
+    'Keyword status,Keyword,Match type,Campaign,Ad group,Clicks,Impr.,CTR,Currency code,Avg. CPC,Cost,Conversions,Conv. value,Cost / conv.,Search lost IS (budget),Search lost IS (rank)'];
+  const mt=['Exact match','Phrase match','Broad match'];
+  Object.entries(camps).forEach(([c,kws])=>{
+    const [ctr,cpc,cr,aov]=prof[c];
+    kws.forEach((k,i)=>{
+      const m = mt[(i+k.length)%3];
+      const vol = Math.round((c==='Brand'?400:c==='Generic'?6000:1500)*(0.2+rnd()*1.6)*(m==='Broad match'?1.6:1));
+      const quality = (0.25+rnd()*1.9)*(/free|jobs|what is|course|generator/.test(k)?0:1);
+      const clicks = Math.max(0,Math.round(vol*ctr*(0.6+rnd()*0.8)));
+      const cost = clicks*cpc*(0.7+rnd()*0.6);
+      const conv = Math.round(clicks*cr*quality*10)/10;
+      const value = conv*aov*(0.7+rnd()*0.6);
+      const lb = rnd()<.35 ? (rnd()*40).toFixed(2)+'%' : '< 10%';
+      const lr = rnd()<.5 ? (rnd()*55).toFixed(2)+'%' : '< 10%';
+      lines.push(['Enabled',k,m,c,c.replace(/^.* - /,''),clicks,vol,(clicks/Math.max(1,vol)*100).toFixed(2)+'%','USD',
+        (clicks?cost/clicks:0).toFixed(2),cost.toFixed(2),conv.toFixed(2),value.toFixed(2),conv?(cost/conv).toFixed(2):'0.00',lb,lr].map(csvCell).join(','));
+    });
+  });
+  lines.push('Total: Account,--,--,--,--,0,0,--,USD,--,0,0,0,--,--,--');
+  return lines.join('\n');
+}
+
+/* ---------- Theme (remembered per browser; the only thing ever stored) ---------- */
+const THEME_KEY='keyword-triage-theme';
+function applyTheme(t){ if(t==='light'||t==='dark') document.documentElement.setAttribute('data-theme',t); else document.documentElement.removeAttribute('data-theme'); }
+try{ applyTheme(localStorage.getItem(THEME_KEY)); }catch(e){}
+$('btnTheme').onclick=()=>{
+  const cur=document.documentElement.getAttribute('data-theme');
+  const isDark = cur==='dark' || (!cur && matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = isDark ? 'light' : 'dark';
+  applyTheme(next); try{ localStorage.setItem(THEME_KEY,next); }catch(e){}
+};
+
+/* ---------- Wire up ---------- */
+const fileIn=$('file');
+fileIn.onchange=()=>{ if(fileIn.files[0]) readFile(fileIn.files[0]); fileIn.value=''; };
+function readFile(f){
+  const r=new FileReader();
+  r.onload=async ()=>{
+    try{
+      const b=new Uint8Array(r.result,0,Math.min(8,r.result.byteLength));
+      if (b[0]===0x50 && b[1]===0x4B && b[2]===0x03 && b[3]===0x04) loadSheets(await readXlsx(r.result), f.name);
+      else if (b[0]===0xD0 && b[1]===0xCF && b[2]===0x11 && b[3]===0xE0) alertErr('Det här är det gamla formatet från Excel 97–2003 (.xls). Öppna filen i Excel, spara den som .xlsx eller CSV och släpp den sedan här.');
+      else loadText(decode(r.result), f.name);
+    } catch(e){ alertErr('Det gick inte att läsa filen: '+e.message+'.'); }
+  };
+  r.readAsArrayBuffer(f);
+}
+$('sheetSel').onchange=e=>showSheet(+e.target.value, S.fileName);
+const drop=$('drop');
+['dragenter','dragover'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
+// Step 1 gates step 2: nothing loads until there is a target.
+const needTarget = ()=>{
+  if (S.pre.target>0) return false;
+  const t=$('preTarget'); t.classList.add('need'); t.focus(); t.scrollIntoView({block:'center',behavior:'smooth'});
+  return true;
+};
+document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f && !$('start').hidden && !needTarget()) readFile(f); });
+$('pick').onclick=()=>{ if(!needTarget()) fileIn.click(); };
+$('sample').onclick=()=>{ if(!needTarget()) loadText(sampleCSV(),'sample-keyword-report.csv'); };
+$('reset').onclick=()=>{ S.rows=[];S.items=[]; $('work').hidden=true; $('start').hidden=false; syncPre(); };
+const onNum=(id,key,min)=>$(id).addEventListener('input',()=>{ const v=parseFloat($(id).value); if(isFinite(v)&&v>=min){ S[key]=v; S.items.forEach(classify); renderResults(); }});
+$('target').addEventListener('input',()=>{
+  const v=parseFloat($('target').value); if(!(isFinite(v)&&v>0)) return;
+  S.target=v; S.pre={mode:S.mode,target:v}; syncPre();
+  if (!S.zerocutTouched){ setZeroCut(); $('zerocut').value=S.zerocut; }
+  renderSettings(S.map.value>-1 && S.acct.value>0); S.items.forEach(classify); renderResults();
+});
+$('zerocut').addEventListener('input',()=>{ S.zerocutTouched=true; });
+function syncPre(){
+  document.querySelectorAll('#preMode button').forEach(b=>b.classList.toggle('on', b.dataset.m===S.pre.mode));
+  const roas = S.pre.mode==='roas';
+  $('preLabel').textContent = roas ? 'Mål-ROAS (t.ex. 4 = 400 %)' : 'Målkostnad per konvertering';
+  $('preTarget').placeholder = roas ? 't.ex. 4' : 't.ex. 80';
+  if (document.activeElement!==$('preTarget')) $('preTarget').value = S.pre.target || '';
+  $('preHint').textContent = roas
+    ? 'Använd din break-even-ROAS: 1 ÷ bruttomarginalen (40 % marginal kräver 2,5). Rapporten måste ha en kolumn för konverteringsvärde eller intäkter.'
+    : 'Använd din break-even-CPA: bruttovinsten på en konvertering. Ett sökord som kostar mer än så per konvertering går med förlust.';
+  $('drop').classList.toggle('locked', !(S.pre.target>0));
+}
+document.querySelectorAll('#preMode button').forEach(b=>b.onclick=()=>{
+  if (S.pre.mode===b.dataset.m) return;
+  S.pre={mode:b.dataset.m, target:null}; syncPre();
+});
+$('preTarget').addEventListener('input',()=>{
+  const v=parseFloat($('preTarget').value); S.pre.target = isFinite(v)&&v>0 ? v : null;
+  $('preTarget').classList.remove('need'); $('drop').classList.toggle('locked', !S.pre.target);
+});
+$('drop').classList.add('locked'); onNum('zerocut','zerocut',0); onNum('minclicks','minclicks',0); onNum('minconv','minconv',0);
+
+let qt; $('q').addEventListener('input',e=>{ clearTimeout(qt); qt=setTimeout(()=>{S.q=e.target.value.trim();S.limit=200;renderTable();},120); });
+$('more').firstElementChild.onclick=()=>{ S.limit+=300; renderTable(); };
+$('exportView').onclick=exportView;
+$('exportNeg').onclick=copyNegatives;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Så skriver du innehåll som LLM:er hämtar och citerar: en evidensgraderad AEO-guide</title>
+<meta name="description" content="Vad som gör en webbsida lätt för ChatGPT, Claude, Perplexity, Copilot och Googles AI-översikter att hämta och citera. Varje metod är graderad efter hur starka beläggen är, med källor och en checklista med 12 punkter.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/innehall-som-llm-hamtar-och-citerar/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/innehall-som-llm-hamtar-och-citerar/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/rag-friendly-content/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/rag-friendly-content/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/sv/innehall-som-llm-hamtar-och-citerar/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Så skriver du innehåll som LLM:er hämtar och citerar">
+<meta property="og:description" content="En evidensgraderad guide till optimering för svarsmotorer (AEO) och RAG-vänligt innehåll, med källor och en checklista.">
+<meta property="article:modified_time" content="2026-10-03">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/sv/innehall-som-llm-hamtar-och-citerar/#article",
+      "headline": "Så skriver du innehåll som LLM:er hämtar och citerar: en evidensgraderad AEO-guide",
+      "alternativeHeadline": "RAG-vänligt innehåll och optimering för svarsmotorer (AEO), graderat efter belägg",
+      "description": "Vad som gör en webbsida lätt för ChatGPT, Claude, Perplexity, Copilot och Googles AI-översikter att hämta och citera, med varje metod graderad efter hur starka beläggen är.",
+      "url": "https://tools.copyfororiginals.com/sv/innehall-som-llm-hamtar-och-citerar/",
+      "inLanguage": "sv",
+      "datePublished": "2026-10-03",
+      "dateModified": "2026-10-03",
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "publisher": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "about": [
+        "Optimering för svarsmotorer",
+        "Optimering för generativa motorer",
+        "Retrieval-augmented generation"
+      ],
+      "citation": [
+        "https://arxiv.org/abs/2311.09735",
+        "https://arxiv.org/abs/2605.25517",
+        "https://arxiv.org/abs/2609.35077",
+        "https://arxiv.org/abs/2509.11353",
+        "https://vercel.com/blog/the-rise-of-the-ai-crawler",
+        "https://ahrefs.com/blog/schema-ai-citations/",
+        "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+        "https://ahrefs.com/blog/why-chatgpt-cites-pages/",
+        "https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/",
+        "https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/",
+        "https://www.anthropic.com/news/contextual-retrieval",
+        "https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers"
+      ],
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Verktyg",
+            "item": "https://tools.copyfororiginals.com/sv/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guide till RAG-vänligt innehåll",
+            "item": "https://tools.copyfororiginals.com/sv/innehall-som-llm-hamtar-och-citerar/"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../site.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../rag-friendly-content/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Sökväg"><a href="../">&larr; Alla verktyg</a></nav>
+
+<header>
+  <p class="kicker">Guide · Svarsmotorer</p>
+  <h1>Så skriver du innehåll som LLM:er hämtar och citerar</h1>
+  <p class="lede">RAG-vänligt innehåll är webbinnehåll som en RAG-kedja (retrieval-augmented generation, alltså generering med stöd av hämtad information) kan hämta, dela upp i textbitar, matcha mot en fråga och citera utan att meningen går förlorad. Den här guiden förklarar vad svarsmotorer som ChatGPT, Claude, Perplexity, Microsoft Copilot och Googles AI-översikter gör med en sida, och graderar varje vanlig metod för optimering för svarsmotorer (AEO) efter hur starka beläggen är.</p>
+  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Senast uppdaterad <time datetime="2026-10-03">3 oktober 2026</time></p>
+  <ul class="legend" aria-label="Evidensgrader som används på den här sidan">
+    <li><span class="ev ev-strong">Stark</span> primärdokumentation, referentgranskad forskning eller kontrollerat experiment</li>
+    <li><span class="ev ev-mod">Måttlig</span> stor observationsstudie eller branschstudie</li>
+    <li><span class="ev ev-inf">Slutledning</span> följer av hur RAG fungerar, inte testat på svarsmotorer i drift</li>
+    <li><span class="ev ev-weak">Svag</span> allmänt trott, men med få eller blandade belägg</li>
+  </ul>
+  <div class="tldr">
+    <h2>Kort svar</h2>
+    <p>En sida blir citerad av svarsmotorer när alla fakta finns i den råa HTML-koden (de flesta AI-sökrobotar kör inte JavaScript), när varje avsnitt går att förstå på egen hand, när rubrikerna ligger nära de frågor som folk faktiskt ställer och när texten innehåller konkreta fakta som går att citera, som siffror, formler, priser och datum. Schemamärkning och llms.txt-filer har ingen mätbar effekt på citeringarna. Domänens auktoritet och närvaron i Googles och Bings index väger fortfarande tyngre än någon enskild ändring på sidan.</p>
+  </div>
+</header>
+
+<section id="pipeline">
+  <h2>Så hanterar svarsmotorer en webbsida</h2>
+  <p>En svarsmotor hanterar en webbsida i fem steg: den hämtar HTML-koden, plockar ut huvudtexten, delar upp texten i textbitar, söker fram de bitar som ligger närmast varje delfråga och rangordnar om dem innan den citerar de bästa. I varje steg faller en del innehåll bort, och varje steg ger en skrivregel.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>RAG-kedjan och vad varje steg betyder för den som skriver</caption>
+    <thead><tr><th scope="col">Steg</th><th scope="col">Vad som händer</th><th scope="col">Vad du ska göra</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1. Hämtning</th><td>Ingen av de stora AI-sökrobotarna renderar JavaScript. Det gäller också sökrobotarna från OpenAI, Anthropic, Meta, ByteDance och Perplexity. Bara Googles Gemini (via Googlebot) och AppleBot renderar det. <span class="ev ev-strong">Stark</span> <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" rel="noopener">Vercel</a></td><td>Rendera varje faktum på servern eller i förväg. En JavaScript-app behöver en förklaring i statisk text bredvid sig.</td></tr>
+      <tr><th scope="row">2. Extrahering</th><td>Verktyg som plockar ut huvudinnehållet, till exempel Mozilla Readability, kastar bort dolda noder (attributet <code>hidden</code>, <code>display:none</code>, <code>aria-hidden</code>) och block som ser ut som återkommande mallinnehåll. Tabeller med rubrikceller behålls som data. <span class="ev ev-strong">Stark</span> <a href="https://github.com/mozilla/readability" rel="noopener">Källkoden till Readability</a></td><td>Använd riktiga <code>&lt;table&gt;</code>-element med <code>&lt;th&gt;</code>-rubriker. Göm inte viktiga svar i flikar, utfällbara avsnitt eller bilder.</td></tr>
+      <tr><th scope="row">3. Uppdelning</th><td>Sidan delas upp i passager på några hundra tokens. En passage som rycks ur sitt sammanhang förlorar betydelse: Anthropic minskade de misslyckade hämtningarna med 49&nbsp;%, och med 67&nbsp;% tillsammans med omrangordning, genom att lägga tillbaka det saknade sammanhanget i varje textbit. <span class="ev ev-strong">Stark</span> <a href="https://www.anthropic.com/news/contextual-retrieval" rel="noopener">Anthropic</a></td><td>Gör varje avsnitt fristående. Upprepa namnet på det du skriver om i stället för att skriva ”det” eller ”det här verktyget”.</td></tr>
+      <tr><th scope="row">4. Sökning</th><td>Motorerna bryter ner en fråga i många delfrågor (<span lang="en">“query fan-out”</span>). I mars 2026 rankade bara 38&nbsp;% av sidorna som citerades i Googles AI-översikter bland de 10 främsta för den ursprungliga sökfrågan, jämfört med omkring 76&nbsp;% i juli 2025. <span class="ev ev-mod">Måttlig</span> <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/" rel="noopener">Ahrefs</a></td><td>Skriv rubrikerna ordagrant som de frågor folk ställer, och täck även de närliggande delfrågorna, inte bara huvudämnet.</td></tr>
+      <tr><th scope="row">5. Omrangordning</th><td>LLM-baserade omrangordnare föredrar passager som ser färska ut. När datum lades till flyttades det genomsnittliga publiceringsåret för de 10 översta resultaten fram med upp till 4,78 år, och upp till 25&nbsp;% av preferenserna mellan lika relevanta passager kastades om. <span class="ev ev-strong">Stark</span> <a href="https://arxiv.org/abs/2509.11353" rel="noopener">Fang et al.</a></td><td>Börja med svaret. Visa ett verkligt datum för ”Senast uppdaterad” och ändra det bara vid uppdateringar i sak.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="crawl">
+  <h2>Därför är JavaScript-renderat innehåll osynligt för de flesta AI-sökrobotar</h2>
+  <p>Innehåll som renderas med JavaScript är osynligt för sökrobotarna från ChatGPT, Claude och Perplexity, eftersom de laddar ner HTML-koden men aldrig kör skripten. Vercels analys av sökrobottrafik visade att vissa AI-sökrobotar laddar ner JavaScript-filer utan att köra dem, och att ChatGPT:s och Claudes sökrobotar lägger omkring 34&nbsp;% av sina hämtningar på 404-sidor, jämfört med omkring 8&nbsp;% för Googlebot. <span class="ev ev-strong">Stark</span></p>
+  <p>Vill du se vad en AI-sökrobot ser kan du hämta sidan med <code>curl</code> och läsa den råa HTML-koden. Allt som saknas där, till exempel text som React lägger in, siffror som ritas i en canvas eller resultat som räknas ut i webbläsaren, går inte att citera.</p>
+</section>
+
+<section id="structure">
+  <h2>Så bygger du upp en sida så att varje avsnitt kan hämtas för sig</h2>
+  <p>Bygg upp sidan så att varje H2-avsnitt besvarar en fråga helt på ungefär 150 till 400 ord, börjar med det direkta svaret och nämner sitt ämne uttryckligen. Hämtningssystem bedömer varje textbit för sig, så ett avsnitt som bygger på avsnittet ovanför är svårt att matcha mot en fråga. <span class="ev ev-inf">Slutledning</span></p>
+  <ul>
+    <li><b>En H1, sedan en ren struktur av H2 och H3.</b> Delningsverktyg som tar hänsyn till rubriker delar texten vid rubrikerna och lägger ofta till rubrikvägen i textbiten.</li>
+    <li><b>Börja med en definition:</b> ”X är ett Y som gör Z för W.” En definition är den perfekta fristående textbiten.</li>
+    <li><b>Svara först, förklara sedan.</b> Behandla varje avsnitt som en liten omvänd pyramid.</li>
+    <li><b>Upprepa entitetens namn.</b> En textbit där det står ”det stöder CSV” går inte att matcha mot frågan ”Stöder Keyword Triage CSV?”.</li>
+    <li><b>Skriv formler och tröskelvärden som vanlig text,</b> till exempel ”effektivitet = mål-CPA ÷ sökordets CPA; under 0,5 ger Stryk”.</li>
+    <li><b>Använd riktiga tabeller och listor.</b> Microsoft rekommenderar jämförelsetabeller, numrerade steg och fråga-svar-format för innehåll som ska citeras av Copilot. <a href="https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers" rel="noopener">Microsoft Advertising</a></li>
+  </ul>
+</section>
+
+<section id="writing">
+  <h2>Skrivtekniker som ger fler AI-citeringar</h2>
+  <p>Bäst belägg finns för att ligga nära användarens fråga, att lägga till statistik, citat och källhänvisningar och att ange priser, siffror och datum uttryckligen. Enbart formateringsändringar har liten effekt.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Skrivtekniker graderade efter belägg</caption>
+    <thead><tr><th scope="col">Teknik</th><th scope="col">Belägg</th><th scope="col">Vad forskningen visade</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Nära matchning mot frågan</th><td><span class="ev ev-mod">Måttlig</span></td><td>I omkring 2,1 miljoner citeringar i ChatGPT, Claude, Google AI och Gemini var hur nära sidans innehåll låg prompten den starkaste faktorn på sidnivå (β = +0,37). <a href="https://arxiv.org/abs/2609.35077" rel="noopener">Moore &amp; Dunne, 2026</a>. I 1,4 miljoner prompter i ChatGPT låg de citerade sidornas titlar närmare prompten än titlarna på sidor som inte citerades (cosinuslikhet 0,602 mot 0,484). <a href="https://ahrefs.com/blog/why-chatgpt-cites-pages/" rel="noopener">Ahrefs</a></td></tr>
+      <tr><th scope="row">Statistik, citat och källhänvisningar</th><td><span class="ev ev-strong">Stark</span></td><td>GEO-studien (KDD 2024) visade att sådana omskrivningar ökade en källas synlighet i genererade svar med upp till omkring 40&nbsp;%, med de största vinsterna för lägre rankade källor. Att fylla texten med sökord (keyword stuffing) gav sämre resultat än att inte göra något alls. <a href="https://arxiv.org/abs/2311.09735" rel="noopener">Aggarwal et al.</a></td></tr>
+      <tr><th scope="row">Uttryckliga priser, siffror och tidsstämplar</th><td><span class="ev ev-strong">Stark</span></td><td>I 252&nbsp;000 kontrollerade försök med sex LLM:er ökade uttryckliga priser och färska tidsstämplar genomgående chansen att bli vald, medan rena formateringsändringar hade minimal effekt. <a href="https://arxiv.org/abs/2605.25517" rel="noopener">Vishwakarma et al., 2026</a></td></tr>
+      <tr><th scope="row">Synlig aktualitet</th><td><span class="ev ev-strong">Stark</span></td><td>LLM-baserade omrangordnare lyfter fram passager som ser färska ut (se steg 5 ovan). Sidans ålder hade också en liten effekt i studien av 2,1 miljoner citeringar (β = +0,05).</td></tr>
+      <tr><th scope="row">Genomräknade exempel och ordlistor</th><td><span class="ev ev-inf">Slutledning</span></td><td>De ger motorn fristående, kontrollerbara fakta att citera. Inte testat direkt.</td></tr>
+      <tr><th scope="row">FAQ-block</th><td><span class="ev ev-weak">Svag</span></td><td>Litet positivt samband (β = +0,07) som inte var signifikant när andra faktorer kontrollerades. Ändå användbart, eftersom FAQ-frågor matchar verkliga sökfrågor.</td></tr>
+      <tr><th scope="row">Författarrader och förtroendesignaler</th><td><span class="ev ev-weak">Svag</span></td><td>Blygsamma effekter i kontrollerade försök. Inte belagt i svarsmotorer i drift.</td></tr>
+      <tr><th scope="row">Sidhastighet och Core Web Vitals</th><td><span class="ev ev-weak">Svag</span></td><td>Ingen effekt när man kontrollerade för domänen.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="schema">
+  <h2>Ger schemamärkning fler AI-citeringar?</h2>
+  <p>Schemamärkning i sig ökar inte AI-citeringarna mätbart. När Ahrefs följde 1&nbsp;885 sidor som lade till JSON-LD-schema mellan augusti 2025 och mars 2026 och jämförde dem med matchade kontrollsidor ändrades citeringarna med −4,6&nbsp;% i Googles AI-översikter, +2,4&nbsp;% i AI-läget och +2,2&nbsp;% i ChatGPT, och de två sista gick statistiskt inte att skilja från noll. <span class="ev ev-mod">Måttlig</span> <a href="https://ahrefs.com/blog/schema-ai-citations/" rel="noopener">Ahrefs</a></p>
+  <p>I ett annat test hittade inget av fem AI-system ett produktpris som bara fanns i JSON-LD. ChatGPT, Claude och Gemini hämtade sidan direkt, medan Perplexity och Googles AI-läge svarade utifrån sina sökindex. <span class="ev ev-strong">Stark</span> <a href="https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/" rel="noopener">searchVIU</a></p>
+  <p>Schema är ändå värt att lägga till för vanlig sökning och för att beskriva entiteter: <code>WebApplication</code> eller <code>SoftwareApplication</code> för verktyg, <code>Article</code>, <code>Organization</code>, <code>BreadcrumbList</code> och <code>dateModified</code>. Regeln är att JSON-LD ska upprepa synlig text och aldrig vara det enda stället där ett faktum står.</p>
+</section>
+
+<section id="llms-txt">
+  <h2>Ger llms.txt bättre synlighet i AI-sökning?</h2>
+  <p>Det finns inga belägg för att llms.txt ökar AI-citeringarna. SE Ranking analyserade omkring 300&nbsp;000 domäner, hittade llms.txt på omkring 10&nbsp;% av dem och fann inget meningsfullt samband mellan att ha filen och hur ofta en domän citeras. <span class="ev ev-mod">Måttlig</span> <a href="https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/" rel="noopener">Search Engine Journal</a></p>
+  <p>En llms.txt-fil enligt förslaget på <a href="https://llmstxt.org" rel="noopener">llmstxt.org</a> är en Markdown-fil i webbplatsens rot med namnet som H1, en sammanfattning på en rad i ett blockcitat och H2-avsnitt med kommenterade länkar. Den är billig att lägga till och kan hjälpa kodagenter som skickas till dokumentation, men räkna inte med att den påverkar vilka sidor svarsmotorerna citerar.</p>
+</section>
+
+<section id="bots">
+  <h2>Vilka AI-sökrobotar du bör släppa in i robots.txt</h2>
+  <p>Vill du synas i AI-svar ska du släppa in sökrobotarna för sökning och för hämtningar på användares begäran. Blockerar du sökrobotarna för träning hålls ditt innehåll utanför modellträningen, men du försvinner inte från svaren i AI-sökning.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>AI-sökrobotar och vad som händer om du blockerar dem</caption>
+    <thead><tr><th scope="col">Sökrobot</th><th scope="col">Används till</th><th scope="col">Blockerar du den…</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">OAI-SearchBot, ChatGPT-User</th><td>Sökning i ChatGPT och hämtningar på användarens begäran</td><td>försvinner du från svaren i ChatGPT</td></tr>
+      <tr><th scope="row">Claude-SearchBot, Claude-User</th><td>Sökning i Claude och hämtningar på användarens begäran</td><td>försvinner du från svaren i Claude</td></tr>
+      <tr><th scope="row">PerplexityBot, Perplexity-User</th><td>Perplexitys index och hämtningar på användarens begäran</td><td>försvinner du från svaren i Perplexity</td></tr>
+      <tr><th scope="row">Googlebot, Bingbot</th><td>Googles AI-översikter och AI-läget; Microsoft Copilot</td><td>försvinner du från både sökresultat och AI-svar</td></tr>
+      <tr><th scope="row">GPTBot, ClaudeBot, Google-Extended, Applebot-Extended</th><td>Modellträning</td><td>försvinner du inte från svaren i AI-sökning</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Copilot svarar utifrån Bings index, så skicka in din sitemap till Bing Webmaster Tools och inte bara till Google Search Console.</p>
+</section>
+
+<section id="case-study">
+  <h2>Exempel: så gjorde vi Keyword Triage RAG-vänligt</h2>
+  <p><a href="../keyword-triage/">Keyword Triage</a> är ett verktyg här på webbplatsen som kontrollerar hur lönsamma sökorden i Google Ads är. Före omskrivningen fanns verktygets regler för bedömningarna, de förvalda tröskelvärdena och formlerna bara i JavaScript. En sökrobot som inte kör JavaScript såg omkring 340 ord och inga tröskelvärden.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Keyword Triage före och efter omskrivningen</caption>
+    <thead><tr><th scope="col">Ändring</th><th scope="col">Före</th><th scope="col">Efter</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Ord som syns utan JavaScript</th><td>342</td><td>omkring 2&nbsp;470</td></tr>
+      <tr><th scope="row">H1</th><td>Keyword Triage</td><td>Keyword Triage: lönsamhetskontroll av sökord i Google Ads</td></tr>
+      <tr><th scope="row">Första meningen</th><td>En beskrivning av uppgiften</td><td>En definition: ”Keyword Triage är ett gratisverktyg som kontrollerar lönsamheten för varje sökord …”</td></tr>
+      <tr><th scope="row">Regler och formler</th><td>Bara i JavaScript</td><td>En tabell över bedömningarna, effektivitetsformeln, alla förvalda tröskelvärden och formeln för kostnad över målet, allt i synlig text</td></tr>
+      <tr><th scope="row">Genomräknat exempel</th><td>Inget</td><td>Sju sökord med ett mål-CPA på 50 USD, kontrollerade mot verktygets faktiska resultat</td></tr>
+      <tr><th scope="row">Avsnitt formulerade som frågor</th><td>1</td><td>10, plus en FAQ med 7 frågor och en ordlista</td></tr>
+      <tr><th scope="row">Källor och aktualitet</th><td>Inga</td><td>Två hänvisningar till Google Ads Help, en författarrad och ett ”Senast uppdaterad”-datum</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="checklist">
+  <h2>Checklista för RAG-vänligt innehåll</h2>
+  <p>Gå igenom den här checklistan med 12 punkter innan du publicerar en sida som du vill att svarsmotorer ska citera.</p>
+  <ol class="check">
+    <li>Alla fakta finns i HTML som renderas på servern. Kontrollera med <code>curl</code>.</li>
+    <li>En H1 som nämner entiteten och den kategori som folk söker efter.</li>
+    <li>En första mening som definierar: ”X är ett Y som gör Z.”</li>
+    <li>H2-rubriker formulerade som frågor, var och en besvarad i sin första mening.</li>
+    <li>Fristående avsnitt som upprepar entitetens namn i stället för ”det”.</li>
+    <li>Siffror, tröskelvärden, formler och priser i vanlig text.</li>
+    <li>Ett genomräknat exempel med verkliga siffror.</li>
+    <li>Riktiga tabeller med tabellrubrik och rubrikceller, och listor för steg.</li>
+    <li>Två eller tre hänvisningar till primärkällor.</li>
+    <li>En FAQ för närliggande frågor, en ordlista och ett avsnitt om begränsningar.</li>
+    <li>En synlig författarrad och ett ”Senast uppdaterad”-datum som stämmer med <code>dateModified</code>.</li>
+    <li>En kanonisk URL, en sitemap med <code>lastmod</code>, en robots.txt som släpper in sökrobotarna för sökning och för hämtningar på användares begäran, och att webbplatsen är inskickad till både Google Search Console och Bing Webmaster Tools.</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2>Källor</h2>
+  <ul class="sources">
+    <li>Aggarwal et al., ”GEO: Generative Engine Optimization”, KDD 2024. <a href="https://arxiv.org/abs/2311.09735" rel="noopener">arXiv 2311.09735</a></li>
+    <li>Vishwakarma, Kumar &amp; Jamidar, ”What Gets Cited: Competitive GEO in AI Answer Engines”, maj 2026. <a href="https://arxiv.org/abs/2605.25517" rel="noopener">arXiv 2605.25517</a></li>
+    <li>Moore &amp; Dunne (Discovered Labs), ”What Drives Citations in Production Large Language Models?”, maj 2026. <a href="https://arxiv.org/abs/2609.35077" rel="noopener">arXiv 2609.35077</a></li>
+    <li>Fang, Tao, Chen, Chang &amp; Sakai, ”Do Large Language Models Favor Recent Content? A Study on Recency Bias in LLM-Based Reranking”. <a href="https://arxiv.org/abs/2509.11353" rel="noopener">arXiv 2509.11353</a></li>
+    <li>Vercel, ”The rise of the AI crawler”. <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" rel="noopener">vercel.com</a></li>
+    <li>Anthropic, ”Introducing Contextual Retrieval”. <a href="https://www.anthropic.com/news/contextual-retrieval" rel="noopener">anthropic.com</a></li>
+    <li>Ahrefs, studie av hur många citeringar i AI-översikter som rankar bland de 10 främsta, mars 2026. <a href="https://ahrefs.com/blog/ai-overview-citations-top-10/" rel="noopener">ahrefs.com</a></li>
+    <li>Ahrefs, studie av varför ChatGPT citerar sidor (1,4 miljoner prompter). <a href="https://ahrefs.com/blog/why-chatgpt-cites-pages/" rel="noopener">ahrefs.com</a></li>
+    <li>Ahrefs, studie av schemamärkning och AI-citeringar (1&nbsp;885 sidor). <a href="https://ahrefs.com/blog/schema-ai-citations/" rel="noopener">ahrefs.com</a></li>
+    <li>searchVIU, test av vad ChatGPT, Claude, Perplexity och Gemini plockar ut ur schemamärkning. <a href="https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/" rel="noopener">searchviu.com</a></li>
+    <li>Search Engine Journal, artikel om SE Rankings studie av llms.txt på 300&nbsp;000 domäner. <a href="https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/" rel="noopener">searchenginejournal.com</a></li>
+    <li>Microsoft Advertising, råd om hur innehåll optimeras för att komma med i svar från AI-sökning, oktober 2025. <a href="https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers" rel="noopener">about.ads.microsoft.com</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>Statisk sida. Inga skript, ingen spårning. Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+</footer>
+</div>
+</body>
+</html>

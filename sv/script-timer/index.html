@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manustimer och hooktimer för korta videor (TikTok, Reels, Shorts)</title>
+<meta name="description" content="Gratis manustimer i realtid, byggd för korta videor. Räkna ut tempot exakt, testa din tresekundershook mot 132 uppmätta toppklipp på Shorts och optimera retentionen för TikTok, Reels och YouTube Shorts.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Manustimer och hooktimer för korta videor">
+<meta property="og:description" content="Manustimer i realtid för korta videor. Testa din tresekundershook, se retentionszonerna och pricka exakt speltid för TikTok, Reels och Shorts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%8F%B1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Short-Form Script Pacing & Hook Timer",
+  "description": "Manustimer i realtid för korta videor. Räknar ut hur lång tid manuset tar att säga utifrån antal ord och WPM (ord per minut), delar in manuset i retentionszoner och bedömer hooken mot taltempo och längd på första meningen, uppmätta i 132 YouTube Shorts med över en miljon visningar vardera.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Kräver JavaScript. Körs helt i webbläsaren.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Manusets speltid i realtid, i formatet MM:SS.s",
+    "Fyra tempoförval samt eget WPM från 100 till 250",
+    "Standardtempo 193 WPM, den uppmätta medianen för 132 toppklipp på YouTube Shorts",
+    "Smarta pauser som viktas efter skiljetecken",
+    "Färgkodade retentionszoner (3 s / 15 s / 30 s / 60 s)",
+    "Återkoppling på hooken, jämförd med uppmätta längder på första meningen (grönt inom 3 s, notering upp till 5 s, varning efter 5 s)",
+    "Speltiden visas vid den uppmätta medianen 193 WPM bredvid det tempo du har valt",
+    "Utkastet sparas automatiskt lokalt"
+  ],
+  "inLanguage": "sv"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hur många ord ryms i ett videomanus på 30 sekunder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ungefär 97 ord vid 193 WPM (ord per minut), det uppmätta mediantempot i 132 toppklipp på YouTube Shorts. I samtalston, 155 WPM, ryms 78 ord, och i ett lugnt tempo på 135 WPM ryms 68. Räkna med 10–15 % färre om du pausar för att betona något eller klipper till B-roll."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur många ord ryms i ett videomanus på 60 sekunder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ungefär 193 ord i toppklippens uppmätta tempo, 193 WPM – på exakt en minut är antalet ord och antalet ord per minut samma tal. I samtalston, 155 WPM, ryms 155 ord och i ett lugnt tempo på 135 WPM ryms 135, så spannet mellan förvalen är 135 till 193."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur många ord ryms i ett videomanus på 15 sekunder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Omkring 48 ord i toppklippens uppmätta tempo, 193 WPM, eller 34 till 48 beroende på förval. På den tiden får du plats med en hook, en poäng och ett avslut – inget mer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur många ord ska en hook på tre sekunder ha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 till 10 ord, beroende på ditt tempo – 10 i toppklippens uppmätta tempo, 193 WPM, och 8 vid 155. Det är en enda sats. Mätningen av 132 toppklipp på Shorts visar att i median 9 ord hinner sägas före tresekundersgränsen, så regeln håller. Klippens första mening är i median 11 ord och 3,1 sekunder lång, och bara 48 % avslutar den inom 3,0 sekunder medan 77 % gör det inom 5,0 sekunder. Timern räknar din första mening som hooken: inom tre sekunder får du grönt ljus, mellan tre och fem sekunder en notering i stället för en varning, eftersom det spannet är helt normalt, och efter fem sekunder en varning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vilket taltempo ska jag ha för TikTok, Reels och Shorts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I mätningen av 132 toppklipp på Shorts är medianen 193 WPM och den mittersta hälften ligger mellan 156 och 221 – snabbare än vardagligt samtal, eftersom pauserna klipps bort. Förvalet Toppklipp är satt till den medianen, 193 WPM, och är standardvalet. Ett manus som är beräknat för 155 men framförs i 193 tar slut ungefär 20 % för tidigt, så gå ner till förvalen 155 eller 135 bara om dina inspelade videor genomgående blir längre än uppskattningen. Det WPM som stämmer med dina faktiska inspelningar är ditt personliga tempo. Tempot förutsade inte antalet visningar i urvalet, så välj ett tempo du faktiskt klarar att hålla, inte ett som du hoppas ska ge spridning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur räknar manustimern ut speltiden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Den räknar orden, dividerar med ditt antal ord per minut och multiplicerar med 60. Med Smarta pauser påslaget lägger den också till 0,35 sekunder per meningsslut, 0,15 per kommatecken eller tankstreck och 0,5 per styckebrytning. Sedan färgkodas varje ord efter den tidpunkt då det har sagts klart – retentionszonerna vid 3, 15, 30 och 60 sekunder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sparas mitt manus, eller laddas det upp någonstans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Utkastet sparas i webbläsarens lokala lagring så att det finns kvar om du laddar om sidan, och det lämnar aldrig din enhet. Sidan gör inga nätverksanrop efter att den har laddats."
+      }
+    }
+  ],
+  "inLanguage": "sv"
+}
+</script>
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/script-timer/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/script-timer/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/script-timer/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/script-timer/">
+<link rel="stylesheet" href="../../site.css">
+<style>
+/* ---------- tokens (palette + fonts come from site.css; these are page aliases) ---------- */
+:root{
+  --panel-2:var(--soft); --edge:var(--line); --edge-2:color-mix(in srgb,var(--line) 70%,var(--panel));
+  --fg:var(--ink); --fg-2:var(--muted); --fg-3:var(--faint);
+  --accent-fg:var(--on-accent); --focus:var(--accent);
+  --warn:var(--ochre); --warn-bg:var(--ochre-bg); --warn-edge:color-mix(in srgb,var(--ochre) 35%,transparent);
+  --danger:var(--red); --ok:var(--moss);
+  /* retention zones: moss, lake, rapeseed ochre, lingonberry heather, stone */
+  --heather:#8a4a6b;
+  --z1s:var(--moss);    --z1:color-mix(in srgb,var(--z1s) 20%,transparent);
+  --z2s:var(--lake);    --z2:color-mix(in srgb,var(--z2s) 20%,transparent);
+  --z3s:var(--ochre);   --z3:color-mix(in srgb,var(--z3s) 22%,transparent);
+  --z4s:var(--heather); --z4:color-mix(in srgb,var(--z4s) 20%,transparent);
+  --z5s:var(--stone);   --z5:color-mix(in srgb,var(--z5s) 22%,transparent);
+  --shadow:0 1px 2px rgba(30,35,32,.06), 0 8px 24px rgba(30,35,32,.06);
+  --sbw:0px; --edh:420px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --heather:#d9a6c2;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --heather:#d9a6c2;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
+
+/* ---------- base ---------- */
+body{font-size:16px;line-height:1.55}
+h1,h2,h3{line-height:1.25;margin:0}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header ---------- */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--edge)}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto;min-width:0}
+.brand svg{flex:none;color:var(--accent)}
+.brand b{font-size:15px;font-weight:650;letter-spacing:-.01em;white-space:nowrap}
+.brand span{font-size:12px;color:var(--fg-3);white-space:nowrap}
+
+.seg{display:flex;flex-wrap:wrap;background:var(--panel-2);border:1px solid var(--edge);border-radius:0;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;color:var(--fg-2);padding:6px 10px;border-radius:0;
+  font-size:13px;font-weight:550;cursor:pointer;white-space:nowrap;line-height:1.2}
+.seg button:hover{color:var(--fg)}
+.seg button[aria-pressed="true"]{background:var(--panel);color:var(--fg);box-shadow:var(--shadow)}
+.seg button small{display:block;font-size:10px;font-weight:500;color:var(--fg-3);letter-spacing:.02em}
+.seg button[aria-pressed="true"] small{color:var(--accent)}
+
+.customwrap{display:none;align-items:center;gap:8px;font-size:13px;color:var(--fg-2)}
+.customwrap.on{display:flex}
+.customwrap input[type=range]{width:120px;accent-color:var(--accent)}
+.customwrap output{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--fg);min-width:62px}
+
+.toggles{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.tog{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--fg-2);cursor:pointer;user-select:none}
+.tog input{appearance:none;-webkit-appearance:none;margin:0;width:34px;height:20px;border-radius:0;
+  background:var(--panel-2);border:1px solid var(--edge);position:relative;cursor:pointer;transition:background .15s,border-color .15s;flex:none}
+.tog input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+  background:var(--fg-3);transition:transform .15s,background .15s}
+.tog input:checked{background:var(--accent);border-color:var(--accent)}
+.tog input:checked::after{transform:translateX(14px);background:var(--on-accent)}
+
+.acts{display:flex;gap:8px}
+.btn{border:1px solid var(--edge);background:var(--panel);color:var(--fg-2);padding:7px 12px;border-radius:0;
+  font-size:13px;font-weight:550;cursor:pointer;white-space:nowrap;transition:border-color .12s,color .12s,background .12s}
+.btn:hover{border-color:var(--fg-3);color:var(--fg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-fg)}
+.btn.icon{padding:7px 9px;line-height:0}
+
+/* ---------- legend ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0;padding:14px 0 10px;font-size:12px;color:var(--fg-2)}
+.legend .chip{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.legend .sw{width:22px;height:12px;border-radius:0;display:inline-block}
+.legend .sw.z1{background:var(--z1);box-shadow:inset 0 0 0 1px var(--z1s)}
+.legend .sw.z2{background:var(--z2);box-shadow:inset 0 0 0 1px var(--z2s)}
+.legend .sw.z3{background:var(--z3);box-shadow:inset 0 0 0 1px var(--z3s)}
+.legend .sw.z4{background:var(--z4);box-shadow:inset 0 0 0 1px var(--z4s)}
+.legend .sw.z5{background:var(--z5);box-shadow:inset 0 0 0 1px var(--z5s)}
+
+/* ---------- editor ---------- */
+.editor{display:grid;grid-template-columns:56px minmax(0,1fr);background:var(--panel);
+  border:1px solid var(--edge);border-radius:0;box-shadow:var(--shadow);overflow:hidden}
+.gutter{position:relative;overflow:hidden;background:var(--panel-2);border-right:1px solid var(--edge-2);
+  contain:paint}
+.gutter i{position:absolute;right:8px;font-style:normal;font-family:var(--mono);font-size:11px;
+  color:var(--fg-3);white-space:nowrap;will-change:transform}
+.shell{position:relative;overflow:hidden;height:var(--edh)}
+.gutter{height:var(--edh)}
+
+/* the two layers must share identical text metrics */
+.layer{
+  font-family:var(--sans);font-size:17px;line-height:1.75;letter-spacing:0;
+  padding:18px 20px;margin:0;border:0;
+  white-space:pre-wrap;overflow-wrap:break-word;word-break:normal;tab-size:2;
+}
+#mirror{position:absolute;inset:0;color:transparent;pointer-events:none;user-select:none;
+  overflow:hidden;padding-right:calc(20px + var(--sbw));contain:content}
+#mirror span{border-radius:0;padding:1px 0}
+#mirror .z1{background:var(--z1);box-shadow:0 -1px 0 var(--z1) inset}
+#mirror .z2{background:var(--z2)}
+#mirror .z3{background:var(--z3)}
+#mirror .z4{background:var(--z4)}
+#mirror .z5{background:var(--z5);box-shadow:0 -2px 0 color-mix(in srgb,var(--red) 45%,transparent) inset}
+.plain #mirror span{background:none;box-shadow:none}
+#script{position:absolute;inset:0;width:100%;height:100%;background:transparent;color:var(--fg);
+  resize:none;overflow-y:scroll;overflow-x:hidden;display:block;caret-color:var(--accent)}
+#script::placeholder{color:var(--fg-3)}
+#script:focus{outline:0}
+.shell:focus-within{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--accent) 45%,transparent)}
+
+/* ---------- HUD ---------- */
+.hud{margin-top:14px;background:var(--panel);border:1px solid var(--edge);border-radius:0;
+  box-shadow:var(--shadow);padding:16px 18px;display:grid;gap:14px}
+.hudtop{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 22px}
+.clock{font-family:var(--mono);font-size:clamp(38px,8vw,54px);font-weight:600;letter-spacing:-.03em;
+  line-height:1;font-variant-numeric:tabular-nums;color:var(--fg)}
+.clock small{font-size:.32em;font-weight:500;color:var(--fg-3);letter-spacing:0;margin-left:6px}
+.counts{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--fg-2);margin-left:auto}
+.counts b{font-family:var(--mono);font-weight:650;color:var(--fg);font-variant-numeric:tabular-nums}
+
+.bar{display:flex;height:12px;border-radius:0;overflow:hidden;background:var(--panel-2);
+  border:1px solid var(--edge-2)}
+.bar i{display:block;height:100%;transition:width .18s ease}
+.bar .b1{background:var(--z1s)} .bar .b2{background:var(--z2s)} .bar .b3{background:var(--z3s)}
+.bar .b4{background:var(--z4s)} .bar .b5{background:var(--z5s)}
+.barlabels{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:11.5px;color:var(--fg-3);
+  font-variant-numeric:tabular-nums}
+.barlabels span{white-space:nowrap}
+
+.advice{display:grid;gap:8px;font-size:14px}
+.note{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;border-radius:0;
+  background:var(--panel-2);border:1px solid var(--edge-2);color:var(--fg-2);line-height:1.45}
+.note b{color:var(--fg);font-weight:600}
+.note.warn{background:var(--warn-bg);border-color:var(--warn-edge);color:var(--warn)}
+.note.warn b{color:var(--warn)}
+.note.good{border-color:color-mix(in srgb,var(--ok) 35%,var(--edge-2))}
+.note .ic{flex:none;width:18px;text-align:center;font-size:13px;line-height:1.45}
+
+/* ---------- guide ---------- */
+.guide{padding:56px 0 72px;color:var(--fg-2)}
+.guide h2{font-size:24px;letter-spacing:-.02em;color:var(--fg);margin:40px 0 12px}
+.guide h2:first-of-type{margin-top:0}
+.guide h3{font-size:16.5px;color:var(--fg);margin:24px 0 6px}
+.guide p{margin:0 0 12px;max-width:72ch}
+.guide ul{margin:0 0 12px;padding-left:20px;max-width:72ch}
+.guide li{margin-bottom:5px}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 16px;
+  border:1px solid var(--edge);border-radius:0;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+caption{text-align:left;padding:12px 14px 0;font-size:12.5px;color:var(--fg-3)}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--edge-2);
+  font-variant-numeric:tabular-nums}
+th{font-weight:600;color:var(--fg);font-size:13px;background:var(--panel-2)}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{color:var(--fg);font-weight:550}
+hr{border:0;border-top:1px solid var(--edge);margin:44px 0}
+footer{margin-top:0;padding:22px 0 40px;font-size:12.5px;color:var(--fg-3);border-top:1px solid var(--edge)}
+footer p{margin:0 0 4px;max-width:72ch}
+
+@media (max-width:760px){
+  .topbar .wrap{padding-top:8px;padding-bottom:8px;gap:8px 12px}
+  .brand span{display:none}
+  .seg button{padding:6px 8px;font-size:12.5px}
+  .editor{grid-template-columns:44px minmax(0,1fr)}
+  .gutter i{right:5px;font-size:10px}
+  .layer{font-size:16px;padding:14px 14px}
+  #mirror{padding-right:calc(14px + var(--sbw))}
+  .counts{margin-left:0;width:100%}
+}
+@media (max-width:420px){
+  .editor{grid-template-columns:minmax(0,1fr)}
+  .gutter{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../script-timer/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 2M9 2h6"></path>
+      </svg>
+      <div>
+        <b>Script Pacing &amp; Hook Timer</b><br>
+        <span>Klocka ditt videomanus per retentionszon</span>
+      </div>
+    </div>
+
+    <div class="seg" role="group" aria-label="Tempoförval" id="presets">
+      <button type="button" data-wpm="135" aria-pressed="false">Förklarande<small>135 WPM</small></button>
+      <button type="button" data-wpm="155" aria-pressed="false">Berättande<small>155 WPM</small></button>
+      <button type="button" data-wpm="175" aria-pressed="false">Slagkraftigt<small>175 WPM</small></button>
+      <button type="button" data-wpm="193" aria-pressed="true" title="Mediantempot i tal, uppmätt i 132 YouTube Shorts med över en miljon visningar">Toppklipp<small>193 WPM · uppmätt</small></button>
+      <button type="button" data-wpm="custom" aria-pressed="false">Eget<small>välj WPM</small></button>
+    </div>
+
+    <div class="customwrap" id="customwrap">
+      <label for="wpmRange" class="sr">Eget antal ord per minut</label>
+      <input type="range" id="wpmRange" min="100" max="250" step="1" value="193">
+      <output for="wpmRange" id="wpmOut">193 WPM</output>
+    </div>
+
+    <div class="toggles">
+      <label class="tog"><input type="checkbox" id="tPause" checked> Smarta pauser</label>
+      <label class="tog"><input type="checkbox" id="tZones" checked> Retentionszoner</label>
+    </div>
+
+    <div class="acts">
+      <button type="button" class="btn" id="btnClear">Rensa</button>
+      <button type="button" class="btn primary" id="btnCopy">Kopiera manus</button>
+      <button type="button" class="btn icon" id="btnTheme" title="Växla ljust/mörkt" aria-label="Växla mellan ljust och mörkt tema">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 class="sr">Manustimer för korta videor och verktyg för att klocka tresekundershooken</h1>
+
+  <div class="legend" id="legend">
+    <span class="chip"><i class="sw z1"></i> Hook · 0–3&nbsp;s</span>
+    <span class="chip"><i class="sw z2"></i> Upptakt · 3–15&nbsp;s</span>
+    <span class="chip"><i class="sw z3"></i> Kärnan · 15–30&nbsp;s</span>
+    <span class="chip"><i class="sw z4"></i> Djup retention · 30–60&nbsp;s</span>
+    <span class="chip"><i class="sw z5"></i> Förlängt · 60+&nbsp;s</span>
+  </div>
+
+  <div class="editor" id="editor">
+    <div class="gutter" id="gutter" aria-hidden="true"></div>
+    <div class="shell" id="shell">
+      <div class="layer" id="mirror" aria-hidden="true"></div>
+      <textarea class="layer" id="script" spellcheck="true" autocapitalize="sentences"
+        aria-label="Manustext"
+        placeholder="Skriv eller klistra in ditt manus …&#10;&#10;Första raden är din hook – toppklippen på Shorts klarar av den på ungefär tre sekunder. Allt därefter är sammanhang, utdelning och skälet till att någon stannar kvar."></textarea>
+    </div>
+  </div>
+
+  <section class="hud" aria-label="Manusets mätvärden">
+    <div class="hudtop">
+      <div class="clock" id="clock" aria-live="polite">0:00.0<small>speltid</small></div>
+      <div class="counts">
+        <span>Ord totalt <b id="cWords">0</b></span>
+        <span>Tecken <b id="cChars">0</b></span>
+        <span>Tempo <b id="cWpm">193</b> WPM</span>
+        <span>Hook <b id="cHook">0.0s</b></span>
+      </div>
+    </div>
+
+    <div>
+      <div class="bar" id="bar" role="img" aria-label="Så stor del av manuset som hamnar i varje retentionszon">
+        <i class="b1" style="width:0%"></i><i class="b2" style="width:0%"></i><i class="b3" style="width:0%"></i><i class="b4" style="width:0%"></i><i class="b5" style="width:0%"></i>
+      </div>
+      <div class="barlabels" id="barlabels"></div>
+    </div>
+
+    <div class="advice" id="advice"></div>
+  </section>
+
+  <article class="guide">
+    <h2>Hur långt ska ett manus för korta videor vara?</h2>
+    <p>Hur lång tid ett manus tar att säga beror på två saker: hur många ord du har skrivit och hur fort
+      du säger dem. Verktygets formel är helt enkelt <code>seconds = (words ÷ WPM) × 60</code>, plus ett
+      valfritt tillägg för pauser vid skiljetecken. Allt annat – zoner, varningar, färger – är samma tal,
+      uppdelat efter de ögonblick då tittare på korta videor faktiskt bestämmer sig för att lämna.</p>
+
+    <h3>Antal ord att sikta på, format för format</h3>
+    <div class="tablewrap">
+      <table>
+        <caption>Så många ord får plats på en viss speltid, avrundat till närmaste hela ord.</caption>
+        <thead>
+          <tr><th scope="col">Tempo</th><th scope="col">Hook på 3&nbsp;s</th><th scope="col">15&nbsp;s</th><th scope="col">30&nbsp;s</th><th scope="col">60&nbsp;s</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>135 WPM · Förklarande</td><td>7</td><td>34</td><td>68</td><td>135</td></tr>
+          <tr><td>155 WPM · Vanligt berättartempo</td><td>8</td><td>39</td><td>78</td><td>155</td></tr>
+          <tr><td>175 WPM · Hook med hög energi</td><td>9</td><td>44</td><td>88</td><td>175</td></tr>
+          <tr><td>193 WPM · Toppklipp (uppmätt median)</td><td>10</td><td>48</td><td>97</td><td>193</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Siffrorna gäller en ren inläsning. De räknar inte med någon andningspaus, någon lucka för B-roll
+      eller någon tystnad i början av klippet. I praktiken bör du räkna med ungefär 10–15&nbsp;% färre ord
+      än tabellen visar, eller slå på <b>Smarta pauser</b> så lägger timern till den marginalen åt dig.</p>
+    <p>Skriv efter den nedersta raden. I <a href="studie/">132 YouTube Shorts med minst en miljon
+      visningar vardera</a> var mediantempot 193 WPM (ord per minut), och därför är den raden förvald här.
+      Ett manus som är beräknat för 155 WPM men framförs i ett naturligt kortvideotempo tar slut ungefär
+      20&nbsp;% för tidigt – omkring 12 sekunder som du inte har planerat för i ett klipp på 60 sekunder.</p>
+
+    <h2>Så fungerar hooken på tre sekunder</h2>
+    <p>Flödena med korta videor bygger på att beslutet att svepa vidare fattas direkt. Tittaren är inställd
+      på att scrolla redan innan din video har laddats, så öppningsrepliken är ingen inledning – den är ett
+      avbrott. Det som gör videon värd att se måste gå att uppfatta inom det första andetaget.</p>
+    <p>Tre sekunder är en arbetsbudget, ingen naturlag. Men gränsen är användbar just för att den är så
+      brutalt kort: i det uppmätta tempot 193 WPM räcker den till ungefär <b>tio ord</b>, i berättartempo
+      till ungefär åtta. Det är en enda sats. Behöver din första rad en bisats för att gå hem är den för lång.</p>
+    <p>Jämfört med det som faktiskt går bra stämmer regeln till hälften. I de
+      <a href="studie/">132 toppklipp på Shorts som vi klockade</a> hinner i median <b>9 ord</b> sägas före
+      tresekundersgränsen, så budgeten på 7–10 ord håller. Men den första <em>meningen</em> är i median
+      11 ord och <b>3,1 sekunder</b> lång: bara 48&nbsp;% av klippen avslutar den inom 3,0 sekunder,
+      56&nbsp;% inom 3,5 sekunder och 77&nbsp;% inom 5,0 sekunder. Färre än hälften håller sig till
+      tresekundersregeln, och allt upp till ungefär fem sekunder ligger inom det normala.</p>
+    <h3>Sådant som brukar äta upp hooktiden</h3>
+    <ul>
+      <li><b>Harklingar.</b> ”Hej allihopa, i dag tänkte jag prata om …” är tre sekunder tomgång.</li>
+      <li><b>Sammanhang före konflikt.</b> Upptakten hör hemma i zon 2, när tittaren har fått ett skäl att bry sig.</li>
+      <li><b>Långa egennamn och tal.</b> De går fort att läsa på papperet men tar lång tid att säga högt.</li>
+      <li><b>Garderingar.</b> ”typ”, ”i princip”, ”jag tror” – var och en kostar dig en femtedels sekund.</li>
+    </ul>
+    <p>En kort paus i öppningen står inte på den listan. Vart femte klipp i det uppmätta urvalet har en paus
+      på mer än 0,4 sekunder under de tre första sekunderna, så en paus tidigt fäller inte hooken.</p>
+    <p>Så bedömer verktyget hooken, med de uppmätta gränserna: en första mening som tar slut inom
+      <b>3,0 sekunder</b> får grönt ljus. Mellan <b>3 och 5 sekunder</b> får du en notering, inte en
+      varning – hälften av toppklippen behöver mer än tre sekunder för att avsluta sin öppning, så det
+      spannet är helt vanligt. Efter <b>5 sekunder</b>, där färre än en fjärdedel av toppklippen
+      fortfarande håller på med sin första mening, får du en varning. Skriv den mening som hooken behöver
+      och stryk sedan ord, inte tiondelar.</p>
+
+    <h2>Så fungerar retentionszonerna</h2>
+    <div class="tablewrap">
+      <table>
+        <caption>Så delar verktyget in ett manus, och vad varje del ska åstadkomma.</caption>
+        <thead>
+          <tr><th scope="col">Zon</th><th scope="col">Tidsfönster</th><th scope="col">Delens uppgift</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1 · Den avgörande hooken</td><td>0,0–3,0 s</td><td>Stoppa scrollandet. Presentera löftet, spänningen eller påståendet.</td></tr>
+          <tr><td>2 · Upptakten / problemet</td><td>3,1–15,0 s</td><td>Ge sammanhanget och visa vad som står på spel. Förtjäna de tio kommande sekunderna.</td></tr>
+          <tr><td>3 · Kärnan</td><td>15,1–30,0 s</td><td>Utdelningen. De flesta täta klipp som tittarna ser till slutet tar slut här.</td></tr>
+          <tr><td>4 · Djup retention</td><td>30,1–60,0 s</td><td>Bara värt det om berättelsen fortfarande trappas upp.</td></tr>
+          <tr><td>5 · Förlängt</td><td>60,0+ s</td><td>Här börjar långformatet. Risken att tittarna faller ifrån ökar markant.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ett manus som tillbringar större delen av speltiden i zon 1–3 beter sig oftast som en short. Ett
+      manus där färgbalken domineras av zon 4 och 5 är en video med ett pratande huvud som råkar vara i
+      stående format – det kan fungera, men det är ett annat format med andra förväntningar.</p>
+
+    <h2>Taltempon som är bra att känna till</h2>
+    <div class="tablewrap">
+      <table>
+        <caption>Ungefärliga intervall för taltempo. Spela in dig själv i 30 sekunder och räkna orden för att hitta ditt eget.</caption>
+        <thead>
+          <tr><th scope="col">Stil</th><th scope="col">Typiskt WPM</th><th scope="col">Känns som</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lugnt / förklarande</td><td>120–140</td><td>Instruktionsvideor, ekonomi, allt med siffror</td></tr>
+          <tr><td>Berättande i samtalston</td><td>140–165</td><td>Vanlig berättarröst i storytime-klipp</td></tr>
+          <tr><td>Kreatör med hög energi</td><td>165–185</td><td>Slagkraftig redigering, hårda klipp, listvideor</td></tr>
+          <tr><td>Mycket snabbt / raptempo</td><td>185–220</td><td>Informationstätt, mycket textning</td></tr>
+          <tr><td><b>Uppmätt: toppklipp på Shorts</b></td><td><b>156–221</b></td><td>Median <b>193 WPM</b> – det som faktiskt går bra</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>De fyra första intervallen är de vedertagna, det sista är uppmätt. Vi klockade de första 30 sekunderna
+      i <a href="studie/">132 YouTube Shorts med minst en miljon visningar vardera</a> och fick en median på
+      193 WPM – det som tabellen kallar mycket snabbt är alltså normaltempot i ett toppklipp på Shorts,
+      inget extremvärde.</p>
+    <p>Vardagligt samtal ligger någonstans mellan 120 och 150 för de flesta som talar engelska. Inlästa manus
+      för korta videor går oftast fortare än så, eftersom pauserna klipps bort. Om dina inspelningar
+      genomgående blir längre än timern förutsäger: sänk WPM tills uppskattningen stämmer med dina faktiska
+      inspelningar. Det talet är ditt personliga tempo, och det är värt att känna till.</p>
+
+    <h3>Uppmätt tempo per nisch</h3>
+    <div class="tablewrap">
+      <table>
+        <caption>Mediantempot för de fem nischer som har minst 15 klipp i det uppmätta urvalet.</caption>
+        <thead>
+          <tr><th scope="col">Nisch</th><th scope="col">Median-WPM</th><th scope="col">Mittersta hälften</th><th scope="col">Klipp</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Träning</td><td>219</td><td>200–238</td><td>18</td></tr>
+          <tr><td>Storytime</td><td>202</td><td>191–240</td><td>15</td></tr>
+          <tr><td>Matlagning</td><td>192</td><td>129–216</td><td>23</td></tr>
+          <tr><td>Teknik</td><td>187</td><td>169–200</td><td>17</td></tr>
+          <tr><td>Utbildning</td><td>180</td><td>159–204</td><td>18</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Skillnaden mellan den snabbaste och den långsammaste nischen är ungefär 39 WPM, vilket är mindre än
+      spridningen inom var och en av dem. Tempot hänger mer på kreatören än på ämnet, så utgå från nischens
+      rad och ställ in ditt eget tempo med reglaget Eget. En sak till som mätningen gav besked om: i urvalet
+      förutsade varken taltempo eller hookens längd antalet visningar. Välj ett tempo som du klarar att hålla
+      rent, och skruva inte på det i hopp om räckvidd.</p>
+
+    <h2 id="faq">Vanliga frågor</h2>
+
+    <h3>Hur många ord ryms i ett videomanus på 30 sekunder?</h3>
+    <p>Ungefär <b>97 ord</b> vid 193 WPM (ord per minut), det uppmätta mediantempot i 132 toppklipp på
+      YouTube Shorts. I samtalston, 155 WPM, ryms 78 ord, och i ett lugnt tempo på 135 WPM ryms 68. Räkna
+      med 10–15&nbsp;% färre om du pausar för att betona något eller klipper till B-roll.</p>
+
+    <h3>Hur många ord ryms i ett videomanus på 60 sekunder?</h3>
+    <p>Ungefär <b>193 ord</b> i toppklippens uppmätta tempo, 193 WPM – på exakt en minut är antalet ord och
+      antalet ord per minut samma tal. I samtalston, 155 WPM, ryms 155 ord och i ett lugnt tempo på 135 WPM
+      ryms 135, så spannet mellan förvalen är 135 till 193.</p>
+
+    <h3>Hur många ord ryms i ett videomanus på 15 sekunder?</h3>
+    <p>Omkring <b>48 ord</b> i toppklippens uppmätta tempo, 193 WPM, eller 34 till 48 beroende på förval.
+      På den tiden får du plats med en hook, en poäng och ett avslut – inget mer.</p>
+
+    <h3>Hur många ord ska en hook på tre sekunder ha?</h3>
+    <p><b>7 till 10 ord</b>, beroende på ditt tempo – 10 i toppklippens uppmätta tempo, 193 WPM, och 8 vid 155.
+      Det är en enda sats. Mätningen av 132 toppklipp på Shorts visar att i median <b>9 ord</b> hinner sägas
+      före tresekundersgränsen, så regeln håller. Klippens första mening är i median 11 ord och 3,1 sekunder
+      lång, och bara 48&nbsp;% avslutar den inom 3,0 sekunder medan 77&nbsp;% gör det inom 5,0 sekunder.
+      Timern räknar din första mening som hooken: inom tre sekunder får du grönt ljus, mellan tre och fem
+      sekunder en notering i stället för en varning, eftersom det spannet är helt normalt, och efter fem
+      sekunder en varning.</p>
+
+    <h3>Vilket taltempo ska jag ha för TikTok, Reels och Shorts?</h3>
+    <p>I mätningen av 132 toppklipp på Shorts är medianen <b>193 WPM</b> och den mittersta hälften ligger
+      mellan <b>156 och 221</b> – snabbare än vardagligt samtal, eftersom pauserna klipps bort. Förvalet
+      Toppklipp är satt till den medianen, 193 WPM, och är standardvalet. Ett manus som är beräknat för 155
+      men framförs i 193 tar slut ungefär 20&nbsp;% för tidigt, så gå ner till förvalen 155 eller 135 bara om
+      dina inspelade videor genomgående blir längre än uppskattningen. Det WPM som stämmer med dina faktiska
+      inspelningar är ditt personliga tempo. Tempot förutsade inte antalet visningar i urvalet, så välj ett
+      tempo du faktiskt klarar att hålla, inte ett som du hoppas ska ge spridning.</p>
+
+    <h3>Hur räknar manustimern ut speltiden?</h3>
+    <p>Den räknar orden, dividerar med ditt antal ord per minut och multiplicerar med 60. Med Smarta pauser
+      påslaget lägger den också till 0,35 sekunder per meningsslut, 0,15 per kommatecken eller tankstreck
+      och 0,5 per styckebrytning. Sedan färgkodas varje ord efter den tidpunkt då det har sagts klart –
+      retentionszonerna vid 3, 15, 30 och 60 sekunder.</p>
+
+    <h3>Sparas mitt manus, eller laddas det upp någonstans?</h3>
+    <p>Nej. Utkastet sparas i webbläsarens lokala lagring så att det finns kvar om du laddar om sidan, och
+      det lämnar aldrig din enhet. Sidan gör inga nätverksanrop efter att den har laddats.</p>
+
+    <h2>Så räknar timern</h2>
+    <ul>
+      <li><b>Ordräkningen</b> använder <code>/\b\w+(?:['’]\w+)?\b/g</code>, så sammandragningar räknas som
+        ett ord och dubbla mellanslag ignoreras. Sammansättningar med bindestreck räknas som två ord, vilket
+        stämmer med hur de uttalas.</li>
+      <li><b>Grundtiden</b> är <code>(words ÷ WPM) × 60</code>. Med smarta pauser avslagna blir 155 ord vid
+        155 WPM exakt 1:00.0.</li>
+      <li><b>Smarta pauser</b> lägger till 0,35&nbsp;s för varje meningsslut (en följd av <code>. ! ?</code>),
+        0,15&nbsp;s för varje paus inne i meningen (<code>, ; : —</code>) och 0,50&nbsp;s för varje
+        styckebrytning.</li>
+      <li><b>Zonfärgen</b> sätts ord för ord, utifrån hur lång tid som sammanlagt har gått när ordet är sagt.</li>
+      <li><b>Allt körs i din webbläsare.</b> Utkastet sparas i den här enhetens lokala lagring och lämnar
+        den aldrig. Inget konto, ingen uppladdning, ingen server.</li>
+    </ul>
+  </article>
+</main>
+
+<footer class="wrap">
+  <p>Endast uppskattningar. Den verkliga speltiden beror på hur du framför manuset, hur snabbt du klipper och hur mycket tystnad som blir kvar efter klippningen.</p>
+  <p>Körs helt i webbläsaren. Ingen spårning, inga anrop till tredje part.</p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- constants ---------- */
+  var WORD_RE  = /[\p{L}\p{N}_]+(?:['’][\p{L}\p{N}_]+)?/gu;
+  var SENT_RE  = /[.!?]+/g;                 // sentence-ending runs -> +0.35s each
+  var CLAUSE_RE= /[,;:—–]+/g;     // comma, semicolon, colon, em/en dash -> +0.15s
+  var PARA_RE  = /\n[ \t]*\n/g;             // paragraph break -> +0.50s
+  var P_SENT = 0.35, P_CLAUSE = 0.15, P_PARA = 0.50;
+  var ZONES  = [3, 15, 30, 60];             // upper bounds of zones 1-4
+  // Hook thresholds from the study (study/): 48% of top Shorts finish their first sentence
+  // inside 3.0s, 77% inside 5.0s. Under 3s is green, 3-5s is a note, past 5s is a warning.
+  var HOOK_OK = 3.0, HOOK_LONG = 5.0;
+  // Measured speaking rate across 132 top Shorts: median and interquartile range.
+  var M_WPM = 193, M_Q1 = 156, M_Q3 = 221;
+  var WPM_MIN = 100, WPM_MAX = 250;
+  var EPS = 1e-9;
+  var LS = 'sfst.v1';
+
+  /* ---------- elements ---------- */
+  var $ = function (id) { return document.getElementById(id); };
+  var ta = $('script'), mirror = $('mirror'), gutter = $('gutter'),
+      shell = $('shell'), editor = $('editor'),
+      presets = $('presets'), customWrap = $('customwrap'),
+      wpmRange = $('wpmRange'), wpmOut = $('wpmOut'),
+      tPause = $('tPause'), tZones = $('tZones'),
+      clock = $('clock'), cWords = $('cWords'), cChars = $('cChars'),
+      cWpm = $('cWpm'), cHook = $('cHook'),
+      bar = $('bar'), barLabels = $('barlabels'), advice = $('advice');
+  var barParts = bar.children;
+
+  /* ---------- state ---------- */
+  var state = { preset: '193', wpm: 193, pauses: true, zones: true, theme: 'auto', text: '' };
+  var marks = [];          // [{top, label}] measured timestamp anchors
+  var lastSbw = -1;        // cached textarea scrollbar width
+
+  /* ---------- helpers ---------- */
+  function esc(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  function countMatches(str, re) {
+    re.lastIndex = 0;
+    var n = 0;
+    while (re.exec(str) !== null) { n++; if (re.lastIndex === 0) break; }
+    return n;
+  }
+  function pauseFor(gap) {
+    if (!gap) return 0;
+    return countMatches(gap, SENT_RE) * P_SENT +
+           countMatches(gap, CLAUSE_RE) * P_CLAUSE +
+           countMatches(gap, PARA_RE) * P_PARA;
+  }
+  // MM:SS.s with correct carry (60.0s -> "1:00.0")
+  function fmt(t) {
+    var tenths = Math.round(t * 10);
+    if (tenths < 0) tenths = 0;
+    var m = Math.floor(tenths / 600);
+    var s = (tenths - m * 600) / 10;
+    var ss = s.toFixed(1);
+    if (s < 10) ss = '0' + ss;
+    return m + ':' + ss;
+  }
+  function fmtShort(t) {          // 0:07 style, for gutter marks
+    var sec = Math.round(t);
+    var m = Math.floor(sec / 60), s = sec - m * 60;
+    return m + ':' + (s < 10 ? '0' + s : s);
+  }
+  function zoneOf(t) {
+    if (t <= ZONES[0] + EPS) return 1;
+    if (t <= ZONES[1] + EPS) return 2;
+    if (t <= ZONES[2] + EPS) return 3;
+    if (t <= ZONES[3] + EPS) return 4;
+    return 5;
+  }
+
+  /* ---------- persistence ---------- */
+  var saveTimer = null;
+  function save() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) {}
+    }, 350);
+  }
+  function load() {
+    var raw;
+    try { raw = localStorage.getItem(LS); } catch (e) { return; }
+    if (!raw) return;
+    try {
+      var s = JSON.parse(raw);
+      if (s && typeof s === 'object') {
+        if (typeof s.text === 'string') state.text = s.text;
+        if (typeof s.preset === 'string') state.preset = s.preset;
+        if (typeof s.wpm === 'number' && s.wpm >= WPM_MIN && s.wpm <= WPM_MAX) state.wpm = s.wpm;
+        // The Top Shorts preset moved from 195 to the measured 193 median.
+        if (state.preset === '195') { state.preset = '193'; state.wpm = 193; }
+        if (typeof s.pauses === 'boolean') state.pauses = s.pauses;
+        if (typeof s.zones === 'boolean') state.zones = s.zones;
+        if (typeof s.theme === 'string') state.theme = s.theme;
+      }
+    } catch (e) {}
+  }
+
+  /* ---------- core analysis + render ---------- */
+  function analyse() {
+    var text = ta.value;
+    var wpm = state.wpm;
+    var wordSec = 60 / wpm;
+    var smart = state.pauses;
+
+    WORD_RE.lastIndex = 0;
+    var words = [], m;
+    while ((m = WORD_RE.exec(text)) !== null) {
+      words.push([m.index, m.index + m[0].length]);
+      if (m.index === WORD_RE.lastIndex) WORD_RE.lastIndex++;   // guard
+    }
+
+    var n = words.length;
+    var html = [];
+    var zoneSecs = [0, 0, 0, 0, 0];
+    var t = 0, hookTime = 0, hookWords = 0, hookClosed = false;
+    var openZone = 0;
+
+    if (n === 0) {
+      mirror.innerHTML = esc(text) + ' ';
+    } else {
+      // leading gap
+      if (words[0][0] > 0) html.push(esc(text.slice(0, words[0][0])));
+
+      for (var i = 0; i < n; i++) {
+        var wStart = words[i][0], wEnd = words[i][1];
+        var gapEnd = (i + 1 < n) ? words[i + 1][0] : text.length;
+        var gap = text.slice(wEnd, gapEnd);
+
+        t += wordSec;
+        var end = t;
+        var pause = smart ? pauseFor(gap) : 0;
+        var z = zoneOf(end);
+        zoneSecs[z - 1] += wordSec + pause;
+        t += pause;
+
+        // hook = first sentence (or first line, or whole text if unpunctuated)
+        if (!hookClosed) {
+          hookWords++;
+          hookTime = end;
+          if (SENT_RE.test(gap) || /\n/.test(gap)) hookClosed = true;
+          SENT_RE.lastIndex = 0;
+        }
+
+        if (z !== openZone) {
+          if (openZone !== 0) html.push('</span>');
+          html.push('<span class="z' + z + '">');
+          openZone = z;
+        }
+
+        var isBreak = /[.!?]/.test(gap) || /\n/.test(gap) || i === n - 1;
+        var chunk = esc(text.slice(wStart, wEnd));
+        if (isBreak) {
+          html.push('<span class="anc" data-t="' + fmtShort(end) + '">' + chunk + '</span>');
+        } else {
+          html.push(chunk);
+        }
+        html.push(esc(gap));
+      }
+      if (openZone !== 0) html.push('</span>');
+      html.push(' ');   // keeps mirror height >= textarea scrollHeight on a trailing newline
+      mirror.innerHTML = html.join('');
+    }
+
+    measureMarks();
+    paintGutter();
+
+    return {
+      total: t, words: n, chars: text.length,
+      zoneSecs: zoneSecs, hookTime: hookTime, hookWords: hookWords,
+      empty: text.trim().length === 0
+    };
+  }
+
+  function measureMarks() {
+    // Keep the mirror's right inset equal to the textarea's scrollbar gutter. With classic
+    // scrollbars `overflow-y:scroll` reserves this permanently, but re-checking here costs
+    // nothing (we are already reading layout) and covers zoom and scrollbar-style changes.
+    var sbw = ta.offsetWidth - ta.clientWidth;
+    if (sbw !== lastSbw) {
+      lastSbw = sbw;
+      document.documentElement.style.setProperty('--sbw', sbw + 'px');
+    }
+    marks = [];
+    if (editor.classList.contains('nomarks')) return;
+    var ancs = mirror.querySelectorAll('.anc');
+    var lastTop = -999;
+    for (var i = 0; i < ancs.length && marks.length < 400; i++) {
+      var top = ancs[i].offsetTop;
+      if (Math.abs(top - lastTop) < 4) { marks[marks.length - 1].label = ancs[i].getAttribute('data-t'); continue; }
+      lastTop = top;
+      marks.push({ top: top, label: ancs[i].getAttribute('data-t') });
+    }
+  }
+
+  function paintGutter() {
+    var scroll = ta.scrollTop;
+    var h = shell.clientHeight;
+    var out = [];
+    for (var i = 0; i < marks.length; i++) {
+      var y = marks[i].top - scroll;
+      if (y < -24 || y > h + 8) continue;
+      out.push('<i style="transform:translateY(' + y.toFixed(1) + 'px)">' + marks[i].label + '</i>');
+    }
+    gutter.innerHTML = out.join('');
+  }
+
+  /* ---------- HUD ---------- */
+  function paintHud(r) {
+    clock.innerHTML = fmt(r.total) + '<small>speltid</small>';
+    cWords.textContent = r.words;
+    cChars.textContent = r.chars;
+    cWpm.textContent = state.wpm;
+    cHook.textContent = r.hookTime > 0 ? r.hookTime.toFixed(1) + 's' : '0.0s';
+
+    var total = r.total || 1;
+    var labels = [];
+    var names = ['Hook', 'Upptakt', 'Kärna', 'Djup', 'Förlängt'];
+    for (var i = 0; i < 5; i++) {
+      var pct = r.total > 0 ? (r.zoneSecs[i] / total) * 100 : 0;
+      barParts[i].style.width = pct.toFixed(2) + '%';
+      if (pct > 0) labels.push('<span>' + names[i] + ' ' + Math.round(pct) + '&nbsp;% · ' +
+        r.zoneSecs[i].toFixed(1) + '&nbsp;s</span>');
+    }
+    barLabels.innerHTML = labels.join('');
+
+    advice.innerHTML = buildAdvice(r);
+  }
+
+  function note(kind, icon, text) {
+    return '<div class="note ' + kind + '"><span class="ic">' + icon + '</span><span>' + text + '</span></div>';
+  }
+
+  function buildAdvice(r) {
+    if (r.empty) {
+      return note('', '✏️', 'Börja skriva. Din första mening klockas som hook. Toppklippen på Shorts avslutar sin efter 3,1 sekunder i median – ungefär ' +
+        Math.round(state.wpm / 20) + ' ord vid ' + state.wpm + ' WPM.');
+    }
+
+    var out = [];
+
+    // hook, graded against measured first-sentence lengths (see study/)
+    var hookWordTarget = Math.round(state.wpm / 20);
+    var hookLabel = '<b>Hooken är ' + r.hookTime.toFixed(1) + '&nbsp;s</b> (' + r.hookWords +
+        ' ord' + (r.hookWords === 1 ? '' : '') + ')';
+    if (r.hookTime > HOOK_LONG) {
+      out.push(note('warn', '⚠️', '<b>Varning för hooken: ' + r.hookTime.toFixed(1) + '&nbsp;s på ' + r.hookWords +
+        ' ord.</b> Färre än en fjärdedel av toppklippen håller fortfarande på med sin första mening efter fem sekunder. ' +
+        'Stryk ner till ungefär ' + hookWordTarget + ' ord för att hamna nära tre.'));
+    } else if (r.hookTime > HOOK_OK) {
+      out.push(note('', '💬', hookLabel + ' – över tresekundersregeln men inom det normala. ' +
+        'Hälften av toppklippen behöver mer än 3&nbsp;s för sin första mening, och 77&nbsp;% är klara efter 5&nbsp;s. ' +
+        'Stryk ord om raden har luft i sig, inte för stoppurets skull.'));
+    } else if (r.hookTime > 0) {
+      out.push(note('good', '✅', hookLabel + ' – inom tre sekunder, där 48&nbsp;% av toppklippen hinner klart med sin första mening.'));
+    }
+
+    // Runtime framing. Branch on the displayed (tenth-rounded) value so that a script
+    // landing on exactly 1:00.0 is not pushed over the line by float accumulation.
+    var t = Math.round(r.total * 10) / 10;
+    var fit;
+    if (t <= 15) {
+      var room = Math.max(0, Math.round((30 - t) * state.wpm / 60));
+      fit = '<b>' + fmt(t) + '</b> – kort nog för ett klipp på 15 sekunder. Du har plats för ' + room +
+            (room === 1 ? ' ord till' : ' ord till') + ' innan du når 30&nbsp;s.';
+    } else if (t <= 30) {
+      fit = '<b>' + fmt(t) + '</b> – ligger rätt i 30-sekundersläget, där korta videor oftast ses till slutet.';
+    } else if (t <= 60) {
+      fit = '<b>' + fmt(t) + '</b> – en Reel eller Short i full längd. Varje rad efter 30&nbsp;s måste fortsätta trappa upp.';
+    } else {
+      var cut = Math.max(1, Math.round((t - 60) * state.wpm / 60));
+      fit = '<b>' + fmt(t) + '</b> – över en minut. Stryk ungefär ' + cut +
+            (cut === 1 ? ' ord' : ' ord') + ' för att hamna under 60&nbsp;s.';
+    }
+    out.push(note('', '⏱', fit));
+
+    if (t > 60) {
+      out.push(note('warn', '📉', '<b>Här börjar långformatet.</b> Risken att tittarna faller ifrån ökar markant efter 60 sekunder – ' +
+        'överväg att dela upp manuset i två delar.'));
+    }
+
+    // pacing note, placed against the measured distribution of top Shorts
+    var paceName = state.wpm < 145 ? 'en lugn, förklarande inläsning' :
+                   state.wpm < 165 ? 'en vanlig berättarrytm' :
+                   state.wpm < 185 ? 'ett slagkraftigt framförande med hög energi' :
+                   state.wpm <= 205 ? 'toppklippens uppmätta mediantempo' :
+                                      'ett snabbt, tätpackat tempo';
+    var zoneShare = r.total > 0 ? Math.round(((r.zoneSecs[0] + r.zoneSecs[1] + r.zoneSecs[2]) / r.total) * 100) : 0;
+    out.push(note('', '🎙', 'Klockat vid <b>' + state.wpm + ' WPM</b> — ' + paceName +
+      (state.pauses ? ', med pauser vid skiljetecken inräknade' : ', ren inläsning utan tillägg för pauser') +
+      '. <b>' + zoneShare + '&nbsp;%</b> av speltiden ligger inom de första 30 sekunderna.'));
+
+    // Where this pace sits against the 132 measured clips, and what the script runs at the median.
+    if (Math.abs(state.wpm - M_WPM) >= 5) {
+      var wordSecs = r.words * 60 / state.wpm;
+      var atMedian = r.words * 60 / M_WPM + (r.total - wordSecs);
+      var where = state.wpm < M_Q1 ? 'långsammare än tre fjärdedelar av toppklippen' :
+                  state.wpm > M_Q3 ? 'snabbare än tre fjärdedelar av toppklippen' :
+                  state.wpm < M_WPM ? 'inom toppklippens mittersta hälft, under medianen' :
+                                      'inom toppklippens mittersta hälft, över medianen';
+      var drift = state.wpm < M_WPM ?
+        'Framför du manuset i ditt naturliga tempo för korta videor får du räkna med att bli klar för tidigt.' :
+        'Framför du det långsammare än så får du räkna med att dra över tiden.';
+      out.push(note('', '📏', state.wpm + ' WPM är ' + where + ' (uppmätt median ' + M_WPM +
+        ', mittersta hälften ' + M_Q1 + '–' + M_Q3 + '). I mediantempot tar det här manuset <b>' + fmt(atMedian) +
+        '</b>. ' + drift));
+    }
+
+    return out.join('');
+  }
+
+  /* ---------- scheduling ---------- */
+  var pending = false;
+  function update() {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function () {
+      pending = false;
+      paintHud(analyse());
+    });
+  }
+
+  var gutterPending = false;
+  function syncScroll() {
+    mirror.scrollTop = ta.scrollTop;
+    if (gutterPending) return;
+    gutterPending = true;
+    requestAnimationFrame(function () { gutterPending = false; paintGutter(); });
+  }
+
+  /* ---------- layout metrics ---------- */
+  function measureLayout() {
+    // editor height: comfortable on desktop, generous on mobile, no layout shift
+    var vh = window.innerHeight || 800;
+    var h = Math.max(280, Math.min(560, Math.round(vh * 0.52)));
+    document.documentElement.style.setProperty('--edh', h + 'px');
+    editor.classList.toggle('nomarks', window.innerWidth < 420);
+  }
+
+  /* ---------- controls ---------- */
+  function setPreset(value) {
+    state.preset = value;
+    if (value === 'custom') {
+      customWrap.classList.add('on');
+      state.wpm = parseInt(wpmRange.value, 10);
+    } else {
+      customWrap.classList.remove('on');
+      state.wpm = parseInt(value, 10);
+      wpmRange.value = state.wpm;
+    }
+    wpmOut.textContent = state.wpm + ' WPM';
+    var btns = presets.querySelectorAll('button');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', String(btns[i].getAttribute('data-wpm') === value));
+    }
+    save(); update();
+  }
+
+  presets.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-wpm]');
+    if (b) setPreset(b.getAttribute('data-wpm'));
+  });
+
+  wpmRange.addEventListener('input', function () {
+    state.wpm = parseInt(wpmRange.value, 10);
+    wpmOut.textContent = state.wpm + ' WPM';
+    if (state.preset !== 'custom') setPreset('custom');
+    else { save(); update(); }
+  });
+
+  tPause.addEventListener('change', function () { state.pauses = tPause.checked; save(); update(); });
+  tZones.addEventListener('change', function () {
+    state.zones = tZones.checked;
+    editor.classList.toggle('plain', !state.zones);
+    save();
+  });
+
+  ta.addEventListener('input', function () { state.text = ta.value; save(); update(); });
+  ta.addEventListener('scroll', syncScroll, { passive: true });
+
+  $('btnClear').addEventListener('click', function () {
+    if (ta.value.trim() && !confirm('Vill du rensa manuset? Det går inte att ångra.')) return;
+    ta.value = ''; state.text = ''; save(); update(); ta.focus();
+  });
+
+  $('btnCopy').addEventListener('click', function () {
+    var btn = this, original = 'Kopiera manus';
+    var done = function (ok) {
+      btn.textContent = ok ? 'Kopierat ✓' : 'Kunde inte kopiera';
+      setTimeout(function () { btn.textContent = original; }, 1400);
+    };
+    if (!ta.value) { done(false); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ta.value).then(function () { done(true); }, function () { fallbackCopy(done); });
+    } else { fallbackCopy(done); }
+  });
+  function fallbackCopy(done) {
+    var start = ta.selectionStart, end = ta.selectionEnd;
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.setSelectionRange(start, end);
+    done(ok);
+  }
+
+  function applyTheme() {
+    if (state.theme === 'auto') document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme', state.theme);
+  }
+  $('btnTheme').addEventListener('click', function () {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+      (state.theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    state.theme = isDark ? 'light' : 'dark';
+    applyTheme(); save();
+  });
+
+  var resizeTimer = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { measureLayout(); update(); }, 120);
+  });
+
+  /* ---------- boot ---------- */
+  load();
+  applyTheme();
+  ta.value = state.text;
+  tPause.checked = state.pauses;
+  tZones.checked = state.zones;
+  editor.classList.toggle('plain', !state.zones);
+  wpmRange.value = state.wpm;
+  measureLayout();
+  setPreset(state.preset);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () { measureLayout(); update(); });
+  }
+})();
+</script>
+</body>
+</html>

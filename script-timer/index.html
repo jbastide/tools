@@ -81,6 +81,9 @@
   ]
 }
 </script>
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/script-timer/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/script-timer/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/script-timer/">
 <link rel="stylesheet" href="../site.css">
 <style>
 /* ---------- tokens (palette + fonts come from site.css; these are page aliases) ---------- */
@@ -278,6 +281,7 @@ footer p{margin:0 0 4px;max-width:72ch}
     <li><a href="https://www.copyfororiginals.com/faqs">FAQs</a></li>
     <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
   </ul>
+  <ul class="lang-switch" aria-label="Language"><li><a href="../sv/script-timer/" hreflang="sv" lang="sv">Svenska</a></li><li><span aria-current="true">English</span></li></ul>
 </nav>
 <header class="topbar">
   <div class="wrap">
@@ -557,7 +561,7 @@ footer p{margin:0 0 4px;max-width:72ch}
   'use strict';
 
   /* ---------- constants ---------- */
-  var WORD_RE  = /\b\w+(?:['’]\w+)?\b/g;
+  var WORD_RE  = /[\p{L}\p{N}_]+(?:['’][\p{L}\p{N}_]+)?/gu;
   var SENT_RE  = /[.!?]+/g;                 // sentence-ending runs -> +0.35s each
   var CLAUSE_RE= /[,;:—–]+/g;     // comma, semicolon, colon, em/en dash -> +0.15s
   var PARA_RE  = /\n[ \t]*\n/g;             // paragraph break -> +0.50s

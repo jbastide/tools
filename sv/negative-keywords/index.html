@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy guarantee: this policy forbids the page from contacting ANY server.
+     No fetch, no XHR, no beacons, no external scripts, fonts or images. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Negative Keyword Finder: gratis analys av söktermer i Google Ads (privat, direkt i webbläsaren)</title>
+<meta name="description" content="Gratis verktyg för negativa sökord. Dra in en söktermsrapport från Google Ads eller Microsoft Ads och se vilka söktermer och ord som kostar pengar i onödan. Privat: ingenting laddas upp.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/negative-keywords/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/negative-keywords/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/negative-keywords/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/negative-keywords/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.copyfororiginals.com/sv/negative-keywords/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Negative Keyword Finder: gratis analys av söktermer i Google Ads">
+<meta property="og:description" content="Ange dina gränser för CPA och kostnad, dra in en söktermsrapport och få fram de negativa sökord du bör lägga till: söktermer och ord som har gått över dina gränser. Körs i webbläsaren. Ingenting laddas upp.">
+<meta property="article:modified_time" content="2026-10-03">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%94%3C/text%3E%3C/svg%3E">
+<!-- Structured data. Every FAQ answer below is copied verbatim from the visible FAQ section;
+     keep the two in sync when either changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tools.copyfororiginals.com/sv/negative-keywords/#app",
+      "name": "Negative Keyword Finder",
+      "alternateName": [
+        "Analys av söktermer i Google Ads",
+        "Analys av söktermsrapporter",
+        "Verktyg för negativa sökord",
+        "Hitta bortkastade annonspengar"
+      ],
+      "url": "https://tools.copyfororiginals.com/sv/negative-keywords/",
+      "description": "Negative Keyword Finder är ett gratis verktyg som körs i webbläsaren. Det läser en söktermsrapport från Google Ads eller Microsoft Ads (CSV, TSV eller Excel .xlsx) och flaggar de söktermer som går över två gränser som du anger innan du laddar upp rapporten: en oacceptabel kostnad per konvertering och en kostnadsgräns utan konverteringar. Det hittar också återkommande ord som har kostat mer än kostnadsgränsen utan att konvertera. Allt formateras som negativa sökord med exakt matchning och frasmatchning, klara att klistra in. Rapporten bearbetas helt i webbläsaren och laddas aldrig upp.",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Analys av negativa sökord för PPC",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Kräver JavaScript. Körs helt i webbläsaren.",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-10-03",
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "publisher": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "featureList": [
+        "Läser söktermsrapporter från Google Ads och Microsoft Ads i CSV, TSV, UTF-16-text eller Excel (.xlsx)",
+        "Frågar efter två gränser innan rapporten laddas upp: en oacceptabel kostnad per konvertering och en kostnadsgräns utan konverteringar",
+        "Flaggar söktermer utan konverteringar när de når kostnadsgränsen, och konverterande söktermer vars kostnad per konvertering ligger över den oacceptabla gränsen",
+        "Hittar återkommande ord och tvåordsfraser (n-gram) som sammanlagt, över många söktermer, har kostat mer än kostnadsgränsen utan att konvertera",
+        "Föreslår aldrig ett ord som finns i något av dina egna sökord eller i en sökterm som har konverterat",
+        "Kan också flagga söktermer med en klickfrekvens under 1 % på minst 300 visningar",
+        "Hoppar över söktermer som redan är uteslutna i kontot",
+        "Kopierar urvalet som negativa sökord med exakt matchning och frasmatchning, eller laddar ner det som CSV",
+        "En Content-Security-Policy blockerar alla nätverksanrop utom till webbplatsens egen stilmall och egna typsnitt, så rapporten kan inte lämna sidan"
+      ],
+      "inLanguage": "sv"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tools.copyfororiginals.com/sv/negative-keywords/#page",
+      "url": "https://tools.copyfororiginals.com/sv/negative-keywords/",
+      "name": "Negative Keyword Finder: gratis analys av söktermer i Google Ads",
+      "inLanguage": "sv",
+      "dateModified": "2026-10-03",
+      "mainEntity": {
+        "@id": "https://tools.copyfororiginals.com/sv/negative-keywords/#app"
+      },
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Verktyg",
+            "item": "https://tools.copyfororiginals.com/sv/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Negative Keyword Finder",
+            "item": "https://tools.copyfororiginals.com/sv/negative-keywords/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/sv/negative-keywords/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vad är ett negativt sökord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ett negativt sökord talar om för Google Ads eller Microsoft Ads att din annons inte ska visas för sökningar som innehåller det. Lägger du till ”free” som negativt sökord visas dina annonser till exempel inte för ”free ad copy templates” eller någon annan sökning som innehåller ordet free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur hittar jag negativa sökord i Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Negativa sökord hittar du i söktermsrapporten, som listar de faktiska sökningar som har utlöst dina annonser. Leta efter söktermer som har kostat pengar utan att konvertera och efter ord som återkommer i de sökningarna. Negative Keyword Finder gör det automatiskt: exportera söktermsrapporten för de senaste 90 dagarna och dra in den i verktyget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur mycket ska en sökterm få kosta innan jag lägger till den som negativt sökord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lägg till en sökterm som negativt sökord när den har kostat 1,5 till 2 gånger din målkostnad per konvertering utan att konvertera. Sannolikheten att en sökterm som konverterar i nivå med ditt mål gör av med 2× ditt mål-CPA utan en enda konvertering är bara cirka 14 %, så de flesta söktermer som hamnar där är verkligen dåliga. Negative Keyword Finder ber dig ange den här kostnadsgränsen innan du laddar upp en rapport."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilken kostnad per konvertering är för hög för en sökterm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En sökterms kostnad per konvertering är för hög när den ligger över din break-even-CPA, alltså bruttovinsten på en konvertering. En sökterm som ligger över den nivån går med förlust på varje konvertering den ger, så den är en kandidat till negativt sökord trots att den konverterar. Negative Keyword Finder frågar efter den här oacceptabla kostnaden per konvertering innan du laddar upp rapporten, och flaggar konverterande söktermer som ligger över den så snart de har kostat minst det beloppet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilket datumintervall ska jag välja för söktermsrapporten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Välj de senaste 90 dagarna för de flesta konton. Med ett längre intervall når fler söktermer dina gränser, noll konverteringar väger tyngre som bevis och fler söktermer med låg volym kommer med. Om kontot gör av med mer än cirka 1 000 USD om dagen räcker de senaste 30 dagarna. Har du nyligen ändrat inriktningen eller erbjudandet tar du bara med perioden efter ändringen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ska jag lägga till söktermer med låg CTR som negativa sökord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ibland. När en sökterm har visats hundratals gånger med en klickfrekvens under 1 % betyder det oftast att de som söker inte ser din annons som relevant, till exempel ”google ads login” för en byrå. De här söktermerna kostar lite eftersom få klickar, så Negative Keyword Finder listar dem för sig och lämnar dem omarkerade så att du kan gå igenom dem själv."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ska negativa sökord ha exakt matchning eller frasmatchning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Använd exakt matchning för att blockera en viss sökterm och frasmatchning för att blockera ett ord eller en fras var det än står i sökningen. Negative Keyword Finder kopierar enskilda söktermer som exakt matchning, till exempel [copywriting jobs remote], och återkommande ord som frasmatchning, till exempel \"jobs\", som också blockerar framtida sökningar med det ordet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fungerar Negative Keyword Finder med Microsoft Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Negative Keyword Finder läser söktermsrapporter från Microsoft Ads (tidigare Bing Ads) i CSV- eller Excel-format och känner igen Microsofts kolumnnamn, till exempel Spend och Conv. De negativa sökord som verktyget kopierar skrivs med samma hakparenteser och citattecken som Microsoft Ads godtar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan Negative Keyword Finder lägga till negativa sökord i mitt konto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. Negative Keyword Finder ansluter aldrig till Google Ads eller Microsoft Ads. Verktyget läser bara den fil du ger det. Du klistrar själv in de negativa sökorden i en lista med negativa sökord eller i en kampanj."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Är Negative Keyword Finder gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Negative Keyword Finder är gratis, kräver varken konto eller registrering och har inga begränsningar för hur mycket du använder det."
+          }
+        }
+      ],
+      "inLanguage": "sv"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../site.css">
+<style>
+:root{
+  --accent-ink:var(--on-accent);
+  --waste:var(--red); --waste-bg:var(--red-bg);
+  --ok:var(--moss); --ok-bg:var(--moss-bg);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-size:15px;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:clamp(30px,4.4vw,42px);line-height:1.08;margin:0 0 12px;letter-spacing:-.025em}
+h2{font-size:18px;margin:0 0 12px}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button,select,input{font:inherit;color:inherit}
+
+.crumbs{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;font-size:14px}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--accent)}
+.btn{border:1px solid var(--line);background:var(--panel);padding:9px 16px;border-radius:0;cursor:pointer;font-weight:550}
+.btn:hover{border-color:var(--faint)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:650}
+.btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.btn.icon{padding:7px 9px;line-height:0}
+.btn.quiet{border:0;background:none;padding:0;color:var(--accent);font-weight:550}
+.btn.quiet:hover{text-decoration:underline}
+
+.h1sub{display:block;font-size:clamp(16px,2vw,19px);font-weight:600;color:var(--muted);letter-spacing:-.005em;margin-top:8px}
+.lede{font-size:17px;color:var(--muted);max-width:640px}
+.byline{margin:4px 0 0}
+
+/* ---------- Start ---------- */
+.panel{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.panel h2,.drop h2{font-size:20px;margin:0 0 4px;letter-spacing:-.01em}
+.step{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;margin-right:9px;vertical-align:2px}
+.limits{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.limits label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14.5px}
+.money{display:flex;align-items:center;border:1px solid var(--line);border-radius:0;background:var(--bg);padding:0 12px}
+.money span{color:var(--muted);font-weight:600}
+.money input{border:0;background:none;outline:none;padding:10px 6px;width:100%;font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}
+.money:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.money.need{border-color:var(--waste);box-shadow:0 0 0 3px var(--waste-bg)}
+.limits .hint{font-weight:400;margin:0}
+.drop.locked{opacity:.5}
+.drop.locked .btn{cursor:not-allowed}
+.lockmsg{font-weight:600;color:var(--accent);margin:0 0 6px}
+.drop:not(.locked) .lockmsg{display:none}
+.why{display:inline-block;font-size:11.5px;font-weight:650;border-radius:0;padding:1px 8px;margin-right:6px;background:var(--waste-bg);color:var(--waste);vertical-align:1px}
+.drop{margin-top:16px;border:2px dashed var(--line);border-radius:var(--radius);background:var(--panel);padding:48px 20px;text-align:center;transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--accent);background:var(--soft)}
+.drop .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.privacy{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:18px;font-size:13px;color:var(--muted)}
+.privacy svg{color:var(--ok);flex:none}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.steps div{font-size:13px;color:var(--muted);padding:14px 16px;border-radius:0;background:var(--panel);border:1px solid var(--line)}
+.steps b{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+.err{background:var(--waste-bg);color:var(--waste);border-radius:0;padding:10px 14px;margin-top:14px;text-align:left}
+
+/* ---------- Results ---------- */
+.filebar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:28px;font-size:14px}
+.filebar .name{font-weight:650;word-break:break-all}
+.filebar .meta{color:var(--muted)}
+.filebar .acts{display:flex;gap:14px;align-items:center}
+.filebar select{background:var(--panel);border:1px solid var(--line);border-radius:0;padding:4px 8px}
+#mapbox{margin-top:10px;background:var(--panel);border:1px solid var(--line);border-radius:0;padding:14px 16px}
+#mapbox[hidden]{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:10px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+label.f select{background:var(--bg);border:1px solid var(--line);border-radius:0;padding:6px 8px;color:var(--ink);width:100%}
+.req{color:var(--waste)}
+
+.hero{margin-top:26px;padding:30px 28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.hero .amt{font-size:clamp(44px,8vw,64px);line-height:1;font-weight:750;letter-spacing:-.035em;color:var(--waste);font-variant-numeric:tabular-nums}
+.hero.clean .amt{color:var(--ok)}
+.hero .what{font-size:19px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
+.hero .sub{color:var(--muted);margin:6px 0 0;font-size:14.5px}
+.note{margin-top:12px;font-size:13px;color:var(--muted);background:var(--soft);border-radius:0;padding:9px 12px}
+
+.tabs{display:flex;gap:4px;margin-top:22px;background:var(--soft);border:1px solid var(--line);border-radius:0;padding:4px;width:max-content;max-width:100%;overflow-x:auto}
+.tabs button{border:0;background:none;padding:7px 14px;border-radius:0;cursor:pointer;font-weight:550;color:var(--muted);white-space:nowrap}
+.tabs button .c{font-variant-numeric:tabular-nums;margin-left:6px;color:var(--faint);font-weight:600}
+.tabs button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.tabs button.on .c{color:var(--accent)}
+
+.rule{margin:18px 2px 4px;font-size:15.5px;line-height:1.9}
+.rule input{width:5.2em;background:var(--panel);border:1px solid var(--line);border-radius:0;padding:2px 8px;font-weight:650;text-align:right;font-variant-numeric:tabular-nums}
+.rule input.short{width:3.8em}
+.rule .cur{font-weight:650}
+.hint{font-size:13px;color:var(--muted);margin:2px 2px 0}
+
+.list{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.listhead{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.row{display:flex;gap:14px;align-items:flex-start;padding:13px 16px;border-bottom:1px solid var(--line);cursor:pointer}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--soft)}
+.row input{margin:3px 0 0;width:17px;height:17px;accent-color:var(--accent);flex:none;cursor:pointer}
+.row .main{flex:1;min-width:0}
+.row .t{font-weight:600;word-break:break-word}
+.row .m{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.row .eg{display:block;font-size:12.5px;color:var(--faint);margin-top:2px}
+.row .amt{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap;padding-top:1px}
+.row.covered .t,.row.covered .amt{color:var(--faint)}
+.row .cov{display:inline-block;font-size:11.5px;font-weight:600;color:var(--accent);margin-top:4px}
+.empty{padding:28px 16px;text-align:center;color:var(--muted)}
+.more{display:block;width:100%;border:0;border-top:1px solid var(--line);background:none;padding:12px;color:var(--accent);cursor:pointer;font-weight:550}
+
+.bar{position:sticky;bottom:12px;margin-top:18px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px 12px 18px;box-shadow:0 8px 28px color-mix(in srgb,var(--ink) 12%,transparent)}
+.bar .sum{font-size:14.5px}
+.bar .sum b{font-variant-numeric:tabular-nums}
+.bar .acts{display:flex;gap:8px}
+.toast{font-size:13px;color:var(--ok);margin:10px 2px 0}
+
+/* ---------- Reference article ---------- */
+.doc{margin-top:72px;font-size:15.5px;line-height:1.65}
+.doc section{padding-top:30px;margin-top:30px;border-top:1px solid var(--line)}
+.doc section:first-child{border-top:0;margin-top:0;padding-top:0}
+.doc h2{font-size:22px;letter-spacing:-.015em;margin:0 0 10px}
+.doc h3{font-size:16.5px;margin:22px 0 6px}
+.doc ul,.doc ol{padding-left:22px;margin:0 0 12px}
+.doc li{margin-bottom:6px}
+.doc code{font-size:13px;background:var(--soft);border:1px solid var(--line);border-radius:0;padding:1px 5px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:0;margin:6px 0 14px}
+.doc table{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--panel)}
+.doc th,.doc td{padding:8px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.doc thead th{background:var(--soft);font-weight:600}
+.doc tbody th{font-weight:600}
+.doc tr:last-child td,.doc tr:last-child th{border-bottom:0}
+.doc td.num,.doc th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.doc caption{caption-side:top;text-align:left;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0;padding:10px 11px 8px;background:var(--panel)}
+table.facts th{width:30%;color:var(--muted)}
+.doc dl{margin:0}
+.doc dt{font-weight:700;margin-top:12px}
+.doc dd{margin:2px 0 0;color:var(--muted)}
+footer{margin-top:44px;font-size:13px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:600px){
+  .hero{padding:22px 18px}
+  .row{gap:11px;padding:12px 14px}
+  .panel{padding:18px 16px}
+  .limits{grid-template-columns:1fr}
+  .bar{bottom:8px}
+  .bar .acts{width:100%}
+  .bar .acts .btn{flex:1;white-space:nowrap}
+  .tabs{width:100%}
+  .tabs button{flex:1;padding:7px 8px}
+  table.facts th{width:38%}
+}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../negative-keywords/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs">
+  <a href="../">&larr; Alla verktyg</a>
+  <button type="button" class="btn icon" id="btnTheme" title="Växla mellan ljust och mörkt" aria-label="Växla mellan ljust och mörkt tema">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+  </button>
+</nav>
+
+<header>
+  <h1>Negative Keyword Finder <span class="h1sub">Hitta söktermerna som slösar bort din annonsbudget</span></h1>
+  <p class="lede">Negative Keyword Finder är ett gratis verktyg som analyserar söktermer och hittar de negativa sökord du bör lägga till i Google Ads och Microsoft Ads. Ange vilken kostnad per konvertering du inte vill betala och hur mycket en sökning får kosta utan att konvertera, och dra sedan in en söktermsrapport. Verktyget listar varje sökning och varje ord som har gått över dina gränser, klara att klistra in.</p>
+  <p class="byline small muted">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Senast uppdaterad <time datetime="2026-10-03">3 oktober 2026</time></p>
+</header>
+
+<section id="start">
+  <div class="panel">
+    <h2><span class="step">1</span>Ange dina gränser</h2>
+    <p class="muted small">Söktermer som går över någon av gränserna flaggas som negativa sökord.</p>
+    <div class="limits">
+      <label for="preCpa">Oacceptabel kostnad per konvertering
+        <span class="money" id="moneyCpa"><span data-cur>$</span><input type="number" id="preCpa" min="0" step="any" inputmode="decimal" placeholder="t.ex. 100" required aria-describedby="hintCpa"></span>
+        <span class="hint" id="hintCpa">Oftast din break-even-CPA, alltså bruttovinsten på en konvertering. Söktermer som har konverterat men kostat mer än så per konvertering flaggas.</span>
+      </label>
+      <label for="preSpend">Kostnadsgräns utan konverteringar
+        <span class="money" id="moneySpend"><span data-cur>$</span><input type="number" id="preSpend" min="0" step="any" inputmode="decimal" placeholder="t.ex. 150" required aria-describedby="hintSpend"></span>
+        <span class="hint" id="hintSpend">Söktermer som har kostat så mycket utan en enda konvertering flaggas. 1,5–2× ditt mål-CPA är en bra utgångspunkt.</span>
+      </label>
+    </div>
+  </div>
+  <div class="drop locked" id="drop">
+    <h2><span class="step">2</span>Släpp din söktermsrapport här</h2>
+    <p class="lockmsg" id="lockmsg">Fyll i båda gränserna ovan för att gå vidare.</p>
+    <p class="muted">Excel eller CSV, från Google Ads eller Microsoft Ads. De senaste 90 dagarna fungerar bäst.</p>
+    <div class="actions">
+      <button class="btn primary" id="pick">Välj fil</button>
+      <button class="btn" id="sample">Prova med en exempelrapport</button>
+    </div>
+    <div class="privacy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      <span>Rapporten lämnar aldrig den här sidan. Den läses på din enhet, och sidan är spärrad från att skicka data till någon server.</span>
+    </div>
+    <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,text/csv,text/tab-separated-values,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+  </div>
+  <div class="steps">
+    <div><b>Google Ads</b><span lang="en">Campaigns › Insights and reports › Search terms</span>. Välj de senaste 90 dagarna som datumintervall och sedan <span lang="en">Download › .csv</span> eller Excel.</div>
+    <div><b>Microsoft Ads</b><span lang="en">Keywords › Search terms</span>. Välj de senaste 90 dagarna och sedan <span lang="en">Download › CSV</span> eller Excel.</div>
+  </div>
+</section>
+
+<section id="work" hidden>
+  <div class="filebar">
+    <div><span class="name" id="fname"></span> <span class="meta" id="fmeta"></span></div>
+    <div class="acts">
+      <select id="sheetSel" hidden aria-label="Blad"></select>
+      <button class="btn quiet" id="mapToggle">Kolumner</button>
+      <button class="btn quiet" id="reset">Ny rapport</button>
+    </div>
+  </div>
+  <div id="mapbox" hidden>
+    <div class="small muted">Kolumnerna matchas automatiskt. Ändra dem som ser fel ut.</div>
+    <div class="grid" id="mapgrid"></div>
+  </div>
+  <div id="maperr" class="err" hidden></div>
+
+  <div id="results">
+    <div class="hero" id="hero">
+      <div class="amt" id="heroAmt"></div>
+      <div class="what" id="heroWhat"></div>
+      <p class="sub" id="heroSub"></p>
+    </div>
+    <div class="note" id="note" hidden></div>
+
+    <div class="tabs" role="tablist" id="tabs">
+      <button role="tab" data-t="terms">Söktermer<span class="c" id="cTerms"></span></button>
+      <button role="tab" data-t="words">Ord<span class="c" id="cWords"></span></button>
+      <button role="tab" data-t="low">Låg CTR<span class="c" id="cLow"></span></button>
+    </div>
+
+    <div id="pane-terms">
+      <p class="rule">Söktermer som har kostat <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Kostnadsgräns utan konverteringar"> utan att konvertera, eller mer än <span class="cur" data-cur></span><input type="number" min="0" step="any" id="cpaIn" aria-label="Oacceptabel kostnad per konvertering"> per konvertering.</p>
+      <p class="hint" id="hintTerms"></p>
+    </div>
+    <div id="pane-words" hidden>
+      <p class="rule">Ord som finns i 2 eller fler söktermer, som tillsammans har kostat minst <span class="cur" data-cur></span><input type="number" min="0" step="any" class="spendIn" aria-label="Kostnadsgräns utan konverteringar"> och aldrig konverterat.</p>
+      <p class="hint">Kopieras som frasmatchning, till exempel <code>"jobs"</code>, som också blockerar framtida sökningar med ordet. Ett ord som finns i något av dina sökord eller i någon sökning som har konverterat föreslås aldrig.</p>
+    </div>
+    <div id="pane-low" hidden>
+      <p class="rule">Söktermer som har visats minst <input type="number" min="1" step="1" id="imprIn" aria-label="Minsta antal visningar"> gånger med en klickfrekvens under <input type="number" min="0" step="0.1" id="ctrIn" class="short" aria-label="Gräns för CTR">% och utan konverteringar.</p>
+      <p class="hint">Folk ser din annons på de här sökningarna men klickar inte, ett tecken på att de söker något annat än det du säljer. De kostar lite och är därför inte markerade från början. Markera dem som uppenbart inte hör hemma.</p>
+    </div>
+
+    <div class="list" id="list"></div>
+
+    <div class="bar" id="bar">
+      <div class="sum" id="barSum"></div>
+      <div class="acts">
+        <button class="btn" id="dl">Ladda ner CSV</button>
+        <button class="btn primary" id="copy">Kopiera negativa sökord</button>
+      </div>
+    </div>
+    <p class="toast" id="toast" hidden role="status"></p>
+  </div>
+</section>
+
+<article class="doc" id="guide">
+
+<section id="summary">
+  <h2>Det här gör Negative Keyword Finder</h2>
+  <p>Negative Keyword Finder läser söktermsrapporten från Google Ads eller Microsoft Ads och hittar de sökningar som slösar bort pengar, mätt mot två gränser som du själv anger: en oacceptabel kostnad per konvertering och hur mycket en sökning får kosta utan att konvertera. Verktyget flaggar söktermer som går över någon av gränserna, och dessutom ord som återkommer i många söktermer som tillsammans har kostat mer än kostnadsgränsen utan att konvertera. Allt formateras som negativa sökord som du kan klistra in direkt i kontot.</p>
+  <div class="tablewrap">
+  <table class="facts">
+    <caption>Negative Keyword Finder i korthet</caption>
+    <tbody>
+      <tr><th scope="row">Vad det är</th><td>Ett gratis verktyg som körs i webbläsaren, analyserar söktermer och hittar negativa sökord för sökkampanjer med klickbetalda annonser (PPC)</td></tr>
+      <tr><th scope="row">Fungerar med</th><td>Söktermsrapporter från Google Ads och Microsoft Ads (Bing Ads)</td></tr>
+      <tr><th scope="row">Filformat</th><td>CSV, TSV, UTF-16-text och Excel .xlsx. Det gamla formatet .xls från Excel 97–2003 stöds inte.</td></tr>
+      <tr><th scope="row">Kolumner som krävs</th><td>Search term, Cost och Conversions</td></tr>
+      <tr><th scope="row">Dina gränser</th><td>En oacceptabel kostnad per konvertering och en kostnadsgräns utan konverteringar. Båda krävs och fylls i innan rapporten laddas upp.</td></tr>
+      <tr><th scope="row">Rekommenderat underlag</th><td>De senaste 90 dagarna (30 dagar för konton som gör av med mer än cirka 1&nbsp;000 USD om dagen)</td></tr>
+      <tr><th scope="row">Det du får ut</th><td>Negativa sökord med exakt matchning för söktermer, negativa sökord med frasmatchning för ord och en CSV-export</td></tr>
+      <tr><th scope="row">Integritet</th><td>Rapporten bearbetas i webbläsaren. En Content-Security-Policy blockerar alla nätverksanrop utom till webbplatsens egen stilmall och egna typsnitt, så filen kan inte laddas upp.</td></tr>
+      <tr><th scope="row">Åtkomst till kontot</th><td>Ingen. Verktyget ansluter aldrig till ditt annonskonto och kan inte lägga till eller ändra något.</td></tr>
+      <tr><th scope="row">Pris</th><td>Gratis, ingen registrering</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="how-to">
+  <h2>Så hittar du negativa sökord i en söktermsrapport</h2>
+  <p>Så här hittar du negativa sökord: ange dina två gränser i Negative Keyword Finder, exportera söktermsrapporten för de senaste 90 dagarna och dra in den, gå igenom de flaggade söktermerna och orden och klistra in de negativa sökorden i en lista med negativa sökord.</p>
+  <ol>
+    <li><b>Ange dina gränser.</b> Fyll i den kostnad per konvertering du inte vill betala (oftast din break-even-CPA) och hur mycket en sökning får kosta utan att konvertera (1,5–2× ditt mål-CPA är en bra början). Båda krävs. Uppladdningsrutan är låst tills de är ifyllda, eftersom varje resultat mäts mot dem.</li>
+    <li><b>Exportera söktermsrapporten.</b> I Google Ads går du till <span lang="en">Campaigns › Insights and reports › Search terms</span>, väljer de senaste 90 dagarna som datumintervall och sedan <span lang="en">Download › .csv</span> eller Excel. I Microsoft Ads öppnar du <span lang="en">Keywords › Search terms</span>, väljer samma intervall och laddar ner rapporten som CSV eller Excel.</li>
+    <li><b>Läs in filen.</b> Släpp den på uppladdningsrutan högst upp på sidan eller klicka på Välj fil. Negative Keyword Finder hittar själv rubrikraden, kolumnerna, valutan och datumintervallet.</li>
+    <li><b>Gå igenom fliken Söktermer.</b> Varje sökterm som har gått över en gräns listas och är markerad, med en etikett som visar vilken gräns det gäller: ”Inga konverteringar” eller söktermens kostnad per konvertering, till exempel ”$390 per konvertering”. Avmarkera det du vill behålla.</li>
+    <li><b>Gå igenom fliken Ord.</b> Här finns enskilda ord och tvåordsfraser, till exempel ”<span lang="en">jobs</span>” eller ”<span lang="en">how to</span>”, som förekommer i många söktermer som tillsammans har kostat mer än din kostnadsgräns utan att konvertera. Ett enda negativt sökord med frasmatchning blockerar alla de söktermerna, och dessutom framtida sökningar med samma ord.</li>
+    <li><b>Kopiera och klistra in.</b> Klicka på Kopiera negativa sökord och klistra in listan i en delad lista med negativa sökord eller bland en kampanjs negativa sökord. Söktermer som redan blockeras av ett markerat ord tas inte med i kopian, så listan innehåller inga dubbletter.</li>
+  </ol>
+</section>
+
+<section id="rules">
+  <h2>Så avgör Negative Keyword Finder att en sökterm är dålig</h2>
+  <p>Negative Keyword Finder bedömer varje sökterm mot de två gränser du anger innan du laddar upp rapporten. En sökterm flaggas om den har kostat minst din kostnadsgräns utan en enda konvertering, eller om den har konverterat men kostnaden per konvertering ligger över din oacceptabla gräns. Inga dolda standardvärden hämtas ur rapporten, så varje resultat betyder samma sak: den här sökningen gick över den här gränsen. (Vill du bedöma sökorden du budar på snarare än sökningarna de matchade, använd <a href="../keyword-triage/">Keyword Triage</a>.)</p>
+  <div class="tablewrap">
+  <table>
+    <caption>De tre listorna och deras regler</caption>
+    <thead>
+      <tr><th scope="col">Lista</th><th scope="col">Regel</th><th scope="col">Kopieras som</th><th scope="col">Markerad från början</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Söktermer</th><td>Noll konverteringar och en kostnad som når eller överstiger din kostnadsgräns, eller en kostnad per konvertering över din oacceptabla gräns och en kostnad som når eller överstiger samma gräns</td><td>Exakt matchning, <code>[search term]</code></td><td>Ja</td></tr>
+      <tr><th scope="row">Ord</th><td>Ett ord eller en tvåordsfras som finns i 2 eller fler söktermer, där söktermerna tillsammans har noll konverteringar och en kostnad som når eller överstiger din kostnadsgräns</td><td>Frasmatchning, <code>"word"</code></td><td>Ja</td></tr>
+      <tr><th scope="row">Låg CTR</th><td>Noll konverteringar, minst 300 visningar och en klickfrekvens under 1&nbsp;%, och inte redan med i listan Söktermer</td><td>Exakt matchning, <code>[search term]</code></td><td>Nej</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Så väljer du din oacceptabla kostnad per konvertering</h3>
+  <p>Utgå från din break-even-CPA, alltså bruttovinsten på en konvertering. Om en försäljning ger 200&nbsp;USD i bruttovinst går en sökterm som kostar mer än 200&nbsp;USD per konvertering med förlust på varje försäljning den ger. En sökterm som konverterar flaggas först när den har kostat minst så mycket som gränsen, så att en liten bråkdel av en konvertering på några få dollar inte bedöms på för tunt underlag.</p>
+
+  <h3>Så väljer du din kostnadsgräns utan konverteringar</h3>
+  <p>En bra utgångspunkt är 1,5 till 2 gånger ditt mål-CPA. En sökterm som konverterar i nivå med ditt mål borde ha gett två konverteringar när den har kostat 2× ditt mål-CPA, och sannolikheten att den ändå står på noll är cirka 14&nbsp;% (e<sup>−2</sup>). Vid 1,5× är sannolikheten cirka 22&nbsp;% och vid 3× cirka 5&nbsp;%. En högre gräns flaggar färre söktermer men med större säkerhet. En lägre gräns fångar slöseriet tidigare.</p>
+  <p>När rapporten är uppladdad står båda gränserna i meningen ovanför resultaten, och du kan ändra dem där. Negative Keyword Finder visar också rapportens egen genomsnittliga kostnad per konvertering som jämförelse, och varnar dig om det genomsnittet redan ligger över din oacceptabla gräns.</p>
+
+  <h3>Därför hittar orden mer slöseri än enskilda söktermer</h3>
+  <p>Det mesta av de bortkastade pengarna i en söktermsrapport är utspritt på hundratals söktermer som har kostat några dollar var, för lite för att någon av dem ska gå att bedöma för sig. Negative Keyword Finder grupperar söktermerna efter orden de har gemensamt, något som PPC-specialister kallar n-gramanalys. Om ”<span lang="en">jobs</span>” finns i 14 söktermer som tillsammans har kostat 260&nbsp;USD utan att någon av dem har konverterat, är ”<span lang="en">jobs</span>” ett negativt sökord, även om ingen enskild sökterm med ”<span lang="en">jobs</span>” nådde kostnadsgränsen.</p>
+  <p>Tre spärrar hindrar ordförslagen från att blockera bra trafik:</p>
+  <ul>
+    <li>Ett ord föreslås bara om varje sökterm som innehåller det har noll konverteringar. Ord flaggas aldrig för hög kostnad per konvertering, eftersom ett negativt sökord med frasmatchning skulle blockera varje sökning med ordet som har konverterat.</li>
+    <li>Ett ord som finns i något av dina egna sökord (från rapportens kolumn Keyword) föreslås aldrig, eftersom ett negativt sökord med det ordet skulle blockera ditt sökord.</li>
+    <li>Småord som ”<span lang="en">for</span>”, ”<span lang="en">the</span>” och ”<span lang="en">in</span>” och frågeord som ”<span lang="en">how</span>”, ”<span lang="en">what</span>” och ”<span lang="en">near</span>” föreslås aldrig ensamma. De dyker bara upp i fraser som ”<span lang="en">how to</span>” eller ”<span lang="en">near me</span>”. En tvåordsfras stryks om ett av orden redan föreslås på egen hand.</li>
+  </ul>
+
+  <h3>Därför är låg klickfrekvens en egen lista</h3>
+  <p>En klickfrekvens (CTR) under 1&nbsp;% på minst 300 visningar betyder oftast att de som söker inte ser din annons som ett svar på det de letar efter, som ”<span lang="en">google ads login</span>” för en byrå. De här sökningarna kostar sällan mycket, eftersom du betalar per klick, så de listas för sig och är inte markerade från början. Om kontots totala CTR ligger under 3&nbsp;%, vilket är vanligt i Shopping-kampanjer, sänks standardgränsen för CTR till en tredjedel av kontots genomsnitt, så att vanliga sökningar inte flaggas.</p>
+
+  <h3>Det här hoppas över</h3>
+  <ul>
+    <li>Söktermer som är markerade Excluded i kolumnen Added/Excluded, eftersom de redan är negativa sökord.</li>
+    <li>Söktermer som är markerade Added eller är identiska med något av dina sökord, eftersom de är sökord. Pausa dem i stället.</li>
+    <li>Total- och summeringsrader, som ”<span lang="en">Total: Account</span>”.</li>
+  </ul>
+  <p>En sökterm som förekommer i flera kampanjer eller annonsgrupper bedöms på sin sammanlagda kostnad och sina sammanlagda konverteringar i alla dem. Det är medvetet försiktigt: en sökterm som konverterar i en kampanj föreslås aldrig som negativt sökord i någon kampanj.</p>
+</section>
+
+<section id="date-range">
+  <h2>Vilket datumintervall ska söktermsrapporten täcka?</h2>
+  <p>Välj de senaste 90 dagarna för de flesta konton. Ett längre intervall hjälper på tre sätt: fler söktermer når dina gränser, noll konverteringar på 90 dagar är ett starkare bevis än på 14, och rapporten tar med fler av de söktermer med låg volym som Google Ads döljer när intervallet är kort. Ett negativt sökord för en sökterm som inte längre dyker upp kostar ingenting.</p>
+  <ul>
+    <li><b>Konton som gör av med mer än cirka 1&nbsp;000 USD om dagen:</b> 30 dagar ger tillräckligt med data och håller listan aktuell.</li>
+    <li><b>Har du nyligen ändrat inriktning, matchningstyper eller erbjudande:</b> ta bara med perioden efter ändringen.</li>
+    <li><b>Lång säljcykel:</b> låt intervallet sluta en eller två veckor före dagens datum, så att de senaste klicken har hunnit konvertera.</li>
+    <li><b>Hur ofta:</b> kör verktyget varannan till var fjärde vecka. När kontot väl är rensat räcker det att ta med perioden sedan förra genomgången.</li>
+  </ul>
+  <p>Negative Keyword Finder läser datumintervallet högst upp i en export från Google Ads och visar det bredvid filnamnet. Om rapporten täcker färre än 28 dagar föreslår verktyget ett längre intervall.</p>
+</section>
+
+<section id="match-types">
+  <h2>Vilken matchningstyp ska negativa sökord ha?</h2>
+  <p>Negativa sökord matchar inte på samma sätt som vanliga sökord: de matchar inte nära varianter, pluralformer eller felstavningar (<a href="https://support.google.com/google-ads/answer/2453972" rel="noopener"><span lang="en">Google Ads Help: About negative keywords</span></a>). Negative Keyword Finder använder den matchningstyp som blockerar precis det som datan ger stöd för.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Matchningstyper för negativa sökord</caption>
+    <thead>
+      <tr><th scope="col">Matchningstyp</th><th scope="col">Skrivsätt</th><th scope="col">Blockerar</th><th scope="col">Används för</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Exakt matchning</th><td><code>[copywriting jobs remote]</code></td><td>Bara just den sökningen</td><td>Enskilda söktermer</td></tr>
+      <tr><th scope="row">Frasmatchning</th><td><code>"jobs"</code></td><td>Alla sökningar som innehåller ordet eller frasen, i den ordningen</td><td>Ord och tvåordsfraser</td></tr>
+      <tr><th scope="row">Brett matchande</th><td><code>jobs</code></td><td>Alla sökningar som innehåller alla orden, i valfri ordning</td><td>Används inte av verktyget</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Både Google Ads och Microsoft Ads godtar det här skrivsättet när du klistrar in en lista i en lista med negativa sökord, ett negativt sökord per rad.</p>
+</section>
+
+<section id="example">
+  <h2>Räkneexempel: negativa sökord i ett konto som har gjort av med 9&nbsp;000 USD</h2>
+  <p>Exempelkontot har lagt 9&nbsp;000 USD på 90 dagar och fått 150 konverteringar. Kontots break-even-CPA är 100&nbsp;USD, och det blir den oacceptabla kostnaden per konvertering. Kostnadsgränsen utan konverteringar är satt till 120&nbsp;USD.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Söktermer bedömda mot en CPA-gräns på 100 USD och en kostnadsgräns på 120 USD</caption>
+    <thead>
+      <tr><th scope="col">Sökterm eller ord</th><th scope="col" class="num">Kostnad</th><th scope="col" class="num">Konverteringar</th><th scope="col">Resultat</th></tr>
+    </thead>
+    <tbody>
+      <tr><td lang="en">copywriting jobs remote</td><td class="num">164 USD</td><td class="num">0</td><td>Negativt sökord <code>[copywriting jobs remote]</code>, över 120 USD</td></tr>
+      <tr><td lang="en">marketing agency near me</td><td class="num">131 USD</td><td class="num">0</td><td>Negativt sökord <code>[marketing agency near me]</code>, över 120 USD</td></tr>
+      <tr><td lang="en">how to write ad copy</td><td class="num">96 USD</td><td class="num">0</td><td>Flaggas inte ensam, under 120 USD</td></tr>
+      <tr><td lang="en">cheap ppc agency</td><td class="num">390 USD</td><td class="num">1</td><td>Negativt sökord <code>[cheap ppc agency]</code>, 390 USD per konvertering är mer än 100 USD</td></tr>
+      <tr><td lang="en">ppc copywriter</td><td class="num">480 USD</td><td class="num">9</td><td>Behålls, 53 USD per konvertering är mindre än 100 USD</td></tr>
+      <tr><td>”<span lang="en">free</span>”, i 9 söktermer</td><td class="num">212 USD</td><td class="num">0</td><td>Negativt sökord <code>"free"</code></td></tr>
+      <tr><td>”<span lang="en">how to</span>”, i 6 söktermer, bland dem ”<span lang="en">how to write ad copy</span>”</td><td class="num">184 USD</td><td class="num">0</td><td>Negativt sökord <code>"how to"</code>, som också blockerar termen för 96 USD ovan</td></tr>
+      <tr><td><span lang="en">google ads login</span>, 2&nbsp;400 visningar med 0,4&nbsp;% CTR</td><td class="num">11 USD</td><td class="num">0</td><td>Listas under Låg CTR för granskning</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Markerar du de tre flaggade söktermerna och de två orden får du fem negativa sökord som blockerar 1&nbsp;081 USD, cirka 12&nbsp;% av kontots annonskostnad. 691 USD av dem gav inga konverteringar, och de återstående 390 USD köpte en konvertering till nästan fyra gånger break-even-CPA:n.</p>
+</section>
+
+<section id="columns">
+  <h2>Vilka kolumner i rapporten behöver Negative Keyword Finder?</h2>
+  <p>Negative Keyword Finder behöver tre kolumner: Search term, Cost och Conversions. Kolumnnamnen matchas automatiskt, och du kan koppla om vilken kolumn som helst under Kolumner.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Kolumner som Negative Keyword Finder läser</caption>
+    <thead>
+      <tr><th scope="col">Kolumn</th><th scope="col">Krävs</th><th scope="col">Namn i Google Ads</th><th scope="col">Namn i Microsoft Ads</th><th scope="col">Används till</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Sökterm</th><td>Ja</td><td lang="en">Search term</td><td lang="en">Search term</td><td>Sökningarna som bedöms</td></tr>
+      <tr><th scope="row">Kostnad</th><td>Ja</td><td lang="en">Cost</td><td lang="en">Spend</td><td>Båda gränserna och bortkastade pengar</td></tr>
+      <tr><th scope="row">Konverteringar</th><td>Ja</td><td lang="en">Conversions</td><td><span lang="en">Conv.</span> eller <span lang="en">Conversions</span></td><td>Båda gränserna</td></tr>
+      <tr><th scope="row">Klick, visningar</th><td>Nej</td><td lang="en">Clicks, Impr.</td><td lang="en">Clicks, Impr.</td><td>Listan Låg CTR</td></tr>
+      <tr><th scope="row">Sökord</th><td>Nej</td><td lang="en">Keyword</td><td lang="en">Keyword</td><td>Att skydda ord som finns i dina egna sökord</td></tr>
+      <tr><th scope="row">Added/Excluded</th><td>Nej</td><td lang="en">Added/Excluded</td><td lang="en">Added/Excluded</td><td>Att hoppa över söktermer som redan är negativa sökord eller sökord</td></tr>
+      <tr><th scope="row">Kampanj, annonsgrupp</th><td>Nej</td><td lang="en">Campaign, Ad group</td><td lang="en">Campaign name, Ad group name</td><td>Att visa var varje sökterm har visats</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>En sökordsrapport är inte en söktermsrapport. Läser du in en sådan säger Negative Keyword Finder ifrån och förklarar var du hittar söktermsrapporten.</p>
+</section>
+
+<section id="privacy">
+  <h2>Laddas min söktermsrapport upp någonstans?</h2>
+  <p>Nej. Negative Keyword Finder läser filen med webbläsarens FileReader API och analyserar den med JavaScript på din enhet. Sidan sätter en Content-Security-Policy med <code>default-src 'none'</code> och <code>connect-src 'none'</code>, som säger åt webbläsaren att blockera alla nätverksanrop sidan skulle kunna göra, även fetch, XHR, beacons, externa skript, typsnitt och bilder. Det enda anrop som tillåts gäller webbplatsens egen stilmall (<code>style-src 'self'</code>), och ett anrop efter en stilmall kan inte föra med sig din rapport. Ingenting från rapporten sparas. Det enda som sparas är om du har valt ljust eller mörkt tema. Du kan öppna sidan, koppla bort datorn från internet och fortsätta använda verktyget.</p>
+</section>
+
+<section id="limits">
+  <h2>Det här tar Negative Keyword Finder inte hänsyn till</h2>
+  <p>Listorna bygger på kostnaden och konverteringarna i rapporten, så se dem som en kortlista att gå igenom, inte som en autopilot. Kontrollera de här punkterna innan du lägger till ett negativt sökord som har kostat mycket:</p>
+  <ul>
+    <li><b>Konverteringsfördröjning:</b> konverteringar räknas till dagen för klicket och kan komma in flera dagar senare, så mycket färska klick kan se ut som slöseri. Låt datumintervallet sluta en bit före dagens datum om dina kunder tar tid på sig att köpa.</li>
+    <li><b>Konverteringsspårning:</b> om en konverteringsåtgärd saknas eller inte fungerar ser bra söktermer ut som söktermer utan konverteringar. Verktyget varnar när en fil inte innehåller några konverteringar alls.</li>
+    <li><b>Assisterade konverteringar:</b> en sökning där kunden bara orienterar sig kan starta en kundresa som en senare sökning får äran för.</li>
+    <li><b>Varumärkes- och konkurrenttermer:</b> bestäm om dem utifrån din strategi, inte utifrån en enda rapport.</li>
+    <li><b>Dolda söktermer:</b> Google Ads visar inte alla söktermer, bara dem med tillräcklig volym, så en del slöseri syns inte i någon rapport.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Vanliga frågor</h2>
+
+  <h3>Vad är ett negativt sökord?</h3>
+  <p>Ett negativt sökord talar om för Google Ads eller Microsoft Ads att din annons inte ska visas för sökningar som innehåller det. Lägger du till ”<span lang="en">free</span>” som negativt sökord visas dina annonser till exempel inte för ”<span lang="en">free ad copy templates</span>” eller någon annan sökning som innehåller ordet <span lang="en">free</span>.</p>
+
+  <h3>Hur hittar jag negativa sökord i Google Ads?</h3>
+  <p>Negativa sökord hittar du i söktermsrapporten, som listar de faktiska sökningar som har utlöst dina annonser. Leta efter söktermer som har kostat pengar utan att konvertera och efter ord som återkommer i de sökningarna. Negative Keyword Finder gör det automatiskt: exportera söktermsrapporten för de senaste 90 dagarna och dra in den i verktyget.</p>
+
+  <h3>Hur mycket ska en sökterm få kosta innan jag lägger till den som negativt sökord?</h3>
+  <p>Lägg till en sökterm som negativt sökord när den har kostat 1,5 till 2 gånger din målkostnad per konvertering utan att konvertera. Sannolikheten att en sökterm som konverterar i nivå med ditt mål gör av med 2× ditt mål-CPA utan en enda konvertering är bara cirka 14&nbsp;%, så de flesta söktermer som hamnar där är verkligen dåliga. Negative Keyword Finder ber dig ange den här kostnadsgränsen innan du laddar upp en rapport.</p>
+
+  <h3>Vilken kostnad per konvertering är för hög för en sökterm?</h3>
+  <p>En sökterms kostnad per konvertering är för hög när den ligger över din break-even-CPA, alltså bruttovinsten på en konvertering. En sökterm som ligger över den nivån går med förlust på varje konvertering den ger, så den är en kandidat till negativt sökord trots att den konverterar. Negative Keyword Finder frågar efter den här oacceptabla kostnaden per konvertering innan du laddar upp rapporten, och flaggar konverterande söktermer som ligger över den så snart de har kostat minst det beloppet.</p>
+
+  <h3>Vilket datumintervall ska jag välja för söktermsrapporten?</h3>
+  <p>Välj de senaste 90 dagarna för de flesta konton. Med ett längre intervall når fler söktermer dina gränser, noll konverteringar väger tyngre som bevis och fler söktermer med låg volym kommer med. Om kontot gör av med mer än cirka 1&nbsp;000 USD om dagen räcker de senaste 30 dagarna. Har du nyligen ändrat inriktningen eller erbjudandet tar du bara med perioden efter ändringen.</p>
+
+  <h3>Ska jag lägga till söktermer med låg CTR som negativa sökord?</h3>
+  <p>Ibland. När en sökterm har visats hundratals gånger med en klickfrekvens under 1&nbsp;% betyder det oftast att de som söker inte ser din annons som relevant, till exempel ”<span lang="en">google ads login</span>” för en byrå. De här söktermerna kostar lite eftersom få klickar, så Negative Keyword Finder listar dem för sig och lämnar dem omarkerade så att du kan gå igenom dem själv.</p>
+
+  <h3>Ska negativa sökord ha exakt matchning eller frasmatchning?</h3>
+  <p>Använd exakt matchning för att blockera en viss sökterm och frasmatchning för att blockera ett ord eller en fras var det än står i sökningen. Negative Keyword Finder kopierar enskilda söktermer som exakt matchning, till exempel [copywriting jobs remote], och återkommande ord som frasmatchning, till exempel "jobs", som också blockerar framtida sökningar med det ordet.</p>
+
+  <h3>Fungerar Negative Keyword Finder med Microsoft Ads?</h3>
+  <p>Ja. Negative Keyword Finder läser söktermsrapporter från Microsoft Ads (tidigare Bing Ads) i CSV- eller Excel-format och känner igen Microsofts kolumnnamn, till exempel Spend och Conv. De negativa sökord som verktyget kopierar skrivs med samma hakparenteser och citattecken som Microsoft Ads godtar.</p>
+
+  <h3>Kan Negative Keyword Finder lägga till negativa sökord i mitt konto?</h3>
+  <p>Nej. Negative Keyword Finder ansluter aldrig till Google Ads eller Microsoft Ads. Verktyget läser bara den fil du ger det. Du klistrar själv in de negativa sökorden i en lista med negativa sökord eller i en kampanj.</p>
+
+  <h3>Är Negative Keyword Finder gratis?</h3>
+  <p>Ja. Negative Keyword Finder är gratis, kräver varken konto eller registrering och har inga begränsningar för hur mycket du använder det.</p>
+</section>
+
+<section id="glossary">
+  <h2>Ordlista</h2>
+  <dl>
+    <dt>Sökterm</dt>
+    <dd>Exakt det som någon skrev i Google eller Bing när din annons visades. Inte samma sak som ett sökord, som är det du budar på.</dd>
+    <dt>Söktermsrapport</dt>
+    <dd>Rapporten i Google Ads och Microsoft Ads som listar de söktermer som har utlöst dina annonser, med klick, kostnad och konverteringar för var och en.</dd>
+    <dt>Negativt sökord</dt>
+    <dd>Ett ord eller en fras som gör att din annons inte visas för sökningar som innehåller ordet eller frasen.</dd>
+    <dt>Lista med negativa sökord</dt>
+    <dd>En delad lista med negativa sökord som du kan koppla till många kampanjer på en gång.</dd>
+    <dt>Kostnad per konvertering (CPA)</dt>
+    <dd>Kostnaden delad med antalet konverteringar. Vad en konvertering i genomsnitt har kostat.</dd>
+    <dt>Klickfrekvens (CTR)</dt>
+    <dd>Antalet klick delat med antalet visningar. Hur stor andel av dem som såg annonsen som klickade på den.</dd>
+    <dt>N-gramanalys</dt>
+    <dd>Att gruppera söktermer efter de enskilda ord (1-gram) eller ordpar (2-gram) de innehåller, för att hitta mönster som är för utspridda för att synas när man går igenom term för term.</dd>
+    <dt>Bortkastade annonspengar</dt>
+    <dd>Pengar som har gått till söktermer som inte gav några konverteringar.</dd>
+  </dl>
+</section>
+
+</article>
+
+<footer>
+  <span>Körs helt i webbläsaren. Inga uppladdningar, ingen spårning, inga anrop till tredje part. Ingenting du laddar upp lämnar din webbläsare.</span>
+  <span>Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a></span>
+</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Columns ---------- */
+const FIELDS = [
+  {k:'term',     label:'Sökterm', req:true, rx:[/^search term$/,/^search terms?$/,/^search query$/,/^query$/,/^search term text$/,/search term/,/query/]},
+  {k:'cost',     label:'Kostnad', req:true, rx:[/^cost$/,/^spend$/,/^cost \(.*\)$/,/^spend \(.*\)$/,/^amount spent/,/^cost/,/spend/]},
+  {k:'conv',     label:'Konverteringar', req:true, rx:[/^conversions$/,/^conv\.?$/,/^all conv\.?$/,/^purchases$/,/^conversions/]},
+  {k:'clicks',   label:'Klick', rx:[/^clicks$/,/clicks/]},
+  {k:'impr',     label:'Visningar', rx:[/^impr\.?$/,/^impressions$/,/impr/]},
+  {k:'keyword',  label:'Sökord', rx:[/^keyword$/,/^keyword text$/,/^search keyword$/]},
+  {k:'status',   label:'Added/Excluded', rx:[/^added\/excluded$/,/added.*excluded/,/^status$/]},
+  {k:'campaign', label:'Kampanj', rx:[/^campaign$/,/^campaign name$/]},
+  {k:'adgroup',  label:'Annonsgrupp', rx:[/^ad group$/,/^ad group name$/]},
+];
+const STOP = new Set('a an the for to of in on at by with and or is are be it its my me i you your from vs this that as our we us'.split(' '));
+// Too broad to block alone, but meaningful in a phrase: "how to", "near me", "what is".
+const WEAK = new Set('how what why where when who which near does do can much many'.split(' '));
+const MIN_WORD_TERMS = 2;
+
+const $ = id => document.getElementById(id);
+const S = {
+  fileName:'', rows:[], sheets:null, headerIdx:0, headers:[], map:{}, cur:'$',
+  terms:[], acct:null, spend:null, cpaMax:null, pre:{cpa:null, spend:null}, minImpr:300, ctrMax:0.01, days:null,
+  skipped:{excluded:0, added:0}, tab:'terms', unchecked:new Set(), checked:new Set(), limit:100,
+  lists:{terms:[], words:[], low:[]}
+};
+
+/* ---------- File reading (shared approach with Keyword Triage) ---------- */
+function decode(buf){
+  const b = new Uint8Array(buf);
+  if (b[0]===0xFF && b[1]===0xFE) return new TextDecoder('utf-16le').decode(buf);
+  if (b[0]===0xFE && b[1]===0xFF) return new TextDecoder('utf-16be').decode(buf);
+  let zeros=0; const n=Math.min(b.length,400);
+  for(let i=1;i<n;i+=2) if(b[i]===0) zeros++;
+  if (n>20 && zeros > n/4) return new TextDecoder('utf-16le').decode(buf);
+  return new TextDecoder('utf-8').decode(buf).replace(/^﻿/,'');
+}
+function detectDelimiter(text){
+  const sample = text.split(/\r?\n/).slice(0,15).join('\n');
+  const c = d => (sample.match(new RegExp(d==='\t'?'\\t':'\\'+d,'g'))||[]).length;
+  const counts = [[',',c(',')],['\t',c('\t')],[';',c(';')]];
+  counts.sort((a,b)=>b[1]-a[1]);
+  return counts[0][1] ? counts[0][0] : ',';
+}
+function parseDelimited(text, d){
+  const rows=[]; let row=[], f='', q=false;
+  for (let i=0;i<text.length;i++){
+    const ch=text[i];
+    if (q){
+      if (ch==='"'){ if (text[i+1]==='"'){ f+='"'; i++; } else q=false; }
+      else f+=ch;
+    } else if (ch==='"' && f==='') q=true;
+    else if (ch===d){ row.push(f); f=''; }
+    else if (ch==='\n' || ch==='\r'){
+      if (ch==='\r' && text[i+1]==='\n') i++;
+      row.push(f); rows.push(row); row=[]; f='';
+    } else f+=ch;
+  }
+  if (f!=='' || row.length){ row.push(f); rows.push(row); }
+  return rows.filter(r => r.some(c => c.trim()!==''));
+}
+const norm = s => String(s||'').trim().toLowerCase().replace(/\s+/g,' ');
+
+function headerScore(rows){
+  let best=0, bestScore=-1;
+  for (let i=0;i<Math.min(rows.length,20);i++){
+    const cells = rows[i].map(norm);
+    let score=0;
+    FIELDS.forEach(f => { if (cells.some(c => f.rx.slice(0,3).some(r=>r.test(c)))) score += f.req?3:1; });
+    // A keyword report has Keyword + Cost + Conversions too; count it so we can explain the mix-up.
+    if (cells.includes('keyword') || cells.includes('search keyword')) score += 1;
+    if (score>bestScore){ bestScore=score; best=i; }
+  }
+  return [best, bestScore];
+}
+function guessMap(headers){
+  const h = headers.map(norm), used=new Set(), map={};
+  FIELDS.forEach(f => {
+    for (const r of f.rx){
+      const i = h.findIndex((c,ix)=>!used.has(ix) && r.test(c));
+      if (i>-1){ map[f.k]=i; used.add(i); return; }
+    }
+    map[f.k] = -1;
+  });
+  return map;
+}
+
+/* An .xlsx file is a zip of XML parts. Read the zip directory by hand, inflate entries
+   with the browser's DecompressionStream, and parse the XML with DOMParser. */
+async function readXlsx(buf){
+  const u=new Uint8Array(buf), dv=new DataView(buf), td=new TextDecoder();
+  let eocd=-1;
+  for (let i=u.length-22;i>=Math.max(0,u.length-22-65535);i--) if (dv.getUint32(i,true)===0x06054b50){ eocd=i; break; }
+  if (eocd<0) throw new Error('det är ingen giltig .xlsx-fil');
+  const count=dv.getUint16(eocd+10,true), entries={};
+  let p=dv.getUint32(eocd+16,true);
+  for (let i=0;i<count;i++){
+    if (dv.getUint32(p,true)!==0x02014b50) break;
+    const nl=dv.getUint16(p+28,true), xl=dv.getUint16(p+30,true), cl=dv.getUint16(p+32,true);
+    const name=td.decode(u.subarray(p+46,p+46+nl));
+    entries[name.toLowerCase()]={method:dv.getUint16(p+10,true), size:dv.getUint32(p+20,true), off:dv.getUint32(p+42,true)};
+    p+=46+nl+xl+cl;
+  }
+  async function part(name){
+    const e=entries[name.replace(/^\//,'').toLowerCase()];
+    if (!e) return null;
+    const start=e.off+30+dv.getUint16(e.off+26,true)+dv.getUint16(e.off+28,true);
+    const data=u.subarray(start,start+e.size);
+    if (e.method===0) return td.decode(data);
+    if (e.method!==8) throw new Error('den är komprimerad med en metod som inte stöds');
+    if (typeof DecompressionStream==='undefined') throw new Error('den här webbläsaren kan inte packa upp Excel-filer. Spara filen som CSV eller uppdatera webbläsaren');
+    const out=await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+    return td.decode(out);
+  }
+  const xml = t => new DOMParser().parseFromString(t,'application/xml');
+  const tags = (node,tag) => Array.from(node.getElementsByTagNameNS('*',tag));
+  const attr = (el,local) => { for (const a of el.attributes) if (a.localName===local) return a.value; return null; };
+  const wbPath = Object.keys(entries).find(k=>/(^|\/)workbook\.xml$/.test(k)) || 'xl/workbook.xml';
+  const base = wbPath.replace(/[^/]*$/,'');
+  const wbText = await part(wbPath);
+  if (!wbText) throw new Error('det finns ingen arbetsbok i den. Är det verkligen en .xlsx-fil?');
+  const relsText = await part(base+'_rels/'+wbPath.slice(base.length)+'.rels');
+  const rels = {};
+  if (relsText) tags(xml(relsText),'Relationship').forEach(r=>{
+    const t=r.getAttribute('Target'); rels[r.getAttribute('Id')] = t.startsWith('/') ? t.slice(1) : base+t;
+  });
+  const ssText = await part(base+'sharedStrings.xml');
+  const shared = ssText ? tags(xml(ssText),'si').map(si =>
+    tags(si,'t').filter(t=>t.parentNode.localName!=='rPh').map(t=>t.textContent).join('')) : [];
+  const colIdx = ref => { let n=0; for (const ch of ref.replace(/\d+$/,'').toUpperCase()) n=n*26+ch.charCodeAt(0)-64; return n-1; };
+  const sheets=[];
+  for (const [i,sh] of tags(xml(wbText),'sheet').entries()){
+    const path = rels[attr(sh,'id')] || `${base}worksheets/sheet${i+1}.xml`;
+    const text = await part(path);
+    if (!text) continue;
+    const rows=[];
+    tags(xml(text),'row').forEach((row,ri)=>{
+      const r = (+row.getAttribute('r')||ri+1)-1, out=[];
+      tags(row,'c').forEach((c,ci)=>{
+        const ref=c.getAttribute('r'), col = ref ? colIdx(ref) : ci, t=c.getAttribute('t');
+        const v = tags(c,'v')[0], raw = v ? v.textContent : '';
+        let val;
+        if (t==='s') val = shared[+raw] ?? '';
+        else if (t==='inlineStr') val = tags(c,'t').map(x=>x.textContent).join('');
+        else if (t==='b') val = raw==='1' ? 'TRUE' : 'FALSE';
+        else if (t==='str' || t==='e') val = raw;
+        else { const n=Number(raw); val = raw==='' ? '' : (isFinite(n) ? (Math.abs(n)<1e-6 ? '0' : String(+n.toPrecision(15))) : raw); }
+        out[col]=val;
+      });
+      for (let k=0;k<out.length;k++) if (out[k]==null) out[k]='';
+      rows[r]=out;
+    });
+    sheets.push({name: sh.getAttribute('name') || `Blad ${i+1}`, rows: rows.filter(r=>r && r.some(c=>String(c).trim()!==''))});
+  }
+  return sheets;
+}
+
+/* ---------- Numbers & formatting ---------- */
+function num(v){
+  let s = String(v==null?'':v).trim();
+  if (!s || s==='--' || s==='-' || /^n\/?a$/i.test(s)) return 0;
+  const neg = /^\(.*\)$/.test(s) || /^-/.test(s);
+  s = s.replace(/[^\d.,]/g,'');
+  if (!s) return 0;
+  const lc=s.lastIndexOf(','), ld=s.lastIndexOf('.');
+  if (lc>-1 && ld>-1){ s = lc>ld ? s.replace(/\./g,'').replace(',', '.') : s.replace(/,/g,''); }
+  else if (lc>-1){ s = /^\d{1,3}(,\d{3})+$/.test(s) ? s.replace(/,/g,'') : s.replace(',', '.'); }
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : (neg ? -n : n);
+}
+function detectCurrency(){
+  const col=S.map.cost;
+  if (col<0) return '$';
+  for (let i=S.headerIdx+1;i<Math.min(S.rows.length,S.headerIdx+40);i++){
+    const m = String(S.rows[i][col]||'').match(/R\$|A\$|C\$|[$€£¥₹]/);
+    if (m) return m[0];
+  }
+  const codes={USD:'$',EUR:'€',GBP:'£',JPY:'¥',INR:'₹',AUD:'A$',CAD:'C$',BRL:'R$'};
+  const h = String(S.headers[col]||'').match(/\((\w{3})\)/);
+  if (h && codes[h[1].toUpperCase()]) return codes[h[1].toUpperCase()];
+  const cc = S.headers.findIndex(x=>/currency/i.test(x));
+  if (cc>-1){ const v=String((S.rows[S.headerIdx+1]||[])[cc]||'').trim().toUpperCase(); if (codes[v]) return codes[v]; }
+  return '$';
+}
+const fmtMoney = (n, dp) => {
+  if (!isFinite(n)) return '—';
+  const d = dp!=null ? dp : (Math.abs(n)<100 && n%1 ? 2 : 0);
+  return S.cur + n.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});
+};
+const fmtNum = (n,dp=0) => isFinite(n) ? n.toLocaleString(undefined,{maximumFractionDigits:dp}) : '—';
+const plural = (n,w,ws) => `${fmtNum(n)} ${n===1?w:(ws||w+'')}`;
+function niceRound(n){
+  if (!isFinite(n) || n<=0) return 0;
+  const p = Math.pow(10, Math.floor(Math.log10(n))-1);
+  return Math.round(n/p)*p;
+}
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ---------- Text ---------- */
+const tokenize = s => norm(s).split(' ').map(t=>t.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu,'')).filter(Boolean);
+const cleanKw = s => norm(String(s).replace(/^[\[\"+]+|[\]\"]+$/g,'').replace(/\+/g,' '));
+// Characters Google Ads rejects in keywords.
+const forNeg = s => s.replace(/[!@%^*()={};~`<>?\\|\[\]"]/g,' ').replace(/\s+/g,' ').trim();
+
+function grams(tokens){
+  const g = new Set();
+  tokens.forEach((t,i)=>{
+    if (!STOP.has(t) && !WEAK.has(t) && t.length>1) g.add(t);
+    if (i<tokens.length-1 && !(STOP.has(t) && STOP.has(tokens[i+1]))) g.add(t+' '+tokens[i+1]);
+  });
+  return g;
+}
+
+/* Date range from the title lines above the header, e.g. "July 5, 2026 - October 2, 2026". */
+function detectDays(){
+  const text = S.rows.slice(0,S.headerIdx).map(r=>r.join(' ')).join(' ');
+  const pats = [
+    /([A-Z][a-z]{2,8}\.? \d{1,2},? \d{4})\s*(?:-|–|—|to)\s*([A-Z][a-z]{2,8}\.? \d{1,2},? \d{4})/,
+    /(\d{4}-\d{2}-\d{2})\s*(?:-|–|—|to|,)\s*(\d{4}-\d{2}-\d{2})/,
+    /(\d{1,2}\/\d{1,2}\/\d{4})\s*(?:-|–|—|to|,)\s*(\d{1,2}\/\d{1,2}\/\d{4})/,
+  ];
+  for (const p of pats){
+    const m = text.match(p);
+    if (m){ const a=Date.parse(m[1]), b=Date.parse(m[2]); if (isFinite(a)&&isFinite(b)&&b>=a) return Math.round((b-a)/864e5)+1; }
+  }
+  return null;
+}
+
+/* ---------- Build ---------- */
+function buildTerms(){
+  const m=S.map, by=new Map(), kwTokens=new Set(), kwExact=new Set();
+  const get = (r,k) => m[k]>-1 ? r[m[k]] : '';
+  S.skipped = {excluded:0, added:0};
+  for (let i=S.headerIdx+1;i<S.rows.length;i++){
+    const r=S.rows[i];
+    const raw = String(get(r,'term')||'').trim();
+    const first = String(r[0]||'').trim();
+    if (!raw || raw==='--' || /^total/i.test(raw) || /^total/i.test(first)) continue;
+    const kw = cleanKw(get(r,'keyword'));
+    if (kw && kw!=='--'){ kwExact.add(kw); tokenize(kw).forEach(t=>kwTokens.add(t)); }
+    const st = norm(get(r,'status'));
+    if (/excluded/.test(st)){ S.skipped.excluded++; continue; }
+    const text = norm(raw);
+    let x = by.get(text);
+    if (!x){ x={text, display:raw, cost:0, conv:0, clicks:0, impr:0, camps:new Set(), added:false}; by.set(text,x); }
+    x.cost += num(get(r,'cost')); x.conv += num(get(r,'conv'));
+    x.clicks += num(get(r,'clicks')); x.impr += num(get(r,'impr'));
+    const c = String(get(r,'campaign')||'').trim(); if (c && c!=='--') x.camps.add(c);
+    if (/^added/.test(st)) x.added = true;
+  }
+  const terms = [...by.values()];
+  terms.forEach(x=>{
+    x.tokens = tokenize(x.text);
+    x.grams = grams(x.tokens);
+    if (x.added || kwExact.has(x.text)){ x.isKeyword = true; if (x.added) S.skipped.added++; x.tokens.forEach(t=>kwTokens.add(t)); }
+  });
+  S.kwTokens = kwTokens;
+  return terms;
+}
+
+function accountStats(terms){
+  const t = terms.reduce((a,x)=>{a.cost+=x.cost;a.conv+=x.conv;a.clicks+=x.clicks;a.impr+=x.impr;return a;},{cost:0,conv:0,clicks:0,impr:0});
+  t.cpa = t.conv ? t.cost/t.conv : NaN;
+  t.ctr = t.impr ? t.clicks/t.impr : NaN;
+  return t;
+}
+
+function setDefaults(){
+  const a=S.acct;
+  S.spend = S.pre.spend; S.cpaMax = S.pre.cpa;
+  // Shopping-style accounts run low CTRs across the board; don't flag everything.
+  const c = isFinite(a.ctr) && a.ctr>0 && a.ctr<0.03 ? Math.max(0.001, Math.round(a.ctr/3*1000)/1000) : 0.01;
+  S.ctrMax = Math.min(0.01, c);
+  S.minImpr = 300;
+}
+
+/* ---------- Analyze ---------- */
+function analyze(){
+  const T=S.terms, spend=S.spend, kw=S.kwTokens;
+  const hasCtr = S.map.clicks>-1 && S.map.impr>-1;
+
+  // Two limits: no conversions after the spend limit, or converted but over the CPA limit.
+  // The CPA rule also needs a full conversion's worth of spend, so a sliver of a
+  // fractional conversion on a few dollars isn't judged.
+  const terms = T.filter(x=>{
+    if (x.isKeyword || x.cost<=0) return false;
+    if (x.conv<=0){ x.why='zero'; return x.cost>=spend; }
+    x.cpa = x.cost/x.conv; x.why='cpa';
+    return x.cpa>S.cpaMax && x.cost>=S.cpaMax;
+  }).sort((a,b)=>b.cost-a.cost);
+
+  // N-grams across every search term (converting ones included, so a word that ever converts is out).
+  const g = new Map();
+  T.forEach(x=>x.grams.forEach(w=>{
+    let a=g.get(w); if(!a){a={w,cost:0,conv:0,clicks:0,terms:[]}; g.set(w,a);}
+    a.cost+=x.cost; a.conv+=x.conv; a.clicks+=x.clicks; a.terms.push(x);
+  }));
+  let words = [...g.values()].filter(a=>{
+    if (a.conv>0 || a.terms.length<MIN_WORD_TERMS || a.cost<spend || a.cost<=0) return false;
+    if (a.w.split(' ').some(t=>kw.has(t))) return false;
+    return true;
+  });
+  const uni = new Set(words.filter(a=>!a.w.includes(' ')).map(a=>a.w));
+  words = words.filter(a=>!a.w.includes(' ') || !a.w.split(' ').some(t=>uni.has(t)));
+  words.sort((a,b)=>b.cost-a.cost);
+
+  const inTerms = new Set(terms.map(x=>x.text));
+  const low = !hasCtr ? [] : T.filter(x=>!x.isKeyword && x.conv<=0 && x.impr>=S.minImpr && x.clicks/x.impr < S.ctrMax && !inTerms.has(x.text))
+    .sort((a,b)=>b.impr-a.impr);
+
+  S.lists = {terms, words, low};
+}
+
+const id = (kind, s) => kind+':'+s;
+const isSel = (kind, key) => kind==='low' ? S.checked.has(id(kind,key)) : !S.unchecked.has(id(kind,key));
+
+function selection(){
+  const words = S.lists.words.filter(a=>isSel('words',a.w));
+  const wset = new Set(words.map(a=>a.w));
+  const coveredBy = x => { for (const w of x.grams) if (wset.has(w)) return w; return null; };
+  const blocked = new Map();
+  words.forEach(a=>a.terms.forEach(x=>blocked.set(x.text,x)));
+  const termNegs=[];
+  ['terms','low'].forEach(k=>S.lists[k].forEach(x=>{
+    if (!isSel(k,x.text)) return;
+    blocked.set(x.text,x);
+    if (!coveredBy(x)) termNegs.push({x,kind:k});
+  }));
+  let cost=0, conv=0, convCost=0; blocked.forEach(x=>{cost+=x.cost; if(x.conv>0){conv+=x.conv; convCost+=x.cost;}});
+  return {words, termNegs, coveredBy, cost, conv, convCost, blockedCount:blocked.size, count: words.length+termNegs.length};
+}
+
+/* ---------- Load ---------- */
+function loadText(text, name){
+  const d = detectDelimiter(text);
+  const rows = parseDelimited(text, d);
+  if (rows.length<2){ startErr('Filen verkar vara tom, eller så är det ingen CSV- eller Excel-fil.'); return; }
+  S.sheets = null;
+  loadRows(rows, name);
+}
+function loadSheets(sheets, name){
+  sheets = sheets.filter(sh=>sh.rows.length>=2);
+  if (!sheets.length){ startErr('Arbetsboken har inga blad med data.'); return; }
+  let best=0, bestScore=-1;
+  sheets.forEach((sh,i)=>{ const sc=headerScore(sh.rows)[1]; if(sc>bestScore){bestScore=sc;best=i;} });
+  S.sheets = sheets;
+  showSheet(best, name);
+}
+function showSheet(i, name){
+  const sel=$('sheetSel');
+  sel.innerHTML = S.sheets.map((sh,j)=>`<option value="${j}">${esc(sh.name)}</option>`).join('');
+  sel.value = String(i);
+  sel.hidden = S.sheets.length<2;
+  loadRows(S.sheets[i].rows, name);
+}
+function loadRows(rows, name){
+  S.fileName = name; S.rows = rows;
+  const stale=$('drop').querySelector('.err'); if (stale) stale.remove();
+  S.headerIdx = headerScore(rows)[0];
+  S.headers = rows[S.headerIdx].map(h=>String(h).trim());
+  S.map = guessMap(S.headers);
+  S.days = detectDays();
+  S.unchecked.clear(); S.checked.clear(); S.tab='terms'; S.limit=100;
+  if (!S.sheets) $('sheetSel').hidden = true;
+  $('start').hidden = true; $('work').hidden = false; $('toast').hidden = true;
+  $('fname').textContent = name;
+  renderMap();
+  recompute(true);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function startErr(msg){
+  const d=$('drop'); let p=d.querySelector('.err');
+  if(!p){p=document.createElement('div');p.className='err';d.appendChild(p);}
+  p.textContent=msg;
+}
+
+function recompute(resetDefaults){
+  S.cur = detectCurrency();
+  const missing = FIELDS.filter(f=>f.req && S.map[f.k]<0);
+  const err=$('maperr');
+  if (missing.length){
+    const kwReport = S.map.term<0 && S.headers.some(h=>/^(search )?keyword$/i.test(h.trim()));
+    err.innerHTML = kwReport
+      ? `Det här ser ut att vara en <b>sökordsrapport</b>. Negativa sökord hittar du i <b>söktermsrapporten</b>, i Google Ads under <span lang="en">Campaigns › Insights and reports › Search terms</span>. Om filen ändå innehåller söktermer väljer du den kolumnen under Kolumner.`
+      : `Hittar inte: ${missing.map(f=>f.label).join(', ')}. Välj rätt kolumner under Kolumner.`;
+    err.hidden=false; $('mapbox').hidden=false; $('results').hidden=true;
+    $('fmeta').textContent='';
+    return;
+  }
+  err.hidden=true; $('results').hidden=false;
+  S.terms = buildTerms();
+  S.acct = accountStats(S.terms);
+  if (resetDefaults) setDefaults();
+  syncInputs();
+  analyze();
+  const meta = [plural(S.terms.length,'söktermer')];
+  if (S.days) meta.push(`${S.days} dagar`);
+  if (S.skipped.excluded) meta.push(`${fmtNum(S.skipped.excluded)} redan uteslutna`);
+  $('fmeta').textContent = '· '+meta.join(' · ');
+  render();
+}
+
+function syncInputs(){
+  document.querySelectorAll('.spendIn').forEach(el=>{ if (document.activeElement!==el) el.value = S.spend; });
+  if (document.activeElement!==$('cpaIn')) $('cpaIn').value = S.cpaMax;
+  document.querySelectorAll('[data-cur]').forEach(el=>el.textContent=S.cur);
+  if (document.activeElement!==$('imprIn')) $('imprIn').value = S.minImpr;
+  if (document.activeElement!==$('ctrIn')) $('ctrIn').value = +(S.ctrMax*100).toFixed(2);
+}
+
+/* ---------- Render ---------- */
+function renderMap(){
+  const g=$('mapgrid'); g.innerHTML='';
+  FIELDS.forEach(f=>{
+    const l=document.createElement('label'); l.className='f';
+    l.innerHTML = `<span>${f.label}${f.req?' <span class="req">*</span>':''}</span>`;
+    const s=document.createElement('select');
+    s.innerHTML = `<option value="-1">(ingen)</option>` + S.headers.map((h,i)=>`<option value="${i}">${esc(h||'Kolumn '+(i+1))}</option>`).join('');
+    s.value = String(S.map[f.k]);
+    s.onchange = ()=>{ S.map[f.k]=+s.value; recompute(['cost','conv','clicks','impr'].includes(f.k)); };
+    l.appendChild(s); g.appendChild(l);
+  });
+}
+
+function render(){
+  const a=S.acct, L=S.lists, sel=selection();
+  const hasCtr = S.map.clicks>-1 && S.map.impr>-1;
+
+  // Hero
+  const hero=$('hero'), totalFound = L.terms.length + L.words.length;
+  hero.classList.toggle('clean', !totalFound);
+  if (!totalFound){
+    $('heroAmt').textContent = '✓';
+    $('heroWhat').textContent = 'Inget över dina gränser';
+    $('heroSub').textContent = `Ingen sökterm har kostat ${fmtMoney(S.spend)} utan att konvertera eller mer än ${fmtMoney(S.cpaMax)} per konvertering.${L.low.length?' Titta under Låg CTR efter sökningar som kan ligga utanför ämnet.':''}`;
+  } else {
+    $('heroAmt').textContent = fmtMoney(sel.cost,0);
+    $('heroWhat').textContent = sel.count
+      ? (sel.conv>0 ? 'gick till sökningar över dina gränser' : 'gick till sökningar som aldrig konverterade')
+      : 'Inget markerat';
+    $('heroSub').textContent = sel.count
+      ? `Med de negativa sökorden nedan (${plural(sel.count,'st')}) hade du sluppit ${a.cost?Math.max(1,Math.round(sel.cost/a.cost*100)):0}\u00a0% av de ${fmtMoney(a.cost,0)} som rapporten omfattar, fördelat på söktermer (${plural(sel.blockedCount,'st')})`
+        + (sel.conv>0 ? `. ${fmtMoney(sel.cost-sel.convCost,0)} av det gav inga konverteringar. Resten köpte ${sel.conv===1?'1 konvertering':fmtNum(sel.conv,1)+' konverteringar för'} ${sel.conv===1?'för '+fmtMoney(sel.convCost):fmtMoney(sel.convCost/sel.conv)+' styck'}.` : '. Inget av det gav någon konvertering.')
+      : 'Markera söktermer eller ord nedan för att bygga din lista med negativa sökord.';
+  }
+
+  // Notes
+  const notes=[];
+  if (!(a.conv>0)) notes.push('Rapporten innehåller inga konverteringar alls. Kontrollera att konverteringsspårningen fungerar innan du lägger till negativa sökord, annars ser allt som kostat pengar ut som slöseri.');
+  else if (S.days && S.days<28) notes.push(`Rapporten täcker ${S.days} dagar. Med en rapport på 90 dagar hinner fler söktermer nå dina gränser, och du hittar mer slöseri.`);
+  if (isFinite(a.cpa) && S.cpaMax && a.cpa > S.cpaMax) notes.push(`Rapportens genomsnittliga kostnad per konvertering är ${fmtMoney(a.cpa)}, över din gräns på ${fmtMoney(S.cpaMax)}, så många söktermer som konverterar kommer att flaggas. Dubbelkolla gränsen.`);
+  $('note').hidden = !notes.length; $('note').textContent = notes.join(' ');
+
+  // Tabs
+  $('cTerms').textContent = L.terms.length;
+  $('cWords').textContent = L.words.length;
+  $('cLow').textContent = L.low.length;
+  $('tabs').querySelector('[data-t="low"]').hidden = !hasCtr;
+  if (!hasCtr && S.tab==='low') S.tab='terms';
+  $('tabs').querySelectorAll('button').forEach(b=>{ b.classList.toggle('on', b.dataset.t===S.tab); b.setAttribute('aria-selected', b.dataset.t===S.tab); });
+  ['terms','words','low'].forEach(t=>$('pane-'+t).hidden = t!==S.tab);
+  $('hintTerms').innerHTML = (isFinite(a.cpa) ? `Rapportens genomsnittliga kostnad per konvertering är ${esc(fmtMoney(a.cpa))}. ` : '')
+    + `Kopieras som exakt matchning, till exempel <code>[copywriting jobs]</code>.`;
+
+  renderList(sel);
+
+  // Bar
+  $('barSum').innerHTML = sel.count
+    ? `Negativa sökord: <b>${plural(sel.count,'st')}</b> <span class="muted">· ${esc(fmtMoney(sel.cost,0))} blockeras</span>`
+    : `<span class="muted">Inga negativa sökord markerade</span>`;
+  $('copy').disabled = $('dl').disabled = !sel.count;
+}
+
+function renderList(sel){
+  const k=S.tab, items=S.lists[k], box=$('list');
+  if (!items.length){
+    const msg = {
+      terms: `Ingen sökterm har kostat ${esc(fmtMoney(S.spend))} utan att konvertera eller mer än ${esc(fmtMoney(S.cpaMax))} per konvertering.`,
+      words: `Inget ord som finns i 2 eller fler söktermer har kostat ${esc(fmtMoney(S.spend))} utan att konvertera.`,
+      low: `Ingen sökterm har ${fmtNum(S.minImpr)}+ visningar och en CTR under ${+(S.ctrMax*100).toFixed(2)}&nbsp;%.`,
+    }[k];
+    box.innerHTML = `<div class="empty">${msg}</div>`; return;
+  }
+  const key = x => k==='words' ? x.w : x.text;
+  const allOn = items.every(x=>isSel(k,key(x)));
+  const head = `<div class="listhead"><span>Sorterat efter ${k==='low'?'visningar':'kostnad'}</span><button class="btn quiet" data-all="${allOn?0:1}">${allOn?'Avmarkera alla':'Markera alla'}</button></div>`;
+  const rows = items.slice(0,S.limit).map(x=>{
+    const on = isSel(k,key(x));
+    if (k==='words'){
+      const eg = x.terms.slice().sort((a,b)=>b.cost-a.cost).slice(0,3).map(t=>esc(t.display)).join(', ');
+      return `<label class="row"><input type="checkbox" data-k="${esc(x.w)}"${on?' checked':''}>
+        <span class="main"><span class="t">${esc(x.w)}</span>
+        <span class="m">I ${plural(x.terms.length,'söktermer')}${x.clicks?` · ${plural(x.clicks,'klick')}`:''} · 0 konverteringar</span>
+        <span class="eg">${eg}${x.terms.length>3?', …':''}</span></span>
+        <span class="amt">${esc(fmtMoney(x.cost,0))}</span></label>`;
+    }
+    const by = sel.coveredBy(x);
+    const meta = [];
+    const tag = k!=='terms' ? '' : x.why==='cpa'
+      ? `<span class="why">${esc(fmtMoney(x.cpa))} per konvertering</span>`
+      : `<span class="why">Inga konverteringar</span>`;
+    if (k==='terms' && x.why==='cpa') meta.push(plural(+x.conv.toFixed(1),'konv.'));
+    if (S.map.clicks>-1) meta.push(plural(x.clicks,'klick'));
+    if (k==='low' || (S.map.impr>-1 && S.map.clicks>-1 && x.impr)) meta.push(`${fmtNum(x.impr)} visn.`, `${(x.impr?x.clicks/x.impr*100:0).toFixed(1)}&nbsp;% CTR`);
+    if (x.camps.size===1) meta.push(esc([...x.camps][0])); else if (x.camps.size>1) meta.push(`${x.camps.size} kampanjer`);
+    return `<label class="row${by?' covered':''}"><input type="checkbox" data-k="${esc(x.text)}"${on?' checked':''}>
+      <span class="main"><span class="t">${esc(x.display)}</span>
+      <span class="m">${tag}${meta.join(' · ')}</span>
+      ${by?`<span class="cov">Blockeras redan av ”${esc(by)}”</span>`:''}</span>
+      <span class="amt">${esc(fmtMoney(x.cost,0))}</span></label>`;
+  }).join('');
+  const more = items.length>S.limit ? `<button class="more" id="moreBtn">Visa ${fmtNum(items.length-S.limit)} till</button>` : '';
+  box.innerHTML = head + rows + more;
+  box.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.onchange=()=>{ setSel(k, cb.dataset.k, cb.checked); render(); });
+  box.querySelector('[data-all]').onclick = e=>{ e.preventDefault(); const on=e.target.dataset.all==='1'; items.forEach(x=>setSel(k,key(x),on)); render(); };
+  const mb=$('moreBtn'); if (mb) mb.onclick=()=>{ S.limit+=200; render(); };
+}
+function setSel(kind, key, on){
+  const i=id(kind,key);
+  if (kind==='low'){ on ? S.checked.add(i) : S.checked.delete(i); }
+  else { on ? S.unchecked.delete(i) : S.unchecked.add(i); }
+}
+
+/* ---------- Output ---------- */
+function negatives(){
+  const sel=selection(), seen=new Set(), out=[];
+  sel.words.forEach(a=>{ const n=forNeg(a.w); if(n && !seen.has('p'+n)){ seen.add('p'+n); out.push({neg:`"${n}"`, kw:n, match:'Phrase', type:'Word', x:a, n:a.terms.length}); }});
+  sel.termNegs.forEach(({x})=>{ const n=forNeg(x.text); if(n && !seen.has('e'+n)){ seen.add('e'+n); out.push({neg:`[${n}]`, kw:n, match:'Exact', type:'Search term', x, n:1}); }});
+  return out;
+}
+function toast(msg){ const t=$('toast'); t.textContent=msg; t.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(()=>t.hidden=true, 9000); }
+function download(name, text, type){
+  const blob=new Blob([text],{type}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},500);
+}
+function copyNegs(){
+  const list=negatives(); if(!list.length) return;
+  const text=list.map(x=>x.neg).join('\n');
+  const done=()=>toast(`Negativa sökord kopierade: ${plural(list.length,'st')}. Klistra in dem i en lista med negativa sökord eller bland en kampanjs negativa sökord, ett per rad.`);
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, ()=>{ download('negative-keywords.txt',text,'text/plain'); toast('Webbläsaren spärrade urklippet, så listan laddades ner som en textfil i stället.'); });
+  else { download('negative-keywords.txt',text,'text/plain'); toast('Listan laddades ner som en textfil.'); }
+}
+function csvCell(v){ v=String(v==null?'':v); return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v; }
+function downloadCsv(){
+  const list=negatives(); if(!list.length) return;
+  const head=['Negative keyword','Keyword text','Match type','Source','Search terms blocked','Cost','Clicks','Conversions'];
+  const lines=[head.join(',')].concat(list.map(r=>[r.neg,r.kw,r.match,r.type,r.n,r.x.cost.toFixed(2),r.x.clicks,+r.x.conv.toFixed(2)].map(csvCell).join(',')));
+  const base=S.fileName.replace(/\.[^.]+$/,'');
+  download(`${base}-negatives.csv`, '﻿'+lines.join('\r\n'), 'text/csv');
+  toast(`Negativa sökord nedladdade som CSV: ${plural(list.length,'st')}.`);
+}
+
+/* ---------- Sample report (Google Ads search terms export format) ---------- */
+function sampleCSV(){
+  let seed=11; const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+  const C={cw:'Services - Copywriting', ppc:'Services - PPC', br:'Brand'};
+  // [term, campaign, keyword, cpc, clicks, conversions]
+  const good=[
+    ['ppc copywriter',C.cw,'ppc copywriter',6.8,72,9],['hire ppc copywriter',C.cw,'ppc copywriter',7.2,28,5],
+    ['google ads copywriter',C.cw,'google ads copywriter',6.5,51,6],['google ads copywriter for hire',C.cw,'google ads copywriter',6.9,16,3],
+    ['landing page copywriter',C.cw,'landing page copywriter',5.9,64,7],['landing page copywriting services',C.cw,'landing page copywriter',6.1,30,3],
+    ['conversion copywriter',C.cw,'conversion copywriter',6.4,40,4],['copywriting services',C.cw,'copywriting services',5.2,88,8],
+    ['copywriting services pricing',C.cw,'copywriting services',5.6,22,3],['ad copywriting agency',C.cw,'ad copywriter',6.6,25,2],
+    ['ppc agency',C.ppc,'ppc agency',9.4,96,9],['ppc agency for small business',C.ppc,'ppc agency',9.1,34,4],
+    ['ppc management services',C.ppc,'ppc management',9.8,70,7],['google ads management',C.ppc,'google ads management',10.2,82,8],
+    ['google ads management company',C.ppc,'google ads management',10.6,31,4],['ppc consultant',C.ppc,'ppc consultant',8.7,38,3],
+    ['ppc audit service',C.ppc,'ppc audit',8.2,27,4],['microsoft ads agency',C.ppc,'microsoft ads agency',6.1,21,2],
+    ['copy for originals',C.br,'copy for originals',1.1,140,22],['copyfororiginals',C.br,'copy for originals',1.0,61,9],
+    ['copy for originals reviews',C.br,'copy for originals',1.2,24,3],
+    ['saas copywriter',C.cw,'saas copywriter',6.3,12,1],['b2b copywriter',C.cw,'b2b copywriter',6.0,15,1],
+    ['email copywriter',C.cw,'email copywriter',5.4,18,1],['ppc specialist for hire',C.ppc,'ppc specialist',8.4,14,1],
+  ];
+  const pricey=[ // converts, but at a cost per conversion nobody wants
+    ['cheap ppc management',C.ppc,'ppc management',8.9,48,1],['copywriter for hire cheap',C.cw,'copywriting services',5.8,44,1],
+    ['ppc agency vs in house',C.ppc,'ppc agency',9.2,36,1],
+  ];
+  const big=[ // obvious single-term waste
+    ['copywriting jobs remote',C.cw,'copywriting services',4.0,41],['marketing agency near me',C.ppc,'ppc agency',8.7,15],
+    ['copywriting',C.cw,'copywriting services',3.1,52],['ppc',C.ppc,'ppc agency',5.4,29],
+    ['google ads certification',C.ppc,'google ads management',4.6,30],['what is ppc',C.ppc,'ppc management',4.2,33],
+    ['ai ad copy generator',C.cw,'ad copywriter',3.8,37],['digital marketing agency',C.ppc,'ppc agency',9.6,14],
+  ];
+  const families={ // recurring words, each term too small to judge alone
+    free:['free ad copy generator','free copywriting templates','free google ads audit tool','free landing page copy','ppc audit free','free ad copy examples','free copywriting course','free ppc tools','free sales page template'],
+    jobs:['ppc jobs','copywriter jobs entry level','google ads jobs remote','ppc specialist jobs','freelance copywriting jobs','marketing copywriter jobs'],
+    salary:['ppc specialist salary','copywriter salary','google ads manager salary','ppc manager salary uk'],
+    course:['ppc course online','google ads course','copywriting course online','best ppc course','ad copywriting course udemy'],
+    'how to':['how to write ad copy','how to write google ads','how to become a copywriter','how to run google ads','how to do ppc yourself','how to write landing page copy'],
+    template:['ad copy template','landing page copy template','google ads template','ppc report template','copywriting template pdf'],
+    reddit:['best ppc agency reddit','copywriter reddit','google ads agency reddit worth it'],
+    examples:['ad copy examples','landing page copy examples','google ads examples','ppc ad examples'],
+  };
+  const lowctr=[ // navigational / off-topic searches people don't click
+    ['google ads login',C.ppc,'google ads management',2400,10,1.1],['google ads customer service phone number',C.ppc,'google ads management',1300,6,1.2],
+    ['bing ads sign in',C.ppc,'microsoft ads agency',820,3,0.9],['chatgpt',C.cw,'ad copywriter',3100,9,0.8],
+    ['grammarly',C.cw,'copywriting services',950,4,0.9],['canva ads',C.cw,'ad copywriter',640,3,1.0],
+  ];
+  const lines=['Search terms report','"July 5, 2026 - October 2, 2026"',
+    'Search term,Match type,Added/Excluded,Campaign,Ad group,Keyword,Clicks,Impr.,CTR,Currency code,Avg. CPC,Cost,Conv. rate,Conversions,Cost / conv.'];
+  const mts=['Phrase match','Broad match','Exact match (close variant)','Phrase match (close variant)'];
+  const push=(term,camp,kw,clicks,impr,cost,conv,status)=>{
+    lines.push([term,mts[Math.floor(rnd()*mts.length)],status||'None',camp,camp.replace(/^.* - /,''),kw,clicks,impr,
+      (impr?clicks/impr*100:0).toFixed(2)+'%','USD',(clicks?cost/clicks:0).toFixed(2),cost.toFixed(2),
+      (clicks?conv/clicks*100:0).toFixed(2)+'%',conv.toFixed(2),conv?(cost/conv).toFixed(2):'0.00'].map(csvCell).join(','));
+  };
+  const imprFor = clicks => Math.round(clicks/(0.035+rnd()*0.05));
+  good.forEach(([t,c,k,cpc,cl,cv])=>{ const cost=cl*cpc*(0.85+rnd()*0.3); push(t,c,k,cl,imprFor(cl),cost,cv); });
+  pricey.forEach(([t,c,k,cpc,cl,cv])=>{ const cost=cl*cpc*(0.95+rnd()*0.1); push(t,c,k,cl,imprFor(cl),cost,cv); });
+  big.forEach(([t,c,k,cpc,cl])=>{ const cost=cl*cpc*(0.9+rnd()*0.2); push(t,c,k,cl,imprFor(cl),cost,0); });
+  Object.entries(families).forEach(([w,terms])=>terms.forEach(t=>{
+    const camp = /ppc|google|bing|microsoft|marketing/.test(t) ? C.ppc : C.cw;
+    const kw = camp===C.ppc ? 'ppc agency' : 'copywriting services';
+    const cl = 3+Math.floor(rnd()*9), cost = cl*(3+rnd()*4.5);
+    push(t,camp,kw,cl,imprFor(cl),cost,0);
+  }));
+  lowctr.forEach(([t,c,k,im,cl,cpc])=>push(t,c,k,cl,im,cl*cpc,0));
+  // A long tail of small, unremarkable searches.
+  const tail=['ppc help','adwords consultant','sem agency','paid search consultant','google ads expert near me','ad copy writer','copywriter for ads','web copywriter','website copywriting','conversion rate copywriter','ppc freelancer','google ads freelancer','facebook ads copywriter','product description writer','seo copywriter','ppc ad agency','search ads agency'];
+  tail.forEach(t=>{ const cl=1+Math.floor(rnd()*6); const camp=/ppc|ads|adwords|sem|search/.test(t)?C.ppc:C.cw; push(t,camp,camp===C.ppc?'ppc agency':'copywriting services',cl,imprFor(cl),cl*(4+rnd()*5),rnd()<.25?1:0); });
+  // Already handled in the account.
+  push('copywriting jobs',C.cw,'copywriting services',22,610,88.4,0,'Excluded');
+  push('free ppc audit',C.ppc,'ppc audit',14,390,81.2,0,'Excluded');
+  push('ppc copywriting agency',C.cw,'ppc copywriter',19,420,131.5,2,'Added');
+  lines.push('Total: Account,--,--,--,--,--,0,0,--,USD,--,0,--,0,--');
+  return lines.join('\n');
+}
+
+/* ---------- Theme (remembered per browser; the only thing ever stored) ---------- */
+const THEME_KEY='negative-keywords-theme';
+function applyTheme(t){ if(t==='light'||t==='dark') document.documentElement.setAttribute('data-theme',t); else document.documentElement.removeAttribute('data-theme'); }
+try{ applyTheme(localStorage.getItem(THEME_KEY)); }catch(e){}
+$('btnTheme').onclick=()=>{
+  const cur=document.documentElement.getAttribute('data-theme');
+  const isDark = cur==='dark' || (!cur && matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = isDark ? 'light' : 'dark';
+  applyTheme(next); try{ localStorage.setItem(THEME_KEY,next); }catch(e){}
+};
+
+/* ---------- Wire up ---------- */
+const fileIn=$('file');
+$('pick').onclick=()=>{ if(!needLimits()) fileIn.click(); };
+fileIn.onchange=()=>{ if(fileIn.files[0]) readFile(fileIn.files[0]); fileIn.value=''; };
+function readFile(f){
+  const r=new FileReader();
+  r.onload=async ()=>{
+    try{
+      const b=new Uint8Array(r.result,0,Math.min(8,r.result.byteLength));
+      if (b[0]===0x50 && b[1]===0x4B && b[2]===0x03 && b[3]===0x04) loadSheets(await readXlsx(r.result), f.name);
+      else if (b[0]===0xD0 && b[1]===0xCF && b[2]===0x11 && b[3]===0xE0) startErr('Det är det gamla formatet från Excel 97–2003 (.xls). Öppna filen i Excel, spara den som .xlsx eller CSV och släpp den sedan här.');
+      else loadText(decode(r.result), f.name);
+    } catch(e){ startErr('Det gick inte att läsa filen: '+e.message+'.'); }
+  };
+  r.readAsArrayBuffer(f);
+}
+$('sheetSel').onchange=e=>showSheet(+e.target.value, S.fileName);
+const drop=$('drop');
+['dragenter','dragover'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>document.addEventListener(ev,e=>{e.preventDefault();if(ev==='drop'||e.target===document.documentElement)drop.classList.remove('over');}));
+// Step 1 gates step 2: nothing loads until both limits are set.
+const needLimits = ()=>{
+  const miss = [['preCpa','moneyCpa','cpa'],['preSpend','moneySpend','spend']].filter(([,,k])=>!(S.pre[k]>0));
+  if (!miss.length) return false;
+  miss.forEach(([,m])=>$(m).classList.add('need'));
+  const t=$(miss[0][0]); t.focus(); t.scrollIntoView({block:'center',behavior:'smooth'});
+  return true;
+};
+const lock = ()=>$('drop').classList.toggle('locked', !(S.pre.cpa>0 && S.pre.spend>0));
+[['preCpa','moneyCpa','cpa'],['preSpend','moneySpend','spend']].forEach(([i,m,k])=>$(i).addEventListener('input',()=>{
+  const v=parseFloat($(i).value); S.pre[k] = isFinite(v)&&v>0 ? v : null;
+  $(m).classList.remove('need'); lock();
+}));
+document.addEventListener('drop',e=>{ const f=e.dataTransfer&&e.dataTransfer.files[0]; if(f && !$('start').hidden && !needLimits()) readFile(f); });
+$('sample').onclick=()=>{ if(!needLimits()) loadText(sampleCSV(),'sample-search-terms-report.csv'); };
+$('reset').onclick=()=>{ S.rows=[]; S.terms=[]; $('work').hidden=true; $('start').hidden=false; $('mapbox').hidden=true; window.scrollTo({top:0}); };
+$('mapToggle').onclick=()=>{ $('mapbox').hidden=!$('mapbox').hidden; };
+
+$('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.tab=b.dataset.t; S.limit=100; render(); });
+let it;
+const onInput=(fn)=>e=>{ clearTimeout(it); it=setTimeout(()=>{ if(fn(parseFloat(e.target.value))){ syncInputs(); analyze(); render(); } },150); };
+// Edits after upload carry back to step 1, so "New report" keeps them.
+document.querySelectorAll('.spendIn').forEach(el=>el.addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.spend=S.pre.spend=v; $('preSpend').value=v; return true; } })));
+$('cpaIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.cpaMax=S.pre.cpa=v; $('preCpa').value=v; return true; } }));
+$('imprIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>=1){ S.minImpr=Math.round(v); return true; } }));
+$('ctrIn').addEventListener('input', onInput(v=>{ if(isFinite(v)&&v>0){ S.ctrMax=v/100; return true; } }));
+$('copy').onclick=copyNegs;
+$('dl').onclick=downloadCsv;
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,6 @@
 """Build ../index.html from the CSV files, so no number on the page is typed by hand.
+The Swedish page at sv/haiku-sonnet-opus-researchstudie/ is a translation of this output: after a rebuild that
+changes text or numbers, make the same change there by hand.
 
 Usage: python3 build.py   (after analyze.py)
 """
@@ -184,6 +186,9 @@ page = f"""<!DOCTYPE html>
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="index,follow,max-snippet:-1">
 <link rel="canonical" href="{URL}">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/haiku-sonnet-opus-researchstudie/">
+<link rel="alternate" hreflang="en" href="{URL}">
+<link rel="alternate" hreflang="x-default" href="{URL}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{URL}">
 <meta property="og:site_name" content="Copy for Originals">
@@ -263,6 +268,7 @@ page = f"""<!DOCTYPE html>
     <li><a href="https://www.copyfororiginals.com/faqs">FAQs</a></li>
     <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
   </ul>
+  <ul class="lang-switch" aria-label="Language"><li><a href="../sv/haiku-sonnet-opus-researchstudie/" hreflang="sv" lang="sv">Svenska</a></li><li><span aria-current="true">English</span></li></ul>
 </nav>
 <div class="wrap">
 

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leadgenerering för personskadebyråer i Chicago: en OSINT-studie av 100 advokatbyråer (2026)</title>
+<meta name="description" content="Copy for Originals har undersökt 100 personskadebyråer i Chicago med enbart offentliga data: antal annonser i Google Ads Transparency Center, tekniken för ärendemottagning på startsidorna, stjärnfördelningen i Google-recensionerna, 207 kodade enstjärniga recensioner och trådar på r/Lawyertalk. 48 av 100 annonserar på Google, 20 av 42 annonsörer visar ingen samtalsspårning och 38&nbsp;% av de sämsta recensionerna handlar om att ingen ringde tillbaka. Varje rekommendation har en not om reglerna 7.1–7.4 i Illinois. Data ingår.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/chicago-personal-injury-lead-gen-study/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/chicago-personal-injury-lead-gen-study/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/">
+<meta property="og:site_name" content="Copy for Originals">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Leadgenerering för personskadebyråer i Chicago: en OSINT-studie av 100 advokatbyråer">
+<meta property="og:description" content="Hälften av de personskadebyråer i Chicago som annonserar kan inte visa att de spårar samtal, och 38&nbsp;% av deras sämsta recensioner handlar om att ingen ringde tillbaka. Enbart offentliga data, med noter om Illinois regler för advokatreklam.">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8E%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/#article",
+      "headline": "Leadgenerering för personskadebyråer i Chicago: en OSINT-studie av 100 advokatbyråer",
+      "description": "Copy for Originals har undersökt 100 personskadebyråer i Chicago med enbart offentliga källor: Googles lokala resultat, Google Ads Transparency Center, startsidornas HTML, stjärnfördelningen i Google-recensionerna, 207 kodade enstjärniga recensioner och r/Lawyertalk. 48 av 100 byråer har Google-annonser registrerade, 20 av 42 annonsörer visar ingen samtalsspårning på startsidan och 38 % av de lägst betygsatta recensionerna beskriver att ingen ringde tillbaka.",
+      "url": "https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/",
+      "inLanguage": "sv",
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-13",
+      "author": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "publisher": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "about": [
+        "Marknadsföring för personskadebyråer",
+        "Google Ads",
+        "Advokatbyråers ärendemottagning",
+        "Chicago"
+      ],
+      "isBasedOn": {
+        "@id": "https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/#data"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Verktyg",
+            "item": "https://tools.copyfororiginals.com/sv/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Studie av leadgenerering för personskadebyråer i Chicago",
+            "item": "https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/#data",
+      "name": "Personskadebyråer i Chicago: Google-recensioner, annonser och annonsörsnamn (Copy for Originals, 2026)",
+      "description": "100 personskadebyråer i Chicago från Googles lokala resultat 2026-10-06, med Google-betyg och antal recensioner, stjärnfördelning (94 byråer), antal verksamhetsår, om Google Business Profile anger öppet dygnet runt, antal annonser i Google Ads Transparency Center och det annonsörsnamn som visas, samt sammanslagna klagomålskoder för 207 av de lägst betygsatta Google-recensionerna hos 11 byråer (onestar-themes.csv).",
+      "creator": {
+        "@id": "https://copyfororiginals.com/#org"
+      },
+      "datePublished": "2026-10-06",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "text/csv",
+        "contentUrl": "https://tools.copyfororiginals.com/chicago-personal-injury-lead-gen-study/data.csv"
+      },
+      "inLanguage": "sv"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/sv/chicago-personskador-leadgenerering-studie/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hur många personskadebyråer i Chicago annonserar på Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "48 av de 100 personskadebyråer i Chicago som Googles lokala resultat visade den 6 oktober 2026 har minst en Google-annons registrerad i Google Ads Transparency Center. 52 har ingen. Av de 48 har 15 högst 5 annonser, 22 har 6 till 50 och 11 har fler än 50. Siffrorna räknar annonser som har visats någon gång, inte annonskostnad, och Local Services Ads ingår inte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Spårar de personskadebyråer i Chicago som annonserar sina samtal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hälften visar det inte. Av 42 annonserande personskadebyråer i Chicago vars startsidor gick att hämta saknade 20 skript för samtalsspårning och 17 chattwidget i mobilversionens råa HTML. Skript som laddas via Google Tag Manager upptäcks inte, så det här är en varningssignal, ingen dom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur stor andel av Google-recensionerna av personskadebyråer i Chicago har en stjärna?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3,9 %. Hos 94 personskadebyråer i Chicago med synlig stjärnfördelning hade 1 396 av 35 932 Google-recensioner en stjärna den 6 oktober 2026. Bland byråer med minst 50 recensioner var medianandelen enstjärniga recensioner 2,5 %, och fem byråer stod för 51 % av alla enstjärniga recensioner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad klagar man på i enstjärniga recensioner av personskadebyråer i Chicago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mest på att ingen ringde tillbaka. I 207 av de lägst betygsatta Google-recensionerna hos 11 personskadebyråer i Chicago, lästa den 6 oktober 2026, beskriver 38 % att ingen ringde tillbaka eller att advokaten inte gick att nå, 31 % ett långsamt ärende utan besked, 24 % pengar (lägre förlikningsbelopp än de fått höra, arvoden, en check som hölls inne), 20 % att byrån tackade nej till eller släppte ärendet efter ärendemottagningen och 16 % otrevlig eller nonchalant personal. Fyrtiotre procent fick svar från byrån."
+          }
+        }
+      ],
+      "inLanguage": "sv"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../site.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:28px 0 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.stat b{display:block;font:700 clamp(30px,6vw,40px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.stat span{font-size:14.5px;color:var(--muted);line-height:1.4}
+.short{margin:36px 0 8px}
+.short p.big{font:600 clamp(21px,3.2vw,27px)/1.3 var(--display);letter-spacing:-.02em;margin:0 0 18px}
+.short ol{margin:0;padding-left:1.3em}
+.short li{margin:0 0 10px;line-height:1.5}
+.short li b{font-weight:650}
+.notice{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent,#b8860b);border-radius:var(--radius);padding:12px 16px;margin:22px 0;font-size:14.5px;color:var(--muted)}
+.rule{font-size:14px;color:var(--muted);margin-top:6px}
+.lead-in{font-size:17px;line-height:1.55}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../chicago-personal-injury-lead-gen-study/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Brödsmulor"><a href="../">&larr; Alla verktyg</a></nav>
+
+<header>
+  <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · <a href="../leads-for-personskadeadvokater/">Leads till personskadeadvokater</a> · Egen undersökning</p>
+  <h1>Leadgenerering för personskadebyråer i Chicago: en OSINT-studie av 100 advokatbyråer</h1>
+  <p class="lede">Studien av leadgenerering för personskadebyråer i Chicago kartlägger 100 personskadebyråer i staden med enbart offentliga data: vilka som annonserar på Google, vad deras webbplatser gör med ett lead, vilka recensioner de får och vad de sämsta recensionerna säger. Inga privata klientuppgifter. Varje rekommendation är avstämd mot Illinois regler för advokatreklam.</p>
+  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Publicerad <time datetime="2026-10-06">6 oktober 2026</time> · Senast uppdaterad <time datetime="2026-10-13">13 oktober 2026</time> · Version 4 · <a href="../../chicago-personal-injury-lead-gen-study/data.csv">Data per byrå (CSV)</a> · <a href="../../chicago-personal-injury-lead-gen-study/onestar-themes.csv">Klagomål i enstjärniga recensioner, antal (CSV)</a></p>
+  <div class="stats">
+    <div class="stat"><b>48 av 100</b><span>personskadebyråer i Chicago har Google-annonser registrerade</span></div>
+    <div class="stat"><b>20 av 42</b><span>annonsörer visar ingen samtalsspårning på startsidan</span></div>
+    <div class="stat"><b>38&nbsp;%</b><span>av de 207 sämsta recensionerna: ingen ringde tillbaka</span></div>
+    <div class="stat"><b>1 av 5</b><span>av de sämsta recensionerna kommer från någon som byrån tackade nej till</span></div>
+  </div>
+</header>
+
+<section id="short" class="short">
+  <h2>Kortversionen</h2>
+  <p class="big">Personskadebyråerna i Chicago tappar betalda leads efter klicket, inte före. Konkurrensen är mindre än den ser ut, hälften av konkurrenterna kan inte visa att de spårar sina samtal, och de sämsta recensionerna handlar om telefoner som ingen svarar i.</p>
+  <ol>
+    <li><b>Auktionen har 48 byråer, inte 100.</b> Femtiotvå av de mest synliga byråerna har inga Google-annonser registrerade. Elva byråer, med fyra rikstäckande varumärken i spetsen, står för det mesta av volymen.</li>
+    <li><b>Hälften av annonsörerna kan inte visa att de spårar samtal.</b> Tjugo av 42 har inget skript för samtalsspårning på startsidan, 17 har ingen chatt och 37 har inget CRM för ärendemottagning.</li>
+    <li><b>De sämsta recensionerna handlar om att byrån inte går att nå.</b> I 207 av de lägst betygsatta recensionerna skriver 38&nbsp;% att ingen ringde tillbaka, 31&nbsp;% att det blev tyst om ärendet och 20&nbsp;% att byrån tackade nej efter ett långt samtal med ärendemottagningen.</li>
+    <li><b>Alla säger samma sak.</b> Gratis konsultation står på 84&nbsp;% av webbplatserna och ersättningsbelopp i dollar på 70&nbsp;%. Luckorna finns i spanska (30&nbsp;%), sms-chatt (11&nbsp;%) och synliga recensioner (14&nbsp;%).</li>
+    <li><b>Recensionerna är det synliga beviset.</b> Annonsörerna har i median 219 Google-recensioner, de som inte annonserar 96. Kartpaketet (local pack) med antal recensioner låg ovanför alla andra resultat.</li>
+  </ol>
+  <p class="lead-in"><b>Åtta saker att göra</b>, var och en avstämd mot Illinois Rules of Professional Conduct, finns i <a href="#actions">åtgärdslistan</a>. Underlaget för varje siffra finns i avsnitten nedan, och <a href="../../chicago-personal-injury-lead-gen-study/data.csv">datafilen</a> är öppen.</p>
+  <div class="notice"><b>Endast i utbildningssyfte, inte juridisk rådgivning.</b> Studien beskriver offentliga data och hur marknadsföring bedrivs i praktiken. Den skapar inget klientförhållande och ersätter inte råd från en advokat som är behörig i din delstat. Regelhänvisningarna pekar på offentlig text så att du kan stämma av dem med en jurist. Copy for Originals är ett konsultföretag inom marknadsföring, inte en advokatbyrå.</div>
+</section>
+
+<section id="actions">
+  <h2>Vad ska en byråägare göra med siffrorna om personskadebyråerna i Chicago?</h2>
+  <p>Åtta åtgärder, och ingen av dem kräver mer annonspengar. För varje åtgärd anges underlaget, begränsningen och den regel i Illinois som berörs.</p>
+  <ol class="check">
+    <li><b>Räkna dina verkliga konkurrenter innan du sätter en budget.</b> Den betalda auktionen består av ungefär 48 byråer, och 11 av dem står för de flesta annonserna. Ta de tio byråer som syns bredvid dig i kartpaketet och bland de betalda resultaten, slå upp dem i Ads Transparency Center och bjud mot den listan. Begränsning: antalet annonser visar närvaro, inte annonskostnad.</li>
+    <li><b>Försök inte spendera mer än de rikstäckande varumärkena.</b> De fyra som har flest annonser är Morgan &amp; Morgan, TopDog Law, Lerner and Rowe och Law Tigers. Smalna i stället av ärendetyp och geografi.
+      <p class="rule">Regel 7.4(a) i Illinois låter en advokat ange vilka rättsområden byrån arbetar med. Regel 7.4(c) förbjuder <span lang="en">“certified,” “specialist,” “expert”</span> (ungefär: certifierad, specialist, expert) och liknande ord, om de inte avser ett namngivet certifikat och åtföljs av den föreskrivna upplysningen om att Supreme Court of Illinois inte erkänner certifieringar av specialiteter. Håll de orden borta från rubrikerna.</p></li>
+    <li><b>Åtgärda ärendemottagningen innan du höjer buden.</b> Hälften av annonsörerna visar ingen samtalsspårning, 40&nbsp;% ingen chatt och 88&nbsp;% inget CRM för ärendemottagning, och advokater på r/Lawyertalk tog upp ärendemottagningen nio gånger oftare än Google Ads. Spela in varje samtal från annonserna och koppla det till sin källa, låt en människa svara i chatten inom en minut och logga varje lead på ett ställe där någon faktiskt tittar. Begränsning: en skanning av startsidor missar verktyg som laddas via Tag Manager.
+      <p class="rule">Regel 7.3(a) förbjuder klientvärvning genom elektronisk kontakt i realtid som advokaten själv tar initiativ till. En chatt eller ett sms som den presumtiva klienten själv inleder är ett svar på en förfrågan (kommentar [1]). Enligt kommentar [8] gäller märkningen <span lang="en">“Advertising Material”</span> (ungefär: ”reklammaterial”) inte svar på en presumtiv klients förfrågan. I Illinois måste alla parter samtycka till att ett samtal spelas in, så den som spelar in måste upplysa om det. Stäm av det med en jurist.</p></li>
+    <li><b>Se till att öppettiderna i din Google Business Profile är sanna.</b> Sjuttiofyra av 100 byråer uppger för Google att de har öppet dygnet runt, men bara ungefär hälften av deras webbplatser säger samma sak. Om ingen människa svarar i telefonen klockan 2 på natten bör du anlita en telefonpassning eller ändra öppettiderna. Begränsning: ingen byrå provringdes.
+      <p class="rule">Regel 7.1 förbjuder falska eller vilseledande meddelanden, också ett sant påstående som utelämnar ett faktum som behövs för att det inte ska vilseleda (kommentar [2]).</p></li>
+    <li><b>Sluta sätta de påståenden främst som alla andra också gör.</b> Gratis konsultation (84&nbsp;%), ersättningsbelopp i dollar (70&nbsp;%), 24/7 (43&nbsp;%) och inget arvode (43&nbsp;%) finns på de flesta konkurrenters webbplatser. Spanska (30&nbsp;%), möjlighet att sms:a (11&nbsp;%) och en recensionswidget (14&nbsp;%) är ovanliga. Testa rubriker med de ovanliga påståendena och lägg de vanliga i beskrivningsraden.
+      <p class="rule">Regel 7.1, kommentar [3]: en sanningsenlig redovisning av tidigare resultat kan vara vilseledande om den saknar förbehåll. <span lang="en">“No fee unless we win”</span> (ungefär: ”inget arvode om vi inte vinner”) måste stämma också i fråga om kostnaderna. ”Hablamos español” (ungefär: ”vi talar spanska”) måste vara sant när telefonen ringer. Regel 7.2(a) kräver att en annons anger namn och kontorsadress för en ansvarig advokat eller byrå. Se till att uppgifterna finns på landningssidan.</p></li>
+    <li><b>Räkna recensionerna som en del av annonsbudgeten.</b> Annonsörerna har i median 219 recensioner mot 96, och kartpaketet med antal recensioner låg ovanför alla andra resultat. Sätt ett månadsmål, be om en recension vid förlikningen och svara på varje recension utan att gå in på ärendet.
+      <p class="rule">Regel 7.2(b) förbjuder att ge något av värde för att någon rekommenderar advokatens tjänster, och kommentar [5] räknar vitsord som rekommendationer. Alltså ingen betalning, rabatt eller gåva för recensioner. Regel 1.6 gäller även svar på recensioner. En advokat i Illinois fick en disciplinpåföljd för att ha röjt detaljer om ett ärende i ett svar, och enligt ABA Formal Opinion 496 (2021) räcker inte en negativ recension i sig för att undantaget för självförsvar ska gälla. FTC:s regel om konsumentrecensioner, som gäller sedan oktober 2024, förbjuder falska recensioner och köpta omdömen.</p></li>
+    <li><b>Äg ditt Google Ads-konto och din spårning.</b> Tolv av 48 annonsörer annonserar i en annonsbyrås, ett holdingbolags eller en delägares namn, och advokater på r/Lawyertalk varnar för att vissa annonsbyråer bygger kampanjerna i konton som advokatbyrån inte har kontroll över. Få skriftligt bekräftat att Ads-kontot, behållaren i Tag Manager, kontot för samtalsspårning och domänen är registrerade på advokatbyrån.
+      <p class="rule">Om en leverantör säljer leads i stället för annonser räknar regel 7.2(c), i den lydelse som gäller från 1 juli 2025, leverantören som en förmedlingstjänst (<span lang="en">intermediary connecting service</span>): redovisa relationen och eventuell förmedlingsavgift för klienten. Leverantörens ersättning får inte bero på utgången i ärendet eller vara en andel av arvodet.</p></li>
+    <li><b>Formulera avslaget.</b> En av fem av de sämsta recensionerna kommer från någon som byrån tackade nej till, och 6&nbsp;% från någon som lämnade sina uppgifter till den som tog emot samtalet och sedan aldrig hörde något mer. Bestäm dig snabbt, tala skriftligt om för personen varför byrån inte kan ta ärendet och hänvisa till en hänvisningstjänst hos advokatsamfundet. Den som får nej men hör av byrån samma dag skriver sällan en recension.
+      <p class="rule">Regel 7.3 hindrar inte byrån från att svara någon som själv tog kontakt först. Ge inga råd i sakfrågan i avslaget om inte en advokat har gått igenom ärendet, och avslöja aldrig vad personen berättade om du senare svarar på en recension (regel 1.6).</p></li>
+  </ol>
+  <p>Två saker går inte att belägga med uppgifterna: vad en enskild byrå lägger på annonser och hur snabbt en enskild byrå svarar.</p>
+</section>
+
+<section id="sample">
+  <h2>Vilka personskadebyråer i Chicago ingår i studien?</h2>
+  <p>De 100 första företagen i Googles lokala resultat för ”chicago personal injury lawyer” den 6 oktober 2026, med sökningen geolokaliserad till Chicago av Google. Webbplatserna togs fram utifrån byråns namn och kontrollerades mot sidtiteln.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Urvalet i siffror: 100 personskadebyråer i Chicago från Googles lokala resultat, 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Mått</th><th scope="col">Värde</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Byråer vars webbplats gick att hitta</th><td>100</td></tr>
+      <tr><th scope="row">Startsidor som hämtades för teknikanalysen</th><td>87</td></tr>
+      <tr><th scope="row">Startsidor som blockerades av botskydd eller låg nere</th><td>13</td></tr>
+      <tr><th scope="row">Antal Google-recensioner, median</th><td>120</td></tr>
+      <tr><th scope="row">Byråer med 1&nbsp;000 recensioner eller fler</th><td>9</td></tr>
+      <tr><th scope="row">Byråer med betyget 4,8 eller högre</th><td>75</td></tr>
+      <tr><th scope="row">Byråer som anges ha <span lang="en">“Open 24 hours”</span> (öppet dygnet runt)</th><td>74</td></tr>
+      <tr><th scope="row">Antal verksamhetsår bland annonsörerna, median</th><td>25</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Flest recensioner: Malman Law (5&nbsp;300), Disparti Law Group (3&nbsp;500), Morgan &amp; Morgan (2&nbsp;200), The Illinois Hammer (2&nbsp;200), Ankin Law (1&nbsp;400).</p>
+</section>
+
+<section id="ads">
+  <h2>Hur många personskadebyråer i Chicago annonserar med Google Ads?</h2>
+  <p>Fyrtioåtta av 100 har minst en Google-annons registrerad. 52 har ingen. Källa: Google Ads Transparency Center, sökning per domän, region USA, hela tidsperioden. Antalet annonser är varken annonskostnad eller visningar, och Local Services Ads ingår inte.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Antal annonser i Google Ads Transparency Center, 100 personskadebyråer i Chicago, 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Registrerade annonser</th><th scope="col">Byråer</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">0</th><td>52</td></tr>
+      <tr><th scope="row">1 till 5</th><td>15</td></tr>
+      <tr><th scope="row">6 till 50</th><td>22</td></tr>
+      <tr><th scope="row">51 till 200</th><td>6</td></tr>
+      <tr><th scope="row">Fler än 200</th><td>5</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tablewrap">
+  <table>
+    <caption>De personskadebyråer i Chicago som har flest Google-annonser registrerade, 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Byrå</th><th scope="col">Annonser</th><th scope="col">Annonsörsnamn som visas</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Morgan &amp; Morgan</th><td>cirka 7&nbsp;000</td><td>Morgan &amp; Morgan, P.A. (rikstäckande)</td></tr>
+      <tr><th scope="row">TopDog Law</th><td>cirka 2&nbsp;000</td><td>Helm Law Group LLC</td></tr>
+      <tr><th scope="row">Lerner and Rowe</th><td>cirka 600</td><td>On Target Media, Inc. (annonsbyrå)</td></tr>
+      <tr><th scope="row">Law Tigers</th><td>cirka 600</td><td>AAMIL dba Law Tigers (rikstäckande)</td></tr>
+      <tr><th scope="row">Law Offices of Michael J. Helfand</th><td>cirka 400</td><td>Law Offices Of Michael J. Helfand, L.L.C.</td></tr>
+      <tr><th scope="row">Postman Law</th><td>cirka 200</td><td>Postman Law LLC</td></tr>
+      <tr><th scope="row">Zayed Law Offices</th><td>67</td><td>Law Offices of Adam J. Zayed, P.C.</td></tr>
+      <tr><th scope="row">Malman Law</th><td>67</td><td>Law Offices of Steven J. Malman &amp; Associates</td></tr>
+      <tr><th scope="row">Rosenfeld Injury Lawyers</th><td>60</td><td>Rosenfeld Injury Lawyers, LLC</td></tr>
+      <tr><th scope="row">DJC Law</th><td>56</td><td>DJC LAW, PLLC</td></tr>
+      <tr><th scope="row">Allen Law Group</th><td>51</td><td>Allen Law Group, LLC</td></tr>
+      <tr><th scope="row">CHH Law</th><td>49</td><td>William Anthony Cirignani / Third Street Partners</td></tr>
+      <tr><th scope="row">Ankin Law</th><td>47</td><td>Ankin Law Offices LLC</td></tr>
+      <tr><th scope="row">Walner Law</th><td>45</td><td>Harvey L. Walner and Associates</td></tr>
+      <tr><th scope="row">Phillips Law Offices</th><td>36</td><td>Phillips Law Offices</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Tolv av de 48 annonsörerna annonserar under ett annat namn än byråns eget: en annonsbyrå, ett holdingbolag eller en delägare. En byrå med noll annonser kan ändå köpa Local Services Ads, Meta-annonser, tv-reklam eller reklamskyltar.</p>
+  <p>Antalen för Law Offices of Michael J. Helfand, DJC Law och Allen Law Group lästes av den 13 oktober 2026, efter att deras webbadresser hade rättats. Alla andra antal lästes av den 6 oktober.</p>
+</section>
+
+<section id="intake">
+  <h2>Vilken teknik för ärendemottagning och spårning har personskadebyråernas webbplatser i Chicago?</h2>
+  <p>Av 87 startsidor som hämtades den 6 oktober 2026 har 34&nbsp;% samtalsspårning, 44&nbsp;% en chattwidget och 8&nbsp;% ett CRM för ärendemottagning. Bedömningen bygger på leverantörsskript och formuleringar i startsidans råa HTML i mobilversion. Verktyg som laddas via Google Tag Manager eller ligger på undersidor underskattas.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Teknik och budskap på 87 personskadebyråers startsidor i Chicago, rå HTML, 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Inslag</th><th scope="col">Byråer</th><th scope="col">Andel</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Klickbar telefonlänk</th><td>73</td><td>84&nbsp;%</td></tr>
+      <tr><th scope="row">Formuleringen <span lang="en">“Free consultation”</span> (gratis konsultation)</th><td>73</td><td>84&nbsp;%</td></tr>
+      <tr><th scope="row">WordPress</th><td>66</td><td>76&nbsp;%</td></tr>
+      <tr><th scope="row">Påstående om ersättningsbelopp i dollar</th><td>61</td><td>70&nbsp;%</td></tr>
+      <tr><th scope="row">Google Tag Manager</th><td>55</td><td>63&nbsp;%</td></tr>
+      <tr><th scope="row">Chattwidget (oavsett leverantör)</th><td>38</td><td>44&nbsp;%</td></tr>
+      <tr><th scope="row">Formuleringen <span lang="en">“24/7”</span> eller <span lang="en">“24 hours”</span> (dygnet runt)</th><td>37</td><td>43&nbsp;%</td></tr>
+      <tr><th scope="row">Formuleringen <span lang="en">“No fee unless we win”</span> (inget arvode om vi inte vinner)</th><td>37</td><td>43&nbsp;%</td></tr>
+      <tr><th scope="row">Skript för samtalsspårning</th><td>30</td><td>34&nbsp;%</td></tr>
+      <tr><th scope="row">Tecken på spanska</th><td>26</td><td>30&nbsp;%</td></tr>
+      <tr><th scope="row">Meta-pixel</th><td>20</td><td>23&nbsp;%</td></tr>
+      <tr><th scope="row">Konverteringstagg för Google Ads synlig i HTML-koden</th><td>16</td><td>18&nbsp;%</td></tr>
+      <tr><th scope="row">Recensionswidget</th><td>12</td><td>14&nbsp;%</td></tr>
+      <tr><th scope="row">Länk för textmeddelande (sms)</th><td>10</td><td>11&nbsp;%</td></tr>
+      <tr><th scope="row">Spår av CRM för ärendemottagning</th><td>7</td><td>8&nbsp;%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>CallRail finns på 24 av de 30 webbplatserna med samtalsspårning. Chatt: Intaker (13), Ngage (10), Juvo (7), ApexChat (5). CRM för ärendemottagning: Lawmatics (5), Litify (2), Zoho (2), Lead Docket, HubSpot och ActiveCampaign (1 vardera).</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Verktyg för ärendemottagning på personskadebyråernas startsidor i Chicago, annonsörer jämfört med byråer som inte annonserar, 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Inslag</th><th scope="col">Annonsörer (n=42)</th><th scope="col">Annonserar inte (n=45)</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Samtalsspårning</th><td>22 (52&nbsp;%)</td><td>8 (18&nbsp;%)</td></tr>
+      <tr><th scope="row">Chattwidget</th><td>25 (60&nbsp;%)</td><td>9 (20&nbsp;%)</td></tr>
+      <tr><th scope="row">Konverteringstagg för Google Ads i HTML-koden</th><td>13 (31&nbsp;%)</td><td>3 (7&nbsp;%)</td></tr>
+      <tr><th scope="row">Spår av CRM för ärendemottagning</th><td>5 (12&nbsp;%)</td><td>2 (4&nbsp;%)</td></tr>
+      <tr><th scope="row">Sms-länk</th><td>8 (19&nbsp;%)</td><td>2 (4&nbsp;%)</td></tr>
+      <tr><th scope="row">Tecken på spanska</th><td>18 (43&nbsp;%)</td><td>8 (18&nbsp;%)</td></tr>
+      <tr><th scope="row">Formuleringen <span lang="en">“24/7”</span></th><td>25 (60&nbsp;%)</td><td>12 (27&nbsp;%)</td></tr>
+      <tr><th scope="row"><span lang="en">“No fee unless we win”</span></th><td>24 (57&nbsp;%)</td><td>13 (29&nbsp;%)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Tjugotvå av de 42 annonsörerna saknar minst tre av dessa fyra: samtalsspårning, chatt, spår av CRM och sms-länk. Några av de stora annonsörerna spårar säkert samtal via Tag Manager. Därför lämnas teknikflaggor för enskilda byråer utanför den öppna datafilen och redovisas bara sammanslaget. Google Business Profile anger <span lang="en">“Open 24 hours”</span> (öppet dygnet runt) för 74 av 100 byråer. Bara 31 av de 65 hämtade startsidorna i den gruppen upprepar löftet om 24/7.</p>
+  <p><b>Rättelse, 13 oktober 2026.</b> Fem byråer kopplades först till fel webbadress, i samtliga fall en parkerad sida som var till salu. Skanningen av startsidorna gjordes inte om, så bland de 87 skannade startsidorna finns med största sannolikhet de fem parkerade sidorna, medan de fem byråernas riktiga webbplatser saknas. Tre av de fem byråerna annonserar på Google och saknas i annonsörskolumnen, som omfattar 42 av de 48 annonsörerna. Andelarna i tekniktabellerna kan vara upp till ungefär fem procentenheter för låga.</p>
+</section>
+
+<section id="reviews">
+  <h2>Vilka recensioner får personskadebyråerna i Chicago på Google?</h2>
+  <p>Enstjärniga recensioner utgör 3,9&nbsp;% av alla. Den 6 oktober 2026 hade 94 av de 100 byråerna en synlig stjärnfördelning i Google Maps: 35&nbsp;932 recensioner, varav 33&nbsp;032 med fem stjärnor, 1&nbsp;028 med fyra, 277 med tre, 199 med två och 1&nbsp;396 med en. Sex små byråer gick inte att koppla till en enskild företagsprofil.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Stjärnfördelning i Google-recensionerna, 94 personskadebyråer i Chicago, 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Mått</th><th scope="col">Värde</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Recensioner totalt</th><td>35&nbsp;932</td></tr>
+      <tr><th scope="row">Enstjärniga recensioner</th><td>1&nbsp;396 (3,9&nbsp;%)</td></tr>
+      <tr><th scope="row">Andel enstjärniga, median för byråer med 50+ recensioner (n=83)</th><td>2,5&nbsp;%</td></tr>
+      <tr><th scope="row">Byråer med 50+ recensioner och noll enstjärniga</th><td>16</td></tr>
+      <tr><th scope="row">Andel enstjärniga, median för annonsörer (n=44)</th><td>3,1&nbsp;%</td></tr>
+      <tr><th scope="row">Andel enstjärniga, median för byråer som inte annonserar (n=39)</th><td>1,3&nbsp;%</td></tr>
+      <tr><th scope="row">Andel av alla enstjärniga recensioner som ligger hos 5 byråer</th><td>51&nbsp;%</td></tr>
+      <tr><th scope="row">Andel som ligger hos 10 byråer</th><td>66&nbsp;%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Bland de nio byråerna med 1&nbsp;000 recensioner eller fler varierar andelen enstjärniga från 1,8&nbsp;% till 9,3&nbsp;%. De två byråer som har flest enstjärniga recensioner, The Illinois Hammer (208) och Malman Law (206), hör också till de fyra mest recenserade byråerna i Chicago.</p>
+
+  <h3>Vad klagar man på i de enstjärniga recensionerna?</h3>
+  <p>På att ingen ringde tillbaka. I 207 av de lägst betygsatta Google-recensionerna hos 11 personskadebyråer i Chicago beskriver 38&nbsp;% att ingen ringde tillbaka eller att advokaten inte gick att nå, 31&nbsp;% ett ärende som det var tyst om i åratal, 24&nbsp;% pengar och 20&nbsp;% att byrån tackade nej till eller släppte ärendet efter ärendemottagningen. En recension kan ha mer än en kod.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Klagomålskoder i 207 av de lägst betygsatta Google-recensionerna, 11 personskadebyråer i Chicago, 6 oktober 2026 (en recension kan ha flera koder)</caption>
+    <thead><tr><th scope="col">Klagomål</th><th scope="col">Recensioner</th><th scope="col">Andel</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Ingen ringde tillbaka, gick inte att nå, röstmeddelanden besvarades aldrig</th><td>78</td><td>38&nbsp;%</td></tr>
+      <tr><th scope="row">Långsamt ärende, flera år, inga besked om läget</th><td>64</td><td>31&nbsp;%</td></tr>
+      <tr><th scope="row">Pengar: lägre förlikningsbelopp än de fått höra, arvoden, check som hölls inne</th><td>50</td><td>24&nbsp;%</td></tr>
+      <tr><th scope="row">Byrån tackade nej till ärendet, släppte det eller ställde villkor efter ärendemottagningen</th><td>41</td><td>20&nbsp;%</td></tr>
+      <tr><th scope="row">Otrevlig eller nonchalant personal eller ärendemottagning</th><td>33</td><td>16&nbsp;%</td></tr>
+      <tr><th scope="row">Skickades runt mellan advokater eller handläggare, personalomsättning</th><td>16</td><td>8&nbsp;%</td></tr>
+      <tr><th scope="row">Den som tog emot samtalet antecknade alla uppgifter, sedan hände ingenting</th><td>12</td><td>6&nbsp;%</td></tr>
+      <tr><th scope="row">Byrån tog kontakt utan att ha blivit ombedd</th><td>7</td><td>3&nbsp;%</td></tr>
+      <tr><th scope="row">Språkbarriär eller brytning</th><td>2</td><td>1&nbsp;%</td></tr>
+      <tr><th scope="row">Annat eller ospecificerat</th><td>34</td><td>16&nbsp;%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Åttioåtta av de 207 (43&nbsp;%) hade fått svar från byrån: tre byråer svarade på minst 90&nbsp;% av sina sämsta recensioner, fyra på högst 15&nbsp;%. För den som köper annonser är första och fjärde raden viktigast. Att byrån går att nå är det ett betalt klick betalar för, och den som sållas bort skriver recensionen ändå.</p>
+  <p>Metod: de 11 byråerna är de med flest enstjärniga recensioner bland dem vars lista i Google Maps gick att sortera efter <span lang="en">“Lowest rating”</span> (lägsta betyg) under insamlingen. För varje byrå lästes de första 15 till 30 lägst betygsatta recensionerna, recensenternas namn togs bort och varje recension fick en eller flera av tio koder. Fyra byråer med många recensioner (The Illinois Hammer, Walner Law, Levin &amp; Perconti, Lerner and Rowe) gick inte att sortera och är planerade till en senare version. Klagomålsprofiler för enskilda byråer publiceras inte.</p>
+</section>
+
+<section id="serp">
+  <h2>Hur ser Googles resultatsida ut för sökningar om personskador i Chicago?</h2>
+  <p>Från den plats där mätningen gjordes visade resultatsidan för ”chicago personal injury lawyer” den 6 oktober 2026 inga betalda annonser, inga Local Services Ads och ingen AI-översikt. Först kom kartpaketet, sedan People Also Ask och sedan de organiska resultaten med Horwitz, Horwitz &amp; Associates, Malman Law och Clifford Law Offices överst. Det är en begränsning i mätningen, inte ett resultat. Google visar sökannonser och Local Services Ads beroende på var den som söker fysiskt befinner sig, och webbläsaren fanns utanför USA. En mätning från Chicago är planerad.</p>
+</section>
+
+<section id="reddit">
+  <h2>Vad säger advokater om leadgenerering på Reddit?</h2>
+  <p>De pratar om ärendemottagning, inte om annonser. Alla inlägg på r/Lawyertalk från 22 maj till 6 oktober 2026 gicks igenom via arkivet Arctic Shift. 308 matchade sökord om leadgenerering eller marknadsföring.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Teman i 308 inlägg på r/Lawyertalk som matchade sökord om marknadsföring, 22 maj till 6 oktober 2026</caption>
+    <thead><tr><th scope="col">Tema</th><th scope="col">Inlägg</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Nämner personskador</th><td>149</td></tr>
+      <tr><th scope="row">Ärendemottagning, att svara i telefon, att ringa tillbaka</th><td>64</td></tr>
+      <tr><th scope="row">Hänvisningar och nätverkande</th><td>39</td></tr>
+      <tr><th scope="row">Sociala medier och innehåll</th><td>29</td></tr>
+      <tr><th scope="row">SEO och webbplats</th><td>27</td></tr>
+      <tr><th scope="row">Klagomål på kostnad och avkastning</th><td>16</td></tr>
+      <tr><th scope="row">Leadleverantörer och köpta leads</th><td>11</td></tr>
+      <tr><th scope="row">Google Ads, PPC, Local Services Ads</th><td>7</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Fyra trådar säger mest. En advokatbyrå uppgav att den hade investerat 75&nbsp;000 USD och tecknat 22 ärenden, de flesta om felbehandling i vården. Det översta svaret frågade om ärendena hade granskats, eftersom den advokatens byrå tackar nej till ungefär 95&nbsp;% av dem som ringer om felbehandling, och en annan uttryckte det som <span lang="en">“ROI includes winning.”</span> (ungefär: ”i avkastningen ingår att vinna”). En advokatbyrå i Colorado med åtta advokater, <span lang="en">“bleeding budget”</span> (ungefär: ”som blöder pengar”), fick rådet att lägga ut PPC på en liten specialiserad annonsbyrå, låta personalen ägna sig åt ärendemottagning och hänvisningar och behålla ägandet av Google Ads-kontot. En ensampraktiserande advokat i New Jersey som lade 5&nbsp;000 USD i månaden och planerade att gå upp till 10&nbsp;000 USD fick rådet att anlita ett proffs. En advokat på kärandesidan som undrade varför samtalen i ärendemottagningen tar 45 minuter fick rådet att klargöra förväntningarna från början och skicka ett kort formulär först. Reddit-materialet är nationellt. Det ger sammanhang till Chicago men är inte data från Chicago.</p>
+</section>
+
+<section id="method">
+  <h2>Hur gjordes studien?</h2>
+  <ol class="check">
+    <li><b>Urval:</b> Google-sökning på ”chicago personal injury lawyer”, sidorna 1 till 5 i den lokala listan med 20 byråer per sida, med betyg, antal recensioner, antal verksamhetsår och öppettider.</li>
+    <li><b>Webbplatser:</b> domänen gissades utifrån byråns namn och kontrollerades mot sidtiteln. Där gissningen missade söktes byråns namn upp. Fem gissningar var fel och rättades den 13 oktober 2026: Michael D. Mannis, Ltd. (mannis.com), Allen Law Group (allen.law), DJC Law (teamjustice.com), Driscoll Law Group (driscoll-lawgroup.com) och Law Offices of Michael J. Helfand (illinoislawyers.com).</li>
+    <li><b>Annonser:</b> Google Ads Transparency Center per domän, region USA. Antal annonser och annonsörsnamn noterades. De fem rättade byråerna slogs upp på nytt den 13 oktober 2026.</li>
+    <li><b>Teknik:</b> varje startsida hämtades med en mobil user agent och jämfördes med mönster för leverantörer och formuleringar i den råa HTML-koden. Elva webbplatser blockerade hämtningen, två gick inte att nå.</li>
+    <li><b>Recensioner:</b> stjärnfördelningen lästes av i Google Maps för 94 byråer. För de 11 byråer med flest enstjärniga recensioner som gick att sortera lästes de 15 till 30 lägst betygsatta recensionerna. Namnen togs bort och recensionerna kodades med tio klagomålskoder (207 recensioner).</li>
+    <li><b>Reddit:</b> alla inlägg på r/Lawyertalk under perioden hämtades från arkivet Arctic Shift och filtrerades på sökord. De starkaste trådarna lästes med kommentarer.</li>
+    <li><b>Regler:</b> Illinois Rules of Professional Conduct 7.1, 7.2 (i lydelsen från 1 juli 2025), 7.3 och 7.4 lästes på Illinois Courts webbplats och stämdes av mot varje rekommendation.</li>
+  </ol>
+  <p>Arbetet i webbläsaren gjordes med pauser i mänsklig takt. Inga botkontroller kringgicks. Ingen recensionstext som pekar ut en person publiceras.</p>
+</section>
+
+<section id="limits">
+  <h2>Begränsningar</h2>
+  <ul>
+    <li><b>En sökfråga, en dag.</b> Byråer som bara rankar på andra sökfrågor kan saknas.</li>
+    <li><b>Antalet annonser är inte annonskostnad.</b> Siffrorna gäller hela tidsperioden, och Local Services Ads ingår inte.</li>
+    <li><b>Tekniken skannades bara på startsidorna.</b> Verktyg som laddas via Tag Manager eller ligger på landningssidor syns inte, så att samtalsspårning saknas är en varningssignal, ingen dom. Tretton webbplatser gick inte att hämta, och fem av de skannade adresserna var parkerade sidor, inte byråernas webbplatser (se rättelsen under tekniktabellerna).</li>
+    <li><b>Inga data om betalda resultat på resultatsidan</b> från en plats utanför USA.</li>
+    <li><b>Recensionstexterna gäller 11 byråer med många recensioner,</b> kodade av en enda läsare. De beskriver vad som går fel hos de byråerna, inte hos genomsnittsbyrån. Fyra byråer med många recensioner återstår att läsa.</li>
+    <li><b>Reddit är nationellt</b> och materialet täcker fyra och en halv månad på en enda subreddit.</li>
+    <li><b>Inte juridisk rådgivning.</b> Regelhänvisningarna pekar på offentlig text som lästes den 6 oktober 2026. Regler ändras. Kontrollera den aktuella lydelsen och fråga en jurist.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Vanliga frågor</h2>
+  <h3>Hur många personskadebyråer i Chicago annonserar på Google?</h3>
+  <p>48 av de 100 personskadebyråer i Chicago som Googles lokala resultat visade den 6 oktober 2026 har minst en Google-annons registrerad i Google Ads Transparency Center. 52 har ingen. Av de 48 har 15 högst 5 annonser, 22 har 6 till 50 och 11 har fler än 50. Siffrorna räknar annonser som har visats någon gång, inte annonskostnad, och Local Services Ads ingår inte.</p>
+  <h3>Spårar de personskadebyråer i Chicago som annonserar sina samtal?</h3>
+  <p>Hälften visar det inte. Av 42 annonserande personskadebyråer i Chicago vars startsidor gick att hämta saknade 20 skript för samtalsspårning och 17 chattwidget i mobilversionens råa HTML. Skript som laddas via Google Tag Manager upptäcks inte, så det här är en varningssignal, ingen dom.</p>
+  <h3>Hur stor andel av Google-recensionerna av personskadebyråer i Chicago har en stjärna?</h3>
+  <p>3,9&nbsp;%. Hos 94 personskadebyråer i Chicago med synlig stjärnfördelning hade 1&nbsp;396 av 35&nbsp;932 Google-recensioner en stjärna den 6 oktober 2026. Bland byråer med minst 50 recensioner var medianandelen enstjärniga recensioner 2,5&nbsp;%, och fem byråer stod för 51&nbsp;% av alla enstjärniga recensioner.</p>
+  <h3>Vad klagar man på i enstjärniga recensioner av personskadebyråer i Chicago?</h3>
+  <p>Mest på att ingen ringde tillbaka. I 207 av de lägst betygsatta Google-recensionerna hos 11 personskadebyråer i Chicago, lästa den 6 oktober 2026, beskriver 38&nbsp;% att ingen ringde tillbaka eller att advokaten inte gick att nå, 31&nbsp;% ett långsamt ärende utan besked, 24&nbsp;% pengar (lägre förlikningsbelopp än de fått höra, arvoden, en check som hölls inne), 20&nbsp;% att byrån tackade nej till eller släppte ärendet efter ärendemottagningen och 16&nbsp;% otrevlig eller nonchalant personal. Fyrtiotre procent fick svar från byrån.</p>
+  <h3>Får en advokatbyrå i Illinois ge rabatt i utbyte mot en Google-recension?</h3>
+  <p>Regel 7.2(b) i Illinois förbjuder att ge någon något av värde för att rekommendera advokatens tjänster, och kommentar [5] räknar ett vitsord som en rekommendation. Problemet är inte att be om en recension utan att betala för den. Det här är en hänvisning till regeln, inte juridisk rådgivning.</p>
+  <h3>Går studien att upprepa för en annan stad eller ett annat rättsområde?</h3>
+  <p>Ja. Varje steg bygger på samma offentliga källor. Det enda som ändras är sökfrågan, platsen, leverantörsmönstren och delstatens regler för advokatreklam.</p>
+</section>
+
+<section id="glossary">
+  <h2>Ordlista</h2>
+  <dl>
+    <dt>OSINT (open-source intelligence)</dt><dd>Information som hämtas enbart från offentligt tillgängliga källor, till exempel sökresultat, offentliga annonsbibliotek, offentliga webbplatser och offentliga forum.</dd>
+    <dt>Google Ads Transparency Center</dt><dd>Googles offentliga bibliotek över annonser som verifierade annonsörer har visat, sökbart på annonsörens namn eller webbplatsens domän.</dd>
+    <dt>Annons (ad creative)</dt><dd>En enskild annonsvariant. Transparency Center räknar annonser, inte annonskostnad.</dd>
+    <dt>Local Services Ads</dt><dd>Googles annonsformat för lokala tjänsteföretag, bland dem advokater, där annonsören betalar per lead. Finns inte i Transparency Center.</dd>
+    <dt>Kartpaketet (local pack)</dt><dd>Kartan och den korta lista över företag som Google visar vid lokala sökningar, med betyg och antal recensioner.</dd>
+    <dt>Samtalsspårning</dt><dd>Programvara som ger varje marknadsföringskälla ett eget telefonnummer så att samtalen kan kopplas till rätt källa, till exempel CallRail.</dd>
+    <dt>CRM för ärendemottagning</dt><dd>Programvara för att logga och följa upp leads, till exempel Lawmatics, Lead Docket eller Litify.</dd>
+    <dt>Intermediary connecting service</dt><dd>Termen i Illinois regel 7.2(c) för en advokatkatalog, hänvisningstjänst, matchningstjänst, leadgenerator eller liknande marknadsplats, enligt definitionen i kommentar [6].</dd>
+  </dl>
+</section>
+
+<section id="sources">
+  <h2>Källor</h2>
+  <ul class="sources">
+    <li>Google Ads Transparency Center, sökningar gjorda den 6 oktober 2026, region USA. <a href="https://adstransparency.google.com/" rel="noopener">adstransparency.google.com</a></li>
+    <li>Googles lokala sökresultat och recensioner i Google Maps för de 100 byråerna, insamlade den 6 oktober 2026.</li>
+    <li>Illinois Rules of Professional Conduct, Article VIII, Rules 7.1, 7.2 (ändrad 1 april 2025, i kraft 1 juli 2025), 7.3 och 7.4. <a href="https://www.illinoiscourts.gov/rules/supreme-court-rules?a=viii" rel="noopener">illinoiscourts.gov</a></li>
+    <li>ABA Journal om ABA Formal Opinion 496, om att bemöta kritik på nätet. <a href="https://abajournal.com/news/article/lawyers-must-use-caution-responding-to-negative-online-reviews" rel="noopener">abajournal.com</a></li>
+    <li>Illinois Bar Journal om att svara på recensioner på nätet och om regel 1.6. <a href="https://isba.org/node/56434" rel="noopener">isba.org</a></li>
+    <li>Inlägg på r/Lawyertalk via Reddit-arkivet Arctic Shift, 22 maj till 6 oktober 2026. <a href="https://www.reddit.com/r/Lawyertalk/" rel="noopener">reddit.com/r/Lawyertalk</a></li>
+    <li>Copy for Originals, ”Hur mycket bör en personskadebyrå lägga på Google Ads?” <a href="../personskador-google-ads-budget/">tools.copyfororiginals.com</a></li>
+  </ul>
+  <p>Så hänvisar du till studien: Copy for Originals, ”Chicago personal injury lead generation: an OSINT study of 100 law firms”, version 4, 13 oktober 2026, https://tools.copyfororiginals.com/chicago-personal-injury-lead-gen-study/. Data licensierade under CC BY 4.0.</p>
+  <p>Ändringslogg: version 1, 6 oktober 2026, första publiceringen. Version 2, samma dag: den kodade genomgången av enstjärniga recensioner (207 recensioner, 11 byråer) och den åttonde åtgärden lades till. Version 3, samma dag: sammanfattningen och åtgärderna flyttades överst och texten kortades. Inga siffror ändrades. Version 4, 13 oktober 2026: webbadresserna rättades för fem byråer som hade kopplats till parkerade sidor, och deras annonser slogs upp på nytt. Tre av de fem annonserar, så annonsörerna ökade från 45 till 48 av 100 och byråerna med fler än 50 annonser från 8 till 11. Annonsörernas medianantal recensioner ändrades från 237 till 219 (för byråer som inte annonserar från 95 till 96), och medianandelarna enstjärniga ändrades från 2,9&nbsp;% och 1,4&nbsp;% till 3,1&nbsp;% och 1,3&nbsp;%. Teknikskanningen av startsidorna gjordes inte om. Härnäst: de fyra byråer med många recensioner vars recensioner inte gick att sortera, och hur resultatsidans betalda resultat ser ut från Chicago.</p>
+</section>
+
+<footer>
+  <p>Statisk sida. Inga skript, ingen spårning. Endast i utbildningssyfte, inte juridisk rådgivning. Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+</footer>
+</div>
+</body>
+</html>

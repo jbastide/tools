@@ -131,3 +131,22 @@ experiment arms and all pages added by the parallel sessions on October 13 were 
 `law-firm-websites-ai-crawlers-study/`, which was in the index, README, llms.txt and sitemap but not the
 hub. Added one guides-table row for it. The Gumball Rule (3 links) and forum study (2 links) survived
 every rewrite and commit of the hub that day.
+
+### 2026-10-13: Swedish versions of every page, and a language switch in the site nav
+
+Every page now has a Swedish version under `sv/`, including the three arm pages and the former control:
+
+| English arm | Swedish version |
+| --- | --- |
+| `ppc-gumball-rule/` | `sv/ppc-gumball-rule/` |
+| `ppc-no-conversions-study/` | `sv/google-ads-inga-konverteringar-studie/` |
+| `personal-injury-google-ads-budget/` | `sv/personskador-google-ads-budget/` |
+| `law-firm-google-ads-faq/` (former control) | `sv/advokatbyra-google-ads-fragor/` |
+
+What changed on the English arm pages: three `<link rel="alternate" hreflang>` lines in the head (sv, en,
+x-default pointing at the English page) and one "Svenska / English" switch at the end of the site nav.
+Their titles, headings, body text, JSON-LD and internal links are unchanged.
+
+For reading results after this date: each arm now has a second URL with the same facts in another
+language, declared as an alternate. A citation of the Swedish URL for a Swedish-language question counts
+as a citation of that arm. An English-language query should still resolve to the English URL.

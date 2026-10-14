@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hur snabbt pratar man egentligen i toppklippen på YouTube Shorts? Vi mätte 132 klipp</title>
+<meta name="description" content="Vi mätte taltempo och hooklängd i 132 YouTube Shorts med över en miljon visningar vardera. Mediantempot är 193 WPM (ord per minut), och första meningen tar i median slut efter 3,1 sekunder – långt över vad de vanliga råden säger.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hur snabbt pratar man egentligen i toppklippen på YouTube Shorts?">
+<meta property="og:description" content="Uppmätt taltempo och hooklängd i 132 YouTube Shorts med över en miljon visningar vardera.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%8F%B1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hur snabbt pratar man egentligen i toppklippen på YouTube Shorts? Vi mätte 132 klipp",
+  "description": "Uppmätt taltempo och hooklängd i 132 YouTube Shorts med minst en miljon visningar vardera.",
+  "datePublished": "2026-09-04",
+  "author": {
+    "@type": "Person",
+    "name": "Jesse Bastide"
+  },
+  "about": {
+    "@type": "Dataset",
+    "name": "Taltempo och hooklängd i toppklipp på YouTube Shorts",
+    "description": "Sammanställd statistik över taltempo och första meningen, hämtad från de första 30 sekunderna i 132 engelskspråkiga YouTube Shorts med minst 1 000 000 visningar vardera, transkriberade med tidsstämplar på ordnivå. Endast sammanställda värden; inga data per video publiceras.",
+    "measurementTechnique": "Tidsstämplar på ordnivå från Whisper medium",
+    "variableMeasured": [
+      "ord per minut under tal",
+      "första meningens längd i sekunder",
+      "första meningens längd i ord"
+    ],
+    "inLanguage": "sv"
+  },
+  "inLanguage": "sv"
+}
+</script>
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/script-timer/studie/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/script-timer/studie/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/script-timer/study/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/script-timer/study/">
+<link rel="stylesheet" href="../../../site.css">
+<style>
+:root{
+  /* page tokens alias site.css palette; they resolve per mode automatically */
+  --panel-2:var(--soft); --edge:var(--line);
+  --fg:var(--ink); --fg-2:var(--muted); --fg-3:var(--faint);
+  --focus:var(--accent);
+  --red-soft:var(--accent-soft);
+  --c1:var(--red); --c2:var(--stone);
+  --shadow:0 1px 2px rgba(30,35,32,.05), 0 8px 24px rgba(30,35,32,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
+body{font-size:16px;line-height:1.6}
+h1,h2,h3{line-height:1.25;margin:0}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.topbar{border-top:3px solid var(--accent);border-bottom:1px solid var(--edge);background:var(--panel)}
+.topbar .wrap{display:flex;align-items:center;gap:10px;padding-top:12px;padding-bottom:12px}
+.topbar a{text-decoration:none;font-weight:600;color:var(--fg)}
+.topbar span{color:var(--fg-3);font-size:14px}
+main{padding:8px 0 48px}
+h1{font-size:clamp(27px,5.2vw,40px);letter-spacing:-.02em;margin:26px 0 14px}
+h1::after{content:"";display:block;width:56px;height:4px;border-radius:0;background:var(--accent);margin-top:14px}
+h2{font-size:clamp(20px,3.4vw,25px);letter-spacing:-.01em;margin:40px 0 12px}
+h3{font-size:17px;margin:26px 0 8px}
+p{margin:0 0 14px;max-width:68ch}
+ul{margin:0 0 14px;padding-left:22px;max-width:68ch}
+li{margin:0 0 7px}
+.lede{font-size:19px;color:var(--fg-2)}
+.key{font-family:var(--mono);font-weight:650;color:var(--accent);font-variant-numeric:tabular-nums;
+  background:var(--red-soft);border:1px solid transparent;border-radius:0;padding:1px 6px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 8px}
+.tile{background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.tile b{display:block;font-family:var(--mono);font-size:29px;font-weight:650;letter-spacing:-.02em;color:var(--accent);
+  font-variant-numeric:tabular-nums;line-height:1.15}
+.tile span{display:block;font-size:13px;color:var(--fg-3);margin-top:3px}
+figure{margin:26px 0;background:var(--panel);border:1px solid var(--edge);
+  border-radius:var(--radius);padding:16px 14px 10px;box-shadow:var(--shadow)}
+figcaption{font-size:14px;color:var(--fg-2);margin-top:10px;padding:0 2px}
+figure svg{display:block;width:100%;height:auto;overflow:visible}
+.grid{stroke:var(--edge);stroke-width:1}
+.ref{stroke:var(--fg);stroke-width:2;stroke-dasharray:5 4}
+.refl{fill:var(--fg);font-weight:600;font-size:12px;text-anchor:middle;font-family:var(--sans)}
+.ax{fill:var(--fg-3);font-size:12px;text-anchor:middle;font-family:var(--sans)}
+.yax{text-anchor:end}
+.v{fill:var(--fg-2);font-size:11px;text-anchor:middle;font-family:var(--mono);font-weight:600}
+.nl{fill:var(--fg);font-size:14px;text-anchor:end;font-family:var(--sans)}
+.nv{text-anchor:start;font-size:15px;fill:var(--fg)}
+.nn{text-anchor:start;font-size:11px}
+.iqr{stroke:var(--c2);stroke-width:5;stroke-linecap:round;opacity:.55}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:0 0 14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--edge)}
+th{color:var(--fg-2);font-weight:600}
+td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+details{margin:6px 0 16px}
+summary{cursor:pointer;color:var(--fg-2);font-size:14px}
+.callout{background:var(--panel-2);border:1px solid var(--edge);border-left:3px solid var(--accent);
+  border-radius:0;padding:13px 15px;margin:20px 0}
+.callout p:last-child{margin-bottom:0}
+.cta{display:inline-block;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:600;
+  border-radius:0;padding:11px 17px;margin:6px 0 4px}
+.cta:hover{background:var(--accent-hover);color:var(--on-accent)}
+footer{border-top:1px solid var(--edge);padding:22px 0 40px;color:var(--fg-3);font-size:14px}
+footer p{max-width:68ch;margin:0 0 6px}
+@media (max-width:480px){
+  .v{font-size:10px} .ax{font-size:11px} .refl{font-size:11px}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faqs" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../../script-timer/study/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<header class="topbar"><div class="wrap">
+  <a href="../">⏱️ Script Pacing &amp; Hook Timer</a><span>&middot; <b style="color:var(--accent);font-weight:600">studie</b></span>
+</div></header>
+
+<main class="wrap">
+<h1>Hur snabbt pratar man egentligen i toppklippen på YouTube Shorts?</h1>
+
+<p class="lede">I <strong>132 YouTube Shorts med minst en miljon visningar vardera</strong> är
+mediantempot <strong>193 ord per minut</strong>, och första meningen tar i median slut efter
+<strong>3,1 sekunder</strong>. Båda siffrorna ligger långt över de råd som cirkulerar i guider om
+korta videor – också de standardvärden som det här verktyget först levererades med.</p>
+
+<div class="tiles">
+  <div class="tile"><b>193</b><span>median-WPM under tal</span></div>
+  <div class="tile"><b>3,1&nbsp;s</b><span>första meningen, median</span></div>
+  <div class="tile"><b>11</b><span>ord i den, median</span></div>
+  <div class="tile"><b>48&nbsp;%</b><span>hookar klara inom 3,0&nbsp;s</span></div>
+</div>
+
+<p>Alla siffror här är uppmätta i ljudet, inte uppskattade. Metod och begränsningar står längst ned,
+och de är viktiga – ett mått fick strykas helt.</p>
+
+<h2>Taltempo</h2>
+
+<p>Den mittersta hälften av klippen ligger på
+<span class="key">156–221 WPM</span>. Den 10:e percentilen är
+<span class="key">118</span> och den 90:e är <span class="key">246</span>.
+Det här är tempot <em>medan personen faktiskt pratar</em> – antal ord delat med tiden från första till
+sista ordet, så tystnad i början eller slutet drar inte ned det.</p>
+
+<figure>
+<svg viewBox="0 0 720 300" role="img" aria-label="Fördelning av taltempo i 132 klipp, med en topp mellan 180 och 220 ord per minut."><g><title>40–59 WPM: 2 klipp</title><rect x="44.0" y="235.0" width="48.3" height="19.0" rx="4" fill="var(--c1)"/><text class="v" x="68.2" y="230.0">2</text></g><text class="ax" x="68.2" y="270">40</text><g><title>60–79 WPM: 3 klipp</title><rect x="95.3" y="225.4" width="48.3" height="28.6" rx="4" fill="var(--c1)"/><text class="v" x="119.5" y="220.4">3</text></g><g><title>80–99 WPM: 7 klipp</title><rect x="146.6" y="187.4" width="48.3" height="66.6" rx="4" fill="var(--c1)"/><text class="v" x="170.8" y="182.4">7</text></g><text class="ax" x="170.8" y="270">80</text><g><title>100–119 WPM: 2 klipp</title><rect x="197.9" y="235.0" width="48.3" height="19.0" rx="4" fill="var(--c1)"/><text class="v" x="222.1" y="230.0">2</text></g><g><title>120–139 WPM: 10 klipp</title><rect x="249.2" y="158.8" width="48.3" height="95.2" rx="4" fill="var(--c1)"/><text class="v" x="273.4" y="153.8">10</text></g><text class="ax" x="273.4" y="270">120</text><g><title>140–159 WPM: 13 klipp</title><rect x="300.5" y="130.2" width="48.3" height="123.8" rx="4" fill="var(--c1)"/><text class="v" x="324.7" y="125.2">13</text></g><g><title>160–179 WPM: 15 klipp</title><rect x="351.8" y="111.2" width="48.3" height="142.8" rx="4" fill="var(--c1)"/><text class="v" x="376.0" y="106.2">15</text></g><text class="ax" x="376.0" y="270">160</text><g><title>180–199 WPM: 21 klipp</title><rect x="403.2" y="54.1" width="48.3" height="199.9" rx="4" fill="var(--c1)"/><text class="v" x="427.3" y="49.1">21</text></g><g><title>200–219 WPM: 25 klipp</title><rect x="454.5" y="16.0" width="48.3" height="238.0" rx="4" fill="var(--c1)"/><text class="v" x="478.6" y="11.0">25</text></g><text class="ax" x="478.6" y="270">200</text><g><title>220–239 WPM: 14 klipp</title><rect x="505.8" y="120.7" width="48.3" height="133.3" rx="4" fill="var(--c1)"/><text class="v" x="529.9" y="115.7">14</text></g><g><title>240–259 WPM: 12 klipp</title><rect x="557.1" y="139.8" width="48.3" height="114.2" rx="4" fill="var(--c1)"/><text class="v" x="581.2" y="134.8">12</text></g><text class="ax" x="581.2" y="270">240</text><g><title>260–279 WPM: 6 klipp</title><rect x="608.4" y="196.9" width="48.3" height="57.1" rx="4" fill="var(--c1)"/><text class="v" x="632.5" y="191.9">6</text></g><g><title>280–299 WPM: 2 klipp</title><rect x="659.7" y="235.0" width="48.3" height="19.0" rx="4" fill="var(--c1)"/><text class="v" x="683.8" y="230.0">2</text></g><text class="ax" x="683.8" y="270">280</text><line class="ref" x1="435.5" y1="12" x2="435.5" y2="254"/><text class="refl" x="435.5" y="288">median 193</text><line class="grid" x1="44" y1="254.0" x2="708" y2="254.0"/><text class="ax yax" x="36" y="258.0">0</text><line class="grid" x1="44" y1="206.4" x2="708" y2="206.4"/><text class="ax yax" x="36" y="210.4">5</text><line class="grid" x1="44" y1="158.8" x2="708" y2="158.8"/><text class="ax yax" x="36" y="162.8">10</text><line class="grid" x1="44" y1="111.2" x2="708" y2="111.2"/><text class="ax yax" x="36" y="115.2">15</text><line class="grid" x1="44" y1="63.6" x2="708" y2="63.6"/><text class="ax yax" x="36" y="67.6">20</text><line class="grid" x1="44" y1="16.0" x2="708" y2="16.0"/><text class="ax yax" x="36" y="20.0">25</text></svg>
+<figcaption>Taltempo i 132 klipp, i intervall om 20 WPM. Median 193 WPM.
+Vardaglig samtalsengelska ligger runt 150; nästan inget här är i samtalstempo.</figcaption>
+</figure>
+
+<p>Som jämförelse brukar tempot för berättarröst anges till 140–160 WPM. Den uppmätta medianen är
+193. Ett manus som skrivs efter en uppskattning på 155 WPM och sedan framförs i
+193 tar slut ungefär <strong>20&nbsp;% för tidigt</strong> – i ett klipp
+på 60 sekunder blir det omkring 12 sekunder som du inte har planerat för.</p>
+
+<h2>Hooken</h2>
+
+<p>Den vanliga regeln är en hook på sju till tio ord som är klar inom tre sekunder. Mätningen visar
+att första meningen i median är <span class="key">11 ord</span> lång och tar
+<span class="key">3,1 sekunder</span>, och den mittersta hälften ligger på
+<span class="key">1,9–4,8&nbsp;s</span>.</p>
+
+<figure>
+<svg viewBox="0 0 720 300" role="img" aria-label="Fördelning av första meningens längd i sekunder; 48 procent är klara inom tre sekunder."><g><title>0–1 s: 8 klipp</title><rect x="44.0" y="180.8" width="62.8" height="73.2" rx="4" fill="var(--c1)"/><text class="v" x="75.4" y="175.8">8</text></g><text class="ax" x="75.4" y="270">0–1</text><g><title>1–2 s: 26 klipp</title><rect x="110.8" y="16.0" width="62.8" height="238.0" rx="4" fill="var(--c1)"/><text class="v" x="142.2" y="11.0">26</text></g><text class="ax" x="142.2" y="270">1–2</text><g><title>2–3 s: 24 klipp</title><rect x="177.6" y="34.3" width="62.8" height="219.7" rx="4" fill="var(--c1)"/><text class="v" x="209.0" y="29.3">24</text></g><text class="ax" x="209.0" y="270">2–3</text><g><title>3–4 s: 20 klipp</title><rect x="244.4" y="70.9" width="62.8" height="183.1" rx="4" fill="var(--c2)"/><text class="v" x="275.8" y="65.9">20</text></g><text class="ax" x="275.8" y="270">3–4</text><g><title>4–5 s: 18 klipp</title><rect x="311.2" y="89.2" width="62.8" height="164.8" rx="4" fill="var(--c2)"/><text class="v" x="342.6" y="84.2">18</text></g><text class="ax" x="342.6" y="270">4–5</text><g><title>5–6 s: 10 klipp</title><rect x="378.0" y="162.5" width="62.8" height="91.5" rx="4" fill="var(--c2)"/><text class="v" x="409.4" y="157.5">10</text></g><text class="ax" x="409.4" y="270">5–6</text><g><title>6–7 s: 4 klipp</title><rect x="444.8" y="217.4" width="62.8" height="36.6" rx="4" fill="var(--c2)"/><text class="v" x="476.2" y="212.4">4</text></g><text class="ax" x="476.2" y="270">6–7</text><g><title>7–8 s: 3 klipp</title><rect x="511.6" y="226.5" width="62.8" height="27.5" rx="4" fill="var(--c2)"/><text class="v" x="543.0" y="221.5">3</text></g><text class="ax" x="543.0" y="270">7–8</text><g><title>8–9 s: 1 klipp</title><rect x="578.4" y="244.8" width="62.8" height="9.2" rx="4" fill="var(--c2)"/><text class="v" x="609.8" y="239.8">1</text></g><text class="ax" x="609.8" y="270">8–9</text><g><title>9 s och mer: 11 klipp</title><rect x="645.2" y="153.3" width="62.8" height="100.7" rx="4" fill="var(--c2)"/><text class="v" x="676.6" y="148.3">11</text></g><text class="ax" x="676.6" y="270">9 s+</text><line class="ref" x1="242.4" y1="12" x2="242.4" y2="254"/><text class="refl" x="242.4" y="288">3,0 s – 48 % hamnar till vänster om linjen</text><line class="grid" x1="44" y1="254.0" x2="708" y2="254.0"/><text class="ax yax" x="36" y="258.0">0</text><line class="grid" x1="44" y1="208.2" x2="708" y2="208.2"/><text class="ax yax" x="36" y="212.2">5</text><line class="grid" x1="44" y1="162.5" x2="708" y2="162.5"/><text class="ax yax" x="36" y="166.5">10</text><line class="grid" x1="44" y1="116.7" x2="708" y2="116.7"/><text class="ax yax" x="36" y="120.7">15</text><line class="grid" x1="44" y1="70.9" x2="708" y2="70.9"/><text class="ax yax" x="36" y="74.9">20</text><line class="grid" x1="44" y1="25.2" x2="708" y2="25.2"/><text class="ax yax" x="36" y="29.2">25</text></svg>
+<figcaption>Första meningens längd i intervall om 1 sekund, n=125 klipp där en meningsgräns
+kunde hittas. Staplarna till vänster om den streckade linjen är klara inom 3,0 sekunder.
+Den sista stapeln är 9 sekunder och mer.</figcaption>
+</figure>
+
+<div class="callout">
+<p><strong>Färre än hälften av klippen följer tresekundersregeln.</strong>
+48&nbsp;% av de första meningarna är slut inom 3,0 sekunder (60 av 125),
+56&nbsp;% inom 3,5 sekunder (70) och 77&nbsp;% inom 5,0 sekunder (96). Regeln beskriver ungefär hälften
+av det som fungerar, inte allt.</p>
+</div>
+
+<p>Två närliggande siffror. Vid tresekundersgränsen har i median
+<span class="key">9 ord</span> sagts – fler än de
+7–10 som regeln antyder, eftersom tempot är högre än regeln förutsätter. Och
+<span class="key">20&nbsp;%</span> av klippen
+(27 av 132) har en paus på mer än
+0,4 sekunder under de tre första sekunderna, så en paus tidigt fäller inte hooken.</p>
+
+<h2>Per nisch</h2>
+
+<figure>
+<svg viewBox="0 0 720 286" role="img" aria-label="Mediantempo per nisch, från Utbildning med 180 till Träning med 219 ord per minut."><line class="grid" x1="96.0" y1="16" x2="96.0" y2="252"/><text class="ax" x="96.0" y="270">100</text><line class="grid" x1="236.0" y1="16" x2="236.0" y2="252"/><text class="ax" x="236.0" y="270">140</text><line class="grid" x1="376.0" y1="16" x2="376.0" y2="252"/><text class="ax" x="376.0" y="270">180</text><line class="grid" x1="516.0" y1="16" x2="516.0" y2="252"/><text class="ax" x="516.0" y="270">220</text><line class="grid" x1="656.0" y1="16" x2="656.0" y2="252"/><text class="ax" x="656.0" y="270">260</text><text class="nl" x="84" y="49.0">Träning</text><g><title>Träning: median 219 WPM, mittersta hälften 200–238, n=18</title><line class="iqr" x1="446.7" y1="45.0" x2="577.6" y2="45.0"/><circle cx="512.9" cy="45.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="49.0">219</text><text class="ax nn" x="666" y="62.0">n=18</text><text class="nl" x="84" y="95.0">Storytime</text><g><title>Storytime: median 202 WPM, mittersta hälften 191–240, n=15</title><line class="iqr" x1="415.2" y1="91.0" x2="586.3" y2="91.0"/><circle cx="454.4" cy="91.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="95.0">202</text><text class="ax nn" x="666" y="108.0">n=15</text><text class="nl" x="84" y="141.0">Matlagning</text><g><title>Matlagning: median 192 WPM, mittersta hälften 129–216, n=23</title><line class="iqr" x1="197.8" y1="137.0" x2="502.0" y2="137.0"/><circle cx="418.3" cy="137.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="141.0">192</text><text class="ax nn" x="666" y="154.0">n=23</text><text class="nl" x="84" y="187.0">Teknik</text><g><title>Teknik: median 187 WPM, mittersta hälften 169–200, n=17</title><line class="iqr" x1="338.2" y1="183.0" x2="446.3" y2="183.0"/><circle cx="400.2" cy="183.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="187.0">187</text><text class="ax nn" x="666" y="200.0">n=17</text><text class="nl" x="84" y="233.0">Utbildning</text><g><title>Utbildning: median 180 WPM, mittersta hälften 159–204, n=18</title><line class="iqr" x1="301.8" y1="229.0" x2="458.2" y2="229.0"/><circle cx="376.3" cy="229.0" r="7" fill="var(--c1)" stroke="var(--panel)" stroke-width="2"/></g><text class="v nv" x="666" y="233.0">180</text><text class="ax nn" x="666" y="246.0">n=18</text><text class="ax" x="376" y="280">ord per minut (punkt = median, stapel = mittersta hälften)</text></svg>
+<figcaption>Mediantempo för de fem nischer som har minst 15 klipp efter filtreringen.
+Punkten är medianen, stapeln sträcker sig från 25:e till 75:e percentilen.</figcaption>
+</figure>
+
+<p>Skillnaden mellan medianerna för den snabbaste och den långsammaste nischen är ungefär
+39 WPM – verklig, men mindre än spridningen <em>inom</em> var och en av
+nischerna. Tempot hänger mer på den enskilda kreatören än på ämnet.</p>
+
+<details><summary>Tabell: alla nischer, även de som är för små för diagrammet</summary>
+<div class="scroll"><table>
+<thead><tr><th>Nisch</th><th class="n">n</th><th class="n">Median-WPM</th><th class="n">Hooklängd, median (s)</th></tr></thead>
+<tbody>
+<tr><td>företag (litet urval)</td><td class="n">5</td><td class="n">234</td><td class="n">1,64</td></tr>
+<tr><td>matlagning</td><td class="n">23</td><td class="n">192</td><td class="n">2,56</td></tr>
+<tr><td>utbildning</td><td class="n">18</td><td class="n">180</td><td class="n">4,8</td></tr>
+<tr><td>träning</td><td class="n">18</td><td class="n">219</td><td class="n">3,24</td></tr>
+<tr><td>hälsa (litet urval)</td><td class="n">12</td><td class="n">187</td><td class="n">4,1</td></tr>
+<tr><td>hem och gör det själv (litet urval)</td><td class="n">7</td><td class="n">162</td><td class="n">3,88</td></tr>
+<tr><td>föräldraskap (litet urval)</td><td class="n">11</td><td class="n">138</td><td class="n">1,89</td></tr>
+<tr><td>privatekonomi (litet urval)</td><td class="n">6</td><td class="n">193</td><td class="n">2,75</td></tr>
+<tr><td>storytime</td><td class="n">15</td><td class="n">202</td><td class="n">2,86</td></tr>
+<tr><td>teknik</td><td class="n">17</td><td class="n">187</td><td class="n">3,68</td></tr>
+</tbody></table></div>
+<p style="font-size:13.5px;color:var(--fg-3)">Nischer markerade med ”litet urval” har färre än 15 klipp och
+visas inte i diagrammet, men de ingår i de samlade siffrorna.</p>
+</details>
+
+<h2>Förutsäger tempot antalet visningar? Nej.</h2>
+
+<p>I det här urvalet finns <strong>inget användbart samband mellan hur fort någon pratar och hur
+många visningar klippet har</strong>. Spearmans rangkorrelation mot antal visningar:</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Mått</th><th class="n">rho</th><th class="n">p</th><th>Bedömning</th></tr></thead>
+<tbody>
+<tr><td>Första meningens längd (s)</td><td class="n">-0,162</td>
+<td class="n">0,0716</td><td>Ingen effekt</td></tr>
+<tr><td>Taltempo (WPM)</td><td class="n">-0,249</td>
+<td class="n">0,004</td><td>Svag, och störd av urvalets sammansättning – se nedan</td></tr>
+<tr><td>Ord sagda inom 3 s</td><td class="n">-0,124</td>
+<td class="n">0,1571</td><td>Ingen effekt</td></tr>
+</tbody></table></div>
+
+<p>Korrelationen för taltempo är statistiskt signifikant, men vi tänker ändå inte hävda något samband.
+Skälet är sammansättningen: gruppen med 10 miljoner visningar eller fler rymmer 74 av de 132 klippen och
+domineras av kreatörer inom matlagning, utbildning, träning och teknik, medan gruppen med 1–3 miljoner
+har en helt annan blandning. Korrelationen speglar <em>vilka kreatörer som hamnade i vilken grupp</em>,
+inte ett samband mellan tempo och räckvidd. Ett urval som byggs för att besvara den frågan skulle
+behöva hålla kreatören konstant, och det gör inte det här.</p>
+
+<p>Den ärliga sammanfattningen: <strong>tempo och hooklängd skiljer inte en Short med en miljon
+visningar från en med tio miljoner.</strong> Båda är hygienfaktorer, inga spakar att dra i.</p>
+
+<h2>Vad det betyder när du skriver ett manus</h2>
+
+<ul>
+<li><strong>Skriv för ungefär 193 WPM, inte 155.</strong> Om du klockar ett manus vid 155 och
+framför det i ditt naturliga tempo för korta videor blir du klar för tidigt och måste fylla ut.</li>
+<li><strong>Få inte panik vid tre sekunder.</strong> Hälften av klippen behöver längre tid än så
+för att avsluta sin första mening, och allt upp till ungefär fem sekunder ligger inom det
+normala. Skriv den mening som hooken behöver och stryk sedan ord &ndash; inte tiondelar.</li>
+<li><strong>Regeln om en hook på 7&ndash;10 ord håller.</strong> I median hinner 9 ord sägas före
+tresekundersgränsen, mitt inom spannet. Det som är fel är tempot som regeln bygger på: de 9
+orden kommer i ungefär 193 WPM, inte 155, så meningen du får in på tre sekunder är
+längre än den gamla räkningen antyder.</li>
+<li><strong>En paus i öppningen går bra.</strong> Vart femte klipp har en.</li>
+<li><strong>Skruva inte på tempot i hopp om räckvidd.</strong> Ingenting här talar för det.</li>
+</ul>
+
+<p><a class="cta" href="../">Klocka ditt manus mot de här siffrorna →</a></p>
+
+<h2>Metod</h2>
+
+<p>Tio nischer. Kanalerna hittades på tre sätt: sökning på YouTube, en handplockad lista över
+kreatörer som pratar i bild eller läser in voiceover, och en kompletterande sökning inriktad på tal
+för tre nischer med litet urval. Inom varje kanal är kandidaterna <strong>de mest visade bland kanalens
+80 senaste Shorts</strong>, högst fem per kanal, alla med minst 1&nbsp;000&nbsp;000 visningar enligt
+kanalsidan när de hittades (3 september 2026).</p>
+
+<p>Sökningen gav <span class="key">312</span> kandidater. Av dem sorterades
+<span class="key">104</span> bort redaktionellt före all nedladdning,
+fördelade på 32 kanaler: barnunderhållning, ASMR och tysta klipp, musik- och fancamkanaler,
+produktreklam, kanaler för tv-nyheter och tidningar, konferenstal, utdrag ur poddintervjuer,
+kanaler på andra språk än engelska och kreatörer som hade hamnat i fel nisch. Skälen är
+dokumenterade per kanal. Kvar blev
+<span class="key">208</span> att försöka ladda ned.</p>
+
+<p>De första 30 sekunderna av varje klipp laddades ned som monoljud i 16&nbsp;kHz och transkriberades med
+<strong>Whisper <code>medium</code></strong> med tidsstämplar på ordnivå. Utfallet av nedladdningen: 152
+hämtades, 51 avvisades för att de var längre än 60 sekunder och 5 fanns inte längre kvar.</p>
+
+<p>Filter som tillämpades på de 152 transkriberade klippen, med antal för varje:</p>
+
+<div class="scroll"><table>
+<thead><tr><th>Filter</th><th class="n">Borttagna</th></tr></thead>
+<tbody>
+<tr><td>Inget tal alls</td><td class="n">2</td></tr>
+<tr><td>Inte engelska</td><td class="n">5</td></tr>
+<tr><td>Säkerhet i språkigenkänningen under 0,8</td><td class="n">11</td></tr>
+<tr><td>Färre än 10 ord</td><td class="n">2</td></tr>
+<tr><td>Längre än 60 s</td><td class="n">0</td></tr>
+<tr><td><strong>Analyserade</strong></td><td class="n"><strong>132</strong></td></tr>
+</tbody></table></div>
+
+<p>Hooksiffrorna bygger på de 125 klipp där Whisper hittade en meningsgräns inom de första
+30 sekunderna. I 7 klipp hittade den ingen, och de klippen har uteslutits ur hookstatistiken
+i stället för att räknas som en enda lång mening. Klippen laddades upp mellan
+28 juli 2022 och 28 augusti 2026 och kommer från 42 kanaler, högst fem från varje.</p>
+
+<h3>Begränsningar, bland annat en som kostade oss ett mått</h3>
+<ul>
+<li><strong>Tiden före första ordet redovisas inte, eftersom den inte gick att mäta.</strong> Whisper placerade
+det första ordet på exakt 0,00 sekunder i 128 av 132 klipp. Det beror på att transkriberaren låser sig vid
+segmentets början, inte på att 132 kreatörer börjar prata på exakt samma bildruta. En ”mediantystnad före
+första ordet” som vi kunde ha redovisat skulle vara en artefakt, så någon sådan siffra finns inte.</li>
+<li><strong>Urval med de senaste klippen först.</strong> En kanals Shorts-flik är sorterad efter datum, inte efter visningar.
+Att gå igenom 80 klipp täcker därför några veckor hos den som lägger upp något varje dag och flera år hos den
+som lägger upp då och då. Det snedvrider urvalet mot kreatörer som publicerar sällan och, för flitiga kanaler,
+mot det senaste de gjort snarare än det bästa.</li>
+<li><strong>Meningsgränserna är Whispers.</strong> Skiljetecknen avgör var den första meningen
+slutar. I ungefär var åttonde hookmätning satte modellen få skiljetecken, vilket gav första
+”meningar” på över 10 sekunder. Medianen tål det, men den övre kvartilen är osäkrare än den
+ser ut.</li>
+<li><strong>Gränsen vid 60 sekunder slänger en fjärdedel av underlaget.</strong> Shorts kan i dag vara upp till tre
+minuter långa, och 51 klipp som uppfyllde kraven föll bort på grund av längden. Resultaten gäller Shorts på
+högst en minut.</li>
+<li><strong>Två nischer har för litet urval för att redovisas separat</strong> – företag (n=5) och privatekonomi
+(n=6). Klipp med över en miljon visningar är verkligen sällsynta där: en kreatör hade en enda sådan Short
+bland sina 400 senaste, en annans 80 senaste nådde som mest omkring 51&nbsp;000 visningar, och nio till
+gav inga alls. Det som når över en miljon i de nischerna är mest poddklipp, reklam och
+nyheter, och allt det sorterades bort. Nischerna ingår i de samlade siffrorna men visas inte i diagrammet.</li>
+<li><strong>Bara YouTube, bara engelska</strong>, bara de första 30 sekunderna, och antal visningar som de
+visades när klippen hittades.</li>
+</ul>
+
+<h3>Det här publiceras inte</h3>
+<p>Bara sammanställda värden. Inga transkript, inga tidsstämplar för enskilda ord, inga rader per video och
+ingen lista över vilka videor eller kreatörer som mättes. Ljudet hämtades till en lokal dator, analyserades
+och raderades. Poängen var aldrig att publicera en rankad lista över andras videor – poängen är siffrorna,
+och alla siffror finns här.</p>
+
+</main>
+
+<footer class="wrap">
+  <p>Uppmätt 3 september 2026 i 132 klipp. Siffrorna kommer att förändras i takt med att
+  konventionerna för korta videor ändras. Sidan anger sitt n och sitt datum så att du kan bedöma hur inaktuell den är.</p>
+  <p>Ingen spårning, inga cookies, ingen analys, inga nätverksanrop efter att sidan har laddats.</p>
+  <p><a href="../">← Tillbaka till Script Pacing &amp; Hook Timer</a></p>
+</footer>
+</body>
+</html>

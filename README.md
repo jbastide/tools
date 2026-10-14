@@ -52,7 +52,8 @@ Pages for Swedish companies. Each one exists twice, as separate static URLs: Swe
 | Google Ads for lead generation in Sweden | [`sv/google-ads-leadgenerering/`](sv/google-ads-leadgenerering/) | [`google-ads-lead-generation-sweden/`](google-ads-lead-generation-sweden/) | Managed Google Ads for Swedish businesses from Tidaholm: stopping the bleeding, cleaning up a messy account, visibility, clicks without inquiries, digital marknadsföring, price, budget, in-person vs remote, consent and VAT. |
 | Google Ads in the USA for Swedish companies | [`sv/google-ads-usa/`](sv/google-ads-usa/) | [`google-ads-usa-for-swedish-companies/`](google-ads-usa-for-swedish-companies/) | US lead generation from Sweden: differences from the Swedish market, where to start, test budgets, time zones and who answers, measurement, price. |
 | English copywriting for Swedish companies | [`sv/engelsk-copywriting-usa/`](sv/engelsk-copywriting-usa/) | [`english-copywriting-for-swedish-companies/`](english-copywriting-for-swedish-companies/) | American English sales copy: Swedish habits in English text, translation vs copywriting, what a US buyer looks for, US advertising rules, price and process. |
-| Swedish hub | [`sv/`](sv/) | the root index | Overview of the three services in Swedish, plus the tools described in Swedish. |
+| SEO and AEO for Swedish companies | [`sv/seo-sokmotoroptimering/`](sv/seo-sokmotoroptimering/) | [`seo-aeo-for-swedish-companies/`](seo-aeo-for-swedish-companies/) | Agentic frameworks for original, fact-based content from open sources: what companies want from AEO (Reddit review), SEO vs AEO, Google's position compared with independent evidence, getting cited, measuring, whether it pays, the seven phases, programmatic SEO vs original research, examples, pricing on request. |
+| Swedish hub | [`sv/`](sv/) | the root index | Overview of the four services in Swedish, plus the tools described in Swedish. |
 
 ### Conventions for bilingual pages
 

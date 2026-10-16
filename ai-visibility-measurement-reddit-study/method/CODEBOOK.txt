@@ -1,0 +1,82 @@
+CODEBOOK: measurement problems in AEO / AI-search threads on Reddit
+
+You are coding Reddit threads (post + comments). Each thread in the batch file starts with
+"=========== THREAD <id> | r/<sub> | <date> | <n> comments". The post body follows "[post]".
+Each comment line starts with "[c:<comment_id> <date>]".
+
+For EVERY thread in your batch, decide which of the categories below are raised anywhere in the
+thread (post or any comment). A category counts when someone describes or discusses that problem
+or claim; a passing keyword is not enough. A thread can have zero, one or many categories.
+
+CATEGORIES (use these exact codes)
+NO_LLM_DATA        No first-party data from ChatGPT/Perplexity/Gemini/Claude etc.: no query or
+                   impression data, no "search console for ChatGPT", can't see what prompts people
+                   use, black box.
+GA4_ATTRIBUTION    Analytics/attribution problems: GA4 doesn't separate AI traffic, referrers
+                   stripped, AI visits land as direct/"dark" traffic, UTM issues, self-reported
+                   "how did you hear about us" used as a workaround, assisted conversions invisible.
+GSC_AI_DATA        Google Search Console and AI features: AI Overview / AI Mode impressions mixed
+                   into web search data, can't filter them, the new Generative AI report (June 2026),
+                   position/CTR distortion from AI Overviews in GSC.
+TRAFFIC_LOSS_DIAG  Hard to diagnose or prove that traffic/clicks fell because of AI Overviews/AI
+                   answers (impressions up, clicks down; zero-click; can't separate causes).
+TOOL_COST_ACCURACY AI-visibility tracking tools (Profound, Peec, Otterly, Semrush AI toolkit,
+                   Ahrefs Brand Radar, Scrunch, etc.): too expensive, inaccurate, disagree with each
+                   other, scrape the UI vs API differences, unclear methodology, vanity metrics.
+NONDETERMINISM     Answers change between runs, users, sessions, locations, logged-in state,
+                   personalization or model versions, so a single check isn't reproducible.
+REVENUE_ROI        Can't tie AI visibility/citations to leads, sales, revenue or ROI; proving
+                   business value.
+CLIENT_PRESSURE    Clients, bosses, CEOs or CMOs demand AI visibility, AEO reports or answers;
+                   explaining AI-caused drops to clients; agencies selling AEO reports.
+AEO_IS_SEO         Scepticism that AEO/GEO is different from SEO; "it's just SEO", rebrand, snake
+                   oil, grift.
+PROMPT_SELECTION   Prompt/query selection and representativeness: which prompts to track, how many
+                   prompts are enough, synthetic vs real user prompts, long-tail prompts, using
+                   keyword lists as prompts, "near me"/local queries and AI Overviews, AI visibility
+                   or sentiment audits built on a handful of prompts.
+FAN_OUT            Query fan-out (AI systems expanding one question into many sub-queries) and how
+                   it affects what to track or optimize.
+FORMAT_CLAIMS      Claims (or rebuttals of claims) that a particular content format gets AI
+                   citations: direct answers, FAQ, Q&A, answer-first paragraphs, lists/tables,
+                   FAQ schema. Put the claim's direction in the quote choice (pro or sceptical).
+
+Also set:
+healthcare: true if the thread is about a healthcare/medical/clinic/dental/pharma/therapy business
+            or client (not just a passing word).
+relevant:   true if the thread discusses measuring, tracking, reporting or attributing AI search /
+            AI Overview visibility or traffic at all (post or comments). false if it is off-topic
+            (e.g. generic GSC indexing question that merely mentions AI).
+gsc_report_points: ONLY about Google Search Console's Generative AI report (launched June 2026;
+            also called "Search Generative AI performance report", "Generative AI tab", "AI
+            report" in GSC). List each specific thing people say is missing, confusing, wrong,
+            useful or praised (e.g. "no query data", "impressions only, no clicks", "no API",
+            "not rolled out to my property", "numbers don't match", "can't export"). One entry
+            per distinct point per thread, each with a supporting quote.
+
+QUOTES (the most important rule)
+- For each category you assign, give 1 or 2 quotes that best show it, plus quotes for each
+  gsc_report_point.
+- A quote must be an EXACT, contiguous substring of ONE post body or ONE comment body in the
+  batch file: copy character for character, including typos, capitalisation, punctuation,
+  curly quotes and emoji. Do not fix, trim inside, join, or paraphrase. Do not add "..." .
+- Quotes may not span a line break in the source. Prefer 1 to 3 sentences, max ~300 characters.
+- "source" is "post" or "c:<comment_id>" exactly as shown in the file.
+- Never include usernames. Do not quote a sentence that names a specific Reddit user.
+- Prefer practitioner voices describing their own experience over promotional copy. If a
+  quote is from an obvious vendor/self-promotional post, set "promo": true.
+Every quote is checked by script against the raw data; a non-matching quote is discarded.
+
+OUTPUT
+Write one JSON file (path given in your task) with exactly this shape:
+{"threads": [
+  {"id": "<thread id>",
+   "relevant": true,
+   "healthcare": false,
+   "categories": ["NO_LLM_DATA", "..."],
+   "quotes": [{"category": "NO_LLM_DATA", "quote": "...", "source": "c:abc123", "promo": false}],
+   "gsc_report_points": [{"point": "no query data", "quote": "...", "source": "post"}],
+   "note": "one short line on what the thread is about"}
+]}
+Include every thread in the batch, even irrelevant ones (with empty lists). Validate the JSON
+(e.g. python3 -I -c "import json; json.load(open(PATH))") before finishing.

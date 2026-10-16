@@ -1,0 +1,10 @@
+theme,threads,thread_ids
+No clicks / CTR (impressions only),18,1tvhxlx;1tvnxy1;1tvobi3;1twfqjz;1u1wj0v;1u698ul;1u69a27;1usvk9q;1v9cjdm;1vhfhva;1vln9g6;1vm5c3p;1vm9bv6;1vn6ko5;1vqyhav;1w4snhv;1wgiczi;1wuyi3m
+No query / prompt data,23,1tvhida;1tvhxlx;1tvnxy1;1twfqjz;1u698ul;1u69a27;1udtdym;1uej5qp;1upn9p3;1usvk9q;1vg54co;1vhfhva;1vhnryb;1vkjak8;1vln9g6;1vm5c3p;1vm9bv6;1vn6ko5;1vqyhav;1w4snhv;1wgiczi;1wuyi3m;1x3v579
+"Uneven rollout: missing, region-limited or disappeared",15,1tvhida;1tvhxlx;1tvnxy1;1u130o2;1u177k0;1u1wj0v;1u69a27;1ur8w45;1usvk9q;1v4b86r;1v9cjdm;1vamqcz;1vkjfki;1vln9g6;1wuyi3m
+Not actionable / vanity or directional only,15,1tvhida;1tvnxy1;1twfqjz;1u698ul;1ur8w45;1usvk9q;1v4b86r;1v9cjdm;1vhfhva;1vkjak8;1vln9g6;1vm5c3p;1vm9bv6;1vqyhav;1wz1m12
+"Can't connect to traffic, conversions or revenue",5,1u69a27;1v9cjdm;1vm9bv6;1vn6ko5;1w4734c
+"Ambiguous definitions: AIO+AI Mode combined, position as a block, what counts as an impression",8,1tvnxy1;1u698ul;1vm5c3p;1vm9bv6;1vqyhav;1wamz5g;1wcjlbj;1wuyi3m
+"Data limits: history from 18 May, row cap, no API, logging anomaly",7,1tvhxlx;1u177k0;1u1wj0v;1uej5qp;1v9cjdm;1vm5c3p;1w4snhv
+Bing Webmaster Tools does it better (grounding queries),8,1tvnxy1;1u698ul;1u69a27;1upn9p3;1usvk9q;1vhnryb;1vn6ko5;1vqyhav
+"Praised: first separate view of AI visibility, page/country/device breakdown",17,1tvhxlx;1tvnxy1;1tvobi3;1twfqjz;1u130o2;1u69a27;1udmicy;1udtdym;1uej5qp;1v4b86r;1vhr4k9;1vkjak8;1vm5c3p;1vm9bv6;1vn6ko5;1vqyhav;1w4734c

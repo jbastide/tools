@@ -7,8 +7,8 @@
    Any link to #cookie-settings reopens the banner. Withdrawing consent deletes the _ga cookies on this
    host and on .copyfororiginals.com.
    After Accept, a Content-Security-Policy limits requests to Google Analytics hosts (see lockToAnalytics).
-   Pages with a strict Content-Security-Policy don't include this file and never load Google Analytics;
-   their footer link goes to the homepage's #cookie-settings instead. */
+   Pages where visitors type, paste or upload data (the tools, calculators and Script Timer) don't include
+   this file and never load Google Analytics; their footer link goes to the homepage's #cookie-settings. */
 (function () {
   "use strict";
 
@@ -76,20 +76,10 @@
     });
   }
 
-  /* Page URL without query parameters other than utm_*: the PPC Gumball Rule calculator writes the
-     visitor's numbers into the query string, and those shouldn't go to Google. */
-  function cleanLocation() {
-    var keep = [];
-    location.search.replace(/^\?/, "").split("&").forEach(function (p) {
-      if (/^utm_[a-z_]+=/i.test(p)) keep.push(p);
-    });
-    return location.origin + location.pathname + (keep.length ? "?" + keep.join("&") : "");
-  }
-
   /* The Google tag G-443BVCGXJ1 also has the Google Ads account as a destination, so gtag.js would send
      an extra page_view to pagead2.googlesyndication.com. Visitors only consent to Google Analytics here,
      so before gtag.js loads this adds a policy that lets requests go to Google Analytics hosts only.
-     The pages have no images, frames or requests of their own beyond 'self'. */
+     The pages that load this file have no images, frames or requests of their own beyond 'self'. */
   var GA_HOSTS = "https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com";
   function lockToAnalytics() {
     var meta = document.createElement("meta");
@@ -107,7 +97,9 @@
     loaded = true;
     lockToAnalytics();
     gtag("js", new Date());
-    gtag("config", GA_ID, { page_location: cleanLocation() });
+    /* Referrer without query or fragment: the PPC Gumball Rule calculator keeps the visitor's numbers in
+       its URL, and a visitor who clicks through to a page with this file would otherwise send them. */
+    gtag("config", GA_ID, { page_referrer: document.referrer.split(/[?#]/)[0] });
     var s = document.createElement("script");
     s.async = true;
     s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;

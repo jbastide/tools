@@ -157,14 +157,16 @@ the same property as copyfororiginals.com) only after Accept. Nothing is request
   so the subdomain can't read it and asks again.
 - Any link to `#cookie-settings` reopens the banner. Changing a granted choice to Decline deletes the `_ga*`
   cookies on the tools host and on `.copyfororiginals.com`.
-- Query parameters other than `utm_*` are stripped from the page URL sent to Google (the PPC Gumball Rule
-  calculator writes the visitor's numbers into the query string).
-- Pages with a Content-Security-Policy (the upload tools and calculator guides) don't include `consent.js`
-  and never load Google Analytics: their CSP and "no third-party requests" promise stay as they are. Their
-  footer's "Cookie settings" link goes to the language homepage's `#cookie-settings`.
+- After Accept, `consent.js` adds a Content-Security-Policy that only lets requests go to Google Analytics
+  hosts, because the Google tag also has the Google Ads account as a destination.
+- **Rule: a page where visitors type, paste or upload data never includes `consent.js` and never loads
+  Google Analytics.** That is the 18 pages with a Content-Security-Policy (upload tools and calculator guides)
+  plus the PPC Gumball Rule, the four practice-area budget calculators and the Script Timer, in both
+  languages. Their footer text ("No tracking") stays as it was, and their "Cookie settings" link goes to the
+  language homepage's `#cookie-settings`.
 - Every footer ends with `<p class="legal">` (or `<span class="legal">` in the tools' flex footers): the
   privacy policy link and "Cookie settings" ("Integritetspolicy" and "Cookieinställningar" on Swedish pages).
-  A new page without a CSP adds `<script src="../consent.js"></script>` (path like `site.css`) before `</body>`.
+  A new page with no inputs adds `<script src="../consent.js"></script>` (path like `site.css`) before `</body>`.
   The page builders in `method/` emit both.
 
 ## Deploying

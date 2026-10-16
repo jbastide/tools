@@ -1,7 +1,8 @@
 # tools
 
 Small, single-purpose static web tools. Every page is one HTML file with
-vanilla JS that links the shared [`site.css`](site.css): no build step, no dependencies, no third-party requests.
+vanilla JS that links the shared [`site.css`](site.css): no build step, no dependencies, and no third-party
+requests unless a visitor accepts Google Analytics (see "Analytics and cookie consent").
 
 ## Contents
 
@@ -143,6 +144,28 @@ Tools keep their English product names and slugs under `sv/`. Guides and studies
   across all of them.
 - A new page needs both versions, a card on both homepages, two `sitemap.xml` entries and its `llms.txt`
   entry.
+
+## Analytics and cookie consent
+
+[`consent.js`](consent.js) is the only script shared by every page. It shows a cookie banner (English, or Swedish
+when `<html lang="sv">`) with equal Accept and Decline buttons and loads Google Analytics 4 (`G-443BVCGXJ1`,
+the same property as copyfororiginals.com) only after Accept. Nothing is requested from Google before that.
+
+- Consent Mode v2 defaults are all denied; Accept updates `analytics_storage` only. No ads signals on this site.
+- The choice is stored for 180 days in the first-party cookie `cfo_consent` (`granted`/`denied`) on
+  `.copyfororiginals.com`. Squarespace's `ss_performanceCookiesAllowed` is host-only on copyfororiginals.com,
+  so the subdomain can't read it and asks again.
+- Any link to `#cookie-settings` reopens the banner. Changing a granted choice to Decline deletes the `_ga*`
+  cookies on the tools host and on `.copyfororiginals.com`.
+- Query parameters other than `utm_*` are stripped from the page URL sent to Google (the PPC Gumball Rule
+  calculator writes the visitor's numbers into the query string).
+- Pages with a Content-Security-Policy (the upload tools and calculator guides) don't include `consent.js`
+  and never load Google Analytics: their CSP and "no third-party requests" promise stay as they are. Their
+  footer's "Cookie settings" link goes to the language homepage's `#cookie-settings`.
+- Every footer ends with `<p class="legal">` (or `<span class="legal">` in the tools' flex footers): the
+  privacy policy link and "Cookie settings" ("Integritetspolicy" and "Cookieinställningar" on Swedish pages).
+  A new page without a CSP adds `<script src="../consent.js"></script>` (path like `site.css`) before `</body>`.
+  The page builders in `method/` emit both.
 
 ## Deploying
 

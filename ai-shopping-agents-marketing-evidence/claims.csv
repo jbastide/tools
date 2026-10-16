@@ -1,0 +1,27 @@
+claim,grade,basis,key_source
+AI is used mainly for research; delegated buying is small,solid,Every survey that separates research from purchase; OpenAI wound down Instant Checkout in March 2026,https://www.gartner.com/en/newsroom/press-releases/2026-05-27-gartner-survey-finds-consumers-want-ai-shopping-help-but-not-ai-purchase-decisions
+Delegation starts with groceries and replenishment not identity purchases,solid,Consistent ranking across Gartner Accenture DOSS Checkout.com and Bain,https://bain.com/insights/agentic-ai-commerce-hinges-on-consumer-trust
+Agents show position bias and description sensitivity and injection vulnerability,solid (lab),ACES ABxLab Magentic Marketplace and a 272000-attempt injection competition,https://arxiv.org/abs/2508.02630
+Agents are more price-sensitive than humans,solid (lab),ABxLab human baseline 9 points not significant; models 15 to 34 points,https://arxiv.org/abs/2509.25609
+Agents are more persuadable than humans by evidence-shaped cues,solid (lab),Best seller badges and fabricated clinical claims shift agent choice 10 to 99 points,https://arxiv.org/abs/2606.17443
+Agents verify claims and expose mediocre products,conjecture (contradicted),Fabricated claims work; 39% of failed GPT-5 shopping runs cite unverified attributes,https://arxiv.org/pdf/2603.14864
+AI recommendations are volatile run to run and across model versions,solid,SparkToro 2961 runs; replicated by Malthouse et al. and Uberti-Bona Marin et al.; ACES model-version reshuffles,https://searchengineland.com/ai-recommendation-lists-rarely-repeat-study-468076
+Brands mentioned more on the web get recommended more,mixed,Correlational only; strong for Google AI Overviews weak for ChatGPT,https://ahrefs.com/blog/llm-search
+Big brands are the default for unbranded prompts,mixed,One controlled study; no data on how often prompts name a brand,https://arxiv.org/abs/2606.17443
+Structured data beats editorial content,mixed,Feeds gate eligibility; editorial drives the pick; Google says no special schema needed,https://developers.google.com/search/docs/appearance/ai-features
+AI platforms sell ads beside answers,solid,OpenAI Google and Amazon Rufus all live,https://openai.com/index/our-approach-to-advertising-and-expanding-access/
+Paying changes the organic recommendation,conjecture,None disclosed; all platforms deny; sponsored tags lower agent selection in ACES,https://arxiv.org/abs/2508.02630
+Platforms take a transaction cut,solid historically / mixed today,OpenAI 4% fee tried January 2026 and retracted March 2026; others at zero,https://www.pymnts.com/news/ecommerce/2026/shopify-merchants-to-pay-4percent-fee-on-sales-made-through-chatgpt-checkout
+Bot defenses block legitimate agents by accident,solid,200-retailer audit 28 refusals all via WAF; Walmart admitted accidental blocks,https://blendcommerce.com/blogs/shopify/ai-shopping-audit-2026
+Retailers deliberately block agents,solid,Amazon Williams-Sonoma Kohl's Delta United Yelp,https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/
+The access fight is platform versus platform over the customer relationship,solid,Amazon blocks Muse while running Buy for Me on other retailers' sites,https://www.techtimes.com/articles/327940/20260923/amazon-blocks-meta-muse-using-standards-it-ignores-its-own-shopping-agent.htm
+Cloud-hosted agents are legally more exposed than on-device ones,mixed,Ninth Circuit reasoning plus Amazon's amended complaint; untested on Muse,https://thenextweb.com/news/amazon-blocks-muse-perplexity-amended-complaint
+Cancellation friction is a large share of subscription revenue,solid,Einav Klopack and Mahoney NBER: friction roughly doubles revenue,https://siepr.stanford.edu/news/gauging-subscription-economy-boon-companies
+Agents are eroding subscription revenue today,conjecture,Market reaction only; no churn data from any company,https://www.thestar.com.my/tech/tech-news/2026/09/24/meta039s-muse-rekindles-fears-over-winners-and-losers-as-personal-ai-agent-emerges
+Agents re-shop every reorder and erode loyalty,conjecture (contradicted),Shipped reorder agents default to past purchases; lab agents take the first acceptable offer 60 to 100% of the time,https://arxiv.org/abs/2510.25779
+Companies are unprepared for agent intermediation,solid,HFS/Cognizant 37% have a plan; Deloitte 1 in 5 prepared; Mirakl 4.4/10,https://www.cognizant.com/us/en/cmp/agentic-commerce-readiness-hfs-cognizant-2026
+Nobody owns agent experience internally,mixed,Inferred from readiness data; no survey measures ownership,https://www.contentstack.com/resources/report/agentic-enterprise-report-2026
+Hidden B2B pricing is penalized by agents,conjecture,No study found,https://www.prnewswire.com/news-releases/new-g2-research-half-of-b2b-software-buyers-now-start-their-research-with-ai-chatbots-302742807.html
+AI-generated reviews are a growing share,mixed,Platform takedowns confirm the direction; magnitudes depend on the detector,https://www.businesswire.com/news/home/20260225039344/en/Yelp-Releases-2025-Trust-Safety-Report/
+Reviews are increasingly written by agents,conjecture,No data at all,https://www.forbes.com/councils/forbestechcouncil/2026/10/13/the-marketing-department-is-about-to-disappear-because-ai-is-now-selling-to-ai/
+Purchase delegation could grow nonlinearly,conjecture (mechanisms solid; evidence absent),Muse downloads linear at about 230000 a day; no delegation data published,https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/

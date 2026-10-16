@@ -157,6 +157,8 @@ the same property as copyfororiginals.com) only after Accept. Nothing is request
   so the subdomain can't read it and asks again.
 - Any link to `#cookie-settings` reopens the banner. Changing a granted choice to Decline deletes the `_ga*`
   cookies on the tools host and on `.copyfororiginals.com`.
+- gtag.js loads only on `tools.copyfororiginals.com`. Local copies and the github.io mirror show the banner
+  and set the consent cookie but never send hits.
 - After Accept, `consent.js` adds a Content-Security-Policy that only lets requests go to Google Analytics
   hosts, because the Google tag also has the Google Ads account as a destination.
 - **Rule: a page where visitors type, paste or upload data never includes `consent.js` and never loads

@@ -17,6 +17,9 @@
   var MAX_AGE = 180 * 24 * 60 * 60;
   var PRIVACY = "https://www.copyfororiginals.com/privacy-policy";
   var SITE_DOMAIN = "copyfororiginals.com";
+  /* gtag.js loads only on the live host, so a local copy or the github.io mirror never sends hits.
+     The banner and the consent cookie still work everywhere for testing. */
+  var GA_HOST = "tools.copyfororiginals.com";
 
   var sv = (document.documentElement.lang || "").toLowerCase().indexOf("sv") === 0;
   var T = sv ? {
@@ -93,7 +96,7 @@
   function startAnalytics() {
     window["ga-disable-" + GA_ID] = false;
     gtag("consent", "update", { analytics_storage: "granted" });
-    if (loaded) return;
+    if (loaded || location.hostname !== GA_HOST) return;
     loaded = true;
     lockToAnalytics();
     gtag("js", new Date());

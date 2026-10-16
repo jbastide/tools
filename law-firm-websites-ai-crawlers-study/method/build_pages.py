@@ -333,9 +333,11 @@ def build_en(S, X):
 </section>
 
 <footer>
-  <p>Static page. No scripts, no tracking. Educational only, not legal advice. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p>Static page. Google Analytics only if you accept cookies. Educational only, not legal advice. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p class="legal"><a href="https://www.copyfororiginals.com/privacy-policy" rel="noopener">Privacy policy</a> · <a href="#cookie-settings">Cookie settings</a></p>
 </footer>
 </div>
+<script src="../consent.js"></script>
 </body>
 </html>
 """
@@ -600,9 +602,11 @@ def build_sv(S, X):
 </section>
 
 <footer>
-  <p>Statisk sida. Inga skript, ingen spårning. Endast i utbildningssyfte, inte juridisk rådgivning. Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p>Statisk sida. Google Analytics bara om du godkänner cookies. Endast i utbildningssyfte, inte juridisk rådgivning. Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p class="legal"><a href="https://www.copyfororiginals.com/privacy-policy" rel="noopener">Integritetspolicy</a> · <a href="#cookie-settings">Cookieinställningar</a></p>
 </footer>
 </div>
+<script src="../../consent.js"></script>
 </body>
 </html>
 """

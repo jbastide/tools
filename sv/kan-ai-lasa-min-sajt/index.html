@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kan AI läsa din webbplats? Ett gratis verktyg som kollar fakta och dörren</title>
+<meta name="description" content="Ett gratis verktyg med öppen källkod som kollar om ChatGPT, Claude och Perplexity kan läsa fakta på dina sidor och om din server släpper in deras sökrobotar. Körs på din dator eller på en server i företaget.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/can-ai-read-my-site/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/can-ai-read-my-site/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="Kan AI läsa din webbplats? Ett gratis verktyg som tar reda på det">
+<meta property="og:description" content="Det kollar om AI-verktyg hittar fakta på dina sidor och om din server släpper in deras sökrobotar. Gratis och med öppen källkod.">
+<meta property="article:published_time" content="2026-10-17">
+<meta property="article:modified_time" content="2026-10-17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8D%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/#app",
+      "name": "Can AI read my site?",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS, Windows, Linux (Python 3.9 eller senare), Docker",
+      "description": "Ett gratis verktyg med öppen källkod som kollar om AI-sökrobotar kan nå en webbsida och läsa dess fakta.",
+      "url": "https://github.com/jbastide/can-ai-read-my-site",
+      "downloadUrl": "https://github.com/jbastide/can-ai-read-my-site/archive/refs/heads/main.zip",
+      "license": "https://opensource.org/licenses/MIT",
+      "softwareVersion": "1.0.0",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+      "author": { "@id": "https://copyfororiginals.com/#org" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/#article",
+      "headline": "Kan AI läsa din webbplats? Ett gratis verktyg som tar reda på det",
+      "description": "Ett gratis verktyg med öppen källkod som kollar om ChatGPT, Claude och Perplexity kan läsa fakta på dina sidor och om din server släpper in deras sökrobotar.",
+      "url": "https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/",
+      "inLanguage": "sv",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" },
+      "about": { "@id": "https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/#app" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Verktyg", "item": "https://tools.copyfororiginals.com/sv/" },
+          { "@type": "ListItem", "position": 2, "name": "Kan AI läsa min sajt?", "item": "https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Är verktyget verkligen gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. ”Can AI read my site?” är gratis och har öppen källkod under MIT-licensen. Du får använda det, ändra det och dela det. Det körs på din egen dator eller server, så det finns inget konto och ingen registrering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Skickar verktyget min data någonstans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. Verktyget kontaktar bara webbplatsen du ber det kolla. Det har ingen spårning. Webbversionen sparar resultaten i minnet i en timme och skriver aldrig något till disk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan det skapa problem för min webbplats?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det ska det inte. En vanlig kontroll skickar ungefär 35 förfrågningar till sidan under en eller två minuter, utspridda och i slumpad ordning. Kolla bara webbplatser du äger eller har lov att testa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Varför låtsas verktyget vara Googlebot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "För att kunna jämföra. Om din server släpper in Googles namn men nekar en AI-sökrobots namn riktar sig spärren troligen mot AI-verktyg. Om den nekar båda kanske servern kollar om besökare är äkta, och då kan de riktiga sökrobotarna komma in. I vår studie av 100 advokatbyråers webbplatser släppte 11 av de 13 som nekade en AI-sökrobots namn in Googles och Bings namn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vad gör jag om verktyget hittar ett problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Varje resultat i rapporten säger vad du ska göra. De flesta spärrar på servern kommer från en brandvägg, ett webbhotell eller ett säkerhetstillägg, så börja med att fråga den som sköter dem. För problem med fakta på sidan: börja med pris, ett synligt datum och text som syns utan JavaScript."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../site.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:28px 0 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.stat b{display:block;font:700 clamp(30px,6vw,40px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.stat span{font-size:14.5px;color:var(--muted);line-height:1.4}
+pre{background:var(--panel);border:2px solid var(--line-strong);padding:12px 14px;overflow-x:auto;margin:8px 0 18px}
+pre code{background:none;padding:0;font-size:14.5px}
+.cta{display:inline-block;margin:18px 0 0}
+.shot{margin:22px 0 0;border:2px solid var(--line-strong);max-width:100%;height:auto;display:block}
+ol.check li p{margin:4px 0 0}
+.lvl{display:inline-block;font:700 12px/1.6 var(--display);text-transform:uppercase;letter-spacing:.08em;padding:1px 8px}
+.lvl-fix{background:var(--red-bg);color:var(--red)}
+.lvl-check{background:var(--ochre-bg);color:var(--ochre)}
+.lvl-ok{background:var(--moss-bg);color:var(--moss)}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
+    <li><a href="https://www.copyfororiginals.com/faq" hreflang="en">Vanliga frågor</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Språk"><li><span aria-current="true">Svenska</span></li><li><a href="../../can-ai-read-my-site/" hreflang="en" lang="en">English</a></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Sökväg"><a href="../">&larr; Alla verktyg</a></nav>
+
+<header>
+  <p class="kicker">Copy for Originals · Gratis verktyg · AI-sök</p>
+  <h1>Kan AI läsa din webbplats? Ett gratis verktyg som tar reda på det</h1>
+  <p class="lede">”Can AI read my site?” är ett gratis verktyg. Det kollar två saker. Först: hittar ChatGPT, Claude och Perplexity fakta på din sida? Sedan: släpper din server in deras sökrobotar? Du skriver in en webbadress. Efter ungefär en minut får du en kort rapport som säger vad du ska åtgärda.</p>
+  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Publicerad <time datetime="2026-10-17">17 oktober 2026</time></p>
+  <p class="cta"><a class="btn-cta" href="https://github.com/jbastide/can-ai-read-my-site" hreflang="en">Hämta verktyget på GitHub</a></p>
+  <div class="stats">
+    <div class="stat"><b>13 av 78</b><span>advokatbyråers webbplatser i vår studie nekade en AI-sökrobots namn varje gång</span></div>
+    <div class="stat"><b>12 av 13</b><span>av de blockeringarna syntes inte i robots.txt</span></div>
+    <div class="stat"><b>~1 min</b><span>för att kolla en sida</span></div>
+    <div class="stat"><b>0 kr</b><span>gratis och med öppen källkod, MIT-licens</span></div>
+  </div>
+  <div class="tldr">
+    <h2>Kort svar</h2>
+    <p>Att gå att läsa är första steget för att synas i AI-svar. Det här verktyget testar det steget. Det läser din sida så som de flesta AI-sökrobotar gör, utan att köra JavaScript. Sedan säger det om dina priser, datum och din huvudtext är lätta att hitta. Det ber också om din sida med AI-sökrobotarnas, Googles och Bings namn. Då ser du om en brandvägg stänger ute AI-verktyg. Du kan köra det på din egen dator. Din IT-avdelning kan också köra det på en server i företaget, för alla.</p>
+  </div>
+  <img class="shot" src="../../can-ai-read-my-site/report-screenshot.jpg" width="800" height="600" alt="En rapport från verktyget, på engelska: 0 saker att åtgärda, 1 att kolla, 5 OK. Det som ska kollas är att ingen av sidans rubriker är en fråga.">
+</header>
+
+<section id="what-it-checks">
+  <h2>Vad kollar verktyget?</h2>
+  <p>Det kollar tre saker, i den här ordningen. Varje resultat märks <span class="lvl lvl-fix">Fix</span> (åtgärda), <span class="lvl lvl-check">Check</span> (kolla) eller <span class="lvl lvl-ok">OK</span>, med en kort rad om vad du ska göra. Verktyget är på engelska.</p>
+  <ol class="check">
+    <li><b>Hittar en AI fakta på din sida?</b>
+      <p>Det räknar orden en sökrobot ser utan JavaScript. Det letar efter priser, datum och dold text. Det kollar om dina rubriker är skrivna som frågor. Det varnar också för priser som bara finns i dold kod.</p></li>
+    <li><b>Släpper din server in AI-sökrobotar?</b>
+      <p>Det ber om din sida som en vanlig webbläsare, som nio AI-sökrobotar och som Google och Bing. Det gör det några gånger, i slumpad ordning. Sedan jämför det svaren.</p></li>
+    <li><b>Vad säger din robots.txt?</b>
+      <p>robots.txt är en liten fil som säger vad sökrobotar får läsa. Verktyget läser din fil så som de officiella reglerna säger att sökrobotar ska göra. Det visar vilka AI-sökrobotar som får läsa sidan du kollade.</p></li>
+  </ol>
+</section>
+
+<section id="why-facts">
+  <h2>Varför kolla fakta och inte bara dörren?</h2>
+  <p>För att en AI kan komma in på din webbplats och ändå inte hitta något att citera. De flesta gratisverktygen stannar vid dörren. Det här verktyget går in.</p>
+  <ul>
+    <li><b>De flesta AI-sökrobotar kör inte JavaScript.</b> Sökrobotarna från OpenAI, Anthropic, Meta, ByteDance och Perplexity läser den råa sidan. Om din text läggs in av ett skript ser de kanske nästan ingenting.</li>
+    <li><b>Dolda priser räknas inte.</b> Många webbplatser lägger priser i dold kod som kallas strukturerad data. I ett test hittade inget av fem AI-verktyg ett pris som bara fanns där. Verktyget säger till när ett pris bara finns i den koden.</li>
+    <li><b>Priser och datum hjälper.</b> I 252&nbsp;000 tester med sex AI-modeller valdes sidor med tydliga priser och färska datum oftare. Ändrad layout gjorde ingen skillnad.</li>
+    <li><b>Dold text kan slängas.</b> Svar i stängda flikar eller dragspel kan försvinna när en sida läses.</li>
+  </ul>
+  <p>Verktyget kan också skriva en prompt åt dig. Klistra in den i ChatGPT, Claude eller Gemini. Då listar AI:n vilka fakta som saknas på din sida: pris, vad som ingår, vem det passar, hur lång tid det tar och vad som kan gå fel.</p>
+  <p>Varför de här sakerna spelar roll förklaras i vår guide, <a href="../vad-avgor-ai-rekommendationer/">vad avgör om en AI rekommenderar dig</a>.</p>
+</section>
+
+<section id="why-several-times">
+  <h2>Varför testar det flera gånger och jämför med Google?</h2>
+  <p>För att ett enda test kan lura dig. Det här är metoden från <a href="../advokatbyraers-webbplatser-ai-sokrobotar-studie/">vår studie av 100 advokatbyråers webbplatser</a>.</p>
+  <p>I studien nekade 13 av 78 webbplatser en AI-sökrobots namn varje gång. Men 12 av de 13 hade inget i robots.txt som visade det. Spärren kom från en brandvägg, ett webbhotell eller ett säkerhetstillägg. Ägaren visste oftast inte om det. Och 11 av de 13 släppte in Googles och Bings namn.</p>
+  <p>Därför frågar verktyget flera gånger, med några sekunders mellanrum. Det frågar också som Google och Bing. När du jämför svaren ser du vilken sorts problem du har:</p>
+  <div class="tablewrap">
+  <table>
+    <caption>Vad servertestet kan visa</caption>
+    <thead><tr><th scope="col">Det här ser du</th><th scope="col">Det betyder troligen</th><th scope="col">Det här gör du</th></tr></thead>
+    <tbody>
+      <tr><td>AI-namnen nekas. Google och Bing släpps in.</td><td>En regel riktar sig mot AI-sökrobotar.</td><td>Fråga ditt webbhotell eller din IT-avdelning om robotregler.</td></tr>
+      <tr><td>AI-namnen och Google eller Bing nekas.</td><td>Din server kanske kollar om besökare är äkta. Den riktiga sökroboten kan komma in.</td><td>Titta i serverloggarna.</td></tr>
+      <tr><td>Ibland in, ibland inte.</td><td>Ofta en gräns för hur många förfrågningar som får komma samtidigt.</td><td>Kör testet igen senare.</td></tr>
+      <tr><td>Alla släpps in.</td><td>Ingen spärr i det här testet.</td><td>Gå vidare till fakta på sidan.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="other-tools">
+  <h2>Finns det andra gratisverktyg som kollar om AI-sökrobotar kommer in?</h2>
+  <p>Ja, och några är riktigt bra. Om du bara vill veta om AI-sökrobotar når din startsida kan du prova något av dessa. Du behöver inte installera något. Alla är på engelska.</p>
+  <ul>
+    <li><a href="https://www.365i.co.uk/tools/ai-bot-checker/" rel="noopener" hreflang="en">365i AI Crawler Checker</a>. Ber om din sida som 12 AI-sökrobotar och en webbläsare, och läser robots.txt. Ingen registrering.</li>
+    <li><a href="https://www.zeevron.com/tools/ai-crawler-checker" rel="noopener" hreflang="en">Zeevron AI Crawler Checker</a>. Ber om din sida som en webbläsare och som varje AI-sökrobot. Ingen registrering.</li>
+    <li><a href="https://rankxai.com/tools/ai-crawler-access-checker" rel="noopener" hreflang="en">RankX AI Crawler Access Checker</a>. Frågar som 24 AI-sökrobotar, fler namn än vårt verktyg. Inget konto.</li>
+    <li><a href="https://github.com/TryGeoSuite/ai-crawler-bots" rel="noopener" hreflang="en">TryGeoSuite ai-crawler-bots</a>. Ett gratis kommandoradsverktyg med öppen källkod, för utvecklare.</li>
+  </ul>
+  <p>Använd vårt verktyg när du också vill veta om en AI hittar fakta på din sida. Använd det när du vill ha jämförelsen med Google och Bing. Eller använd det när ditt företag vill köra testet på en egen server.</p>
+</section>
+
+<section id="how-to-run">
+  <h2>Hur kör man det?</h2>
+  <p>Du behöver Python 3.9 eller senare. Macar har det redan. Du behöver inte installera något annat.</p>
+  <h3>Det enkla sättet: en webbsida på din dator</h3>
+  <ol>
+    <li>Gå till <a href="https://github.com/jbastide/can-ai-read-my-site" hreflang="en">projektet på GitHub</a>. Klicka på den gröna knappen <b>Code</b> och sedan på <b>Download ZIP</b>. Packa upp filen.</li>
+    <li>Öppna <b>Terminal</b>. Skriv <code>cd</code> och ett mellanslag, dra in den uppackade mappen i fönstret och tryck Retur.</li>
+    <li>Skriv den här raden och tryck Retur:
+<pre><code>python3 -m can_ai_read serve --open</code></pre></li>
+    <li>Din webbläsare öppnas. Skriv in din webbadress och klicka på <b>Check now</b>.</li>
+  </ol>
+  <h3>Kommandoraden</h3>
+  <p>Skriv kommandot och din adress. Rapporten skrivs ut i Terminal.</p>
+<pre><code>python3 -m can_ai_read https://dinsajt.se/</code></pre>
+  <p>Lägg till <code>--html rapport.html</code> för att spara en rapport som du kan skicka till någon. Lägg till <code>--prompt prompt.txt</code> för att spara AI-prompten.</p>
+  <h3>För hela teamet</h3>
+  <p>Din IT-avdelning kan köra webbsidan på en server i företaget med Docker. <a href="https://github.com/jbastide/can-ai-read-my-site/blob/main/DEPLOY.md" hreflang="en">IT-guiden</a> (på engelska) går igenom inställningar, inloggning och nätverksregler. Från början kollar servern inga privata eller interna adresser. IT kan också begränsa den till era egna domäner.</p>
+</section>
+
+<section id="results">
+  <h2>Hur läser man resultaten?</h2>
+  <div class="tablewrap">
+  <table>
+    <caption>De tre sorternas resultat</caption>
+    <thead><tr><th scope="col">Resultat</th><th scope="col">Det betyder</th><th scope="col">Exempel</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lvl lvl-fix">Fix</span></td><td>Något håller troligen AI-verktyg ute eller gömmer dina fakta.</td><td>Din server nekar OAI-SearchBot. Det mesta av sidan byggs av JavaScript. Ett pris finns bara i dold kod.</td></tr>
+      <tr><td><span class="lvl lvl-check">Check</span></td><td>Värt en titt. Det kan vara okej, eller ett val någon har gjort.</td><td>Inga priser i texten. Inget synligt datum. Du blockerar AI-sökrobotar för träning.</td></tr>
+      <tr><td><span class="lvl lvl-ok">OK</span></td><td>Inget att göra.</td><td>Alla sökrobotnamn släpps in. Texten går att läsa utan JavaScript.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Ett resultat kräver lite eftertanke. Att blockera sökrobotar för <b>träning</b>, som GPTBot och ClaudeBot, håller dina sidor utanför AI-träning. Det tar <b>inte</b> bort dig från AI-svar. Att blockera sökrobotar för <b>sök</b>, som OAI-SearchBot, gör det. Verktyget håller isär de två.</p>
+</section>
+
+<section id="limits">
+  <div class="caveats">
+    <h2>Det här kan verktyget inte säga</h2>
+    <ul>
+      <li><b>Det är inte den riktiga sökroboten.</b> Testet kommer från din dator eller server, inte från OpenAI, Anthropic eller Perplexity. En webbplats kan behandla de riktiga sökrobotarna annorlunda. Bara dina serverloggar visar vad de faktiskt fick.</li>
+      <li><b>Det kollar en sida i taget.</b> Kolla dina viktigaste sidor: startsidan, priserna och dina viktigaste tjänster.</li>
+      <li><b>Det kan inte lova att du blir rekommenderad.</b> Att gå att läsa är första steget. Vad mer som spelar roll står i <a href="../vad-avgor-ai-rekommendationer/">vår guide</a>.</li>
+      <li><b>Bottskydd kan stoppa själva verktyget.</b> Om till och med testet som vanlig webbläsare nekas säger rapporten det.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>Vanliga frågor</h2>
+  <h3>Är verktyget verkligen gratis?</h3>
+  <p>Ja. ”Can AI read my site?” är gratis och har öppen källkod under MIT-licensen. Du får använda det, ändra det och dela det. Det körs på din egen dator eller server, så det finns inget konto och ingen registrering.</p>
+  <h3>Skickar verktyget min data någonstans?</h3>
+  <p>Nej. Verktyget kontaktar bara webbplatsen du ber det kolla. Det har ingen spårning. Webbversionen sparar resultaten i minnet i en timme och skriver aldrig något till disk.</p>
+  <h3>Kan det skapa problem för min webbplats?</h3>
+  <p>Det ska det inte. En vanlig kontroll skickar ungefär 35 förfrågningar till sidan under en eller två minuter, utspridda och i slumpad ordning. Kolla bara webbplatser du äger eller har lov att testa.</p>
+  <h3>Varför låtsas verktyget vara Googlebot?</h3>
+  <p>För att kunna jämföra. Om din server släpper in Googles namn men nekar en AI-sökrobots namn riktar sig spärren troligen mot AI-verktyg. Om den nekar båda kanske servern kollar om besökare är äkta, och då kan de riktiga sökrobotarna komma in. I vår studie av 100 advokatbyråers webbplatser släppte 11 av de 13 som nekade en AI-sökrobots namn in Googles och Bings namn.</p>
+  <h3>Vad gör jag om verktyget hittar ett problem?</h3>
+  <p>Varje resultat i rapporten säger vad du ska göra. De flesta spärrar på servern kommer från en brandvägg, ett webbhotell eller ett säkerhetstillägg, så börja med att fråga den som sköter dem. För problem med fakta på sidan: börja med pris, ett synligt datum och text som syns utan JavaScript.</p>
+</section>
+
+<section id="sources">
+  <h2>Källor</h2>
+  <ul class="sources">
+    <li>Copy for Originals, <a href="../advokatbyraers-webbplatser-ai-sokrobotar-studie/">”Blockerar advokatbyråers webbplatser AI-sökrobotar?”</a>, version 2, 14 oktober 2026 (13 av 78, 12 av 13, 11 av 13).</li>
+    <li>Copy for Originals, <a href="../innehall-som-llm-hamtar-och-citerar/">”Innehåll som LLM:er hämtar och citerar”</a> (sökrobotar och JavaScript; dold text).</li>
+    <li>Vercel, ”The rise of the AI crawler”. <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" rel="noopener">vercel.com</a></li>
+    <li>searchVIU, test av vad ChatGPT, Claude, Perplexity och Gemini plockar ut ur schemamärkning. <a href="https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/" rel="noopener">searchviu.com</a></li>
+    <li>Vishwakarma et al., ”What Gets Cited: Competitive GEO in AI Answer Engines”, SIGIR 2026 (252&nbsp;000 försök). <a href="https://arxiv.org/abs/2605.25517" rel="noopener">arXiv 2605.25517</a></li>
+    <li>RFC 9309, ”Robots Exclusion Protocol”, september 2022. <a href="https://www.rfc-editor.org/rfc/rfc9309" rel="noopener">rfc-editor.org</a></li>
+    <li>OpenAI, översikt över OpenAI:s sökrobotar. <a href="https://developers.openai.com/api/docs/bots" rel="noopener">developers.openai.com</a></li>
+    <li>De fyra andra verktygen öppnades 17 oktober 2026.</li>
+  </ul>
+  <p>Verktygets kod: <a href="https://github.com/jbastide/can-ai-read-my-site" hreflang="en">github.com/jbastide/can-ai-read-my-site</a>.</p>
+</section>
+
+<footer>
+  <p>Statisk sida. Google Analytics bara om du godkänner cookies. Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p class="legal"><a href="https://www.copyfororiginals.com/privacy-policy" rel="noopener">Integritetspolicy</a> · <a href="#cookie-settings">Cookieinställningar</a></p>
+</footer>
+</div>
+<script src="../../consent.js"></script>
+</body>
+</html>

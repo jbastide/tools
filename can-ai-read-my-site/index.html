@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can AI Read Your Website? A Free Tool That Checks the Facts and the Door</title>
+<meta name="description" content="A free, open-source tool that checks whether ChatGPT, Claude and Perplexity can read the facts on your pages, and whether your server lets their crawlers in. Runs on your computer or on a company server.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/can-ai-read-my-site/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/kan-ai-lasa-min-sajt/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/can-ai-read-my-site/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/can-ai-read-my-site/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/can-ai-read-my-site/">
+<meta property="og:site_name" content="Copy for Originals Tools">
+<meta property="og:title" content="Can AI read your website? A free tool to find out">
+<meta property="og:description" content="It checks whether AI tools can find the facts on your pages and whether your server lets their crawlers in. Free and open source.">
+<meta property="article:published_time" content="2026-10-17">
+<meta property="article:modified_time" content="2026-10-17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8D%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://tools.copyfororiginals.com/can-ai-read-my-site/#app",
+      "name": "Can AI read my site?",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS, Windows, Linux (Python 3.9 or newer), Docker",
+      "description": "A free, open-source tool that checks whether AI crawlers can reach a web page and read its facts.",
+      "url": "https://github.com/jbastide/can-ai-read-my-site",
+      "downloadUrl": "https://github.com/jbastide/can-ai-read-my-site/archive/refs/heads/main.zip",
+      "license": "https://opensource.org/licenses/MIT",
+      "softwareVersion": "1.0.0",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "https://copyfororiginals.com/#org" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/can-ai-read-my-site/#article",
+      "headline": "Can AI read your website? A free tool to find out",
+      "description": "A free, open-source tool that checks whether ChatGPT, Claude and Perplexity can read the facts on your pages, and whether your server lets their crawlers in.",
+      "url": "https://tools.copyfororiginals.com/can-ai-read-my-site/",
+      "inLanguage": "en",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "author": { "@id": "https://copyfororiginals.com/#org" },
+      "publisher": { "@id": "https://copyfororiginals.com/#org" },
+      "about": { "@id": "https://tools.copyfororiginals.com/can-ai-read-my-site/#app" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Can AI read my site?", "item": "https://tools.copyfororiginals.com/can-ai-read-my-site/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/can-ai-read-my-site/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the tool really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. “Can AI read my site?” is free and open source under the MIT license. You can use it, change it and share it. It runs on your own computer or server, so there is no account and no sign-up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the tool send my data anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The tool only contacts the website you ask it to check. It has no tracking. The web version keeps results in memory for one hour and never saves them to disk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will checking my site cause problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It shouldn’t. A standard check sends about 35 requests to the page over a minute or two, spaced out and in a random order. Only check sites you own or have permission to test."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the tool pretend to be Googlebot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To compare. If your server lets Google’s name in but turns away an AI crawler’s name, the block is probably aimed at AI tools. If it turns away both, your server may be checking whether visitors are real, and the real crawlers may get in. In our study of 100 law firm websites, 11 of the 13 sites that blocked an AI crawler’s name let Google’s and Bing’s names in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if the tool finds a problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each result in the report says what to do. Most server blocks come from a firewall, a hosting company or a security plugin, so start by asking whoever runs those. For problems with the facts on your page, start with price, a visible date and text that shows without JavaScript."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../site.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:28px 0 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.stat b{display:block;font:700 clamp(30px,6vw,40px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.stat span{font-size:14.5px;color:var(--muted);line-height:1.4}
+pre{background:var(--panel);border:2px solid var(--line-strong);padding:12px 14px;overflow-x:auto;margin:8px 0 18px}
+pre code{background:none;padding:0;font-size:14.5px}
+.cta{display:inline-block;margin:18px 0 0}
+.shot{margin:22px 0 0;border:2px solid var(--line-strong);max-width:100%;height:auto;display:block}
+ol.check li p{margin:4px 0 0}
+.lvl{display:inline-block;font:700 12px/1.6 var(--display);text-transform:uppercase;letter-spacing:.08em;padding:1px 8px}
+.lvl-fix{background:var(--red-bg);color:var(--red)}
+.lvl-check{background:var(--ochre-bg);color:var(--ochre)}
+.lvl-ok{background:var(--moss-bg);color:var(--moss)}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/">Home</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts">Thoughts</a></li>
+    <li><a href="https://www.copyfororiginals.com/digital-marketing-services">Services</a></li>
+    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Tools</a></li>
+    <li><a href="https://www.copyfororiginals.com/about">About</a></li>
+    <li><a href="https://www.copyfororiginals.com/faq">FAQs</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Language"><li><a href="../sv/kan-ai-lasa-min-sajt/" hreflang="sv" lang="sv">Svenska</a></li><li><span aria-current="true">English</span></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+
+<header>
+  <p class="kicker">Copy for Originals · Free tool · AI search</p>
+  <h1>Can AI read your website? A free tool to find out</h1>
+  <p class="lede">“Can AI read my site?” is a free tool. It checks two things. First, can ChatGPT, Claude and Perplexity find the facts on your page? Second, does your server let their crawlers in? You type in a web address. About a minute later, you get a short report that says what to fix.</p>
+  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Published <time datetime="2026-10-17">October 17, 2026</time></p>
+  <p class="cta"><a class="btn-cta" href="https://github.com/jbastide/can-ai-read-my-site">Get the tool on GitHub</a></p>
+  <div class="stats">
+    <div class="stat"><b>13 of 78</b><span>law firm websites in our study turned away an AI crawler’s name every time</span></div>
+    <div class="stat"><b>12 of 13</b><span>of those blocks did not show up in robots.txt</span></div>
+    <div class="stat"><b>~1 min</b><span>to check one page</span></div>
+    <div class="stat"><b>$0</b><span>free and open source, MIT license</span></div>
+  </div>
+  <div class="tldr">
+    <h2>Short answer</h2>
+    <p>Being readable is the first step to showing up in AI answers. This tool tests that step. It reads your page the way most AI crawlers do, without running JavaScript. Then it tells you if your prices, dates and main text are easy to find. It also asks for your page using the names of AI crawlers, Google and Bing. That shows if a firewall is turning AI tools away. You can run it on your own computer. Your IT team can also run it on a company server for everyone.</p>
+  </div>
+  <img class="shot" src="report-screenshot.jpg" width="800" height="600" alt="A report from the tool: 0 things to fix, 1 to check, 5 OK. The one thing to check says none of the page’s section headings is a question.">
+</header>
+
+<section id="what-it-checks">
+  <h2>What does the tool check?</h2>
+  <p>It checks three things, in this order. Each result is marked <span class="lvl lvl-fix">Fix</span>, <span class="lvl lvl-check">Check</span> or <span class="lvl lvl-ok">OK</span>, with a plain “what to do” line.</p>
+  <ol class="check">
+    <li><b>Can an AI find the facts on your page?</b>
+      <p>It counts the words a crawler can see without JavaScript. It looks for prices, dates and hidden text. It checks if your headings are written as questions. It also flags prices that only live in hidden code.</p></li>
+    <li><b>Does your server let AI crawlers in?</b>
+      <p>It asks for your page as a normal browser, as nine AI crawlers, and as Google and Bing. It does this a few times, in a random order. Then it compares the answers.</p></li>
+    <li><b>What does your robots.txt say?</b>
+      <p>robots.txt is a small file that tells crawlers what they may read. The tool reads yours the way the official rules say crawlers should. It shows which AI crawlers may read the page you checked.</p></li>
+  </ol>
+</section>
+
+<section id="why-facts">
+  <h2>Why check the facts, not just the door?</h2>
+  <p>Because an AI can get into your site and still find nothing to quote. Most of the free checkers stop at the door. This tool goes inside.</p>
+  <ul>
+    <li><b>Most AI crawlers don’t run JavaScript.</b> The crawlers from OpenAI, Anthropic, Meta, ByteDance and Perplexity read the raw page. If your text is added by a script, they may see almost none of it.</li>
+    <li><b>Hidden prices don’t count.</b> Many sites put prices in hidden code called structured data. In one test, none of five AI tools found a price that only lived there. The tool tells you when a price is only in that code.</li>
+    <li><b>Prices and dates help.</b> In 252,000 tests across six AI models, pages with clear prices and recent dates were picked more often. Layout changes alone made no difference.</li>
+    <li><b>Hidden text can get thrown away.</b> Answers inside closed tabs or accordions may be dropped when a page is read.</li>
+  </ul>
+  <p>The tool can also write a prompt for you. Paste it into ChatGPT, Claude or Gemini. The AI then lists which facts your page is missing: price, what’s included, who it’s for, how long it takes and what can go wrong.</p>
+  <p>Why these things matter is explained in our guide, <a href="../what-decides-ai-recommendations/">what decides whether an AI recommends you</a>.</p>
+</section>
+
+<section id="why-several-times">
+  <h2>Why does it test several times and compare with Google?</h2>
+  <p>Because one test can fool you. This is the method from <a href="../law-firm-websites-ai-crawlers-study/">our study of 100 law firm websites</a>.</p>
+  <p>In that study, 13 of 78 sites turned away an AI crawler’s name every time. But 12 of those 13 sites had nothing in robots.txt to show it. The block came from a firewall, a hosting company or a security plugin. The owner usually didn’t know. And 11 of the 13 let Google’s and Bing’s names in.</p>
+  <p>So the tool asks several times, a few seconds apart. It also asks as Google and Bing. Comparing the answers tells you what kind of problem you have:</p>
+  <div class="tablewrap">
+  <table>
+    <caption>What the server test can tell you</caption>
+    <thead><tr><th scope="col">What you see</th><th scope="col">What it probably means</th><th scope="col">What to do</th></tr></thead>
+    <tbody>
+      <tr><td>AI names turned away. Google and Bing let in.</td><td>A rule is aimed at AI crawlers.</td><td>Ask your host or IT team about bot rules.</td></tr>
+      <tr><td>AI names and Google or Bing turned away.</td><td>Your server may check if visitors are real. The real crawler may get in.</td><td>Look in your server logs.</td></tr>
+      <tr><td>Sometimes let in, sometimes not.</td><td>Often a limit on how many requests come in at once.</td><td>Run the check again later.</td></tr>
+      <tr><td>Everyone let in.</td><td>No block from this test.</td><td>Move on to the facts on the page.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="other-tools">
+  <h2>Are there other free tools that check AI crawler access?</h2>
+  <p>Yes, and some are very good. If you only want to know if AI crawlers can reach your home page, try one of these. You don’t need to install anything.</p>
+  <ul>
+    <li><a href="https://www.365i.co.uk/tools/ai-bot-checker/" rel="noopener">365i AI Crawler Checker</a>. Asks for your page as 12 AI crawlers and a browser, and reads robots.txt. No sign-up.</li>
+    <li><a href="https://www.zeevron.com/tools/ai-crawler-checker" rel="noopener">Zeevron AI Crawler Checker</a>. Asks for your page as a browser and as each AI crawler. No sign-up.</li>
+    <li><a href="https://rankxai.com/tools/ai-crawler-access-checker" rel="noopener">RankX AI Crawler Access Checker</a>. Asks as 24 AI crawlers, more names than our tool. No account.</li>
+    <li><a href="https://github.com/TryGeoSuite/ai-crawler-bots" rel="noopener">TryGeoSuite ai-crawler-bots</a>. A free, open-source command-line tool for developers.</li>
+  </ul>
+  <p>Use our tool when you also want to know if an AI can find the facts on your page. Use it when you want the Google and Bing comparison. Or use it when your company wants to run the test on its own server.</p>
+</section>
+
+<section id="how-to-run">
+  <h2>How do you run it?</h2>
+  <p>You need Python 3.9 or newer. Macs already have it. There is nothing else to install.</p>
+  <h3>The easy way: a web page on your computer</h3>
+  <ol>
+    <li>Go to <a href="https://github.com/jbastide/can-ai-read-my-site">the project on GitHub</a>. Click the green <b>Code</b> button, then <b>Download ZIP</b>. Unzip it.</li>
+    <li>Open <b>Terminal</b>. Type <code>cd</code> and a space, drag the unzipped folder into the window, and press Enter.</li>
+    <li>Type this line and press Enter:
+<pre><code>python3 -m can_ai_read serve --open</code></pre></li>
+    <li>Your browser opens. Type in your web address and click <b>Check now</b>.</li>
+  </ol>
+  <h3>The command line</h3>
+  <p>Type the command and your address. The report prints in Terminal.</p>
+<pre><code>python3 -m can_ai_read https://yoursite.com/</code></pre>
+  <p>Add <code>--html report.html</code> to save a report you can send to someone. Add <code>--prompt prompt.txt</code> to save the AI prompt.</p>
+  <h3>For your whole team</h3>
+  <p>Your IT team can run the web page on a company server with Docker. The <a href="https://github.com/jbastide/can-ai-read-my-site/blob/main/DEPLOY.md">IT guide</a> covers the settings, sign-in and network rules. By default, the server will not check private or internal addresses. IT can also limit it to your own domains.</p>
+</section>
+
+<section id="results">
+  <h2>How do you read the results?</h2>
+  <div class="tablewrap">
+  <table>
+    <caption>The three kinds of results</caption>
+    <thead><tr><th scope="col">Result</th><th scope="col">What it means</th><th scope="col">Examples</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lvl lvl-fix">Fix</span></td><td>Something is probably keeping AI tools out, or hiding your facts.</td><td>Your server turns away OAI-SearchBot. Most of the page is built by JavaScript. A price is only in hidden code.</td></tr>
+      <tr><td><span class="lvl lvl-check">Check</span></td><td>Worth a look. It may be fine, or it may be a choice someone made.</td><td>No prices in the text. No visible date. You block AI training crawlers.</td></tr>
+      <tr><td><span class="lvl lvl-ok">OK</span></td><td>Nothing to do.</td><td>All crawler names let in. Text readable without JavaScript.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>One result needs a word of care. Blocking <b>training</b> crawlers like GPTBot and ClaudeBot keeps your pages out of AI training. It does <b>not</b> remove you from AI answers. Blocking <b>search</b> crawlers like OAI-SearchBot does. The tool keeps the two apart.</p>
+</section>
+
+<section id="limits">
+  <div class="caveats">
+    <h2>What the tool can’t tell you</h2>
+    <ul>
+      <li><b>It is not the real crawler.</b> The test comes from your computer or server, not from OpenAI, Anthropic or Perplexity. A site can treat the real crawlers differently. Only your server logs show what they really got.</li>
+      <li><b>It checks one page at a time.</b> Check your most important pages: home, prices and your main services.</li>
+      <li><b>It can’t promise you’ll be recommended.</b> Being readable is the first step. What else matters is in <a href="../what-decides-ai-recommendations/">our guide</a>.</li>
+      <li><b>Bot protection may block the tool itself.</b> If even the normal browser test is turned away, the report says so.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <h3>Is the tool really free?</h3>
+  <p>Yes. “Can AI read my site?” is free and open source under the MIT license. You can use it, change it and share it. It runs on your own computer or server, so there is no account and no sign-up.</p>
+  <h3>Does the tool send my data anywhere?</h3>
+  <p>No. The tool only contacts the website you ask it to check. It has no tracking. The web version keeps results in memory for one hour and never saves them to disk.</p>
+  <h3>Will checking my site cause problems?</h3>
+  <p>It shouldn’t. A standard check sends about 35 requests to the page over a minute or two, spaced out and in a random order. Only check sites you own or have permission to test.</p>
+  <h3>Why does the tool pretend to be Googlebot?</h3>
+  <p>To compare. If your server lets Google’s name in but turns away an AI crawler’s name, the block is probably aimed at AI tools. If it turns away both, your server may be checking whether visitors are real, and the real crawlers may get in. In our study of 100 law firm websites, 11 of the 13 sites that blocked an AI crawler’s name let Google’s and Bing’s names in.</p>
+  <h3>What should I do if the tool finds a problem?</h3>
+  <p>Each result in the report says what to do. Most server blocks come from a firewall, a hosting company or a security plugin, so start by asking whoever runs those. For problems with the facts on your page, start with price, a visible date and text that shows without JavaScript.</p>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ul class="sources">
+    <li>Copy for Originals, <a href="../law-firm-websites-ai-crawlers-study/">“Do law firm websites block AI crawlers?”</a>, version 2, October 14, 2026 (13 of 78, 12 of 13, 11 of 13).</li>
+    <li>Copy for Originals, <a href="../rag-friendly-content/">“How to write content that LLMs retrieve and cite”</a> (crawlers and JavaScript; hidden text).</li>
+    <li>Vercel, “The rise of the AI crawler.” <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" rel="noopener">vercel.com</a></li>
+    <li>searchVIU, test of what ChatGPT, Claude, Perplexity and Gemini extract from schema markup. <a href="https://www.searchviu.com/en/schema-markup-and-ai-in-2025-what-chatgpt-claude-perplexity-gemini-really-see/" rel="noopener">searchviu.com</a></li>
+    <li>Vishwakarma et al., “What Gets Cited: Competitive GEO in AI Answer Engines,” SIGIR 2026 (252,000 trials). <a href="https://arxiv.org/abs/2605.25517" rel="noopener">arXiv 2605.25517</a></li>
+    <li>RFC 9309, “Robots Exclusion Protocol,” September 2022. <a href="https://www.rfc-editor.org/rfc/rfc9309" rel="noopener">rfc-editor.org</a></li>
+    <li>OpenAI, overview of OpenAI crawlers. <a href="https://developers.openai.com/api/docs/bots" rel="noopener">developers.openai.com</a></li>
+    <li>The four other checkers were opened on October 17, 2026.</li>
+  </ul>
+  <p>The tool’s code: <a href="https://github.com/jbastide/can-ai-read-my-site">github.com/jbastide/can-ai-read-my-site</a>.</p>
+</section>
+
+<footer>
+  <p>Static page. Google Analytics only if you accept cookies. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p class="legal"><a href="https://www.copyfororiginals.com/privacy-policy" rel="noopener">Privacy policy</a> · <a href="#cookie-settings">Cookie settings</a></p>
+</footer>
+</div>
+<script src="../consent.js"></script>
+</body>
+</html>

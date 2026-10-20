@@ -51,6 +51,7 @@ requests unless a visitor accepts Google Analytics (see "Analytics and cookie co
 | How to write content that LLMs retrieve and cite | [`rag-friendly-content/`](rag-friendly-content/) | What answer engines do with a page, each AEO practice rated by evidence, and a 12-point checklist. |
 | How AI agents choose products for consumers | [`how-ai-agents-choose-products/`](how-ai-agents-choose-products/) | Evidence review (version 1, October 17, 2026) of how ChatGPT, Perplexity, Gemini, Claude, Amazon Rufus and Copilot pick products: a six-stage decision model, a 21-row verdict table for Cialdini’s principles and the Kahneman, Thaler and Ariely nudges, the evidence for and against the “third-party wall”, and a tactics table split into measured, vendor-asserted and backfiring. 397 figures and quotations were checked against their cited pages by four Claude Opus passes (263 confirmed as written, 93 tightened, 17 re-pointed to the right source, 13 sourced or softened, 6 corrected, 5 unreachable); the per-claim CSVs are in `research/verification/`, the five research-thread notes in `research/notes/` and the synthesis in `research/synthesis.md`. Hand-written HTML, no builder: edit `index.html` and mirror text changes in `sv/`. Living document; bump the version line in the byline when revising. |
 | HIPAA-compliant conversion tracking for Google Ads | [`hipaa-google-ads-conversions/`](hipaa-google-ads-conversions/) | Healthcare tracking platforms, enterprise CDPs, server-side GTM, offline conversion imports and HIPAA call tracking compared by price, setup effort and fit for practices without IT staff, with dated sources and a section on what couldn't be verified. Educational only, not legal advice. |
+| How this site makes money | [`how-this-site-makes-money/`](how-this-site-makes-money/) | Disclosure page: client services pay for the site; guides that compare tools may carry affiliate links, each marked “paid link” with `rel="sponsored"`; rankings come before any affiliate program; the programs joined and any ads are listed with dates (none as of October 20, 2026). See "Ads and affiliate links" below. |
 
 ## Swedish and English
 
@@ -102,6 +103,7 @@ Tools keep their English product names and slugs under `sv/`. Guides and studies
 | [`hipaa-google-ads-conversions/`](hipaa-google-ads-conversions/) | [`sv/hipaa-google-ads-konverteringar/`](sv/hipaa-google-ads-konverteringar/) |
 | [`how-ai-agents-choose-products/`](how-ai-agents-choose-products/) | [`sv/hur-ai-agenter-valjer-produkter/`](sv/hur-ai-agenter-valjer-produkter/) |
 | [`how-much-do-legal-marketing-agencies-charge/`](how-much-do-legal-marketing-agencies-charge/) | [`sv/vad-tar-marknadsforingsbyraer-for-advokater-betalt/`](sv/vad-tar-marknadsforingsbyraer-for-advokater-betalt/) |
+| [`how-this-site-makes-money/`](how-this-site-makes-money/) | [`sv/sa-tjanar-sajten-pengar/`](sv/sa-tjanar-sajten-pengar/) |
 | [`law-firm-google-ads-agency-scorecard/`](law-firm-google-ads-agency-scorecard/) | [`sv/advokatbyra-google-ads-byra-poangkort/`](sv/advokatbyra-google-ads-byra-poangkort/) |
 | [`law-firm-google-ads-budget/`](law-firm-google-ads-budget/) | [`sv/advokatbyra-google-ads-budget/`](sv/advokatbyra-google-ads-budget/) |
 | [`law-firm-google-ads-faq/`](law-firm-google-ads-faq/) | [`sv/advokatbyra-google-ads-fragor/`](sv/advokatbyra-google-ads-fragor/) |
@@ -175,7 +177,49 @@ the same property as copyfororiginals.com) only after Accept. Nothing is request
 - Every footer ends with `<p class="legal">` (or `<span class="legal">` in the tools' flex footers): the
   privacy policy link and "Cookie settings" ("Integritetspolicy" and "Cookieinställningar" on Swedish pages).
   A new page with no inputs adds `<script src="../consent.js"></script>` (path like `site.css`) before `</body>`.
-  The page builders in `method/` emit both.
+  The page builders in `method/` emit both. The two homepages also link the disclosure page in that line.
+
+## Ads and affiliate links
+
+Guides may carry affiliate links, and later ads; the rules and the list of programs joined are on
+[`how-this-site-makes-money/`](how-this-site-makes-money/) and its Swedish twin. As of October 20, 2026 the
+site has no affiliate links and no ads.
+
+- **Never on input pages.** A page where visitors type, paste or upload data carries no ads and no affiliate
+  links, the same pages the consent rule above keeps free of Google Analytics. Their "No tracking" footer
+  stays true.
+- **Ranking before programs.** A comparison's ranking is set from its data before joining any affiliate
+  program, and a commission never changes it. Tools without a program get the same depth.
+- **Mark every link.** Each affiliate link carries `rel="sponsored noopener"` and is followed by the words
+  "paid link" ("betald länk" on Swedish pages), the label the FTC calls adequate right next to the link;
+  "affiliate link" alone may not tell readers we're paid:
+  `<a href="https://…" rel="sponsored noopener">Otterly</a> (paid link)`.
+- **Disclose at the top.** A page with affiliate links opens with this block under the byline:
+
+  ```html
+  <p class="scope"><b>This page contains paid links.</b> If you buy through a link marked “paid link”, we may earn a commission at no cost to you. The ranking was set from the data before we joined any affiliate program. <a href="../how-this-site-makes-money/">How this site makes money</a>.</p>
+  ```
+
+  ```html
+  <p class="scope"><b>Sidan innehåller betalda länkar.</b> Om du köper via en länk märkt ”betald länk” kan vi få en provision, utan extra kostnad för dig. Rangordningen bestämdes utifrån data innan vi gick med i något affiliateprogram. <a href="../sa-tjanar-sajten-pengar/">Så tjänar sajten pengar</a>.</p>
+  ```
+
+- **Disclose in the footer.** Its footer's first line reads:
+
+  ```html
+  <p>Static page. Google Analytics only if you accept cookies. Contains paid links, each marked; see <a href="../how-this-site-makes-money/">how this site makes money</a>. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  ```
+
+  ```html
+  <p>Statisk sida. Google Analytics bara om du godkänner cookies. Innehåller betalda länkar, var och en märkt; se <a href="../sa-tjanar-sajten-pengar/">så tjänar sajten pengar</a>. Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  ```
+
+- **When a program is joined,** add its row (program, date joined, what it pays) to the table on both
+  disclosure pages, change their "None" answers, and update both pages' "Last updated" date.
+- **Display ads are not set up.** Before any ad loads: `consent.js` must ask for advertising consent
+  separately (today it grants `analytics_storage` only, and its CSP allows Google Analytics hosts only);
+  Google's ad network needs a Google-certified consent tool for EEA and UK visitors; the privacy policy on
+  copyfororiginals.com needs an ads section; and the disclosure pages' "Are there ads" answer changes first.
 
 ## Deploying
 

@@ -1,0 +1,103 @@
+checker: geoptie
+firm: F09
+input: cookcountyinjurylaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:40:44Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+cookcountyinjurylaw.com
+Brand detected: Saks, Robinson & Rittenberg, Ltd.
+VISIBILITY SCORE
+55
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're showing up — but competitors rank higher.
+Track your rankings weekly and see exactly when your position shifts.
+Start weekly tracking
+ChatGPT
+8 brands in answer
+Ranked
+#7
+#1
+Clifford Law Offices
+#2
+Corboy & Demetrio
+#3
+Power Rogers
+#4
+Salvi, Schostok & Pritchard
+#5
+Smith LaCien
+#6
+Horwitz, Horwitz & Associates
+#7
+Saks, Robinson & Rittenberg
+#8
+Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca
+Perplexity
+10 brands in answer
+Ranked
+#8
+#1
+Horwitz, Horwitz & Associates
+#2
+Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca
+#3
+Briskman Briskman & Greenberg
+#4
+Ankin Law
+#5
+The Kryder Law Group
+#6
+Staver Accident Injury Lawyers
+#7
+Taxman, Pollock, Murray & Bekkerman
+#8
+Saks, Robinson & Rittenberg
+#9
+Clifford Law Offices
+#10
+Budin Law Offices
+Claude
+18 brands in answer
+Not mentioned
+#1
+Strom Yen Injury Attorneys
+#2
+Ankin Law
+#3
+Salvi, Schostok & Pritchard P.C.
+#4
+Disparti Law Group
+#5
+Leonard Law Group
+#6
+GWC Injury Lawyers
+#7
+Taxman, Pollock & Bekkerman
+#8
+Driscoll Law Group
+#9
+Ori Law Group
+#10
+Dudley & Lake
+#11
+Montgomery Law Firm
+#12
+Shea Law Group
+#13
+Daniel Goodman Law
+#14
+Rosenfeld Injury Lawyers
+#15
+Horwitz, Horwitz & Associates
++3 more results →
+Google
+0 brands in answer
+Not mentioned
+No results available

@@ -1,0 +1,88 @@
+checker: geoptie
+firm: F05
+input: chicago-personal-injury-lawyers.us
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:36:11Z
+seconds_to_result: 46
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+chicago-personal-injury-lawyers.us
+Brand detected: The Horwitz Law Group
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+5 brands in answer
+Not mentioned
+#1
+Clifford Law Offices
+#2
+Corboy & Demetrio
+#3
+Horwitz, Horwitz & Associates
+#4
+Levin & Perconti
+#5
+Chicago Bar Association’s Lawyer Referral Service
+Perplexity
+8 brands in answer
+Not mentioned
+#1
+Clifford Law Offices
+#2
+Corboy & Demetrio
+#3
+Salvi, Schostok & Pritchard
+#4
+Cavanagh Sorich Law Group
+#5
+Briskman Briskman & Greenberg
+#6
+Horwitz, Horwitz & Associates
+#7
+Rosenfeld Injury Lawyers
+#8
+Phillips Law Offices
+Claude
+14 brands in answer
+Not mentioned
+#1
+Taxman, Pollock, Murray & Bekkerman
+#2
+Levin & Perconti
+#3
+Briskman Briskman & Greenberg
+#4
+Ankin Law
+#5
+DePaolo & Zadeikis
+#6
+Kryder Law Group
+#7
+Rosenfeld Injury Lawyers
+#8
+Meyers & Flowers Trial Attorneys
+#9
+Disparti Law Group
+#10
+Cavanagh Law Group
+#11
+Budin Law Offices
+#12
+Horwitz Horwitz & Associates
+#13
+Abels & Annes
+#14
+Gill Ports Hoste
+Google
+0 brands in answer
+Not mentioned
+No results available

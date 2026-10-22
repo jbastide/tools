@@ -1,0 +1,82 @@
+checker: geoptie
+firm: F03
+input: windycityinjury.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:33:53Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+windycityinjury.com
+Brand detected: Flanagan Injury Law Group
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+5 brands in answer
+Not mentioned
+#1
+Power Rogers
+#2
+Clifford Law Offices
+#3
+Corboy & Demetrio
+#4
+Malman Law
+#5
+Chicago Bar Association’s Lawyer Referral Service
+Perplexity
+7 brands in answer
+Not mentioned
+#1
+Horwitz, Horwitz & Associates
+#2
+Willens & Baez Personal Injury Lawyers
+#3
+Briskman Briskman & Greenberg
+#4
+Smith LaCien LLP
+#5
+Curcio & Casciato
+#6
+Staver Accident Injury Lawyers
+#7
+Wszolek, Wszolek & Schmitt
+Claude
+12 brands in answer
+Not mentioned
+#1
+Clifford Law Offices
+#2
+Malman Law
+#3
+Briskman Briskman & Greenberg
+#4
+Disparti Law Group
+#5
+Powell and Pisman Injury Lawyers
+#6
+Phillips Law Offices
+#7
+Smith LaCien LLP
+#8
+Gill Ports Hoste
+#9
+Katz Friedman Eisenstein Johnson Bareck & Bertuca
+#10
+Healy Scanlon Veugeler Gannon
+#11
+Salvi Schostok & Pritchard
+#12
+Murray Legal Group
+Google
+0 brands in answer
+Not mentioned
+No results available

@@ -1,0 +1,22 @@
+checker: Geoptie Free AI Visibility Checker
+url: https://geoptie.com/ai-visibility-checker
+firm: F01 Malman Law
+input: malmanlaw.com
+run: 1, agent, 2026-10-22 ~08:28 UTC, built-in browser
+time to result: about 50 seconds
+--- result section, verbatim from page text ---
+VISIBILITY REPORT
+malmanlaw.com
+Brand detected: Malman Law
+VISIBILITY SCORE 33/100
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+ChatGPT | 5 brands in answer | Not mentioned
+#1 Levin & Perconti; #2 Tarpey, Jones & Schroeder; #3 Schwartz Jambois; #4 Clifford Law Offices; #5 KSG Law
+Perplexity | 9 brands in answer | Ranked #2
+#1 Levin & Perconti; #2 Malman Law; #3 Willens & Baez; #4 Senior Justice Law Firm; #5 Schwartz Injury Law; #6 Salvi, Schostok & Pritchard; #7 Rosenfeld Injury Lawyers; #8 Wise Law Offices; #9 McCreadyLaw
+Claude | 12 brands in answer | Not mentioned
+#1 Clifford Law Offices; #2 Rosenfeld Injury Lawyers; #3 Kryder Law Group; #4 Horwitz, Horwitz & Associates; #5 Levin & Perconti; #6 Kent M. Lucaccioni, Ltd.; #7 Shore Law LLC; #8 TorHoerman Law; #9 Smith LaCien LLP; #10 Goldberg & Goldberg; #11 Passen Powell Jenkins; #12 Corboy & Demetrio, P.C.
+Google | 0 brands in answer | Not mentioned | No results available
+--- notes ---
+The prompt Geoptie sent is not shown. The banner says the brand "doesn't show up" although Perplexity ranked it #2. The screenshot taken while the result was rendering read "6 brands in answer" for ChatGPT; the final text reads 5.

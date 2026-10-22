@@ -1,0 +1,21 @@
+checker: Loamly AI visibility check
+url: https://www.loamly.ai/check/malmanlaw-com (tab title "malmanlaw AI Visibility Report | Generating | Loamly")
+firm: F01 Malman Law
+input: malmanlaw.com
+run: 1, agent, submitted 2026-10-22 ~08:29 UTC; page read at about 1 and 2.5 minutes, still "Generating"
+--- page text at ~1 minute, verbatim excerpt ---
+0% AI VISIBILITY
+Missing from the tested prompts
+Malman Law is not being recommended in this tested buying-moment cluster.
+Across the prompts tested in this run, AI is leaning on third-party publishers and other intermediaries instead of Malman Law.
+OWNED CITATIONS 0%  SITE READINESS 75/100  TRUST SIGNALS 1/6
+Visibility Share % 0 prompts | 1 Malman Law (You) 0 mentions 0%
+Recommendation share 0% (0 of 0 answers)
+Owned citations 0% (0 of 0 from malmanlaw.com)
+Site readiness 75 Crawl signals open
+Trust signals 1/6 Gap: Web mentions
+Blockers: No llms.txt; Weak entity footprint; Not in AI memory
+0 AI answers captured · 0 prompts tested · Observed citations only · Oct 22, 2026
+THE BRAND IS MISSING FROM THE ANSWER SET.
+--- notes ---
+The page states a 0% verdict ("not being recommended") while also stating 0 answers captured and 0 prompts tested. Still "0 prompts tested" at ~2.5 minutes. To be re-read later at the same URL.

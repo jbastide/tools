@@ -1,0 +1,11 @@
+checker: loamly
+firm: F02
+input: 844seemike.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:46:44Z
+seconds_to_result: 
+outcome: result_no_answers
+--- result text, verbatim from the page ---
+url: https://www.loamly.ai/check/844seemike-com (title "Mike Agruss Law AI Visibility Report | 0% | Loamly"), read 2026-10-22T08:53:11Z
+0% | AI VISIBILITY | Missing from the tested prompts | Mike Agruss Law is not being recommended in this tested buying-moment cluster. | Across the prompts tested in this run, AI is leaning on third-party publishers and other intermediaries instead of Mike Agruss Law. | OWNED CITATIONS | 0% | SITE READINESS | 65/100 | TRUST SIGNALS | 1/6 | Visibility Share % | 0 prompts | 1 | Mike Agruss Law(You) | 0 mentions | 0% | Recommendation share | 0% | 0 of 0 answers | Owned citations | 0% | 0 of 0 from 844seemike.com | Site readiness | 65 | Crawl signals open | Trust signals | 1/6 | Gap: Web mentions | Blockers | No llms.txt | Weak entity footprint | Not in AI memory | 0 AI answers captured · 0 prompts tested · Observed citations only · Oct 22, 2026 | THE BRAND IS MISSING FROM THE ANSWER SET.

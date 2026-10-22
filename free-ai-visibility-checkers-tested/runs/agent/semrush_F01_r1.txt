@@ -1,0 +1,33 @@
+checker: Semrush AI Search Visibility Checker
+url: https://www.semrush.com/free-tools/ai-search-visibility-checker/?domain=malmanlaw.com
+firm: F01 Malman Law
+input: malmanlaw.com
+run: 1, agent, 2026-10-22 ~08:27 UTC, built-in browser, cookies denied
+free uses counter after run: 2/3
+--- result section, verbatim from page text ---
+AI Visibility Overview for: malmanlaw.com
+AI Visibility Score 31 (Low)
+Mentions 124
+Citations 282
+Audience Reach 2.2M
+This site's AI Visibility Score is up 7% over the last three months.
+Mentions breakdown across AI search platforms.
+ChatGPT 10
+Gemini 11
+AI Mode 15
+AI Overviews 88
+Competitor Visibility Comparison
+Your site malmanlaw.com: AI Visibility Score 31, Mentions 124, Audience Reach 2.2M
+Competitor salvilaw.com: AI Visibility Score 30, Mentions 225, Audience Reach 2.2M
+Top Cited Pages (URL, Citations)
+www.malmanlaw.com/malman-law-injury-blog/what-are-the-3-stages-of-sepsis 48
+www.malmanlaw.com 41
+www.malmanlaw.com/what-are-the-3-stages-of-sepsis 41
+Best Performing Topics (Topic, Mentions, Topic Volume)
+Steve Malman Family and Legal Profile 26 5,111
+Chicago Personal Injury and Criminal Defense Lawyers 11 34,128
+Chicago Car Accident Lawyers 11 17,285
+Nursing Home Abuse and Neglect Legal Support 10 116,248
+Personal Injury Legal Services 7 965,333
+--- note ---
+The page also shows "AI Visibility Trend" (Mentions 12.4K, Citations 3.8K, Reach 1.2M) and a second "AI Visibility Score 64" panel inside upsell blocks; these figures do not match the result and look like fixed illustrations, so they are not counted.

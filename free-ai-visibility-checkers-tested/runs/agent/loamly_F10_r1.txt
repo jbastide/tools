@@ -1,0 +1,11 @@
+checker: loamly
+firm: F10
+input: rundiolaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:52:36Z
+seconds_to_result: 
+outcome: result_no_answers
+--- result text, verbatim from the page ---
+url: https://www.loamly.ai/check/rundiolaw-com (title "rundiolaw AI Visibility Report | 0% | Loamly"), read 2026-10-22T08:54:11Z
+0% | AI VISIBILITY | Missing from the tested prompts | rundiolaw is not being recommended in this tested buying-moment cluster. | OWNED CITATIONS | 0% | SITE READINESS | 7/100 | TRUST SIGNALS | 0/6 | Visibility Share % | 0 prompts | rundiolaw(You) | 0 mentions | 0% | Recommendation share | 0% | 0 of 0 answers | Owned citations | 0% | 0 of 0 from rundiolaw.com | Site readiness | 7 | Crawl signals open | Trust signals | 0/6 | Gap: Web mentions | Blockers | No Organization schema | Weak entity footprint | Not in AI memory | 3 Make the site easier to trust: The current site-readiness score is 7. | 0 AI answers captured · 0 prompts tested · Observed citations only · Oct 22, 2026 | THE BRAND IS MISSING FROM THE ANSWER SET.

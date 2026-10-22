@@ -1,0 +1,27 @@
+checker,firm_id,round,started_utc,seconds_to_result,outcome,notes
+hubspot,F01,1,2026-10-22T08:23:57Z,,no_result,"Form submitted twice (click, then Enter after declining cookies); page reloaded with inputs in the URL and an empty form both times. Page loads a CHEQ bot-detection script (obs.greencolumnart.com, ch=cheq4ppc); cause unverified. Not retried."
+rankprompt,F01,1,2026-10-22T08:25:42Z,,captcha,"Inputs: brand Malman Law; what you sell: personal injury lawyer in Chicago; market United States. Cloudflare Turnstile checkbox (Verify you are human) appeared under the form; results stayed loading. Agent did not click it."
+semrush,F01,1,2026-10-22T08:27:00Z,10,result,"Domain input. Database tool (26M+ prompts). Counter showed 2/3 free uses left after the run."
+geoptie,F01,1,2026-10-22T08:28:10Z,50,result,"Domain input; prompt not shown; Google returned no results."
+loamly,F01,1,2026-10-22T08:29:00Z,,pending,"Report page showed a 0% verdict with 0 prompts tested and 0 answers captured while still Generating at 1 and 2.5 minutes. Re-read later."
+geoptie,F02,1,2026-10-22T08:32:40Z,50,result,
+geoptie,F03,1,2026-10-22T08:33:53Z,45,result,
+geoptie,F04,1,2026-10-22T08:35:03Z,46,result,
+geoptie,F05,1,2026-10-22T08:36:11Z,46,result,"Horwitz, Horwitz & Associates (a different firm) appears in all three answers"
+geoptie,F06,1,2026-10-22T08:37:20Z,45,result,Competitor set differs from other firms' runs; prompt market not shown
+geoptie,F07,1,2026-10-22T08:38:28Z,46,result,Answers lean to workers' compensation firms; Claude list truncated (+1 more)
+geoptie,F08,1,2026-10-22T08:39:37Z,46,result,
+geoptie,F09,1,2026-10-22T08:40:44Z,45,result,Claude list truncated (+3 more)
+geoptie,F10,1,2026-10-22T08:41:56Z,45,result,Claude list truncated (+2 more)
+loamly,F01,1,2026-10-22T08:29:00Z,,result_no_answers,"Final report (re-read 08:43 UTC, title 'Malman Law AI Visibility Report | 0% | Loamly'): 0% verdict with 0 prompts tested and 0 answers captured"
+semrush,F02,1,2026-10-22T08:44:46Z,10,result,"Counter 1/3 after run. A 'Create your free Semrush account' modal covered the result, with a 'See results of the Free Tool' button; result text was readable behind it. Trend and second score panels are fixed upsell illustrations (same 12.4K/3.8K/1.2M/64 as F01)."
+semrush,F03,1,2026-10-22T08:45:33Z,10,result,Counter 0/3 after run (daily free limit reached). Signup modal shown again.
+loamly,F09,1,2026-10-22T08:43:25Z,,result_no_answers,Final report read 08:46 UTC: 0% verdict with 0 prompts tested and 0 answers captured
+loamly,F02,1,2026-10-22T08:46:44Z,,result_no_answers,Read 08:53 UTC; report titled 'Mike Agruss Law'; 0 prompts tested
+loamly,F03,1,2026-10-22T08:47:40Z,,result_no_answers,Read 08:53 UTC; 0 prompts tested
+loamly,F04,1,2026-10-22T08:48:23Z,,result_no_answers,Read 08:53 UTC; 0 prompts tested
+loamly,F05,1,2026-10-22T08:49:22Z,,result_no_answers,Read 08:53 UTC; 0 prompts tested
+loamly,F06,1,2026-10-22T08:50:06Z,,result_no_answers,Read 08:53 UTC; 0 prompts tested
+loamly,F07,1,2026-10-22T08:51:01Z,,result_no_answers,Read 08:54 UTC; 0 prompts tested
+loamly,F08,1,2026-10-22T08:51:45Z,,result_no_answers,Read 08:54 UTC; 0 prompts tested
+loamly,F10,1,2026-10-22T08:52:36Z,,result_no_answers,Read 08:54 UTC; 0 prompts tested

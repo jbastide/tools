@@ -1,0 +1,37 @@
+checker: geoptie
+firm: F07
+input: anesilaw.com
+round: 3
+run by: agent (built-in browser)
+started_utc: 2026-10-23T22:08:03Z
+seconds_to_result: 5
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+anesilaw.com
+Brand detected: Anesi Ozmon
+VISIBILITY SCORE
+33
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+5 brands in answer
+Not mentioned #1 O’Connor & Nakos #2 Horwitz, Horwitz & Associates #3 Coven Law Group #4 Corboy & Demetrio #5 Chicago Workers’ Compensation Lawyers
+Perplexity
+9 brands in answer
+Not mentioned #1 Levin & Perconti #2 GWC Injury Lawyers #3 Briskman Briskman & Greenberg #4 Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca #5 Cooney & Conway #6 Morici, Longo & Associates #7 Ktenas Injury Attorneys #8 Law Offices of Roderick C. White #9 TorHoerman Law
+Claude
+11 brands in answer
+Ranked #2 #1
+Horwitz, Horwitz & Associates #2 Anesi Ozmon, Ltd. #3 Morici, Longo & Associates #4 Eames Law Group #5 Ankin Law #6 Katz Friedman #7 Leonard Law Group #8 Salvi, Schostok & Pritchard #9 Kurasch & Klein #10 Winters Salzetta O'Brien & Richardson #11 GWC Injury Lawyers
+Google
+0 brands in answer
+Not mentioned
+No results available
+--- notes ---
+Report ready within 5 seconds (fresh runs took 45-50) and identical to round 2 (9.4 hours earlier): served from a cache

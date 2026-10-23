@@ -39,3 +39,13 @@ geoptie,F08,2,2026-10-23T12:45:22Z,45,result,Claude list truncated (+2 more)
 geoptie,F09,2,2026-10-23T12:46:32Z,45,result,"Score 53 vs 55; ChatGPT now not mentioned, Claude now ranks it #14; Claude list truncated (+5 more)"
 geoptie,F10,2,2026-10-23T12:47:39Z,45,result,
 loamly,F01,2,2026-10-23T12:48:49Z,,result_no_answers,"Not served from cache: regenerated with progress stages (Website Analysis, Query Generation, AI Platform Queries, Results Analysis); 0% verdict appeared at ~45s while still Generating; final read 12:51 UTC still 0 prompts tested. Site readiness 76 (75 on Oct 22)."
+geoptie,F01,3,2026-10-23T22:06:50Z,45,result,Identical to round 2 (9.5 hours earlier) in every list and position: looks served from a cache
+geoptie,F07,3,2026-10-23T22:08:03Z,5,result,Report ready within 5 seconds (fresh runs took 45-50) and identical to round 2 (9.4 hours earlier): served from a cache
+geoptie,F02,3,2026-10-23T22:09:21Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 8a650fe16fc9...): served from a cache"
+geoptie,F03,3,2026-10-23T22:10:07Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, e05612835a1f...): served from a cache"
+geoptie,F04,3,2026-10-23T22:10:18Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 31e7dadc2381...): served from a cache"
+geoptie,F05,3,2026-10-23T22:10:50Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 42bee460ac20...): served from a cache"
+geoptie,F06,3,2026-10-23T22:11:02Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 05f1f6dfe34f...): served from a cache"
+geoptie,F08,3,2026-10-23T22:11:51Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 200d36ce05a7...): served from a cache"
+geoptie,F09,3,2026-10-23T22:12:03Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 7c57b9558c95...): served from a cache"
+geoptie,F10,3,2026-10-23T22:12:30Z,8,result,Ready within 8 seconds; identical to round 2 except that logo placeholders (a single initial before each name) had not yet loaded: served from a cache

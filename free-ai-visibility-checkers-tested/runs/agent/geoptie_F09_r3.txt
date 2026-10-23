@@ -1,0 +1,39 @@
+checker: geoptie
+firm: F09
+input: cookcountyinjurylaw.com
+round: 3
+run by: agent (built-in browser)
+started_utc: 2026-10-23T22:12:03Z
+seconds_to_result: 8
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+cookcountyinjurylaw.com
+Brand detected: Saks, Robinson & Rittenberg, Ltd.
+VISIBILITY SCORE
+53
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're showing up — but competitors rank higher.
+Track your rankings weekly and see exactly when your position shifts.
+Start weekly tracking
+ChatGPT
+7 brands in answer
+Not mentioned #1 Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca #2 Horwitz, Horwitz & Associates #3 Chicago Work Comp #4 Styka & Styka #5 Levin & Perconti #6 Clifford Law Offices #7 Chicago Bar Association Lawyer Referral Service
+Perplexity
+10 brands in answer
+Ranked #7 #1
+Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca #2 Briskman Briskman & Greenberg #3 Horwitz, Horwitz & Associates #4 Ankin Law #5 Hofeld & Schaffner #6 Strom Yen Injury Attorneys #7 Saks, Robinson & Rittenberg #8 Taxman, Pollock, Murray & Bekkerman #9 Disparti Law Group #10 Kryder Law Group
+Claude
+20 brands in answer
+Ranked #14 #1
+Malman Law #2 Levin & Perconti #3 Taxman, Pollock & Bekkerman #4 Romanucci & Blandin #5 Corboy & Demetrio #6 Salvi, Schostok & Pritchard #7 Clifford Law Offices #8 Smith LaCien #9 Power Rogers & Smith #10 Strom & Associates #11 Pullano Law Offices #12 Abels & Annes #13 Horwitz, Horwitz & Associates #14 Saks, Robinson & Rittenberg #15 McHargue & Jones
++5 more results →
+Google
+0 brands in answer
+Not mentioned
+No results available
+--- notes ---
+Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 7c57b9558c95...): served from a cache

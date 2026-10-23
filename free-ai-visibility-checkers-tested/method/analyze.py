@@ -57,7 +57,7 @@ def parse_geoptie(text):
         rank = re.search(r"Ranked #(\d+)", seg)
         rest = seg[rank.end():] if rank else seg.split("Not mentioned", 1)[-1]
         rest = re.sub(r"\+\d+ more results.*", "", rest)
-        brands = [x.strip() for _, x in re.findall(r"#(\d+) ([^#]+?)(?=\s*#\d+ |\s*$)", rest.strip())]
+        brands = [re.sub(r"^[A-Z] (?=[A-Z0-9])", "", x.strip()) for _, x in re.findall(r"#(\d+) ([^#]+?)(?=\s*#\d+ |\s*$)", rest.strip())]
         out[eng] = {"n": n, "rank": int(rank.group(1)) if rank else None, "brands": brands}
     return out
 
@@ -89,7 +89,9 @@ def main():
         iso = re.search(r"2026-10-\d\dT[\d:]+Z", t)
         started = header(t, "started_utc") or (iso.group(0) if iso else "")
         date = started[:10] or re.search(r"run: \d+, agent, (2026-10-\d\d)", t).group(1)
-        row = {"checker": checker, "firm_id": firm, "round": rnd, "date": date, "file": f"runs/agent/{f.name}"}
+        cached = "served from a cache" in t
+        row = {"checker": checker, "firm_id": firm, "round": rnd, "date": date, "cached": "yes" if cached else "",
+               "file": f"runs/agent/{f.name}"}
         if checker == "geoptie":
             g = parse_geoptie(t)
             row["score"] = g["score"]
@@ -97,7 +99,7 @@ def main():
                 d = g.get(e, {})
                 row[f"{e.lower()}_brands"] = d.get("n", "")
                 row[f"{e.lower()}_rank"] = d.get("rank") or ("not named" if d else "")
-                for i, b in enumerate(d.get("brands", []), 1):
+                for i, b in enumerate(d.get("brands", []) if not cached else [], 1):
                     mentions.append({"source": "geoptie", "run": f"{firm}_r{rnd}", "engine": e, "position": i,
                                      "name": b, "firm_id": firm_of(b)})
         elif checker == "semrush":
@@ -111,7 +113,7 @@ def main():
             for x in a["firms"]:
                 mentions.append({"source": "agent-research", "run": f.stem, "engine": a["id"], "position": x["rank"],
                                  "name": x["name"], "firm_id": firm_of(x["name"])})
-    cols = ["checker", "firm_id", "round", "date", "score", "chatgpt_rank", "perplexity_rank", "claude_rank",
+    cols = ["checker", "firm_id", "round", "date", "cached", "score", "chatgpt_rank", "perplexity_rank", "claude_rank",
             "google_rank", "chatgpt_brands", "perplexity_brands", "claude_brands", "google_brands", "mentions",
             "citations", "chatgpt", "gemini", "ai_mode", "ai_overviews", "prompts_tested", "site_readiness", "file"]
     with (PAGE / "data.csv").open("w", newline="") as fh:

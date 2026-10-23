@@ -1,0 +1,38 @@
+checker: geoptie
+firm: F01
+input: malmanlaw.com
+round: 3
+run by: agent (built-in browser)
+started_utc: 2026-10-23T22:06:50Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+malmanlaw.com
+Brand detected: Malman Law
+VISIBILITY SCORE
+60
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're showing up — but competitors rank higher.
+Track your rankings weekly and see exactly when your position shifts.
+Start weekly tracking
+ChatGPT
+6 brands in answer
+Not mentioned #1 Levin & Perconti #2 Cirignani, Heller & Harman (CHH Law) #3 Clifford Law Offices #4 Passen Powell Jenkins #5 Finn Law Firm #6 Ed Fox & Associates
+Perplexity
+9 brands in answer
+Ranked #2 #1
+Levin & Perconti #2 Malman Law #3 Horwitz, Horwitz & Associates #4 Willens & Baez #5 Rosenfeld Injury Lawyers #6 Salvi, Schostok & Pritchard #7 Senior Justice Law Firm #8 Schwartz Injury Law #9 MSD Injury Lawyers
+Claude
+10 brands in answer
+Ranked #9 #1
+Corboy & Demetrio #2 Levin & Perconti #3 Smith LaCien #4 Cirignani Heller & Harman #5 Horwitz, Horwitz & Associates #6 Willens & Baez #7 Cavanagh Sorich Law Group #8 Rosenfeld Injury Lawyers #9 Malman Law #10 Kreisman Law Offices
+Google
+0 brands in answer
+Not mentioned
+No results available
+--- notes ---
+Identical to round 2 (9.5 hours earlier) in every list and position: looks served from a cache

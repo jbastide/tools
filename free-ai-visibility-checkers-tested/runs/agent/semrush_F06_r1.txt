@@ -1,0 +1,33 @@
+checker: semrush
+firm: F06
+input: mccreadylaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-23T12:36:49Z
+seconds_to_result: 10
+outcome: result
+--- result text, verbatim from the page ---
+AI Visibility Overview for: mccreadylaw.com
+AI Visibility Score 29 (Low)
+Mentions 52
+Citations 243
+Audience Reach 943K
+This site’s AI Visibility Score is up 4% over the last three months.
+Mentions breakdown across AI search platforms.
+ChatGPT 12
+Gemini 12
+AI Mode 10
+AI Overviews 18
+Competitor Visibility Comparison
+Your site mccreadylaw.com: AI Visibility Score 29, Mentions 52, Audience Reach 943K
+Competitor wardlawfirm.com: AI Visibility Score 14, Mentions 15, Audience Reach 26.1K
+Top Cited Pages (URL, Citations)
+mccreadylaw.com/blog/can-i-make-a-left-turn-at-a-red-traffic-signal 29
+mccreadylaw.com 16
+mccreadylaw.com/blog/personal-injury-demand-pain-and-suffering-letter-example 12
+Best Performing Topics (Topic, Mentions, Topic Volume)
+Mccready Law and Injury Attorneys 15 1,210
+Chesterton Accident & Personal Injury Lawyers 5 51
+Vehicle Airbag and Recall Safety 3 38,460
+BMW Recall and Stop Sale Issues 3 4,250
+Gary Burger and Burger Law 3 880

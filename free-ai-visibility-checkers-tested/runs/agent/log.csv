@@ -25,3 +25,17 @@ loamly,F06,1,2026-10-22T08:50:06Z,,result_no_answers,Read 08:53 UTC; 0 prompts t
 loamly,F07,1,2026-10-22T08:51:01Z,,result_no_answers,Read 08:54 UTC; 0 prompts tested
 loamly,F08,1,2026-10-22T08:51:45Z,,result_no_answers,Read 08:54 UTC; 0 prompts tested
 loamly,F10,1,2026-10-22T08:52:36Z,,result_no_answers,Read 08:54 UTC; 0 prompts tested
+semrush,F04,1,2026-10-23T12:35:23Z,10,result,Day 2 (Oct 23). Counter 2/3 after run. 'Don't get left behind again' upsell modal covered the result.
+semrush,F05,1,2026-10-23T12:36:02Z,10,result,Day 2. Counter 1/3 after run. Headline says 1 citation but the Top Cited Pages table lists 2+1+1.
+semrush,F06,1,2026-10-23T12:36:49Z,10,result,"Day 2. Counter 0/3 after run. Topics include Chesterton (Indiana), consistent with Geoptie's Indiana-heavy competitor list for this firm."
+geoptie,F01,2,2026-10-23T12:37:31Z,46,result,Score 60 vs 33 in round 1
+geoptie,F02,2,2026-10-23T12:38:38Z,45,result,
+geoptie,F03,2,2026-10-23T12:39:44Z,45,result,
+geoptie,F04,2,2026-10-23T12:40:51Z,45,result,
+geoptie,F05,2,2026-10-23T12:41:59Z,45,result,
+geoptie,F06,2,2026-10-23T12:43:05Z,45,result,
+geoptie,F07,2,2026-10-23T12:44:13Z,45,result,Score 33 vs 0 in round 1; banner still says invisible
+geoptie,F08,2,2026-10-23T12:45:22Z,45,result,Claude list truncated (+2 more)
+geoptie,F09,2,2026-10-23T12:46:32Z,45,result,"Score 53 vs 55; ChatGPT now not mentioned, Claude now ranks it #14; Claude list truncated (+5 more)"
+geoptie,F10,2,2026-10-23T12:47:39Z,45,result,
+loamly,F01,2,2026-10-23T12:48:49Z,,result_no_answers,"Not served from cache: regenerated with progress stages (Website Analysis, Query Generation, AI Platform Queries, Results Analysis); 0% verdict appeared at ~45s while still Generating; final read 12:51 UTC still 0 prompts tested. Site readiness 76 (75 on Oct 22)."

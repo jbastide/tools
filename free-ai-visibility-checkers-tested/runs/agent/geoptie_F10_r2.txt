@@ -1,0 +1,34 @@
+checker: geoptie
+firm: F10
+input: rundiolaw.com
+round: 2
+run by: agent (built-in browser)
+started_utc: 2026-10-23T12:47:39Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+rundiolaw.com
+Brand detected: Rundio Injury Law
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+7 brands in answer
+Not mentioned #1 Power Rogers #2 Salvi, Schostok & Pritchard #3 Clifford Law Offices #4 Levin, Riback & Adelman #5 Willens & Baez #6 Chicago Bar Association Lawyer Referral Service #7 Illinois State Bar Association’s Lawyer Finder
+Perplexity
+9 brands in answer
+Not mentioned #1 Clifford Law Offices #2 Corboy & Demetrio #3 Salvi, Schostok & Pritchard #4 Shapiro, Cohen & Basinger #5 Rosenfeld Injury Lawyers #6 Willens & Baez #7 Phillips Law Offices #8 Briskman Briskman & Greenberg #9 Cooney & Conway
+Claude
+9 brands in answer
+Not mentioned #1 Passen Powell Jenkins #2 Taxman, Pollock & Bekkerman #3 Smith LaCien LLP #4 Clifford Law Offices #5 Phillips Law Offices #6 Dudley & Lake #7 Goldberg & Goldberg #8 Willens & Baez #9 Schwartz Jambois
+Google
+0 brands in answer
+Not mentioned
+No results available

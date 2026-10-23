@@ -1,0 +1,34 @@
+checker: geoptie
+firm: F04
+input: dispartilaw.com
+round: 2
+run by: agent (built-in browser)
+started_utc: 2026-10-23T12:40:51Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+dispartilaw.com
+Brand detected: Disparti Law Group
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+4 brands in answer
+Not mentioned #1 Clifford Law Offices #2 Power Rogers #3 Salvi, Schostok & Pritchard #4 Ankin Law
+Perplexity
+10 brands in answer
+Not mentioned #1 Power Rogers LLP #2 Salvi, Schostok & Pritchard #3 Cooney & Conway LLP #4 Cavanagh Sorich Law Group #5 Horwitz, Horwitz & Associates #6 Anesi Ozmon, Ltd. #7 Willens & Baez #8 Briskman Briskman & Greenberg #9 Phillips Law Offices #10 Rosenfeld Injury Lawyers
+Claude
+15 brands in answer
+Not mentioned #1 Briskman Briskman & Greenberg #2 Abels & Annes, P.C. #3 Taxman, Pollock, Murray & Bekkerman, LLC #4 Levin & Perconti #5 Horwitz, Horwitz & Associates #6 Ankin Law #7 DePaolo & Zadeikis #8 The Kryder Law Group #9 Meyers & Flowers Trial Attorneys #10 Lloyd Miller Law #11 Cavanagh Law Group #12 Flanagan Injury Law Group #13 Rosenfeld Injury Lawyers #14 Malman Law #15 Anesi Ozmon
+Google
+0 brands in answer
+Not mentioned
+No results available

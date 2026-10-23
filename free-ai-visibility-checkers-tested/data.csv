@@ -1,0 +1,38 @@
+checker,firm_id,round,date,score,chatgpt_rank,perplexity_rank,claude_rank,google_rank,chatgpt_brands,perplexity_brands,claude_brands,google_brands,mentions,citations,chatgpt,gemini,ai_mode,ai_overviews,prompts_tested,site_readiness,file
+geoptie,F01,1,2026-10-22,33,not named,2,not named,not named,5,9,12,0,,,,,,,,,runs/agent/geoptie_F01_r1.txt
+geoptie,F01,2,2026-10-23,60,not named,2,9,not named,6,9,10,0,,,,,,,,,runs/agent/geoptie_F01_r2.txt
+geoptie,F02,1,2026-10-22,0,not named,not named,not named,not named,4,11,13,0,,,,,,,,,runs/agent/geoptie_F02_r1.txt
+geoptie,F02,2,2026-10-23,0,not named,not named,not named,not named,4,8,11,0,,,,,,,,,runs/agent/geoptie_F02_r2.txt
+geoptie,F03,1,2026-10-22,0,not named,not named,not named,not named,5,7,12,0,,,,,,,,,runs/agent/geoptie_F03_r1.txt
+geoptie,F03,2,2026-10-23,0,not named,not named,not named,not named,5,7,9,0,,,,,,,,,runs/agent/geoptie_F03_r2.txt
+geoptie,F04,1,2026-10-22,0,not named,not named,not named,not named,4,11,12,0,,,,,,,,,runs/agent/geoptie_F04_r1.txt
+geoptie,F04,2,2026-10-23,0,not named,not named,not named,not named,4,10,15,0,,,,,,,,,runs/agent/geoptie_F04_r2.txt
+geoptie,F05,1,2026-10-22,0,not named,not named,not named,not named,5,8,14,0,,,,,,,,,runs/agent/geoptie_F05_r1.txt
+geoptie,F05,2,2026-10-23,0,not named,not named,not named,not named,3,9,12,0,,,,,,,,,runs/agent/geoptie_F05_r2.txt
+geoptie,F06,1,2026-10-22,28,not named,6,not named,not named,8,8,13,0,,,,,,,,,runs/agent/geoptie_F06_r1.txt
+geoptie,F06,2,2026-10-23,27,not named,8,not named,not named,6,9,15,0,,,,,,,,,runs/agent/geoptie_F06_r2.txt
+geoptie,F07,1,2026-10-22,0,not named,not named,not named,not named,5,8,16,0,,,,,,,,,runs/agent/geoptie_F07_r1.txt
+geoptie,F07,2,2026-10-23,33,not named,not named,2,not named,5,9,11,0,,,,,,,,,runs/agent/geoptie_F07_r2.txt
+geoptie,F08,1,2026-10-22,0,not named,not named,not named,not named,5,8,13,0,,,,,,,,,runs/agent/geoptie_F08_r1.txt
+geoptie,F08,2,2026-10-23,0,not named,not named,not named,not named,5,8,17,0,,,,,,,,,runs/agent/geoptie_F08_r2.txt
+geoptie,F09,1,2026-10-22,55,7,8,not named,not named,8,10,18,0,,,,,,,,,runs/agent/geoptie_F09_r1.txt
+geoptie,F09,2,2026-10-23,53,not named,7,14,not named,7,10,20,0,,,,,,,,,runs/agent/geoptie_F09_r2.txt
+geoptie,F10,1,2026-10-22,0,not named,not named,not named,not named,6,10,17,0,,,,,,,,,runs/agent/geoptie_F10_r1.txt
+geoptie,F10,2,2026-10-23,0,not named,not named,not named,not named,7,9,9,0,,,,,,,,,runs/agent/geoptie_F10_r2.txt
+loamly,F01,1,2026-10-22,0,,,,,,,,,,,,,,,0,75,runs/agent/loamly_F01_r1.txt
+loamly,F01,2,2026-10-23,0,,,,,,,,,,,,,,,0,76,runs/agent/loamly_F01_r2.txt
+loamly,F02,1,2026-10-22,0,,,,,,,,,,,,,,,0,65,runs/agent/loamly_F02_r1.txt
+loamly,F03,1,2026-10-22,0,,,,,,,,,,,,,,,0,71,runs/agent/loamly_F03_r1.txt
+loamly,F04,1,2026-10-22,0,,,,,,,,,,,,,,,0,81,runs/agent/loamly_F04_r1.txt
+loamly,F05,1,2026-10-22,0,,,,,,,,,,,,,,,0,82,runs/agent/loamly_F05_r1.txt
+loamly,F06,1,2026-10-22,0,,,,,,,,,,,,,,,0,81,runs/agent/loamly_F06_r1.txt
+loamly,F07,1,2026-10-22,0,,,,,,,,,,,,,,,0,69,runs/agent/loamly_F07_r1.txt
+loamly,F08,1,2026-10-22,0,,,,,,,,,,,,,,,0,85,runs/agent/loamly_F08_r1.txt
+loamly,F09,1,2026-10-22,0,,,,,,,,,,,,,,,0,85,runs/agent/loamly_F09_r1.txt
+loamly,F10,1,2026-10-22,0,,,,,,,,,,,,,,,0,7,runs/agent/loamly_F10_r1.txt
+semrush,F01,1,2026-10-22,31,,,,,,,,,124,282,10,11,15,88,,,runs/agent/semrush_F01_r1.txt
+semrush,F02,1,2026-10-22,19,,,,,,,,,11,106,5,1,2,3,,,runs/agent/semrush_F02_r1.txt
+semrush,F03,1,2026-10-22,0,,,,,,,,,0,2,0,0,0,0,,,runs/agent/semrush_F03_r1.txt
+semrush,F04,1,2026-10-23,33,,,,,,,,,93,275,15,14,14,50,,,runs/agent/semrush_F04_r1.txt
+semrush,F05,1,2026-10-23,0,,,,,,,,,0,1,0,0,0,0,,,runs/agent/semrush_F05_r1.txt
+semrush,F06,1,2026-10-23,29,,,,,,,,,52,243,12,12,10,18,,,runs/agent/semrush_F06_r1.txt

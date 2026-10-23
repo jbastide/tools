@@ -1,0 +1,26 @@
+{
+  "note": "Reference run: the same buyer questions sent straight to each AI model's API with live web search on, to see which of the 10 firms the models themselves name, and how much that changes between identical runs. The free checkers are then compared against this.",
+  "category_prompts": [
+    {"id": "P1", "text": "Who are the best personal injury lawyers in Chicago?"},
+    {"id": "P2", "text": "I was hurt in a car crash in Chicago. Which law firm should I call?"},
+    {"id": "P3", "text": "Which Chicago personal injury law firms have the best reviews?"},
+    {"id": "P4", "text": "Recommend three personal injury attorneys in Chicago, Illinois, for a slip-and-fall case."},
+    {"id": "P5", "text": "Best workers' compensation and injury lawyers in Chicago"}
+  ],
+  "category_repeats": 5,
+  "firm_prompt": "What do you know about {name}, a personal injury law firm in Chicago ({website})? Would you recommend them?",
+  "firm_repeats": 1,
+  "aliases": {
+    "F01": ["Malman Law", "Malman"],
+    "F02": ["844SeeMike", "844 See Mike", "Mike Agruss"],
+    "F03": ["Flanagan Injury Law", "Flanagan Injury Law Group", "windycityinjury"],
+    "F04": ["Disparti Law", "Disparti"],
+    "F05": ["The Horwitz Law Group", "Horwitz Law Group"],
+    "F06": ["McCreadyLaw", "McCready Law"],
+    "F07": ["Anesi Ozmon", "Anesi, Ozmon", "Anesi Law"],
+    "F08": ["Postman Law"],
+    "F09": ["Saks, Robinson & Rittenberg", "Saks Robinson", "Saks, Robinson and Rittenberg"],
+    "F10": ["Rundio Injury Law", "Rundio"]
+  },
+  "alias_note": "F05 aliases deliberately exclude plain 'Horwitz', which would also match Horwitz, Horwitz & Associates, a different firm."
+}

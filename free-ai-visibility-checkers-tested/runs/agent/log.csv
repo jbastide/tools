@@ -1,9 +1,9 @@
 checker,firm_id,round,started_utc,seconds_to_result,outcome,notes
 hubspot,F01,1,2026-10-22T08:23:57Z,,no_result,"Form submitted twice (click, then Enter after declining cookies); page reloaded with inputs in the URL and an empty form both times. Page loads a CHEQ bot-detection script (obs.greencolumnart.com, ch=cheq4ppc); cause unverified. Not retried."
-rankprompt,F01,1,2026-10-22T08:25:42Z,,captcha,"Inputs: brand Malman Law; what you sell: personal injury lawyer in Chicago; market United States. Cloudflare Turnstile checkbox (Verify you are human) appeared under the form; results stayed loading. Agent did not click it."
-semrush,F01,1,2026-10-22T08:27:00Z,10,result,"Domain input. Database tool (26M+ prompts). Counter showed 2/3 free uses left after the run."
-geoptie,F01,1,2026-10-22T08:28:10Z,50,result,"Domain input; prompt not shown; Google returned no results."
-loamly,F01,1,2026-10-22T08:29:00Z,,pending,"Report page showed a 0% verdict with 0 prompts tested and 0 answers captured while still Generating at 1 and 2.5 minutes. Re-read later."
+rankprompt,F01,1,2026-10-22T08:25:42Z,,captcha,Inputs: brand Malman Law; what you sell: personal injury lawyer in Chicago; market United States. Cloudflare Turnstile checkbox (Verify you are human) appeared under the form; results stayed loading. Agent did not click it.
+semrush,F01,1,2026-10-22T08:27:00Z,10,result,Domain input. Database tool (26M+ prompts). Counter showed 2/3 free uses left after the run.
+geoptie,F01,1,2026-10-22T08:28:10Z,50,result,Domain input; prompt not shown; Google returned no results.
+loamly,F01,1,2026-10-22T08:29:00Z,,pending,Report page showed a 0% verdict with 0 prompts tested and 0 answers captured while still Generating at 1 and 2.5 minutes. Re-read later.
 geoptie,F02,1,2026-10-22T08:32:40Z,50,result,
 geoptie,F03,1,2026-10-22T08:33:53Z,45,result,
 geoptie,F04,1,2026-10-22T08:35:03Z,46,result,
@@ -39,7 +39,7 @@ geoptie,F08,2,2026-10-23T12:45:22Z,45,result,Claude list truncated (+2 more)
 geoptie,F09,2,2026-10-23T12:46:32Z,45,result,"Score 53 vs 55; ChatGPT now not mentioned, Claude now ranks it #14; Claude list truncated (+5 more)"
 geoptie,F10,2,2026-10-23T12:47:39Z,45,result,
 loamly,F01,2,2026-10-23T12:48:49Z,,result_no_answers,"Not served from cache: regenerated with progress stages (Website Analysis, Query Generation, AI Platform Queries, Results Analysis); 0% verdict appeared at ~45s while still Generating; final read 12:51 UTC still 0 prompts tested. Site readiness 76 (75 on Oct 22)."
-geoptie,F01,3,2026-10-23T22:06:50Z,45,result,Identical to round 2 (9.5 hours earlier) in every list and position: looks served from a cache
+geoptie,F01,3,2026-10-23T22:06:50Z,,result,Identical to round 2 (9.5 hours earlier) in every list and position: looks served from a cache (not timed: read after a fixed 45-second wait)
 geoptie,F07,3,2026-10-23T22:08:03Z,5,result,Report ready within 5 seconds (fresh runs took 45-50) and identical to round 2 (9.4 hours earlier): served from a cache
 geoptie,F02,3,2026-10-23T22:09:21Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 8a650fe16fc9...): served from a cache"
 geoptie,F03,3,2026-10-23T22:10:07Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, e05612835a1f...): served from a cache"
@@ -49,3 +49,4 @@ geoptie,F06,3,2026-10-23T22:11:02Z,8,result,"Report ready within 8 seconds and i
 geoptie,F08,3,2026-10-23T22:11:51Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 200d36ce05a7...): served from a cache"
 geoptie,F09,3,2026-10-23T22:12:03Z,8,result,"Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 7c57b9558c95...): served from a cache"
 geoptie,F10,3,2026-10-23T22:12:30Z,8,result,Ready within 8 seconds; identical to round 2 except that logo placeholders (a single initial before each name) had not yet loaded: served from a cache
+semrush,,,2026-10-24T06:33:27Z,,limit,"Counter still showed 0/3 free checks left at 06:33 UTC on October 24 (last checks 12:35-12:37 UTC on October 23), so the daily limit does not reset at midnight UTC. Remaining firms F07-F10 not checked."

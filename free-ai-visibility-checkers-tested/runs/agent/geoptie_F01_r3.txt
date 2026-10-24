@@ -4,7 +4,7 @@ input: malmanlaw.com
 round: 3
 run by: agent (built-in browser)
 started_utc: 2026-10-23T22:06:50Z
-seconds_to_result: 45
+seconds_to_result: not timed (read after a fixed 45-second wait)
 outcome: result
 --- result text, verbatim from the page ---
 VISIBILITY REPORT

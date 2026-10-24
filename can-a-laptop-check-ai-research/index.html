@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can a Laptop Check an AI Research Report? 235 Planted Errors and One Real Report (2026 Study)</title>
+<meta name="description" content="Copy for Originals built an open-source checker for AI research reports that runs on a laptop. A 12B model caught 222 of 235 planted errors and passed 90% of correct claims. In our own published research notes it led us to 36 wrong or unsupported claims. Data included.">
+<meta name="author" content="Copy for Originals">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<link rel="canonical" href="https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/">
+<link rel="alternate" hreflang="sv" href="https://tools.copyfororiginals.com/sv/kan-en-laptop-granska-ai-research/">
+<link rel="alternate" hreflang="en" href="https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/">
+<link rel="alternate" hreflang="x-default" href="https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/">
+<meta property="og:site_name" content="Copy for Originals">
+<meta property="og:title" content="Can a laptop check an AI research report? 235 planted errors and one real report">
+<meta property="og:description" content="A 12B model on a 16 GB laptop caught 94% of planted errors. In our own published research notes it found 36 wrong or unsupported claims.">
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:modified_time" content="2026-10-25">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%BE%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://copyfororiginals.com/#org",
+      "name": "Copy for Originals",
+      "url": "https://copyfororiginals.com"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/#article",
+      "headline": "Can a laptop check an AI research report? 235 planted errors and one real report",
+      "description": "Copy for Originals built an open-source checker for AI research reports that runs on a laptop. A 12B model caught 222 of 235 planted errors and passed 90% of correct claims. In our own published research notes it led us to 36 wrong or unsupported claims. Data included.",
+      "url": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/",
+      "inLanguage": "en",
+      "datePublished": "2026-10-25",
+      "dateModified": "2026-10-25",
+      "author": {"@id": "https://copyfororiginals.com/#org"},
+      "publisher": {"@id": "https://copyfororiginals.com/#org"},
+      "about": ["AI research agents", "Fact-checking", "Local language models", "Citation verification", "Content marketing"],
+      "isBasedOn": {"@id": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/#data"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Can a laptop check an AI research report?", "item": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/"}
+        ]
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/#data",
+      "name": "Planted-error benchmark and real-report audit for a local AI research checker (Copy for Originals, 2026)",
+      "description": "planted.csv: 357 claims (105 correct, the rest deliberately damaged) with the verdicts of two checker models and a local judge. audit.csv: 141 items the checker flagged in Copy for Originals’ research notes on AI shopping agents, with the result of a source-by-source review.",
+      "creator": {"@id": "https://copyfororiginals.com/#org"},
+      "datePublished": "2026-10-25",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/planted.csv"},
+                       {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/audit.csv"}]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/#code",
+      "name": "receipts",
+      "codeRepository": "https://github.com/jbastide/receipts",
+      "programmingLanguage": "Python",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tools.copyfororiginals.com/can-a-laptop-check-ai-research/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "Can a small AI model on a laptop check whether a research report’s sources support it?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Mostly, if it is used as a judge rather than as the last word. In a Copy for Originals test, Gemma 4 12B running on a MacBook Air with 16 GB of memory caught 222 of 235 claims we had deliberately damaged (94%) and passed 94 of 105 correct ones (90%), at about ten seconds a claim. Paired with a smaller checker model, 6 of the 235 damaged claims got through without a flag."}},
+        {"@type": "Question", "name": "How do you check the quotes in an AI research report?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Fetch every cited page and look for each quoted passage in it, ignoring spacing, punctuation and case. That needs no AI model. Copy for Originals’ checker reproduced all 593 quote grades from an earlier study this way, and when one word in each quote was replaced, none of 588 damaged quotes was accepted. A quote that is on the page can still fail to support the claim made with it, so the claim needs a second check."}},
+        {"@type": "Question", "name": "What errors does an automated check find in real research?",
+         "acceptedAnswer": {"@type": "Answer", "text": "In our own published research notes on how AI shopping agents choose products, the checker flagged 141 items. A source-by-source review found 36 of them wrong or not in any cited source: paraphrases inside quotation marks, a range reported as +19.75 to +23.38 points that the paper gives as +13.0 to +37.9, a finding reported as no effect that the paper reports as statistically significant. 91 were correct. The checker narrowed where to look; it did not decide."}}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../site.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:28px 0 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.stat b{display:block;font:700 clamp(30px,6vw,40px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.stat span{font-size:14.5px;color:var(--muted);line-height:1.4}
+pre{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;font-size:14px}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Copy for Originals">
+  <a class="site-nav-brand" href="https://www.copyfororiginals.com/">Copy for Originals</a>
+  <ul>
+    <li><a href="https://www.copyfororiginals.com/">Home</a></li>
+    <li><a href="https://www.copyfororiginals.com/thoughts">Thoughts</a></li>
+    <li><a href="https://www.copyfororiginals.com/digital-marketing-services">Services</a></li>
+    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Tools</a></li>
+    <li><a href="https://www.copyfororiginals.com/about">About</a></li>
+    <li><a href="https://www.copyfororiginals.com/faq">FAQs</a></li>
+    <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
+  </ul>
+  <ul class="lang-switch" aria-label="Language"><li><a href="../sv/kan-en-laptop-granska-ai-research/" hreflang="sv" lang="sv">Svenska</a></li><li><span aria-current="true">English</span></li></ul>
+</nav>
+<div class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+
+<header>
+  <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Original research</p>
+  <h1>Can a laptop check an AI research report? 235 planted errors and one real report</h1>
+  <p class="lede">AI research tools now write a sourced report in minutes. Checking whether the sources say what the report says still takes a person most of a day. We built a checker that does the first pass on an ordinary laptop, with nothing sent to an AI company, and published it as open source. We tested it on 340 claims, 235 of them damaged on purpose, and then pointed it at research notes of our own that were already on this site. It caught most of the planted errors. In our own notes it led us to 36 claims that were wrong or not in their sources, and we have corrected them.</p>
+  <p class="byline">By <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Published <time datetime="2026-10-25">October 25, 2026</time> · <a href="planted.csv">Benchmark data (CSV)</a> · <a href="audit.csv">Audit data (CSV)</a> · <a href="https://github.com/jbastide/receipts" rel="noopener">Code</a></p>
+  <div class="stats">
+    <div class="stat"><b>222 of 235</b><span>planted errors caught by a 12B model on a 16 GB laptop (94%)</span></div>
+    <div class="stat"><b>94 of 105</b><span>correct claims passed by the same model (90%)</span></div>
+    <div class="stat"><b>36</b><span>wrong or unsupported claims found in our own published research notes</span></div>
+  </div>
+</header>
+
+<section id="findings">
+  <h2>What did the test find?</h2>
+  <ol class="check">
+    <li><b>Checking quotes needs no AI model.</b> The checker fetches every cited page and looks for each quoted passage. It gave the same grade as our earlier study to all 593 quotes, and when one word in each quote was replaced it accepted none of 588.</li>
+    <li><b>A 12B model on a laptop is a usable judge.</b> Gemma 4 12B, running on a MacBook Air with 16 GB of memory, caught 222 of 235 planted errors and passed 94 of 105 correct claims, at about ten seconds a claim.</li>
+    <li><b>The smallest checker models are fast but not enough alone.</b> MiniCheck caught 212 of 235 errors in under a second each, but rejected 21 of 105 correct claims. HHEM missed 23 of 35 negated claims.</li>
+    <li><b>Used together, few errors slip through.</b> When the report shows the judge’s verdict and sends disagreements to a person, 6 of 235 planted errors passed without a flag. The price is that a reader checks about one claim in four by hand.</li>
+    <li><b>On a real report it narrows the search; it does not decide.</b> In our research notes on how AI shopping agents choose products, it flagged 141 items. Checked against the sources one by one, 36 were wrong or not in any cited source, 7 were right but cited to the wrong page, and 91 were correct.</li>
+    <li><b>The errors were the kind a careful reader misses.</b> Paraphrases inside quotation marks, a range quoted as +19.75 to +23.38 points that the paper gives as +13.0 to +37.9, and a finding reported as no effect that the paper calls statistically significant.</li>
+  </ol>
+</section>
+
+<section id="what">
+  <h2>What does the checker do?</h2>
+  <p>It reads a report from ChatGPT, Claude, Gemini, Perplexity or an open-source research agent, fetches every page the report cites, and keeps a copy of each. Then it runs three checks.</p>
+  <ol class="check">
+    <li><b>Quotes.</b> Is each quoted passage on the page it cites, word for word, edited, or missing? This is plain text matching, no model.</li>
+    <li><b>Links.</b> Does each link work? For a dead link, the Wayback Machine tells a page that moved from one that may never have existed.</li>
+    <li><b>Support.</b> Does the page back the claim? The checker picks the page sentences closest to the claim, a small checker model scores them, and a local chat model reads them and answers supported, partly or not supported. It names the sentences it relied on by number; it never writes a quotation itself. Long claims with several figures are split into single facts first, and each fact is checked on its own.</li>
+  </ol>
+  <p>Everything runs on the user’s own machine or servers, with any model behind an OpenAI-compatible endpoint (llama.cpp, Ollama, vLLM, LM Studio). The code is at <a href="https://github.com/jbastide/receipts" rel="noopener">github.com/jbastide/receipts</a> under the Apache 2.0 licence.</p>
+</section>
+
+<section id="planted">
+  <h2>How well does it catch errors?</h2>
+  <p>We started from 105 claims in our <a href="../haiku-vs-sonnet-vs-opus-research-study/">earlier study of AI research runs</a> that two graders had accepted and whose quotes were on the cited page. Each was checked as written, where it should pass, and in up to four damaged versions, where it should be flagged: one number changed, the first verb negated, the claim checked against a page from another website, or an invented fact added (“according to a 2019 survey of 4,000 law firms”). 17 negations of claims that were already negative made nonsense and are left out.</p>
+  <div class="tablewrap">
+  <table class="wide">
+    <caption>Correct claims passed and damaged claims caught, by method (Copy for Originals, October 25, 2026; MacBook Air, Apple M5, 16 GB)</caption>
+    <thead><tr><th scope="col">Method</th><th scope="col" class="n">Correct passed</th><th scope="col" class="n">A number changed</th><th scope="col" class="n">A verb negated</th><th scope="col" class="n">Checked against another site’s page</th><th scope="col" class="n">An invented fact added</th><th scope="col" class="n">All errors caught</th><th scope="col" class="n">Seconds per claim</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">MiniCheck (770M checker model)</th><td class="n">84 of 105</td><td class="n">28 of 40</td><td class="n">29 of 35</td><td class="n">76 of 80</td><td class="n">79 of 80</td><td class="n">212 of 235 (90%)</td><td class="n">0.7</td></tr>
+      <tr><th scope="row">HHEM-2.1-Open (checker model)</th><td class="n">86 of 105</td><td class="n">29 of 40</td><td class="n">12 of 35</td><td class="n">77 of 80</td><td class="n">73 of 80</td><td class="n">191 of 235 (81%)</td><td class="n">0.2</td></tr>
+      <tr><th scope="row">Gemma 4 12B as judge</th><td class="n">94 of 105</td><td class="n">35 of 40</td><td class="n">29 of 35</td><td class="n">79 of 80</td><td class="n">79 of 80</td><td class="n">222 of 235 (94%)</td><td class="n">9.9</td></tr>
+      <tr><th scope="row">Gemma 4 12B judge, dense claims split</th><td class="n">92 of 105</td><td class="n">34 of 40</td><td class="n">30 of 35</td><td class="n">79 of 80</td><td class="n">78 of 80</td><td class="n">221 of 235 (94%)</td><td class="n">12.7</td></tr>
+      <tr><th scope="row">MiniCheck or the judge flags it</th><td class="n">78 of 105</td><td class="n">37 of 40</td><td class="n">33 of 35</td><td class="n">79 of 80</td><td class="n">80 of 80</td><td class="n">229 of 235 (97%)</td><td class="n">10.6</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Splitting long claims into single facts made no difference here, because each planted error sits in one fact. It matters on real reports, where one sentence can carry five figures and the reader needs to know which one fails.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>How the report files claims when MiniCheck and the judge are used together</caption>
+    <thead><tr><th scope="col"></th><th scope="col" class="n">Passed</th><th scope="col" class="n">Check by hand</th><th scope="col" class="n">Flagged</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">105 correct claims</th><td class="n">78</td><td class="n">18</td><td class="n">9</td></tr>
+      <tr><th scope="row">235 damaged claims</th><td class="n">6</td><td class="n">17</td><td class="n">212</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="real">
+  <h2>What did it find in a real report?</h2>
+  <p>We ran it on the research notes behind our page <a href="../how-ai-agents-choose-products/">How AI agents choose products</a>: 112 claims citing 87 sources, most of them academic papers. The checker flagged 4 quotes that were not on their pages and 137 facts with figures it could not confirm. Each flagged item was then checked against its source, reading the paper or page itself.</p>
+  <div class="tablewrap">
+  <table>
+    <caption>The 141 flagged items after review against the sources</caption>
+    <thead><tr><th scope="col">Result</th><th scope="col" class="n">Items</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Correct: the source says it</th><td class="n">91</td></tr>
+      <tr><th scope="row">Wrong: the source says something different</th><td class="n">21</td></tr>
+      <tr><th scope="row">Not in any source the claim cites</th><td class="n">15</td></tr>
+      <tr><th scope="row">Right, but on another page the claim cites</th><td class="n">7</td></tr>
+      <tr><th scope="row">The report’s own reasoning, not a sourced fact</th><td class="n">6</td></tr>
+      <tr><th scope="row">Source could not be read</th><td class="n">1</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>So roughly one flag in four pointed at a real problem. That is the honest description of what a local checker does with dense research prose today: it cannot tell a missed sentence from a missing fact, but it turns a reading of 87 sources into a list of 141 places to look. Some of what it found:</p>
+  <ul>
+    <li>7 passages in quotation marks were not the source’s words. One <a href="https://arxiv.org/html/2509.25609v2" rel="noopener">paper</a> says user profiles act “more like categorical switches or thresholds”; our notes had them “act as switches that override other cues”.</li>
+    <li>A defence that “left social-proof effects of +19.75 to +23.38 points intact” left them at +13.0 to +37.9 across the seven models in the <a href="https://arxiv.org/html/2502.01349v2" rel="noopener">paper’s table</a>.</li>
+    <li>Two negative-framing cues reported as having no effect were, in the <a href="https://arxiv.org/html/2509.25609v2" rel="noopener">paper</a>, “both statistically significantly effective”.</li>
+    <li>A crawl-to-referral ratio of 38,000:1 was right, but cited to a page with different, later numbers; it is <a href="https://blog.cloudflare.com/crawlers-click-ai-bots-training/" rel="noopener">Cloudflare’s own July 2025 figure</a> (38,065.7 for Anthropic).</li>
+  </ul>
+  <p>The published page had been checked before it went live and already used the sources’ wording. The research notes behind it had not. We corrected them: 30 edits from the flagged items and 7 more found while reviewing them. Afterwards every quote in the notes was on its cited page.</p>
+</section>
+
+<section id="limits">
+  <h2>What are the limits?</h2>
+  <ul>
+    <li>The planted errors are mechanical. Real mistakes are subtler, so the catch rates above are a ceiling, not a promise.</li>
+    <li>On the real report we only know about the errors it flagged. Errors it passed as supported were not counted.</li>
+    <li>The judge reads the sentences that best match the claim, not the whole page. A claim drawn from a table or another part of the page can be marked unsupported.</li>
+    <li>One judge model, one machine, one run. Results with other models will differ; the checker is built so you can measure your own.</li>
+    <li>The review of the real report was done with the help of AI agents and spot-checked: every quote they relied on was matched against the source page by script.</li>
+  </ul>
+</section>
+
+<section id="run">
+  <h2>How do I run it on my own reports?</h2>
+  <p>On a Mac or Linux machine with <a href="https://docs.astral.sh/uv/" rel="noopener">uv</a> installed and a local model server running:</p>
+  <pre><code>git clone https://github.com/jbastide/receipts
+cd receipts
+uv sync --extra support
+uv run receipts check report.md --judge-url http://127.0.0.1:8080/v1</code></pre>
+  <p>It writes a readable report, a JSON file and a CSV. The quote and link checks work without any model: <code>uv run receipts check report.md</code>.</p>
+</section>
+
+<section id="faq">
+  <h2>Questions</h2>
+  <h3>Can a small AI model on a laptop check whether a research report’s sources support it?</h3>
+  <p>Mostly, if it is used as a judge rather than as the last word. In a Copy for Originals test, Gemma 4 12B running on a MacBook Air with 16 GB of memory caught 222 of 235 claims we had deliberately damaged (94%) and passed 94 of 105 correct ones (90%), at about ten seconds a claim. Paired with a smaller checker model, 6 of the 235 damaged claims got through without a flag.</p>
+  <h3>How do you check the quotes in an AI research report?</h3>
+  <p>Fetch every cited page and look for each quoted passage in it, ignoring spacing, punctuation and case. That needs no AI model. Copy for Originals’ checker reproduced all 593 quote grades from an earlier study this way, and when one word in each quote was replaced, none of 588 damaged quotes was accepted. A quote that is on the page can still fail to support the claim made with it, so the claim needs a second check.</p>
+  <h3>What errors does an automated check find in real research?</h3>
+  <p>In our own published research notes on how AI shopping agents choose products, the checker flagged 141 items. A source-by-source review found 36 of them wrong or not in any cited source: paraphrases inside quotation marks, a range reported as +19.75 to +23.38 points that the paper gives as +13.0 to +37.9, a finding reported as no effect that the paper reports as statistically significant. 91 were correct. The checker narrowed where to look; it did not decide.</p>
+</section>
+
+<section id="method">
+  <h2>Data and method</h2>
+  <ul>
+    <li><a href="planted.csv">planted.csv</a>: all 357 planted cases, the claim as checked, the page, and each method’s verdict and score.</li>
+    <li><a href="audit.csv">audit.csv</a>: the 141 items flagged in our research notes, the review result, the source passage and whether the notes were corrected.</li>
+    <li><a href="method/prepare.py">method/prepare.py</a> writes both files from the checker’s benchmark output; <a href="method/build.py">method/build.py</a> writes this page from them.</li>
+    <li>Models: MiniCheck-Flan-T5-Large, HHEM-2.1-Open, Gemma 4 12B instruction-tuned (QAT, 4-bit) on llama.cpp. The benchmark script is <code>bench/planted.py</code> in the code repository.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Static page. Google Analytics only if you accept cookies. Made by <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a>.</p>
+  <p class="legal"><a href="https://www.copyfororiginals.com/privacy-policy" rel="noopener">Privacy policy</a> · <a href="#cookie-settings">Cookie settings</a></p>
+</footer>
+</div>
+<script src="../consent.js"></script>
+</body>
+</html>

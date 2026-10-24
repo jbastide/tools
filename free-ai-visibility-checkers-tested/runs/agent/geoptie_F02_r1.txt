@@ -1,0 +1,22 @@
+checker: geoptie
+firm: F02
+input: 844seemike.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:32:40Z
+seconds_to_result: 50
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+844seemike.com
+Brand detected: 844SeeMike Personal Injury Lawyers
+VISIBILITY SCORE 0/100
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+ChatGPT | 4 brands in answer | Not mentioned
+#1 Clifford Law Offices; #2 Power Rogers; #3 Anesi Ozmon; #4 Corboy & Demetrio
+Perplexity | 11 brands in answer | Not mentioned
+#1 Horwitz, Horwitz & Associates; #2 Smith LaCien LLP; #3 Clifford Law Offices; #4 Briskman Briskman & Greenberg; #5 The Kryder Law Group; #6 Willens & Baez; #7 Phillips Law Offices; #8 Salvi, Schostok & Pritchard; #9 Corboy & Demetrio; #10 Cooney & Conway; #11 Levin & Perconti
+Claude | 13 brands in answer | Not mentioned
+#1 Taxman, Pollock, Murray & Bekkerman; #2 Levin & Perconti; #3 Rosenfeld Injury Lawyers; #4 Ankin Law; #5 DePaolo & Zadeikis; #6 Briskman Briskman & Greenberg; #7 Cavanagh Law Group; #8 Kryder Law Group; #9 Meyers & Flowers Trial Attorneys; #10 Lloyd Miller Law; #11 Horwitz Horwitz & Associates; #12 Gainsberg; #13 Shammas Law Office
+Google | 0 brands in answer | Not mentioned | No results available

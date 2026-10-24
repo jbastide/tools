@@ -1,0 +1,29 @@
+checker: semrush
+firm: F05
+input: chicago-personal-injury-lawyers.us
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-23T12:36:02Z
+seconds_to_result: 10
+outcome: result
+--- result text, verbatim from the page ---
+AI Visibility Overview for: chicago-personal-injury-lawyers.us
+AI Visibility Score 0 (Low)
+Mentions 0
+Citations 1
+Audience Reach 0
+We need more AI visibility history for this website before we can show a three-month trend.
+Mentions breakdown across AI search platforms.
+ChatGPT 0
+Gemini 0
+AI Mode 0
+AI Overviews 0
+Competitor Visibility Comparison
+Your site chicago-personal-injury-lawyers.us: AI Visibility Score 0, Mentions 0, Audience Reach 0
+Competitor chicagoinjurylawyer.pro: AI Visibility Score 0, Mentions 5, Audience Reach 2.5K
+Top Cited Pages (URL, Citations)
+chicago-personal-injury-lawyers.us/automobile-accidents/car-accidents/uninsured-motorists-accidents 2
+chicago-personal-injury-lawyers.us/automobile-accidents/chicago-uber-and-rideshare-accident-lawyer 1
+chicago-personal-injury-lawyers.us/automobile-accidents/motorcycles-accidents 1
+Best Performing Topics
+No topics surfacing your brand yet

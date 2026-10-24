@@ -1,0 +1,34 @@
+checker: geoptie
+firm: F03
+input: windycityinjury.com
+round: 2
+run by: agent (built-in browser)
+started_utc: 2026-10-23T12:39:44Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+windycityinjury.com
+Brand detected: Flanagan Injury Law Group
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+5 brands in answer
+Not mentioned #1 Horwitz, Horwitz & Associates #2 Phillips Law Offices #3 Duran Law Offices #4 Argionis & Associates #5 Seeskin Law
+Perplexity
+7 brands in answer
+Not mentioned #1 Salvi, Schostok & Pritchard P.C. #2 Briskman Briskman & Greenberg #3 Horwitz, Horwitz & Associates #4 Willens & Baez Personal Injury Lawyers #5 Curcio & Casciato #6 Briskman & Briskman #7 Shapiro, Cohen & Basinger
+Claude
+9 brands in answer
+Not mentioned #1 Clifford Law Offices #2 Malman Law #3 Disparti Law Group #4 Briskman Briskman & Greenberg #5 Staver Accident Injury Lawyers #6 Phillips Law Offices #7 Smith LaCien LLP #8 Powell and Pisman Injury Lawyers #9 Gill Ports Hoste LLC
+Google
+0 brands in answer
+Not mentioned
+No results available

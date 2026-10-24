@@ -1,0 +1,97 @@
+checker: geoptie
+firm: F10
+input: rundiolaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:41:56Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+rundiolaw.com
+Brand detected: Rundio Injury Law
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+6 brands in answer
+Not mentioned
+#1
+Levin & Perconti
+#2
+Clifford Law Offices
+#3
+Salvi, Schostok & Pritchard
+#4
+Cirignani, Heller & Harman (CHH Law)
+#5
+Kreisman Law Offices
+#6
+Levin, Riback & Adelman
+Perplexity
+10 brands in answer
+Not mentioned
+#1
+Phillips Law Offices
+#2
+Briskman Briskman & Greenberg
+#3
+Willens & Baez Personal Injury Lawyers
+#4
+Rosenfeld Injury Lawyers
+#5
+Shapiro, Cohen & Basinger Trial Lawyers
+#6
+Trapp & Geller
+#7
+Clifford Law Offices
+#8
+Cavanagh Sorich Law Group
+#9
+Cooney & Conway
+#10
+Lane Brown LLC
+Claude
+17 brands in answer
+Not mentioned
+#1
+Corboy & Demetrio
+#2
+Levin & Perconti
+#3
+Smith LaCien LLP
+#4
+Dudley & Lake
+#5
+Passen Powell Jenkins
+#6
+Malman Law
+#7
+Abels & Annes, P.C.
+#8
+Taxman, Pollock & Bekkerman, LLC
+#9
+Driscoll Law Group
+#10
+Horwitz, Horwitz & Associates
+#11
+Clifford Law Offices
+#12
+Romanucci & Blandin
+#13
+Salvi, Schostok & Pritchard
+#14
+Shea Law Group
+#15
+Kryder Law Group
++2 more results →
+Google
+0 brands in answer
+Not mentioned
+No results available

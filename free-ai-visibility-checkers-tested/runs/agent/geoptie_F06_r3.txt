@@ -1,0 +1,37 @@
+checker: geoptie
+firm: F06
+input: mccreadylaw.com
+round: 3
+run by: agent (built-in browser)
+started_utc: 2026-10-23T22:11:02Z
+seconds_to_result: 8
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+mccreadylaw.com
+Brand detected: McCready Law
+VISIBILITY SCORE
+27
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+6 brands in answer
+Not mentioned #1 Abels & Annes #2 Horwitz, Horwitz & Associates #3 Duran Law Offices #4 Wilson & Novak #5 Sarkisian Law Offices #6 Brian Smith Law Group
+Perplexity
+9 brands in answer
+Ranked #8 #1
+Alvarez Law Offices #2 Briskman Briskman & Greenberg #3 Malman Law #4 Costa Ivone Injury Lawyers #5 The Kryder Law Group #6 VanDerGinst Law #7 Phillips Law Offices #8 McCready Law #9 Lerner and Rowe
+Claude
+15 brands in answer
+Not mentioned #1 Rosenfeld Injury Lawyers #2 Disparti Law Group #3 Staver Accident Injury Lawyers #4 Briskman Briskman & Greenberg #5 Phillips Law Offices #6 Abels & Annes, P.C. #7 Attorneys of Chicago #8 TopDog Law #9 The Wilson PC #10 Wilson & Novak #11 Sarkisian Law Offices #12 Schafer & Schafer #13 Harper & Harper #14 Hilbrich Law Firm #15 Theodoros & Rooth, P.C.
+Google
+0 brands in answer
+Not mentioned
+No results available
+--- notes ---
+Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 05f1f6dfe34f...): served from a cache

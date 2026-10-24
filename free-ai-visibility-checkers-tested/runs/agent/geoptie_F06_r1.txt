@@ -1,0 +1,93 @@
+checker: geoptie
+firm: F06
+input: mccreadylaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:37:20Z
+seconds_to_result: 45
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+mccreadylaw.com
+Brand detected: McCready Law
+VISIBILITY SCORE
+28
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+8 brands in answer
+Not mentioned
+#1
+Abels & Annes
+#2
+Tarpey, Jones & Schroeder
+#3
+Ankin Law
+#4
+Argionis & Associates
+#5
+LaTulip Law Offices
+#6
+Theodoros & Rooth
+#7
+Wilson & Novak
+#8
+Sarkisian, Sarkisian & Associates
+Perplexity
+8 brands in answer
+Ranked
+#6
+#1
+Briskman Briskman & Greenberg
+#2
+Malman Law
+#3
+Willens & Baez
+#4
+Midwest Injury Lawyers
+#5
+Alvarez Law Offices
+#6
+McCready Law
+#7
+Lerner and Rowe
+#8
+Kelly Law Offices
+Claude
+13 brands in answer
+Not mentioned
+#1
+Staver Accident Injury Lawyers
+#2
+Rosenfeld Injury Lawyers
+#3
+Briskman Briskman & Greenberg
+#4
+Abels & Annes, P.C.
+#5
+Disparti Law Group
+#6
+TopDog Law
+#7
+The Wilson PC
+#8
+Sarkisian Sarkisian & Associates
+#9
+Schafer & Schafer
+#10
+Westland & Bennett P.C.
+#11
+Theodoros & Rooth, P.C.
+#12
+Hensley Legal Group
+#13
+Wilson & Novak Law Offices
+Google
+0 brands in answer
+Not mentioned
+No results available

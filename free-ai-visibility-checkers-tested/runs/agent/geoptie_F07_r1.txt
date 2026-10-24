@@ -1,0 +1,91 @@
+checker: geoptie
+firm: F07
+input: anesilaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:38:28Z
+seconds_to_result: 46
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+anesilaw.com
+Brand detected: Anesi Ozmon
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+5 brands in answer
+Not mentioned
+#1
+Horwitz, Horwitz & Associates
+#2
+Coven Law Group
+#3
+Willens & Baez
+#4
+Chicago WorkComp
+#5
+Leonard Law Group
+Perplexity
+8 brands in answer
+Not mentioned
+#1
+Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca, P.C.
+#2
+GWC Injury Lawyers
+#3
+Briskman Briskman & Greenberg
+#4
+Cooney & Conway LLP
+#5
+Curcio & Casciato
+#6
+Morici, Figlioli & Associates
+#7
+Connolly Injury Law
+#8
+Rosenfeld Injury Lawyers
+Claude
+16 brands in answer
+Not mentioned
+#1
+Salvi, Schostok & Pritchard
+#2
+Horwitz, Horwitz & Associates
+#3
+TorHoerman Law
+#4
+GWC Injury Lawyers
+#5
+Morici, Longo & Associates
+#6
+Carboy & Demetrio
+#7
+Phillips Law Offices
+#8
+Winters Salzetta O'Brien & Richardson
+#9
+Ankin Law
+#10
+Eames Law Group
+#11
+Elfenbaum Evers, P.C.
+#12
+Healy Scanlon Veugeler Gannon
+#13
+Gordon & Centracchio
+#14
+Staver
+#15
+Romanucci & Blandin
++1 more results →
+Google
+0 brands in answer
+Not mentioned
+No results available

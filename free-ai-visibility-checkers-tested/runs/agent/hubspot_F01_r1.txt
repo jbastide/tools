@@ -1,0 +1,10 @@
+checker: hubspot
+firm: F01
+input: Company Name "Malman Law"; Location "Chicago, Illinois"; Product or Services "Personal injury law"; Industry "Legal services"
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-22T08:23:57Z
+seconds_to_result:
+outcome: no_result
+--- result text, verbatim from the page ---
+(none) Both submissions (a click on "Grade My Brand", then Enter after declining optional cookies) reloaded https://www.hubspot.com/ai-search-grader?companyName=Malman+Law&geography=Chicago%2C+Illinois&productsServices=Personal+injury+law&industry=Legal+services with an empty form. The page loads a CHEQ bot-detection script (obs.greencolumnart.com, ch=cheq4ppc); whether it caused this is unverified. Not retried. Screenshot: hubspot_F01_r1_noresult.jpg

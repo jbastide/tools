@@ -1,0 +1,37 @@
+checker: geoptie
+firm: F08
+input: postmanlaw.com
+round: 3
+run by: agent (built-in browser)
+started_utc: 2026-10-23T22:11:51Z
+seconds_to_result: 8
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+postmanlaw.com
+Brand detected: Postman Law
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+5 brands in answer
+Not mentioned #1 Ankin Law #2 Willens & Baez #3 Mark L. Karno & Associates #4 Wise Law Offices #5 Duran Law Offices
+Perplexity
+8 brands in answer
+Not mentioned #1 Salvi, Schostok & Pritchard P.C. #2 Romanucci & Blandin #3 Horwitz, Horwitz & Associates #4 Curcio & Casciato #5 Cogan & Power #6 Phillips Law Offices #7 Rosenfeld Injury Lawyers #8 Jacobson & Tchernev
+Claude
+17 brands in answer
+Not mentioned #1 Salvi, Schostok & Pritchard P.C. #2 Levin & Perconti #3 Horwitz, Horwitz & Associates #4 Abels & Annes, P.C. #5 Malman Law #6 Briskman Briskman & Greenberg #7 The Wilson PC #8 Walner Law #9 Disparti Law Group #10 Staver Accident Injury Lawyers #11 Law Brothers #12 Rosenfeld Injury Lawyers #13 Gainsberg Injury and Accident Lawyers #14 The Kryder Law Group #15 Costa Ivone
++2 more results →
+Google
+0 brands in answer
+Not mentioned
+No results available
+--- notes ---
+Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 200d36ce05a7...): served from a cache

@@ -1,0 +1,33 @@
+checker: semrush
+firm: F04
+input: dispartilaw.com
+round: 1
+run by: agent (built-in browser)
+started_utc: 2026-10-23T12:35:23Z
+seconds_to_result: 10
+outcome: result
+--- result text, verbatim from the page ---
+AI Visibility Overview for: dispartilaw.com
+AI Visibility Score 33 (Low)
+Mentions 93
+Citations 275
+Audience Reach 4M
+This site’s AI Visibility Score is up 3% over the last three months.
+Mentions breakdown across AI search platforms.
+ChatGPT 15
+Gemini 14
+AI Mode 14
+AI Overviews 50
+Competitor Visibility Comparison
+Your site dispartilaw.com: AI Visibility Score 33, Mentions 93, Audience Reach 4M
+Competitor malmanlaw.com: AI Visibility Score 31, Mentions 124, Audience Reach 2.2M
+Top Cited Pages (URL, Citations)
+www.dispartilaw.com/blog/much-can-work-collecting-ssdi 81
+www.dispartilaw.com/car-accidents-statistics-by-gender-male-vs-female 45
+www.dispartilaw.com/is-workplace-bullying-illegal-hostile-work-environment 34
+Best Performing Topics (Topic, Mentions, Topic Volume)
+Disparti Law Group Legal Services and Reviews 15 2,058
+Cass Casper Legal Profile 14 121
+Chicago Car Accident Lawyers 11 17,285
+Chicago Personal Injury and Criminal Defense Lawyers 6 34,128
+Disability Insurance and Benefits 4 1,013,636

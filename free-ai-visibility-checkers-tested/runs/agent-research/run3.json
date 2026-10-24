@@ -1,0 +1,271 @@
+{
+ "run_finished_utc": "2026-10-23T19:50:13Z",
+ "answers": [
+  {
+   "id": "P1",
+   "answer_text": "No single objective ranking exists. These are the Chicago personal injury firms that show up most often across peer-review rankings (Best Lawyers, Super Lawyers), verdict and settlement reports (Chicago Lawyer / Jury Verdict Reporter) and curated lists such as Expertise.com:\n\n1. Clifford Law Offices: probably the most widely recognized PI firm in Chicago. It has appeared on Expertise.com's Chicago lists for years, and founder Robert Clifford is repeatedly ranked a top Illinois lawyer.\n2. Corboy & Demetrio: a long-established trial firm that reports billions recovered, including the largest individual compensatory award the Illinois Supreme Court has upheld.\n3. Power Rogers: says it has ranked No. 1 in dollars recovered in Chicago Lawyer's survey in 13 of the last 15 years.\n4. Salvi, Schostok & Pritchard: ranked No. 1 in Chicago Lawyer's 2025 Settlement Report, with $213.4M across 29 cases.\n5. Romanucci & Blandin: a high-profile serious-injury and civil-rights trial firm with strong client reviews (Google 5.0 from about 190 reviews).\n6. Smith LaCien: a newer firm founded by veteran trial lawyers, with very large reported recoveries.\n7. Horwitz, Horwitz & Associates: a long-running PI firm that reports major truck and auto verdicts.\n8. Abels & Annes: a mid-size firm that handles everyday injury cases well and has excellent client reviews (Google 5.0 from 214 reviews).\n\nMost firms offer free consultations and work on contingency. Before you hire anyone, check the lawyer's record with the Illinois ARDC and ask who will actually handle your case.",
+   "firms": [
+    {
+     "rank": 1,
+     "name": "Clifford Law Offices",
+     "reason": "Most consistently recognized Chicago PI firm across Expertise.com, Best Lawyers and Super Lawyers."
+    },
+    {
+     "rank": 2,
+     "name": "Corboy & Demetrio",
+     "reason": "Elite trial firm with billions recovered and record Illinois Supreme Court-upheld award."
+    },
+    {
+     "rank": 3,
+     "name": "Power Rogers",
+     "reason": "Claims No. 1 in dollars recovered in Chicago Lawyer's survey 13 of the last 15 years."
+    },
+    {
+     "rank": 4,
+     "name": "Salvi, Schostok & Pritchard",
+     "reason": "No. 1 in Chicago Lawyer's 2025 Settlement Report ($213.4M)."
+    },
+    {
+     "rank": 5,
+     "name": "Romanucci & Blandin",
+     "reason": "High-profile catastrophic-injury trial firm with strong reviews."
+    },
+    {
+     "rank": 6,
+     "name": "Smith LaCien",
+     "reason": "Veteran trial lawyers with very large reported recoveries."
+    },
+    {
+     "rank": 7,
+     "name": "Horwitz, Horwitz & Associates",
+     "reason": "Decades-old PI firm with major truck and auto verdicts."
+    },
+    {
+     "rank": 8,
+     "name": "Abels & Annes",
+     "reason": "Accessible mid-size firm with excellent client reviews."
+    }
+   ],
+   "searches": [
+    "best personal injury lawyers Chicago",
+    "Chicago Lawyer magazine settlement survey top personal injury firms 2025"
+   ],
+   "sources": [
+    "https://storage-switzerland.com/Articles/best-personal-injury-lawyers-chicago-2026/",
+    "https://www.cliffordlaw.com/clifford-law-named-best-personal-injury-lawyers-in-chicago-by-expertise-com/",
+    "https://bestlawyers.com/united-states/illinois/chicago/personal-injury-litigation-plaintiffs?page=5",
+    "https://www.salvilaw.com/press-release/salvi-schostok-pritchard-earns-1-spot-in-chicago-lawyers-2025-settlement-report/",
+    "https://www.powerrogers.com",
+    "https://www.corboydemetrio.com/practices-car-accident",
+    "https://www.expertise.com/il/chicago/car-accident-lawyers"
+   ]
+  },
+  {
+   "id": "P2",
+   "answer_text": "I'm sorry you were hurt. First, get medical care, and keep the crash report, photos and any insurance letters. Don't give a recorded statement to the other driver's insurer before you've talked to a lawyer. These Chicago firms are worth calling, and all offer free consultations on contingency:\n\n1. Clifford Law Offices: Expertise.com's 2026 Chicago car accident list puts it first, and it won a $38.3M truck-car collision verdict.\n2. Power Rogers: a top-tier auto and truck crash trial firm with a long record of large recoveries (Google 4.9).\n3. Corboy & Demetrio: has a dedicated vehicular-accident practice and won a nearly $22M award for a rear-end semi crash that the Illinois Supreme Court upheld.\n4. Horwitz, Horwitz & Associates: reports a $16.4M auto verdict and a $40M truck verdict.\n5. Abels & Annes: a good fit for typical car crash cases that won't be eight figures, with very strong client reviews (Google 5.0 from 214 reviews).\n6. Romanucci & Blandin: a strong choice if your injuries are catastrophic (Google 5.0 from about 190 reviews).\n\nIf your injuries are severe or a truck was involved, start with the first three. For a more routine crash, a responsive firm like Abels & Annes may give you more personal attention.",
+   "firms": [
+    {
+     "rank": 1,
+     "name": "Clifford Law Offices",
+     "reason": "Top of Expertise.com's 2026 Chicago car accident list; $38.3M truck-car verdict."
+    },
+    {
+     "rank": 2,
+     "name": "Power Rogers",
+     "reason": "Leading Chicago crash trial firm with very large recoveries."
+    },
+    {
+     "rank": 3,
+     "name": "Corboy & Demetrio",
+     "reason": "Dedicated vehicular practice; ~$22M rear-end semi award upheld by Illinois Supreme Court."
+    },
+    {
+     "rank": 4,
+     "name": "Horwitz, Horwitz & Associates",
+     "reason": "Reported $16.4M auto and $40M truck verdicts."
+    },
+    {
+     "rank": 5,
+     "name": "Abels & Annes",
+     "reason": "Strong fit for everyday crash cases; Google 5.0 from 214 reviews."
+    },
+    {
+     "rank": 6,
+     "name": "Romanucci & Blandin",
+     "reason": "Catastrophic-injury specialists with top client reviews."
+    }
+   ],
+   "searches": [
+    "Chicago car accident law firm top verdicts",
+    "Expertise.com best car accident lawyers Chicago 2026"
+   ],
+   "sources": [
+    "https://www.expertise.com/il/chicago/car-accident-lawyers",
+    "https://www.corboydemetrio.com/practices-car-accident",
+    "https://www.powerrogers.com",
+    "https://www.horwitzlaw.com/areas-served/oak-lawn/",
+    "https://www.cliffordlaw.com/clifford-law-offices-named-to-2024-best-car-motorcycle-and-truck-accident-lawyers-lists-on-expertise-com/"
+   ]
+  },
+  {
+   "id": "P3",
+   "answer_text": "Ranked by client reviews (mainly Google star rating and review count, as compiled on Expertise.com's 2026 Chicago pages), these firms stand out:\n\n1. The Kryder Law Group: Google 4.9 from 461 reviews, the largest review base I found among highly rated Chicago PI firms.\n2. Law Office of Scott D. DeSalvo: Google 5.0 from 226 reviews.\n3. Abels & Annes: Google 5.0 from 214 reviews, plus 5.0 on Avvo (28) and Facebook (35).\n4. Romanucci & Blandin: Google 5.0 from about 190 reviews.\n5. Zayed Law Offices: Google 4.8 from 178 reviews.\n6. Flanagan Injury Law Group: Google 4.9 from 133 reviews and 5.0 on FindLaw.\n7. William S. Wojcik, Ltd.: Google 5.0 from 113 reviews.\n8. Sobo & Sobo: Google 5.0 from 112 reviews.\n9. Power Rogers: Google 4.9 from 68 reviews, from a firm that also has elite trial results.\n\nReview counts change constantly, and some firms ask satisfied clients for reviews, so check the current numbers on Google. Read the recent reviews for comments about communication. Strong reviews are not the same as courtroom results: firms like Clifford Law and Corboy & Demetrio have fewer online reviews but top peer rankings.",
+   "firms": [
+    {
+     "rank": 1,
+     "name": "The Kryder Law Group",
+     "reason": "Google 4.9 from 461 reviews."
+    },
+    {
+     "rank": 2,
+     "name": "Law Office of Scott D. DeSalvo",
+     "reason": "Google 5.0 from 226 reviews."
+    },
+    {
+     "rank": 3,
+     "name": "Abels & Annes",
+     "reason": "Google 5.0 from 214 reviews; 5.0 on Avvo and Facebook."
+    },
+    {
+     "rank": 4,
+     "name": "Romanucci & Blandin",
+     "reason": "Google 5.0 from ~190 reviews."
+    },
+    {
+     "rank": 5,
+     "name": "Zayed Law Offices",
+     "reason": "Google 4.8 from 178 reviews."
+    },
+    {
+     "rank": 6,
+     "name": "Flanagan Injury Law Group",
+     "reason": "Google 4.9 from 133 reviews; 5.0 FindLaw."
+    },
+    {
+     "rank": 7,
+     "name": "William S. Wojcik, Ltd.",
+     "reason": "Google 5.0 from 113 reviews."
+    },
+    {
+     "rank": 8,
+     "name": "Sobo & Sobo",
+     "reason": "Google 5.0 from 112 reviews."
+    },
+    {
+     "rank": 9,
+     "name": "Power Rogers",
+     "reason": "Google 4.9 (68) plus elite trial record."
+    }
+   ],
+   "searches": [
+    "Chicago personal injury law firm best reviews Google rating",
+    "Chicago personal injury firm 5-star Google reviews hundreds of reviews",
+    "Chicago personal injury law firm Google reviews 4.9 stars review count"
+   ],
+   "sources": [
+    "https://www.expertise.com/il/chicago/personal-injury-lawyers",
+    "https://www.expertise.com/il/chicago/car-accident-lawyers",
+    "https://americanspcc.org/top-7-chicago-personal-injury-law-firms-with-good-reviews/",
+    "https://www.avvo.com/personal-injury-lawyer/il/chicago.html"
+   ]
+  },
+  {
+   "id": "P4",
+   "answer_text": "For a slip-and-fall (premises liability) case in Chicago, these are the three I'd suggest:\n\n1. Levin & Perconti: a well-regarded Chicago injury firm with a dedicated premises liability and slip-and-fall practice. It's a good fit if your injuries are serious and the property owner is fighting liability.\n2. Abels & Annes: handles slip-and-fall and premises cases regularly and is known for responsive client service (Google 5.0 from 214 reviews).\n3. The Kryder Law Group: has a dedicated Chicago slip-and-fall practice and the strongest review base I found (Google 4.9 from 461 reviews).\n\nIn Illinois these cases fall under the Premises Liability Act. You generally need to show the owner knew or should have known about the hazard, so act quickly: stores often overwrite surveillance footage within days. The usual deadline to file is two years, and it can be much shorter if the property belongs to a city or other public entity. All three firms offer free consultations.",
+   "firms": [
+    {
+     "rank": 1,
+     "name": "Levin & Perconti",
+     "reason": "Established Chicago firm with a dedicated premises liability and slip-and-fall practice."
+    },
+    {
+     "rank": 2,
+     "name": "Abels & Annes",
+     "reason": "Regularly handles premises cases; Google 5.0 from 214 reviews."
+    },
+    {
+     "rank": 3,
+     "name": "The Kryder Law Group",
+     "reason": "Dedicated slip-and-fall practice; Google 4.9 from 461 reviews."
+    }
+   ],
+   "searches": [
+    "Chicago slip and fall attorney premises liability"
+   ],
+   "sources": [
+    "https://www.levinperconti.com/premises-liability/slip-and-fall-accidents/",
+    "https://www.daveabels.com/premises-liability",
+    "https://kryderlaw.com/chicago-slip-and-fall-injury-lawyer",
+    "https://www.expertise.com/il/chicago/personal-injury-lawyers",
+    "https://resident.com/health-and-wellness-resources/2026/07/16/7-top-rated-chicago-law-firms-for-grocery-store-slip-and-fall-cases"
+   ]
+  },
+  {
+   "id": "P5",
+   "answer_text": "For Chicago workers' compensation claims (and related injury claims against third parties), these firms stand out. They represent injured workers, not employers:\n\n1. Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca: one of Chicago's best-known claimant-side workers' comp firms. Richard K. Johnson was named Best Lawyers' 2016 Chicago 'Lawyer of the Year' for workers' comp claimants, and the firm is rated 5.0 on FindLaw from 48 reviews.\n2. Elfenbaum Evers & Zielinska: Best Law Firms Tier 1 in Chicago for Workers' Compensation Law – Claimants.\n3. Cullen, Haskins, Nicholson & Menchetti: Tier 1 in Chicago for Workers' Compensation – Claimants.\n4. Peter D. Corti Law Group: Tier 1 in Chicago for both workers' comp claimants and personal injury plaintiffs, which helps if a third party also caused your injury.\n5. George C. Patrick & Associates: Tier 1 in Chicago for Workers' Compensation – Claimants.\n6. Taxman, Pollock, Murray & Bekkerman: a Chicago workers' comp and injury firm that appears on curated Chicago lists.\n7. Corboy & Demetrio: a top PI firm with a Best Lawyers-recognized workers' comp attorney (Peter O'Malley). Strongest when a serious workplace injury also supports a third-party lawsuit.\n8. Ankin Law: a long-standing Chicago firm focused on injured workers and accident victims.\n\nIllinois workers' comp attorney fees are capped by statute, generally at 20% of the award. Report your injury to your employer within 45 days. If a third party was involved, such as a contractor, equipment maker or driver, ask whether you also have a personal injury claim.",
+   "firms": [
+    {
+     "rank": 1,
+     "name": "Katz, Friedman, Eisenstein, Johnson, Bareck & Bertuca",
+     "reason": "Premier claimant-side comp firm; Best Lawyers 'Lawyer of the Year' partner; 5.0 FindLaw (48)."
+    },
+    {
+     "rank": 2,
+     "name": "Elfenbaum Evers & Zielinska",
+     "reason": "Best Law Firms Tier 1, Chicago workers' comp claimants."
+    },
+    {
+     "rank": 3,
+     "name": "Cullen, Haskins, Nicholson & Menchetti",
+     "reason": "Best Law Firms Tier 1, Chicago workers' comp claimants."
+    },
+    {
+     "rank": 4,
+     "name": "Peter D. Corti Law Group",
+     "reason": "Tier 1 in both workers' comp claimants and PI plaintiffs."
+    },
+    {
+     "rank": 5,
+     "name": "George C. Patrick & Associates",
+     "reason": "Best Law Firms Tier 1, Chicago workers' comp claimants."
+    },
+    {
+     "rank": 6,
+     "name": "Taxman, Pollock, Murray & Bekkerman",
+     "reason": "Chicago comp and injury firm on curated lists."
+    },
+    {
+     "rank": 7,
+     "name": "Corboy & Demetrio",
+     "reason": "Top PI firm with a Best Lawyers-recognized comp attorney, ideal for third-party claims."
+    },
+    {
+     "rank": 8,
+     "name": "Ankin Law",
+     "reason": "Long-standing Chicago firm focused on injured workers."
+    }
+   ],
+   "searches": [
+    "best workers compensation lawyers Chicago",
+    "Chicago workers compensation attorneys injured workers Illinois firm Katz Friedman Krol Bongiorno",
+    "Chicago workers compensation lawyer injured worker top rated firm reviews",
+    "Best Law Firms Chicago workers' compensation law claimants tier 1"
+   ],
+   "sources": [
+    "https://bestlawyers.com/lawyers/richard-k-johnson/4218",
+    "https://bestlawyers.com/lawyers/peter-o-malley/359631",
+    "https://www.bestlawfirms.com/united-states/workers-compensation-law-claimants/illinois/chicago",
+    "https://www.bestlawfirms.com/firms/elfenbaum-evers-zielinska-pc/75793/US",
+    "https://www.bestlawfirms.com/firms/cullen-haskins-nicholson-menchetti-pc/4189/US",
+    "https://www.bestlawfirms.com/firms/peter-d-corti-law-group-pc/4197/US",
+    "https://www.bestlawfirms.com/firms/george-c-patrick-associates-pc/39712/US",
+    "https://www.martindale.com/organization/katz-friedman-eagle-eisenstein-johnson-bareck-pc-766054/",
+    "https://lawyers.uslegal.com/attorneys/workers-compensation-lawyers/illinois/chicago",
+    "https://www.avvo.com/workers-compensation-lawyer/il/chicago.html"
+   ]
+  }
+ ],
+ "run": 3,
+ "agent": "Claude Opus 5.5 at high effort, a Claude Code subagent in a fresh context, WebSearch and WebFetch only",
+ "launched_utc": "2026-10-23T19:47Z (approx.; runs 1-3 launched together)"
+}

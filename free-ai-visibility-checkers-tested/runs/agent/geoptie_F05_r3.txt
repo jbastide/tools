@@ -1,0 +1,36 @@
+checker: geoptie
+firm: F05
+input: chicago-personal-injury-lawyers.us
+round: 3
+run by: agent (built-in browser)
+started_utc: 2026-10-23T22:10:50Z
+seconds_to_result: 8
+outcome: result
+--- result text, verbatim from the page ---
+VISIBILITY REPORT
+chicago-personal-injury-lawyers.us
+Brand detected: The Horwitz Law Group
+VISIBILITY SCORE
+0
+/100
+Share Results
+New Analysis
+GEOPTIE
+You're invisible. Start tracking now.
+Your brand doesn't show up in AI search results. Track your rankings weekly to see when you break through.
+Fix my visibility
+ChatGPT
+3 brands in answer
+Not mentioned #1 Corboy & Demetrio #2 Clifford Law Offices #3 Levin & Perconti
+Perplexity
+9 brands in answer
+Not mentioned #1 Cooney & Conway #2 Power Rogers #3 Salvi, Schostok & Pritchard #4 Katz Friedman #5 Smith LaCien #6 Cavanagh Sorich #7 Horwitz, Horwitz & Associates #8 Briskman Briskman & Greenberg #9 Phillips Law Offices
+Claude
+12 brands in answer
+Not mentioned #1 Taxman, Pollock, Murray & Bekkerman #2 Levin & Perconti #3 Ankin Law #4 Briskman Briskman & Greenberg #5 Rosenfeld Injury Lawyers #6 The Kryder Law Group #7 Cavanagh Law Group #8 DePaolo & Zadeikis #9 Clifford Law Offices #10 Botti Law Firm #11 Anesi Ozmon #12 Gill Ports Hoste
+Google
+0 brands in answer
+Not mentioned
+No results available
+--- notes ---
+Report ready within 8 seconds and identical to round 2 (SHA-256 of the result text matched, 42bee460ac20...): served from a cache

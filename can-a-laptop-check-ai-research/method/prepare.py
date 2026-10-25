@@ -1,6 +1,10 @@
 """Write ../planted.csv and ../audit.csv from the receipts repository's benchmark and review files.
 
-Usage: python3 prepare.py PATH_TO_RECEIPTS_REPO
+Usage: python3 prepare.py PATH_TO_RECEIPTS_REPO PATH_TO_RECEIPTS_NOTES_REPO
+
+The planted-case files are in the public receipts repository (bench/results/planted/). The review of
+the research notes is in the private receipts-notes repository; audit.csv, committed here, is its
+published extract.
 
 planted.csv  one row per planted case: the claim as checked, the page, and each method's verdict
 audit.csv    one row per item receipts flagged in the agent-shopping research notes, with the verdict
@@ -8,11 +12,11 @@ audit.csv    one row per item receipts flagged in the agent-shopping research no
 """
 import csv, json, os, re, sys
 
-R = os.path.expanduser(sys.argv[1])
+R, NOTES = os.path.expanduser(sys.argv[1]), os.path.expanduser(sys.argv[2])
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 P = os.path.join(R, "bench", "results", "planted")
-V = os.path.join(R, "private", "reports", "2026-10-24-agent-shopping-synthesis", "verification")
+V = os.path.join(NOTES, "reports", "2026-10-24-agent-shopping-synthesis", "verification")
 
 def jl(path):
     return {json.loads(l)["id"]: json.loads(l) for l in open(path, encoding="utf-8") if l.strip()}

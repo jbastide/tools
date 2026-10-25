@@ -2,7 +2,7 @@
 
 | File | What it is |
 | --- | --- |
-| `prepare.py` | Writes `../planted.csv` and `../audit.csv` from the receipts repository (`bench/results/planted/` and the review of the agent-shopping research notes). |
+| `prepare.py` | Writes `../planted.csv` from the receipts repository (`bench/results/planted/`) and `../audit.csv` from the review of the agent-shopping research notes, kept in a private notes repository. |
 | `build.py` | Writes `../index.html` from the two CSV files. The Swedish page is a translation of its output. |
 
 The checker and the benchmark script (`bench/planted.py`) are in the receipts repository,
@@ -18,5 +18,5 @@ Numbers on the page that are not in the CSV files are constants at the top of `b
   notes: correct quotes and figures against sources"): 7 passages in quotation marks replaced by the
   sources' words, and 7 corrections found during the review outside the flagged items.
 
-To repeat: `python3 prepare.py PATH_TO_RECEIPTS && python3 build.py YYYY-MM-DD`, then mirror any text
+To repeat: `python3 prepare.py PATH_TO_RECEIPTS PATH_TO_NOTES && python3 build.py YYYY-MM-DD`, then mirror any text
 change in `sv/kan-en-laptop-granska-ai-research/`.

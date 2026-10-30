@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HIPAA-säker konverteringsspårning för Google Ads: vi jämför alternativen för vårdmottagningar</title>
-<meta name="description" content="Så kan en vårdmottagning spåra konverteringar i Google Ads utan att skicka skyddad hälsoinformation (PHI) till Google. Vi jämför Curve, Ours Privacy, Freshpaint, CDP:er för storföretag, Google Tag Manager på serversidan, import av offlinekonverteringar och HIPAA-säker samtalsspårning, med priser, arbetsinsats och källor. Endast i utbildningssyfte, inte juridisk rådgivning.">
+<title>HIPAA-säker Google Ads: konverteringsspårning jämförd</title>
+<meta name="description" content="Kan en vårdmottagning som omfattas av HIPAA annonsera i Google Ads? Bara om ingen PHI når Google. Googles hållning till BAA, hälsoregler och spårning.">
 <meta name="author" content="Copy for Originals">
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="index,follow,max-snippet:-1">
@@ -17,9 +17,9 @@
 <meta property="og:site_name" content="Copy for Originals Tools">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="HIPAA-säker konverteringsspårning för Google Ads: vi jämför alternativen">
-<meta property="og:description" content="Alla sätt en vårdmottagning kan spåra konverteringar i Google Ads på utan att skicka PHI till Google, med priser, arbetsinsats och källor.">
-<meta property="article:modified_time" content="2026-10-05">
+<meta property="og:title" content="HIPAA-säker Google Ads: konverteringsspårning jämförd">
+<meta property="og:description" content="Kan en vårdmottagning som omfattas av HIPAA annonsera i Google Ads? Googles hållning till BAA, dess hälsoregler för annonser och alla spårningsalternativ vi hittade, med priser, arbetsinsats och källor.">
+<meta property="article:modified_time" content="2026-10-30">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A9%BA%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
@@ -34,12 +34,12 @@
     {
       "@type": "Article",
       "@id": "https://tools.copyfororiginals.com/sv/hipaa-google-ads-konverteringar/#article",
-      "headline": "HIPAA-säker konverteringsspårning för Google Ads: vi jämför alternativen för vårdmottagningar",
-      "description": "Så kan en vårdmottagning spåra konverteringar i Google Ads utan att skicka skyddad hälsoinformation till Google. Vi jämför spårningsplattformar för vården, CDP:er för storföretag, Google Tag Manager på serversidan, import av offlinekonverteringar och HIPAA-säker samtalsspårning utifrån pris, arbetsinsats och hur väl de passar mottagningar utan IT-avdelning.",
+      "headline": "HIPAA-säker Google Ads: konverteringsspårning jämförd",
+      "description": "Om en vårdmottagning som omfattas av HIPAA kan annonsera i Google Ads, Googles hållning till BAA och dess hälsoregler för annonser, och hur mottagningen kan spåra konverteringar utan att skicka skyddad hälsoinformation till Google. Vi jämför spårningsplattformar för vården, CDP:er för storföretag, Google Tag Manager på serversidan, import av offlinekonverteringar och HIPAA-säker samtalsspårning utifrån pris, arbetsinsats och hur väl de passar mottagningar utan IT-avdelning.",
       "url": "https://tools.copyfororiginals.com/sv/hipaa-google-ads-konverteringar/",
       "inLanguage": "sv",
       "datePublished": "2026-10-05",
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-30",
       "author": {
         "@id": "https://copyfororiginals.com/#org"
       },
@@ -55,10 +55,18 @@
       "citation": [
         "https://support.google.com/analytics/answer/13297105",
         "https://docs.cloud.google.com/docs/security/compliance/hipaa",
+        "https://support.google.com/localservices/answer/12947817",
+        "https://support.google.com/localservices/answer/13017669",
         "https://support.google.com/google-ads/answer/7475709",
+        "https://support.google.com/google-ads/answer/9888656",
+        "https://support.google.com/adspolicy/answer/16701855",
+        "https://support.google.com/adspolicy/answer/143465",
+        "https://support.google.com/google-ads/answer/6299717",
         "https://support.google.com/google-ads/answer/7014069",
         "https://support.google.com/google-ads/answer/2998031",
-        "https://www.aha.org/news/news/2024-06-20-judge-rules-favor-aha-vacating-hhs-online-tracking-bulletin-unlawful-and-beyond-agency-authority",
+        "https://support.google.com/google-ads/answer/10029210",
+        "https://www.mofo.com/resources/insights/240718-federal-judge-vacates-ocr-guidance",
+        "https://www.proskauer.com/blog/shortly-after-its-online-tracking-technologies-bulletin-is-declared-unlawful-hhs-ocr-stands-down-withdraws-appeal",
         "https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/07/no-hashing-still-doesnt-make-your-data-anonymous",
         "https://www.curvecompliance.com/pricing",
         "https://oursprivacy.com/pricing",
@@ -91,10 +99,18 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Kan en vårdmottagning som omfattas av HIPAA annonsera i Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En vårdmottagning som omfattas av HIPAA kan annonsera i Google Ads om ingen skyddad hälsoinformation (PHI) når Google via mottagningens taggar, uppladdningar eller målgrupper. Google erbjuder inget business associate agreement (BAA) för Google Analytics, vi har inte hittat någon sida hos Google som erbjuder ett för konverteringsspårning i Google Ads, och Googles annonspolicyer håller hälsorelaterade konverteringar utanför förbättrade konverteringar och stänger ute annonsörer som marknadsför produkter eller tjänster i Googles känsliga intressekategori för hälsa från målgrupper som annonsören själv har satt ihop. Undantaget när det gäller BAA är Local Services Ads: där tecknar Google ett."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Uppfyller Google Ads kraven i HIPAA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nej. Google tecknar inget business associate agreement (BAA) för Google Ads, så en vårdmottagning kan bara använda Google Ads om ingen skyddad hälsoinformation når Google. I praktiken innebär det att bara skicka annonsens klick-ID, en tidsstämpel, eventuellt ett värde och ett neutralt konverteringsnamn."
+            "text": "Det säger inte Google. Google erbjuder inget business associate agreement (BAA) för Google Analytics, och vi har inte hittat någon sida hos Google som erbjuder ett för konverteringsspårning i Google Ads; undantaget är Local Services Ads, som har ett eget BAA. En vårdmottagning kan därför bara använda Google Ads om ingen skyddad hälsoinformation når Google. I praktiken innebär det att bara skicka annonsens klick-ID, en tidsstämpel, eventuellt ett värde och ett neutralt konverteringsnamn."
           }
         },
         {
@@ -102,7 +118,7 @@
           "name": "Är Freshpaint det enda HIPAA-säkra alternativet för konverteringar i Google Ads?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nej. Curve och Ours Privacy är spårningsplattformar för vården som konkurrerar direkt med Freshpaint. CDP:er för storföretag, som Segment, RudderStack, Tealium och Piwik PRO, erbjuder BAA på sina högsta abonnemangsnivåer. Google Tag Manager på serversidan kan köras hos en driftleverantör som tecknar BAA, och import av offlinekonverteringar i Google Ads är gratis."
+            "text": "Nej. Curve och Ours Privacy är spårningsplattformar för vården som konkurrerar direkt med Freshpaint. CDP:er för storföretag, som Segment, RudderStack, Tealium och Piwik PRO, erbjuder BAA på sina högsta abonnemangsnivåer. Google Tag Manager på serversidan kan köras hos en driftleverantör som tecknar BAA, och en import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t kräver ingen spårningsleverantör alls."
           }
         },
         {
@@ -110,7 +126,7 @@
           "name": "Vilket är det billigaste HIPAA-säkra sättet att spåra konverteringar i Google Ads?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "En import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t är gratis. Mottagningen fångar upp GCLID i formuläret på sin webbplats och laddar sedan upp klick-ID:t, ett neutralt konverteringsnamn och tidpunkten för konverteringen som CSV-fil eller via Google Sheets inom 90 dagar från klicket. Det kostar personaltid, inte en abonnemangsavgift."
+            "text": "Oftast en import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t, eftersom den inte kräver någon spårningsleverantör, bara personaltid. Mottagningen fångar upp GCLID i formuläret på sin webbplats och laddar sedan upp klick-ID:t, ett neutralt konverteringsnamn och tidpunkten för konverteringen via Google Ads Data Manager eller en filimport inom 90 dagar från klicket. Googles hjälpsidor om import som vi gick igenom anger inget pris."
           }
         },
         {
@@ -151,34 +167,44 @@
 <header>
   <p class="kicker">Guide · Vård</p>
   <h1>HIPAA-säker konverteringsspårning för Google Ads: vi jämför alternativen</h1>
-  <p class="lede">HIPAA-säker konverteringsspårning för Google Ads är ett sätt för en vårdmottagning att tala om för Google Ads vilka annonsklick som blev leads eller patienter, utan att skicka skyddad hälsoinformation (protected health information, PHI) till Google. Google tecknar nämligen inget business associate agreement (BAA) för Google Ads, det biträdesavtal som den amerikanska patientdatalagen HIPAA kräver av leverantörer som hanterar sådana uppgifter. Guiden jämför alla alternativ vi hittade i oktober 2026, från spårningsplattformar för vården som Freshpaint till gratis import av offlinekonverteringar, med priser, arbetsinsats och en bedömning av om en mottagning utan IT-avdelning rimligen klarar att sköta dem. Guiden är endast avsedd som utbildning och är inte juridisk rådgivning. Stäm av varje spårningsupplägg med en advokat som arbetar med vårdjuridik eller med din complianceansvariga innan du börjar använda det.</p>
-  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Senast uppdaterad <time datetime="2026-10-05">5 oktober 2026</time> · Källorna hämtade 5 oktober 2026</p>
+  <p class="lede">En vårdmottagning som omfattas av HIPAA kan bara annonsera i Google Ads om ingen skyddad hälsoinformation (protected health information, PHI) når Google. Google erbjuder nämligen inget business associate agreement (BAA) för Google Analytics, och vi har inte hittat någon sida hos Google som erbjuder ett för konverteringsspårning i Google Ads (undantaget är Local Services Ads, som har ett eget BAA). Ett BAA är det biträdesavtal som den amerikanska patientdatalagen HIPAA kräver av leverantörer som hanterar sådana uppgifter. I praktiken betyder det konverteringsspårning som talar om för Google Ads vilka annonsklick som blev leads eller patienter, men som bara skickar klick-ID:t, tidpunkten för konverteringen, eventuellt ett värde och ett neutralt konverteringsnamn till Google. Guiden jämför alla sätt att göra det som vi hittade i oktober 2026, från spårningsplattformar för vården som Freshpaint till import av offlinekonverteringar med bara klick-ID, med priser, arbetsinsats och en bedömning av om en mottagning utan IT-avdelning rimligen klarar att sköta dem. Guiden är endast avsedd som utbildning och är inte juridisk rådgivning. Stäm av varje spårningsupplägg med en advokat som arbetar med vårdjuridik eller med din complianceansvariga innan du börjar använda det.</p>
+  <p class="byline">Av <a href="https://copyfororiginals.com" rel="noopener">Copy for Originals</a> · Senast uppdaterad <time datetime="2026-10-30">30 oktober 2026</time> · Källorna hämtade 5 oktober 2026, kontrollerade igen 30 oktober 2026</p>
   <div class="tldr">
     <h2>Kort svar</h2>
-    <p>Alla HIPAA-säkra alternativ fungerar i slutänden likadant: Google får bara annonsens klick-ID, en tidsstämpel, eventuellt ett värde och ett neutralt konverteringsnamn, aldrig något som identifierar patienten eller den vård patienten frågade om. Skillnaden ligger i vem som gör jobbet och vad det kostar. En import av offlinekonverteringar i Google Ads är gratis men tar personaltid. Plattformar för vården där leverantören sköter driften, som Curve och Ours Privacy, sätter upp spårningen åt dig för mellan ungefär 900 USD och några tusen dollar i månaden. Freshpaint och kunddataplattformarna (customer data platforms, CDP) för storföretag kostar oftast tiotusentals dollar om året. För en mottagning vars annonsbudget inte motiverar sådana kostnader är Manual CPC (manuella klickbud), bedömt efter ökningen av nya patienter, ett fullgott alternativ.</p>
+    <p>Alla HIPAA-säkra alternativ fungerar i slutänden likadant: Google får bara annonsens klick-ID, en tidsstämpel, eventuellt ett värde och ett neutralt konverteringsnamn, aldrig något som identifierar patienten eller den vård patienten frågade om. Skillnaden ligger i vem som gör jobbet och vad det kostar. En import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t kräver ingen spårningsleverantör men tar personaltid. Plattformar för vården där leverantören sköter driften, som Curve och Ours Privacy, sätter upp spårningen åt dig; ingen av dem visar något pris i dollar på sin prissida. Freshpaint och kunddataplattformarna (customer data platforms, CDP) för storföretag kostar oftast tiotusentals dollar om året. För en mottagning vars annonsbudget inte motiverar sådana kostnader är Manual CPC (manuella klickbud), bedömt efter ökningen av nya patienter, ett fullgott alternativ.</p>
   </div>
   <div class="caveats" id="limits">
     <h2>Det här kunde vi inte verifiera</h2>
     <p>Guiden är skrivbordsresearch utifrån offentliga källor, inte ett praktiskt test av varje plattform. Läs priserna och uppgifterna om policyer med de här luckorna i åtanke:</p>
     <ul>
-      <li><b>De flesta leverantörer publicerar inga priser.</b> Varje pris nedan har en etikett som visar var det kommer ifrån. Curves 899 USD i månaden finns bara i Curves egen blogg; på prissidan står det <span lang="en">“contact sales”</span> (ungefär: kontakta säljavdelningen). Uppskattningen för Ours Privacy kommer från en recensionssajt om tandvårdsmarknadsföring. Vendrs siffror är medianer för en leverantörs alla köpare, mest större företag, inte små mottagningar.</li>
-      <li><b>En fråga om Googles policy är obesvarad.</b> Googles policy för kunddata tillåter inte hälsorelaterade konverteringar i förbättrade konverteringar (enhanced conversions) eller i uppladdningar av butiksförsäljning (store sales). Vi har inte kunnat bekräfta om den också gäller vanliga offlineimporter som bara skickar klick-ID:t. Fråga din kontaktperson på Google och din juridiska rådgivare.</li>
-      <li><b>Ingen sida hos Google säger rent ut att Google Ads och Google Tag Manager inte omfattas av något BAA.</b> Om Google Analytics säger Google det, och ingen av de två produkterna står med på Google Clouds lista över tjänster som omfattas av BAA. Resten kommer från andrahandskällor.</li>
-      <li><b>Vissa primärkällor gick inte att nå.</b> Freshpaints installationsdokumentation kräver inloggning, och både sidan med spårningsbulletinen från HHS (USA:s hälsodepartement) och en supportartikel hos CallRail gav felmeddelanden. De uppgifterna bygger därför på sammanfattningar från advokatbyråer och branschkällor.</li>
+      <li><b>De flesta leverantörer publicerar inga priser.</b> Varje pris nedan har en etikett som visar var det kommer ifrån. På Curves prissida står det <span lang="en">“Pricing is usage-based, so book a call and we'll tell you what yours would be.”</span> (ungefär: priset beror på användningen, så boka ett samtal så berättar vi vad ditt blir). Uppskattningen för Ours Privacy kommer från en recensionssajt om tandvårdsmarknadsföring. Vendrs siffror är medianer för en leverantörs alla köpare, mest större företag, inte små mottagningar.</li>
+      <li><b>En fråga om Googles policy är obesvarad.</b> Googles policy för kunddata tillåter inte hälsorelaterade konverteringar i förbättrade konverteringar (enhanced conversions) eller i uppladdningar av butiksförsäljning (store sales). Den säger också <span lang="en">“You may not upload conversion information related to sensitive categories,”</span> (ungefär: du får inte ladda upp konverteringsinformation som rör känsliga kategorier), men meningen som anger vad policyn gäller för nämner förbättrade konverteringar, uppladdningar av butiksförsäljning och Google-engaged audiences, inte importer med bara klick-ID. Vi har inte kunnat bekräfta om den också gäller vanliga offlineimporter som bara skickar klick-ID:t. Fråga din kontaktperson på Google och din juridiska rådgivare.</li>
+      <li><b>Ingen sida hos Google säger rent ut att Google Ads och Google Tag Manager inte omfattas av något BAA.</b> Om Google Analytics säger Google det, och ingen av de två produkterna står med på Google Clouds lista över tjänster som omfattas av BAA. För Local Services Ads tecknar Google däremot BAA. Resten kommer från andrahandskällor.</li>
+      <li><b>Vissa primärkällor gick inte att nå.</b> Freshpaints installationsdokumentation kräver inloggning, och både sidan med spårningsbulletinen från HHS (USA:s hälsodepartement) och en supportartikel hos CallRail gav felmeddelanden. De uppgifterna bygger därför på sammanfattningar från advokatbyråer och branschkällor. Uppgifterna om HHS bygger på Morrison Foersters och Proskauers analyser från 2024, så guiden säger inget om vad HHS har gjort sedan september 2024.</li>
       <li><b>Om Addingwell och TAGGRS erbjuder BAA</b> vet vi bara genom en enda artikel från tredje part, inte från företagen själva.</li>
-      <li><b>Det här ändras fort.</b> Priser, abonnemang och Googles policyer gäller per den 5 oktober 2026.</li>
+      <li><b>Det här ändras fort.</b> Priser, abonnemang och Googles policyer kontrollerades den 5 oktober 2026. Googles hjälp- och policysidor, prissidorna hos Curve, Ours Privacy, Freshpaint och CallRail, Vendrs sidor om Freshpaint och Invoca och de två advokatbyråernas analyser kontrollerades igen den 30 oktober 2026.</li>
     </ul>
   </div>
 </header>
 
+<section id="can-run">
+  <h2>Kan en vårdmottagning som omfattas av HIPAA annonsera i Google Ads?</h2>
+  <p>En vårdmottagning som omfattas av HIPAA kan annonsera i Google Ads om ingen skyddad hälsoinformation (PHI) når Google via mottagningens taggar, uppladdningar eller målgrupper. Google erbjuder inget business associate agreement (BAA) för Google Analytics, vi har inte hittat någon sida hos Google som erbjuder ett för konverteringsspårning i Google Ads, och Googles annonspolicyer håller hälsorelaterade konverteringar utanför förbättrade konverteringar och stänger ute annonsörer som marknadsför produkter eller tjänster i Googles känsliga intressekategori för hälsa från målgrupper som annonsören själv har satt ihop. Undantaget när det gäller BAA är Local Services Ads: där tecknar Google ett.</p>
+  <ul>
+    <li><b>Google Analytics: inget BAA.</b> På Googles hjälpsida står att Google <span lang="en">“does not offer Business Associate Agreements in connection with this service,”</span> (ungefär: inte erbjuder BAA för den här tjänsten) och att organisationer som omfattas av HIPAA <span lang="en">“must refrain from exposing to Google any data that may be considered Protected Health Information (PHI)”</span> (ungefär: måste avstå från att låta Google ta del av data som kan räknas som PHI). <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">Google Analytics Help</a></li>
+    <li><b>Google Ads: inget BAA hittat.</b> Ingen sida hos Google som vi har läst erbjuder BAA för konverteringsspårning i Google Ads. Google Cloud tecknar BAA, och Cloud Run är en av tjänsterna som omfattas, men Google Ads, Google Analytics och Google Tag Manager finns inte med på listan. <span class="ev ev-strong">Primärkälla</span> <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">Google Cloud</a></li>
+    <li><b>Local Services Ads: Google tecknar BAA.</b> I Googles Local Services Help står att leverantörer <span lang="en">“who are subject to HIPAA and want to use Local Services Ads must review and accept a Business Associate Agreement (BAA) with Google.”</span> (ungefär: som omfattas av HIPAA och vill använda Local Services Ads måste granska och godkänna ett BAA med Google). Avtalet omfattar funktioner i Local Services Ads, eller Googleprodukter som anges på webbplatsen för Local Services Ads, <span lang="en">“that enable connections or communications between an End User and a Customer.”</span> (ungefär: som gör det möjligt för en slutanvändare och en kund att få kontakt eller kommunicera). Sökkampanjer och deras konverteringstaggar nämns inte. <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/localservices/answer/12947817" rel="noopener">Local Services Help</a>, <a href="https://support.google.com/localservices/answer/13017669" rel="noopener">BAA för Local Services Ads</a></li>
+    <li><b>Policyn för kunddata: inga hälsorelaterade konverteringar i förbättrade konverteringar eller uppladdningar av butiksförsäljning.</b> Google räknar <span lang="en">“Health or medical information, like purchases of medical services, prescription drugs or medical devices”</span> (ungefär: uppgifter om hälsa eller sjukvård, som köp av vårdtjänster, receptbelagda läkemedel eller medicintekniska produkter) till sina känsliga kategorier och skriver att <span lang="en">“Conversions related to sensitive categories can’t be used for measurement in enhanced conversions or store sales (uploads).”</span> (ungefär: konverteringar som rör känsliga kategorier får inte användas för mätning i förbättrade konverteringar eller uppladdningar av butiksförsäljning). <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/google-ads/answer/7475709" rel="noopener">Google Ads Help</a></li>
+    <li><b>Anpassad annonsering: hälsa är en känslig kategori.</b> Google räknar personligt hälsoinnehåll, som <span lang="en">“Physical or mental health conditions, including diseases, sexual health, and chronic health conditions”</span> (ungefär: fysiska eller psykiska tillstånd, inklusive sjukdomar, sexuell hälsa och kroniska tillstånd), som en känslig intressekategori. Annonsörer som marknadsför produkter och tjänster i känsliga intressekategorier <span lang="en">“are unable to use advertiser-curated audiences”</span> (ungefär: kan inte använda målgrupper som annonsören själv har satt ihop); de kan använda Googles fördefinierade målgrupper, som enligt Google är konfigurerade utan känsliga användarsignaler. Enligt Googles policy för Customer Match gäller samma regler för remarketing med Customer Match. <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/adspolicy/answer/16701855" rel="noopener">Health in personalized advertising</a>, <a href="https://support.google.com/adspolicy/answer/143465" rel="noopener">Personalized advertising</a>, <a href="https://support.google.com/google-ads/answer/6299717" rel="noopener">Customer Match policy</a></li>
+    <li><b>HHS:s vägledning: snävare sedan 2024, så som advokatbyråerna beskriver den.</b> Enligt Proskauer förklarade HHS-OCR (tillsynsenheten vid USA:s hälsodepartement) i sin bulletin att skyldigheterna enligt HIPAA utlöses när en spårningsteknik kopplar ihop en persons IP-adress med ett besök på <span lang="en">“an unauthenticated public webpage addressing specific health conditions or health care providers”</span> (ungefär: en öppen webbsida utan inloggning som handlar om specifika sjukdomstillstånd eller vårdgivare), vilket Proskauer kallar <span lang="en">“Proscribed Combination”</span> (ungefär: den förbjudna kombinationen). Morrison Foerster skriver att HHS reviderade vägledningen den 18 mars 2024, sedan American Hospital Association hade gått till domstol mot den, och att domstolen upphävde vägledningen i fråga om den förbjudna kombinationen. Proskauer skriver att HHS-OCR den 29 augusti 2024 drog tillbaka sitt överklagande av det beslutet från den federala domstolen i Northern District of Texas (<i>Am. Hosp. Ass’n v. Becerra</i>, 20 juni 2024). I sin analys från juli 2024 skrev Morrison Foerster att övriga delar av vägledningen då <span lang="en">“remain in effect”</span> (ungefär: fortfarande gäller), och att organisationer som omfattas fortfarande måste hålla spårningsteknik borta från sidor bakom inloggning och från öppna sidor som tydligt visar varför besökaren kom dit, om de inte har ett BAA. <span class="ev ev-mod">Advokatbyråers sammanfattningar</span> <a href="https://www.mofo.com/resources/insights/240718-federal-judge-vacates-ocr-guidance" rel="noopener">Morrison Foerster</a>, <a href="https://www.proskauer.com/blog/shortly-after-its-online-tracking-technologies-bulletin-is-declared-unlawful-hhs-ocr-stands-down-withdraws-appeal" rel="noopener">Proskauer</a></li>
+  </ul>
+</section>
+
 <section id="why">
   <h2>Varför kan en vårdmottagning inte använda den vanliga konverteringstaggen i Google Ads?</h2>
-  <p>En vårdmottagning kan inte använda den vanliga konverteringstaggen i Google Ads utan risk. Taggen skickar besökarens IP-adress, sidornas webbadresser och webbläsarens identifierare till Google, och Google tecknar inget business associate agreement (BAA) för Google Ads. Utan BAA får ingen PHI nå Google.</p>
+  <p>En vårdmottagning kan inte använda den vanliga konverteringstaggen i Google Ads utan risk. Taggen skickar besökarens IP-adress, sidornas webbadresser och webbläsarens identifierare till Google, och ingen sida hos Google som vi har hittat erbjuder ett business associate agreement (BAA) för konverteringsspårning i Google Ads. Utan BAA får ingen PHI nå Google.</p>
   <ul>
-    <li><b>Google Analytics:</b> På Googles hjälpsida står att Google <span lang="en">“does not offer Business Associate Agreements in connection with this service.”</span> (ungefär: inte erbjuder BAA för den här tjänsten). <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">Google Analytics Help</a></li>
-    <li><b>Google Cloud tecknar BAA,</b> och Cloud Run är en av tjänsterna som omfattas, men Google Ads, Google Analytics och Google Tag Manager finns inte med på listan. <span class="ev ev-strong">Primärkälla</span> <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">Google Cloud</a></li>
-    <li><b>HHS bulletin om spårning omfattar mindre än förut.</b> Den 20 juni 2024 upphävde en federal domstol, i målet <i>American Hospital Association v. Becerra</i>, den del av bulletinen som räknade en IP-adress i kombination med ett besök på en offentligt tillgänglig sida om hälsa som PHI, och i augusti 2024 drog HHS tillbaka sitt överklagande. Resten av bulletinen står kvar: spårning på sidor bakom inloggning, till exempel patientportaler, och allt en patient skriver om sin hälsa räknas fortfarande som PHI. <span class="ev ev-mod">Advokatbyråers sammanfattningar</span> <a href="https://www.aha.org/news/news/2024-06-20-judge-rules-favor-aha-vacating-hhs-online-tracking-bulletin-unlawful-and-beyond-agency-authority" rel="noopener">AHA</a>, <a href="https://www.hklaw.com/en/insights/publications/2024/06/american-hospital-assn-v-becerra-are-tracking-tools-ok-again" rel="noopener">Holland &amp; Knight</a></li>
-    <li><b>Stämningar bygger inte bara på HIPAA.</b> Grupptalan om spårningspixlar stöder sig ofta på delstaternas avlyssningslagar. Sutter Healths förlikning på 21,5 miljoner USD, som gällde Google Analytics och Meta Pixel på inloggningssidan till patientportalen, fick sitt slutliga godkännande i mars 2026. <a href="https://www.classaction.org/news/21.5m-sutter-health-settlement-ends-class-action-lawsuit-over-alleged-patient-info-sharing-with-google-facebook" rel="noopener">ClassAction.org</a></li>
+    <li><b>Stämningar bygger inte bara på HIPAA.</b> Proskauer skrev i september 2024 om en <span lang="en">“ongoing wave”</span> (ungefär: pågående våg) av grupptalan om spårningsteknik på webbplatser enligt delstaternas lagar om avlyssning och telekommunikation, och att försiktigheten kring spårning på webbplatser bör fortsätta. <a href="https://www.proskauer.com/blog/shortly-after-its-online-tracking-technologies-bulletin-is-declared-unlawful-hhs-ocr-stands-down-withdraws-appeal" rel="noopener">Proskauer</a>. Sutter Healths förlikning på 21,5 miljoner USD, som gällde Google Analytics och Meta Pixel på inloggningssidan till patientportalen, fick sitt slutliga godkännande i mars 2026. <a href="https://www.classaction.org/news/21.5m-sutter-health-settlement-ends-class-action-lawsuit-over-alleged-patient-info-sharing-with-google-facebook" rel="noopener">ClassAction.org</a></li>
   </ul>
   <div class="tablewrap">
   <table>
@@ -196,10 +222,9 @@
 
 <section id="options">
   <h2>Vilka alternativ finns för HIPAA-säker konverteringsspårning i Google Ads?</h2>
-  <p>En vårdmottagning har fem typer av alternativ för HIPAA-säker konverteringsspårning i Google Ads: en spårningsplattform för vården, en CDP för storföretag med en abonnemangsnivå där BAA ingår, Google Tag Manager (GTM) på serversidan hos en driftleverantör som tecknar BAA, en gratis import av offlinekonverteringar i Google Ads och HIPAA-säker samtalsspårning för leads som ringer. Freshpaint är en av spårningsplattformarna för vården, inte den enda.</p>
+  <p>En vårdmottagning har fem typer av alternativ för HIPAA-säker konverteringsspårning i Google Ads: en spårningsplattform för vården, en CDP för storföretag med en abonnemangsnivå där BAA ingår, Google Tag Manager (GTM) på serversidan hos en driftleverantör som tecknar BAA, en import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t och HIPAA-säker samtalsspårning för leads som ringer. Freshpaint är en av spårningsplattformarna för vården, inte den enda.</p>
   <ul class="legend" aria-label="Etiketter för priskällor som används på sidan">
     <li><span class="ev ev-strong">Publicerat</span> på leverantörens prissida</li>
-    <li><span class="ev ev-inf">Leverantörens uppgift</span> leverantörens blogg, inte prissidan</li>
     <li><span class="ev ev-mod">Vendr</span> median för avtal som köpare har rapporterat</li>
     <li><span class="ev ev-weak">Uppskattning</span> uppskattning från tredje part</li>
   </ul>
@@ -209,9 +234,9 @@
     <thead><tr><th scope="col">Alternativ</th><th scope="col">BAA</th><th scope="col">Pris</th><th scope="col">Arbetsinsats</th><th scope="col">Utan IT-personal?</th></tr></thead>
     <tbody>
       <tr class="group"><th scope="rowgroup" colspan="5">Spårningsplattformar för vården</th></tr>
-      <tr><th scope="row">Curve</th><td>Alla abonnemang</td><td>899 USD/mån <span class="ev ev-inf">Leverantörens uppgift</span></td><td>Liten. Curve sköter konfigurationen och uppger att en mottagning kan vara i gång på ungefär en vecka.</td><td>Ja</td></tr>
+      <tr><th scope="row">Curve</th><td>Alla abonnemang</td><td>Priset beror på användningen; boka ett samtal för en offert. Inget publicerat pris.</td><td>Liten. Curve sköter konfigurationen och uppger att en mottagning kan vara i gång på ungefär en vecka.</td><td>Ja</td></tr>
       <tr><th scope="row">Ours Privacy</th><td>Från abonnemanget Essential (upp till 50&nbsp;000 spårade användare i månaden)</td><td>Pris på förfrågan. Ett lågt till medelhögt fyrsiffrigt belopp i månaden <span class="ev ev-weak">Uppskattning</span></td><td>Liten till medelstor. Koppla Google Ads, lägg in ett skript på webbplatsen och mappa händelserna. Praktisk hjälp med uppsättningen är ett betalt tillägg.</td><td>I stort sett. Någon, till exempel webbdesignern, måste lägga in skriptet.</td></tr>
-      <tr><th scope="row">Freshpaint</th><td>Ja</td><td>Pris på förfrågan. Median 35&nbsp;000 USD/år, spann 27&nbsp;800–50&nbsp;200 USD <span class="ev ev-mod">Vendr</span></td><td>Medelstor. Standardonboarding i abonnemanget Comply.</td><td>Med leverantörens onboarding, till ett högre pris</td></tr>
+      <tr><th scope="row">Freshpaint</th><td>Framgår inte av Freshpaints prissida</td><td>Pris på förfrågan. Median 35&nbsp;000 USD/år, spann 27&nbsp;800–50&nbsp;220 USD <span class="ev ev-mod">Vendr</span></td><td>Medelstor. Standardonboarding i abonnemanget Comply.</td><td>Med leverantörens onboarding, till ett högre pris</td></tr>
       <tr class="group"><th scope="rowgroup" colspan="5">CDP:er och analysverktyg för storföretag med en abonnemangsnivå där BAA ingår</th></tr>
       <tr><th scope="row">Piwik PRO</th><td>Bara Enterprise-nivåerna, inte Business</td><td>Enterprise från 366 euro/mån utan BAA <span class="ev ev-strong">Publicerat</span>. Nivåer med BAA: pris på förfrågan.</td><td>Medelstor. En implementeringsspecialist sätter upp det.</td><td>Med leverantörens hjälp, till storföretagspriser</td></tr>
       <tr><th scope="row">Twilio Segment</th><td>Bara Business-nivån</td><td>Median 55&nbsp;600 USD/år <span class="ev ev-mod">Vendr</span></td><td>Stor. Kräver en utvecklare.</td><td>Nej</td></tr>
@@ -221,7 +246,7 @@
       <tr><th scope="row">Google Cloud Run</th><td>Google Clouds BAA omfattar Cloud Run</td><td>Cirka 45 USD/mån per server, två eller fler rekommenderas <span class="ev ev-strong">Publicerat</span>, plus en konsult</td><td>Stor. Driftsätt manuellt i ett projekt som omfattas av BAA och skriv reglerna som rensar bort PHI.</td><td>Nej</td></tr>
       <tr><th scope="row">Stape</th><td>Bara abonnemanget Custom</td><td>Pris på förfrågan. Standardabonnemangen (0–167 USD/mån) har inget BAA. <span class="ev ev-strong">Publicerat</span></td><td>Stor. Stape sköter driften, du konfigurerar bortrensningen av PHI.</td><td>Nej</td></tr>
       <tr class="group"><th scope="rowgroup" colspan="5">Funktion i Google Ads</th></tr>
-      <tr><th scope="row">Import av offlinekonverteringar (bara klick-ID)</th><td>Behövs inte om bara klick-ID:t skickas</td><td>Gratis</td><td>Liten till medelstor. Formuläret på webbplatsen måste fånga upp klick-ID:t.</td><td>Ja</td></tr>
+      <tr><th scope="row">Import av offlinekonverteringar (bara klick-ID)</th><td>Behövs inte om bara klick-ID:t skickas</td><td>Personaltid; ingen leverantör. Googles sidor om import som vi gick igenom anger inget pris.</td><td>Liten till medelstor. Formuläret på webbplatsen måste fånga upp klick-ID:t.</td><td>Ja</td></tr>
     </tbody>
   </table>
   </div>
@@ -230,16 +255,16 @@
 
 <section id="cost">
   <h2>Vad kostar HIPAA-säker konverteringsspårning?</h2>
-  <p>HIPAA-säker konverteringsspårning för Google Ads kostar allt från ingenting till omkring 55&nbsp;000 USD om året. Det beror mest på vem som sätter upp och underhåller den.</p>
+  <p>HIPAA-säker konverteringsspårning för Google Ads kostar allt från enbart personaltid till omkring 56&nbsp;000 USD om året. Det beror mest på vem som sätter upp och underhåller den.</p>
   <div class="tablewrap">
   <table>
     <caption>Kostnadsnivåer för HIPAA-säker konverteringsspårning i Google Ads</caption>
     <thead><tr><th scope="col">Nivå</th><th scope="col">Typisk kostnad</th><th scope="col">Vad du betalar för</th></tr></thead>
     <tbody>
-      <tr><th scope="row">Import av offlinekonverteringar</th><td>0 USD, plus personaltid</td><td>Ingenting: Google tar inte betalt för importer</td></tr>
+      <tr><th scope="row">Import av offlinekonverteringar</th><td>Personaltid</td><td>Ingen leverantör: personalen fångar upp klick-ID:n och laddar upp konverteringarna. Googles sidor om import som vi gick igenom anger inget pris.</td></tr>
       <tr><th scope="row">GTM på serversidan i Cloud Run</th><td>Cirka 90+ USD/mån för drift, plus en konsult som sätter upp det (engångskostnad)</td><td>Drift; en konsult skriver och underhåller reglerna som rensar bort PHI</td></tr>
-      <tr><th scope="row">Plattform för vården där leverantören sköter driften</th><td>Cirka 900 USD till några tusen dollar i månaden</td><td>Leverantörens BAA, uppsättning och löpande underhåll</td></tr>
-      <tr><th scope="row">Freshpaint eller en CDP för storföretag</th><td>Cirka 27&nbsp;000–56&nbsp;000 USD om året (Vendrs medianer och spann)</td><td>En komplett dataplattform, oftast dimensionerad för större organisationer</td></tr>
+      <tr><th scope="row">Plattform för vården där leverantören sköter driften</th><td>Inte publicerat: Curve tar betalt efter användning och Ours Privacy efter antalet spårade användare i månaden, integrationer och support. En uppskattning från tredje part lägger Ours Privacy på ett lågt till medelhögt fyrsiffrigt belopp i månaden.</td><td>Leverantörens BAA, uppsättning och löpande underhåll</td></tr>
+      <tr><th scope="row">Freshpaint eller en CDP för storföretag</th><td>Cirka 28&nbsp;000–56&nbsp;000 USD om året (Vendrs medianer och spann)</td><td>En komplett dataplattform, oftast dimensionerad för större organisationer</td></tr>
     </tbody>
   </table>
   </div>
@@ -248,10 +273,10 @@
 
 <section id="no-it">
   <h2>Vilket alternativ passar en mottagning utan IT-avdelning?</h2>
-  <p>En mottagning utan IT-avdelning har tre realistiska vägar: betala en plattform för vården där leverantören gör jobbet, låta den egna personalen sköta en gratis import av offlinekonverteringar, eller avstå från konverteringsbaserad budgivning och använda Manual CPC. Vilket som är rätt beror på hur stor spårningskostnaden är jämfört med annonsbudgeten.</p>
+  <p>En mottagning utan IT-avdelning har tre realistiska vägar: betala en plattform för vården där leverantören gör jobbet, låta den egna personalen sköta en import av offlinekonverteringar med bara klick-ID, eller avstå från konverteringsbaserad budgivning och använda Manual CPC. Vilket som är rätt beror på hur stor spårningskostnaden är jämfört med annonsbudgeten.</p>
   <ul>
-    <li><b>Plattform där leverantören sköter driften (Curve, Ours Privacy).</b> Minst arbete för mottagningen och högst kostnad. Med Curves 899 USD i månaden betalar en mottagning som lägger 3&nbsp;000 USD i månaden på Google Ads omkring 30&nbsp;% av annonsbudgeten en gång till för spårningen; en mottagning som lägger 15&nbsp;000 USD i månaden betalar omkring 6&nbsp;%.</li>
-    <li><b>Import av offlinekonverteringar.</b> Gratis, och görbart för en reception som kan uppdatera ett kalkylark. Formuläret på webbplatsen måste kunna fånga upp klick-ID:t, och det klarar många bokningswidgetar från tidsboknings- och journalsystem (EHR) inte. Se stegen nedan.</li>
+    <li><b>Plattform där leverantören sköter driften (Curve, Ours Privacy).</b> Minst arbete för mottagningen och högst kostnad. Varken Curve eller Ours Privacy publicerar något pris, så be om en offert och jämför den med den månatliga annonsbudgeten innan du skriver på.</li>
+    <li><b>Import av offlinekonverteringar.</b> Ingen spårningsleverantör, och görbart för en reception som kan uppdatera ett kalkylark. Formuläret på webbplatsen måste kunna fånga upp klick-ID:t, och det klarar många bokningswidgetar från tidsboknings- och journalsystem (EHR) inte. Se stegen nedan.</li>
     <li><b>Manual CPC.</b> Inga konverteringsdata alls skickas till Google. Resultatet bedöms efter ökningen av nya patienter i förhållande till annonskostnaden. Se <a href="#manual-cpc">Fungerar Manual CPC utan konverteringsspårning?</a></li>
   </ul>
   <p>GTM på serversidan och CDP:erna för storföretag kräver en utvecklare eller analyskonsult som sätter upp och underhåller dem. De passar därför mottagningar som redan anlitar en sådan.</p>
@@ -259,13 +284,13 @@
 
 <section id="offline-import">
   <h2>Hur fungerar en import av offlinekonverteringar i Google Ads?</h2>
-  <p>En import av offlinekonverteringar i Google Ads registrerar en konvertering genom att annonsens klick-ID (GCLID) och tidpunkten för konverteringen laddas upp. Google får då veta vilka klick som gav patienter, utan att få några patientuppgifter. Google tar inte betalt för det. <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/google-ads/answer/7014069" rel="noopener">Google Ads Help</a></p>
+  <p>En import av offlinekonverteringar i Google Ads registrerar en konvertering genom att annonsens klick-ID (GCLID) och tidpunkten för konverteringen laddas upp. Google får då veta vilka klick som gav patienter, utan att få några patientuppgifter. På Googles hjälpsida om filimport kallas import av offlinekonverteringar numera <span lang="en">“a legacy feature”</span> (ungefär: en äldre funktion), och Google skriver att konverteringar ska importeras via Google Ads Data Manager. <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/google-ads/answer/7014069" rel="noopener">Google Ads Help</a></p>
   <ol class="check">
     <li>Slå på automatisk taggning (auto-tagging) i Google Ads (Admin, Account settings), så att varje annonsklick får med sig ett GCLID i landningssidans webbadress.</li>
     <li>Lägg till ett dolt fält i webbplatsens kontakt- eller bokningsformulär som sparar GCLID tillsammans med leadet.</li>
     <li>Skapa en konverteringsåtgärd för import med ett neutralt namn, till exempel ”Kvalificerat lead” eller ”Ny patient”, och vänta 4 till 6 timmar innan du laddar upp första gången.</li>
     <li>När ett lead blir patient lägger du till en rad med enbart GCLID, konverteringsnamnet, tidpunkten för konverteringen och eventuellt ett värde.</li>
-    <li>Ladda upp som CSV-fil, med en schemalagd uppladdning från Google Sheets eller via Googles Data Manager, inom 90 dagar från klicket. Ladda upp med jämna mellanrum, dagligen om du använder Smart Bidding. Det tar 24 till 48 timmar innan importerade konverteringar syns.</li>
+    <li>Ladda upp via Googles Data Manager eller den äldre filimporten (en schemalagd import kräver Google Sheets eller en fil som länkas via HTTPS eller SFTP), inom 90 dagar från klicket. Uppladdningar med personuppgifter för förbättrade konverteringar har en gräns på 63 dagar; det här upplägget skickar inga sådana. Ladda upp med jämna mellanrum, dagligen om du använder Smart Bidding. Det tar 24 till 48 timmar innan importerade konverteringar syns.</li>
   </ol>
   <p>Det svåra är steg två: kan bokningsverktyget inte spara GCLID finns det inget att ladda upp. Tänk också på den öppna frågan under <a href="#limits">Det här kunde vi inte verifiera</a>: Googles regel om känsliga kategorier nämner förbättrade konverteringar och butiksförsäljning, och vi har inte kunnat bekräfta om den också gäller importer med enbart klick-ID.</p>
 </section>
@@ -285,7 +310,7 @@
     <caption>HIPAA-säker samtalsspårning med BAA, oktober 2026</caption>
     <thead><tr><th scope="col">Leverantör</th><th scope="col">BAA</th><th scope="col">Pris</th><th scope="col">Komma igång</th></tr></thead>
     <tbody>
-      <tr><th scope="row">CallRail</th><td>Bara Healthcare-abonnemangen</td><td>Från 150 USD/mån <span class="ev ev-strong">Publicerat</span></td><td>Självbetjäning, 14 dagars provperiod</td></tr>
+      <tr><th scope="row">CallRail</th><td>Bara Healthcare-abonnemangen</td><td>Healthcare-abonnemangen: pris på förfrågan.</td><td>BAA ordnas via säljavdelningen; 14 dagars provperiod</td></tr>
       <tr><th scope="row">CallTrackingMetrics</th><td>Från Marketing Pro</td><td>Marketing Pro 179 USD/mån <span class="ev ev-strong">Publicerat</span></td><td>Självbetjäning</td></tr>
       <tr><th scope="row">Invoca</th><td>Ja</td><td>Median 27&nbsp;880 USD/år, plus onboarding <span class="ev ev-mod">Vendr</span></td><td>Implementeringsteam; byggt för större organisationer</td></tr>
     </tbody>
@@ -296,8 +321,10 @@
 
 <section id="june-2026">
   <h2>Vad ändrades för import av offlinekonverteringar i Google Ads i juni 2026?</h2>
-  <p>Från och med den 15 juni 2026 går import av offlinekonverteringar och förbättrade konverteringar för leads via Data Manager API, och i Google Ads API är de spärrade för nya integrationer. <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">Google Ads Help</a></p>
-  <p>Manuella uppladdningar med CSV-fil och Google Sheets fungerar fortfarande, så ändringen spelar störst roll för mottagningar som ville ha en egen API-koppling. Leverantörer med befintliga integrationer, till exempel RudderStack, uppger att deras kopplingar inte påverkas.</p>
+  <p>Enligt Googles hjälpsida gäller från och med den 15 juni 2026 att import av offlinekonverteringar och uppladdningar för förbättrade konverteringar för leads <span lang="en">“will be migrated to the Data Manager API and blocked in the Google Ads API”</span> (ungefär: flyttas till Data Manager API och spärras i Google Ads API), utom för utvecklartoken (developer tokens) som har godkänts för fortsatt åtkomst till den äldre lösningen. Token som inte har skickat någon förfrågan mellan januari 2026 och juni 2026 godkänns inte. <span class="ev ev-strong">Primärkälla</span> <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">Google Ads Help</a></p>
+  <p>Curve, en leverantör av spårning, anger ett annat tidsfönster: med hänvisning till Googles utvecklarblogg skriver Curve att token som inte hade importerat offlinekonverteringar mellan december 2025 och maj 2026 förlorade åtkomsten den 15 juni, och att token som redan importerar kan fortsätta med det medan de integrerar med Data Manager API. <a href="https://www.curvecompliance.com/article/google-killed-the-old-offline-conversion-api-on-june-15-here-s-what-healthcare-marketers-need-to" rel="noopener">Curve, 21 juni 2026</a></p>
+  <p>Googles hjälpsida om filimport, som nu är märkt som äldre metod (legacy), beskriver fortfarande schemalagda importer från Google Sheets eller från en fil som länkas via HTTPS eller SFTP, och rekommenderar Google Ads Data Manager. Leverantörer med befintliga integrationer, till exempel RudderStack, uppger att deras kopplingar inte påverkas.</p>
+  <p>Googles standardråd passar inte en vårdmottagning. Google rekommenderar att annonsörer som inte redan använder import av offlinekonverteringar börjar <span lang="en">“with enhanced conversions for leads instead.”</span> (ungefär: med förbättrade konverteringar för leads i stället). Förbättrade konverteringar skickar hashade kunduppgifter, till exempel en e-postadress eller ett telefonnummer (<a href="https://support.google.com/google-ads/answer/9888656" rel="noopener">Google Ads Help</a>), och enligt Googles policy för kunddata får hälsorelaterade konverteringar inte användas för mätning i förbättrade konverteringar. Se <a href="#enhanced">Kan en vårdmottagning använda förbättrade konverteringar?</a></p>
 </section>
 
 <section id="manual-cpc">
@@ -310,39 +337,43 @@
 <section id="faq">
   <h2>Vanliga frågor om HIPAA-säker konverteringsspårning i Google Ads</h2>
   <h3>Uppfyller Google Ads kraven i HIPAA?</h3>
-  <p>Nej. Google tecknar inget business associate agreement (BAA) för Google Ads, så en vårdmottagning kan bara använda Google Ads om ingen skyddad hälsoinformation når Google. I praktiken innebär det att bara skicka annonsens klick-ID, en tidsstämpel, eventuellt ett värde och ett neutralt konverteringsnamn.</p>
+  <p>Det säger inte Google. Google erbjuder inget business associate agreement (BAA) för Google Analytics, och vi har inte hittat någon sida hos Google som erbjuder ett för konverteringsspårning i Google Ads; undantaget är Local Services Ads, som har ett eget BAA. En vårdmottagning kan därför bara använda Google Ads om ingen skyddad hälsoinformation når Google. I praktiken innebär det att bara skicka annonsens klick-ID, en tidsstämpel, eventuellt ett värde och ett neutralt konverteringsnamn.</p>
   <h3>Är Freshpaint det enda HIPAA-säkra alternativet för konverteringar i Google Ads?</h3>
-  <p>Nej. Curve och Ours Privacy är spårningsplattformar för vården som konkurrerar direkt med Freshpaint. CDP:er för storföretag, som Segment, RudderStack, Tealium och Piwik PRO, erbjuder BAA på sina högsta abonnemangsnivåer. Google Tag Manager på serversidan kan köras hos en driftleverantör som tecknar BAA, och import av offlinekonverteringar i Google Ads är gratis.</p>
+  <p>Nej. Curve och Ours Privacy är spårningsplattformar för vården som konkurrerar direkt med Freshpaint. CDP:er för storföretag, som Segment, RudderStack, Tealium och Piwik PRO, erbjuder BAA på sina högsta abonnemangsnivåer. Google Tag Manager på serversidan kan köras hos en driftleverantör som tecknar BAA, och en import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t kräver ingen spårningsleverantör alls.</p>
   <h3>Vilket är det billigaste HIPAA-säkra sättet att spåra konverteringar i Google Ads?</h3>
-  <p>En import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t är gratis. Mottagningen fångar upp GCLID i formuläret på sin webbplats och laddar sedan upp klick-ID:t, ett neutralt konverteringsnamn och tidpunkten för konverteringen som CSV-fil eller via Google Sheets inom 90 dagar från klicket. Det kostar personaltid, inte en abonnemangsavgift.</p>
+  <p>Oftast en import av offlinekonverteringar i Google Ads som bara skickar klick-ID:t, eftersom den inte kräver någon spårningsleverantör, bara personaltid. Mottagningen fångar upp GCLID i formuläret på sin webbplats och laddar sedan upp klick-ID:t, ett neutralt konverteringsnamn och tidpunkten för konverteringen via Google Ads Data Manager eller en filimport inom 90 dagar från klicket. Googles hjälpsidor om import som vi gick igenom anger inget pris.</p>
   <h3>Kan en vårdmottagning annonsera i Google Ads utan konverteringsspårning?</h3>
   <p>Ja. En mottagning kan använda Manual CPC och bedöma Google Ads efter hur annonskostnaden och ökningen av nya patienter hänger ihop över tid, i stället för efter ett antal spårade konverteringar. Smart Bidding-strategier som Maximize conversions behöver konverteringsdata, men det gör inte Manual CPC.</p>
 </section>
 
 <section id="sources">
   <h2>Källor</h2>
-  <p>Alla källor hämtades 5 oktober 2026. Sidans datum anges där sidan har ett.</p>
+  <p>Källorna hämtades 5 oktober 2026; de som är märkta ”kontrollerad 30 oktober 2026” lästes igen det datumet. Sidans datum anges där sidan har ett.</p>
   <h3>Google och myndigheter</h3>
   <ul class="sources">
-    <li>Google Analytics Help, ”HIPAA and Google Analytics”. <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">support.google.com</a></li>
-    <li>Google Cloud, HIPAA-efterlevnad och tjänster som omfattas (uppdaterad 2 oktober 2026). <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">docs.cloud.google.com</a></li>
-    <li>Google Ads Help, policyer för kunddata. <a href="https://support.google.com/google-ads/answer/7475709" rel="noopener">support.google.com</a></li>
-    <li>Google Ads Help, import av offlinekonverteringar. <a href="https://support.google.com/google-ads/answer/7014069" rel="noopener">support.google.com</a> och <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">support.google.com</a></li>
+    <li>Google Analytics Help, ”HIPAA and Google Analytics” (kontrollerad 30 oktober 2026). <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">support.google.com</a></li>
+    <li>Google Cloud, HIPAA-efterlevnad och tjänster som omfattas (listan över tjänster senast uppdaterad 17 september 2025; kontrollerad 30 oktober 2026). <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">docs.cloud.google.com</a></li>
+    <li>Google Local Services Help, HIPAA och BAA för Local Services Ads (kontrollerad 30 oktober 2026). <a href="https://support.google.com/localservices/answer/12947817" rel="noopener">support.google.com</a> och <a href="https://support.google.com/localservices/answer/13017669" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, policyer för kunddata (kontrollerad 30 oktober 2026). <a href="https://support.google.com/google-ads/answer/7475709" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, om förbättrade konverteringar (kontrollerad 30 oktober 2026). <a href="https://support.google.com/google-ads/answer/9888656" rel="noopener">support.google.com</a></li>
+    <li>Google Advertising Policies Help, Health in personalized advertising och Personalized advertising (kontrollerad 30 oktober 2026). <a href="https://support.google.com/adspolicy/answer/16701855" rel="noopener">support.google.com</a> och <a href="https://support.google.com/adspolicy/answer/143465" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, policyn för Customer Match (kontrollerad 30 oktober 2026). <a href="https://support.google.com/google-ads/answer/6299717" rel="noopener">support.google.com</a></li>
+    <li>Google Ads Help, import av offlinekonverteringar, ändringen i juni 2026 och vanliga frågor om import (kontrollerad 30 oktober 2026). <a href="https://support.google.com/google-ads/answer/7014069" rel="noopener">support.google.com</a>, <a href="https://support.google.com/google-ads/answer/2998031" rel="noopener">support.google.com</a> och <a href="https://support.google.com/google-ads/answer/10029210" rel="noopener">support.google.com</a></li>
     <li>Google, installationsguide för Tag Manager på serversidan i Cloud Run (uppdaterad 12 maj 2026). <a href="https://developers.google.com/tag-platform/tag-manager/server-side/cloud-run-setup-guide" rel="noopener">developers.google.com</a></li>
-    <li>American Hospital Association, om domen i <i>AHA v. Becerra</i>, 20 juni 2024. <a href="https://www.aha.org/news/news/2024-06-20-judge-rules-favor-aha-vacating-hhs-online-tracking-bulletin-unlawful-and-beyond-agency-authority" rel="noopener">aha.org</a></li>
+    <li>Morrison Foerster, analys av domstolens upphävande av OCR:s vägledning om spårning på nätet, 18 juli 2024 (kontrollerad 30 oktober 2026). <a href="https://www.mofo.com/resources/insights/240718-federal-judge-vacates-ocr-guidance" rel="noopener">mofo.com</a></li>
     <li>Holland &amp; Knight, ”American Hospital Ass’n v. Becerra: Are Tracking Tools OK Again?”, juni 2024. <a href="https://www.hklaw.com/en/insights/publications/2024/06/american-hospital-assn-v-becerra-are-tracking-tools-ok-again" rel="noopener">hklaw.com</a></li>
-    <li>Proskauer, om att HHS OCR drar tillbaka sitt överklagande, augusti 2024. <a href="https://www.proskauer.com/blog/shortly-after-its-online-tracking-technologies-bulletin-is-declared-unlawful-hhs-ocr-stands-down-withdraws-appeal" rel="noopener">proskauer.com</a></li>
+    <li>Proskauer, om att HHS-OCR drog tillbaka sitt överklagande den 29 augusti 2024, 27 september 2024 (kontrollerad 30 oktober 2026). <a href="https://www.proskauer.com/blog/shortly-after-its-online-tracking-technologies-bulletin-is-declared-unlawful-hhs-ocr-stands-down-withdraws-appeal" rel="noopener">proskauer.com</a></li>
     <li>FTC, ”No, hashing still doesn’t make your data anonymous”, 24 juli 2024. <a href="https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/07/no-hashing-still-doesnt-make-your-data-anonymous" rel="noopener">ftc.gov</a></li>
     <li>ClassAction.org, om Sutter Healths förlikning på 21,5 miljoner USD. <a href="https://www.classaction.org/news/21.5m-sutter-health-settlement-ends-class-action-lawsuit-over-alleged-patient-info-sharing-with-google-facebook" rel="noopener">classaction.org</a></li>
   </ul>
   <h3>Leverantörer och priser</h3>
   <ul class="sources">
-    <li>Curve, sidorna om priser och om vårdmottagningar. <a href="https://www.curvecompliance.com/pricing" rel="noopener">curvecompliance.com/pricing</a>, <a href="https://www.curvecompliance.com/solutions/healthcare-practices" rel="noopener">vårdmottagningar</a></li>
-    <li>Curves blogg, om Googles ändring av API:et för offlinekonverteringar den 15 juni (källa till uppgiften 899 USD/mån). <a href="https://www.curvecompliance.com/article/google-killed-the-old-offline-conversion-api-on-june-15-here-s-what-healthcare-marketers-need-to" rel="noopener">curvecompliance.com</a></li>
-    <li>Ours Privacy, priser (25 september 2026) och dokumentation för destinationen Google Ads. <a href="https://oursprivacy.com/pricing" rel="noopener">oursprivacy.com</a>, <a href="https://docs.oursprivacy.com/docs/destination-google" rel="noopener">docs.oursprivacy.com</a></li>
+    <li>Curve, sidorna om priser och om vårdmottagningar (prissidan odaterad, kontrollerad 30 oktober 2026). <a href="https://www.curvecompliance.com/pricing" rel="noopener">curvecompliance.com/pricing</a>, <a href="https://www.curvecompliance.com/solutions/healthcare-practices" rel="noopener">vårdmottagningar</a></li>
+    <li>Curves blogg, om Googles ändring av API:et för offlinekonverteringar den 15 juni, 21 juni 2026 (kontrollerad 30 oktober 2026). <a href="https://www.curvecompliance.com/article/google-killed-the-old-offline-conversion-api-on-june-15-here-s-what-healthcare-marketers-need-to" rel="noopener">curvecompliance.com</a></li>
+    <li>Ours Privacy, priser (odaterad, kontrollerad 30 oktober 2026) och dokumentation för destinationen Google Ads. <a href="https://oursprivacy.com/pricing" rel="noopener">oursprivacy.com</a>, <a href="https://docs.oursprivacy.com/docs/destination-google" rel="noopener">docs.oursprivacy.com</a></li>
     <li>Growdent, recension av Ours Privacy (28 augusti 2026; källa till den fyrsiffriga uppskattningen). <a href="https://growdent.io/ours-privacy-review/" rel="noopener">growdent.io</a></li>
-    <li>Freshpaint, priser. <a href="https://www.freshpaint.io/pricing" rel="noopener">freshpaint.io</a></li>
-    <li>Vendrs köpardata för <a href="https://www.vendr.com/marketplace/freshpaint" rel="noopener">Freshpaint</a>, <a href="https://www.vendr.com/marketplace/twilio-segment" rel="noopener">Twilio Segment</a>, <a href="https://www.vendr.com/marketplace/rudderstack" rel="noopener">RudderStack</a> och <a href="https://www.vendr.com/marketplace/invoca" rel="noopener">Invoca</a>.</li>
+    <li>Freshpaint, priser (kontrollerad 30 oktober 2026). <a href="https://www.freshpaint.io/pricing" rel="noopener">freshpaint.io</a></li>
+    <li>Vendrs köpardata för <a href="https://www.vendr.com/marketplace/freshpaint" rel="noopener">Freshpaint</a>, <a href="https://www.vendr.com/marketplace/twilio-segment" rel="noopener">Twilio Segment</a>, <a href="https://www.vendr.com/marketplace/rudderstack" rel="noopener">RudderStack</a> och <a href="https://www.vendr.com/marketplace/invoca" rel="noopener">Invoca</a> (Freshpaint och Invoca kontrollerade 30 oktober 2026).</li>
     <li>Piwik PRO, priser, HIPAA-sidan och sidan om BAA för abonnemanget Business. <a href="https://piwik.pro/pricing/" rel="noopener">priser</a>, <a href="https://piwik.pro/hipaa/" rel="noopener">HIPAA</a>, <a href="https://piwik.pro/business-plan-baa/" rel="noopener">BAA för Business</a></li>
     <li>Twilio Segment, HIPAA-eligible Segment (26 juni 2026). <a href="https://www.twilio.com/docs/segment/privacy/hipaa-eligible-segment" rel="noopener">twilio.com</a></li>
     <li>RudderStack, priser och dokumentation för Google Ads Offline Conversions. <a href="https://www.rudderstack.com/pricing/" rel="noopener">priser</a>, <a href="https://www.rudderstack.com/docs/destinations/streaming-destinations/google-ads-offline-conversions/" rel="noopener">dokumentation</a></li>
@@ -351,7 +382,7 @@
     <li>Dumbdata, ”HIPAA and server-side GTM: the hosting decision most teams overlook”, 28 september 2026. <a href="https://dumbdata.co/post/hipaa-and-server-side-gtm-the-hosting-decision-most-teams-overlook/" rel="noopener">dumbdata.co</a></li>
     <li>Data Marketing School, om kostnaden för GTM på serversidan, 30 april 2026. <a href="https://data-marketing-school.com/en/blog/gtm-server-side-cost/" rel="noopener">data-marketing-school.com</a></li>
     <li>Pilot Digital, tjänster för spårning på serversidan. <a href="https://pilotdigital.com/services/analytics-consulting/server-side-tracking-analytics/" rel="noopener">pilotdigital.com</a></li>
-    <li>CallRail, sidorna om priser och om vården. <a href="https://www.callrail.com/pricing" rel="noopener">priser</a>, <a href="https://www.callrail.com/healthcare" rel="noopener">vården</a></li>
+    <li>CallRail, sidorna om priser och om vården (prissidan kontrollerad 30 oktober 2026). <a href="https://www.callrail.com/pricing" rel="noopener">priser</a>, <a href="https://www.callrail.com/healthcare" rel="noopener">vården</a></li>
     <li>Improvado, om CallRail och HIPAA. <a href="https://improvado.io/blog/callrail-hipaa" rel="noopener">improvado.io</a></li>
     <li>CallTrackingMetrics, användarvillkor (gäller från 1 oktober 2026). <a href="https://www.ctm.com/legal/tos/" rel="noopener">ctm.com</a>; priser via <a href="https://www.capterra.com/p/152004/Call-tracking-software/pricing/" rel="noopener">Capterra</a></li>
     <li>Invoca, företagsinformation (juni 2026). <a href="https://www.invoca.com/llm-info" rel="noopener">invoca.com</a></li>

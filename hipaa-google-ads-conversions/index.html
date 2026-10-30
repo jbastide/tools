@@ -76,7 +76,7 @@
       "@type": "FAQPage",
       "@id": "https://tools.copyfororiginals.com/hipaa-google-ads-conversions/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "Can a HIPAA-covered practice run Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "A HIPAA-covered practice can run Google Ads if no protected health information (PHI) reaches Google through its tags, uploads or audiences. Google offers no business associate agreement (BAA) for Google Analytics, we found no Google page that offers one for Google Ads conversion tracking, and Google’s ad policies keep health conversions out of enhanced conversions and bar advertisers promoting health products and services from advertiser-curated audiences. Local Services Ads is the exception on the BAA: Google signs one for it."}},
+        {"@type": "Question", "name": "Can a HIPAA-covered practice run Google Ads?", "acceptedAnswer": {"@type": "Answer", "text": "A HIPAA-covered practice can run Google Ads if no protected health information (PHI) reaches Google through its tags, uploads or audiences. Google offers no business associate agreement (BAA) for Google Analytics, we found no Google page that offers one for Google Ads conversion tracking, and Google’s ad policies keep health conversions out of enhanced conversions and bar advertisers promoting products or services in Google’s Health sensitive interest category from using advertiser-curated audiences. Local Services Ads is the exception on the BAA: Google signs one for it."}},
         {"@type": "Question", "name": "Is Google Ads HIPAA compliant?", "acceptedAnswer": {"@type": "Answer", "text": "Google doesn’t say so. Google offers no business associate agreement (BAA) for Google Analytics, and we found no Google page that offers one for Google Ads conversion tracking; Local Services Ads is the exception, with its own BAA. So a healthcare practice can use Google Ads only if no protected health information reaches Google. In practice that means sending only the ad click ID, a timestamp, an optional value and a neutral conversion name."}},
         {"@type": "Question", "name": "Is Freshpaint the only HIPAA-compliant option for Google Ads conversions?", "acceptedAnswer": {"@type": "Answer", "text": "No. Curve and Ours Privacy are healthcare tracking platforms that compete directly with Freshpaint, enterprise CDPs such as Segment, RudderStack, Tealium and Piwik PRO offer a BAA on their top tiers, server-side Google Tag Manager can run on a host that signs a BAA, and a Google Ads offline conversion import that sends only the click ID needs no tracking vendor at all."}},
         {"@type": "Question", "name": "What is the cheapest HIPAA-compliant way to track Google Ads conversions?", "acceptedAnswer": {"@type": "Answer", "text": "Usually a Google Ads offline conversion import that sends only the click ID, because it needs no tracking vendor, only staff time. The practice captures the GCLID in its website form, then uploads the click ID, a neutral conversion name and the conversion time through Google Ads Data Manager or a file import within 90 days of the click. The Google import help pages checked for this guide state no price."}},
@@ -132,7 +132,7 @@
 
 <section id="can-run">
   <h2>Can a HIPAA-covered practice run Google Ads?</h2>
-  <p>A HIPAA-covered practice can run Google Ads if no protected health information (PHI) reaches Google through its tags, uploads or audiences. Google offers no business associate agreement (BAA) for Google Analytics, we found no Google page that offers one for Google Ads conversion tracking, and Google’s ad policies keep health conversions out of enhanced conversions and bar advertisers promoting health products and services from advertiser-curated audiences. Local Services Ads is the exception on the BAA: Google signs one for it.</p>
+  <p>A HIPAA-covered practice can run Google Ads if no protected health information (PHI) reaches Google through its tags, uploads or audiences. Google offers no business associate agreement (BAA) for Google Analytics, we found no Google page that offers one for Google Ads conversion tracking, and Google’s ad policies keep health conversions out of enhanced conversions and bar advertisers promoting products or services in Google’s Health sensitive interest category from using advertiser-curated audiences. Local Services Ads is the exception on the BAA: Google signs one for it.</p>
   <ul>
     <li><b>Google Analytics: no BAA.</b> Google’s help page says Google “does not offer Business Associate Agreements in connection with this service,” and that HIPAA-regulated entities “must refrain from exposing to Google any data that may be considered Protected Health Information (PHI)”. <span class="ev ev-strong">Primary</span> <a href="https://support.google.com/analytics/answer/13297105" rel="noopener">Google Analytics Help</a></li>
     <li><b>Google Ads: no BAA found.</b> No Google page we read offers a BAA for Google Ads conversion tracking. Google Cloud does sign a BAA, and Cloud Run is a covered service, but Google Ads, Google Analytics and Google Tag Manager are not on the covered list. <span class="ev ev-strong">Primary</span> <a href="https://docs.cloud.google.com/docs/security/compliance/hipaa" rel="noopener">Google Cloud</a></li>
@@ -198,7 +198,7 @@
 
 <section id="cost">
   <h2>How much does HIPAA-compliant conversion tracking cost?</h2>
-  <p>HIPAA-compliant conversion tracking for Google Ads costs anywhere from staff time alone to about $55,000 a year, depending mostly on who does the setup and upkeep.</p>
+  <p>HIPAA-compliant conversion tracking for Google Ads costs anywhere from staff time alone to about $56,000 a year, depending mostly on who does the setup and upkeep.</p>
   <div class="tablewrap">
   <table>
     <caption>Cost tiers for HIPAA-compliant Google Ads conversion tracking</caption>
@@ -206,8 +206,8 @@
     <tbody>
       <tr><th scope="row">Offline conversion import</th><td>Staff time</td><td>No vendor: staff capture click IDs and upload conversions. The Google import pages checked state no price.</td></tr>
       <tr><th scope="row">Server-side GTM on Cloud Run</th><td>About $90+/mo hosting, plus a one-time consultant setup</td><td>Hosting; a consultant writes and maintains the PHI-stripping rules</td></tr>
-      <tr><th scope="row">Managed healthcare platform</th><td>Not published: Curve is usage-based and Ours Privacy prices by monthly tracked users. One third-party estimate puts Ours Privacy at low to mid four figures a month.</td><td>The vendor’s BAA, setup and ongoing maintenance</td></tr>
-      <tr><th scope="row">Freshpaint or an enterprise CDP</th><td>About $27,000–$56,000 a year (Vendr medians and ranges)</td><td>A full data platform, usually sized for larger organizations</td></tr>
+      <tr><th scope="row">Managed healthcare platform</th><td>Not published: Curve is usage-based and Ours Privacy prices by monthly tracked users, integrations and support. One third-party estimate puts Ours Privacy at low to mid four figures a month.</td><td>The vendor’s BAA, setup and ongoing maintenance</td></tr>
+      <tr><th scope="row">Freshpaint or an enterprise CDP</th><td>About $28,000–$56,000 a year (Vendr medians and ranges)</td><td>A full data platform, usually sized for larger organizations</td></tr>
     </tbody>
   </table>
   </div>
@@ -253,7 +253,7 @@
     <caption>HIPAA call tracking with a BAA, October 2026</caption>
     <thead><tr><th scope="col">Vendor</th><th scope="col">BAA</th><th scope="col">Price</th><th scope="col">Setup</th></tr></thead>
     <tbody>
-      <tr><th scope="row">CallRail</th><td>Healthcare plans only</td><td>Healthcare plans: contact sales. The published $150/mo is the Lead Conversion plan.</td><td>BAA arranged through sales; 14-day trial</td></tr>
+      <tr><th scope="row">CallRail</th><td>Healthcare plans only</td><td>Healthcare plans: contact sales.</td><td>BAA arranged through sales; 14-day trial</td></tr>
       <tr><th scope="row">CallTrackingMetrics</th><td>From Marketing Pro</td><td>Marketing Pro $179/mo <span class="ev ev-strong">Published</span></td><td>Self-serve</td></tr>
       <tr><th scope="row">Invoca</th><td>Yes</td><td>$27,880/yr median, plus onboarding <span class="ev ev-mod">Vendr</span></td><td>Implementation team; built for larger organizations</td></tr>
     </tbody>

@@ -60,9 +60,10 @@ requests unless a visitor accepts Google Analytics (see "Analytics and cookie co
 
 ## Swedish and English
 
-Every page exists twice, as two static URLs: English at the root, Swedish under `sv/`. The English
-homepage is [`index.html`](index.html) and the Swedish homepage is [`sv/index.html`](sv/index.html); each
-lists the same tools, services, studies and guides in its own language.
+Pages that have Swedish demand exist twice, as two static URLs: English at the root, Swedish under `sv/`
+(see "Conventions for bilingual pages" for which pages those are). The English homepage is
+[`index.html`](index.html) and the Swedish homepage is [`sv/index.html`](sv/index.html); each lists the
+same tools, services, studies and guides in its own language.
 
 ### Service pages for Swedish companies
 
@@ -133,9 +134,9 @@ Tools keep their English product names and slugs under `sv/`. Guides and studies
   JavaScript, so text swapped in by script is invisible to them.
 - Swedish pages live under `sv/` with `<html lang="sv">` and link the stylesheet one level further up
   (`../../site.css`). The English page sits at the root.
-- Each page links its counterpart with `<link rel="alternate" hreflang>` (sv, en, and x-default pointing at
-  the English page) and with the visible `.lang-switch`, which is the last item in the `.site-nav` on every
-  page. A Swedish page has a self-referencing canonical.
+- Each page with an indexable Swedish twin links its counterpart with `<link rel="alternate" hreflang>` (sv,
+  en, and x-default pointing at the English page) and with the visible `.lang-switch`, which is the last item
+  in the `.site-nav` on every page. A Swedish page has a self-referencing canonical.
 - The top nav is in the page's language. On Swedish pages "Tjänster" goes to `sv/digital-marknadsforing/`
   and "Verktyg" to `sv/`; the other items go to copyfororiginals.com, which is in English.
 - Links on a Swedish page go to Swedish pages. Data files, scripts and run folders are not duplicated: a
@@ -157,8 +158,13 @@ Tools keep their English product names and slugs under `sv/`. Guides and studies
 - Facts about the business (price, minimum fee, meeting area, managed ad spend) are repeated on the
   service pages in both languages, both homepages and `llms.txt`; a change to one of them means a search
   across all of them.
-- A new page needs both versions, a card on both homepages, two `sitemap.xml` entries and its `llms.txt`
-  entry.
+- A new page gets a Swedish twin only when there is Swedish demand: a Swedish service, Swedish law or market,
+  or Swedish queries in Search Console. Such a page needs both versions, a card on both homepages, two
+  `sitemap.xml` entries and its `llms.txt` entry. A page on a US-only topic is English only.
+- The Swedish twins of US-only pages (law firms, HIPAA and similar) are kept up as they are, with
+  `<meta name="robots" content="noindex, follow">`, no `sitemap.xml` entry and no `hreflang` links, on the
+  Swedish page or on its English counterpart. The visible `.lang-switch` and the card on the Swedish
+  homepage stay, so readers can still reach them. Change the content of both versions together, as above.
 
 ## Analytics and cookie consent
 
@@ -267,7 +273,8 @@ python3 -m http.server 8000
 - Include a `<title>`, a meta description, and a `SoftwareApplication` JSON-LD block.
 - Light and dark come from `site.css` via `prefers-color-scheme`; check both.
 - Add a row to the table above, a card to the root `index.html`, and entries to `sitemap.xml` and `llms.txt`.
-- Add the Swedish version under `sv/` (see "Conventions for bilingual pages") and its card on `sv/index.html`.
+- Add the Swedish version under `sv/` and its card on `sv/index.html` only if there is Swedish demand (see
+  "Conventions for bilingual pages").
 
 ### Site style
 

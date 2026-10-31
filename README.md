@@ -318,3 +318,9 @@ Learned on the PPC Troubleshooter rebuild (October 2026), see `ppc-troubleshoote
 - Give wide tables `class="wide"` (min-width inside the `.tbl` scroller) so columns don't squash on
   phones; the page itself must never scroll sideways.
 - Update `llms.txt` to state the page's new facts and numbers; answer engines read it first.
+- A page that reports court cases, complaints or other legal statuses checks each one against the court record
+  or official database on the day it publishes, and writes the last date it could confirm each status. It
+  carries the "Educational only, not legal advice" notice and says whether a lawyer reviewed it. Why: on
+  October 24, 2026 the wrong-answers guide went live saying Google "planned to appeal" the Munich ruling,
+  although Google had appealed and the parties had settled by September 27; the research leaned on June
+  sources. Fixed October 31.

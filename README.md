@@ -63,7 +63,8 @@ requests unless a visitor accepts Google Analytics (see "Analytics and cookie co
 Pages that have Swedish demand exist twice, as two static URLs: English at the root, Swedish under `sv/`
 (see "Conventions for bilingual pages" for which pages those are). The English homepage is
 [`index.html`](index.html) and the Swedish homepage is [`sv/index.html`](sv/index.html); each lists the
-same tools, services, studies and guides in its own language.
+site's tools, services, studies and guides in its own language, and an English-only page appears only on the
+English homepage.
 
 ### Service pages for Swedish companies
 

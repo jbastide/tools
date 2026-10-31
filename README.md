@@ -321,3 +321,7 @@ Learned on the PPC Troubleshooter rebuild (October 2026), see `ppc-troubleshoote
   October 24, 2026 the wrong-answers guide went live saying Google "planned to appeal" the Munich ruling,
   although Google had appealed and the parties had settled by September 27; the research leaned on June
   sources. Fixed October 31.
+- Transparency instead of legal review: the site doesn't commission lawyers to review pages. A page that touches
+  law says so itself: that no lawyer reviewed it, what we could not verify, and which questions stay open (for
+  example whether a ruling is final). Readers are told to talk to their own lawyer before acting. A page never
+  implies a review that didn't happen. Decided by Jesse, October 31, 2026.

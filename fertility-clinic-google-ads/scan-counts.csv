@@ -1,9 +1,9 @@
-measure,sites,of_sites_read
-Google Ads tag or ID,11,25
-"of those, visible only in the Google Tag Manager container file",7,25
-Google Analytics 4,16,25
-Google Tag Manager,16,25
-Meta pixel,7,25
-"Google Ads tag or ID, or Meta pixel",11,25
-a named consent tool,7,25
-Freshpaint,4,25
+measure,sites,out_of,base
+Google Ads tag or ID,11,25,US fertility clinic sites read 2026-11-02
+visible only in the Google Tag Manager container file,7,11,sites with a Google Ads tag or ID
+Google Analytics 4,16,25,US fertility clinic sites read 2026-11-02
+Google Tag Manager,16,25,US fertility clinic sites read 2026-11-02
+Meta pixel,7,25,US fertility clinic sites read 2026-11-02
+"Google Ads tag or ID, or Meta pixel",11,25,US fertility clinic sites read 2026-11-02
+a named consent tool,7,25,US fertility clinic sites read 2026-11-02
+Freshpaint,4,25,US fertility clinic sites read 2026-11-02

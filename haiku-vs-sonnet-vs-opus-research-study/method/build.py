@@ -223,8 +223,9 @@ page = f"""<!DOCTYPE html>
       "breadcrumb": {{
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {{"@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/"}},
-          {{"@type": "ListItem", "position": 2, "name": "Haiku vs Sonnet vs Opus research study", "item": "{URL}"}}
+          {{"@type": "ListItem", "position": 1, "name": "Guides & Tools", "item": "https://tools.copyfororiginals.com/"}},
+          {{"@type": "ListItem", "position": 2, "name": "What decides AI recommendations", "item": "https://tools.copyfororiginals.com/what-decides-ai-recommendations/"}},
+          {{"@type": "ListItem", "position": 3, "name": "Haiku vs Sonnet vs Opus research study", "item": "{URL}"}}
         ]
       }}
     }},
@@ -263,7 +264,7 @@ page = f"""<!DOCTYPE html>
     <li><a href="https://www.copyfororiginals.com/">Home</a></li>
     <li><a href="https://www.copyfororiginals.com/thoughts">Thoughts</a></li>
     <li><a href="https://www.copyfororiginals.com/digital-marketing-services">Services</a></li>
-    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Tools</a></li>
+    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Guides &amp; Tools</a></li>
     <li><a href="https://www.copyfororiginals.com/about">About</a></li>
     <li><a href="https://www.copyfororiginals.com/faq">FAQs</a></li>
     <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
@@ -272,7 +273,7 @@ page = f"""<!DOCTYPE html>
 </nav>
 <div class="wrap">
 
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All guides and tools</a> · <a href="../what-decides-ai-recommendations/">What decides AI recommendations</a></nav>
 
 <header>
   <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Original research</p>

@@ -127,7 +127,7 @@ def build_en(S, X):
                   (f"One row per website for {n} Chicago personal injury law firms, checked {DATES}: where the robots.txt file was read, which AI crawlers it names and disallows, "
                    f"any Content-Signal line, whether an llms.txt file exists and what generated it, and how the homepage answered a browser-style request and requests carrying "
                    f"the names GPTBot, ClaudeBot, PerplexityBot, Googlebot and Bingbot in five runs from Sweden and three runs from Chicago."),
-                  faq, [("Tools", BASE), ("Law firm websites and AI crawlers study", EN_URL)])
+                  faq, [("Guides & Tools", BASE), ("What decides AI recommendations", BASE + "what-decides-ai-recommendations/"), ("Law firm websites and AI crawlers study", EN_URL)])
     faq_html = "\n".join(f"  <h3>{q}</h3>\n  <p>{a}</p>" for q, a in faq)
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -140,7 +140,6 @@ def build_en(S, X):
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="index,follow,max-snippet:-1">
 <link rel="canonical" href="{EN_URL}">
-{HREFLANG}
 <meta property="og:type" content="article">
 <meta property="og:url" content="{EN_URL}">
 <meta property="og:site_name" content="Copy for Originals">
@@ -162,7 +161,7 @@ def build_en(S, X):
     <li><a href="https://www.copyfororiginals.com/">Home</a></li>
     <li><a href="https://www.copyfororiginals.com/thoughts">Thoughts</a></li>
     <li><a href="https://www.copyfororiginals.com/digital-marketing-services">Services</a></li>
-    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Tools</a></li>
+    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Guides &amp; Tools</a></li>
     <li><a href="https://www.copyfororiginals.com/about">About</a></li>
     <li><a href="https://www.copyfororiginals.com/faq">FAQs</a></li>
     <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
@@ -171,7 +170,7 @@ def build_en(S, X):
 </nav>
 <div class="wrap">
 
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All guides and tools</a> · <a href="../what-decides-ai-recommendations/">What decides AI recommendations</a></nav>
 
 <header>
   <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Original research</p>
@@ -393,7 +392,7 @@ def build_sv(S, X):
                   (f"En rad per webbplats för {n} personskadebyråer i Chicago, granskade den {DATES}: var robots.txt-filen lästes, vilka AI-sökrobotar den nämner och förbjuder, "
                    f"eventuell Content-Signal-rad, om det finns en llms.txt-fil och vad som genererade den, och hur startsidan svarade på en förfrågan i webbläsarstil och på "
                    f"förfrågningar med namnen GPTBot, ClaudeBot, PerplexityBot, Googlebot och Bingbot i fem körningar från Sverige och tre körningar från Chicago."),
-                  faq, [("Verktyg", BASE + "sv/"), ("Studie: advokatbyråers webbplatser och AI-sökrobotar", SV_URL)])
+                  faq, [("Guider och verktyg", BASE + "sv/"), ("Vad avgör AI-rekommendationer", BASE + "sv/vad-avgor-ai-rekommendationer/"), ("Studie: advokatbyråers webbplatser och AI-sökrobotar", SV_URL)])
     faq_html = "\n".join(f"  <h3>{q}</h3>\n  <p>{a}</p>" for q, a in faq)
     E = "../../" + EN_SLUG
     return f"""<!DOCTYPE html>
@@ -405,9 +404,8 @@ def build_sv(S, X):
 <meta name="description" content="{html.escape(html.unescape(desc), quote=True)}">
 <meta name="author" content="Copy for Originals">
 <meta name="color-scheme" content="light dark">
-<meta name="robots" content="index,follow,max-snippet:-1">
+<meta name="robots" content="noindex, follow">
 <link rel="canonical" href="{SV_URL}">
-{HREFLANG}
 <meta property="og:type" content="article">
 <meta property="og:url" content="{SV_URL}">
 <meta property="og:site_name" content="Copy for Originals">
@@ -431,7 +429,7 @@ def build_sv(S, X):
     <li><a href="https://www.copyfororiginals.com/" hreflang="en">Hem</a></li>
     <li><a href="https://www.copyfororiginals.com/thoughts" hreflang="en">Tankar</a></li>
     <li><a href="https://tools.copyfororiginals.com/sv/digital-marknadsforing/">Tjänster</a></li>
-    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Verktyg</a></li>
+    <li><a href="https://tools.copyfororiginals.com/sv/" aria-current="true">Guider och verktyg</a></li>
     <li><a href="https://www.copyfororiginals.com/about" hreflang="en">Om</a></li>
     <li><a href="https://www.copyfororiginals.com/faq" hreflang="en">Vanliga frågor</a></li>
     <li><a href="https://www.copyfororiginals.com/contact" hreflang="en">Kontakt</a></li>
@@ -440,7 +438,7 @@ def build_sv(S, X):
 </nav>
 <div class="wrap">
 
-<nav class="crumbs" aria-label="Sökväg"><a href="../">&larr; Alla verktyg</a></nav>
+<nav class="crumbs" aria-label="Sökväg"><a href="../">&larr; Alla guider och verktyg</a> · <a href="../vad-avgor-ai-rekommendationer/">Vad avgör AI-rekommendationer</a></nav>
 
 <header>
   <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Egen undersökning</p>

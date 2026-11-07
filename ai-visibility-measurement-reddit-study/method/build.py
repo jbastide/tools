@@ -304,8 +304,9 @@ def page():
              "about": ["Answer engine optimization", "AI visibility measurement", "Google Search Console", "AI Overviews", "Reddit", "Open-source intelligence"],
              "isBasedOn": {"@id": URL + "#data"},
              "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-                 {"@type": "ListItem", "position": 1, "name": "Tools", "item": "https://tools.copyfororiginals.com/"},
-                 {"@type": "ListItem", "position": 2, "name": "AI visibility measurement Reddit study", "item": URL}]}},
+                 {"@type": "ListItem", "position": 1, "name": "Guides & Tools", "item": "https://tools.copyfororiginals.com/"},
+                 {"@type": "ListItem", "position": 2, "name": "What decides AI recommendations", "item": "https://tools.copyfororiginals.com/what-decides-ai-recommendations/"},
+                 {"@type": "ListItem", "position": 3, "name": "AI visibility measurement Reddit study", "item": URL}]}},
             {"@type": "Dataset", "@id": URL + "#data",
              "name": f"AI search and measurement talk in {WORDS[NSUBS]} marketing subreddits, 2025–2026 (Copy for Originals)",
              "description": f"Monthly counts of posts about AI search and about measuring it in {WORDS[NSUBS]} marketing subreddits from January 1, 2025 to {SWEEP} ({n(TOTAL)} posts), {N_THREADS} coded threads with the measurement problems each raises, {N_QUOTES} supporting quotes checked against the Arctic Shift archive, themes of feedback on Google Search Console’s generative AI report, and the agreement between two AI coding passes.",
@@ -359,7 +360,7 @@ blockquote footer{{font-size:13.5px;color:var(--muted);margin-top:6px}}
     <li><a href="https://www.copyfororiginals.com/">Home</a></li>
     <li><a href="https://www.copyfororiginals.com/thoughts">Thoughts</a></li>
     <li><a href="https://www.copyfororiginals.com/digital-marketing-services">Services</a></li>
-    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Tools</a></li>
+    <li><a href="https://tools.copyfororiginals.com/" aria-current="true">Guides &amp; Tools</a></li>
     <li><a href="https://www.copyfororiginals.com/about">About</a></li>
     <li><a href="https://www.copyfororiginals.com/faq">FAQs</a></li>
     <li><a href="https://www.copyfororiginals.com/contact">Contact</a></li>
@@ -368,7 +369,7 @@ blockquote footer{{font-size:13.5px;color:var(--muted);margin-top:6px}}
 </nav>
 <div class="wrap">
 
-<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All tools</a></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">&larr; All guides and tools</a> · <a href="../what-decides-ai-recommendations/">What decides AI recommendations</a></nav>
 
 <header>
   <p class="kicker"><a href="https://copyfororiginals.com/">Copy for Originals</a> · Original research</p>

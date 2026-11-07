@@ -73,9 +73,11 @@ The site is a library of guides, studies and tools under three starting pages (p
 | Google Ads for law firms | [`google-ads-for-law-firms/`](google-ads-for-law-firms/) | Every law firm page; its own parent is the lead generation pillar |
 | AI search | [`what-decides-ai-recommendations/`](what-decides-ai-recommendations/) | Every AI search page, listed in its "Every AI search page on this site" table (`#all-pages`) |
 
-- **Every page links up to its pillar** in the crumbs (`← All guides and tools · <pillar>`) and as position 2 of its
-  `BreadcrumbList`. A new page gets both, a row in its pillar's table of pages, and a card in its pillar's group on both
-  homepages.
+- **Every page links up to its pillar** in the crumbs (`← All guides and tools · <pillar>`) and in its
+  `BreadcrumbList` (position 2, before any sub-hub). Swedish pages link their Swedish pillar where one exists
+  (`sv/vad-avgor-ai-rekommendationer/`, `sv/google-ads-for-advokatbyraer/`); the Swedish Google Ads tools have none,
+  because the lead generation pillar is English only. A new page gets the links, a row in its pillar's table of
+  pages where it has one, and a card in its pillar's group on the homepages.
 - **The homepages are grouped by pillar**: Start here, Free tools, Google Ads for lead generation, Google Ads for law
   firms, AI search, Thoughts, Short-form video, For Swedish companies, About this site. The Swedish homepage puts the
   Swedish services first.
@@ -167,8 +169,10 @@ Tools keep their English product names and slugs under `sv/`. Guides and studies
   en, and x-default pointing at the English page) and with the visible `.lang-switch`, which is the last item
   in the `.site-nav` on every page. A Swedish page has a self-referencing canonical.
 - The top nav is in the page's language. On Swedish pages "Tjänster" goes to `sv/digital-marknadsforing/`
-  and "Verktyg" to `sv/`; the other items go to copyfororiginals.com, which is in English.
-- Links on a Swedish page go to Swedish pages. Data files, scripts and run folders are not duplicated: a
+  and "Guider och verktyg" to `sv/`; the other items go to copyfororiginals.com, which is in English. On English
+  pages "Guides & Tools" goes to the root.
+- Links on a Swedish page go to Swedish pages, except where no Swedish page exists (the lead generation pillar,
+  the Thoughts essays): those links carry `hreflang="en"` and say the page is in English. Data files, scripts and run folders are not duplicated: a
   Swedish study links to the files in the English page's folder (`../../<english-slug>/data.csv`).
 - The two versions carry the same facts, numbers, sources and dates, and the same HTML structure: same
   tags, same `id`s (the translated guides and tools keep the English `id`s so anchors match). Change both
